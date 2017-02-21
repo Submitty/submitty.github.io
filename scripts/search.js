@@ -1,13 +1,13 @@
 ---
 layout: null
 ---
-(function () {
+(function() {
 	function getQueryVariable(variable) {
 		var query = window.location.search.substring(1),
-			vars = query.split("&");
+			vars = query.split('&');
 
 		for (var i = 0; i < vars.length; i++) {
-			var pair = vars[i].split("=");
+			var pair = vars[i].split('=');
 
 			if (pair[0] === variable) {
 				return pair[1];
@@ -18,7 +18,7 @@ layout: null
 	function getPreview(query, content, previewLength) {
 		previewLength = previewLength || (content.length * 2);
 
-		var parts = query.split(" "),
+		var parts = query.split(' '),
 			match = content.toLowerCase().indexOf(query.toLowerCase()),
 			matchLength = query.length,
 			preview;
@@ -41,29 +41,29 @@ layout: null
 			preview = content.substring(start, end).trim();
 
 			if (start > 0) {
-				preview = "..." + preview;
+				preview = '...' + preview;
 			}
 
 			if (end < content.length) {
-				preview = preview + "...";
+				preview = preview + '...';
 			}
 
 			// Highlight query parts
-			preview = preview.replace(new RegExp("(" + parts.join("|") + ")", "gi"), "<strong>$1</strong>");
+			preview = preview.replace(new RegExp('(' + parts.join('|') + ')', 'gi'), "<strong>$1</strong>");
 		} else {
 			// Use start of content if no match found
-			preview = content.substring(0, previewLength).trim() + (content.length > previewLength ? "..." : "");
+			preview = content.substring(0, previewLength).trim() + (content.length > previewLength ? '...' : '');
 		}
 
 		return preview;
 	}
 
 	function displaySearchResults(results, query) {
-		var searchResultsEl = document.getElementById("search-results"),
-			searchProcessEl = document.getElementById("search-process");
+		var searchResultsEl = document.getElementById('search-results'),
+			searchProcessEl = document.getElementById('search-process');
 
 		if (results.length) {
-			var resultsHTML = "";
+			var resultsHTML = '';
 			results.forEach(function (result) {
 				var item = window.data[result.ref],
 					contentPreview = getPreview(query, item.content, 170),
@@ -73,29 +73,29 @@ layout: null
 			});
 
 			searchResultsEl.innerHTML = resultsHTML;
-			searchProcessEl.innerText = "Showing";
+			searchProcessEl.innerText = 'Showing';
 		} else {
-			searchResultsEl.style.display = "none";
-			searchProcessEl.innerText = "No";
+			searchResultsEl.style.display = 'none';
+			searchProcessEl.innerText = 'No';
 		}
 	}
 
 	window.index = lunr(function () {
-		this.field("id");
-		this.field("title", {boost: 10});
-		this.field("category");
-		this.field("url");
-		this.field("content");
+		this.field('id');
+		this.field('title', {boost: 10});
+		this.field('category');
+		this.field('url');
+		this.field('content');
 	});
 
-	var query = decodeURIComponent((getQueryVariable("q") || "").replace(/\+/g, "%20")),
-		searchQueryContainerEl = document.getElementById("search-query-container"),
-		searchQueryEl = document.getElementById("search-query"),
-		searchInputEl = document.getElementById("search-input");
+	var query = decodeURIComponent((getQueryVariable('q') || '').replace(/\+/g, "%20")),
+		searchQueryContainerEl = document.getElementById('search-query-container'),
+		searchQueryEl = document.getElementById('search-query'),
+		searchInputEl = document.getElementById('search-input');
 
 	searchInputEl.value = query;
 	searchQueryEl.innerText = query;
-	searchQueryContainerEl.style.display = "inline";
+	searchQueryContainerEl.style.display = 'inline';
 
 	for (var key in window.data) {
 		window.index.add(window.data[key]);

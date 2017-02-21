@@ -5,10 +5,10 @@ table {
 
 tr {
 	border-bottom: 1px solid #EEE;
-}
 
-tr:nth-child(even) {
-	background: #fcfcfc;
+	&:nth-child(even) {
+		background: #fcfcfc;
+	}
 }
 
 td, th {
