@@ -22,8 +22,7 @@ order: 7
 2. **Obtain the Rainbow Grades Chart Software**  
    On your local computer (recommended so you can preview the results
    before posting), checkout this repository so you have access to the
-   [Rainbow Grades code]
-   (https://github.com/Submitty/Submitty/tree/master/RainbowGrades).
+   [Rainbow Grades code](https://github.com/Submitty/Submitty/tree/master/RainbowGrades).
    We recommend you put this in a convenient top-level directory,
    separate from the materials for a specific course.
 
@@ -33,8 +32,8 @@ order: 7
    If you have a repository/dropbox for your course, put it there (and
    then you can backup the configuration files)
 
-   Copy the [SAMPLE_Makefile][SAMPLE_Makefile] and
-   [SAMPLE_customization.json][SAMPLE_customization.json]
+   Copy the [`SAMPLE_Makefile`][SAMPLE_Makefile] and
+   [`SAMPLE_customization.json`][SAMPLE_customization.json]
    to that new directory (in the instructions below we'll assume you
    called the directory `grades_summary`).  Change the names to
    `Makefile` & `customization.json`.
@@ -151,12 +150,10 @@ order: 7
    ```
 
 
-10. Confirm the individual `<username>_summary.html` and
-    `<username>_message.html` files have been copied here:
-
-   ```
-   /var/local/submitty/courses/<semester>/<course>/reports/summary_html/
-   ```
+10. Confirm the individual `<username>_summary.html` and `<username>_message.html` files have been copied here:
+    ```
+    /var/local/submitty/courses/<semester>/<course>/reports/summary_html/
+    ```
 
 
 11. View the student-facing submission site and confirm that the data
@@ -164,7 +161,7 @@ order: 7
     and `<username>_summary.html` is presented to the student when they press the "View Grades" button on the main page.
 
 
-12.  By default, the instructor table is sorted by overall grade.  But you can sort the list in different ways:
+12. By default, the instructor table is sorted by overall grade.  But you can sort the list in different ways:
 
     To group by section, then sort alphabetically (useful to enter final grades!)
     ```

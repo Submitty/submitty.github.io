@@ -111,7 +111,12 @@ header {
 		@include flex-direction(row);
 		@include align-items(center);
 		border-bottom: 1px solid rgba(0, 0, 0, 0.075);
-
+		
+		a {
+			display: block;
+			margin: auto;
+		}
+		
 		img {
 			height: $emblem-size;
 			//width: $emblem-size;

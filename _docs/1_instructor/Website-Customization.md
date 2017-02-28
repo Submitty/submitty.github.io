@@ -32,7 +32,7 @@ Of course, we've found that going this approach raises the minor annoyance of re
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function(){ 
     var url = localStorage.getItem("iframe_url");
-    if (url != null) {
+    if (url !== null) {
         document.getElementById("submitty").src = url;
     }
 }, false);

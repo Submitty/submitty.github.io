@@ -8,8 +8,7 @@ If you have made changes to the configuration for an assignment and
 want to reprocess your previous practice submissions, or an error in the
 assignment configuration was detected after students submitted
 homeworks, you can queue these previous submissions for regrading by
-using the [regrade.sh
-script](../blob/master/bin/regrade.sh).
+using the [`regrade.sh` script][regrade.sh].
 
 This script takes a single argument, the full path pointing to the
 portion of the course directory structure to be regraded.
@@ -37,11 +36,13 @@ portion of the course directory structure to be regraded.
    confirmation [y/n] before queueing those homework submissions for
    reprocessing.
 
-5. You may also want to use the [grading_done.sh script]
-   (../blob/master/bin/grading_done.sh)
+5. You may also want to use the [`grading_done.sh` script][grading_done.sh]
    to keep track of the progress in reprocessing a large set of
    submissions.
 
    ```
    /usr/local/submitty/bin/grading_done.sh 
    ```
+
+[regrade.sh]: https://github.com/Submitty/Submitty/blob/master/bin/regrade.sh
+[grading_done.sh]: https://github.com/Submitty/Submitty/blob/master/bin/grading_done.sh

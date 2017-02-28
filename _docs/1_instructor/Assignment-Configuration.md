@@ -29,8 +29,7 @@ etc.
 
 
 You can study the provided sample assignment configurations here:
-[sample_files/sample_assignment_config]
-(https://github.com/Submitty/Submitty/tree/master/sample_files/sample_assignment_config)
+[sample_files/sample_assignment_config][sample_files/sample_assignment_config]
 
 Each assignment configuration will have a top level directory with a
 ```config.json``` file.  Here is the general structure of a homework
@@ -72,8 +71,8 @@ configuration directory:
 4. Execute the "command"(s) for the compilation testcases.
 
 5. Copy the named executables from the temporary directory to the
-   temporary execution directory.  Also rename and copy the STDOUT.txt
-   and STDERR.txt files from each compilation command (prefix with
+   temporary execution directory.  Also rename and copy the `STDOUT.txt`
+   and `STDERR.txt` files from each compilation command (prefix with
    test case number).
 
 
@@ -87,7 +86,7 @@ configuration directory:
    
 3. Execute the "command"(s) for the execution testcases.
 
-4. Rename the STDOUT.txt, STDERR.txt, execution logfiles, and
+4. Rename the `STDOUT.txt`, `STDERR.txt`, execution logfiles, and
    specified output files that are to have been created by the program
    execution (prefix with test case number).
 
@@ -109,7 +108,7 @@ configuration directory:
 
 ### Overall Specification of a ``config.json`` file
 
-You are allowed to have C/C++ style comments in a config.json file.
+You are allowed to have C/C++ style comments in a `config.json` file.
 These will be removed before compilation of the autograding
 executables.  
 
@@ -149,8 +148,7 @@ executables.
 
   The instructor can override / customize various resource limitations
   for the testing process.  The default values for these resource
-  limits are specified here: [grading/default_config.h]
-  (../blob/master/grading/default_config.h)
+  limits are specified here: [grading/default_config.h][grading/default_config.h]
 
 
   _FIXME: UPDATE & DOCUMENT_
@@ -166,10 +164,8 @@ executables.
   The instructor can also override / customize the default
   restrictions on use of system call within the student code by
   whitelisting additional categories of system calls:
-  [grading/system_call_categories.h]
-  (../blob/master/grading/system_call_categories.h)
-  [grading/seccomp_functions.cpp]
-  (../blob/master/grading/seccomp_functions.cpp)
+  [grading/system_call_categories.h][grading/system_call_categories.h]
+  [grading/seccomp_functions.cpp][grading/seccomp_functions.cpp]
 
   _FIXME: UPDATE & DOCUMENT_
 
@@ -246,7 +242,7 @@ executables.
 
 * **field:** ``"validation"``  
   **type:** _array of validation objects_ (described below)   
-  **default value:**  automatic checks added for STDOUT.txt,
+  **default value:**  automatic checks added for `STDOUT.txt`,
      STDERR.txt, and the execution logfile.
 
 
@@ -376,20 +372,17 @@ executables.
    
   * Static Analysis Tools  
     Example:
-    [python static analysis example]
-    (https://github.com/Submitty/Submitty/tree/master/sample_files/sample_assignment_config/python_static_analysis)
+    [python static analysis example][python_static_analysis]
 
 
-     [Documentation for ``submitty_count_token``]
-     (https://github.com/Submitty/AnalysisTools/blob/master/docs/TOKENS.md)  
+     [Documentation for ``submitty_count_token``][submitty_count_token]  
      Example assignment configuration command line:  
      ```
      "submitty_count_token while part4/*.py"
      ```
 
      
-     [Documentation for ``submitty_count_node``]
-     (https://github.com/Submitty/AnalysisTools/blob/master/docs/NODES.md)  
+     [Documentation for ``submitty_count_node``][submitty_count_node]  
      Example assignment configuration command line:  
      ```
      "submitty_count_node -l python2 print part1/*.py"
@@ -410,22 +403,20 @@ executables.
           **type:** _floating point_  
           **REQUIRED**
 
-          
 
-   
-   
-   
   * You can also write your own custom test cases!
    
      See:
-     [cpp custom test case example]
-     (https://github.com/Submitty/Submitty/tree/master/sample_files/sample_assignment_config/cpp_custom)
+     [cpp custom test case example][cpp_custom]
    
      _FIXME: Document this!_
-   
 
 
-
-
-
-
+[sample_files/sample_assignment_config]: https://github.com/Submitty/Submitty/tree/master/sample_files/sample_assignment_config
+[grading/default_config.h]: https://github.com/Submitty/Submitty/blob/master/grading/default_config.h
+[grading/system_call_categories.h]: https://github.com/Submitty/Submitty/blob/master/grading/system_call_categories.h
+[grading/seccomp_functions.cpp]: https://github.com/Submitty/Submitty/blob/master/grading/seccomp_functions.cpp
+[python_static_analysis]: https://github.com/Submitty/Submitty/tree/master/sample_files/sample_assignment_config/python_static_analysis
+[submitty_count_token]: https://github.com/Submitty/AnalysisTools/blob/master/docs/TOKENS.md
+[submitty_count_node]: https://github.com/Submitty/AnalysisTools/blob/master/docs/NODES.md
+[cpp_custom]: https://github.com/Submitty/Submitty/tree/master/sample_files/sample_assignment_config/cpp_custom

@@ -19,8 +19,7 @@ access for your TAs and mentors.
 
 Use the "Setup Rotating Sections" option to distribute your student
 list into equal sections for grading assignments other than
-registration section.  See also:  [Registration Section vs. Rotating 
-Section](Create-or-Edit-a-Gradeable#grading-by-registration-section-or-rotating-section)
+registration section.  See also:  [Registration Section vs. Rotating Section](Create-or-Edit-a-Gradeable#grading-by-registration-section-or-rotating-section)
 
 
 ### Late Days Management

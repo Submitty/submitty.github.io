@@ -25,7 +25,7 @@ vendor/bin/phpunit --configuration tests/phpunit.xml
 ```
 
 ## Mac Installation
-If using a mac computer, the following commands can be run to set everything up for you for testing (assuming you've installed [Homebrew](http://brew.sh/):
+If using a Mac computer, the following commands can be run to set everything up for you for testing (assuming you've installed [Homebrew](https://brew.sh/):
 
 ```
 brew tap homebrew/dupes
