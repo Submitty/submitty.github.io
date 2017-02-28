@@ -1,7 +1,7 @@
 ---
 title: Development Instructions
 category: Developer
-order: 2
+order: 3
 ---
 
 We recommend that you do all file edits within your checkout of the
@@ -104,8 +104,7 @@ branch).
   for s in /var/local/submitty/courses/*/*; do c=`basename $s`; ${s}/BUILD_${c}.sh; done
   ```
 
-  And see also [ Batch Regrade Homeworks ]
-  (Batch-Regrade-Homework)
+  And see also [Batch Regrade Homeworks][Batch Regrade Homeworks]
 
   For convenience, here are the commands to copy-paste to install, 
   build all courses, and regrade everything.
@@ -142,10 +141,10 @@ branch).
    /var/local/submitty/courses/f16/csci1200/BUILD_csci1200.sh
    ```
    
-  See also [ Batch Regrade Homeworks ]
-  (Batch-Regrade-Homework)
+  See also [Batch Regrade Homeworks][Batch Regrade Homeworks]
 
 ---
 
-See also [ Local Test Suite ](Local-Test-Suite)
+See also [Local Test Suite](Local-Test-Suite)
 
+[Batch Regrade Homeworks]: /1_instructor/Batch-Regrade-Homework

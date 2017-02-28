@@ -1,7 +1,7 @@
 ---
 title: Local Test Suite (PHP Unit Tests)
 category: Developer
-order: 7
+order: 8
 ---
 
 ## General Instructions

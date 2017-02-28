@@ -1,7 +1,7 @@
 ---
 title: Local Test Suite (Autograder)
 category: Developer
-order: 6
+order: 7
 ---
 
 Before pushing your changes to GitHub, make sure your code passes the

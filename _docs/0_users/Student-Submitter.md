@@ -1,6 +1,6 @@
 ---
 title: Student Submitter
-category: Student Submitter
+category: Users
 order: 1
 ---
 

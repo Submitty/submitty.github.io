@@ -1,7 +1,7 @@
 ---
 title: Log Files
 category: Developer
-order: 3
+order: 4
 ---
 
 TODO:  Write some notes about the various log files for errors and normal operations.

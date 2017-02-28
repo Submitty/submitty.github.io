@@ -1,7 +1,7 @@
 ---
 title: TA or Grader
-category: TA or Grader
-order: 1
+category: Users
+order: 2
 ---
 
 _FIXME: THESE INSTRUCTIONS WILL NEED TO BE UPDATED WITH THE NEW

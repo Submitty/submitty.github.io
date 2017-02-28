@@ -33,10 +33,8 @@ order: 7
    If you have a repository/dropbox for your course, put it there (and
    then you can backup the configuration files)
 
-   Copy the
-   [SAMPLE_Makefile](../blob/master/RainbowGrades/SAMPLE_Makefile)
-   and
-   [SAMPLE_customization.json](../blob/master/RainbowGrades/SAMPLE_customization.json)
+   Copy the [SAMPLE_Makefile][SAMPLE_Makefile] and
+   [SAMPLE_customization.json][SAMPLE_customization.json]
    to that new directory (in the instructions below we'll assume you
    called the directory `grades_summary`).  Change the names to
    `Makefile` & `customization.json`.
@@ -185,3 +183,6 @@ order: 7
     ``` 
 
     etc.
+
+[SAMPLE_Makefile]: https://github.com/Submitty/Submitty/blob/master/RainbowGrades/SAMPLE_Makefile
+[SAMPLE_customization.json]: https://github.com/Submitty/Submitty/blob/master/RainbowGrades/SAMPLE_customization.json

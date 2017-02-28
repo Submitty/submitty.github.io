@@ -1,7 +1,7 @@
 ---
 title: Local Test Suite (e2e Tests)
 category: Developer
-order: 8
+order: 9
 ---
 
 General Instructions

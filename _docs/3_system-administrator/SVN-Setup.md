@@ -55,7 +55,7 @@ OPTIONAL: Set repository quotas
 mkdir -p /var/lib/svn/hooks
 ```
 
-Create /var/lib/svn/hooks/pre-commit in it with something along the lines of:
+Create `/var/lib/svn/hooks/pre-commit` in it with something along the lines of:
 
 ```
 #!/bin/bash
@@ -67,9 +67,9 @@ TXN="$2"
 QUOTA="15000"
 MEGS=`du -sk $REPOS | sed -r "s/^([0-9\\.]+).+/\\1/"`
 if [ "$MEGS" -gt "$QUOTA" ]; then
-    	#send error message to stderr
- 	echo "Repository is over ${QUOTA}K in size" 1>&2
- 	exit 1;
+	#send error message to stderr
+	echo "Repository is over ${QUOTA}K in size" 1>&2
+	exit 1;
 fi
 exit 0;
 ```

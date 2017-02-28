@@ -1,7 +1,7 @@
 ---
 title: VM Install using Vagrant
 category: Developer
-order: 1
+order: 2
 ---
 
 1. To develop with a Virtual Machine (VM), your computer should have

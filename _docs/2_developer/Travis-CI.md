@@ -1,7 +1,7 @@
 ---
 title: Travis CI
 category: Developer
-order: 9
+order: 10
 ---
 
 We utilize the [Travis CI](http://travis-ci.org) platform to enable Continuous Integration on all commits and pull requests against the GitHub repository. We use this to ensure that that changes to tested code does not break anything when attempting to fix any bugs incase a developer forgets to run one of the local test suites themselves.
