@@ -14,6 +14,8 @@ each assignment.
 
 ![](/images/NavigationPageForTA.png)
 
+### TA Grading Complements Automated Grading
+
 After selecting an assignment, the TA is presented with an overview of
 their assigned grading for this assignment.  
 
@@ -51,11 +53,22 @@ assignment.
 ![](/images/TA_index_progress.png)
 
 
+### TA Grading of Non-Electronic Assignments
 
-![](http://submitty.org/images/data_entry.png)
-![](http://submitty.org/images/ta_ui.png)
+Submitty can also be used to record grades for items that are not
+strictly electronic upload of files.
 
+Submitty provides a spreadsheet-like interface for the data entry of
+numeric gradeable (e.g. Quizzes or Tests).  The instructor specifies
+the number of problems, and the maximum score for each problem.  The
+total score for each student is summed automatically.
 
-We have two categories of "TA" or "Grader" users with increased access
-to data for the course.  We call these users "Full Access Graders" or
-"Limited Access Graders".
+![](/images/TA_test_grades.png)
+
+If the assignment is scored less precisely, the instructor can use the
+checkpoint interface.  The TA clicks once to give the student full
+credit (dark blue), or the TA clicks twice to give the student half
+credit (light blue).  A triple click returns the box to zero credit (white).
+
+![](/images/TA_lab_grades.png)
+
