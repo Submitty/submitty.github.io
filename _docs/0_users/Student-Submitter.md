@@ -4,9 +4,6 @@ category: Users
 order: 1
 ---
 
-_FIXME: THESE INSTRUCTIONS WILL NEED TO BE UPDATED WITH THE NEW
-INSTRUCTIONS AND SCREENSHOTS OF THE NEW USER INTERFACE_
-
 
 ### Accessing the Homework Submission Server
 
@@ -20,22 +17,40 @@ authenticating/accessing the page, double check the URL and your
 username and password, and contact the instructor, TA, or system
 administrator as appropriate.
 
+![](/images/Login.png)
+
+
+
+### Main Navigation Page
+
+![](/images/Navigation.png)
+
+
 
 ### Uploading a new submission
 
-1.  What should you submit?  Carefully read both your course syllabus
+What should you submit?  Carefully read both your course syllabus
 & and any specific instructions for this assignment.  Your instructor
-has configured the submission site to either:
+has configured the submission site with one or submission areas.  You
+may:
 
-     * directly accept a single file or a zip file contain one or more files / subdirectories, or 
-     * accept submissions via SVN (Subversion version control)
+  * "Drag and drop" one or more files into each submission area, or
+  * Click on a submission area, which will bring up a file browser
+    allowing you to select one or more files for upload.
 
-    Collect the necessary files for submission. 
+If you upload choose to load a .zip file, the files within this .zip
+file will be extracted on upload.  If your .zip file contains one or
+more folders/directories, the folder/directory structure will be
+preserved.
 
-2.  Use the pulldown menu at the top of the page to select the homework you would like to submit. 
+
+Alternatively, if you instructor has configured this assignment to
+receive files via version control (SVN) the submission interface will
+consist of a button, allowing you to indicate that the system should
+grab your most recent materials from the repository for grading.
 
 
-![](http://submitty.org/images/choose_hw.png)
+![](/images/Submission.png)
 
 
 
