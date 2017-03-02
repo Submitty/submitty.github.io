@@ -1,5 +1,5 @@
 ---
-title: TA or Grader
+title: TA Grading Instructions
 category: Users
 order: 2
 ---
@@ -9,6 +9,9 @@ INSTRUCTIONS AND SCREENSHOTS OF THE NEW USER INTERFACE_
 
 
 ## Troubleshooting Student Submissions Errors & Confusion
+
+
+![](/images/NavigationPageForTA.png)
 
 _FILL IN THIS INFORMATION_
 
