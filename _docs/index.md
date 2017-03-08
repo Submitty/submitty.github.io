@@ -27,4 +27,4 @@ Submitty is installed locally and is able to support multiple separate
 courses, each with hundreds of students and multiple TAs and
 instructors.
 
-Please use the links on the sidebar for further explore Submitty.
+Please use the links on the sidebar to further explore Submitty.
