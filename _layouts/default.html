@@ -42,31 +42,59 @@
 				<input type="submit" value="Search" style="display: none;">
 			</form>
 
-			<nav {% if site.show_full_navigation %}class="full-navigation"{% endif %}>
-				<ul>
-					<li class="nav-item top-level {% if page.url == '/' %}current{% endif %}">
-						{% assign home = site.html_pages | where: 'url', '/' | first %}
-						<a href="{{ site.baseurl }}/">{{ home.title }}</a>
-					</li>
-				</ul>
 
 				<ul>
-					{% assign grouped = site.docs | group_by: 'category' %}
-					{% for group in grouped %}
-						<li class="nav-item top-level {% if group.name == page.category %}current{% endif %}">
-							{% assign items = group.items | sort: 'order' %}
-							<a href="{{ site.baseurl }}{{ items.first.url }}">{{ group.name }}</a>
-							<ul>
-								{% for item in items %}
-									{% if item.order == 0 %}
-										{% continue %}
-									{% endif %}
-									<li class="nav-item {% if item.url == page.url %}current{% endif %}"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
-								{% endfor %}
-							</ul>
-						</li>
-					{% endfor %}
+				  <li class="nav-item top-level">
+				    <a href="/index">Welcome</a>
+				    <ul>
+				      <!--<li class="nav-item "><a href="/welcome/index">Getting Started</a></li>-->
+				      <li class="nav-item "><a href="/welcome/Student-Submitter">Student Submitter</a></li>
+				      <li class="nav-item "><a href="/welcome/Ta-or-Grader">TA Grading Instructions</a></li>
+				    </ul>
+				  </li>
+				  <li class="nav-item top-level ">
+				    <a href="/instructor/Create-Student-Accounts">Instructor</a>
+				    <ul>
+				      <li class="nav-item "><a href="/instructor/Create-Student-Accounts">Create Student Accounts</a></li>
+				      <li class="nav-item "><a href="/instructor/Course-Settings">Course Settings</a></li>
+				      <li class="nav-item "><a href="/instructor/Create-or-Edit-a-Gradeable">Create or Edit a New Gradeable</a></li>
+				      <li class="nav-item "><a href="/instructor/Directory-Structure">Directory Structure</a></li>
+				      <li class="nav-item "><a href="/instructor/Assignment-Configuration">Assignment Configuration</a></li>
+				      <li class="nav-item "><a href="/instructor/Batch-Regrade-Homework">Batch Regrade Homework</a></li>
+				      <li class="nav-item "><a href="/instructor/Iris-(Rainbow-Grades)">Iris (Rainbow Grades)</a></li>
+				      <li class="nav-item "><a href="/instructor/Website-Customization">Website Customization</a></li>
+				    </ul>
+				  </li>
+				  <li class="nav-item top-level ">
+				    <a href="/sysadmin/Ubuntu-14.04-Server-Edition">System Administrator</a>
+				    <ul>
+				      <li class="nav-item "><a href="/sysadmin/Ubuntu-14.04-Server-Edition">Ubuntu 14.04 Server Edition</a></li>
+				      <li class="nav-item "><a href="/sysadmin/Semi-automated-install">Semi-Automated Install</a></li>
+				      <li class="nav-item "><a href="/sysadmin/Database">Database</a></li>
+				      <li class="nav-item "><a href="/sysadmin/SVN-Setup">SVN Setup</a></li>
+				      <li class="nav-item "><a href="/sysadmin/Course-Creation">Course Creation</a></li>
+				      <li class="nav-item "><a href="/sysadmin/System-Customization-Checklist">System Customization Checklist</a></li>
+				    </ul>
+				  </li>
+				  <li class="nav-item top-level ">
+				    <a href="/developer/Developer">Developer</a>
+				    <ul>
+				      <li class="nav-item "><a href="/developer/Developer">Getting Started</a></li>
+				      <li class="nav-item "><a href="/developer/VM-Install-Using-Vagrant">VM Install using Vagrant</a></li>
+				      <li class="nav-item "><a href="/developer/Development-Instructions">Development Instructions</a></li>
+				      <li class="nav-item "><a href="/developer/Log-Files">Log Files</a></li>
+				      <li class="nav-item "><a href="/developer/JSON-Configuration-Files">JSON Configuration Files</a></li>
+				      <li class="nav-item "><a href="/developer/Coding-Style-Guide">Coding Style Guide</a></li>
+				      <li class="nav-item "><a href="/developer/Local-Test-Suite-(Autograder)">Local Test Suite (Autograder)</a></li>
+				      <li class="nav-item "><a href="/developer/Local-Test-Suite-(PHP-unit-tests)">Local Test Suite (PHP Unit Tests)</a></li>
+				      <li class="nav-item "><a href="/developer/Local-Test-Suite-(e2e-tests)">Local Test Suite (e2e Tests)</a></li>
+				      <li class="nav-item "><a href="/developer/Travis-CI">Travis CI</a></li>
+				    </ul>
+				  </li>
+
+				  
 				</ul>
+
 			</nav>
 		</header>
 

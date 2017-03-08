@@ -32,4 +32,4 @@ follow these steps:
 Questions or comments can be sent to our Submitty support mailing
 list: submitty@cs.rpi.edu
 
-[System Administrator]: /3_system-administrator/Ubuntu-14.04-Server-Edition
+[System Administrator]: /sysadmins/Ubuntu-14.04-Server-Edition
