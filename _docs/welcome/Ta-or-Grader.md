@@ -1,6 +1,6 @@
 ---
 title: TA Grading Instructions
-category: Users
+category: Welcome
 order: 2
 ---
 
