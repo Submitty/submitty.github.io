@@ -1,21 +1,25 @@
 ---
-title: Create Student Accounts
+title: Managing Enrollment
 category: Instructor
-order: 1
 ---
 
-The instructions below will grant access to students in your course to
-the homework submission site.
 
+### Automated Course Enrollment Management
 
-### FOR RPI, STARTING FALL 2016
+For large courses, we recommend working with your university IT and/or
+registrar to receive regular updates of the student enrollment,
+automatically update student information when they switch sections or
+drop the course altogether.  We recommend never erasing student
+information if they are no longer in the course (in case the registrar
+information has an error).  Instead, we move dropped students to a
+special _null_ section.
 
-We are working with the registrar and campus IT to receive on a daily
-feed of students per course section.  We will use this data and a
-nightly cron job to automatically add students your course database
-and create login accounts to the submission server.  This should
-remove the need to run the steps below for all registered students.
-We expect a delay of 1-2 days for students who add the course late.
+For example, the RPI Computer Science department system admin now
+receives on a daily feed of students per course section.  We run a
+nightly cron job to automatically add students to the relevant
+Submitty course databases and create login accounts to the submission
+server.  This greatly simplifies instructor maintenance of current
+course enrollement.
 
 Below are the instructions to manually add students who are not
 traditionally registered, to immediately add a student who registered

@@ -4,6 +4,23 @@ category: Developer
 order: 4
 ---
 
+### User Access Logs
+
+These logs record each time a user (successfully) logs in, or logs
+out, or uploads an assignment.
+
+_FIXME: CHECK PATH_
+
+```
+/var/local/submitty/tagrading_logs/20170308_access.txt
+```
+
+_FIXME: CHECK WHO HAS ACCESS TO THESE LOGS...  everyone, or only root?_
+
+
+
+
+
 ### Autograding Queue Logs
 
 Instructors with ssh access have permission and are encouraged to
@@ -42,39 +59,6 @@ rare!), the keyword "ERROR" may appear on the grading line.
 
 
 
-
-### TA Grading Logs
-
-If there is an error during TA grading (hopefully rare!), a detailed error message may
-be added to the TA grading logs.  The logs are also stored in files
-named with the year, month, and day.  For example:
-
-_FIXME: CHECK PATH_
-
-```
-/var/local/submitty/tagrading_logs/20170308_logs.txt
-```
-
-_FIXME: CHECK WHO HAS ACCESS TO THESE LOGS...  everyone, or only root?_
-
-
-
-### User Access Logs
-
-These logs record each time a user (successfully) logs in, or logs
-out, or uploads an assignment.
-
-_FIXME: CHECK PATH_
-
-```
-/var/local/submitty/tagrading_logs/20170308_access.txt
-```
-
-_FIXME: CHECK WHO HAS ACCESS TO THESE LOGS...  everyone, or only root?_
-
-
-
-
 ### Autograding Results Logs
 
 To investigate a problem with a specific student user, for a
@@ -108,4 +92,28 @@ results_grade.txt
 ```
 
 
-### C++ code test suite (cmake, make files, etc)
+
+### TA Grading Logs
+
+If there is an error during TA grading (hopefully rare!), a detailed error message may
+be added to the TA grading logs.  The logs are also stored in files
+named with the year, month, and day.  For example:
+
+_FIXME: CHECK PATH_
+
+```
+/var/local/submitty/tagrading_logs/20170308_logs.txt
+```
+
+_FIXME: CHECK WHO HAS ACCESS TO THESE LOGS...  everyone, or only root?_
+
+
+
+
+### Grading Configuration Logs
+
+If there was an error when building the configuration for the
+automated grading for a specific gradeable you can inspect the cmake
+and make log files.
+
+_FIXME: add the location of these logfiles, and write FAQ / debugging tips_

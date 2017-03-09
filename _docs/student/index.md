@@ -1,6 +1,5 @@
 ---
 title: Student
-category: Welcome
 ---
 
 

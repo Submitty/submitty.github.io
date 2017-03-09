@@ -1,7 +1,5 @@
 ---
 title: TA or Grader
-category: Welcome
-order: 2
 ---
 
 ### TA Navigation Page
