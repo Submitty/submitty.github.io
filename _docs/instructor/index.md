@@ -9,6 +9,7 @@ The instructor navigation page is similar to the TA navigation page
 instructors also have an "Edit" button for every gradeable in case the
 release or due dates need to be changed or
 
+![](/images/navigation_instructor.png)
 
 ### Course Management Menu Bar
 
