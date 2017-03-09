@@ -1,5 +1,5 @@
 ---
-title: TA Grading Instructions
+title: TA or Grader
 category: Welcome
 order: 2
 ---

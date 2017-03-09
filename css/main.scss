@@ -10,12 +10,14 @@ $content-color: #222;
 $content-background-color: #fff;
 
 //$brand-colour: #3583d6;
-$brand-colour: #ADD5FF;
+//$brand-colour: #ADD5FF;
+$brand-colour: #edf6f6;
 $brand-colour-light: mix($brand-colour, $content-background-color, 10%);
 
 $nav-header-background-color: $brand-colour;
 //$nav-header-height: 60px;
-$nav-background-color: #f5f5f5;
+//$nav-background-color: #f5f5f5;
+$nav-background-color: $brand-colour;
 $nav-width: 300px;
 
 $space: 20px;

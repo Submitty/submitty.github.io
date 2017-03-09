@@ -1,5 +1,5 @@
 ---
-title: Local Test Suite (Autograder)
+title: Autograding Tests
 category: Developer
 order: 7
 ---
@@ -9,7 +9,7 @@ local test suite.  You must fix or document (in your pull request
 message) any test suite failures.
 
 
-### Clean Submitty Installation and Run Full Test Suite
+### Clean Installation and Run Full Test Suite
 
 To start with a fresh grading library install and build, and to run
 the full test suite, pass the optional "clean" and "test" arguments to

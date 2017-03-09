@@ -4,14 +4,28 @@ category: Developer
 order: 10
 ---
 
-We utilize the [Travis CI](http://travis-ci.org) platform to enable Continuous Integration on all commits and pull requests against the GitHub repository. We use this to ensure that that changes to tested code does not break anything when attempting to fix any bugs incase a developer forgets to run one of the local test suites themselves.
+We utilize the [Travis CI](http://travis-ci.org) platform to enable
+*continuous integration* on all commits and pull requests against the
+GitHub repository.  The Travis CI test suite contains many of the same
+tests that you can run locally.  Travis CI ensures that the most
+recent changes to the code do not cause test cases to fail that were
+previously passing.
 
-Additionally, we can test against several different versions of libraries to ensure compatibility. This is primarily seen at the moment with the PHP versions as we build against PHP 5.5, 5.6, and 7.0 to ensure that there is no code that is invalid on any platform so that users can deploy the application confidently.
 
-Currently, Travis is setup using:
+Travis CI is also used test against several different versions of
+libraries to ensure compatibility.  For example, in preparation for
+upgrading to a new version of PHP, we currently build against PHP 5.5,
+5.6, and 7.0 to ensure that there is no code that is invalid on any
+platform.
+
+Currently, Travis is setup with these commands:
+
 ```
 travis.yml
 .setup/travis.sh
 .setup/travis/*
 ```
-scripts which contain the code necessary for installing the packages needed for execution, setting up apache, downloading and starting selenium, and then actually running the test suite.
+
+The above scripts which contain the code necessary for installing the
+packages needed for execution, setting up apache, downloading and
+starting selenium, and then actually running the test suite.

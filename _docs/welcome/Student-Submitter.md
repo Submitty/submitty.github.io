@@ -1,7 +1,6 @@
 ---
-title: Student Submitter
-category: Users
-order: 1
+title: Student
+category: Welcome
 ---
 
 
@@ -34,10 +33,11 @@ categories:
     extensions for special circumstances, submission may still be
     allowed for these assignments.
 
-  * "Closed" - the TAs are manually grading these assignments.
+  * "Closed" - the TAs are currently reviewing these assignments and
+    completing the non-automated portion of grading.
 
-  * "Grades Available" - TA manual grading is complete and available
-    for review for these assignments.
+  * "Grades Available" - TA grading is complete and available for
+    review for these assignments.
 
 ![](/images/Navigation.png)
 
@@ -127,7 +127,7 @@ submission or any prior submission by choosing that version from the
 "Select Submission Version:" drop down menu.
 
 
-![](http://submitty.org/images/student_ui_progression.png)
+![](/images/student_ui_progression.png)
 
 
 ### Reverting to an Earlier Submission

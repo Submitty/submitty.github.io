@@ -1,7 +1,5 @@
 ---
-title: Getting Started
-category: Developer
-order: 1
+title: Developer
 ---
 
 As a developer, you'll need to set up the full system on your own
