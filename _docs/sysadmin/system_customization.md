@@ -1,11 +1,12 @@
 ---
-title: System Customization Checklist
+title: System Customization 
 category: System Administrator
 order: 6
 ---
 
-_NOTE: THIS FILE IS INTENDED TO BE SUGGESTIONS OR OPTIONAL
-INSTRUCTIONS FOR THE SYS ADMIN OF A LIVE INSTALLATION._
+
+_The optional instructions below are suggestions for the system
+administrators of a live Submitty installation._ 
 
 
 ### Customize upload students script 

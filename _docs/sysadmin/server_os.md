@@ -1,11 +1,15 @@
 ---
-title: Ubuntu 14.04 Server Edition
+title: Server OS
 category: System Administrator
 order: 1
 ---
 
+
+### Ubuntu 14.04 Server Edition
+
+
 The Submitty Homework Submission Server is currently supported only on
-Ubuntu 14.04 64-bit Server.  We are working towards support for Ubuntu
+**Ubuntu 14.04 64-bit Server**.  We are working towards support for Ubuntu
 16.04.  (We use the server edition of Ubuntu because it saves a lot of disk
 space and doesn't include a lot of extra packages which will require
 more frequent updates.  You also have more options in some cases, and

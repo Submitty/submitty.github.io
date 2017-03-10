@@ -1,13 +1,12 @@
 ---
-title: Create or Edit a New Gradeable
+title: Create or Edit a Gradeable
 category: Instructor
 order: 3
 ---
 
-### Create a New Gradeable
+![](/images/new_gradeable_form.png)
 
-Only "instructor" level users can create a new gradeable or edit an
-existing gradeable.  
+### Create a New Gradeable
 
 To create a new gradeable, instructor users should click the "New
 Gradeable" button in the top right corner, under the Submitty logo.
@@ -30,6 +29,8 @@ _IMPORTANT NOTE: You should not change the TA Grading rubric after
 TAs have started grading!_
 
 
+
+
 ### Types of Gradeables
 
 A "Gradeable" is any single item that will be graded automatically
@@ -37,13 +38,11 @@ and/or manually by the instructor/TAs.  We offer 3 basic types of
 gradeables: electronic submission, numeric, or checkboxes.
 
 
-#### Electronic Submission
    **_Electronic Submission_** should be used for
    homework/project/exercise file uploads by students (e.g., code,
    .pdfs, images, etc.).  Electronic Submission can be automatically
    graded, fully manually graded, or a combination of both.
 
-#### Numeric/Text
    **_Numeric_** is used for data entry of quizzes or exams where the
    scores for each student are a simple array of one or more numbers
    (possibly with a short text comment).  We provide a spreadsheet
@@ -53,7 +52,6 @@ gradeables: electronic submission, numeric, or checkboxes.
    if you numeric scores for this gradeable are already in an
    electronic format.
 
-#### Checkpoints
    **_Checkpoints_** should be used for manually graded items with one
    or more parts that are marked as full, half, or no credit.  This is
    commonly used for in class exercises (e.g., lab or recitation)
@@ -67,12 +65,10 @@ gradeables: electronic submission, numeric, or checkboxes.
 
 ### Autograding Configuration Path
 
-For Electronic File uploads you must specify the autograding
-configuration path.  This is the full path to the config.json file
-stored on the submission server.
-
-Read more about these automated grading configurations here:
-[Assignment Configuration](Assignment-Configuration)
+For Electronic File uploads you must specify the full path to the
+autograding configuration config.json file stored on the submission
+server.  (More details on the 
+[Assignment Configuration](assignment_configuration) page.)
     
 If you do not need any automated testing or grading; that is, if you
 are collecting files for the TAs to fully manually grade, choose the
@@ -163,8 +159,16 @@ graders are restricted.
 ### Build/Debug all Grading Configurations
 
 After adding one or more new electronic submission gradeables, or if
-you have modified any of the assignment configuration files, you must
-re-run the BUILD_csciXXXX.sh script.
+you have modified any of the assignment configuration files, the
+configuration must be built or re-built.  If you are using a
+system-wide sample configuration or if you are using a configuration
+you uploaded through the website, the build will happen automatically
+after you create or edit the gradeable.  
+
+However, if you have specified a configuration in a private course
+repository, 
+(see [Assignment Configuration](assignment_configuration) page)
+you must re-run the BUILD_XXXX.sh script.
 
 1.  Log in to the server.  Navigate to your top level directory, e.g.
 
@@ -185,7 +189,8 @@ re-run the BUILD_csciXXXX.sh script.
 ### Test your Assignment Configurations
 
 1. To manually test your course and assignment configurations, follow
-   the [ student submitter instructions ] (STUDENT-SUBMITTER)
+   the 
+   [student submission instructions](/student/index)
 
 
 2. You can confirm that the files were received by checking this

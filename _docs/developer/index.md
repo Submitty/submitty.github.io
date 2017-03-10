@@ -4,11 +4,11 @@ title: Developer
 
 As a developer, you'll need to set up the full system on your own
 computer.  The easiest method is to 
-[run the system within a virtual machine (VM)](VM-Install-Using-Vagrant).
+[run the system within a virtual machine (VM)](vm_install_using_vagrant).
 Alternately, you can install the system natively on a dedicated
 computer and allow outside access (which requires more steps to set up
 networking, SSL/https, etc.) by following the
-[complete system administrator instructions][System Administrator].
+[complete system administrator instructions](/sysadmin).
 
 
 
@@ -19,15 +19,14 @@ Please contribute by adding bugs or feature requests to our
 To contribute your software changes back to this open source project,
 follow these steps:
 
-  1. Run the [C++ Test Suite](Local-Test-Suite) locally.
+  1. Run the [C++ Test Suite](autograding_tests) locally.
 
   2. Push your work to an appropriately named new branch on GitHub.
 
-  3. When your code has passed all of the [Travis CI Tests](Travis-CI), then
+  3. When your code has passed all of the [Travis CI Tests](travis_ci), then
      you can make a pull request to master.
 
 
 Questions or comments can be sent to our Submitty support mailing
 list: submitty@cs.rpi.edu
 
-[System Administrator]: /sysadmins/Ubuntu-14.04-Server-Edition
