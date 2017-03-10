@@ -25,7 +25,7 @@ Rensselaer Polytechnic Institute (RPI).
 #### Presentation
 
 
-[Slides from our SIGCSE 2017 Demo Presentation](https://github.com/Submitty/Tutorial/blob/master/presentation/Submitty%20Demo%20SIGCSE%20March%2010%202017.pdf)
+[Slides from our SIGCSE 2017 Demo Presentation](https://github.com/Submitty/Tutorial/raw/master/presentation/Submitty%20Demo%20SIGCSE%20March%2010%202017.pdf)
 
   
 
