@@ -27,6 +27,17 @@
 				ga('send', 'pageview');
 			</script>
 		{% endif %}
+		<script>
+			document.onreadystatechange = function() {
+				if (this.readyState == "complete") {
+					if (window.location.href.indexOf("#") != -1) {
+						oldHash = window.location.href.substr(window.location.href.indexOf('#'));
+						location.hash = '';
+						location.hash = oldHash;
+					}
+				}
+			}
+		</script>
 	</head>
 
 	<body>
