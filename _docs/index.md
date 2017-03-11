@@ -25,15 +25,6 @@ launched by the
 *  Supports multiple instructors and TAs per course
 *  Open-source, free to use, install on your own hardware, or VPS
 
-
-#### SIGCSE 2017 Demo Presentation
-
-
-[Slides](https://github.com/Submitty/Tutorial/raw/master/presentation/Submitty%20Demo%20SIGCSE%20March%2010%202017.pdf)
-  
-[Download Examples](https://github.com/Submitty/Tutorial/archive/master.zip)
-
-
 #### Contact Us
 
 If you have a question or would like access to our demo site, please

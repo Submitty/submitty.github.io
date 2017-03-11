@@ -470,3 +470,14 @@ img {
 .cms-editor-active .editor-link {
 	display: block;
 }
+
+a svg:hover .octo-background {
+	fill: #000;
+}
+
+a svg .octo-background {
+	transition: 200ms;
+	transition-timing-function: ease-in-out;
+	-webkit-transition: 200ms;
+	-webkit-transition-timing-function: ease-in-out;
+}
