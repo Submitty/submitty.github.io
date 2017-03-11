@@ -4,7 +4,7 @@ order: 1
 ---
 
 
-* "Submitty: An Open Source, Highly-Configurable Platform for Grading of Programming Assignments"  
+* ["Submitty: An Open Source, Highly-Configurable Platform for Grading of Programming Assignments"](https://github.com/Submitty/Tutorial/raw/master/presentation/Submitty%20Demo%20SIGCSE%20March%2010%202017.pdf)  
   Matthew Peveler, Jeramey Tyler, Samuel Breese, Barbara Cutler, and Ana Milanova  
   Demo Presentation at ACM Technical Symposium on Computing Science Education (SIGCSE), March 2017
 
