@@ -11,20 +11,33 @@ launched by the
 
 [The Submitty project is hosted on GitHub](https://github.com/Submitty/). 
 
-Students can submit their code by drag-and-drop, zip upload, or
-version control, where it is then tested with a highly configurable
-and customizable automated grader. Students receive immediate feedback
-from the automated grader, and can resubmit to correct errors as
-needed. Through an online interface, TAs can access detailed grading
-results and supplement the automated scores with manual grading
-(numeric and written feedback) of overall program structure, good use
-of comments, reasonable error checking, etc. and any non-programming
-components of the assignment. The instructor can also configure the
-system to allow for a configurable late day policy on a per assignment
-and per student basis.
 
-Submitty is installed locally and is able to support multiple separate
-courses, each with hundreds of students and multiple TAs and
-instructors.
+#### Key Features
+
+*  Secure testing of many languages: Python, C/C++, Java, Scheme, Prolog, SPIM, and anything available on GNU / Linux!
+*  Customizable automated grading with immediate feedback to students
+*  Advanced grading tools: static analysis, JUnit, code coverage, memory debuggers, etc.
+*  Student upload by drag-and-drop, zip upload, or version control
+*  Correct mistakes through multiple submissions, flexible ``late day'' policy, hidden tests
+*  Interface for complementary instructor/TA manual grading, overall grade summaries 
+*  Instructors have full access to logs for debugging, launch batch regrading
+*  Scales to multiple courses with thousands of students
+*  Supports multiple instructors and TAs per course
+*  Open-source, free to use, install on your own hardware, or VPS
+
+
+#### SIGCSE 2017 Demo Presentation
+
+
+[Slides](https://github.com/Submitty/Tutorial/raw/master/presentation/Submitty%20Demo%20SIGCSE%20March%2010%202017.pdf)
+  
+[Download Examples](https://github.com/Submitty/Tutorial/archive/master.zip)
+
+
+#### Contact Us
+
+If you have a question or would like access to our demo site, please
+contact us at [submitty@cs.rpi.edu](mailto:submitty@cs.rpi.edu).
+
 
 Please use the links on the sidebar to further explore Submitty.
