@@ -1,33 +1,17 @@
-# Edition
+# Submitty
 
-Product documentation template for Jekyll. Browse through a [live demo](https://long-pig.cloudvent.net/).
-Start documenting your product, application, service or website with this configurable theme.
+This is the documentation website for [Submitty](http://submitty.org) the RPI Homework Submission Server.
 
-![Edition template screenshot](images/_screenshot.png)
+![Submitty screenshot](images/Submission_Result_Buggy.png)
 
+# Built with [Edition](https://github.com/CloudCannon/edition-jekyll-template)
+
+Edition is a product documentation theme for Jekyll, see a [live demo](https://long-pig.cloudvent.net/).
 Edition was made by [CloudCannon](http://cloudcannon.com/), the Cloud CMS for Jekyll.
 Find more templates and themes at [Jekyll Tips](http://jekyll.tips/templates/).
-
 Learn Jekyll with step-by-step tutorials and videos at [Jekyll Tips](http://jekyll.tips/).
 
-## Features
-
-* Two column layout
-* Full text search
-* Pre-styled components
-* Auto-generated navigation based on category
-* Optimised for editing in [CloudCannon](http://cloudcannon.com/)
-* Change log
-* RSS/Atom feed
-* SEO tags
-* Google Analytics
-
-## Setup
-
-1. Add your site and author details in `_config.yml`.
-2. Get a workflow going to see your site's output (with [CloudCannon](https://app.cloudcannon.com/) or Jekyll locally).
-
-## Develop
+## Developers
 
 Edition was built with [Jekyll](http://jekyllrb.com/) version 3.3.1, but should support newer versions as well.
 
