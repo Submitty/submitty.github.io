@@ -41,8 +41,12 @@ etc.
 ### Overall Structure of an Assignment Configuration
 
 
-You can study the provided sample assignment configurations here:
+You can study the [Tutorial](/tutorial) sample assignment configurations here:  
+[Tutorial Example Configurations](https://github.com/Submitty/Tutorial/tree/master/examples)
+
+Additional configuration examples are available here:
 [sample_files/sample_assignment_config][sample_files/sample_assignment_config]
+
 
 Each assignment configuration will have a top level directory with a
 ```config.json``` file.  Here is the general structure of a homework
@@ -52,6 +56,11 @@ configuration directory:
    computer_science_1
    └── my_python_homework
        ├── config.json                   [ REQUIRED ]
+       ├── custom_grader_code            [ OPTIONAL ]
+       │   └── grader.cpp
+       │   └── grader.h
+       │   └── another_file.cpp
+       ├── instructor_CMakeLists.txt     [ OPTIONAL ]
        ├── test_input                    [ OPTIONAL ]
        │   └── input_1.txt
        │   └── input_2.txt
