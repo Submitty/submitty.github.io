@@ -19,7 +19,7 @@ access for your TAs and mentors.
 
 Use the "Setup Rotating Sections" option to distribute your student
 list into equal sections for grading assignments other than
-registration section.  See also:  [Registration Section vs. Rotating Section](Create-or-Edit-a-Gradeable#grading-by-registration-section-or-rotating-section)
+registration section.  See also:  [Registration Section vs. Rotating Section](create_edit_gradeable#grading-by-registration-section-or-rotating-section)
 
 
 ### Late Days Management
@@ -38,6 +38,6 @@ used on other assignments.
 ### Grades Summaries
 
 Use "Grade Summaries" option to export data for use with 
-[Iris (Rainbow Grades)](Iris-(Rainbow-Grades)).
+[Iris (Rainbow Grades)](iris_rainbow_grades).
 
 Or export to CSV using the "CSV Report" option.
