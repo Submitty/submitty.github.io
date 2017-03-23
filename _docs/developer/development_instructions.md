@@ -72,7 +72,7 @@ branch).
    sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh clean
     
    # Recreate the default courses:
-   sudo /usr/local/submitty/GIT_CHECKOUT_Submitty/.setup/bin/add_sample_courses.py
+   sudo /usr/local/submitty/GIT_CHECKOUT_Submitty/.setup/bin/setup_sample_courses.py
    ```
 
 ---
