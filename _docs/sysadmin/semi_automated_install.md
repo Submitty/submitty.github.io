@@ -9,7 +9,7 @@ SIMILAR), ONCE WE HAVE REMOVED ALL OF THE MANY OUTDATED FILES NAMED
 "SETUP"._
 
 
-1. [Install Ubuntu 14.04 server edition](sysadmin/server_os)
+1. [Install Ubuntu 16.04 server edition](sysadmin/server_os)
 
 
 2. After installing the operating system, clone the git repository:  
