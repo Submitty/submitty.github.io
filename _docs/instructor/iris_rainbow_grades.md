@@ -43,6 +43,18 @@ order: 7
    Set the variables at the top of the file
    (`USERNAME`, `RAINBOW_GRADES_DIRECTORY`, `HWSERVER`, `REPORTS_DIRECTORY`)
 
+   Note:  When using the development VM, you can connect to the server as the instructor user:
+
+   ```
+   ssh -p 2222 instructor@127.0.0.1
+   ```
+
+   And copy files as the instructor user:
+
+   ```
+   scp -P 2222 instructor@127.0.0.1:/var/local/submitty/courses/<SEMESTER>/<COURSE>/<ETC>  <DESTINATION>
+   ```
+
 
 5. **Download the per student grade summary text files from the server**     
    Run:
