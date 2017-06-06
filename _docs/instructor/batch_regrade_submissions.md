@@ -10,7 +10,7 @@ assignment configuration was detected after students submitted
 homeworks, you can queue these previous submissions for regrading by
 using the [`regrade.py` script][regrade.py].
 
-This script takes a single argument, the full path pointing to the
+This script takes as arguments, one or more paths pointing to the
 portion of the course directory structure to be regraded.
 
 1. For example, to regrade student smithj's 5th submission for hw02, run this command:
@@ -30,6 +30,23 @@ portion of the course directory structure to be regraded.
    ```
    /usr/local/submitty/bin/regrade.py /var/local/submitty/courses/f16/csci1200/submissions/hw02 
    ```
+
+3. You can use wildcards in your pattern as well.  To regrade all
+   of student smithj's submissions for all assignments, run:
+
+   ```
+   /usr/local/submitty/bin/regrade.py /var/local/submitty/courses/f16/csci1200/submissions/\*/smithj 
+   ```
+   
+   The command also works without the escaped wildcard, the expansion
+   happens on the command line instead of within the python script.
+   _Note that this version may fail if the wildcard expansion exceeds
+   the maximum argument list length._
+
+   ```
+   /usr/local/submitty/bin/regrade.py /var/local/submitty/courses/f16/csci1200/submissions/*/smithj 
+   ```
+
 
 4. Note that if the number of submissions matching the specified
    pattern is greater than 50, the script will require interactive
