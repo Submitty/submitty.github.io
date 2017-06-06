@@ -80,7 +80,7 @@ using the [`regrade.py` script][regrade.py].
    details of the interactive queue, thus only the status of the batch
    queue is presented._
 
-   It is often helpful to combine these two commands:
+   It is often helpful to combine these two commands, e.g.:
 
    ```
    /usr/local/submitty/bin/regrade.py /var/local/submitty/courses/f16/csci1200/submissions/hw02 && /usr/local/submitty/bin/grading_done.py 
