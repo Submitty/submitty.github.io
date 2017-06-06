@@ -71,5 +71,20 @@ using the [`regrade.py` script][regrade.py].
    /usr/local/submitty/bin/grading_done.py 
    ```
 
+   This command will display the number of grading processes, the
+   number of items waiting in the interactive queue (items recently
+   submitted by students) and in the batch queue (items sent for
+   reprocessing by any instructor).  
+
+   _Note that currently typical instructor users cannot access the
+   details of the interactive queue, thus only the status of the batch
+   queue is presented._
+
+   It is often helpful to combine these two commands:
+
+   ```
+   /usr/local/submitty/bin/regrade.py /var/local/submitty/courses/f16/csci1200/submissions/hw02 && /usr/local/submitty/bin/grading_done.py 
+   ```
+
 [regrade.py]: https://github.com/Submitty/Submitty/blob/master/bin/regrade.py
 [grading_done.py]: https://github.com/Submitty/Submitty/blob/master/bin/grading_done.py
