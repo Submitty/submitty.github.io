@@ -68,14 +68,9 @@ popen,pclose,proc_open,chmod,php_real_logo_guid,php_egg_logo_guid,php_ini_scanne
 
 
 6.  We strongly recommend using `https`.  You will need 2 certificates
-    from a trusted certificate authority.  
-
-    (Using snake oil certificates will work, but you may run into
-    problems with browsers not trusting them, so we recommend getting
-    cer tificates from a recognized Certificate Authority.)
-
-    [Let's Encrypt](https://letsencrypt.org/) is a recent no-cost
-    option to obtain certificates.
+    from a trusted Certificate Authority.  [Let's
+    Encrypt](https://letsencrypt.org/) is a recent no-cost option to
+    obtain certificates.
 
     One of these certificates will be for your primary website, e.g.: 
     
@@ -91,7 +86,7 @@ popen,pclose,proc_open,chmod,php_real_logo_guid,php_egg_logo_guid,php_ini_scanne
 
     Note that "snake oil" certificates will probably not work.
 
-    Alternately, if you are setting a machine only for Submitty
+    Alternately, if you are setting up a machine only for Submitty
     development, you can configure your system to use `http`.  We
     strongly advise against using http for a live production machine.
 
