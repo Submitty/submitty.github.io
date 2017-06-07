@@ -115,7 +115,7 @@ popen,pclose,proc_open,chmod,php_real_logo_guid,php_egg_logo_guid,php_ini_scanne
     to enable the configurations.
 
 
-    For a development installation of Submitty using http:
+    For a development installation of Submitty using `http`:
 
         _FILLIN THESE INSTRUCTIONS_
 
@@ -124,7 +124,7 @@ popen,pclose,proc_open,chmod,php_real_logo_guid,php_egg_logo_guid,php_ini_scanne
     SSL certificate(s).
 
 
-    For a development installation of Submitty using http:
+    For a development installation of Submitty using `http`:
 
         _FILLIN THESE INSTRUCTIONS_
 
@@ -136,7 +136,7 @@ popen,pclose,proc_open,chmod,php_real_logo_guid,php_egg_logo_guid,php_ini_scanne
    the machine, one way to do this is:
 
    ```
-   ls /home > /var/local/sumitty/instructors/valid`
+   ls /home > /var/local/sumitty/instructors/valid
    ```
 
 
