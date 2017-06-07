@@ -32,8 +32,7 @@ you are running Submitty on a dedicated machine (or virtual machine).
    ```
 
    You will be asked several questions by the 
-   [CONFIGURE_SUBMITTY.sh script](https://github.com/Submitty/Submitty/blob/master/.setup/CONFIGURE_SUBMITTY.sh)
-
+   [CONFIGURE_SUBMITTY.sh script](https://github.com/Submitty/Submitty/blob/master/.setup/CONFIGURE_SUBMITTY.sh).
    Unless you have a database server already set up, it is practical
    to use localhost.  We use `hsdbu` for the database user, but any
    userid that is not used for something else will suffice.  Do not
