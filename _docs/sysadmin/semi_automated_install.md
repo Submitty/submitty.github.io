@@ -9,6 +9,10 @@ SIMILAR), ONCE WE HAVE REMOVED ALL OF THE MANY OUTDATED FILES NAMED
 "SETUP"._
 
 
+These instructions below and the automated installation scripts assume
+you are running Submitty on a dedicated machine (or virtual machine).
+
+
 1. [Install Ubuntu 16.04 server edition](sysadmin/server_os)
 
 
@@ -19,22 +23,29 @@ SIMILAR), ONCE WE HAVE REMOVED ALL OF THE MANY OUTDATED FILES NAMED
    git clone https://github.com/Submitty/Submitty.git /usr/local/submitty/GIT_CHECKOUT_Submitty
    ```
 
-3. Run the automated portion of the install  
+
+3. Run the automated portion of the install.  Note, this file 
 
    ```
    cd /usr/local/submitty/GIT_CHECKOUT_Submitty  
    ./.setup/install_system.sh
    ```
-   Unless you have a database server already set up, it is practical to use localhost.
-   We use hsdbu for the database user, but any userid that is not used for something else will suffice.
-   Do not enable debugging unless you are developing code on a non-production machine.
+
+   You will be asked several questions by the 
+   [CONFIGURE_SUBMITTY.sh script](https://github.com/Submitty/Submitty/blob/master/.setup/CONFIGURE_SUBMITTY.sh)
+
+   Unless you have a database server already set up, it is practical
+   to use localhost.  We use `hsdbu` for the database user, but any
+   userid that is not used for something else will suffice.  Do not
+   enable debugging unless you are developing code on a non-production
+   machine.
+
 
 4. Clean up Apache configs
 
-   You may wish to first disable or remove the default configurations
-   to prevent unintended access to the web server (don’t do this if
-   the default site is already in use).  Note: These files may not be
-   present on a newly installed system.
+   You probably want to first disable or remove the default
+   configurations to prevent unintended access to the web server (but
+   don’t do this if the default site is already in use).
 
    ```
    rm /etc/apache2/sites-enabled/000-default.conf 
