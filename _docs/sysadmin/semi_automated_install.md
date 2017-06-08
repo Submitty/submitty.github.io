@@ -13,7 +13,7 @@ These instructions below and the automated installation scripts assume
 you are running Submitty on a dedicated machine (or virtual machine).
 
 
-1. [Install Ubuntu 16.04 server edition](sysadmin/server_os)
+1. [Install Ubuntu 16.04 server edition](server_os)
 
 
 2. After installing the operating system, clone the git repository:  
@@ -84,13 +84,13 @@ popen,pclose,proc_open,chmod,php_real_logo_guid,php_egg_logo_guid,php_ini_scanne
     One of these certificates will be for your primary website, e.g.: 
     
     ```
-    http://submitty.youruniversity.edu
+    https://submitty.youruniversity.edu
     ```
 
     The other certificate will be for cgi, e.g.:
 
     ```
-    http://submitty-cgi.youruniversity.edu
+    https://submitty-cgi.youruniversity.edu
     ```
 
     Note that "snake oil" certificates will probably not work.
