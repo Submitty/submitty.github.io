@@ -15,30 +15,33 @@ time.  So during quiet submission period, there will be 5-6 grading
 processes at one time.  During a busy submission period, there will be
 more processes to handle the load.
 
+---
+
 To debug new features for autograding, it can be helpful to run a
 single grade_students.sh process and inspect the out.  To do this:
 
 
-* First disable the cron job...  Edit
-  [`INSTALL_SUBMITTY_HELPER.sh`](https://github.com/Submitty/Submitty/blob/master/.setup/INSTALL_SUBMITTY_HELPER.sh)
-  to comment out the schedule of the grade_students.sh process (in the
-  "GENERATE & INSTALL THE CRONTAB FILE FOR THE hwcron USER" section).
+1. First disable the cron job...  Edit
+   [`INSTALL_SUBMITTY_HELPER.sh`](https://github.com/Submitty/Submitty/blob/master/.setup/INSTALL_SUBMITTY_HELPER.sh)
+   to comment out the schedule of the grade_students.sh process (in
+   the "GENERATE & INSTALL THE CRONTAB FILE FOR THE hwcron USER"
+   section).
 
 
-* Then re-install Submitty:
+2. Then re-install Submitty:
 
    ```
    sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh
    ```
 
 
-* Kill any remaining grade_students.sh processes:
+3. Kill any remaining grade_students.sh processes:
 
    ```
    sudo killall grade_students.sh
    ```
 
-* Now, as the `hwcron` user, you can run a single grade_students.sh
+4. Now, as the `hwcron` user, you can run a single grade_students.sh
   process and watch the output.  
 
    ```
