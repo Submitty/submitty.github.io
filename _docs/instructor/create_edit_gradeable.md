@@ -173,20 +173,20 @@ you must re-run the BUILD_XXXX.sh script.
 1.  Log in to the server.  Navigate to your top level directory, e.g.
 
     ```
-    /var/local/submitty/courses/f16/csci1200/
+    /var/local/submitty/courses/s17/course_01/
     ``` 
 
 2.  Run the script, e.g.:
 
     ```
-    ./BUILD_csci1200.sh
+    ./BUILD_course_01.sh
     ``` 
 
     To re-build only a single gradeable, you can specify that
     gradeable id as an optional argument.  E.g.:
 
     ```
-    ./BUILD_csci1200.sh hw01
+    ./BUILD_course_01.sh hw01
     ``` 
 
 
@@ -205,7 +205,7 @@ you must re-run the BUILD_XXXX.sh script.
    directory:
 
    ```
-   /var/local/submitty/courses/f16/csci1200/submissions/ASSIGNMENT_ID/USER_ID/VERSION
+   /var/local/submitty/courses/s17/course_01/submissions/ASSIGNMENT_ID/USER_ID/VERSION
    ``` 
 
    For direct file upload submissions (single file or .zip) this
@@ -225,7 +225,7 @@ you must re-run the BUILD_XXXX.sh script.
    directory:
 
    ```
-   /var/local/submitty/courses/f16/csci1200/checkout/ASSIGNMENT_ID/USER_ID/VERSION
+   /var/local/submitty/courses/s17/course_01/checkout/ASSIGNMENT_ID/USER_ID/VERSION
    ```    
 
 
@@ -234,7 +234,7 @@ you must re-run the BUILD_XXXX.sh script.
    in this directory:
 
    ```
-   /var/local/submitty/courses/f16/csci1200/results/ASSIGNMENT_ID/USER_ID/VERSION
+   /var/local/submitty/courses/s17/course_01/results/ASSIGNMENT_ID/USER_ID/VERSION
    ```
 
    In this directory you will find the `results_grade.txt` summary of
