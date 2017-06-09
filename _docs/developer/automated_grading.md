@@ -55,6 +55,6 @@ single grade_students.sh process and inspect the output.  To do this:
    ```
 
    All program execution will be done with the `untrusted00` user, and
-   the `continous` argument means the process will not stop after the
+   the `continuous` argument means the process will not stop after the
    usual 16 minutes of idle time.  Use control-C to stop when you've
    finished your debugging.
