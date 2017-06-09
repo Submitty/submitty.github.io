@@ -107,9 +107,12 @@ branch).
   ```
   sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh clean
   ```
+  
+  _NOTE: The `clean` argument is usually not necessary, and
+  installation runs faster without it._
 
-  And also re-run the `BUILD_coursename.sh` script for any courses that
-  you're using for testing, e.g.:
+  You will also need to re-run the `BUILD_coursename.sh` script for
+  any courses that you're using for testing, e.g.:
 
   ```
   /var/local/submitty/courses/s17/course_01/BUILD_course_01.sh
@@ -147,4 +150,3 @@ branch).
 
 ---
 
-See also [Local Test Suite](Local-Test-Suite)
