@@ -143,10 +143,8 @@ branch).
   /var/local/submitty/courses/s17/course_01/BUILD_course_01.sh
    ```
    
-  See also [Batch Regrade Homeworks][Batch Regrade Homeworks]
+  And see also [Batch Regrade Homeworks](../instructor/batch_regrade_submissions)
 
 ---
 
 See also [Local Test Suite](Local-Test-Suite)
-
-[Batch Regrade Homeworks]: /1_instructor/Batch-Regrade-Homework
