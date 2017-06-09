@@ -36,7 +36,7 @@ branch).
    you've uploaded to your VM installation.  And it will erase any
    files you have created/edited within your VM that are not part of
    the shared directory of the Submitty working repository.  It will
-   also destroy the database, and any grading configuration or grading
+   also destroy the databases, and any grading configuration or grading
    work that has been done._
 
 
@@ -121,7 +121,7 @@ branch).
   for s in /var/local/submitty/courses/*/*; do c=`basename $s`; ${s}/BUILD_${c}.sh; done
   ```
 
-  And see also [Batch Regrade Homeworks][Batch Regrade Homeworks]
+  And see also [Batch Regrade Homeworks](batch_regrade_submissions)
 
   For convenience, here are the commands to copy-paste to install, 
   build all courses, and regrade everything.
