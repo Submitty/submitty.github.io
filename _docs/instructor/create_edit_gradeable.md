@@ -182,6 +182,14 @@ you must re-run the BUILD_XXXX.sh script.
     ./BUILD_csci1200.sh
     ``` 
 
+    To re-build only a single gradeable, you can specify that
+    gradeable id as an optional argument.  E.g.:
+
+    ```
+    ./BUILD_csci1200.sh hw01
+    ``` 
+
+
 3.  Fix any errors in your configurations, and re-run as necessary.
 
 
