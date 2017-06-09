@@ -48,13 +48,13 @@ single grade_students.sh process and inspect the output.  To do this:
 
 
 4. Now, as the `hwcron` user, you can run a single grade_students.sh
-  process and watch the output.  
+   process and watch the output.  
 
    ```
    sudo su -c '/usr/local/submitty/bin/grade_students.sh  untrusted00  continuous' hwcron
    ```
 
-  All program execution will be done with the `untrusted00` user, and
-  the `continous` argument means the process will not stop after the
-  usual 16 minutes of idle time.  Use control-C to stop when you've
-  finished your debugging.
+   All program execution will be done with the `untrusted00` user, and
+   the `continous` argument means the process will not stop after the
+   usual 16 minutes of idle time.  Use control-C to stop when you've
+   finished your debugging.
