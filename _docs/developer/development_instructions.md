@@ -20,11 +20,30 @@ branch).
 
 ---
 
-*  If you've changed any of the setup instructions
-   (`CONFIGURE_SUBMITTY.sh`, `INSTALL_SUBMITTY.sh`, `install_system.sh`,
-   etc.), you will have to re-setup your VM. You should be able to
-   just reprovision your machine by exiting the VM and running the
-   following command from the Submitty git repository:
+* If you've made changes to files affecting the system installation
+   process (changes to `CONFIGURE_SUBMITTY.sh`, `install_system.sh`,
+   `Vagrantfile`), you should re-create your VM from scratch to ensure
+   the changes are correct.  Exit the VM, and from a terminal your
+   host machine within the Submitty GIT repository type:
+
+   ```
+   vagrant destroy
+   vagrant up
+   ```
+  
+   _NOTE: This process will take a bit of time (~30 minutes), and
+   requires an internet connection.  It will delete any assignments
+   you've uploaded to your VM installation.  And it will erase any
+   files you have created/edited within your VM that are not part of
+   the shared directory of the Submitty working repository.  It will
+   also destroy the database, and any grading configuration or grading
+   work that has been done._
+
+
+* Depending on the configuration/setup changes that you're developing,
+   you may be able to more quickly test those changes by
+   re-provisioning the existing VM.  Exit the VM, and from a terminal
+   on your host machine within the Submitty GIT repository type:
 
    ```
    vagrant reload --provision
@@ -36,52 +55,50 @@ branch).
    vagrant up --provision
    ```
 
-   If something appears to be broken on the VM, it might be best to completely
-   start over by running the following commands:
-  
-   ```
-   vagrant destroy
-   vagrant up
-   ```
-   
-   _NOTE: This will delete any assignments you've uploaded to your VM
-   installation.  And it will erase any files you have created/edited
-   within your VM that are not part of the shared directory of the
-   Submitty working repository.  It will also destroy the database,
-   and any grading configuration or grading work that has been done._
- 
 ---
 
-*  If you've changed the script to create a new course, or the course
-   database:
 
-   _NOTE: To avoid accidental use on the live server, these
-   instructions should not be saved to a repository script!  Instead, you can
-   copy paste them into your development VM terminal._
+* If you've changed the script to create a new course
+   (`create_course.sh`), or the schema for the course database
+   (`tables.sql`), we need to delete all courses, and recreate the
+   course databases, users, and sample submission uploads.  
+
+   _NOTE: To avoid accidental use on the live server, the partial
+   reset script first checks for the existence of a .vagrant folder._
+
+   Run these commands:
 
    ```
-   # Delete the all course data:
-   sudo rm -rf /var/local/submitty/courses
-
-   # Delete all course databases:
-   export PGPASSWORD="hsdbu" 
-   psql -h localhost -U hsdbu --list | grep submitty_* | awk '{print $1}' | xargs -I "@@" dropdb -h localhost -U hsdbu "@@"
-   unset PGPASSWORD
-   
-   # Re-install Submitty
-   sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh clean
-    
-   # Recreate the default courses:
+   sudo /usr/local/submitty/GIT_CHECKOUT_Submitty/.setup/bin/partial_reset.py
    sudo /usr/local/submitty/GIT_CHECKOUT_Submitty/.setup/bin/setup_sample_courses.py
+   ```   
+
+---
+
+* If you've changed `INSTALL_SUBMITTY_HELPER.sh`, or if you've changed
+   any php/website files, re-install:
+
+   ```
+   sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh
+   ```
+
+   _NOTE: This command uses rsync and should run reasonably fast since
+   it's only copying and rebuilding what has changed._
+
+   If you've moved/deleted files, it's good to do a fresh install of
+   the Submitty code:  
+
+   ```
+   sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh clean
    ```
 
 ---
 
 * If you've changed the C++ code for the testing and autograding
   library, you must re-install the grading code (which rebuilds the
-  grading library).  
+  grading library).
 
-  Similarly, if you've added or changed any of the sample provided
+  Or, if you've added or changed any of the sample provided
   assignments within the Submitty repository, they need to be copied
   from the repository to the installation location.
 
@@ -92,10 +109,10 @@ branch).
   ```
 
   And also re-run the `BUILD_coursename.sh` script for any courses that
-  you're using for testing:
+  you're using for testing, e.g.:
 
   ```
-  /var/local/submitty/courses/f16/csci1200/BUILD_csci1200.sh
+  /var/local/submitty/courses/s17/course_01/BUILD_course_01.sh
   ```
 
   Or re-run the BUILD script for all courses:
@@ -116,21 +133,6 @@ branch).
   /usr/local/submitty/bin/grading_done.sh 
   ```
 
-
----
-
-* If you've changed any php/website files, re-install:
-
-   ```
-   sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh
-   ```
-   
-   _FIXME: This is doing more work (taking more time) than necessary
-   right now.  The copying & rebuilding of the C++ grading library is
-   repeated even though the files didn't change.  This needs an rsync
-   and/or CMake tweaks.  Without "clean" the `INSTALL_SUBMITTY.sh` script
-   should only change what's new._
-
 ---
 
 * If you've changed a homework configuration that is not from the
@@ -138,7 +140,7 @@ branch).
   that uses that homework:
 
    ```
-   /var/local/submitty/courses/f16/csci1200/BUILD_csci1200.sh
+  /var/local/submitty/courses/s17/course_01/BUILD_course_01.sh
    ```
    
   See also [Batch Regrade Homeworks][Batch Regrade Homeworks]
