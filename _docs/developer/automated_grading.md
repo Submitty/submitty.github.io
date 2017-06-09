@@ -18,21 +18,25 @@ more processes to handle the load.
 ---
 
 To debug new features for autograding, it can be helpful to run a
-single grade_students.sh process and inspect the out.  To do this:
+single grade_students.sh process and inspect the output.  To do this:
 
 
-1. First disable the cron job...  Edit
+1. First disable the cron job.  In the "GENERATE & INSTALL THE CRONTAB
+   FILE FOR THE hwcron USER" section of the 
    [`INSTALL_SUBMITTY_HELPER.sh`](https://github.com/Submitty/Submitty/blob/master/.setup/INSTALL_SUBMITTY_HELPER.sh)
-   to comment out the schedule of the grade_students.sh process (in
-   the "GENERATE & INSTALL THE CRONTAB FILE FOR THE hwcron USER"
-   section).
+   script, comment out the scheduling of the grade_students.sh process.
 
+   
 
 2. Then re-install Submitty:
 
    ```
    sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh
    ```
+
+   _NOTE: You can confirm that the cronjob is disabled by inspecting
+   the crontab file, run `crontab -e` as the `hwcron` user._
+
 
 
 3. Kill any remaining grade_students.sh processes:
@@ -41,6 +45,8 @@ single grade_students.sh process and inspect the out.  To do this:
    sudo killall grade_students.sh
    ```
 
+
+
 4. Now, as the `hwcron` user, you can run a single grade_students.sh
   process and watch the output.  
 
@@ -48,7 +54,7 @@ single grade_students.sh process and inspect the out.  To do this:
    sudo su -c '/usr/local/submitty/bin/grade_students.sh  untrusted00  continuous' hwcron
    ```
 
-  All program execution will be done with the untrusted00 user, and
+  All program execution will be done with the `untrusted00` user, and
   the `continous` argument means the process will not stop after the
   usual 16 minutes of idle time.  Use control-C to stop when you've
   finished your debugging.
