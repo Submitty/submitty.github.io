@@ -121,7 +121,7 @@ branch).
   for s in /var/local/submitty/courses/*/*; do c=`basename $s`; ${s}/BUILD_${c}.sh; done
   ```
 
-  And see also [Batch Regrade Homeworks](batch_regrade_submissions)
+  And see also [Batch Regrade Homeworks](../instructor/batch_regrade_submissions)
 
   For convenience, here are the commands to copy-paste to install, 
   build all courses, and regrade everything.
