@@ -150,3 +150,12 @@ branch).
 
 ---
 
+* If the VM has a clock skew (incorrect time)
+
+   ```
+   sudo service ntp stop
+   sudo ntpd -gq
+   sudo service ntp start
+   ```
+
+---
