@@ -26,6 +26,16 @@ up-to-date local installation of Chrome.  (This can be modified to use
 a different browser stack by modifying the `setUpClass` method in
 `tests/e2e/base_testcase.py`)
 
+You'll need to install the
+[ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/getting-started).
+Using HomeBrew on a mac:
+
+```
+brew install chromedriver
+```
+
+---
+
 To run the test suite:
 
 ```
