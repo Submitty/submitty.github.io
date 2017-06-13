@@ -28,7 +28,7 @@ a different browser stack by modifying the `setUpClass` method in
 
 You'll need to install the
 [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/getting-started).
-Using HomeBrew on a mac:
+Using HomeBrew on a Mac:
 
 ```
 brew install chromedriver

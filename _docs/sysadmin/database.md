@@ -42,6 +42,11 @@ PostgreSQL Database.
    a new database for each course for each term and populate the
    database with the necessary tables and initial data.
 
-#### Entity-Relation Diagram of the database
+
+
+## Entity-Relation Diagram of the database
+
+Diagram generated using:  [DataGrip](https://www.jetbrains.com/datagrip/)
+
 ![](http://i.imgur.com/xZDJ7R6.png)
 
