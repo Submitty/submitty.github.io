@@ -282,14 +282,15 @@ executables.
   **Command:** "screenshot"      
   **Description:** Takes a screenshot of the display. Screenshots are stored as .png files, are labeled sequentially per test case (e.g. 0.png), and should be treated as such. Internally, files are prepended with the number of the test case (e.g. test01_0.png), but this title should not be used for validation.   
   **Validation:**  Per screenshot, include a variation of the following in your config.json  
+  ```
 {   
-  &nbsp;&nbsp;&nbsp;&nbsp;"actual_file": "0.png",   
-  &nbsp;&nbsp;&nbsp;&nbsp;"description": "This description will be shown to the student",    
-  &nbsp;&nbsp;&nbsp;&nbsp;"method": "fileExists",    
-  &nbsp;&nbsp;&nbsp;&nbsp;"show_actual": "always",   
-  &nbsp;&nbsp;&nbsp;&nbsp;"show_message": "always"   
+  "actual_file": "0.png",   
+  "description": "This description will be shown to the student",    
+  "method": "fileExists",    
+  "show_actual": "always",   
+  "show_message": "always"   
 }  
-
+```
 
 * **Action:** ``"Type"``   
   **Command:** "type 'sequence to type' (optional number of repetitions) (optional delay between repetitions)"      
@@ -317,7 +318,7 @@ executables.
 
 
 * **Action:** ``"Mouse Move"``   
-  **Command:** "mouse move (x_position) (y_position) ” or “mouse move to” <x_position> <y_position>"         
+  **Command:** "mouse move (x_position) (y_position) or "mouse move to" (x_position) (y_position)"         
   **Description:** Moves the mouse from its current position to the x and y provided, clamped to the screen. Note that the x and y position provided are specified in relative coordinates.
 
 * **Action:** ``"Center Mouse"``   
