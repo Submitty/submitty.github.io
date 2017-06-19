@@ -299,17 +299,15 @@ executables.
 
 
 * **Action:** ``"Click and Drag"``   
-* **Click and Drag (standard)**   
-  * **Command:** "click and drag (optional mouse_button) (optional start_x) (optional start_y) end_x end_y"   
-  * **Description:** The standard version of click and drag starts either at the mouse’s current position or at a position specified by the user. If a mouse button has been specified, that button is pressed down at that position, otherwise, the left mouse button is pressed. The mouse is then moved to coordinates specified by the end position, and the held button is released.   
-* **Click and Drag Delta**   
-  * **Command:** "click and drag delta <optional mouse_button> end_x end_y"   
-  * **Description:** The delta version of click and drag starts at the current mouse position, clicks the desired mouse button (or left if one isn’t provided) and then moves a specified number of pixels  before releasing. The function is wrapping, so it will repeatedly click and drag until the desired distance has been moved.   
-
-
-* **_NOTE:_**
-  * _The mouse is clamped within the student’s window with a one pixel inner boundary to avoid accidental resizing._
-  * _The valid mouse buttons are "left", "right", and "middle"_.
+  * **Click and Drag (standard)**   
+    * **Command:** "click and drag (optional mouse_button) (optional start_x) (optional start_y) end_x end_y"   
+    * **Description:** The standard version of click and drag starts either at the mouse’s current position or at a position specified by the user. If a mouse button has been specified, that button is pressed down at that position, otherwise, the left mouse button is pressed. The mouse is then moved to coordinates specified by the end position, and the held button is released.   
+  * **Click and Drag Delta**   
+    * **Command:** "click and drag delta <optional mouse_button> end_x end_y"   
+    * **Description:** The delta version of click and drag starts at the current mouse position, clicks the desired mouse button (or left if one isn’t provided) and then moves a specified number of pixels  before releasing. The function is wrapping, so it will repeatedly click and drag until the desired distance has been moved.   
+  * **_NOTE:_**
+    * _The mouse is clamped within the student’s window with a one pixel inner boundary to avoid accidental resizing._
+    * _The valid mouse buttons are "left", "right", and "middle"_.
 
 
 * **Action:** ``"Click"``   
@@ -318,8 +316,9 @@ executables.
 
 
 * **Action:** ``"Mouse Move"``   
-  **Command:** "mouse move (x_position) (y_position) or "mouse move to" (x_position) (y_position)"         
-  **Description:** Moves the mouse from its current position to the x and y provided, clamped to the screen. Note that the x and y position provided are specified in relative coordinates.
+  **Command:** "mouse move (x_position) (y_position)"      
+  **Description:** Moves the mouse from its current position to the x and y provided, clamped to the screen. Note that the x and y position provided are specified in relative (window) coordinates.   
+
 
 * **Action:** ``"Center Mouse"``   
   **Command:** "center"      
