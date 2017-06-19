@@ -37,7 +37,7 @@ used on other assignments.
 
 ### Grades Summaries
 
-Use "Grade Summaries" option to export data for use with 
+Use "Grade Summaries" option to export data for use with
 [Iris (Rainbow Grades)](iris_rainbow_grades).
 
 Or export to CSV using the "CSV Report" option.

@@ -51,7 +51,7 @@ Additional configuration examples are available here:
 Each assignment configuration will have a top level directory with a
 ```config.json``` file.  Here is the general structure of a homework
 configuration directory:
-   
+
    ```
    computer_science_1
    └── my_python_homework
@@ -98,14 +98,14 @@ configuration directory:
    test case number).
 
 
-#### Second Phase: Execution 
+#### Second Phase: Execution
 
 1. Copy the files from the ```test_input``` directory into the
    temporary execution directory.
 
 2. Scan through the testcases in the ```config.json``` for all
    testcases with type = "execution".
-   
+
 3. Execute the "command"(s) for the execution testcases.
 
 4. Rename the `STDOUT.txt`, `STDERR.txt`, execution logfiles, and
@@ -142,11 +142,11 @@ executables.
 
 * **field:** ``"assignment_message"``  
   **type:** _string_  
-  **default value:** ``""`` 
+  **default value:** ``""``
 
 
 * **field:** ``"grading_parameters"``  
-  **type:** _associative array / mapping from string to integer_ 
+  **type:** _associative array / mapping from string to integer_
 
    _NOTE: These fields are only used as helper checks summing the
    total of the test case points._
@@ -213,7 +213,7 @@ executables.
 
 * **field:** ``"details"``  
   **type:** _string_  
-  **default value:** ``""`` 
+  **default value:** ``""``
 
 
 * **field:** ``"points"``  
@@ -267,7 +267,68 @@ executables.
   **default value:**  automatic checks added for `STDOUT.txt`,
      STDERR.txt, and the execution logfile.
 
+* **field:** ``"actions"``   
+  **type:** _array of action strings_ (described below)   
+  **default value:** empty.
 
+### Types of Action
+* **Action:** ``"Delay"``   
+  **Command:** "delay (number of seconds)"   
+  **Description:** Delays a number of seconds before the next action is taken. Useful if the results of the previous action may take some time to render. Currently accepts only integer values.
+  **_NOTE:_** _It is recommended that the first action be a delay of some sort to provide additional time for window initialization._
+
+
+* **Action:** ``"Screenshot"``   
+  **Command:** "screenshot"      
+  **Description:** Takes a screenshot of the display. Screenshots are stored as .png files, are labeled sequentially per test case (e.g. 0.png), and should be treated as such. Internally, files are prepended with the number of the test case (e.g. test01_0.png), but this title should not be used for validation.   
+  **Validation:**  Per screenshot, include the following in your config.json  
+{   
+  "actual_file": "0.png",   
+  "description": "This description will be shown to the student",    
+  "method": "fileExists",    
+  "show_actual": "always",   
+  "show_message": "always"   
+}  
+
+
+* **Action:** ``"Type"``   
+  **Command:** "type 'sequence to type' (optional number of repetitions) (optional delay between repetitions)"      
+  **Description:** Types a sequence one or more times with a delay in between. By default, the sequence is typed once with a 1/10th second delay between. Buttons within the sequence are pressed sequentially without delay.   
+  **Example:** The command “type 'asdf' 2 3” types the characters asdf, pauses for three seconds, and then types them a second time.
+
+
+* **Action:** ``"Click and Drag"``   
+* **Click and Drag (standard)**   
+  * **Command:** "click and drag (optional mouse_button) (optional start_x) (optional start_y) end_x end_y>"   
+  * **Description:** The standard version of click and drag starts either at the mouse’s current position or at one specified by the user. If a mouse button has been specified, that button is pressed down at that position, otherwise, the left mouse button is pressed. The mouse is then moved to coordinates specified by the end position, and the held button is released.   
+* **Click and Drag Delta**   
+  * **Command:** "click and drag delta <optional mouse_button> end_x end_y"   
+  * **Description:** The delta version of click and drag starts at the current mouse position, clicks the desired mouse button (or left if one isn’t provided) and then moves a specified number of pixels  before releasing. The function is wrapping, so it will repeatedly click and drag until the desired distance has been moved.   
+
+
+* **_NOTE:_**
+  * _It is recommended that the first action be a delay of some sort to provide additional time for window initialization._
+  * The valid mouse buttons are “left”, “right”, and “middle”.
+
+
+* **Action:** ``"Click"``   
+  **Command:** "click (optional ‘left’ ‘right’ or ‘middle’)"      
+  **Description:** Processes a mousedown and a mouseup of the specified mouse button. Defaults to left click.   
+
+
+* **Action:** ``"Mouse Move"``   
+  **Command:** "mouse move (x_position) (y_position) ” or “mouse move to” <x_position> <y_position>"      
+  **Description:** Moves the mouse from its current position to the x and y provided, clamped to the screen. Note that the x and y position provided are specified in relative coordinates.
+
+
+* **Action:** ``"Center Mouse"``   
+  **Command:** "center"      
+  **Description:** Moves mouse to the center of the student’s window.   
+
+
+* **Action:** ``"Move Mouse to Origin"``   
+  **Command:** "origin"      
+  **Description:** Moves mouse to the origin of the student’s window.
 
 * AUTOMATICALLY GENERATED TEST CASE (IF NOT SPECIFIED... )
 
@@ -288,7 +349,7 @@ executables.
 
 * **field:** ``"description"``  
   **type:** _string_  
-  **default value:** ``""`` 
+  **default value:** ``""``
 
 
 * **field:** ``"actual_file"``  
@@ -354,8 +415,8 @@ executables.
        if the specified file is empty
      * ``"errorIfEmpty"`` - Will cause the test to fail if the specified file
        is empty
-   
-   
+
+
   * These methods require an ``"actual_file"`` and an ``"expected_file"``:
      * ``"myersDiffbyLinebyWord"`` - Runs the diff on a line by line basis
        focusing only on whole words being different
@@ -370,8 +431,8 @@ executables.
        that aren't in the expected output
      * ``"diffLineSwapOk"`` - Runs the diff, but allows the order of lines to
        be different between expected and the actual
-   
-   
+
+
   * These methods are for Java programs, and require only an ``"actual_file"``:
      * ``"EmmaCoverageReportGrader"`` - This uses the additional field
        ```coverage_threshold``` to compare against for test success
@@ -390,8 +451,8 @@ executables.
          **type:** _integer_  
          **REQUIRED**
 
-   
-   
+
+
   * Static Analysis Tools  
     Example:
     [python static analysis example][python_static_analysis]
@@ -403,7 +464,7 @@ executables.
      "submitty_count_token while part4/*.py"
      ```
 
-     
+
      [Documentation for ``submitty_count_node``][submitty_count_node]  
      Example assignment configuration command line:  
      ```
@@ -427,10 +488,10 @@ executables.
 
 
   * You can also write your own custom test cases!
-   
+
      See:
      [cpp custom test case example][cpp_custom]
-   
+
      _FIXME: Document this!_
 
 
