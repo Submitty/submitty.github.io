@@ -274,41 +274,41 @@ executables.
 ### Types of Action
 * **Action:** ``"Delay"``   
   **Command:** "delay (number of seconds)"   
-  **Description:** Delays a number of seconds before the next action is taken. Useful if the results of the previous action may take some time to render. Currently accepts only integer values.
+  **Description:** Delays a number of seconds before the next action is taken. Useful if the results of the previous action may take some time to render.
   **_NOTE:_** _It is recommended that the first action be a delay of some sort to provide additional time for window initialization._
 
 
 * **Action:** ``"Screenshot"``   
   **Command:** "screenshot"      
   **Description:** Takes a screenshot of the display. Screenshots are stored as .png files, are labeled sequentially per test case (e.g. 0.png), and should be treated as such. Internally, files are prepended with the number of the test case (e.g. test01_0.png), but this title should not be used for validation.   
-  **Validation:**  Per screenshot, include the following in your config.json  
+  **Validation:**  Per screenshot, include a variation of the following in your config.json  
 {   
-  "actual_file": "0.png",   
-  "description": "This description will be shown to the student",    
-  "method": "fileExists",    
-  "show_actual": "always",   
-  "show_message": "always"   
+  &nbsp;&nbsp;&nbsp;&nbsp;"actual_file": "0.png",   
+  &nbsp;&nbsp;&nbsp;&nbsp;"description": "This description will be shown to the student",    
+  &nbsp;&nbsp;&nbsp;&nbsp;"method": "fileExists",    
+  &nbsp;&nbsp;&nbsp;&nbsp;"show_actual": "always",   
+  &nbsp;&nbsp;&nbsp;&nbsp;"show_message": "always"   
 }  
 
 
 * **Action:** ``"Type"``   
   **Command:** "type 'sequence to type' (optional number of repetitions) (optional delay between repetitions)"      
-  **Description:** Types a sequence one or more times with a delay in between. By default, the sequence is typed once with a 1/10th second delay between. Buttons within the sequence are pressed sequentially without delay.   
+  **Description:** Types a sequence one or more times with a delay between each repetition. By default, the sequence is typed once with a .1 second delay. Buttons within the sequence are pressed sequentially without delay.   
   **Example:** The command “type 'asdf' 2 3” types the characters asdf, pauses for three seconds, and then types them a second time.
 
 
 * **Action:** ``"Click and Drag"``   
 * **Click and Drag (standard)**   
-  * **Command:** "click and drag (optional mouse_button) (optional start_x) (optional start_y) end_x end_y>"   
-  * **Description:** The standard version of click and drag starts either at the mouse’s current position or at one specified by the user. If a mouse button has been specified, that button is pressed down at that position, otherwise, the left mouse button is pressed. The mouse is then moved to coordinates specified by the end position, and the held button is released.   
+  * **Command:** "click and drag (optional mouse_button) (optional start_x) (optional start_y) end_x end_y"   
+  * **Description:** The standard version of click and drag starts either at the mouse’s current position or at a position specified by the user. If a mouse button has been specified, that button is pressed down at that position, otherwise, the left mouse button is pressed. The mouse is then moved to coordinates specified by the end position, and the held button is released.   
 * **Click and Drag Delta**   
   * **Command:** "click and drag delta <optional mouse_button> end_x end_y"   
   * **Description:** The delta version of click and drag starts at the current mouse position, clicks the desired mouse button (or left if one isn’t provided) and then moves a specified number of pixels  before releasing. The function is wrapping, so it will repeatedly click and drag until the desired distance has been moved.   
 
 
 * **_NOTE:_**
-  * _It is recommended that the first action be a delay of some sort to provide additional time for window initialization._
-  * The valid mouse buttons are “left”, “right”, and “middle”.
+  * _The mouse is clamped within the student’s window with a one pixel inner boundary to avoid accidental resizing._
+  * _The valid mouse buttons are "left", "right", and "middle"_.
 
 
 * **Action:** ``"Click"``   
@@ -317,18 +317,17 @@ executables.
 
 
 * **Action:** ``"Mouse Move"``   
-  **Command:** "mouse move (x_position) (y_position) ” or “mouse move to” <x_position> <y_position>"      
+  **Command:** "mouse move (x_position) (y_position) ” or “mouse move to” <x_position> <y_position>"         
   **Description:** Moves the mouse from its current position to the x and y provided, clamped to the screen. Note that the x and y position provided are specified in relative coordinates.
-
 
 * **Action:** ``"Center Mouse"``   
   **Command:** "center"      
-  **Description:** Moves mouse to the center of the student’s window.   
+  **Description:** Moves the mouse to the center of the student’s window.   
 
 
 * **Action:** ``"Move Mouse to Origin"``   
   **Command:** "origin"      
-  **Description:** Moves mouse to the origin of the student’s window.
+  **Description:** Moves the mouse to the origin of the student’s window.
 
 * AUTOMATICALLY GENERATED TEST CASE (IF NOT SPECIFIED... )
 
