@@ -33,8 +33,8 @@ category: Developer
 
 These guidelines drawn from:
 
-https://www.atlassian.com/blog/git/written-unwritten-guide-pull-requests
+[https://www.atlassian.com/blog/git/written-unwritten-guide-pull-requests]
 
-https://github.com/blog/1943-how-to-write-the-perfect-pull-request
+(https://github.com/blog/1943-how-to-write-the-perfect-pull-request)
 
 https://github.com/thoughtbot/guides/tree/master/code-review
