@@ -121,14 +121,14 @@ order: 2
    
    * From a web browser (Chrome, Firefox, IE, etc.) on your host
      computer, go to:  
-     <http://192.168.56.101/index.php?semester=s17&course=csci1100>  
+     <http://192.168.56.101/index.php?semester=s17&course=sample>
      Edit the semester and course url variables to access other courses.
 
    * You can test the submission, autograding, and viewing of the
      grades details by uploading sample submissions from the Submitty
-     repository, located in this directory:  
-     <https://github.com/Submitty/Submitty/tree/master/more_autograding_examples><br>
-     <https://github.com/Submitty/Tutorial/tree/master/examples>
+     repository, located in one of these these directories:
+     <https://github.com/Submitty/Tutorial/tree/master/examples> (for "tutorial" course)
+     <https://github.com/Submitty/Submitty/tree/master/more_autograding_examples> (for "sample" course)<br>
 
    * You will enter the TA grading website from grading links on the main navidation page.
      _NOTE:  Because TA grading is still through a separate top level URL, you will need to enter your

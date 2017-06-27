@@ -76,7 +76,7 @@ are collecting files for the TAs to fully manually grade, choose the
 
 
 ```
-/usr/local/submitty/sample_files/sample_assignment_config/no_autograding/
+/usr/local/submitty/more_autograding_examples/upload_only/config/
 ```
 
 

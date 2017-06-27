@@ -44,8 +44,7 @@ etc.
 You can study the [Tutorial](/tutorial) sample assignment configurations here:  
 [Tutorial Example Configurations](https://github.com/Submitty/Tutorial/tree/master/examples)
 
-Additional configuration examples are available here:
-[sample_files/sample_assignment_config][sample_files/sample_assignment_config]
+And [additional configuration examples](https://github.com/Submitty/Submitty/tree/master/more_autograding_examples) are available.
 
 
 Each assignment configuration will have a top level directory with a
@@ -494,11 +493,10 @@ executables.
      _FIXME: Document this!_
 
 
-[sample_files/sample_assignment_config]: https://github.com/Submitty/Submitty/tree/master/sample_files/sample_assignment_config
 [grading/default_config.h]: https://github.com/Submitty/Submitty/blob/master/grading/default_config.h
 [grading/system_call_categories.h]: https://github.com/Submitty/Submitty/blob/master/grading/system_call_categories.h
 [grading/seccomp_functions.cpp]: https://github.com/Submitty/Submitty/blob/master/grading/seccomp_functions.cpp
-[python_static_analysis]: https://github.com/Submitty/Submitty/tree/master/sample_files/sample_assignment_config/python_static_analysis
+[python_static_analysis]: https://github.com/Submitty/Submitty/tree/master/more_autograding_examples/python_static_analysis
 [submitty_count_token]: https://github.com/Submitty/AnalysisTools/blob/master/docs/TOKENS.md
 [submitty_count_node]: https://github.com/Submitty/AnalysisTools/blob/master/docs/NODES.md
-[cpp_custom]: https://github.com/Submitty/Submitty/tree/master/sample_files/sample_assignment_config/cpp_custom
+[cpp_custom]: https://github.com/Submitty/Submitty/tree/master/more_autograding_examples/cpp_custom
