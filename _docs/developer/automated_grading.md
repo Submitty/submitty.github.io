@@ -86,4 +86,4 @@ To run a machine with a single `grade_students.sh` process:
    ```
 
 
-4. Note:  If you re-run `CONFIGURE_SUBMITTY.sh` you will need to redo steps 2 & 3.
+4. Note:  If you re-run `CONFIGURE_SUBMITTY.sh` you will need to redo these instructions.
