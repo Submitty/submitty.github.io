@@ -127,7 +127,8 @@ order: 2
    * You can test the submission, autograding, and viewing of the
      grades details by uploading sample submissions from the Submitty
      repository, located in this directory:  
-     <https://github.com/Submitty/Submitty/tree/master/sample_files/sample_submissions>
+     <https://github.com/Submitty/Submitty/tree/master/more_autograding_examples><br>
+     <https://github.com/Submitty/Tutorial/tree/master/examples>
 
    * You will enter the TA grading website from grading links on the main navidation page.
      _NOTE:  Because TA grading is still through a separate top level URL, you will need to enter your
