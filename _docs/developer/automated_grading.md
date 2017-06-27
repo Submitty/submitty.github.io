@@ -58,3 +58,32 @@ single grade_students.sh process and inspect the output.  To do this:
    the `continuous` argument means the process will not stop after the
    usual 16 minutes of idle time.  Use control-C to stop when you've
    finished your debugging.
+
+---
+
+To run a machine with a single `grade_students.sh` process:
+
+1. As root, edit `/usr/local/submitty/.setup/INSTALL_SUBMITTY.sh`
+
+   Change:
+
+   ```
+   MAX_INSTANCES_OF_GRADE_STUDENTS=1
+   ```
+
+
+2. Run:
+
+   ```
+   sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh
+   ```
+   
+
+3. Terminate only instances of the grading script:
+
+   ```
+   sudo killall grade_students.sh
+   ```
+
+
+4. Note:  If you re-run `CONFIGURE_SUBMITTY.sh` you will need to redo steps 2 & 3.
