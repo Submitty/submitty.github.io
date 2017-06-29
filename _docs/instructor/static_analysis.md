@@ -4,7 +4,7 @@ category: Instructor
 order: 9
 ---
 
-### Introduction
+## Introduction
 Submitty provides a number of utilities for analysis of student code. Many
 simple use-cases can be addressed using ``submitty_count``, which allows an
 instructor to count occurrences of a variety of syntactic features within
@@ -28,10 +28,10 @@ submitty_count -l c token Goto main.cpp
 This fragment will output the number of occurrences of the token ``goto`` in the
 C/C++ source file ``main.cpp``.
 
-### Countable Features
+## Countable Features
 Currently, three feature types can be counted: tokens, nodes, and functions.
 
-## Tokens
+### Tokens
 A token is a representation of a syntactic feature as a member of a set of
 categories. Within Submitty, we discard almost all other data except for this
 category, allowing many difficult parts of source code analysis to be
@@ -67,7 +67,7 @@ and should likely be the first thing instructors look to when writing an
 assignment that requires static analysis. Only seek out more advanced options
 when necessary.
 
-## Nodes
+### Nodes
 A node is just that: a node within a parse tree, which is a translation of the
 textual source into a tree structure. Within Submitty, we assign each node in
 the parse tree some number of textual tags. For example, see this code fragment:
@@ -120,8 +120,8 @@ counting approach. However, these features have different nodes in the parse
 tree, so by counting nodes with certain tags it is possible to easily
 distinguish them.
 
-## Functions
-This method is a bit higher-level: it attempts via a language-dependent method
+### Functions
+This method is a bit higher level: it attempts via a language-dependent method
 to detect a call to a function with a particular name. This is more easily
 "tricked" than the other methods, especially in languages with first-class
 functions like Python, but still a useful tool. A common case using this
