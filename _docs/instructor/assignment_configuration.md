@@ -455,21 +455,12 @@ executables.
     Example:
     [python static analysis example][python_static_analysis]
 
-
-     [Documentation for ``submitty_count_token``][submitty_count_token]  
      Example assignment configuration command line:  
      ```
-     "submitty_count_token while part4/*.py"
+     "submitty_count token While part4/*.py"
      ```
 
-
-     [Documentation for ``submitty_count_node``][submitty_count_node]  
-     Example assignment configuration command line:  
-     ```
-     "submitty_count_node -l python2 print part1/*.py"
-     ```
-
-
+     [Documentation for ``submitty_count`` and related functionality][/instructor/static_analysis]  
 
      * ``"intComparison"``
 
@@ -497,6 +488,4 @@ executables.
 [grading/system_call_categories.h]: https://github.com/Submitty/Submitty/blob/master/grading/system_call_categories.h
 [grading/seccomp_functions.cpp]: https://github.com/Submitty/Submitty/blob/master/grading/seccomp_functions.cpp
 [python_static_analysis]: https://github.com/Submitty/Submitty/tree/master/more_autograding_examples/python_static_analysis
-[submitty_count_token]: https://github.com/Submitty/AnalysisTools/blob/master/docs/TOKENS.md
-[submitty_count_node]: https://github.com/Submitty/AnalysisTools/blob/master/docs/NODES.md
 [cpp_custom]: https://github.com/Submitty/Submitty/tree/master/more_autograding_examples/cpp_custom
