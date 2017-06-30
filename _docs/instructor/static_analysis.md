@@ -90,7 +90,7 @@ necessary.
 
 ### Nodes
 
-The next level of analysis counts _nodes_ within a parse tree, which
+The next level of analysis enables counting _nodes_ within a parse tree, which
 is a translation of the textual source into a tree structure.  Within
 Submitty, we assign each node in the parse tree some number of textual
 tags. For example, this code fragment:
