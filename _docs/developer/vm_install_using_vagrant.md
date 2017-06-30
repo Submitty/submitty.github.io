@@ -15,16 +15,7 @@ order: 2
 
 3. Download and install [VirtualBox](https://www.virtualbox.org/), [Vagrant](https://www.vagrantup.com), and [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest). 
 
-    These versions and "host" operating system combinations have been tested and known to work for the project:
-
-    | OS                    | VirtualBox Version | Vagrant Version | Notes  |
-    |-----------------------|--------------------|-----------------|--------|
-    | Windows 7 SP1         | 4.3.36             | 1.8.1           | |
-    | Windows 10 Education  | 5.0.20             | 1.8.1           | |
-    | Mac 10.9.5            | 4.3.36             | 1.8.1           | |
-    | Mac 10.11.6           | 5.0.26             | 1.8.4           | |
-    | ~~Mac 10.11.6~~       | ~~5.1.2~~          | ~~1.8.5~~       | Could not establish link to VM on vagrant (broken shared folder) |
-    | ~~Fedora 22~~         | ~~4.3~~            | ~~1.7.2~~       | Didn't work, conflict with installed vmware? |
+    The latest Vagrant + Virtualbox combo that has been tested is _Vagrant 1.9.3_ and _Virtualbox 5.0.38_ (on Mac 10.12.6)
 
     Below are quick steps to get everything installed and running. You can just go to the respective sites and downloaded the necessary binary (which you must do for Windows).
 
@@ -137,9 +128,8 @@ order: 2
 
    * These URLS are configured:
      * <http://192.168.56.101> (submission)
-     * <http://192.168.56.102> (cgi-bin scripts)
-     * <http://192.168.56.104> (ta grading)
-     * <https://192.168.56.103> (svn)
+     * <http://192.168.56.101/cgi-bin> (cgi-bin scripts)
+     * <http://192.168.56.101/hwgrading> (ta grading)
 
 
 8. When the VM is "up", you can connect from your host computer to the
@@ -171,14 +161,15 @@ order: 2
     | student | student |
 
 
-10. The VM has the following three courses by default and they are all part of semester `f16`:
+10. The VM has the following three courses by default and they are all part of the current semester:
 
-    _FIXME:  This will change to "python course", "c++ course", "java course", etc._
-    
-    * csci1000
-    * csci1100
-    * csci1200
-    * csci2600
+    _Note: The current semester is calculated by either using an `s` if in the month is < 7 else use `f`
+    and then take the last two digits of the current year. So April 2017 would be `s17` while September
+    2017 would be `f17`.
+
+    * sample
+    * development
+    * tutorial
 
 
 11. Currently, there are four user accounts that can be used that have different permission levels within the system. Their password is the same as their username:
@@ -187,9 +178,3 @@ order: 2
     * instructor
     * ta
     * student
-
-11. Things that currently need to be done manually on Vagrant VM:
-
-    * Setup SVN for one of the courses
-    * Add users to the grading database for the courses
-    * Add additional students to both the submission and grading areas
