@@ -5,10 +5,14 @@ order: 9
 ---
 
 
-Submitty provides a number of utilities for analysis of student code. Many
-simple use-cases can be addressed using ``submitty_count``, which allows an
-instructor to count occurrences of a variety of syntactic features within
-student code.
+Submitty provides a number of utilities for analysis of student code
+through the [assignment autograding configuration](assignment_configuration).
+Many simple use-cases can be addressed using ``submitty_count``, which
+allows an instructor to count occurrences of a variety of syntactic
+features within student code.
+
+Here's a basic example:
+[Tutorial Example: 04 Python Static Analysis](https://github.com/Submitty/Tutorial/blob/master/examples/04_python_static_analysis/config/config.json)
 
 To use ``submitty_count``, simply invoke it from the ``config.json`` file for a
 given assignment, supplying the type of feature to count, the feature itself,
