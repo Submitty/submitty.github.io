@@ -4,13 +4,6 @@ This is the documentation website for [Submitty](http://submitty.org) the RPI Ho
 
 ![Submitty screenshot](images/Submission_Result_Buggy.png)
 
-# Built with [Edition](https://github.com/CloudCannon/edition-jekyll-template)
-
-Edition is a product documentation theme for Jekyll, see a [live demo](https://long-pig.cloudvent.net/).
-Edition was made by [CloudCannon](http://cloudcannon.com/), the Cloud CMS for Jekyll.
-Find more templates and themes at [Jekyll Tips](http://jekyll.tips/templates/).
-Learn Jekyll with step-by-step tutorials and videos at [Jekyll Tips](http://jekyll.tips/).
-
 ## Developers
 
 Edition was built with [Jekyll](http://jekyllrb.com/) version 3.3.1, but should support newer versions as well.
@@ -49,3 +42,10 @@ Edition is already optimised for adding, updating and removing documentation pag
 ### Navigation
 
 * Change `site.show_full_navigation` to control all or only the current navigation group being open.
+
+# Built with [Edition](https://github.com/CloudCannon/edition-jekyll-template)
+
+Edition is a product documentation theme for Jekyll, see a [live demo](https://long-pig.cloudvent.net/).
+Edition was made by [CloudCannon](http://cloudcannon.com/), the Cloud CMS for Jekyll.
+Find more templates and themes at [Jekyll Tips](http://jekyll.tips/templates/).
+Learn Jekyll with step-by-step tutorials and videos at [Jekyll Tips](http://jekyll.tips/).
