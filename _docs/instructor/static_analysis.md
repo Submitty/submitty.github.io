@@ -44,7 +44,7 @@ Here are a couple sample configurations:
 [Tutorial Example: 05 CPP Static Analysis](https://github.com/Submitty/Tutorial/tree/master/examples/05_cpp_static_analysis/config/config.json)
 
 
-
+___
 
 # Countable Features
 Currently, three feature types can be counted: tokens, nodes, and functions.
