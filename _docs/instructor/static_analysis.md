@@ -11,14 +11,10 @@ Many simple use-cases can be addressed using ``submitty_count``, which
 allows an instructor to count occurrences of a variety of syntactic
 features within student code.
 
-## Example Usage
-
-Here's an example configuration:
-[Tutorial Example: 04 Python Static Analysis](https://github.com/Submitty/Tutorial/blob/master/examples/04_python_static_analysis/config/config.json)
 
 To use ``submitty_count``, simply invoke it as a command within the ``config.json`` file for a
 given assignment, supplying the type of feature to count, the feature itself,
-any number of source files, and optional configuration flags. An example command:
+any number of source files, and optional configuration flags.  For example:
 
 ```
 "submitty_count --language python function print *.py"
@@ -32,21 +28,27 @@ Here's the same example:_
 /usr/local/submitty/SubmittyAnalysisTools/count --language python function print *.py
 ```
 
-
-
-
-The above line will output the number of calls to the function ``print`` in all
+This example will output the number of calls to the function ``print`` in all
 of the Python source files in the current directory. Another example:
 
 ```
 submitty_count -l c token Goto main.cpp
 ```
 
-This fragment will output the number of occurrences of the token ``goto`` in the
+This second example will output the number of occurrences of the token ``goto`` in the
 C/C++ source file ``main.cpp``.
 
-## Countable Features
+
+Here are a couple sample configurations:
+[Tutorial Example: 04 Python Static Analysis](https://github.com/Submitty/Tutorial/blob/master/examples/04_python_static_analysis/config/config.json)
+[Tutorial Example: 05 CPP Static Analysis](https://github.com/Submitty/Tutorial/tree/master/examples/05_cpp_static_analysis/config/config.json)
+
+--
+
+
+#### Countable Features
 Currently, three feature types can be counted: tokens, nodes, and functions.
+
 
 ### Tokens
 A token is a representation of a syntactic feature as a member of a set of
