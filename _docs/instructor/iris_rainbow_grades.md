@@ -117,7 +117,7 @@ order: 7
    5. A zone will be assigned to each student in a valid section, who
       has an overall grade of at least 0.1.  Or you may specify your
       own minimum overall grade for zone assignment by adding this
-      line to your `customization.txt` file:
+      line to your `customization.json` file:
 
       ```
       min_overall_for_zone_assignment <MINIMUM GRADE>
@@ -151,7 +151,7 @@ order: 7
    grades_summary/individual_summary_html/<student>_message.html
    ```
    
-   Examine these files.  Change `customization.txt` & re-run `make` as needed.
+   Examine these files.  Change `customization.json` & re-run `make` as needed.
 
 
 9. **Upload the files to the server**.    
