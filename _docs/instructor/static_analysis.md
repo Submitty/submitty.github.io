@@ -82,22 +82,25 @@ RightParen Semicolon RightCurly
 In this representation, it is very easy to determine that ``goto`` is not being
 used.
 
-Counting tokens is enough to handle many common automatic grading scenarios,
-and should likely be the first thing instructors look to when writing an
-assignment that requires static analysis. Only seek out more advanced options
-when necessary.
+Counting tokens handles many common automatic grading scenarios, and
+should be the first tool considered when writing an assignment that
+requires static analysis.  Only seek out more advanced options when
+necessary.
+
 
 ### Nodes
-A node is just that: a node within a parse tree, which is a translation of the
-textual source into a tree structure. Within Submitty, we assign each node in
-the parse tree some number of textual tags. For example, see this code fragment:
+
+The next level of analysis counts _nodes_ within a parse tree, which
+is a translation of the textual source into a tree structure.  Within
+Submitty, we assign each node in the parse tree some number of textual
+tags. For example, this code fragment:
 
 ```
 while True:
     1 + 1
 ```
 
-The code above parses to the following tree:
+parses to the following tree:
 
 ```
    Node(Tag "while", Tag "loop")
@@ -111,10 +114,10 @@ The code above parses to the following tree:
 
 ```
 
-Notice here that in addition to the hierarchal structure of the nodes, there is
-also a generally hierarchal structure to the tags: boolean and integer literals
+Notice here that in addition to the hierarchical structure of the nodes, there is
+also a generally hierarchical structure to the tags: boolean and integer literals
 both share the "literal" tag, but both also have a more specific tag denoting
-what kind of literal is present. This enables the counting of more or less
+what kind of literal is present. This enables the counting of 
 specific classes of node. For example:
 
 ```
