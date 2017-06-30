@@ -460,7 +460,7 @@ executables.
      "submitty_count token While part4/*.py"
      ```
 
-     [Documentation for ``submitty_count`` and related functionality][/instructor/static_analysis]  
+     [Documentation for ``submitty_count`` and related functionality](/instructor/static_analysis)
 
      * ``"intComparison"``
 

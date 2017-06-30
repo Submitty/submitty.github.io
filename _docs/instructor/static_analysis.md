@@ -4,7 +4,7 @@ category: Instructor
 order: 9
 ---
 
-## Introduction
+
 Submitty provides a number of utilities for analysis of student code. Many
 simple use-cases can be addressed using ``submitty_count``, which allows an
 instructor to count occurrences of a variety of syntactic features within
