@@ -165,3 +165,8 @@ present in Python code, for example:
 ```
 "submitty_count function print -l py *.py"
 ```
+
+__TODO: Insert instructions to produce a human readable version of the
+parse tree so the instructor user can experiment.__
+
+__TODO: Insert link to valid tags (& nodes?) that can counted.__
