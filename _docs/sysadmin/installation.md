@@ -51,7 +51,7 @@ Note: These instructions should be run under root
    su postgres -c "psql -c \"CREATE ROLE hsdbu WITH SUPERUSER CREATEDB CREATEROLE LOGIN PASSWORD 'PASSWORD'\""
    ```
    
-   and then the DB User would be `hsdbu` and the DB Passwor would be whatever you set.
+   and then the DB User would be `hsdbu` and the DB Password would be whatever you set.
    
    Do not enable debugging unless you are developing code on a non-production
    machine.
@@ -71,7 +71,7 @@ Note: These instructions should be run under root
 5. Setup Apache
 
    Note: If you don't have a SSL certificate for your server, we recommend
-   using [Let's Encrypt](https://letsencrypt.org/) to get one. It's recommend
+   using [Let's Encrypt](https://letsencrypt.org/) to get one. It's recommended
    that you use [certbot](https://certbot.eff.org/) to do this (and to have
    an HTTP configuration up).
 
@@ -132,7 +132,7 @@ Note: These instructions should be run under root
    ```
 
 8. We recommend that you should leave the PostgreSQL setup unless you know what you're doing.
-   However, you for the version of PostgreSQL that comes with Ubuntu (16.04), you can
+   However, for the version of PostgreSQL that comes with Ubuntu (16.04), you can
    use UNIX sockets and disable the ability to connect to the DB via TCP. The socket
    improves query responses minorly while disabling TCP can better secure your DB if you don't
    plan to connect to it (via localhost, IP, etc.). The socket by default is run at
