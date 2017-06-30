@@ -66,6 +66,10 @@ branch).
    _NOTE: To avoid accidental use on the live server, the partial
    reset script first checks for the existence of a .vagrant folder._
 
+   _NOTE: You will need to not be connected to any DBs (such as through
+   pgAdmin) or else running the below scripts could put things into a
+   broken state._
+
    Run these commands:
 
    ```
