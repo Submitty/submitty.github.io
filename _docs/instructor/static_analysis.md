@@ -6,21 +6,34 @@ order: 9
 
 
 Submitty provides a number of utilities for analysis of student code
-through the [assignment autograding configuration](assignment_configuration).
+through the [assignment autograding configuration](assignment_configuration) interface.
 Many simple use-cases can be addressed using ``submitty_count``, which
 allows an instructor to count occurrences of a variety of syntactic
 features within student code.
 
-Here's a basic example:
+## Example Usage
+
+Here's an example configuration:
 [Tutorial Example: 04 Python Static Analysis](https://github.com/Submitty/Tutorial/blob/master/examples/04_python_static_analysis/config/config.json)
 
-To use ``submitty_count``, simply invoke it from the ``config.json`` file for a
+To use ``submitty_count``, simply invoke it as a command within the ``config.json`` file for a
 given assignment, supplying the type of feature to count, the feature itself,
-any number of source files, and optional configuration flags. An example:
+any number of source files, and optional configuration flags. An example command:
 
 ```
-submitty_count --language python function print *.py
+"submitty_count --language python function print *.py"
 ```
+
+_Note: `submitty_count` is an alias for a program installed on the
+submitty server.  You can directly run the command to see how it works.
+Here's the same example:_
+
+```
+/usr/local/submitty/SubmittyAnalysisTools/count --language python function print *.py
+```
+
+
+
 
 The above line will output the number of calls to the function ``print`` in all
 of the Python source files in the current directory. Another example:

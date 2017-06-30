@@ -451,9 +451,7 @@ executables.
 
 
 
-  * Static Analysis Tools
-
-     See also:  [Documentation of submitty_count and related functionality](static_analysis)
+  * Static Analysis Tools (See also:  [Documentation of submitty_count, etc.](static_analysis) )
 
      Example assignment configuration command line:  
      ```
