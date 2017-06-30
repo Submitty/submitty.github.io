@@ -46,16 +46,17 @@ Here are a couple sample configurations:
 
 ___
 
-# Countable Features
+## Countable Features
 Currently, three feature types can be counted: tokens, nodes, and functions.
 
 
 ### Tokens
+
 A token is a representation of a syntactic feature as a member of a set of
 categories. Within Submitty, we discard almost all other data except for this
 category, allowing many difficult parts of source code analysis to be
 superseded. For example, imagine a scenario where an instructor would want to
-count the number of uses of ``goto`` in a C program (a real use-case at RPI).
+count the number of uses of ``goto`` in a C program.
 Take the following example of student code:
 
 ```
