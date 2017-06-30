@@ -75,6 +75,14 @@ branch).
    sudo service php7.0-fpm restart
    ```   
 
+
+   If there are changes to the auxiliary Tutorial or AnalysisTools
+   repos, you may also need to pull those changes:
+
+   ```
+   sudo /usr/local/submitty/.setup/bin/update_repos.py
+   ```
+
 ---
 
 * If you've changed `INSTALL_SUBMITTY_HELPER.sh`, or if you've changed
