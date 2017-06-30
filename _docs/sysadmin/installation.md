@@ -131,23 +131,15 @@ Note: These instructions should be run under root
    ls /home > /var/local/sumitty/instructors/valid
    ```
 
-8. Add the postgres user to the shadow group on your database machine so that
-    it can access the system file for authentication
+8. We recommend that you should leave the PostgreSQL setup unless you know what you're doing.
+   However, you for the version of PostgreSQL that comes with Ubuntu (16.04), you can
+   use UNIX sockets and disable the ability to connect to the DB via TCP. The socket
+   improves query responses minorly while disabling TCP can better secure your DB if you don't
+   plan to connect to it (via localhost, IP, etc.). The socket by default is run at
+   `/var/run/postgresql`. To disable TCP, you will need to edit 
+   `/etc/postgresql/9.5/main/pg_hba.conf` and disable all the lines that start with `host` and
+   `hostssl`. You will also have to modify `/usr/local/submitty/.setup/INSTALL_SUBMITTY.sh` and
+   change `DATABASE_HOST` to point to the socket, and then re-run the script.
 
-    ```
-    adduser postgres shadow
-    ```
-
-12. Edit `/root/bin/top.txt` and `/root/bin/bottom.txt` to make sure they
-    are pointed at the right path, using the right SSL keys, and have
-    any customizations you need.  (edit `SSLCertificateFile`,
-    `SSLCertificateKeyFile`, and comment out `SSLCertificatChainFile` in
-    `bottom.txt` if you are using a snakeoil certificate)
-
-
-13. Edit `/root/bin/gen.middle` to make sure `$dir` is set correctly, the
-    `AuthName` reflects what you use, and that the "require group" line
-    has the right group name for your course.
-
-14. Test apache config with:  `apache2ctl -t` 
+9. Test apache config with:  `apache2ctl -t` 
     If everything looks ok, restart apache with:  `service apache2 restart'
