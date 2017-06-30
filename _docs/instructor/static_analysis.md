@@ -41,7 +41,7 @@ C/C++ source file ``main.cpp``.
 
 Here are a couple sample configurations:  
 [Tutorial Example: 04 Python Static Analysis](https://github.com/Submitty/Tutorial/blob/master/examples/04_python_static_analysis/config/config.json)  
-[Tutorial Example: 05 CPP Static Analysis](https://github.com/Submitty/Tutorial/tree/master/examples/05_cpp_static_analysis/config/config.json)
+[Tutorial Example: 05 C++ Static Analysis](https://github.com/Submitty/Tutorial/tree/master/examples/05_cpp_static_analysis/config/config.json)
 
 
 ___
