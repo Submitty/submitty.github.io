@@ -451,16 +451,14 @@ executables.
 
 
 
-  * Static Analysis Tools  
+  * Static Analysis Tools
 
-    [Tutorial Example: 04 Python Static Analysis](https://github.com/Submitty/Tutorial/blob/master/examples/04_python_static_analysis/config/config.json)
+     See also:  [Documentation of submitty_count and related functionality](static_analysis)
 
      Example assignment configuration command line:  
      ```
      "submitty_count token While part4/*.py"
      ```
-
-     [Documentation for ``submitty_count`` and related functionality](static_analysis)
 
      * ``"intComparison"``
 
