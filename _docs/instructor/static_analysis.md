@@ -32,7 +32,7 @@ This example will output the number of calls to the function ``print`` in all
 of the Python source files in the current directory. Another example:
 
 ```
-submitty_count -l c token Goto main.cpp
+"submitty_count -l c token Goto main.cpp"
 ```
 
 This second example will output the number of occurrences of the token ``goto`` in the
@@ -87,6 +87,11 @@ should be the first tool considered when writing an assignment that
 requires static analysis.  Only seek out more advanced options when
 necessary.
 
+__TODO: Insert instructions to produce the intermediate tokens so the
+instructor user can experiment.__
+
+__TODO: Insert link to list of valid tokens that can counted.__
+
 
 ### Nodes
 
@@ -121,19 +126,18 @@ what kind of literal is present. This enables the counting of
 specific classes of node. For example:
 
 ```
-submitty_count -l python literal *.py
+"submitty_count -l python literal *.py"
 ```
 
-If run upon the code listed earlier, this will yield 3, counting all literals
-used within the code. Contrast:
+which will return `3`.  In contrast:
 
 ```
-submitty_count -l python integer *.py
+"submitty_count -l python integer *.py"
 ```
 
-This invocation will yield 2, as it will only count the integer literals.
+will return `2`, as it will only count the integer literals.
 
-Distinctions of this kind are not possible with token counting, which only
+Distinctions of this kind are not possible with _token_ counting, which only
 cares about the actual textual form of a token. Node counting can also be used
 to differentiate between different uses of the same token. For example, in
 Python the ``For`` token is used for both the ``for`` loop and the list
@@ -143,7 +147,14 @@ counting approach. However, these features have different nodes in the parse
 tree, so by counting nodes with certain tags it is possible to easily
 distinguish them.
 
+__TODO: Insert instructions to produce a human readable version of the
+parse tree so the instructor user can experiment.__
+
+__TODO: Insert link to valid tags (& nodes?) that can counted.__
+
+
 ### Functions
+
 This method is a bit higher level: it attempts via a language-dependent method
 to detect a call to a function with a particular name. This is more easily
 "tricked" than the other methods, especially in languages with first-class
@@ -152,5 +163,5 @@ method at RPI is determining the number of calls to the ``print`` function
 present in Python code, for example:
 
 ```
-submitty_count function print -l py *.py
+"submitty_count function print -l py *.py"
 ```
