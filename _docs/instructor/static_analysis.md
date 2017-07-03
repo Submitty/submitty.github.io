@@ -43,6 +43,7 @@ Take the following example of student code:
 /* Assignment 1: Don't use goto! */
 #include <stdio.h>
 int main() {
+    int foo = 1;
     printf("I'm not using goto ");
 }
 
@@ -55,12 +56,31 @@ this to the token-based search approach. The previous code fragment tokenizes
 to the following:
 
 ```
-Int Identifier LeftParen RightParen LeftCurly Identifier LeftParen StringLiteral
-RightParen Semicolon RightCurly
+Int Identifier LeftParen RightParen LeftCurly
+Int Identifier Equals IntegerLiteral Semicolon
+Identifier LeftParen StringLiteral RightParen Semicolon
+RightCurly
 ```
 
 In this representation, it is very easy to determine that ``goto`` is not being
-used.
+used. Contrast this to the following:
+
+```
+int main() {
+foo:
+    goto foo;
+}
+```
+
+This would tokenize into:
+
+```
+Int Identifier LeftParen RightParen LeftCurly
+Identifier Colon Goto Identifier Semicolon
+RightCurly
+```
+
+Here, the use of ``goto`` is immediately apparent given the presence of the ``Goto`` token.
 
 Counting tokens is enough to handle many common automatic grading scenarios,
 and should likely be the first thing instructors look to when writing an
@@ -101,8 +121,8 @@ specific classes of node. For example:
 submitty_count -l python literal *.py
 ```
 
-If run upon the code listed earlier, this will yield 3, counting all literals
-used within the code. Contrast:
+If run upon the code fragment from the start of this section, this will yield 3,
+counting all literals used within the code. Contrast:
 
 ```
 submitty_count -l python integer *.py
