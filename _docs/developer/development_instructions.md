@@ -66,6 +66,10 @@ branch).
    _NOTE: To avoid accidental use on the live server, the partial
    reset script first checks for the existence of a .vagrant folder._
 
+   _NOTE: You will need to not be connected to any DBs (such as through
+   pgAdmin) or else running the below scripts could put things into a
+   broken state._
+
    Run these commands:
 
    ```
@@ -74,6 +78,14 @@ branch).
    sudo /usr/local/submitty/GIT_CHECKOUT_Submitty/.setup/bin/setup_sample_courses.py
    sudo service php7.0-fpm restart
    ```   
+
+
+   If there are changes to the auxiliary Tutorial or AnalysisTools
+   repos, you may also need to pull those changes:
+
+   ```
+   sudo /usr/local/submitty/.setup/bin/update_repos.py
+   ```
 
 ---
 
