@@ -146,8 +146,8 @@ branch).
   ```
   sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh clean && \
   for s in /var/local/submitty/courses/*/*; do c=`basename $s`; ${s}/BUILD_${c}.sh; done && \
-  echo 'y' | /usr/local/submitty/bin/regrade.sh /var/local/submitty/courses/ && \
-  /usr/local/submitty/bin/grading_done.sh 
+  echo 'y' | /usr/local/submitty/bin/regrade.py /var/local/submitty/courses/ && \
+  /usr/local/submitty/bin/grading_done.py
   ```
 
 ---
