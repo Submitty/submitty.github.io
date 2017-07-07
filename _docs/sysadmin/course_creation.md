@@ -17,13 +17,17 @@ order: 5
    addgroup course01_tas_www
    ```
 
-   If you are keeping old assignments around for comparison purposes, you may also want to add a group of just those that need access to the archives
+   If you are keeping old assignments around for comparison purposes, you may also want to add a group of just 
+   those that need access to the archives
 
    ```
    addgroup course01_archive
    ```
 
-   Our policy is that all current / recent / future instructors for a course are in the archive group.  And permissions for all folders and files from old semesters are changed to allow read only access by the archive group.  If a head TA will be running plagiarism detection or needs access to old files, the head TA will be added to the archive group for that semester.  But by default head TAs are not added to the archive group.
+   Our policy is that all current / recent / future instructors for a course are in the archive group and permissions 
+   for all folders and files from old semesters are changed to allow read only access by the archive group. If a head 
+   TA will be running plagiarism detection or needs access to old files, the head TA will be added to the archive 
+   group for that semester, but by default head TAs are not added to the archive group.
 
 
 4. Add the instructors into the course groups:
@@ -36,7 +40,7 @@ order: 5
 5. Add the TAs into the course group:
 
    ```
-   adduser instructor course01_tas_www
+   adduser ta course01_tas_www
    ```
 
 6. Add special users `hwphp` and `hwcron` to the `course01_tas_www` group:
@@ -89,7 +93,11 @@ order: 5
    instructors or head TAs who will help with configuration or builds
    of the homework, and the special users `hwphp` and `hwcron`.  Also
    the instructor must be part of the `course_builders` group._
-
+   
+   _Note: You will sometimes need to restart PHP-FPM after adding a course._
+   ``` 
+   sudo service php7.0-fpm restart
+   ```
 
 2. You can confirm that a directory has been created and populated
    with initial files in the data directory.  For this example (if you
@@ -127,14 +135,7 @@ The database for your course will be named `submitty_f16_csci1200`
    ```  
 
 
-3. If this is a new install and hsdbu does not exist yet, 
-
-   ``` 
-   create user hsdbu; 
-   ```  
-
-
-4. If you need to wipe out the old course data, make a backup of the
+3. If you need to wipe out the old course data, make a backup of the
    database server in case of error and then drop the old database(s)
    with something like:
 
@@ -143,8 +144,8 @@ The database for your course will be named `submitty_f16_csci1200`
    ```  
 
 
-5. Create database using the standard prefix, ```submitty_```,
-   followed by the course id and term.  E.g.,
+4. Create database using the standard prefix, ```submitty_```,
+   followed by the semester and then the course id.
    (e.g. ```submitty_f16_csci1200```).
 
    ``` 
@@ -204,37 +205,70 @@ password.
 
 2. Starting from an empty database, run the sql file for that course:
 
-   [sql file with database schema](../blob/master/site/data/tables.sql) 
+   [sql file with database schema](../blob/master/site/data/course_tables.sql) 
 
    Which is stored in
    `/usr/local/submitty/GIT_CHECKOUT_Submitty/site/data` by default.
 
    ``` 
-   psql -h {DATABASE_HOST} submitty_f16_csci1200 -U hsdbu -f /usr/local/submitty/GIT_CHECKOUT_Submitty/site/data/tables.sql
+   psql -h {DATABASE_HOST} submitty_f16_csci1200 -U hsdbu -f /usr/local/submitty/GIT_CHECKOUT_Submitty/site/data/course_tables.sql
    ```
 
-  
+4.  Connect to the Course database:
+    ```
+    psql -h {DATABASE_HOST} submitty_f16_csci1200 -U hsdbu
+    ```
+    
 5.  Populate the sections table.  Add the appropriate number of
     sections, one per registration section.
 
-    THIS IS HANDLED BY THE DAILY FEED?
-
-
     active example:  
     ```
-    INSERT INTO sections_registration(sections_registration_id)
-    VALUES (1);
+    INSERT INTO sections_registration(sections_registration_id) VALUES (1);
     ```
 
-6. Manually add the primary instructor to the database.  (Then that 
+6. Connect to the core Submitty database:
+   ``` 
+   psql -h {DATABASE_HOST} submitty -U hsdbu
+   ```
+ 
+7. Add the course to the DB
+   ```
+   INSERT INTO courses (semester, course) VALUES ('f16', 'csci1200');
+   ```
+   
+8. Manually add the primary instructor to the database.  (Then that 
    instructor can add other instructor users, TAs, manually added 
    students from the webpage "Manage Users").
 
+   You first need to insert the user into the users table, and then
+   add them to the appropriate courses in the courses_users table.
+   
    Fill in the user id, first & last names, email address, set the 
    `user_group = 1` (instructor).
 
+   If you're using PAM authentication, you would use the following query:
    ```
    INSERT INTO users(user_id, user_firstname, user_lastname, user_email, user_group) VALUES ('instructor', 'Demo', 'Instructor', 'instructor@localhost', 1);
    ```
+   
+   Else if you're using Database authentication, you will need to first generate the password:
+   ```
+   php -r "print(password_hash('password', PASSWORD_DEFAULT).\"\n\");"
+   ```
+   and then copy that into the following query where it says `<hashed_password>`.
+   ```
+   INSERT INTO users(user_id, user_firstname, user_password, user_lastname, user_email) VALUES ('instructor', '<hashed_password>', 'Demo', 'Instructor', 'instructor@localhost');
+   ```
+   
+9. Add the user to the course:
+   ``` 
+   INSERT INTO courses_users (semester, course, user_id, user_group) VALUES ('f16', 'csci1200', 'instructor', 1);
+   ```
+   
+8. After adding the primary instructor, you may wish to upload a CSV for graders (go through
+   the Manage Graders page) as well as use something like the 
+   [Course Feed](https://github.com/Submitty/Submitty/tree/master/Docs/student_auto_feed) which
+   allows you to easily keep your list of students synced.
 
 [create_course.sh]: https://github.com/Submitty/Submitty/blob/master/bin/create_course.sh
