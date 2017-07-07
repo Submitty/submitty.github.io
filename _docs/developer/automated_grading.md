@@ -19,11 +19,11 @@ more processes to handle the load.
 ---
 
 To debug new features for autograding, it can be helpful to run a
-single grade_students.sh process and inspect the output.  To do this:
+single `grade_students.sh` process and inspect the output.  To do this:
 
 
-1. First, modify how configurations for the grade_students.sh processes.
-   As root, edit the /usr/local/submitty/.set/INSTALL_SUBMITTY.sh settings.
+1. First, modify how configurations for the `grade_students.sh` processes.
+   As root, edit the `/usr/local/submitty/.set/INSTALL_SUBMITTY.sh` settings.
 
    You can modify the max number of simultaneous instances of
    grade_students.sh by editing this line:
@@ -55,7 +55,7 @@ single grade_students.sh process and inspect the output.  To do this:
    ```
 
 
-3. Kill any remaining grade_students.sh processes:
+3. Kill any remaining `grade_students.sh` processes:
 
    ```
    sudo killall grade_students.sh
