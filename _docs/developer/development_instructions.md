@@ -172,3 +172,15 @@ branch).
    sudo service ntp start
    ```
 
+---
+
+* If the JavaScript files has changed and there are errors or you do not see changes then you may need to clear your browser's cache
+
+
+   ```
+   For Chrome: Choose the menu button, then "More tools", then "Clear browsing data"
+   For Firefox: Choose the menu button, then "Options", then "Advanced" in the "Network" tab under "Cached Web Content" click "Clear Now"
+   For Edge: Choose the Hub icon then the History icon, then "Clear all history"
+
+   ```
+
