@@ -280,8 +280,9 @@ executables.
 * **Action:** ``"Screenshot"``   
   **Command:** "screenshot"      
   **Description:** Takes a screenshot of the display. Screenshots are stored as .png files, are labeled sequentially per test case (e.g. 0.png), and should be treated as such. Internally, files are prepended with the number of the test case (e.g. test01_0.png), but this title should not be used for validation.   
-  **Validation:**  Per screenshot, include a variation of the following in your config.json  
-  ```
+  **Validation:**  Per screenshot, include a variation of the following in your config.json    
+
+```
 {   
   "actual_file": "0.png",   
   "description": "This description will be shown to the student",    
