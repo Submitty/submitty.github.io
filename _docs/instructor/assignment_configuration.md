@@ -390,6 +390,16 @@ executables.
   **value:** ``"always"``, ``"never"``, ``"on_success"``, or ``"on_failure"``  
   **default value:** ``"always"`` (if filename specified and file exists)
 
+* **field:** ``"show_difference_image"``  
+  **type:** _string_  
+  **value:** ``"always"``, ``"never"``, ``"on_success"``, or ``"on_failure"``  
+  **default value:** ``"always"`` (if filename specified and file exists)  
+
+* **field:** ``"acceptable_threshold"``  
+  **type:** _float_  
+  **value:** Range between 0 and 1, specifying the amount of allowable deviation between the actual and expected images being compared.   
+  **default value:** ``"0"`` (if imageDiff specified and file exists)  
+
 
 * **field:** ``"failure_message"``  
   **type:** _string_  
@@ -429,6 +439,7 @@ executables.
        that aren't in the expected output
      * ``"diffLineSwapOk"`` - Runs the diff, but allows the order of lines to
        be different between expected and the actual
+     * ``"ImageDiff"`` - Runs a diff on two images (actual_file and expected_file)   
 
 
   * These methods are for Java programs, and require only an ``"actual_file"``:
