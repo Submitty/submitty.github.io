@@ -11,7 +11,7 @@ which checks for jobs in the
 
 ---
 
-In the default system configurations, this script uses 5 parallel
+In the default system configuration, this script uses 5 parallel
 worker processes.  To adjust this number:
 
 1. As root, edit the `/usr/local/submitty/.set/INSTALL_SUBMITTY.sh`
@@ -56,9 +56,12 @@ To do this:
    systemctl start submitty_grading_scheduler
    ```
 
-   Note: You can check the status of the daemon:
+   You can check the status of the daemon:
 
    ```
    systemctl status submitty_grading_scheduler
    ```
 
+Note: When you re-run `sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh`,
+it will stop and restart the autograding scheduler if it is running.  (But it will not
+start the scheduler, if it is not currently running.)
