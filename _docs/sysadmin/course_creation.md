@@ -43,11 +43,12 @@ order: 5
    adduser ta course01_tas_www
    ```
 
-6. Add special users `hwphp` and `hwcron` to the `course01_tas_www` group:
+6. Add special users `hwphp`, `hwcron`, and `hwcgi` to the `course01_tas_www` group:
 
    ```
    adduser hwphp course01_tas_www
    adduser hwcron course01_tas_www
+   adduser hwcgi course01_tas_www
    ```
 
 7. Give permissions to create new users and update apache configurations
@@ -91,7 +92,7 @@ order: 5
 
    _Note: The TA group must contain the head instructor, any other
    instructors or head TAs who will help with configuration or builds
-   of the homework, and the special users `hwphp` and `hwcron`.  Also
+   of the homework, and the special users `hwphp`, `hwcron`, and `hwcgi`.  Also
    the instructor must be part of the `course_builders` group._
    
    _Note: You will sometimes need to restart PHP-FPM after adding a course._
