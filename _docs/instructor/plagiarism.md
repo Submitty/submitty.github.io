@@ -14,7 +14,7 @@ automated.
 To run plagiarism detection with the default configuration, run
 
 ```
-/usr/local/submitty/SubmittyAnalysisTools/plagiarism --path-base 'index.php?semester=<SEMESTER>&course=<COURSE>&assignment=<ASSIGNMENT>' -l <LANGUAGE> submissions/<ASSIGNMENT>
+/usr/local/submitty/SubmittyAnalysisTools/plagiarism --semester <SEMESTER> --course <COURSE> --assignment <ASSIGNMENT> --language <LANGUAGE> submissions/<ASSIGNMENT>
 ```
 
 from within the directory for the course (for example, if you had a Fall 2017
