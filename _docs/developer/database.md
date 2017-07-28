@@ -25,10 +25,10 @@ order: 3
 
 ## Entity-Relation Diagrams
 
-   1. Submitty Database (updated 7/28/2017, see https://github.com/Submitty/Submitty/blob/master/site/data/submitty_db.sql):
+   1. Submitty Database (updated 7/28/2017, see [code for most recent](https://github.com/Submitty/Submitty/blob/master/site/data/submitty_db.sql)):
       ![Database Entity Graph](/images/database_entity_graph.png)
 
-   2. Courses Tables (updated 7/28/2017, see https://github.com/Submitty/Submitty/blob/master/site/data/course_tables.sql):
+   2. Courses Tables (updated 7/28/2017, see [code for most recent](https://github.com/Submitty/Submitty/blob/master/site/data/course_tables.sql)):
       ![Database Entity Graph](/images/database_course_entity_graph.png)
 
    Diagram generated using [DataGrip](https://www.jetbrains.com/datagrip/), by
