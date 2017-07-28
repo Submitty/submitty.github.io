@@ -23,9 +23,13 @@ order: 3
    3. [navicat](https://www.navicat.com/en/products/navicat-for-postgresql) (GUI for managing PostgreSQL)
    4. [DataGrip](https://www.jetbrains.com/datagrip/) ("Database IDE", can connect to most DB types)
 
-## Entity-Relation Diagram of the database
+## Entity-Relation Diagrams
 
-   ![Database Entity Graph](/images/database_entity_graph.png)
+   1. Submitty Database (updated 7/28/2017, see https://github.com/Submitty/Submitty/blob/master/site/data/submitty_db.sql):
+      ![Database Entity Graph](/images/database_entity_graph.png)
+
+   2. Courses Tables (updated 7/28/2017, see https://github.com/Submitty/Submitty/blob/master/site/data/course_tables.sql):
+      ![Database Entity Graph](/images/database_course_entity_graph.png)
 
    Diagram generated using [DataGrip](https://www.jetbrains.com/datagrip/), by
    connecting to the DB, right-clicking on `public` schema,
