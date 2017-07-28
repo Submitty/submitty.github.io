@@ -9,9 +9,7 @@ Stanford's MOSS system that was used in the past. Currently, instructors must
 run the plagiarism tool manually, but in the future this process will be
 automated.
 
-## Running Plagiarism
-
-### Using Default Options
+## Running Plagiarism - Using Default Options
 
 To run plagiarism detection with the default configuration, run
 
