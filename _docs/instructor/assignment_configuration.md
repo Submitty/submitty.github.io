@@ -128,10 +128,9 @@ configuration directory:
 
 ### What files to copy
 
-![](/images/NavigationPageForTA.png)
-![](/images/files_for_compilation.pdf)
-[[/images/files_for_runner.pdf]]
-[[/images/files_for_validation.pdf]]
+![](/images/files_for_compilation.png)
+![](/images/files_for_runner.png)
+![](/images/files_for_validation.png)
 
 
 ### Overall Specification of a ``config.json`` file
