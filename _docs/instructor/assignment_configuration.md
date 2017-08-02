@@ -96,6 +96,7 @@ configuration directory:
    and `STDERR.txt` files from each compilation command (prefix with
    test case number).
 
+![](/images/files_for_compilation.png)
 
 #### Second Phase: Execution
 
@@ -111,6 +112,7 @@ configuration directory:
    specified output files that are to have been created by the program
    execution (prefix with test case number).
 
+![](/images/files_for_runner.png)
 
 #### Third Phase: Validation
 
@@ -125,11 +127,6 @@ configuration directory:
 
 4. Write the ```results.json``` and ```results_grade.txt``` files.
 
-
-### What files to copy
-
-![](/images/files_for_compilation.png)
-![](/images/files_for_runner.png)
 ![](/images/files_for_validation.png)
 
 
