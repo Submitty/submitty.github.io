@@ -55,11 +55,9 @@ configuration directory:
    computer_science_1
    └── my_python_homework
        ├── config.json                   [ REQUIRED ]
-       ├── custom_grader_code            [ OPTIONAL ]
-       │   └── grader.cpp
-       │   └── grader.h
-       │   └── another_file.cpp
-       ├── instructor_CMakeLists.txt     [ OPTIONAL ]
+       ├── provided_code                 [ OPTIONAL ]
+       |   └── instructor_code.cpp
+       |   └── instructor_code.h
        ├── test_input                    [ OPTIONAL ]
        │   └── input_1.txt
        │   └── input_2.txt
@@ -68,9 +66,12 @@ configuration directory:
        │   └── output_1.txt
        │   └── output_2.txt
        │   └── output_3.txt
-       └── test_code                     [ OPTIONAL ]
-           └── instructor_code_1.cpp
-           └── instructor_code.h
+       ├── instructor_CMakeLists.txt     [ OPTIONAL ]
+       └── custom_validation_code        [ OPTIONAL ]
+           └── grader.cpp
+           └── grader.h
+           └── another_file.cpp
+
    ```
 
 
@@ -88,8 +89,8 @@ configuration directory:
    Note:  The copied files can be controlled with the
    ```submitted_to_compilation``` variable in ```config.json```.   
 
-4. Copy the files from the ```provided_code``` directory (previously
-   named ```test_code```) into the temporary compilation subdirectory.
+4. Copy the files from the ```provided_code``` directory
+   into the temporary compilation subdirectory.
 
 5. Scan through the testcases in the ```config.json``` for all
    testcases with type = "compilation".
@@ -156,7 +157,9 @@ configuration directory:
 8. Copy files as needed form the ```tmp_work``` directory for archive
    to the details subfolder of the student's results directory for
    this assignment and submission version.
-
+   Note:  The copied files can be controlled with the
+   ```work_to_details``` variable in ```config.json```.
+   
 ![](/images/files_for_validation.png)
 
 
