@@ -128,9 +128,9 @@ configuration directory:
 
 ### What files to copy
 
-![files for compilation](/images/files_for_compilation.pdf)
-![files for runner](/images/files_for_runner.pdf)
-![files for validation](/images/files_for_validation.pdf)
+[[/images/files_for_compilation.pdf]]
+[[/images/files_for_runner.pdf]]
+[[/images/files_for_validation.pdf]]
 
 
 ### Overall Specification of a ``config.json`` file
