@@ -80,35 +80,50 @@ configuration directory:
 
 #### First Phase:  Compilation
 
-1. Create a temporary compilation directory and copy all of the
-   students submitted files into the temporary directory.
+1. Create a temporary directory for autograding this student's submission.
 
-2. Copy the files from the ```test_code``` directory into the
-   temporary directory.
+2. Create a temporary subdirectory for compilation.
 
-3. Scan through the testcases in the ```config.json``` for all
+3. Copy the student's submitted source code (for compiled languages) to this temporary directory.
+   Note:  The copied files can be controlled with the
+   ```submitted_to_compilation``` variable in ```config.json```.   
+
+4. Copy the files from the ```provided_code``` directory (previously
+   named ```test_code```) into the temporary compilation subdirectory.
+
+5. Scan through the testcases in the ```config.json``` for all
    testcases with type = "compilation".
 
-4. Execute the "command"(s) for the compilation testcases.
+6. Execute the "command"(s) for the compilation testcases.
 
-5. Copy the named executables from the temporary directory to the
-   temporary execution directory.  Also rename and copy the `STDOUT.txt`
-   and `STDERR.txt` files from each compilation command (prefix with
-   test case number).
+7. Rename the `STDOUT.txt`, `STDERR.txt`, execution logfiles, and
+   specified output files that are to have been created by the program
+   execution (prefix with test case number).
 
 ![](/images/files_for_compilation.png)
 
 #### Second Phase: Execution
 
-1. Copy the files from the ```test_input``` directory into the
-   temporary execution directory.
+1. Create a temporary subdirectory for runner and validation work.
 
-2. Scan through the testcases in the ```config.json``` for all
+2. Copy the student's submitted source code (for interpreted
+   languages) to the ```tmp_work``` subdirectory.
+   Note:  The copied files can be controlled with the
+   ```submitted_to_runner``` variable in ```config.json```.   
+
+3. Copy the test input files to the ```tmp_work``` subdirectory.
+
+4. Copy the compiled executables from the ```tmp_compilation``` subdirectory
+   to the ```tmp_work``` subdirectory.
+   Note:  The copied files can be controlled with the
+   ```compilation_to_runner``` variable in ```config.json```.
+
+5. Scan through the testcases in the ```config.json``` for all
    testcases with type = "execution".
 
-3. Execute the "command"(s) for the execution testcases.
+6. Execute the "command"(s) for the execution testcases.
 
-4. Rename the `STDOUT.txt`, `STDERR.txt`, execution logfiles, and
+7. Rename the `STDOUT.txt`, `STDERR.txt`, execution logfiles, and
    specified output files that are to have been created by the program
    execution (prefix with test case number).
 
@@ -116,16 +131,31 @@ configuration directory:
 
 #### Third Phase: Validation
 
-1. Copy the files from the ```test_output``` directory into the
-   temporary execution directory.  
+1. Copy specific files as needed from the student's submission
+   languages) to the ```tmp_work``` subdirectory.
+   Note: These files are specified with the ```submitted_to_validation``` variable
+   in ```config.json```.
 
-2. Scan through the test cases in the ```config.json``` and perform
+2. Copy the custom validation code into the ```tmp_work``` subdirectory.
+
+3. Copy the expected test output into the ```tmp_work``` subdirectory.
+
+5. Copy output files from compilation from the ```tmp_compilation``` subdirectory
+   to the ```tmp_work``` subdirectory.
+   Note:  The copied files can be controlled with the
+   ```compilation_to_validation``` variable in ```config.json```.
+
+5. Scan through the test cases in the ```config.json``` and perform
    the validation checks indicated within each check.
 
-3. Calculate the score for each test case, and determine what messages
+6. Calculate the score for each test case, and determine what messages
    and files should be displayed for each test case.
 
-4. Write the ```results.json``` and ```results_grade.txt``` files.
+7. Write the ```results.json``` and ```grade.txt``` files.
+
+8. Copy files as needed form the ```tmp_work``` directory for archive
+   to the details subfolder of the student's results directory for
+   this assignment and submission version.
 
 ![](/images/files_for_validation.png)
 
