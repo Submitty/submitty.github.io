@@ -128,7 +128,8 @@ configuration directory:
 
 ### What files to copy
 
-[[/images/files_for_compilation.pdf]]
+![](/images/NavigationPageForTA.png)
+![](/images/files_for_compilation.pdf)
 [[/images/files_for_runner.pdf]]
 [[/images/files_for_validation.pdf]]
 
