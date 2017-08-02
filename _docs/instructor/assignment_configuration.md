@@ -126,6 +126,12 @@ configuration directory:
 4. Write the ```results.json``` and ```results_grade.txt``` files.
 
 
+### What files to copy
+
+![](/images/files_for_compilation.pdf)
+![](/images/files_for_runner.pdf)
+![](/images/files_for_validation.pdf)
+
 
 ### Overall Specification of a ``config.json`` file
 
