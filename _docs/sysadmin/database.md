@@ -1,5 +1,5 @@
 ---
-title: Database
+title: Database Overview
 category: System Administrator
 order: 5
 ---
@@ -47,4 +47,4 @@ psql -d submitty -f /usr/local/submitty/GIT_CHECKOUT_Submitty/site/data/submitty
 psql -d submitty -c "alter schema public owner to hsdbu;"
 ```
 
-Then, continue setup by following the [Course Creation](course_creation.md) instructions.
+Then, continue setup by following the [Course Creation](course_creation) instructions.

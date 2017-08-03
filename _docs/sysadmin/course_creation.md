@@ -6,11 +6,9 @@ order: 5
 
 ### Users and Groups
 
-1. Make sure that `/var/local/instructors/valid` has a current list of valid userids (no longer needed at RPI)
-
-2. Create local user accounts for the instructor and TAs for this course:
+1. Create local user accounts for the instructor and TAs for this course:
  
-3. Create new groups for this course:
+2. Create new groups for this course:
 
    ```
    addgroup course01
@@ -30,13 +28,14 @@ order: 5
    group for that semester, but by default head TAs are not added to the archive group.
 
 
-4. Add the instructors into the course groups:
+3. Add the instructors into the course groups:
 
    ```
    adduser instructor course01
    adduser instructor course01_tas_www
    adduser instructor course01_archive
    ```
+
 5. Add the TAs into the course group:
 
    ```
@@ -76,10 +75,15 @@ order: 5
    adduser instructor-stu
    ```
 
-### Prepare the directory and initial files for each course
+
+### Prepare the directory and initial files for each course and create the course database
 
 
-1. Run the [create_course.sh script][create_course.sh]
+1. If the top level `submitty` database does not exist, that must be
+   created first.  For more information: [Database Overview](database_overview)
+
+
+2. Run the [create_course.sh script][create_course.sh]
    to create each new course.  For example:
 
    ``` 
@@ -100,7 +104,7 @@ order: 5
    sudo service php7.0-fpm restart
    ```
 
-2. You can confirm that a directory has been created and populated
+3. You can confirm that a directory has been created and populated
    with initial files in the data directory.  For this example (if you
    chose the default data directory location) the directory files will
    be here:
@@ -109,6 +113,20 @@ order: 5
    /var/local/submitty/courses/f16/csci1200/ 
    ```  
 
+4. You can confirm that the database was created and populated by 
+
+   submitty_<SEMESTER>_<COURSE>
+
+   For more information: [Database Overview](database_overview)
+
+
+5. Add the instructor(s) to both the top level and course database:
+
+   ```
+   sudo /usr/local/submitty/bin/adduser.py --course <SEMESTER> <COURSE> null <USERNAME>
+   ```
+
+   This script will ask a few questions interactively.
 
 
 ### Setup the database server for Submitty use and create new databases
