@@ -113,8 +113,10 @@ order: 5
    /var/local/submitty/courses/f16/csci1200/ 
    ```  
 
-4. You can confirm that the database was created and populated by
-   looking at the database `submitty_<SEMESTER>_<COURSE>`:
+4. The create course script also creates and populates the course
+   database.  You can confirm that the database was created and
+   populated by looking at the database
+   `submitty_<SEMESTER>_<COURSE>`:
 
    ```
    sudo su postgres
@@ -133,168 +135,13 @@ order: 5
    sudo /usr/local/submitty/bin/adduser.py --course <SEMESTER> <COURSE> null <USERNAME>
    ```
 
-   This script will ask a few questions interactively.
+   This script will ask for more information about the user interactively.
+
+6. The instructor can add all other users (students, graders, other
+   instructors) to the course by uploading a csv through the website.
 
 
-### Setup the database server for Submitty use and create new databases
+   Alternatively, students can be automatically added by connecting to
+   data from the university registrar:
 
-For these steps you need to to be the postgres user or other database
-server superuser.
-
-In the instructions below, replace `{DATABASE_HOST}` with database's
-hostname (e.g. `localhost` for the VM).
-
-The database for your course will be named `submitty_f16_csci1200`
-(replace `f16` and `csci1200` with the term and your course id).
-
-
-1. Become a DB superuser: 
-
-   ``` 
-   sudo su postgres 
-   ```  
-
-2. Enter PostgreSQL: 
-
-   ``` 
-   psql 
-   ```  
-
-
-3. If you need to wipe out the old course data, make a backup of the
-   database server in case of error and then drop the old database(s)
-   with something like:
-
-   ``` 
-   drop database submitty_f16_csci1200;
-   ```  
-
-
-4. Create database using the standard prefix, ```submitty_```,
-   followed by the semester and then the course id.
-   (e.g. ```submitty_f16_csci1200```).
-
-   ``` 
-   create database submitty_f16_csci1200 with owner hsdbu; 
-   ```
-
-
-6. By default the public scheme is owned by postgres.  We need to
-   switch it to be owned by hsdbu so the commands in the next section
-   work.
-
-   ```
-   psql -h {DATABASE_HOST} submitty_f16_csci1200 -U postgres
-   ```
-
-   ```
-   alter schema public owner to hsdbu;
-   ```
-
-
-### Prepare or reset the database for each course
-
-Once the database has been created above (by someone with the postgres
-database user password), we can initialize or reset and re-initialize
-the tables.  These commands only require the hsdbu database user
-password.
-
-
-1. To reset the database to the initial (empty) state.
-
-   Connect to the database:
-
-   ```
-   psql -h {DATABASE_HOST} -d submitty_f16_csci1200 -U hsdbu
-   ```
-
-   Confirm that the hsdbu use owns the public schema:
-
-   ```
-   \dn
-   ```
-
-   Then delete all of the tables:
-   ```
-   DROP SCHEMA public CASCADE;
-   CREATE SCHEMA public;
-   GRANT ALL ON SCHEMA public TO postgres;
-   GRANT ALL ON SCHEMA public TO public;
-   ```
-
-   To quit the postgres prompt:
-   
-   ```
-   \q   
-   ```
-
-
-2. Starting from an empty database, run the sql file for that course:
-
-   [sql file with database schema](../blob/master/site/data/course_tables.sql) 
-
-   Which is stored in
-   `/usr/local/submitty/GIT_CHECKOUT_Submitty/site/data` by default.
-
-   ``` 
-   psql -h {DATABASE_HOST} submitty_f16_csci1200 -U hsdbu -f /usr/local/submitty/GIT_CHECKOUT_Submitty/site/data/course_tables.sql
-   ```
-
-4.  Connect to the Course database:
-    ```
-    psql -h {DATABASE_HOST} submitty_f16_csci1200 -U hsdbu
-    ```
-    
-5.  Populate the sections table.  Add the appropriate number of
-    sections, one per registration section.
-
-    active example:  
-    ```
-    INSERT INTO sections_registration(sections_registration_id) VALUES (1);
-    ```
-
-6. Connect to the core Submitty database:
-   ``` 
-   psql -h {DATABASE_HOST} submitty -U hsdbu
-   ```
- 
-7. Add the course to the DB
-   ```
-   INSERT INTO courses (semester, course) VALUES ('f16', 'csci1200');
-   ```
-   
-8. Manually add the primary instructor to the database.  (Then that 
-   instructor can add other instructor users, TAs, manually added 
-   students from the webpage "Manage Users").
-
-   You first need to insert the user into the users table, and then
-   add them to the appropriate courses in the courses_users table.
-   
-   Fill in the user id, first & last names, email address, set the 
-   `user_group = 1` (instructor).
-
-   If you're using PAM authentication, you would use the following query:
-   ```
-   INSERT INTO users(user_id, user_firstname, user_lastname, user_email, user_group) VALUES ('instructor', 'Demo', 'Instructor', 'instructor@localhost', 1);
-   ```
-   
-   Else if you're using Database authentication, you will need to first generate the password:
-   ```
-   php -r "print(password_hash('password', PASSWORD_DEFAULT).\"\n\");"
-   ```
-   and then copy that into the following query where it says `<hashed_password>`.
-   ```
-   INSERT INTO users(user_id, user_firstname, user_password, user_lastname, user_email) VALUES ('instructor', '<hashed_password>', 'Demo', 'Instructor', 'instructor@localhost');
-   ```
-   
-9. Add the user to the course:
-   ``` 
-   INSERT INTO courses_users (semester, course, user_id, user_group) VALUES ('f16', 'csci1200', 'instructor', 1);
-   ```
-   
-8. After adding the primary instructor, you may wish to upload a CSV for graders (go through
-   the Manage Graders page) as well as use something like the 
-   [Course Feed](https://github.com/Submitty/Submitty/tree/master/Docs/student_auto_feed) which
-   allows you to easily keep your list of students synced.
-
-[create_course.sh]: https://github.com/Submitty/Submitty/blob/master/bin/create_course.sh
+   [using registration data feed](https://github.com/Submitty/Submitty/tree/master/Docs/student_auto_feed)
