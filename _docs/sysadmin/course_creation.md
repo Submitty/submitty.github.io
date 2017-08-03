@@ -113,9 +113,16 @@ order: 5
    /var/local/submitty/courses/f16/csci1200/ 
    ```  
 
-4. You can confirm that the database was created and populated by 
+4. You can confirm that the database was created and populated by
+   looking at the database `submitty_<SEMESTER>_<COURSE>`:
 
-   submitty_<SEMESTER>_<COURSE>
+   ```
+   sudo su postgres
+   psql
+   \c submitty_<SEMESTER>_<COURSE>
+   \dt
+   \q
+   ```
 
    For more information: [Database Overview](database_overview)
 
