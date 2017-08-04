@@ -143,7 +143,7 @@ order: 5
 
    ```
    sudo su postgres
-   psql -d submitty_<SEMESTER>_COURSE> -c "insert into sections_registration(sections_registration_id) values(<SECTION>);"
+   psql -d submitty_<SEMESTER>_<COURSE> -c "insert into sections_registration(sections_registration_id) values(<SECTION>);"
    ```
 
    (replacing `<SEMESTER>`, `<COURSE>`, and `<SECTION>`)
