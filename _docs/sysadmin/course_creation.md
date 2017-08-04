@@ -146,7 +146,7 @@ order: 5
    psql -d submitty_<SEMESTER>_COURSE> -c "insert into sections_registration(sections_registration_id) values(<SECTION>);"
    ```
 
-   (replacing <SEMESTER>, <COURSE>, and <SECTION>)
+   (replacing `<SEMESTER>`, `<COURSE>`, and `<SECTION>`)
 
 
 7. The instructor can add all other users (students, graders, other
