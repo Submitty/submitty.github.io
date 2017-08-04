@@ -137,7 +137,19 @@ order: 5
 
    This script will ask for more information about the user interactively.
 
-6. The instructor can add all other users (students, graders, other
+
+
+6. Create registration section(s):
+
+   ```
+   sudo su postgres
+   psql -d submitty_<SEMESTER>_COURSE> -c "insert into sections_registration(sections_registration_id) values(<SECTION>);"
+   ```
+
+   (replacing <SEMESTER>, <COURSE>, and <SECTION>)
+
+
+7. The instructor can add all other users (students, graders, other
    instructors) to the course by uploading a csv through the website.
 
 
