@@ -11,15 +11,15 @@ order: 5
 2. Create new groups for this course:
 
    ```
-   addgroup course01
-   addgroup course01_tas_www
+   addgroup <COURSE>
+   addgroup <COURSE>_tas_www
    ```
 
    If you are keeping old assignments around for comparison purposes, you may also want to add a group of just 
    those that need access to the archives
 
    ```
-   addgroup course01_archive
+   addgroup <COURSE>_archive
    ```
 
    Our policy is that all current / recent / future instructors for a course are in the archive group and permissions 
@@ -31,23 +31,23 @@ order: 5
 3. Add the instructors into the course groups:
 
    ```
-   adduser instructor course01
-   adduser instructor course01_tas_www
-   adduser instructor course01_archive
+   adduser instructor <COURSE>
+   adduser instructor <COURSE>_tas_www
+   adduser instructor <COURSE>_archive
    ```
 
 5. Add the TAs into the course group:
 
    ```
-   adduser ta course01_tas_www
+   adduser ta <COURSE>_tas_www
    ```
 
-6. Add special users `hwphp`, `hwcron`, and `hwcgi` to the `course01_tas_www` group:
+6. Add special users `hwphp`, `hwcron`, and `hwcgi` to the `<COURSE>_tas_www` group:
 
    ```
-   adduser hwphp course01_tas_www
-   adduser hwcron course01_tas_www
-   adduser hwcgi course01_tas_www
+   adduser hwphp <COURSE>_tas_www
+   adduser hwcron <COURSE>_tas_www
+   adduser hwcgi <COURSE>_tas_www
    ```
 
 7. Give permissions to create new users and update apache configurations
@@ -87,12 +87,12 @@ order: 5
    to create each new course.  For example:
 
    ``` 
-   sudo /usr/local/submitty/bin/create_course.sh f16 csci1200 smithj course_csci1200_tas_www 
+   sudo /usr/local/submitty/bin/create_course.sh <SEMESTER> <COURSE> smithj <COURSE>_tas_www 
    ```
 
    This creates a course for the Fall 2016 semester, with course ID
-   `csci1200`, head instructor `smithj` and TA group
-   `course_csci1200_tas_www`.  
+   `<COURSE>`, head instructor `smithj` and TA group
+   `<COURSE>_tas_www`.  
 
    _Note: The TA group must contain the head instructor, any other
    instructors or head TAs who will help with configuration or builds
@@ -110,7 +110,7 @@ order: 5
    be here:
  
    ``` 
-   /var/local/submitty/courses/f16/csci1200/ 
+   /var/local/submitty/courses/<SEMESTER>/<COURSE>/ 
    ```  
 
 4. The create course script also creates and populates the course
@@ -183,6 +183,13 @@ order: 5
     ```
     sudo su postgres
     psql -d postgres -c "DROP DATABASE submitty_<SEMESTER>_<COURSE>;"
+    ```
+
+    It may be necessary to first cleanup connections:
+
+    ```
+    sudo su postgres    
+    psql -d postgres -c "SELECT *, pg_terminate_backend(pid) FROM pg_stat_activity WHERE pid <> pg_backend_pid() AND datname = 'submitty_<SEMESTER>_<COURSE>';"
     ```
 
 
