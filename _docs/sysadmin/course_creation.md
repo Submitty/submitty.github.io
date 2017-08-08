@@ -4,7 +4,7 @@ category: System Administrator
 order: 5
 ---
 
-### Users and Groups
+### UNIX Users and Groups
 
 1. Create local user accounts for the instructor and TAs for this course:
  
@@ -76,7 +76,7 @@ order: 5
    ```
 
 
-### Prepare the directory and initial files for each course and create the course database
+### Prepare the course directory and course database
 
 
 1. If the top level `submitty` database does not exist, that must be
@@ -160,7 +160,7 @@ order: 5
 
 
 
-### Clean up existing course
+### Clean up Existing Course
 
 
 1.  If desired, delete course directory:
