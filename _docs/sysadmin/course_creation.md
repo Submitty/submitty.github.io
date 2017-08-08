@@ -157,3 +157,38 @@ order: 5
    data from the university registrar:
 
    [using registration data feed](https://github.com/Submitty/Submitty/tree/master/Docs/student_auto_feed)
+
+
+
+### Clean up existing course
+
+
+1.  If desired, delete course directory:
+
+    ```
+    rm /var/local/submitty/courses/<SEMESTER>/<COURSE>
+    ```
+
+    __Note: Course directory can remain, which is useful for archive or
+    plagiarism detection between semesters.__
+
+
+2.  If desired, dump contents of course database as a backup:
+
+    __FIXME: FILL IN THESE INSTRUCTIONS__
+
+
+3.  Remove course database:
+
+    ```
+    sudo su postgres
+    psql -d postgres -c "DROP DATABASE submitty_<SEMESTER>_<COURSE>;"
+    ```
+
+
+4.  Remove the course and the association from all users to the course from the master database:
+
+    ```
+    sudo su postgres
+    psql -d submitty -c "DELETE FROM courses_users WHERE semester='<SEMESTER>' AND course='<COURSE>'; DELETE FROM courses WHERE semester='<SEMESTER>' AND course='<COURSE>';"
+    ```
