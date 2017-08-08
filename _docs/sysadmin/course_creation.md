@@ -83,7 +83,7 @@ order: 5
    created first.  For more information: [Database Overview](database_overview)
 
 
-2. Run the [create_course.sh script][create_course.sh]
+2. Run the [create_course.sh script](https://github.com/Submitty/Submitty/blob/master/bin/create_course.sh)
    to create each new course.  For example:
 
    ``` 
