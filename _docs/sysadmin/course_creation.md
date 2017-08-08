@@ -169,13 +169,13 @@ order: 5
     rm /var/local/submitty/courses/<SEMESTER>/<COURSE>
     ```
 
-    __Note: Course directory can remain, which is useful for archive or
-    plagiarism detection between semesters.__
+    _Note: Course directory can remain, which is useful for archive or
+    plagiarism detection between semesters._
 
 
 2.  If desired, dump contents of course database as a backup:
 
-    __FIXME: FILL IN THESE INSTRUCTIONS__
+    _FIXME: FILL IN THESE INSTRUCTIONS_
 
 
 3.  Remove course database:
