@@ -8,7 +8,7 @@ order: 5
 
 1. Create local user accounts for the instructor and TAs for this course:
  
-2. Create new groups for this course:
+2. Create new groups for this course (the exact names are not specified):
 
    ```
    addgroup <COURSE>
