@@ -39,7 +39,7 @@ To do this:
 1. Stop the daemon
 
    ```
-   systemctl stop submitty_grading_scheduler
+   sudo systemctl stop submitty_grading_scheduler
    ```
 
 2. Now, as the `hwcron` user, run the scheduler and watch the output.  
@@ -53,7 +53,13 @@ To do this:
 3. Re-Start the daemon
 
    ```
-   systemctl start submitty_grading_scheduler
+   sudo systemctl start submitty_grading_scheduler
+   ```
+   
+   or
+
+   ```
+   sudo systemctl restart submitty_grading_scheduler
    ```
 
    You can check the status of the daemon:
