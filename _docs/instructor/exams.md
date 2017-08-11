@@ -24,13 +24,13 @@ will suffice.
 
 #### View/submit/download/version settings:
 
-* _"Should students be able to view submissions?"_ controls whether students can see the gradeable. If this is for an exam/quiz/any instructor uploaded PDF, the recommended process is selecting "No" to start with then changing to "Yes" once grades have been released. 
+* _"Should students be able to view submissions?"_ controls whether students can see the gradeable. If this is for an exam/quiz/any instructor uploaded PDF, the recommended process is selecting __No__ to start with then changing to __Yes__ once grades have been released. 
 
-* _"Should students be able to make submissions?"_ controls whether students can make submissions. If this is for an exam/quiz/any instructor uploaded PDF, you select "No". 
+* _"Should students be able to make submissions?"_ controls whether students can make submissions. If this is for an exam/quiz/any instructor uploaded PDF, you select __No__. 
 
-* _"Should students be able to download files?"_ controls whether students can download submission files. If this is for an exam/quiz/any instructor uploaded PDF, you can select "Yes" if you want to allow students to see their uploaded exams. 
+* _"Should students be able to download files?"_ controls whether students can download submission files. If this is for an exam/quiz/any instructor uploaded PDF, you can select __Yes__ if you want to allow students to see their uploaded exams. 
 
-* _"Should students be able to view/download any version or just the active version?"_ controls whether students can view/download any or all versions. If this is for an exam/quiz/any instructor uploaded PDF, select "Active version only".
+* _"Should students be able to view/download any version or just the active version?"_ controls whether students can view/download any or all versions. If this is for an exam/quiz/any instructor uploaded PDF, select __Active version only__.
 
 In summary,
 
@@ -42,7 +42,7 @@ In summary,
 
 ### Pages assigned to components:
 
-For _"Is this a PDF with a page assigned to each component?"_, select "Yes" if this is a PDF upload where each component has an assigned page.
+For _"Is this a PDF with a page assigned to each component?"_, select __Yes__ if this is a PDF upload where each component has an assigned page.
 
 If yes, the question _"Who will assign pages to components?"_ appears. The two options are either instructor assigns (such as an exam/quiz/any instructor uploaded PDF) or student (any student uploaded PDF).
 
@@ -54,21 +54,21 @@ If any pages are assigned to a PDF, in the TA grading interface, clicking on a c
 
 ### Bulk PDF Upload
 
-On the gradeable submission page, the instructor has three options: _Normal Submission_, _Make Submission for a Student_, and _Bulk Upload_. For uploading bulk PDFs for exams/quizzes/assignments, select _Bulk Upload_.
+On the gradeable submission page, the instructor has three options: Normal Submission, Make Submission for a Student, and Bulk Upload. For uploading bulk PDFs for exams/quizzes/assignments, select __Bulk Upload__.
 
 Input the number of pages for each exam/quiz/assignment.
 
 In the drag and drop box, upload the bulk exam PDF. You may submit more than one PDF at once, but the box's maximum total size is 10Mb.
 
-On submit, the bulk PDF is uploaded to the course's /uploads/bulk_pdf/gradeable_id folder and the split PDF items to /uploads/split_pdf/gradeable_id folder.
+On submit, the bulk PDF is uploaded to the course's `/uploads/bulk_pdf/gradeable_id` folder and the split PDF items to `/uploads/split_pdf/gradeable_id` folder.
 
 After the page reloads, another section on the page will appear called "Unassigned PDF Uploads".
 
 ### Split item submission
 
-The "Unassigned PDF Uploads" section contains all items within the /uploads/split_pdf/gradeable_id folder.
+The "Unassigned PDF Uploads" section contains all items within the `/uploads/split_pdf/gradeable_id` folder.
 
 PDF preview contains the first page of the pdf. If you want to view the full PDF, click on the popout icon.
 To submit for a student, enter their user ID and press enter or click submit. Autofill for user ID brings up students who do not yet have any submissions for this gradeable.
 
-Once submitted, the split PDF item is moved from /uploads/split_pdf/gradeable_id to its corresponding location in the /submissions/gradeable_id/user_id folder. 
+Once submitted, the split PDF item is moved from `/uploads/split_pdf/gradeable_id` to its corresponding location in the `/submissions/gradeable_id/user_id` folder. 
