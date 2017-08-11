@@ -26,9 +26,9 @@ will suffice.
 
 * _"Should students be able to view submissions?"_ controls whether students can see the gradeable. If this is for an exam/quiz/any instructor uploaded PDF, the recommended process is selecting __No__ to start with then changing to __Yes__ once grades have been released. 
 
-* _"Should students be able to make submissions?"_ controls whether students can make submissions. If this is for an exam/quiz/any instructor uploaded PDF, you select __No__. 
+* _"Should students be able to make submissions?"_ controls whether students can make submissions. If this is for an exam/quiz/any instructor uploaded PDF, select __No__. 
 
-* _"Should students be able to download files?"_ controls whether students can download submission files. If this is for an exam/quiz/any instructor uploaded PDF, you select __Yes__ if you want to allow students to see their uploaded exams. 
+* _"Should students be able to download files?"_ controls whether students can download submission files. If this is for an exam/quiz/any instructor uploaded PDF, select __Yes__ if you want to allow students to see their uploaded exams. 
 
 * _"Should students be able to view/download any version or just the active version?"_ controls whether students can view/download any or all versions. If this is for an exam/quiz/any instructor uploaded PDF, select __Active version only__.
 
@@ -40,17 +40,19 @@ In summary,
 | Exam/quiz/etc. | No until grades are released, then Yes | No              | Yes              | Active version only |
 
 
-### Pages assigned to components:
+#### Pages assigned to components:
 
 For _"Is this a PDF with a page assigned to each component?"_, select __Yes__ if this is a PDF upload where each component has an assigned page.
 
-If yes, the question _"Who will assign pages to components?"_ appears. The two options are either instructor assigns (such as an exam/quiz/any instructor uploaded PDF) or student (any student uploaded PDF).
+If yes, the question _"Who will assign pages to components?"_ appears. The two options are either instructor (such as an exam/quiz/any instructor uploaded PDF) or student (any student uploaded PDF).
 
 If the instructor assigns pages, then for each component there is input for the page number the component corresponds to. If it spans multiple pages, input the first page the component appears on.
 
-If the student assigns pages, then on the student submission page they will have input boxes for each component, and those will be saved to a json called `student_pages.json` within their submission folder for the version.
+If the student assigns pages, then on homework submission page students will have input boxes for each component, and those will be saved to a json called `student_pages.json` within their submissions folder.
 
-If any pages are assigned to a PDF, in the TA grading interface, clicking on a component will bring you to the assigned page.
+### TA grading
+
+In the TA grading interface, if any pages are assigned to a component, clicking on a component will bring you to the assigned page.
 
 ### Bulk PDF Upload
 
