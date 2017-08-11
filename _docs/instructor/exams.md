@@ -8,6 +8,7 @@ Submitty supports instructor upload of bulk PDF files to then be divided into in
 
 If there is TA grading, questions can also be assigned page numbers by either instructor or student. In the TA grading interface, clicking on a question will open the corresponding page in the PDF.
 
+
 ### Creating PDF assignments
 
 #### Config:
@@ -39,7 +40,6 @@ In summary,
 | Default        | Yes                                    | Yes             | No               | Any version         | 
 | Exam/quiz/etc. | No until grades are released, then Yes | No              | Yes              | Active version only |
 
-
 #### Pages assigned to components:
 
 For _"Is this a PDF with a page assigned to each component?"_, select __Yes__ if this is a PDF upload where each component has an assigned page.
@@ -49,6 +49,7 @@ If yes, the question _"Who will assign pages to components?"_ appears. The two o
 If the instructor assigns pages, then for each component there is input for the page number the component corresponds to. If it spans multiple pages, input the first page the component appears on.
 
 If the student assigns pages, then on homework submission page students will have input boxes for each component, and those will be saved to a json called `student_pages.json` within their submissions folder.
+
 
 ### TA grading
 
@@ -65,6 +66,7 @@ In the drag and drop box, upload the bulk exam PDF. You may submit more than one
 On submit, the bulk PDF is uploaded to the course's `/uploads/bulk_pdf/gradeable_id` folder and the split PDF items to `/uploads/split_pdf/gradeable_id` folder.
 
 After the page reloads, another section on the page will appear called "Unassigned PDF Uploads".
+
 
 ### Split item submission
 
