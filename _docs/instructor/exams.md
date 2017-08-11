@@ -28,14 +28,14 @@ will suffice.
 
 * _"Should students be able to make submissions?"_ controls whether students can make submissions. If this is for an exam/quiz/any instructor uploaded PDF, you select __No__. 
 
-* _"Should students be able to download files?"_ controls whether students can download submission files. If this is for an exam/quiz/any instructor uploaded PDF, you can select __Yes__ if you want to allow students to see their uploaded exams. 
+* _"Should students be able to download files?"_ controls whether students can download submission files. If this is for an exam/quiz/any instructor uploaded PDF, you select __Yes__ if you want to allow students to see their uploaded exams. 
 
 * _"Should students be able to view/download any version or just the active version?"_ controls whether students can view/download any or all versions. If this is for an exam/quiz/any instructor uploaded PDF, select __Active version only__.
 
 In summary,
 
 | Setting        | Student View                           | Student Submit  | Student Download | Student Version     |
-| -------------- | -------------- | --------------- | --------------- | --------------- |
+| -------------- | -------------------------------------- | --------------- | ---------------- | ------------------- |
 | Default        | Yes                                    | Yes             | No               | Any version         | 
 | Exam/quiz/etc. | No until grades are released, then Yes | No              | Yes              | Active version only |
 
@@ -48,7 +48,7 @@ If yes, the question _"Who will assign pages to components?"_ appears. The two o
 
 If the instructor assigns pages, then for each component there is input for the page number the component corresponds to. If it spans multiple pages, input the first page the component appears on.
 
-If the student assigns pages, then on the student submission page they will have input boxes for each component, and those will be saved to a json called "student_pages.json" within their submission folder for the version.
+If the student assigns pages, then on the student submission page they will have input boxes for each component, and those will be saved to a json called `student_pages.json` within their submission folder for the version.
 
 If any pages are assigned to a PDF, in the TA grading interface, clicking on a component will bring you to the assigned page.
 
