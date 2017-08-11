@@ -1,5 +1,5 @@
 ---
-title: Database
+title: Database Overview
 category: System Administrator
 order: 5
 ---
@@ -39,10 +39,12 @@ updates our user in each of the course DBs.
 
 Creation of the `submitty` DB is handled when you run `install_system.sh`, but if you need
 to start over, you would need to do:
+
 ```
 sudo su postgres
-psql
 psql -c "CREATE DATABASE submitty;"
-psql -f /usr/local/submitty/GIT_CHECKOUT_Submitty/site/data/submitty_db.sql
-psql -c "alter schema public owner to hsdbu;"
+psql -d submitty -f /usr/local/submitty/GIT_CHECKOUT_Submitty/site/data/submitty_db.sql
+psql -d submitty -c "alter schema public owner to hsdbu;"
 ```
+
+Then, continue setup by following the [Course Creation](course_creation) instructions.

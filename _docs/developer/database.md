@@ -1,5 +1,5 @@
 ---
-title: Database
+title: Database Design
 category: Developer
 order: 3
 ---

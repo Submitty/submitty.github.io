@@ -4,24 +4,22 @@ category: System Administrator
 order: 5
 ---
 
-### Users and Groups
+### UNIX Users and Groups
 
-1. Make sure that `/var/local/instructors/valid` has a current list of valid userids (no longer needed at RPI)
-
-2. Create local user accounts for the instructor and TAs for this course:
+1. Create local user accounts for the instructor and TAs for this course:
  
-3. Create new groups for this course:
+2. Create new groups for this course (the exact names are not specified):
 
    ```
-   addgroup course01
-   addgroup course01_tas_www
+   addgroup <COURSE>
+   addgroup <COURSE>_tas_www
    ```
 
    If you are keeping old assignments around for comparison purposes, you may also want to add a group of just 
    those that need access to the archives
 
    ```
-   addgroup course01_archive
+   addgroup <COURSE>_archive
    ```
 
    Our policy is that all current / recent / future instructors for a course are in the archive group and permissions 
@@ -30,25 +28,26 @@ order: 5
    group for that semester, but by default head TAs are not added to the archive group.
 
 
-4. Add the instructors into the course groups:
+3. Add the instructors into the course groups:
 
    ```
-   adduser instructor course01
-   adduser instructor course01_tas_www
-   adduser instructor course01_archive
+   adduser instructor <COURSE>
+   adduser instructor <COURSE>_tas_www
+   adduser instructor <COURSE>_archive
    ```
+
 5. Add the TAs into the course group:
 
    ```
-   adduser ta course01_tas_www
+   adduser ta <COURSE>_tas_www
    ```
 
-6. Add special users `hwphp`, `hwcron`, and `hwcgi` to the `course01_tas_www` group:
+6. Add special users `hwphp`, `hwcron`, and `hwcgi` to the `<COURSE>_tas_www` group:
 
    ```
-   adduser hwphp course01_tas_www
-   adduser hwcron course01_tas_www
-   adduser hwcgi course01_tas_www
+   adduser hwphp <COURSE>_tas_www
+   adduser hwcron <COURSE>_tas_www
+   adduser hwcgi <COURSE>_tas_www
    ```
 
 7. Give permissions to create new users and update apache configurations
@@ -76,19 +75,24 @@ order: 5
    adduser instructor-stu
    ```
 
-### Prepare the directory and initial files for each course
+
+### Prepare the course directory and course database
 
 
-1. Run the [create_course.sh script][create_course.sh]
+1. If the top level `submitty` database does not exist, that must be
+   created first.  For more information: [Database Overview](database_overview)
+
+
+2. Run the [create_course.sh script](https://github.com/Submitty/Submitty/blob/master/bin/create_course.sh)
    to create each new course.  For example:
 
    ``` 
-   sudo /usr/local/submitty/bin/create_course.sh f16 csci1200 smithj course_csci1200_tas_www 
+   sudo /usr/local/submitty/bin/create_course.sh <SEMESTER> <COURSE> smithj <COURSE>_tas_www 
    ```
 
    This creates a course for the Fall 2016 semester, with course ID
-   `csci1200`, head instructor `smithj` and TA group
-   `course_csci1200_tas_www`.  
+   `<COURSE>`, head instructor `smithj` and TA group
+   `<COURSE>_tas_www`.  
 
    _Note: The TA group must contain the head instructor, any other
    instructors or head TAs who will help with configuration or builds
@@ -100,176 +104,98 @@ order: 5
    sudo service php7.0-fpm restart
    ```
 
-2. You can confirm that a directory has been created and populated
+3. You can confirm that a directory has been created and populated
    with initial files in the data directory.  For this example (if you
    chose the default data directory location) the directory files will
    be here:
  
    ``` 
-   /var/local/submitty/courses/f16/csci1200/ 
+   /var/local/submitty/courses/<SEMESTER>/<COURSE>/ 
    ```  
 
-
-
-### Setup the database server for Submitty use and create new databases
-
-For these steps you need to to be the postgres user or other database
-server superuser.
-
-In the instructions below, replace `{DATABASE_HOST}` with database's
-hostname (e.g. `localhost` for the VM).
-
-The database for your course will be named `submitty_f16_csci1200`
-(replace `f16` and `csci1200` with the term and your course id).
-
-
-1. Become a DB superuser: 
-
-   ``` 
-   sudo su postgres 
-   ```  
-
-2. Enter PostgreSQL: 
-
-   ``` 
-   psql 
-   ```  
-
-
-3. If you need to wipe out the old course data, make a backup of the
-   database server in case of error and then drop the old database(s)
-   with something like:
-
-   ``` 
-   drop database submitty_f16_csci1200;
-   ```  
-
-
-4. Create database using the standard prefix, ```submitty_```,
-   followed by the semester and then the course id.
-   (e.g. ```submitty_f16_csci1200```).
-
-   ``` 
-   create database submitty_f16_csci1200 with owner hsdbu; 
-   ```
-
-
-6. By default the public scheme is owned by postgres.  We need to
-   switch it to be owned by hsdbu so the commands in the next section
-   work.
+4. The create course script also creates and populates the course
+   database.  You can confirm that the database was created and
+   populated by looking at the database
+   `submitty_<SEMESTER>_<COURSE>`:
 
    ```
-   psql -h {DATABASE_HOST} submitty_f16_csci1200 -U postgres
+   sudo su postgres
+   psql
+   \c submitty_<SEMESTER>_<COURSE>
+   \dt
+   \q
    ```
 
-   ```
-   alter schema public owner to hsdbu;
-   ```
+   For more information: [Database Overview](database_overview)
 
 
-### Prepare or reset the database for each course
-
-Once the database has been created above (by someone with the postgres
-database user password), we can initialize or reset and re-initialize
-the tables.  These commands only require the hsdbu database user
-password.
-
-
-1. To reset the database to the initial (empty) state.
-
-   Connect to the database:
+5. Add the instructor(s) to both the top level and course database:
 
    ```
-   psql -h {DATABASE_HOST} -d submitty_f16_csci1200 -U hsdbu
+   sudo /usr/local/submitty/bin/adduser.py --course <SEMESTER> <COURSE> null <USERNAME>
    ```
 
-   Confirm that the hsdbu use owns the public schema:
+   This script will ask for more information about the user interactively.
+
+
+
+6. Create registration section(s):
 
    ```
-   \dn
+   sudo su postgres
+   psql -d submitty_<SEMESTER>_<COURSE> -c "insert into sections_registration(sections_registration_id) values(<SECTION>);"
    ```
 
-   Then delete all of the tables:
-   ```
-   DROP SCHEMA public CASCADE;
-   CREATE SCHEMA public;
-   GRANT ALL ON SCHEMA public TO postgres;
-   GRANT ALL ON SCHEMA public TO public;
-   ```
-
-   To quit the postgres prompt:
-   
-   ```
-   \q   
-   ```
+   (replacing `<SEMESTER>`, `<COURSE>`, and `<SECTION>`)
 
 
-2. Starting from an empty database, run the sql file for that course:
+7. The instructor can add all other users (students, graders, other
+   instructors) to the course by uploading a csv through the website.
 
-   [sql file with database schema](../blob/master/site/data/course_tables.sql) 
 
-   Which is stored in
-   `/usr/local/submitty/GIT_CHECKOUT_Submitty/site/data` by default.
+   Alternatively, students can be automatically added by connecting to
+   data from the university registrar:
 
-   ``` 
-   psql -h {DATABASE_HOST} submitty_f16_csci1200 -U hsdbu -f /usr/local/submitty/GIT_CHECKOUT_Submitty/site/data/course_tables.sql
-   ```
+   [using registration data feed](https://github.com/Submitty/Submitty/tree/master/Docs/student_auto_feed)
 
-4.  Connect to the Course database:
+
+
+### Clean up Existing Course
+
+
+1.  If desired, delete course directory:
+
     ```
-    psql -h {DATABASE_HOST} submitty_f16_csci1200 -U hsdbu
-    ```
-    
-5.  Populate the sections table.  Add the appropriate number of
-    sections, one per registration section.
-
-    active example:  
-    ```
-    INSERT INTO sections_registration(sections_registration_id) VALUES (1);
+    rm /var/local/submitty/courses/<SEMESTER>/<COURSE>
     ```
 
-6. Connect to the core Submitty database:
-   ``` 
-   psql -h {DATABASE_HOST} submitty -U hsdbu
-   ```
- 
-7. Add the course to the DB
-   ```
-   INSERT INTO courses (semester, course) VALUES ('f16', 'csci1200');
-   ```
-   
-8. Manually add the primary instructor to the database.  (Then that 
-   instructor can add other instructor users, TAs, manually added 
-   students from the webpage "Manage Users").
+    _Note: Course directory can remain, which is useful for archive or
+    plagiarism detection between semesters._
 
-   You first need to insert the user into the users table, and then
-   add them to the appropriate courses in the courses_users table.
-   
-   Fill in the user id, first & last names, email address, set the 
-   `user_group = 1` (instructor).
 
-   If you're using PAM authentication, you would use the following query:
-   ```
-   INSERT INTO users(user_id, user_firstname, user_lastname, user_email, user_group) VALUES ('instructor', 'Demo', 'Instructor', 'instructor@localhost', 1);
-   ```
-   
-   Else if you're using Database authentication, you will need to first generate the password:
-   ```
-   php -r "print(password_hash('password', PASSWORD_DEFAULT).\"\n\");"
-   ```
-   and then copy that into the following query where it says `<hashed_password>`.
-   ```
-   INSERT INTO users(user_id, user_firstname, user_password, user_lastname, user_email) VALUES ('instructor', '<hashed_password>', 'Demo', 'Instructor', 'instructor@localhost');
-   ```
-   
-9. Add the user to the course:
-   ``` 
-   INSERT INTO courses_users (semester, course, user_id, user_group) VALUES ('f16', 'csci1200', 'instructor', 1);
-   ```
-   
-8. After adding the primary instructor, you may wish to upload a CSV for graders (go through
-   the Manage Graders page) as well as use something like the 
-   [Course Feed](https://github.com/Submitty/Submitty/tree/master/Docs/student_auto_feed) which
-   allows you to easily keep your list of students synced.
+2.  If desired, dump contents of course database as a backup:
 
-[create_course.sh]: https://github.com/Submitty/Submitty/blob/master/bin/create_course.sh
+    _FIXME: FILL IN THESE INSTRUCTIONS_
+
+
+3.  Remove course database:
+
+    ```
+    sudo su postgres
+    psql -d postgres -c "DROP DATABASE submitty_<SEMESTER>_<COURSE>;"
+    ```
+
+    It may be necessary to first cleanup connections:
+
+    ```
+    sudo su postgres    
+    psql -d postgres -c "SELECT *, pg_terminate_backend(pid) FROM pg_stat_activity WHERE pid <> pg_backend_pid() AND datname = 'submitty_<SEMESTER>_<COURSE>';"
+    ```
+
+
+4.  Remove the course and the association from all users to the course from the master database:
+
+    ```
+    sudo su postgres
+    psql -d submitty -c "DELETE FROM courses_users WHERE semester='<SEMESTER>' AND course='<COURSE>'; DELETE FROM courses WHERE semester='<SEMESTER>' AND course='<COURSE>';"
+    ```
