@@ -1,14 +1,18 @@
 ---
-title: Exams / Quiz / Assignment PDF Uploads
+title: Exam / Quiz / Assignment PDF Uploads
 category: Instructor
 order: 11
 ---
 
+Submitty supports instructor upload of bulk PDF files to then be divided into individual assignment PDFs and assigned to users.
+
+If there is TA grading, questions can also be assigned page numbers, by either instructor or student, such that clicking on a question will scroll to the corresponding page in the TA grading interface.
+
 ### Creating PDF assignments
 
-Config:
+##### Config:
 
-For exams/quizzes/assignments where instructor/TAs will bulk upload large multiple exam/assignment PDFS, use
+For exams/quizzes/assignments where the instructor will bulk upload large multiple exam/assignment PDFS, use
 ```
 /usr/local/submitty/more_autograding_examples/pdf_exam/config
 ```
@@ -18,26 +22,25 @@ This makes sure the file size is adequate. Otherwise, using
 ```
 will suffice.
 
+##### View/submit/download/version settings:
 
-View/submit/download/version settings:
+* "Should students be able to view submissions?" controls whether students can see the gradeable. Its default value is "Yes". If this is for an exam/quiz/any instructor uploaded PDF, the recommended process is selecting "No" to start with then changing to "Yes" once grades have been released. 
 
-"Should students be able to view submissions?" controls whether students can see the gradeable. Its default value is "Yes". If this is for an exam/quiz/any instructor uploaded PDF, the recommended process is selecting "No" to start with then changing to "Yes" once grades have been released. 
+* "Should students be able to make submissions?" controls whether students can make submissions. Its default value is "Yes". If this is for an exam/quiz, you select "No". 
 
-"Should students be able to make submissions?" controls whether students can make submissions. Its default value is "Yes". If this is for an exam/quiz, you select "No". 
+* "Should students be able to download files?" controls whether students can download submission files. Its default value is "No". If this is for an exam, you can select "Yes" if you want to allow students to see their uploaded exams. 
 
-"Should students be able to download files?" controls whether students can download submission files. Its default value is "No". If this is for an exam, you can select "Yes" if you want to allow students to see their uploaded exams. 
-
-"Should students be view/download any or all versions?" controls whether students can view/download any or all versions. Its default value is "Any version". If this is for an exam/quiz/any instructor uploaded PDF, select "Active version only".
+* "Should students be view/download any or all versions?" controls whether students can view/download any or all versions. Its default value is "Any version". If this is for an exam/quiz/any instructor uploaded PDF, select "Active version only".
 
 In summary,
-Exams/quizzes/instructor uploaded assignments should be
-View: No until grades are released, then Yes. Submit: No. Download: Yes. Any/Active version: Active version only.
 
-Student uploaded PDFs should be the default settings, or
-View: Yes, Submit: Yes, Download: No, Any/Active version: Any version.
+| Setting        | Student View                           | Student Submit  | Student Download | Student Version     |
+| -------------- |--------------------------------------- | --------------- | ---------------- | ------------------- |
+| Default        | Yes                                    | Yes             | No               | Any version         | 
+| Exam/quiz/etc. | No until grades are released, then Yes | No              | Yes              | Active version only |
 
 
-Pages assigned to components:
+#### Pages assigned to components:
 
 If this is a PDF upload where each component has an assigned page, select Yes for "Is this a PDF with a page assigned to each component?"
 The two options are either instructor assigns (such as a quiz/exam) or student (any student uploaded PDF).
