@@ -35,7 +35,7 @@ will suffice.
 In summary,
 
 | Setting        | Student View                           | Student Submit  | Student Download | Student Version     |
-| -------------- |--------------------------------------- | --------------- | ---------------- | ------------------- |
+| -------------- | -------------- | --------------- | --------------- | --------------- |
 | Default        | Yes                                    | Yes             | No               | Any version         | 
 | Exam/quiz/etc. | No until grades are released, then Yes | No              | Yes              | Active version only |
 
