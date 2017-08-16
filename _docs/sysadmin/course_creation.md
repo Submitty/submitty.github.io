@@ -104,7 +104,7 @@ order: 5
    sudo service php7.0-fpm restart
    ```
 
-3. You can confirm that a directory has been created and populated
+   You can confirm that a directory has been created and populated
    with initial files in the data directory.  For this example (if you
    chose the default data directory location) the directory files will
    be here:
@@ -113,7 +113,7 @@ order: 5
    /var/local/submitty/courses/<SEMESTER>/<COURSE>/ 
    ```  
 
-4. The create course script also creates and populates the course
+   The create course script also creates and populates the course
    database.  You can confirm that the database was created and
    populated by looking at the database
    `submitty_<SEMESTER>_<COURSE>`:
@@ -129,7 +129,7 @@ order: 5
    For more information: [Database Overview](database_overview)
 
 
-5. Add the instructor(s) to both the top level and course database:
+3. Add the instructor(s) to both the top level and course database:
 
    ```
    sudo /usr/local/submitty/bin/adduser.py --course <SEMESTER> <COURSE> null <USERNAME>
@@ -139,7 +139,7 @@ order: 5
 
 
 
-6. Create registration section(s):
+4. Create registration section(s):
 
    ```
    sudo su postgres
@@ -148,8 +148,12 @@ order: 5
 
    (replacing `<SEMESTER>`, `<COURSE>`, and `<SECTION>`)
 
+   _NOTE: We intend to make a web UI to allow the instructor to create
+   the registrations sections which will eliminate this as a sysadmin
+   step in the future._
 
-7. The instructor can add all other users (students, graders, other
+
+5. The instructor can add all other users (students, graders, other
    instructors) to the course by uploading a csv through the website.
 
 
