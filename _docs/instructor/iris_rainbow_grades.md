@@ -7,10 +7,12 @@ order: 7
 ![](http://submitty.org/images/iris.png)
 
 1. **Export the grades from the TA grading system / database**    
-   Go to the TA grading website.  From the top menu, select "Grading
-   Tools" -> "Generate Grade Summaries", then Click "Generate Grade
-   Summaries".  After a brief pause, you should get confirmation that
-   it created the grade summary report for each student.
+   Go to the TA grading website.  From the top menu, select "HWReports,
+   CSV Reports, and Grade Summaries", then Click "Generate Grade
+   Summaries".  Once the grade summary reports have been created, the
+   browser will finish reloading the page and display a green box with
+   "Successfully Generated GradeSummaries" in it. Currently this box
+   disappears automatically a few seconds after is is loaded.
 
    Those json files are saved here:   
 
@@ -21,8 +23,8 @@ order: 7
 
 2. **Obtain the Rainbow Grades Chart Software**  
    On your local computer (recommended so you can preview the results
-   before posting), checkout this repository so you have access to the
-   [Rainbow Grades code](https://github.com/Submitty/Submitty/tree/master/RainbowGrades).
+   before posting), checkout the [Submitty repository](https://github.com/Submitty/Submitty/archive/master.zip)
+   so you have access to the [Rainbow Grades code](https://github.com/Submitty/Submitty/tree/master/RainbowGrades).
    We recommend you put this in a convenient top-level directory,
    separate from the materials for a specific course.
 
@@ -52,7 +54,7 @@ order: 7
    And copy files as the instructor user:
 
    ```
-   scp -P 2222 instructor@127.0.0.1:/var/local/submitty/courses/<SEMESTER>/<COURSE>/<ETC>  <DESTINATION>
+   scp -P 2222 -r instructor@127.0.0.1:/var/local/submitty/courses/<SEMESTER>/<COURSE>/<ETC>  <DESTINATION>
    ```
 
 
@@ -66,17 +68,164 @@ order: 7
    This should copy those files to this local directory:
 
    ```
-   grades_summary/raw_data/<username>_summary.txt
+   grades_summary/raw_data/<username>_summary.json
    ```
 
 
 6. **Customize**  
-   Modify the `customization.json` file for each gradeable category.
+   The `customization.json` file is very flexible, and you will need to modify
+   it to fit your grading scheme and gradeables. You can modify this file at
+   any time and re-run Rainbow Grades, so small incremental changes are recommended.
 
-   FIXME:  Add more details
+   You are allowed to have C/C++ style comments in a `customization.json` file. When
+   Rainbow Grades is built, it produces a new comment-free version called `customization_no_comments.json`.
+
+   What follows is a specification for the `customization.json` file. Once you have finished modifying
+   your json, you can proceed to the next step if you need to set up exam seating, or to "8. Generate the Reports".
+
+   * **field:** ``"display"``  
+     **type:** _array of strings_  
+     **REQUIRED**
+
+   The display field specifies what will be shown in the output HTML and individual student reports.
+   It can contain the following:
+
+   * ``"instructor_notes"``: Shows notes for early warnings, plagiarism, etc. only to the instructor
+   * ``"grade_summary"``: Shows the overall score and score for each syllabus bucket (e.g. Homework)
+   * ``"grade_details"``: Shows the score for each gradeable
+   * ``"iclicker"``: Shows iClicker information including indivudal responses color-coded for correctness.
+   * ``"final_grade"``: Shows final grade letters and some statistics about the final grade distribution.
+   * ``"exam_seating"``: Shows exam seating assignments. To display the assignment on the Submitty course homepage,
+     the instructor should make sure "Display Iris Custom Message" is enabled in "Course Settings" on the Submitty
+     course page.
+   
+   * **field:** ``"display_benchmark"``  
+     **type:** _array of strings_  
+     **REQUIRED** if using ``"curve"`` in ``"gradeables"`` described below
+   
+      This array specifies which benchmarks will be displayed to instructors and students. Valid options are:
+      * ``"average"``: The average for each gradeable
+      * ``"stddev"``: The standard deviation for each gradeable
+      * ``"perfect"``: Perfect scores (excluding extra credit) for each gradeable
+      * ``"lowest_a-``, ``"lowest_b-"``, ``"lowest_c-"``, ``"lowest_d"``: Based on curves, the lowest scores that will earn
+      the name of the benchmark. 
+
+   * **field:** ``"benchmark_percent"``  
+     **type:** _associative array / mapping from string to float_  
+     **REQUIRED** if using ``"curve"`` in ``"gradeables"`` described below, or if any grade-letter benchmarks are used in ``"display_benchmark"`` above.
+
+      Each of the benchmarks starting with "lowest" should be in this array along with the minimum percentage of total points
+      neccessary to obtain that grade. For example to require an 82% for an A-, there should be an entry in the ``"benchmark_percent"`` array:
+      ``"lowest_a-": 0.82``
+
+   * **field:** ``"section"``  
+     **type:** _associative array / mapping from string to string_  
+     **REQUIRED**
+
+      Rainbow Grades puts a label on each section, and you must specify what those
+      labels are. Any string can be used as a label, but any section not listed in
+      this array will be treated as invalid and ignored. These labels are only displayed
+      on the instructor's `output.html`.
+
+   * **field:** ``"messages"``  
+     **type:** _array of strings_  
+
+      These messages will be displayed at the top of the instructor summary and each
+      student's individual Rainbow Grades report.
+
+   * **field:** ``"final_cutoff"``  
+     **type:** _associative array / mapping from string to float_  
+     **REQUIRED** if using ``"final_grade"`` in ``"display:"``
+
+      Each grade letter that you want should be associated with the minimum overall semester score required to get that grade.
+      This array is unrelated to benchmarks.
+
+   * **field:** ``"manual_grade"``  
+     **type:** _associative array / mapping from string to associative array_  
+
+      For each student that you want to assign a manual grade to, their id must
+      be mapped to an associative array with a field ``"grade":`` mapped to a string
+      with the letter grade you want to give them, and ``"note":`` containing any note
+      about the adjustment. The note is only visible to the instructor. For example, 
+      to give user ``smithj`` a grade lettter of ``D`` with a reason of 
+      ``"Put in extraordinary effort."``:
+
+      ```
+      "smithj" : {
+         "grade": "D",
+         "note": "Put in extraordinary effort."
+      ```
+
+      ```
+      "moss": {
+      	"studentid" : {
+		      "hw": 2,
+      		"penalty": 0.0
+      	},
+      
+          "use" : {
+      	"test_improvement_averaging_adjustment" : true
+          },
+      
+      
+      
+        "warning": [
+          	{
+                  "msg": "EWS: TEST 1",
+          	    "ids" : [ "test01" ],
+                  "value" : 47
+              },
+      
+      
+      "special_message" :
+      "title" : "HOMEWORK 4 MATERIALS",
+              "description" : "provided_files.zip",
+              "files" :
+      
+      "iclicker_ids": "clicker_data/RemoteID.csv",
+          "iclicker": {
+              "2": [
+                  {"file": "clicker_data/L1701201013.csv", "column": 1, "answer": "ABCDE"},
+                  {"file": "clicker_data/L1701201013.csv", "column": 2, "answer": "ABCDE"},
+                  {"file": "clicker_data/L1701201013.csv", "column": 3, "answer": "ABCDE"},
+                  {"file": "clicker_data/L1701201013.csv", "column": 4, "answer": "D"},
+                  {"file": "clicker_data/L1701201013.csv", "column": 5, "answer": "ABC"},
+      	    {"file": "clicker_data/L1701201013.csv", "column": 6, "answer": "ABCDE"}
+              ],
+      
+      "earned_late_days": [15.0,45.0,75.0,105.0,135.0 ],
+      ```
+      
+      Modify the `customization.json` file for each gradeable category.
+
+      FIXME:  Split out the instructions into  
+         1. Essential fields (message, section, display, etc.)  
+         2. Gradeables  
+         3. Exam Seating  
+         4. Grade/Note related things  
+         5. iClickers  
+
+   
 
 
-7. If you'd like to assign zones for the upcoming exam:
+7. If you'd like to assign zones for an upcoming exam:
+
+
+		  "exam_data" : {
+			"active" : 1,
+			"exam_title": "Data Structures Final",
+			"exam_date": "Wednesday May 10th",
+			"exam_time": "3-5:50pm",
+			//"min_overall_for_zone_assignment":48.7, //Upper thresh, 20 students (344-363)
+			"min_overall_for_zone_assignment":40.5, // Actual see inst thresh, 28 students  (364-391)
+			"exam_default_room": "DCC 308",
+			"exam_seating_count":"exam4_zone_counts.txt",
+			"exam_seating":"exam4_seating.txt"
+			//#58 students in 308 for reserved spaces
+			//#30 will probably show		
+	          }
+
+
 
    1. Uncomment the `display exam_seating` flag at the top of the
       file.
