@@ -290,17 +290,18 @@ order: 7
    today's date here:
 
    ```
-   grades_summary/all_students_summary_html/output.html_<month>_<day>_<year>.html       
+   grades_summary/all_students_summary_html/output_<month>_<day>_<year>.html       
    ```
 
-   It will also produce 2 files per student:
+   It will also produce 3 files per student:
     
    ```
    grades_summary/individual_summary_html/<student>_summary.html
    grades_summary/individual_summary_html/<student>_message.html
+   grades_summary/individual_summary_html/<student>_message.json
    ```
    
-   Examine these files.  Change `customization.json` & re-run `make` as needed.
+   Examine the html files.  Change `customization.json` & re-run `make` as needed.
 
 
 9. **Upload the files to the server**.    
