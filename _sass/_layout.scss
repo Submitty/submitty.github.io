@@ -160,7 +160,7 @@ header {
 		h1 {
 			box-shadow: inset -10px 0 10px -10px rgba(0, 0, 0, 0.1);
 		}
-		
+
 		&.nav-open {
 			overflow: auto;
 		}
@@ -240,6 +240,7 @@ nav > ul {
 }
 
 .nav-item {
+	-webkit-appearance: none;
 	display: block;
 	font-family: "Open Sans", sans-serif;
 	line-height: 1;
