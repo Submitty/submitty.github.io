@@ -145,11 +145,6 @@ header {
 		&:hover {
 			background-color: rgba(0, 0, 0, 0.1);
 		}
-
-		&.nav-open {
-			overflow: auto;
-		}
-		
 	}
 
 	@media (min-width: $mobile-break) {
@@ -240,6 +235,7 @@ nav > ul {
 }
 
 .nav-item {
+	-webkit-appearance: none;
 	display: block;
 	font-family: "Open Sans", sans-serif;
 	line-height: 1;
