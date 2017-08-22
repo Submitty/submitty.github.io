@@ -83,7 +83,7 @@ order: 7
    What follows is a specification for the `customization.json` file. Once you have finished modifying
    your json, you can proceed to the next step if you need to set up exam seating, or to "8. Generate the Reports".
 
-   * **field:** ``"display"``  
+   * **field:** ``"display":``  
      **type:** _array of strings_  
      **REQUIRED**
 
@@ -99,7 +99,7 @@ order: 7
      the instructor should make sure "Display Iris Custom Message" is enabled in "Course Settings" on the Submitty
      course page.
    
-   * **field:** ``"display_benchmark"``  
+   * **field:** ``"display_benchmark":``  
      **type:** _array of strings_  
      **REQUIRED** if using ``"curve"`` in ``"gradeables"`` described below
    
@@ -110,7 +110,7 @@ order: 7
       * ``"lowest_a-``, ``"lowest_b-"``, ``"lowest_c-"``, ``"lowest_d"``: Based on curves, the lowest scores that will earn
       the name of the benchmark. 
 
-   * **field:** ``"benchmark_percent"``  
+   * **field:** ``"benchmark_percent":``  
      **type:** _associative array / mapping from string to float_  
      **REQUIRED** if using ``"curve"`` in ``"gradeables"`` described below, or if any grade-letter benchmarks are used in ``"display_benchmark"`` above.
 
@@ -118,7 +118,7 @@ order: 7
       neccessary to obtain that grade. For example to require an 82% for an A-, there should be an entry in the ``"benchmark_percent"`` array:
       ``"lowest_a-": 0.82``
 
-   * **field:** ``"section"``  
+   * **field:** ``"section":``  
      **type:** _associative array / mapping from string to string_  
      **REQUIRED**
 
@@ -127,20 +127,20 @@ order: 7
       this array will be treated as invalid and ignored. These labels are only displayed
       on the instructor's `output.html`.
 
-   * **field:** ``"messages"``  
+   * **field:** ``"messages":``  
      **type:** _array of strings_  
 
       These messages will be displayed at the top of the instructor summary and each
       student's individual Rainbow Grades report.
 
-   * **field:** ``"final_cutoff"``  
+   * **field:** ``"final_cutoff":``  
      **type:** _associative array / mapping from string to float_  
      **REQUIRED** if using ``"final_grade"`` in ``"display:"``
 
       Each grade letter that you want should be associated with the minimum overall semester score required to get that grade.
       This array is unrelated to benchmarks.
 
-   * **field:** ``"manual_grade"``  
+   * **field:** ``"manual_grade":``  
      **type:** _associative array / mapping from string to associative array_  
 
       For each student that you want to assign a manual grade to, their id must
@@ -154,48 +154,30 @@ order: 7
       "smithj" : {
          "grade": "D",
          "note": "Put in extraordinary effort."
+      }
       ```
 
+   * **field:** ``"warning":``  
+     **type:** _array of associative arrays_  
+
+      This is similar to the ``"manual_grade":`` field, but is used to automatically
+      generate a note for each student that fails to obtain a target score on a list
+      of gradeables. For example, to add a note of "Low HW 1&2" to all students that
+      fail to get at least 34 points on their hw01 and hw02 scores combined, the code
+      below could be used. 
+
       ```
-      "moss": {
-      	"studentid" : {
-		      "hw": 2,
-      		"penalty": 0.0
-      	},
-      
-          "use" : {
-      	"test_improvement_averaging_adjustment" : true
-          },
-      
-      
-      
-        "warning": [
-          	{
-                  "msg": "EWS: TEST 1",
-          	    "ids" : [ "test01" ],
-                  "value" : 47
-              },
-      
-      
-      "special_message" :
-      "title" : "HOMEWORK 4 MATERIALS",
-              "description" : "provided_files.zip",
-              "files" :
-      
-      "iclicker_ids": "clicker_data/RemoteID.csv",
-          "iclicker": {
-              "2": [
-                  {"file": "clicker_data/L1701201013.csv", "column": 1, "answer": "ABCDE"},
-                  {"file": "clicker_data/L1701201013.csv", "column": 2, "answer": "ABCDE"},
-                  {"file": "clicker_data/L1701201013.csv", "column": 3, "answer": "ABCDE"},
-                  {"file": "clicker_data/L1701201013.csv", "column": 4, "answer": "D"},
-                  {"file": "clicker_data/L1701201013.csv", "column": 5, "answer": "ABC"},
-      	    {"file": "clicker_data/L1701201013.csv", "column": 6, "answer": "ABCDE"}
-              ],
-      
-      "earned_late_days": [15.0,45.0,75.0,105.0,135.0 ],
+      "warning": [
+    	  {
+          "msg": "Low HW 1&2",
+    	  "ids" : [ "hw01", "hw02" ],
+          "value" : 34
+          }
+      ]
       ```
-      
+
+7. **Add In Gradeables**
+     
       Modify the `customization.json` file for each gradeable category.
 
       FIXME:  Split out the instructions into  
@@ -208,9 +190,9 @@ order: 7
    
 
 
-7. If you'd like to assign zones for an upcoming exam:
+8. If you'd like to assign zones for an upcoming exam:
 
-
+      ```
 		  "exam_data" : {
 			"active" : 1,
 			"exam_title": "Data Structures Final",
@@ -224,7 +206,7 @@ order: 7
 			//#58 students in 308 for reserved spaces
 			//#30 will probably show		
 	          }
-
+      ```
 
 
    1. Uncomment the `display exam_seating` flag at the top of the
@@ -272,8 +254,37 @@ order: 7
       min_overall_for_zone_assignment <MINIMUM GRADE>
       ```
 
+9. **To use iClickers**
 
-8. **Generate the reports**.   
+   NOTE: iClicker ID extraction is currently being reworked. The following
+   instructions simply assume that you have a CSV file mapping iClicker IDs 
+   to student IDs, an example row might read:
+
+   ```
+   #123ABC,"smithj"
+   ```
+
+   The leading ``#``, the letters in the iClicker ID being capitalized, and
+   the student ID being wrapped in quotation marks are all important.
+
+
+   FIXME: Add in the iClicker syntax, discuss earned_late_days behavior.
+      ```     
+      "iclicker_ids": "clicker_data/RemoteID.csv",
+          "iclicker": {
+              "2": [
+                  {"file": "clicker_data/L1701201013.csv", "column": 1, "answer": "ABCDE"},
+                  {"file": "clicker_data/L1701201013.csv", "column": 2, "answer": "ABCDE"},
+                  {"file": "clicker_data/L1701201013.csv", "column": 3, "answer": "ABCDE"},
+                  {"file": "clicker_data/L1701201013.csv", "column": 4, "answer": "D"},
+                  {"file": "clicker_data/L1701201013.csv", "column": 5, "answer": "ABC"},
+      	    {"file": "clicker_data/L1701201013.csv", "column": 6, "answer": "ABCDE"}
+              ],
+      
+      "earned_late_days": [15.0,45.0,75.0,105.0,135.0 ],
+      ```
+
+10. **Generate the reports**.   
    Run:
 
    ```
