@@ -267,6 +267,12 @@ nav > ul {
 		font-weight: 600;
 		padding-left: $space;
 	}
+
+        &.inner > a {
+		line-height: 1.5;
+		font-weight: 600;
+		padding-left: $space * 3;
+	}
 }
 
 .settings-panel-example {
