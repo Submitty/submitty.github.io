@@ -124,7 +124,7 @@ header {
 		}
 	}
 
-	.nav-open {
+	.open-nav {
 		background-image: url(/img/menu.svg);
 		background-color: transparent;
 		background-repeat: no-repeat;
@@ -153,7 +153,7 @@ header {
 		right: auto;
 		bottom: auto;
 
-		.nav-open {
+		.open-nav {
 			display: none;
 		}
 
@@ -235,7 +235,6 @@ nav > ul {
 }
 
 .nav-item {
-	-webkit-appearance: none;
 	display: block;
 	font-family: "Open Sans", sans-serif;
 	line-height: 1;
