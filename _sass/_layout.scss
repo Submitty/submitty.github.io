@@ -48,22 +48,14 @@ body {
 			z-index: -1;
 		}
 
-		&::after {
-			left: 0;
-			width: $nav-width;
-			background-color: $nav-background-color;
-		}
+
 
 		#search-input,
 		&::after {
 			box-shadow: inset -10px 0 10px -10px rgba(0, 0, 0, 0.1);
 		}
 
-		&::before {
-			left: $nav-width;
-			right: 0;
-			background-color: $content-background-color;
-		}
+
 	}
 }
 
@@ -244,7 +236,9 @@ nav > ul {
 		display: none;
 	}
 
-
+	nav:not(.full-navigation) &.current > ul {
+		display: block;
+	}
 
 	> a {
 		color: #666;
