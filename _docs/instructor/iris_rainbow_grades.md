@@ -7,10 +7,12 @@ order: 7
 ![](http://submitty.org/images/iris.png)
 
 1. **Export the grades from the TA grading system / database**    
-   Go to the TA grading website.  From the top menu, select "Grading
-   Tools" -> "Generate Grade Summaries", then Click "Generate Grade
-   Summaries".  After a brief pause, you should get confirmation that
-   it created the grade summary report for each student.
+   Go to the TA grading website.  From the top menu, select "HWReports,
+   CSV Reports, and Grade Summaries", then Click "Generate Grade
+   Summaries".  Once the grade summary reports have been created, the
+   browser will finish reloading the page and display a green box with
+   "Successfully Generated GradeSummaries" in it. Currently this box
+   disappears automatically a few seconds after is is loaded.
 
    Those json files are saved here:   
 
@@ -21,8 +23,8 @@ order: 7
 
 2. **Obtain the Rainbow Grades Chart Software**  
    On your local computer (recommended so you can preview the results
-   before posting), checkout this repository so you have access to the
-   [Rainbow Grades code](https://github.com/Submitty/Submitty/tree/master/RainbowGrades).
+   before posting), checkout the [Submitty repository](https://github.com/Submitty/Submitty/archive/master.zip)
+   so you have access to the [Rainbow Grades code](https://github.com/Submitty/Submitty/tree/master/RainbowGrades).
    We recommend you put this in a convenient top-level directory,
    separate from the materials for a specific course.
 
@@ -52,7 +54,7 @@ order: 7
    And copy files as the instructor user:
 
    ```
-   scp -P 2222 instructor@127.0.0.1:/var/local/submitty/courses/<SEMESTER>/<COURSE>/<ETC>  <DESTINATION>
+   scp -P 2222 -r instructor@127.0.0.1:/var/local/submitty/courses/<SEMESTER>/<COURSE>/<ETC>  <DESTINATION>
    ```
 
 
@@ -66,65 +68,28 @@ order: 7
    This should copy those files to this local directory:
 
    ```
-   grades_summary/raw_data/<username>_summary.txt
+   grades_summary/raw_data/<username>_summary.json
    ```
 
 
-6. **Customize**  
-   Modify the `customization.json` file for each gradeable category.
+6. **Start your customization**  
+   In order to run Rainbow Grades you will need to set up a `customization.json` file. While we
+   provide a sample file as a starting point, you will need to make changes in order to tailor
+   Rainbow Grades for your course. Starting details are on the [Customization Basics](/instructor/customization) page.
 
-   FIXME:  Add more details
+7. **Add in gradeables**
+   Once you've set up general course information, you'll want to focus on adding gradeables
+   to your `customization.json` file. This array describes each assignment to Rainbow Grades.
+   You will likely update this many times throughout the semester. Since there are several
+   features specific to this array, it has its own instructions on the [Gradeables Customization](/instructor/gradeables) page.
 
-
-7. If you'd like to assign zones for the upcoming exam:
-
-   1. Uncomment the `display exam_seating` flag at the top of the
-      file.
-
-   2. Uncomment the `exam_seating` option below.  This line includes
-      the names of two files, the zone counts file and the seating
-      assignments file.  We'll use `exam1_zone_counts.txt` and
-      `exam1_seating.txt` in this example.
-
-   3. Specify the number of seats you will have per zone in the
-      `exam1_zone_counts.txt` file.  Each line of this file should
-      be this format:
-
-      ```
-      <ZONE> <BUILDING> <ROOM> <#>
-      ```
-
-      Make sure you provide enough total seats across all zones for
-      your students.
+8. **Other customization extras**
+   `customization.json` supports other options. While the list may evolve over time, we currently
+   provide documentation for [assigned exam seating](/instructor/exam_customization) and 
+   [iClicker integration](/instructor/iclicker) on their own pages.
 
 
-   4. If you'd like to specify zone assignments, you may do so by
-      preparing the file `exam1_seating.txt` file yourself.  The
-      program will check that the assignment zones are valid and do
-      not exceed the # of students per zone.  If you do not provide
-      the seating file, students will be randomly assigned to zones.
-      If you do not assign all of the students in valid sections to a
-      zone, the remaining students will be assigned.  NOTE: This
-      seating file is overwritten to add any unassigned students.
-
-      The format of each line of the seating file is:
-      
-      ```
-      <lastname>  <firstname>  <username>  <building>  <room>  <zone>  <time>
-      ```
-
-
-   5. A zone will be assigned to each student in a valid section, who
-      has an overall grade of at least 0.1.  Or you may specify your
-      own minimum overall grade for zone assignment by adding this
-      line to your `customization.json` file:
-
-      ```
-      min_overall_for_zone_assignment <MINIMUM GRADE>
-      ```
-
-
-8. **Generate the reports**.   
+9. **Generate the reports**.   
    Run:
 
    ```
@@ -141,17 +106,18 @@ order: 7
    today's date here:
 
    ```
-   grades_summary/all_students_summary_html/output.html_<month>_<day>_<year>.html       
+   grades_summary/all_students_summary_html/output_<month>_<day>_<year>.html       
    ```
 
-   It will also produce 2 files per student:
+   It will also produce 3 files per student:
     
    ```
    grades_summary/individual_summary_html/<student>_summary.html
    grades_summary/individual_summary_html/<student>_message.html
+   grades_summary/individual_summary_html/<student>_message.json
    ```
    
-   Examine these files.  Change `customization.json` & re-run `make` as needed.
+   Examine the html files.  Change `customization.json` & re-run `make` as needed.
 
 
 9. **Upload the files to the server**.    

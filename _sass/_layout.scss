@@ -248,12 +248,16 @@ nav > ul {
 		display: block;
 	}
 
-	> a {
+	> a,div {
 		color: #666;
 		text-decoration: none;
 		font-size: 1.4rem;
 		padding: $space / 2 0 $space / 2 $space * 2;
 		display: block;
+	}
+
+	> div {
+		font-style: italic;
 	}
 
 	&.current > a,
@@ -266,6 +270,12 @@ nav > ul {
 		line-height: 1.5;
 		font-weight: 600;
 		padding-left: $space;
+	}
+
+        &.inner > a {
+		line-height: 1.5;
+		font-size: 1.2rem;
+		padding-left: $space * 3;
 	}
 }
 
