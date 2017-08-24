@@ -77,13 +77,13 @@ order: 7
    provide a sample file as a starting point, you will need to make changes in order to tailor
    Rainbow Grades for your course. Starting details are on the [Customization Basics](/instructor/customization) page.
 
-7. **Add in gradeables**
+7. **Add in gradeables**  
    Once you've set up general course information, you'll want to focus on adding gradeables
    to your `customization.json` file. This array describes each assignment to Rainbow Grades.
    You will likely update this many times throughout the semester. Since there are several
    features specific to this array, it has its own instructions on the [Gradeables Customization](/instructor/gradeables) page.
 
-8. **Other customization extras**
+8. **Other customization extras**  
    `customization.json` supports other options. While the list may evolve over time, we currently
    provide documentation for [assigned exam seating](/instructor/exam_customization) and 
    [iClicker integration](/instructor/iclicker) on their own pages.
