@@ -1,10 +1,10 @@
 ---
-title: Iris (Rainbow Grades)
+title: Rainbow Grades
 category: Instructor
 order: 7
 ---
 
-![](http://submitty.org/images/iris.png)
+![](http://submitty.org/images/rainbow_grades.png)
 
 1. **Export the grades from the TA grading system / database**    
    Go to the TA grading website.  From the top menu, select "HWReports,

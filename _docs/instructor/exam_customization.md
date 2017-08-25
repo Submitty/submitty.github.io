@@ -20,7 +20,7 @@ NOTE: This approach may change in the near future.
    * **field:** ``"exam_title":``  
      **type:** _string_  
 
-     This will be shown along with the ``"exam_date":`` and ``"exam_time":`` fields in the Iris Custom
+     This will be shown along with the ``"exam_date":`` and ``"exam_time":`` fields in the Rainbow Grades Custom
      Message shown to students on Submitty (if enabled).
 
    * **field:** ``"exam_date":``  

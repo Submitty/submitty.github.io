@@ -13,7 +13,7 @@ You are allowed to have C/C++ style comments in a `customization.json` file. Whe
 Rainbow Grades is built, it produces a new comment-free version called `customization_no_comments.json`.
 
 What follows is a partial specification for the `customization.json` file. Information on other parts
-of the file are written on separate pages also grouped under "Iris (Rainbow Grades)" on the navigation sidebar.
+of the file are written on separate pages also grouped under "Rainbow Grades" on the navigation sidebar.
 
 * **field:** ``"display":``  
   **type:** _array of strings_  
@@ -28,7 +28,7 @@ It can contain the following:
 * ``"iclicker"``: Shows iClicker information including indivudal responses color-coded for correctness.
 * ``"final_grade"``: Shows final grade letters and some statistics about the final grade distribution.
 * ``"exam_seating"``: Shows exam seating assignments. To display the assignment on the Submitty course homepage,
-  the instructor should make sure "Display Iris Custom Message" is enabled in "Course Settings" on the Submitty
+  the instructor should make sure "Display Rainbow Grades Custom Message" is enabled in "Course Settings" on the Submitty
   course page.
 
 * **field:** ``"display_benchmark":``  
