@@ -60,13 +60,13 @@ order: 5
 
 7. Give permissions to create new users and update apache configurations
 
-   A. Add the instructor (and head TA) to the course_builders group:
+   Add the instructor (and head TA) to the course_builders group:
 
       ```
       adduser instructor course_builders
       ```
 
-   B. Give limited sudo to instructors and head TAs.  Update the sudoers file using
+   <!---   B. Give limited sudo to instructors and head TAs.  Update the sudoers file using
       `visudo` and add an entry at the end:
 
       ```
@@ -74,7 +74,7 @@ order: 5
       ```
 
    (No longer needed at RPI)
-
+   -->
 
 8. OPTIONAL: It has been helpful to create a dummy student account for
    each instructor for testing purposes (e.g. `doej-stu`).
