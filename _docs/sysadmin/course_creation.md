@@ -50,6 +50,14 @@ order: 5
    adduser hwcgi <COURSE>_tas_www
    ```
 
+   _NOTE: After adding the `hwphp` group to a new course group, you'll
+   need to restart fpm to ensure that the webpage sees the change:_
+
+   ```
+   sudo service php7.0-fpm restart   
+   ```
+
+
 7. Give permissions to create new users and update apache configurations
 
    A. Add the instructor (and head TA) to the course_builders group:
