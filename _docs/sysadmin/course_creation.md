@@ -50,7 +50,7 @@ order: 5
    adduser hwcgi <COURSE>_tas_www
    ```
 
-   _NOTE: After adding the `hwphp` group to a new course group, you'll
+   _NOTE: After adding the `hwphp` user to a new course group, you'll
    need to restart fpm to ensure that the webpage sees the change:_
 
    ```
