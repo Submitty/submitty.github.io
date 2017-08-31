@@ -69,7 +69,19 @@ $ /usr/local/submitty/bin/generate_repos.py <semester> <course_code> [<gradeable
 Where the first two parameters are necessary and the third (gradeable_id) is optional. This allows you to create
 repositories either at a "course level" or a "gradeable level" depending on how you wish to run your course.
 
+Permissions on these repositories (which is handled automatically by the generate script) is that these directories
+and files must be readable and writeable by www-data or else students won't be able to clone/push/etc.
+
+All repositories are stored in `/var/local/submitty/vcs`.
+
 #### Cloning Your Repositories
 
 After the instructor has created the git repositories, your students and you can checkout their repositories from
 the following `http(s)://GIT_URL/git/<semester>/<course>[/<gradeable_id>]/user_id`.
+
+#### Grading Repositories
+
+Due to the user of Apache2 authentication to act as a gatekeeper on the git repositories, you either have two options
+for configuration Submitty to have be able to clone them when grading:
+1. Create a Git user within your course and use its username/password on setting up VCS grading
+2. Use a file path to the Git repository (which won't require a username/password): `/var/local/submitty/vcs/<semester>/<course>[/<gradeable_id>]/user_id`.
