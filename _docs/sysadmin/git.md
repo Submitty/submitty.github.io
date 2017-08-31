@@ -54,6 +54,11 @@ is checked in the following way:
 3. Does the username exist within the given semester and course for the repository? If not, return False.
 4. Is the user in the course either a TA or instructor account? If so, return True, else return False.
 
+Note: If you're using PAM, `authenticate.py` relies on the same method of checking PAM as Submitty (making a
+call to `http(s)://SUBMITTY_URL/cgi-bin/pam_check.cgi`), which requires that `authenticate.py` writes out a file
+that then `hwcgi` can read to check against PAM. As such, you'll have to add `hwcgi` to the `www-data` group:
+`useradd hwcgi www-data`. `install_system.sh` should handle this step for you.
+
 #### Generating Repositories
 
 Instructors can generate their repositories using a provided bin script `generate_repos.py` which will handle creating
