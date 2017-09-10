@@ -9,15 +9,11 @@ order: 4
 These logs record each time a user (successfully) logs in, or logs
 out, or uploads an assignment.
 
-_FIXME: CHECK PATH_
-
 ```
-/var/local/submitty/tagrading_logs/20170308_access.txt
+ /var/local/submitty/logs/access/<DATE>.log
 ```
 
-_FIXME: CHECK WHO HAS ACCESS TO THESE LOGS...  everyone, or only root?_
-
-
+_FIXME: CHECK/DOCUMENT WHO SHOULD HAVE ACCESS TO THESE LOGS...  everyone, or only root?_
 
 
 
@@ -28,11 +24,8 @@ examine the logs of all automated grading.  The records for each day
 are stored in files named with the year, month, and day.  For example:
 
 
-_FIXME: CHECK PATH_
-
-
 ```
-/var/local/submitty/autograding_logs/20170308.txt
+/var/local/submitty/logs/autograding/<DATE>.txt
 ```
 
 Each new student submission and each instructor-request regrade action
@@ -49,7 +42,7 @@ student confusion or automated grading problems.  For example:
 
 
 ```
-cat /var/local/submitty/autograding_logs/*.txt | grep s17 | grep csci1200 | grep hw02 | grep smithj
+cat /var/local/submitty/logs/autograding/*.txt | grep s17 | grep csci1200 | grep hw02 | grep smithj
 ```
 
 
@@ -66,29 +59,34 @@ particular electronic upload, navigate to the results directory for
 that student.  For example:
 
 ```
-cd /var/local/submitty/courses/s17/csci1200/results/hw02/smithj/3
+cd /var/local/submitty/courses/s17/csci1200/results/hw02/smithj/3/
 ```
 
 From here you can examine the log files from each phase of automated
 grading:
 
 ```
-results_log_compile.txt
-results_log_runner.txt
-results_log_validator.txt
+logs/overall.txt
+logs/compilation_log.txt
+logs/runner_log.txt
+logs/validator_log.txt
 ```
 
-Each of these phases walks through the test cases in your
+The overall.txt log can be used to inspect the files as they are
+copied from and to various directories
+(see also [http://submitty.org/instructor/assignment_configuration](Phases of Autograding)).
+
+The other three files log each of these phases, which walk through the test cases in your
 `config.json` file in order, performing the necessary actions.  If
 there was a fatal error in one of these scripts, it can be helpful to
 study what test case was being processed.
 
-If all three logs look complete and correct, then the students overall
+If the logs look complete and correct, then the students overall
 grade summary should be correctly stored in these two files:
 
 ```
 results.json
-results_grade.txt
+grade.txt
 ```
 
 
@@ -99,13 +97,11 @@ If there is an error during TA grading (hopefully rare!), a detailed error messa
 be added to the TA grading logs.  The logs are also stored in files
 named with the year, month, and day.  For example:
 
-_FIXME: CHECK PATH_
-
 ```
-/var/local/submitty/tagrading_logs/20170308_logs.txt
+/var/local/submitty/logs/site_errors/<DATE>.log
 ```
 
-_FIXME: CHECK WHO HAS ACCESS TO THESE LOGS...  everyone, or only root?_
+_FIXME: CHECK/DOCUMENT WHO SHOULD HAVE ACCESS TO THESE LOGS...  everyone, or only root?_
 
 
 
