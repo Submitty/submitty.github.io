@@ -74,7 +74,8 @@ logs/validator_log.txt
 
 The overall.txt log can be used to inspect the files as they are
 copied from and to various directories
-(see also [http://submitty.org/instructor/assignment_configuration](Phases of Autograding)).
+(see also [Phases of Autograding](assignment_configuration) )
+
 
 The other three files log each of these phases, which walk through the test cases in your
 `config.json` file in order, performing the necessary actions.  If
