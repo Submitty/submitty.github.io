@@ -12,7 +12,8 @@ body {
 		overflow: hidden;
 
 		nav,
-		header > form {
+		header > form,
+		header > ul {
 			display: block;
 		}
 
@@ -218,7 +219,8 @@ header {
 }
 
 nav,
-header > form {
+header > form,
+header > ul {
 	display: none;
 
 	@media (min-width: $mobile-break) {
