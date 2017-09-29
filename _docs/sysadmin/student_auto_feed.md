@@ -7,7 +7,7 @@ order: 7
 _Submitty Student Auto Feed is an optional command-line PHP script that can automatically
 fill or update classlists on a cron schedule._
 
-## Table of Contents
+## Table of Contents <a name="top"></a>
 1. [Requirements](#requirements)
 2. [Files](#files)
 3. [Deprecated Files](#deprecated_files)
@@ -30,12 +30,14 @@ fill or update classlists on a cron schedule._
 * A regularly updated CSV data feed of student enrollment.
   * Contact your university's registrar and/or data warehouse for assistance.
 
+<small>[Back To Table of Contents](#top)</small>
 ### 2. Files <a name="files"></a>
 Latest version of the auto feed script and supplmental files will be checked into the `master` branch in [`Submitty/Docs/student_auto_feed/`](https://github.com/Submitty/Submitty/tree/master/Docs/student_auto_feed)
 * `submitty_student_auto_feed.php` -- Executable PHP script to read student registration CSV and update Submitty classlist enrollment.
 * `config.php` -- **REQUIRED** config file for `submitty_student_auto_feed.php`
 * `accounts.php` -- **IMPORTANT** for Submitty servers utilizing PAM authentication.
 
+<small>[Back To Table of Contents](#top)</small>
 ### 3. Deprecated Files <a name="deprecated_files"></a>
 These files remain in the repository but have not been updated.
 They are incompatible with the latest auto feed script and database schema.
@@ -44,9 +46,11 @@ It is **highly _inadvisable_** to use these files.
 * `restore_backup.php`
 * `submitty_users_data_backup.php`
 
+<small>[Back To Table of Contents](#top)</small>
 ### 4. Course Database Backups <a name="student_csv"></a>
 Please use `db_backup.py` (located in [`Submitty/Docs/nightly_db_backup/`](https://github.com/Submitty/Submitty/tree/master/Docs/nightly_db_backup)) on a cron schedule to create nightly backups of course databases.
 
+<small>[Back To Table of Contents](#top)</small>
 ### 5. Before Installing Auto Feed Script <a name="before_installing"></a>
 It is important that you can receive a regularly updated data feed of student enrollment.
 The data should be tabulated (like a spreadsheet), but must be written as a CSV file.
@@ -60,9 +64,11 @@ student enrollment data protected by FERPA ([U.S. federal statute 20 U.S.C. § 1
 Please take appropriate information protection measures.
 **_SUBMITTY IS NOT RESPONSIBLE FOR YOUR COURSE'S, DEPARTMENT'S, OR UNIVERSITY'S INFORMATION CONTROL POLICIES OR ACTIVITIES._**
 
-#### 5.1 Student CSV Layout <a name="csv_layout"></a>
+<small>[Back To Table of Contents](#top)</small>
+### 5.1 Student CSV Layout <a name="csv_layout"></a>
 TO DO
 
+<small>[Back To Table of Contents](#top)</small>
 ### 6. Install On Ubuntu 16.04 <a name="install"></a>
 As these are PHP scripts, they _should_ run on any computer that has PHP 5.4+ and the appropriate extensions installed.
 However, these instructions will focus on Ubuntu 16.04 (which uses PHP 7.0 by default).
@@ -89,6 +95,7 @@ sudo chmod 0700 student_submitty_auto_feed.php
 sudo chmod 0600 config.php
 ```
 
+<small>[Back To Table of Contents](#top)</small>
 ### 7. Configuration <a name="configuration"></a>
 Configuration options exist in `config.php` as "constants".
 The goal, here, is to redefine each constant to a value reflective of your use of Submitty.
@@ -119,11 +126,12 @@ Summaries are also provided as "code comments" within `config.php`.
 Consistent with C and Java styles, PHP code comments either begin with double slashes `//` or are multiple lines between `/*` and `*/`.
 Using a text editor with syntax highlighting will be highly beneficial as code comments will be given a unique text color (text coloring will vary from editor to editor).
 
+<small>[Back To Table of Contents](#top)</small>
 ### 7.1 Configurations <a name="configurations_top"></a>
 These options are set in `config.php`.
 
+<small>[Back To Table of Contents](#top)</small>
 #### Database Connection<a name="config_database"></a>
-
 ```php
 define('DB_HOST',     'submitty.cs.myuniversity.edu');
 define('DB_LOGIN',    'hsdbu');
@@ -136,6 +144,7 @@ These options specify the login to the Submitty database for the hostname of the
 
 Note that the database is often on the same server as Submitty, but this is not required.  The database can be hosted on a separate server from Submitty.
 
+<small>[Back To Table of Contents](#top)</small>
 #### Error Logging <a name="config_logs"></a>
 ```php
 define('ERROR_EMAIL',    'sysadmins@lists.myuniversity.edu');
@@ -151,6 +160,7 @@ Emailing error messages can be disabled by setting the value to `null` (without 
 Your campus may restrict or outright deny delivery of the error-log emails.
 Consult with your University's IT department about how its email delivery policy may affect the auto-feed's error-log email.
 
+<small>[Back To Table of Contents](#top)</small>
 #### CSV Validation <a name="config_csv_validation"></a>
 ```php
 define('VALIDATE_MIN_FILESIZE', 65536);
@@ -174,8 +184,7 @@ This value includes any extraneous fields/columns that your University's registr
   If so, use the number of columns _in the CSV_ to set this option.
   Otherwise, all columns may be ignored and no enrollment additions or updates will be recorded.
 
-
-
+<small>[Back To Table of Contents](#top)</small>
 #### Timezone <a name="config_timezones"></a>
 ```php
 date_default_timezone_set('America/New_York');
@@ -197,4 +206,4 @@ Hawaii (no daylight savings) | `Pacific/Honolulu`
 
 For a complete list of timezones: <http://php.net/manual/en/timezones.php>
 
-
+<small>[Back To Table of Contents](#top)</small>
