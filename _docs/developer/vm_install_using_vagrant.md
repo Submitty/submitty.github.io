@@ -13,7 +13,7 @@ order: 2
 2. Enable [Virtualization](http://tinyurl.com/enable-virtualization)
 
 
-3. Download and install [VirtualBox](https://www.virtualbox.org/), [Vagrant](https://www.vagrantup.com), and [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest). 
+3. Download and install [VirtualBox](https://www.virtualbox.org/), [Vagrant](https://www.vagrantup.com), and [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest).
 
     The latest Vagrant + Virtualbox combo that has been tested is _Vagrant 1.9.3_ and _Virtualbox 5.0.38_ (on Mac 10.12.6)
 
@@ -26,7 +26,7 @@ order: 2
     brew cask install vagrant
     sudo vagrant plugin install vagrant-vbguest
     ```
-   
+
     **Ubuntu Installation**
     ```
     sudo apt-get install virtualbox
@@ -36,7 +36,7 @@ order: 2
 
 2. Clone [the Submitty repository](https://github.com/Submitty/Submitty) to a location on
    your computer (the "host").
-    
+
    ```
    git clone https://github.com/Submitty/Submitty.git
    ```
@@ -62,14 +62,14 @@ order: 2
      ```
      vagrant suspend
      ```
-     
+
      or halt the virtual machine (complete VM shutdown, a little
      slower to restart):
 
      ```
      vagrant halt
      ```
-   
+
    * To resume work on a VM that is suspended or halted:
 
      ```
@@ -81,9 +81,9 @@ order: 2
      vagrant reload
      ```
 
-     If you haven't made any drastic changes to the build script, 
+     If you haven't made any drastic changes to the build script,
      you should be able to just re-provision the VM. You can do this by
-     using the `--provision` flag with either `up` or  `reload`. This is 
+     using the `--provision` flag with either `up` or  `reload`. This is
      will be faster than doing a full `destroy`/`up`, however depending on
      the changes you've done to the VM, could leave it potentially unstable.
      If the VM breaks, simply `destroy`/`up` as normal.
@@ -109,7 +109,7 @@ order: 2
 
 7. When the VM is "up", you can go visit the homework submission
    website.
-   
+
    * From a web browser (Chrome, Firefox, IE, etc.) on your host
      computer, go to:  
      <http://192.168.56.101/index.php?semester=s17&course=sample>
@@ -141,7 +141,7 @@ order: 2
    vagrant ssh
    ```
 
-   You will connect to the VM as user `vagrant` initially. 
+   You will connect to the VM as user `vagrant` initially.
 
 
 9.  The following additional users exist on the VM:
@@ -156,6 +156,7 @@ order: 2
     | hwcron | hwcron |
     | instructor | instructor |
     | ta | ta |
+    | grader | grader |
     | developer | developer |
     | postgres | postgres |
     | student | student |
@@ -173,7 +174,7 @@ order: 2
 
 
 11. Currently, there are four user accounts that can be used that have different permission levels within the system. Their password is the same as their username:
-   
+
     * developer
     * instructor
     * ta
