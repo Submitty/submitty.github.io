@@ -156,7 +156,6 @@ order: 2
     | hwcron | hwcron |
     | instructor | instructor |
     | ta | ta |
-    | grader | grader |
     | developer | developer |
     | postgres | postgres |
     | student | student |
@@ -178,4 +177,5 @@ order: 2
     * developer
     * instructor
     * ta
+    * grader
     * student
