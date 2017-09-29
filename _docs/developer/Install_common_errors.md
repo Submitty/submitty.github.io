@@ -1,7 +1,7 @@
 ---
 title: Installation Common Errors
 category: Developer
-order: 3
+order: 2
 ---
 
 During the install of the various packages referenced on [Vm Install Using Vagrant](vm_install_using_vagrant),
