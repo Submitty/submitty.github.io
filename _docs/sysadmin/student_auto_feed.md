@@ -12,12 +12,15 @@ fill or update classlists on a cron schedule._
 2. [Files](#files)
 3. [Deprecated Files](#deprecated_files)
 4. [Course Database Backups](#database_backups)
-5. [Before Installing Auto Feed Script](#before_installing)
+5. [Student CSV](#student_csv)
+  * [CSV Layout](#csv_layout)
 6. [Install on Ubuntu 16.04](#install)
 7. [Configuration](#configuration)
-  * [Configurations (top)](#configurations)
-  * [Timezones](#timezones)
-  * [Error Logging](#logs)
+  * [Configurations (top)](#configurations_top)
+  * [Database Connection](#config_database)
+  * [Error Logging](#config_logs)
+  * [CSV Validation](#config_csv_validation)
+  * [Timezones](#config_timezones)
 
 ### 1. Requirements <a name="requirements"></a>
 * Submitty Student Auto Feed is intended to be managed by a systems administrator or similar IT professional.
@@ -41,7 +44,7 @@ It is **highly _inadvisable_** to use these files.
 * `restore_backup.php`
 * `submitty_users_data_backup.php`
 
-### 4. Course Database Backups <a name="database_backups"></a>
+### 4. Course Database Backups <a name="student_csv"></a>
 Please use `db_backup.py` (located in [`Submitty/Docs/nightly_db_backup/`](https://github.com/Submitty/Submitty/tree/master/Docs/nightly_db_backup)) on a cron schedule to create nightly backups of course databases.
 
 ### 5. Before Installing Auto Feed Script <a name="before_installing"></a>
@@ -56,6 +59,9 @@ _Please note where this location is as you will need it later._
 student enrollment data protected by FERPA ([U.S. federal statute 20 U.S.C. § 1232g](https://en.wikipedia.org/wiki/Family_Educational_Rights_and_Privacy_Act)).
 Please take appropriate information protection measures.
 **_SUBMITTY IS NOT RESPONSIBLE FOR YOUR COURSE'S, DEPARTMENT'S, OR UNIVERSITY'S INFORMATION CONTROL POLICIES OR ACTIVITIES._**
+
+#### 5.1 Student CSV Layout <a name="csv_layout"></a>
+TO DO
 
 ### 6. Install On Ubuntu 16.04 <a name="install"></a>
 As these are PHP scripts, they _should_ run on any computer that has PHP 5.4+ and the appropriate extensions installed.
@@ -88,7 +94,14 @@ Configuration options exist in `config.php` as "constants".
 The goal, here, is to redefine each constant to a value reflective of your use of Submitty.
 The provided defaults, while illustrative, will not work.
 
-Here is a sample option:
+**IMPORTANT** -- these lines are treated as actual PHP program code.
+`define` is a function that requires parentheses.
+Inside the parentheses are (usually) string-values arguments, comma separated.
+String values must be enclosed in single or double quotes.
+Each line must end with a semicolon.
+Otherwise, the auto feed will throw a syntax or parse error and won't run.
+
+Here is an example option:
 ```php
 define('CSV_FILE', '/path/to/datafile.csv');
 ```
@@ -98,8 +111,6 @@ For example, if your data warehouse delivers the feed CSV to `/users/datawarehou
 ```php
 define('CSV_FILE', '/users/datawarehouse/enrollment.csv');
 ```
-**IMPORTANT** -- these lines are treated as actual PHP program code, and therefore each value (string) must be enclosed in single or double quotes and each line must end with a semicolon.
-Otherwise, the auto feed will throw a syntax or parse error and won't run.
 
 There are a couple other options to set besides `define`:  `date_default_timezone_set` and `ini_set`.
 
@@ -108,9 +119,64 @@ Summaries are also provided as "code comments" within `config.php`.
 Consistent with C and Java styles, PHP code comments either begin with double slashes `//` or are multiple lines between `/*` and `*/`.
 Using a text editor with syntax highlighting will be highly beneficial as code comments will be given a unique text color (text coloring will vary from editor to editor).
 
-#### 7.1 Configurations <a name="configurations"></a>
+### 7.1 Configurations <a name="configurations_top"></a>
+These options are set in `config.php`.
 
-##### Timezone <a name="timezones"></a>
+#### Database Connection<a name="config_database"></a>
+
+```php
+define('DB_HOST',     'submitty.cs.myuniversity.edu');
+define('DB_LOGIN',    'hsdbu');
+define('DB_PASSWORD', 'DB.p4ssw0rd');
+```
+
+These options specify the login to the Submitty database for the hostname of the database, the user login (typically `hsdbu`), and the password (same as used in Submitty setup).
+
+**IMPORTANT** -- Without this configuration, the auto feed cannot add or update course enrollments.
+
+Note that the database is often on the same server as Submitty, but this is not required.  The database can be hosted on a separate server from Submitty.
+
+#### Error Logging <a name="config_logs"></a>
+```php
+define('ERROR_EMAIL',    'sysadmins@lists.myuniversity.edu');
+define('ERROR_LOG_FILE', '/location/of/auto_feed_error.log');
+```
+When an error occurs, it is written to a raw text logfile.
+The location of the logfile must be specified and must be accessible by the user account running the auto feed.
+
+Error messages can also be emailed, presumably to a sysadmin or a mailing list monitored by an IT dept (highly recommended).
+Emailing error messages can be disabled by setting the value to `null` (without quotes).
+
+**IMPORTANT** -- error-log email may be considered _unauthenticated_ email by many Universities.
+Your campus may restrict or outright deny delivery of the error-log emails.
+Consult with your University's IT department about how its email delivery policy may affect the auto-feed's error-log email.
+
+#### CSV Validation <a name="config_csv_validation"></a>
+```php
+define('VALIDATE_MIN_FILESIZE', 65536);
+define('VALIDATE_NUM_FIELDS',   10);
+```
+
+These options are used to (loosely) detect a bad CSV file.
+* `VALIDATE_MIN_FILESIZE` sets the acceptable minimum file size as an _integer_ in bytes.
+This is useful to detect an egregiously small CSV that could indicate data corruption (such as a file containing end-of-line characters, but no actual data).
+
+  It is possible to snare a legitimate CSV as a false-positive, so setting this value relatively small, but greater than zero, is advised.
+  * A CSV with 5,120 end-of-line chars (empty rows) will be 5,120 bytes (5 kilobytes) in size.
+    Windows-1252 encoded CSVs have _two_ end-of-line chars per row, so 5,120 empty rows will make up a 10 kilobyte CSV.
+  * 65,536 bytes = 64 kilobytes.
+
+* `VALIDATE_NUM_FIELDS` is a check to make sure that an exact number of fields/columns is present in every row of the CSV.
+Any row that does not have this exact value is expected to have unreliable data and is ignored by the auto feed script.
+This value includes any extraneous fields/columns that your University's registrar/data warehouse provides.
+
+  Even though the auto feed requires ten columns, the CSV being provided may have more.
+  If so, use the number of columns _in the CSV_ to set this option.
+  Otherwise, all columns may be ignored and no enrollment additions or updates will be recorded.
+
+
+
+#### Timezone <a name="config_timezones"></a>
 ```php
 date_default_timezone_set('America/New_York');
 ```
@@ -130,17 +196,5 @@ Hawaii | `America/Adak`
 Hawaii (no daylight savings) | `Pacific/Honolulu`
 
 For a complete list of timezones: <http://php.net/manual/en/timezones.php>
-
-##### Error Logging <a name="logs"></a>
-```php
-define('ERROR_EMAIL',    'sysadmins@lists.myuniversity.edu');
-define('ERROR_LOG_FILE', '/location/of/auto_feed_error.log');
-```
-When an error occurs, it is written to a raw text logfile.
-The location of the logfile must be specified and must be accessible by the user account running the auto feed.
-Error messages can also be emailed, presumably to a sysadmin or a mailing list monitored by an IT dept (highly recommended).
-Emailing error messages can be disabled by setting the value to `null` (without quotes).
-
-
 
 
