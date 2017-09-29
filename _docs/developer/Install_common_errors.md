@@ -1,5 +1,5 @@
 ---
-title: Installation Common Errors
+title: Installation Troubleshooting
 category: Developer
 order: 2
 ---
