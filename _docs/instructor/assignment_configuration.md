@@ -167,11 +167,11 @@ configuration directory:
 
 As outlined in the above sections & diagrams, there are 6 different
 configuration settings in the `config.json` to control the movement of
-files.  Some of them has reasonable defaults for assignments that are
+files.  Some of them have reasonable defaults for assignments that are
 compiling and running Python, C++, and Java programs (we may update
 these defaults in future revisions to Submitty).  Each setting should
 be a list of one or more strings to match against files.  You may use
-wildcards.
+wildcards.  Example of syntax:  
 
 ```
     "autograding" : {
@@ -184,7 +184,7 @@ wildcards.
     },
 ```
 
-These file match patterns will be appended these patterns to the
+These file match patterns will be appended to the
 Submitty defaults, defined here:
 [grading/load_config_json.cpp](https://github.com/Submitty/Submitty/blob/master/grading/load_config_json.cpp)
 
