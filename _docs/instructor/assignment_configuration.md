@@ -166,11 +166,12 @@ configuration directory:
 #### Variables to move files
 
 As outlined in the above sections & diagrams, there are 6 different
-configuration settings to control the movement of files.  Some of them
-has reasonable defaults for assignments that are compiling and running
-Python, C++, and Java programs (we may update these defaults in future
-revisions to Submitty).  Each settingYou can add files to the defaults through
-this syntax in your `config.json`:
+configuration settings in the `config.json` to control the movement of
+files.  Some of them has reasonable defaults for assignments that are
+compiling and running Python, C++, and Java programs (we may update
+these defaults in future revisions to Submitty).  Each setting should
+be a list of one or more strings to match against files.  You may use
+wildcards.
 
 ```
     "autograding" : {
@@ -182,6 +183,12 @@ this syntax in your `config.json`:
         "work_to_details" : [ "*.pdf" ]
     },
 ```
+
+These file match patterns will be appended these patterns to the
+Submitty defaults, defined here:
+[grading/load_config_json.cpp](https://github.com/Submitty/Submitty/blob/master/grading/load_config_json.cpp)
+
+
 
 ### Overall Specification of a ``config.json`` file
 
