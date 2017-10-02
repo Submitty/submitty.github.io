@@ -101,7 +101,7 @@ It can contain the following:
   ```json
   "warning": [{
      "msg": "Low HW 1&2",
- 	   "ids" : [ "hw01", "hw02" ],
+     "ids" : [ "hw01", "hw02" ],
      "value" : 34
   }]
   ```
