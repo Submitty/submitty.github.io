@@ -19,7 +19,9 @@ fill or update classlists on a cron schedule._
   * [Configurations (top)](#configurations_top)
   * [Database Connection](#config_database)
   * [Error Logging](#config_logs)
+  * [CSV File Access](#csv_file_access)
   * [CSV Validation](#config_csv_validation)
+  * [Windows Encoding Conversion](#text_encoding)
   * [Timezones](#config_timezones)
 
 ### 1. Requirements <a name="requirements"></a>
@@ -161,6 +163,40 @@ Your campus may restrict or outright deny delivery of the error-log emails.
 Consult with your University's IT department about how its email delivery policy may affect the auto-feed's error-log email.
 
 <small>[Back To Table of Contents](#top)</small>
+#### CSV File Access <a name="csv_file_access"></a>
+```php
+define('CSV_AUTH',               'remote_keypair');
+define('CSV_FILE',               '/path/to/datafile.csv');
+define('CSV_REMOTE_SERVER',      'fileserver.myuniversity.edu');
+define('CSV_AUTH_USER',          'remote_user');
+define('CSV_AUTH_PASSWORD',      null);
+define('CSV_AUTH_PUBKEY',        '/path/to/rsa_key.pub');
+define('CSV_AUTH_PRIVKEY',       '/path/to/rsa_key.pfx');
+define('CSV_PRIVKEY_PASSPHRASE', 'MySecretPassphrase');
+```
+
+These constants define how the CSV data can be accessed.
+* `CSV_AUTH` determines what kind of authenticated access is needed.
+   Options are `local`, `remote_password`, and `remote_keypair`.
+   * `local` means that the CSV file resides on the same computer that is executing the auto script.
+   * `remote_password` means that the CSV file resides on a different computer, and a password is required to access the CSV file (using SFTP).
+   * `remote_keypair` means that the CSV file resides on a different computer, and a private/public keypair is required to access the CSV file (using SFTP).
+* `CSV_FILE` is the path to the _full_ file (_not_ including hostname when the file is remotely accessed).
+* `CSV_REMOTE_SERVER` is the hostname of the remote server hosting the CSV file.
+  Ignored when `CSV_AUTH` is set to `local`.
+* `CSV_AUTH_USER` is the user name used to access a remote CSV when `CSV_AUTH` is set to `remote_password` or `remote_keypair`.
+* `CSV_AUTH_PASSWORD` is the password used to access a remote CSV when `CSV_AUTH` is set to `remote_password`.
+* `CSV_AUTH_PUBKEY` is the path to a copy of the remote server's public keyfile when `CSV_AUTH` is set to `remote_keypair`.
+* `CSV_AUTH_PRIVKEY` is the path to the local machine's private keyfile when `CSV_AUTH` is set to `remote_keypair`.
+  * Note that your local computer's _public_ key needs to be copied to the remote machine that stores the CSV.
+  * **_NEVER_** divulge the local computer's private key.
+* `CSV_PRIVKEY_PASSPHRASE` is the decryption passphrase used to read your local computer's private key.
+  * The private key does not have to be encrypted, in which case this option should be set to `null` (without quotes).
+  * **_IMPORTANT_** -- To use an encrypted private key with an Ubuntu SSH/SFTP host,
+    _`libssh2` needs be manually recompiled with `OpenSSH`_.  Otherwise, authentication will always fail.
+    q.v. [This bug report](https://bugs.php.net/bug.php?id=58573) and this [manual entry](http://php.net/manual/en/function.ssh2-auth-pubkey-file.php).
+
+<small>[Back To Table of Contents](#top)</small>
 #### CSV Validation <a name="config_csv_validation"></a>
 ```php
 define('VALIDATE_MIN_FILESIZE', 65536);
@@ -183,6 +219,16 @@ This value includes any extraneous fields/columns that your University's registr
   Even though the auto feed requires ten columns, the CSV being provided may have more.
   If so, use the number of columns _in the CSV_ to set this option.
   Otherwise, all columns may be ignored and no enrollment additions or updates will be recorded.
+
+<small>[Back To Table of Contents](#top)</small>
+#### Windows Encoding Conversion <a name="text_encoding"></a>
+```php
+define('CONVERT_CP1252', true);
+```
+
+If your student CSV originates from a Windows computer, the auto feed may need to do a text encoding conversion from CP-1252 to UTF-8; especially when the CSV character data is expected to include [diacritics](https://en.wikipedia.org/wiki/Diacritic).
+Set `CONVERT_CP1252` to `true` if the student CSV originates from a Windows computer.
+Otherwise, set to `false`.
 
 <small>[Back To Table of Contents](#top)</small>
 #### Timezone <a name="config_timezones"></a>
