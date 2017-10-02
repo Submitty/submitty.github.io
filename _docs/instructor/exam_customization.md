@@ -6,49 +6,49 @@ order: 14
 
 NOTE: This approach may change in the near future.
 
-1. Add ``"exam_seating"`` to the ``"display":`` array in `customization.json` .
+1. Add ``"exam_seating"`` to the ``"display"`` array in `customization.json` .
 
-2. In the associative array (includes ``"id":``) for the gradeable you want seating
-   for in ``gradeables:``, add a new field ``"exam_data"`` which is associated with another
+2. In the associative array (includes ``"id"``) for the gradeable you want seating
+   for in ``"gradeables"``, add a new field ``"exam_data"`` which is associated with another
    associative array containing:
 
-   * **field:** ``"active":``  
+   * **field:** ``"active"``  
      **type:** _integer_  
 
      This should be set to `1` if this seating configuration is going to be used, and `0` otherwise.
 
-   * **field:** ``"exam_title":``  
+   * **field:** ``"exam_title"``  
      **type:** _string_  
 
-     This will be shown along with the ``"exam_date":`` and ``"exam_time":`` fields in the Rainbow Grades Custom
+     This will be shown along with the ``"exam_date"`` and ``"exam_time"`` fields in the Rainbow Grades Custom
      Message shown to students on Submitty (if enabled).
 
-   * **field:** ``"exam_date":``  
+   * **field:** ``"exam_date"``  
      **type:** _string_  
 
-   * **field:** ``"exam_time":``  
+   * **field:** ``"exam_time"``  
      **type:** _string_  
 
-   * **field:** ``"min_overall_for_zone_assignment":``  
+   * **field:** ``"min_overall_for_zone_assignment"``  
      **type:** _float_  
 
      You can include this field to require that students have at least a certain overall score in the course
      in order to be assigned a seat. Otherwise, a zone will be assigned to each student who has an overall 
      grade of at least 0.1 and is in a valid section.
 
-   * **field:** ``"exam_default_room":``  
+   * **field:** ``"exam_default_room"``  
      **type:** _string_  
 
      If a student is not assigned to a particular zone/seat, they will be assigned to this room with a
      zone of "SEE INSTRUCTOR".
 
-   * **field:** ``"exam_seating_count":``  
+   * **field:** ``"exam_seating_count"``  
      **type:** _string_  
 
      The name of the zone counts file described in the next steps.
      We'll use `exam1_zone_counts.txt` as an example.
 
-   * **field:** ``"exam_seating":``  
+   * **field:** ``"exam_seating"``  
      **type:** _string_  
 
      The name of the seating assignments file described in the next steps.

@@ -14,7 +14,8 @@ host the Git repositories internally, on the same server as Submitty.
 To setup the internal Git, you will have to setup a separate URL from your main Submitty installation and
 create a separate VirtualHost for it, due to the use of suexec within our main configuration.
 
-Copy the following code into /etc/apache2/sites-available/submitty-git.conf:
+Copy the following code into `/etc/apache2/sites-available/submitty-git.conf`:
+
 ```
 <VirtualHost GIT_URL:80>
     AddDefaultCharset utf-8
@@ -63,10 +64,11 @@ that then `hwcgi` can read to check against PAM. As such, you'll have to add `hw
 
 Instructors can generate their repositories using a provided bin script `generate_repos.py` which will handle creating
 a bare shared repository for all students in a course. You can run this using:
+
 ```bash
 $ /usr/local/submitty/bin/generate_repos.py <semester> <course_code> [<gradeable_id>]
 ```
-Where the first two parameters are necessary and the third (gradeable_id) is optional. This allows you to create
+Where the first two parameters are necessary and the third (`gradeable_id`) is optional. This allows you to create
 repositories either at a "course level" or a "gradeable level" depending on how you wish to run your course.
 
 Permissions on these repositories (which is handled automatically by the generate script) is that these directories
