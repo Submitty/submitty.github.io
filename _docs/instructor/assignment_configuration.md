@@ -87,7 +87,7 @@ configuration directory:
 
 3. Copy the student's submitted source code (for compiled languages) to this temporary directory.
    Note:  The copied files can be controlled with the
-   ```submitted_to_compilation``` variable in ```config.json```.   
+   ```submission_to_compilation``` variable in ```config.json```.   
 
 4. Copy the files from the ```provided_code``` directory
    into the temporary compilation subdirectory.
@@ -110,7 +110,7 @@ configuration directory:
 2. Copy the student's submitted source code (for interpreted
    languages) to the ```tmp_work``` subdirectory.
    Note:  The copied files can be controlled with the
-   ```submitted_to_runner``` variable in ```config.json```.   
+   ```submission_to_runner``` variable in ```config.json```.   
 
 3. Copy the test input files to the ```tmp_work``` subdirectory.
 
@@ -134,7 +134,7 @@ configuration directory:
 
 1. Copy specific files as needed from the student's submission
    languages) to the ```tmp_work``` subdirectory.
-   Note: These files are specified with the ```submitted_to_validation``` variable
+   Note: These files are specified with the ```submission_to_validation``` variable
    in ```config.json```.
 
 2. Copy the custom validation code into the ```tmp_work``` subdirectory.
@@ -162,6 +162,26 @@ configuration directory:
    
 ![](/images/files_for_validation.png)
 
+
+#### Variables to move files
+
+As outlined in the above sections & diagrams, there are 6 different
+configuration settings to control the movement of files.  Some of them
+has reasonable defaults for assignments that are compiling and running
+Python, C++, and Java programs (we may update these defaults in future
+revisions to Submitty).  Each settingYou can add files to the defaults through
+this syntax in your `config.json`:
+
+```
+    "autograding" : {
+        "submission_to_compilation" : [ "part1/*.pdf" ],
+        "submission_to_runner" : [ "part2/*.pdf", "special.xlsx" ],
+        "compilation_to_runner" : [ "**/*.pdf" ],
+        "submission_to_validation" : [ "part3/*.png" ],
+        "compilation_to_validation" : [ "*/*.pdf" ],
+        "work_to_details" : [ "*.pdf" ]
+    },
+```
 
 ### Overall Specification of a ``config.json`` file
 
