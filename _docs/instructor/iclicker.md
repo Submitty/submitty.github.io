@@ -5,9 +5,28 @@ order: 12
 ---
 
 
-NOTE: iClicker ID extraction is currently being reworked. The following
-instructions simply assume that you have a CSV file mapping iClicker IDs 
-to student IDs, an example row might read:
+## Collecting iClicker IDs by Submitty Gradeable
+
+You can bypass the iclicker.com registration site and software by
+directly collecting remote IDs from the students via Submitty.
+
+If you've collected iclicker IDs using the
+[iclicker gradeable configuration](https://github.com/Submitty/Submitty/tree/master/more_autograding_examples/iclicker_upload/config),
+you can scrape the iclicker with this command:
+
+/usr/local/submitty/bin/read_iclicker_ids.py /var/local/submitty/courses/<SEMESTER>/<COURSE>/submissions/<ICLICKER GRADEABLE>/ <INSERT REMOTE ID DESTINATION FILE>
+
+Note: Students often misunderstand which digits on the back of their
+remote are their unique remote ID.  Many type in the model number of
+the clicker that begins with "T24" or something.  The remote ID is the
+8 digit number/letter string that is on the white sticker next to the
+battery.
+
+
+## Remote ID file
+
+Your iClicker remote id file should be a simple CSV file mapping
+iClicker IDs to student IDs, an example row might read:
 
 ```
 #123ABC,"smithj"
@@ -18,6 +37,10 @@ the student ID being wrapped in quotation marks are all important.
 
 NOTE: iClicker support is based on iClicker software version 6, and may not
 work with newer versions.
+
+
+
+## Remote ID file
 
 In `customization.json` there are only two additional entries needed to
 make iClickers work.
