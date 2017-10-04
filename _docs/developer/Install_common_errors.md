@@ -90,69 +90,70 @@ The following errors were experienced and fixed on a Ubuntu 16.04 distribution.
   Error message recieved:
 
   ```
+
   Installing the 'vagrant-vbguest' plugin. This can take a few minutes...
-Bundler, the underlying system Vagrant uses to install plugins,
-reported an error. The error is shown below. These errors are usually
-caused by misconfigured plugin installations or transient network
-issues. The error from Bundler is:
+  Bundler, the underlying system Vagrant uses to install plugins,
+  reported an error. The error is shown below. These errors are usually
+  caused by misconfigured plugin installations or transient network
+  issues. The error from Bundler is:
 
-An error occurred while installing nokogiri (1.8.0), and Bundler cannot continue.
-Make sure that `gem install nokogiri -v '1.8.0'` succeeds before bundling.
+  An error occurred while installing nokogiri (1.8.0), and Bundler cannot continue.
+  Make sure that `gem install nokogiri -v '1.8.0'` succeeds before bundling.
 
-Warning: this Gemfile contains multiple primary sources. Using `source` more than once without a block is a security risk, and may result in installing unexpected gems. To resolve this warning, use a block to indicate which gems should come from the secondary source. To upgrade this warning to an error, run `bundle config disable_multisource true`.Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+  Warning: this Gemfile contains multiple primary sources. Using `source` more than once without a block is a security risk, and may result in installing unexpected gems. To resolve this warning, use a block to indicate which gems should come from the secondary source. To upgrade this warning to an error, run `bundle config disable_multisource true`.Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
 
-    current directory: /home/user/.vagrant.d/gems/gems/nokogiri-1.8.0/ext/nokogiri
-/usr/bin/ruby2.3 -r ./siteconf20170914-2709-1ddc8yn.rb extconf.rb
-checking if the C compiler accepts ... yes
-Building nokogiri using packaged libraries.
-Using mini_portile version 2.2.0
-checking for gzdopen() in -lz... no
-zlib is missing; necessary for building libxml2
-*** extconf.rb failed ***
-Could not create Makefile due to some reason, probably lack of necessary
-libraries and/or headers.  Check the mkmf.log file for more details.  You may
-need configuration options.
+      current directory: /home/user/.vagrant.d/gems/gems/nokogiri-1.8.0/ext/nokogiri
+  /usr/bin/ruby2.3 -r ./siteconf20170914-2709-1ddc8yn.rb extconf.rb
+  checking if the C compiler accepts ... yes
+  Building nokogiri using packaged libraries.
+  Using mini_portile version 2.2.0
+  checking for gzdopen() in -lz... no
+  zlib is missing; necessary for building libxml2
+  *** extconf.rb failed ***
+  Could not create Makefile due to some reason, probably lack of necessary
+  libraries and/or headers.  Check the mkmf.log file for more details.  You may
+  need configuration options.
 
-Provided configuration options:
-  --with-opt-dir
-  --without-opt-dir
-  --with-opt-include
-  --without-opt-include=${opt-dir}/include
-  --with-opt-lib
-  --without-opt-lib=${opt-dir}/lib
-  --with-make-prog
-  --without-make-prog
-  --srcdir=.
-  --curdir
-  --ruby=/usr/bin/$(RUBY_BASE_NAME)2.3
-  --help
-  --clean
-  --use-system-libraries
-  --enable-static
-  --disable-static
-  --with-zlib-dir
-  --without-zlib-dir
-  --with-zlib-include
-  --without-zlib-include=${zlib-dir}/include
-  --with-zlib-lib
-  --without-zlib-lib=${zlib-dir}/lib
-  --enable-cross-build
-  --disable-cross-build
+  Provided configuration options:
+    --with-opt-dir
+    --without-opt-dir
+    --with-opt-include
+    --without-opt-include=${opt-dir}/include
+    --with-opt-lib
+    --without-opt-lib=${opt-dir}/lib
+    --with-make-prog
+    --without-make-prog
+    --srcdir=.
+    --curdir
+    --ruby=/usr/bin/$(RUBY_BASE_NAME)2.3
+    --help
+    --clean
+    --use-system-libraries
+    --enable-static
+    --disable-static
+    --with-zlib-dir
+    --without-zlib-dir
+    --with-zlib-include
+    --without-zlib-include=${zlib-dir}/include
+    --with-zlib-lib
+    --without-zlib-lib=${zlib-dir}/lib
+    --enable-cross-build
+    --disable-cross-build
 
-To see why this extension failed to compile, please check the mkmf.log which can be found here:
+  To see why this extension failed to compile, please check the mkmf.log which can be found here:
 
-  /home/user/.vagrant.d/gems/extensions/x86_64-linux/2.3.0/nokogiri-1.8.0/mkmf.log
+    /home/user/.vagrant.d/gems/extensions/x86_64-linux/2.3.0/nokogiri-1.8.0/mkmf.log
 
-extconf failed, exit code 1
+  extconf failed, exit code 1
 
-Gem files will remain installed in /home/user/.vagrant.d/gems/gems/nokogiri-1.8.0 for inspection.
-Results logged to /home/user/.vagrant.d/gems/extensions/x86_64-linux/2.3.0/nokogiri-1.8.0/gem_make.out
-  ```
+  Gem files will remain installed in /home/user/.vagrant.d/gems/gems/nokogiri-1.8.0 for inspection.
+  Results logged to /home/user/.vagrant.d/gems/extensions/x86_64-linux/2.3.0/nokogiri-1.8.0/gem_make.out
+    ```
 
-In order to solve this make sure that the system has installed packages _lblzma-dev_ and _zliblg-dev_
+  In order to solve this make sure that the system has installed packages _lblzma-dev_ and _zliblg-dev_
 
-This can be done so by running:
+  This can be done so by running:
 
-  ```
-  sudo apt-get install liblzma-dev zlib1g-dev
-  ```
+    ```
+    sudo apt-get install liblzma-dev zlib1g-dev
+    ```
