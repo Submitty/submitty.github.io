@@ -135,7 +135,7 @@ Note: These instructions should be run under root
    However, for the version of PostgreSQL that comes with Ubuntu (16.04), you can
    use UNIX sockets and disable the ability to connect to the DB via TCP. The socket
    improves query responses minorly while disabling TCP can better secure your DB if you don't
-   plan to connect to it (via localhost, IP, etc.). The socket by default is run at
+   plan to connect to it via localhost, IP, etc. The socket by default is run at
    `/var/run/postgresql`. To disable TCP, you will need to edit 
    `/etc/postgresql/9.5/main/pg_hba.conf` and disable all the lines that start with `host` and
    `hostssl`. You will also have to modify `/usr/local/submitty/.setup/INSTALL_SUBMITTY.sh` and
@@ -143,3 +143,28 @@ Note: These instructions should be run under root
 
 9. Test apache config with:  `apache2ctl -t` 
     If everything looks ok, restart apache with:  `service apache2 restart'
+
+##### Troubleshooting Installation
+1. I cannot connect to PAM!
+
+Submitty authenticates PAM through the python module 
+[python-pam](https://pypi.python.org/pypi/python-pam/) using the `hwcgi` user. By default, we
+assume you're going to use local accounts for authentication and as such `hwcgi` has been
+added to the `shadow` group so that it can read /etc/password which is necessary for PAM to work.
+
+To test PAM, you can do:
+```bash
+$ sudo su hwcgi -c python3
+Python 3.5.1 (default, Jun 29 2016, 13:08:31)
+[GCC 4.9.2] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import pam
+>>> p = pam.pam()
+>>> p.authenticate('username', 'password')
+True
+``` 
+(where `username` and `password` match some account on the machine).
+
+If you get an error about module pam not being found, that means that `hwcgi` does not have the proper permissions to
+the module and if you get False on authentication, then `hwcgi` does not have the proper permissions to check the
+right files via PAM.
