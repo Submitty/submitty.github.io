@@ -15,24 +15,24 @@ order: 2
 
 3. Download and install [VirtualBox](https://www.virtualbox.org/), [Vagrant](https://www.vagrantup.com), and [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest).
 
-    The latest Vagrant + Virtualbox combo that has been tested is _Vagrant 1.9.3_ and _Virtualbox 5.0.38_ (on Mac 10.12.6)
+   The latest Vagrant + VirtualBox combo that has been tested is _Vagrant 1.9.3_ and _VirtualBox 5.0.38_ (on Mac 10.12.6)
 
-    Below are quick steps to get everything installed and running. You can just go to the respective sites and downloaded the necessary binary (which you must do for Windows).
+   Below are quick steps to get everything installed and running. You can just go to the respective sites and download the necessary binaries (which you must do for Windows).
 
-    **Mac Installation**  
-    Install [homebrew](http://brew.sh/) if you don't have it and then run:
-    ```
-    brew cask install virtualbox
-    brew cask install vagrant
-    sudo vagrant plugin install vagrant-vbguest
-    ```
+   **Mac Installation**  
+   Install [homebrew](http://brew.sh/) if you don't have it and then run:
+   ```
+   brew cask install virtualbox
+   brew cask install vagrant
+   sudo vagrant plugin install vagrant-vbguest
+   ```
 
-    **Ubuntu Installation**
-    ```
-    sudo apt-get install virtualbox
-    sudo apt-get install vagrant
-    sudo vagrant plugin install vagrant-vbguest
-    ```
+   **Ubuntu Installation**
+   ```
+   sudo apt-get install virtualbox
+   sudo apt-get install vagrant
+   sudo vagrant plugin install vagrant-vbguest
+   ```
 
 2. Clone [the Submitty repository](https://github.com/Submitty/Submitty) to a location on
    your computer (the "host").
@@ -144,28 +144,28 @@ order: 2
    You will connect to the VM as user `vagrant` initially.
 
 
-9.  The following additional users exist on the VM:
+9. The following additional users exist on the VM:
 
-    | user | password |
-    |------|----------|
-    | vagrant | vagrant |
-    | root | vagrant |
-    | hsdbu | hsdbu |
-    | hwcgi | hwcgi |
-    | hwphp | hwphp |
-    | hwcron | hwcron |
-    | instructor | instructor |
-    | ta | ta |
-    | developer | developer |
-    | postgres | postgres |
-    | student | student |
+   | user | password |
+   |------|----------|
+   | vagrant | vagrant |
+   | root | vagrant |
+   | hsdbu | hsdbu |
+   | hwcgi | hwcgi |
+   | hwphp | hwphp |
+   | hwcron | hwcron |
+   | instructor | instructor |
+   | ta | ta |
+   | developer | developer |
+   | postgres | postgres |
+   | student | student |
 
 
 10. The VM has the following three courses by default and they are all part of the current semester:
 
-    _Note: The current semester is calculated by either using an `s` if in the month is < 7 else use `f`
+    *Note: The current semester is calculated by either using an `s` if in the month is < 7 else use `f`
     and then take the last two digits of the current year. So April 2017 would be `s17` while September
-    2017 would be `f17`.
+    2017 would be `f17`.*
 
     * sample
     * development
