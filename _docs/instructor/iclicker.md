@@ -14,7 +14,9 @@ If you've collected iclicker IDs using the
 [iclicker gradeable configuration](https://github.com/Submitty/Submitty/tree/master/more_autograding_examples/iclicker_upload/config),
 you can scrape the iclicker with this command:
 
+```
 /usr/local/submitty/bin/read_iclicker_ids.py /var/local/submitty/courses/<SEMESTER>/<COURSE>/submissions/<ICLICKER GRADEABLE>/ <INSERT REMOTE ID DESTINATION FILE>
+```
 
 Note: Students often misunderstand which digits on the back of their
 remote are their unique remote ID.  Many type in the model number of
