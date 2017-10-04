@@ -21,6 +21,7 @@ fill or update classlists on a cron schedule._
   * [Error Logging](#config_logs)
   * [CSV File Access](#csv_file_access)
   * [CSV Validation](#config_csv_validation)
+  * [Student Registration Codes](#registration_codes)
   * [Windows Encoding Conversion](#text_encoding)
   * [Timezones](#config_timezones)
 
@@ -107,8 +108,14 @@ The provided defaults, while illustrative, will not work.
 `define` is a function that requires parentheses.
 Inside the parentheses are (usually) string-values arguments, comma separated.
 String values must be enclosed in single or double quotes.
+However, sometimes the value is a whole number or the keywords `true`, `false`, or `null`.
+These are not string values and therefore are not enclosed in single or double quotes.
 Each line must end with a semicolon.
 Otherwise, the auto feed will throw a syntax or parse error and won't run.
+
+_Best practice is to follow the format as seen in the examples._
+
+---
 
 Here is an example option:
 ```php
@@ -192,9 +199,12 @@ These constants define how the CSV data can be accessed.
   * **_NEVER_** divulge the local computer's private key.
 * `CSV_PRIVKEY_PASSPHRASE` is the decryption passphrase used to read your local computer's private key.
   * The private key does not have to be encrypted, in which case this option should be set to `null` (without quotes).
-  * **_IMPORTANT_** -- To use an encrypted private key with an Ubuntu SSH/SFTP host,
-    _`libssh2` needs be manually recompiled with `OpenSSH`_.  Otherwise, authentication will always fail.
-    q.v. [This bug report](https://bugs.php.net/bug.php?id=58573) and this [manual entry](http://php.net/manual/en/function.ssh2-auth-pubkey-file.php).
+  * **IMPORTANT** -- To use an encrypted private key with an Ubuntu SSH/SFTP host,
+    The [`libssh2`](https://launchpad.net/ubuntu/xenial/+source/libssh2) library needs be manually recompiled with [`OpenSSH`](https://www.openssh.com/) (as opposed to [`libgcrypt20-dev`](https://launchpad.net/ubuntu/xenial/+package/libgcrypt20-dev))
+    Otherwise, authentication will always fail.
+    q.v. [This bug report](https://bugs.php.net/bug.php?id=58573) and these [notes](http://php.net/manual/en/function.ssh2-auth-pubkey-file.php).
+
+    _Recompiling [`libssh2`](https://launchpad.net/ubuntu/xenial/+source/libssh2) is out of the scope of Submitty, and therefore Submitty developers are unlikely to be able to provide assistance._
 
 <small>[Back To Table of Contents](#top)</small>
 #### CSV Validation <a name="config_csv_validation"></a>
@@ -208,9 +218,10 @@ These options are used to (loosely) detect a bad CSV file.
 This is useful to detect an egregiously small CSV that could indicate data corruption (such as a file containing end-of-line characters, but no actual data).
 
   It is possible to snare a legitimate CSV as a false-positive, so setting this value relatively small, but greater than zero, is advised.
+  Here are a couples tips to help you decide what should be a reasonable validation filesize.
   * A CSV with 5,120 end-of-line chars (empty rows) will be 5,120 bytes (5 kilobytes) in size.
-    Windows-1252 encoded CSVs have _two_ end-of-line chars per row, so 5,120 empty rows will make up a 10 kilobyte CSV.
-  * 65,536 bytes = 64 kilobytes.
+    CP-1252 (MS-Windows) encoded CSVs have _two_ end-of-line chars per row, so 5,120 empty rows will make up a 10 kilobyte CSV.
+  * As seen in the example above, 65,536 bytes = 64 kilobytes.
 
 * `VALIDATE_NUM_FIELDS` is a check to make sure that an exact number of fields/columns is present in every row of the CSV.
 Any row that does not have this exact value is expected to have unreliable data and is ignored by the auto feed script.
@@ -219,6 +230,31 @@ This value includes any extraneous fields/columns that your University's registr
   Even though the auto feed requires ten columns, the CSV being provided may have more.
   If so, use the number of columns _in the CSV_ to set this option.
   Otherwise, all columns may be ignored and no enrollment additions or updates will be recorded.
+
+<small>[Back To Table of Contents](#top)</small>
+#### Student Registration Codes <a name="registration_codes"></a>
+```php
+define('STUDENT_REGISTERED_CODES', serialize( array(
+'RA', 'RW'
+)));
+```
+
+This option is a little more complicated to look at, but is actually not any more difficult than the others.
+This `define` is creating a list (a.k.a. "array") of all the registration codes that indicate a student is enrolled in a course.
+Your student CSV, over time, may include students who were enrolled in a course, but that enrollment changes mid-term.
+However, there is still a data row for that student.
+
+In the above example, the two codes `RA` and `RW` indicate a student is enrolled in a course.
+In this case, `RA` may mean "Registered by Adviser" and `RW` may mean "Registered by Web".
+
+* You will need to coordinate with your University's registrar or data warehouse to determine what all the enrollment codes are.
+* You will need to replace/remove/add enrollment codes to this `define` that are found in your student CSV and remember to enclose each code in single or double quotes (just like in the example).
+* This example has two codes, but you may add more.
+* Don't forget the commas -- just like in an English list, every item is separated by commas.
+* Even if there is only one registration code, you _must_ have the `serialize( array(` and `)));` program code.
+* Any student not associated with a registration code as listed in this option is assumed to have dropped the course or has otherwise been unregistered for some reason.
+  In which case, an update will occur in Submitty's database to reflect the student is no longer enrolled in that course.
+
 
 <small>[Back To Table of Contents](#top)</small>
 #### Windows Encoding Conversion <a name="text_encoding"></a>
