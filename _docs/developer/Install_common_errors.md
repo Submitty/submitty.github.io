@@ -13,15 +13,15 @@ The following errors were experienced and fixed on a Ubuntu 16.04 distribution.
 
 1. Ruby undefined method when running command (for vagrant version 1.8.1):
 
-    ```
-    sudo vagrant plugin install vagrant-vbguest
-    ```
+   ```
+   sudo vagrant plugin install vagrant-vbguest
+   ```
 
-    Error message recieved:
+   Error message recieved:
 
-    ```
-    Installing the 'vagrant-vbguest' plugin. This can take a few minutes...
-    /usr/lib/ruby/2.3.0/rubygems/specification.rb:946:in `all=': undefined method `group_by' for nil:NilClass (NoMethodError)
+   ```
+   Installing the 'vagrant-vbguest' plugin. This can take a few minutes...
+   /usr/lib/ruby/2.3.0/rubygems/specification.rb:946:in `all=': undefined method `group_by' for nil:NilClass (NoMethodError)
     	from /usr/lib/ruby/vendor_ruby/vagrant/bundler.rb:275:in `with_isolated_gem'
     	from /usr/lib/ruby/vendor_ruby/vagrant/bundler.rb:231:in `internal_install'
     	from /usr/lib/ruby/vendor_ruby/vagrant/bundler.rb:102:in `install'
@@ -41,56 +41,55 @@ The following errors were experienced and fixed on a Ubuntu 16.04 distribution.
     	from /usr/lib/ruby/vendor_ruby/vagrant/cli.rb:42:in `execute'
     	from /usr/lib/ruby/vendor_ruby/vagrant/environment.rb:268:in `cli'
     	from /usr/bin/vagrant:173:in `<main>'
+   ```
+
+   In order to solve this, you can patch vagrant's ruby bundler (solution taken from: [stackoverflow](https://stackoverflow.com/a/36991648/3646475))  
+
+   Create a file named _vagrant-plugin.patch_:
+
+   ```
+   ---
+    lib/vagrant/bundler.rb | 3 ++-
+    1 file changed, 2 insertions(+), 1 deletion(-)
+
+   diff --git a/lib/vagrant/bundler.rb b/lib/vagrant/bundler.rb
+   index 5a5c185..c4a3837 100644
+   --- a/lib/vagrant/bundler.rb
+   +++ b/lib/vagrant/bundler.rb
+   @@ -272,7 +272,6 @@ module Vagrant
+
+          # Reset the all specs override that Bundler does
+          old_all = Gem::Specification._all
+   -      Gem::Specification.all = nil
+
+          # /etc/gemrc and so on.
+          old_config = nil
+   @@ -286,6 +285,8 @@ module Vagrant
+          end
+          Gem.configuration = NilGemConfig.new
+
+   +      Gem::Specification.reset
+   +
+          # Use a silent UI so that we have no output
+          Gem::DefaultUserInteraction.use_ui(Gem::SilentUI.new) do
+        return yield
     ```
 
-    In order to solve this, you can patch vagrant's ruby bundler (solution taken from: [stackoverflow](https://stackoverflow.com/questions/36811863/cant-install-vagrant-plugins-in-ubuntu-16-04/36991648#36991648))  
+   And run the following command to apply the patch:
 
-    Create a file named _vagrant-plugin.patch_:
-
-    ```
-    ---
-     lib/vagrant/bundler.rb | 3 ++-
-     1 file changed, 2 insertions(+), 1 deletion(-)
-
-    diff --git a/lib/vagrant/bundler.rb b/lib/vagrant/bundler.rb
-    index 5a5c185..c4a3837 100644
-    --- a/lib/vagrant/bundler.rb
-    +++ b/lib/vagrant/bundler.rb
-    @@ -272,7 +272,6 @@ module Vagrant
-
-           # Reset the all specs override that Bundler does
-           old_all = Gem::Specification._all
-    -      Gem::Specification.all = nil
-
-           # /etc/gemrc and so on.
-           old_config = nil
-    @@ -286,6 +285,8 @@ module Vagrant
-           end
-           Gem.configuration = NilGemConfig.new
-
-    +      Gem::Specification.reset
-    +
-           # Use a silent UI so that we have no output
-           Gem::DefaultUserInteraction.use_ui(Gem::SilentUI.new) do
-         return yield
-    ```
-
-    And run the following command to apply the patch:
-
-    ```
-    sudo patch --directory /usr/lib/ruby/vendor_ruby/vagrant < vagrant-plugin.patch
-    ```
+   ```
+   sudo patch --directory /usr/lib/ruby/vendor_ruby/vagrant < vagrant-plugin.patch
+   ```
 
 2. zlib is missing; necessary for building libxml2 when running command:
 
-  ```
-  sudo vagrant plugin install vagrant-vbguest
-  ```
+   ```
+   sudo vagrant plugin install vagrant-vbguest
+   ```
 
-  Error message recieved:
+   Error message recieved:
 
   ```
-
   Installing the 'vagrant-vbguest' plugin. This can take a few minutes...
   Bundler, the underlying system Vagrant uses to install plugins,
   reported an error. The error is shown below. These errors are usually
@@ -150,10 +149,10 @@ The following errors were experienced and fixed on a Ubuntu 16.04 distribution.
   Results logged to /home/user/.vagrant.d/gems/extensions/x86_64-linux/2.3.0/nokogiri-1.8.0/gem_make.out
   ```
 
-  In order to solve this make sure that the system has installed packages _lblzma-dev_ and _zliblg-dev_
+   In order to solve this make sure that the system has installed packages _lblzma-dev_ and _zliblg-dev_
 
-  This can be done so by running:
+   This can be done so by running:
 
-  ```
-  sudo apt-get install liblzma-dev zlib1g-dev
-  ```
+   ```
+   sudo apt-get install liblzma-dev zlib1g-dev
+   ```
