@@ -21,6 +21,7 @@ fill or update classlists on a cron schedule._
   * [Error Logging](#config_logs)
   * [CSV File Access](#csv_file_access)
   * [CSV Validation](#config_csv_validation)
+  * [CSV Fields Mapping](#csv_fields_mapping)
   * [Student Registration Codes](#registration_codes)
   * [Windows Encoding Conversion](#text_encoding)
   * [Timezones](#config_timezones)
@@ -28,7 +29,7 @@ fill or update classlists on a cron schedule._
 ### 1. Requirements <a name="requirements"></a>
 * Submitty Student Auto Feed is intended to be managed by a systems administrator or similar IT professional.
 * PHP 5.4 or higher with `pgsql` and `iconv` extensions.
-  * Although not a necessity, the auto feed script can operate on the same server that Submitty is running on.  In which case, you may need to install the `iconv` extension.
+  * Although not a necessity, the auto feed script can operate on the same server that Submitty is running on.
   * The `ssh2` extension is also required if the data feed CSV resides on a different server than the script is running from (this also includes running the script on the Submitty server).
 * A regularly updated CSV data feed of student enrollment.
   * Contact your university's registrar and/or data warehouse for assistance.
@@ -60,7 +61,7 @@ The data should be tabulated (like a spreadsheet), but must be written as a CSV 
 You will likely need the cooperation from your university's data warehouse and/or registrar.
 The CSV file will need to be delivered or provided somewhere that the auto feed script can access.
 
-_Please note where this location is as you will need it later._
+_Please note where the CSV location is as you will need it later._
 
 **IMPORTANT** -- CSV files are traditionally human readable raw text files and the CSVs required by the auto feed script will contain
 student enrollment data protected by FERPA ([U.S. federal statute 20 U.S.C. § 1232g](https://en.wikipedia.org/wiki/Family_Educational_Rights_and_Privacy_Act)).
@@ -74,7 +75,7 @@ TO DO
 <small>[Back To Table of Contents](#top)</small>
 ### 6. Install On Ubuntu 16.04 <a name="install"></a>
 As these are PHP scripts, they _should_ run on any computer that has PHP 5.4+ and the appropriate extensions installed.
-However, these instructions will focus on Ubuntu 16.04 (which uses PHP 7.0 by default).
+However, these instructions will focus on Ubuntu 16.04 (same OS that is supported for Submitty).  Ubuntu 16.04 uses PHP 7.0 by default.
 
 As Ubuntu is part of the Debian Linux family, these instructions are very likely to work with other Debian family distributions with, perhaps, minor adjustments.
 
@@ -102,13 +103,13 @@ sudo chmod 0600 config.php
 ### 7. Configuration <a name="configuration"></a>
 Configuration options exist in `config.php` as "constants".
 The goal, here, is to redefine each constant to a value reflective of your use of Submitty.
-The provided defaults, while illustrative, will not work.
+The provided defaults, while illustrative, typically will not work.
 
 **IMPORTANT** -- these lines are treated as actual PHP program code.
 `define` is a function that requires parentheses.
 Inside the parentheses are (usually) string-values arguments, comma separated.
 String values must be enclosed in single or double quotes.
-However, sometimes the value is a whole number or the keywords `true`, `false`, or `null`.
+However, sometimes the value is a whole number or of the keywords `true`, `false`, or `null`.
 These are not string values and therefore are not enclosed in single or double quotes.
 Each line must end with a semicolon.
 Otherwise, the auto feed will throw a syntax or parse error and won't run.
@@ -122,6 +123,10 @@ Here is an example option:
 define('CSV_FILE', '/path/to/datafile.csv');
 ```
 This defines the constant `CSV_FILE` and sets it to the value `/path/to/datafile.csv`.
+
+_Do not change the constant_.
+Only change the constant's value.
+
 We would need to change the value to reflect where the student data CSV is located (did you [note this](#before_installing) back in chapter 5?).
 For example, if your data warehouse delivers the feed CSV to `/users/datawarehouse/enrollment.csv` -- then change the line to read:
 ```php
@@ -232,10 +237,32 @@ This value includes any extraneous fields/columns that your University's registr
   Otherwise, all columns may be ignored and no enrollment additions or updates will be recorded.
 
 <small>[Back To Table of Contents](#top)</small>
+#### CSV Fields Mapping <a name="csv_fields_mapping"></a>
+```php
+define('COLUMN_COURSE_PREFIX', 8);  //Course prefix
+define('COLUMN_COURSE_NUMBER', 9);  //Course number
+define('COLUMN_REGISTRATION',  7);  //Student enrollment status
+define('COLUMN_SECTION',       10); //Section student is enrolled
+define('COLUMN_USER_ID',       5);  //Student's computer systems ID
+define('COLUMN_FIRSTNAME',     2);  //Student's First Name
+define('COLUMN_LASTNAME',      1);  //Student's Last Name
+define('COLUMN_PREFERREDNAME', 3);  //Student's Preferred Name
+define('COLUMN_EMAIL',         4);  //Student's Campus Email
+define('COLUMN_TERM_CODE',     11); //Semester code used in data validation
+```
+
+Each of these constants represents the data fields that must be read from the student data CSV.
+Different universities will order the data differently, therefore the auto feed requires these `define` functions to determine which columns hold the needed data.
+
+**_IMPORTANT_** -- The integer values actually represent array indices, and as is common convention in programming, array indices start counting at **_zero_**.
+That is, the first column is #0, the second column is #1, the third column is #2, and so on.
+
+<small>[Back To Table of Contents](#top)</small>
 #### Student Registration Codes <a name="registration_codes"></a>
 ```php
 define('STUDENT_REGISTERED_CODES', serialize( array(
-'RA', 'RW'
+'RA',
+'RW'
 )));
 ```
 
@@ -248,10 +275,12 @@ In the above example, the two codes `RA` and `RW` indicate a student is enrolled
 In this case, `RA` may mean "Registered by Adviser" and `RW` may mean "Registered by Web".
 
 * You will need to coordinate with your University's registrar or data warehouse to determine what all the enrollment codes are.
-* You will need to replace/remove/add enrollment codes to this `define` that are found in your student CSV and remember to enclose each code in single or double quotes (just like in the example).
-* This example has two codes, but you may add more.
-* Don't forget the commas -- just like in an English list, every item is separated by commas.
+* You will need to replace/remove/add enrollment codes to this `define` that are found in your student CSV.
+* This example has two codes, but you may have more codes or list only one code.
 * Even if there is only one registration code, you _must_ have the `serialize( array(` and `)));` program code.
+  * <small>`define` is used with singular items, so `serialize` is used to "pack" an array (list) into a singular item.
+    The auto feed will "unpack" the list during runtime, thus `serialize` remains necessary with one item lists.</small>
+* Don't forget the commas -- just like in an English list, every item (code) is separated by commas.
 * Any student not associated with a registration code as listed in this option is assumed to have dropped the course or has otherwise been unregistered for some reason.
   In which case, an update will occur in Submitty's database to reflect the student is no longer enrolled in that course.
 
