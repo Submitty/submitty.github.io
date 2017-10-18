@@ -23,6 +23,7 @@ fill or update classlists on a cron schedule._
   * [CSV Validation](#config_csv_validation)
   * [CSV Fields Mapping](#csv_fields_mapping)
   * [Student Registration Codes](#registration_codes)
+  * [Expected Term Code](#expected_term_code)
   * [Windows Encoding Conversion](#text_encoding)
   * [Timezones](#config_timezones)
 
@@ -239,23 +240,56 @@ This value includes any extraneous fields/columns that your University's registr
 <small>[Back To Table of Contents](#top)</small>
 #### CSV Fields Mapping <a name="csv_fields_mapping"></a>
 ```php
-define('COLUMN_COURSE_PREFIX', 8);  //Course prefix
-define('COLUMN_COURSE_NUMBER', 9);  //Course number
-define('COLUMN_REGISTRATION',  7);  //Student enrollment status
-define('COLUMN_SECTION',       10); //Section student is enrolled
-define('COLUMN_USER_ID',       5);  //Student's computer systems ID
-define('COLUMN_FIRSTNAME',     2);  //Student's First Name
-define('COLUMN_LASTNAME',      1);  //Student's Last Name
-define('COLUMN_PREFERREDNAME', 3);  //Student's Preferred Name
-define('COLUMN_EMAIL',         4);  //Student's Campus Email
-define('COLUMN_TERM_CODE',     11); //Semester code used in data validation
+define('COLUMN_COURSE_PREFIX', 8);
+define('COLUMN_COURSE_NUMBER', 9);
+define('COLUMN_REGISTRATION',  7);
+define('COLUMN_SECTION',       10);
+define('COLUMN_USER_ID',       5);
+define('COLUMN_FIRSTNAME',     2);
+define('COLUMN_LASTNAME',      1);
+define('COLUMN_PREFERREDNAME', 3);
+define('COLUMN_EMAIL',         4);
+define('COLUMN_TERM_CODE',     0);
 ```
 
 Each of these constants represents the data fields that must be read from the student data CSV.
 Different universities will order the data differently, therefore the auto feed requires these `define` functions to determine which columns hold the needed data.
 
 **_IMPORTANT_** -- The integer values actually represent array indices, and as is common convention in programming, array indices start counting at **_zero_**.
-That is, the first column is #0, the second column is #1, the third column is #2, and so on.
+That is, the first column of the CSV is #0, the second column is #1, the third column is #2, and so on.
+
+* `COLUMN_COURSE_PREFIX` represents the course __prefix__ (often the dept. code) as seen in the course catalog.
+  The entire course code would be the __prefix__ and __number__ combined.
+
+* `COLUMN_COURSE_NUMBER` represents the course __number__ as seen in the course catalog.
+  The entire course code would be the __prefix__ and __number__ combined.
+
+  __*IMPORTANT:*__ The student CSV must have separate columns for the prefix/dept code and the course number.
+
+  __*For Example*__ |
+  _Prefix_ | "CSIS" (Computer Science and Information Systems dept.)
+  _Number_ | "101" (introductory programming course)
+  _Course Listed In Catalog_ | "CSIS 101" or "CSIS-101"
+
+* `COLUMN_REGISTRATION` represents the column that has a code to verify that a student is enrolled or not.
+  q.v. [Student Registration Codes](#registration_codes)
+
+* `COLUMN_SECTION` is the column representing the lab/course section a student is enrolled in.
+
+* `COLUMN_USER_ID` is a student's computing systems user ID, and is also used to login to Submitty.
+
+* `COLUMN_FIRSTNAME` is a student's legal first name.
+
+* `COLUMN_LASTNAME` is a student's legal last name.
+
+* `COLUMN_PREFERREDNAME` is the name a student wishes to be known by.
+  If your university's student data CSV doesn't have this column, set this to `null`.
+
+*  `COLUMN_EMAIL` contains a student's email address.
+
+* `COLUMN_TERM_CODE` contains the code describing the current term.
+  This is checked against the "expected" term code for validation.
+  q.v. [Expected Term Code](#expected_term_code)
 
 <small>[Back To Table of Contents](#top)</small>
 #### Student Registration Codes <a name="registration_codes"></a>
@@ -268,8 +302,7 @@ define('STUDENT_REGISTERED_CODES', serialize( array(
 
 This option is a little more complicated to look at, but is actually not any more difficult than the others.
 This `define` is creating a list (a.k.a. "array") of all the registration codes that indicate a student is enrolled in a course.
-Your student CSV, over time, may include students who were enrolled in a course, but that enrollment changes mid-term.
-However, there is still a data row for that student.
+Your student CSV may include students who were enrolled in a course, but that enrollment may change mid-term.
 
 In the above example, the two codes `RA` and `RW` indicate a student is enrolled in a course.
 In this case, `RA` may mean "Registered by Adviser" and `RW` may mean "Registered by Web".
@@ -284,6 +317,23 @@ In this case, `RA` may mean "Registered by Adviser" and `RW` may mean "Registere
 * Any student not associated with a registration code as listed in this option is assumed to have dropped the course or has otherwise been unregistered for some reason.
   In which case, an update will occur in Submitty's database to reflect the student is no longer enrolled in that course.
 
+<small>[Back To Table of Contents](#top)</small>
+#### Expected Term Code <a name="expected_term_code"></a>
+```php
+define('EXPECTED_TERM_CODE', '201705');
+```
+
+This check will ensure that a course's enrollment database does not accidentally get clobbered by a student enrollment list for a different term.
+
+Every term (semester) should be associated with a unique code.
+This code will have to be updated by a sysadmin, as needed.
+
+Per example, above, `201705` might be a code for the Summer 2017 semester.
+That is `201705` might be year 2017, starting month 5 (which is May).
+
+The student auto feed will check every row for this code and compare it with this `define` statement.
+Rows that do not match the `define` value will be ignored.
+It is possible that when one row does not match, all rows will not match.
 
 <small>[Back To Table of Contents](#top)</small>
 #### Windows Encoding Conversion <a name="text_encoding"></a>
