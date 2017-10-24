@@ -163,9 +163,9 @@ order: 2
 
 10. The VM has the following three courses by default and they are all part of the current semester:
 
-    _NOTE: The current semester is calculated by either using an `s` if in the month is < 7 else use `f`
+    *Note: The current semester is calculated by either using an `s` if in the month is < 7 else use `f`
     and then take the last two digits of the current year. So April 2017 would be `s17` while September
-    2017 would be `f17`._
+    2017 would be `f17`.*
 
     * sample
     * development
