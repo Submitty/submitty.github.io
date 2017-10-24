@@ -17,7 +17,7 @@ given assignment, supplying the type of feature to count, the feature itself,
 any number of source files, and optional configuration flags.  For example:
 
 ```
-"submitty_count --language python function print *.py"
+"submitty_count --language python call print *.py"
 ```
 
 _Note: `submitty_count` is an alias for a program installed on the
@@ -25,7 +25,7 @@ submitty server.  You can directly run the command to see how it works.
 Here's the same example:_
 
 ```
-/usr/local/submitty/SubmittyAnalysisTools/count --language python function print *.py
+/usr/local/submitty/SubmittyAnalysisTools/count --language python call print *.py
 ```
 
 This example will output the number of calls to the function ``print`` in all
@@ -47,7 +47,7 @@ Here are a couple sample configurations:
 ___
 
 ## Countable Features
-Currently, three feature types can be counted: tokens, nodes, and functions.
+Currently, three feature types can be counted: tokens, nodes, and function calls.
 
 
 ### Tokens
@@ -175,7 +175,7 @@ parse tree so the instructor user can experiment.__
 __TODO: Insert link to valid tags (& nodes?) that can counted.__
 
 
-### Functions
+### Function Calls
 
 This method is a bit higher level: it attempts via a language-dependent method
 to detect a call to a function with a particular name. This is more easily
@@ -185,7 +185,7 @@ method at RPI is determining the number of calls to the ``print`` function
 present in Python code, for example:
 
 ```
-"submitty_count function print -l py *.py"
+"submitty_count call print -l py *.py"
 ```
 
 __TODO: Insert instructions to produce a human readable version of the

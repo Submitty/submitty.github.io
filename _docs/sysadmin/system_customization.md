@@ -47,6 +47,7 @@ And the central location of the student SVN repositories (if used):
 ```
 /var/lib/svn/
 ```
+
 You may want to back up more of `/var/local/submitty` to save configurations and logs, but be sure to exclude
    `/var/local/submitty/to_be_graded_batch` and to_be_graded_interactive
 

@@ -14,7 +14,8 @@ host the Git repositories internally, on the same server as Submitty.
 To setup the internal Git, you will have to setup a separate URL from your main Submitty installation and
 create a separate VirtualHost for it, due to the use of suexec within our main configuration.
 
-Copy the following code into /etc/apache2/sites-available/submitty-git.conf:
+Copy the following code into `/etc/apache2/sites-available/submitty-git.conf`:
+
 ```
 <VirtualHost GIT_URL:80>
     AddDefaultCharset utf-8
@@ -63,14 +64,24 @@ that then `hwcgi` can read to check against PAM. As such, you'll have to add `hw
 
 Instructors can generate their repositories using a provided bin script `generate_repos.py` which will handle creating
 a bare shared repository for all students in a course. You can run this using:
-```bash
-$ /usr/local/submitty/bin/generate_repos.py <semester> <course_code> [<gradeable_id>]
-```
-Where the first two parameters are necessary and the third (gradeable_id) is optional. This allows you to create
-repositories either at a "course level" or a "gradeable level" depending on how you wish to run your course.
 
-Permissions on these repositories (which is handled automatically by the generate script) is that these directories
-and files must be readable and writeable by www-data or else students won't be able to clone/push/etc.
+```bash
+$ /usr/local/submitty/bin/generate_repos.py <semester> <course_code> <project_name/gradeable_id>
+```
+
+If the third argument is not an existing gradeable_id, the user is
+prompted to confirm to make these repositories.  If confirmed, an
+empty repository is made for every user in the course.  If it is an
+existing gradeable, the script checks to see if this gradeable is an
+individual or team assignment.  If it is an individual gradeable, an
+empty repository is made for every user.  If it is a team gradeable,
+an empty repository is made for every team that has been formed so
+far.  The script can be re-run when additional teams are formed.
+
+Permissions on these repositories (which is handled automatically by
+the generate script) is that these directories and files must be
+readable and writeable by www-data or else students won't be able to
+clone/push/etc.
 
 All repositories are stored in `/var/local/submitty/vcs`.
 
@@ -85,3 +96,25 @@ Due to the user of Apache2 authentication to act as a gatekeeper on the git repo
 for configuration Submitty to have be able to clone them when grading:
 1. Create a Git user within your course and use its username/password on setting up VCS grading
 2. Use a file path to the Git repository (which won't require a username/password): `/var/local/submitty/vcs/<semester>/<course>[/<gradeable_id>]/user_id`.
+
+
+#### Assignment Configuration
+
+To link a new gradeable to the repositories, for the question: "Are
+students uploading files or submitting to a Version Control System
+(VCS) repository?", select "Version Control System (VCS) Repository".
+
+And specify for the repository path:
+
+```
+/var/local/submitty/vcs/<SEMESTER>/<COURSE>/<PROJECT_NAME OR GRADEABLE_ID>/{$user_id}/
+```
+
+(substituting `<SEMSESTER>`, `<COURSE>`, and `<PROJECT_NAME OR
+GRADEABLE_ID>`).
+
+Also, under the "Course Settings" tab, leave "Version Control System
+(VCS) Base URL" blank for now.  (We will implement this feature
+later).
+
+NOTE: We currently have a hardcoded RPI path in the source code.  FIXME!

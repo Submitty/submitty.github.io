@@ -4,7 +4,7 @@ category: Instructor
 order: 13
 ---
 
-Gradeables are complex enough to warrant their own ``"gradeables":`` array.
+Gradeables are complex enough to warrant their own ``"gradeables"`` array.
 For each syllabus bucket you want included, this array must have one associative 
 array. Each associative array has the following fields:
 
