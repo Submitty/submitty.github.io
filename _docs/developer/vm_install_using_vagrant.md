@@ -4,6 +4,15 @@ category: Developer
 order: 2
 ---
 
+The instructions below will setup an instance of Submitty on your own
+hardware that will have several courses, many sample assignments, and
+a hundred students with assignment submissions so you can explore the
+features of Submitty.  Your host computer can run any modern operating
+system (Windows, Mac, or Unix/Linux).  The installation process will
+create a new Virtual Machine (VM) on your computer and the VM will use
+the Ubuntu GNU/Linux operating system.
+
+
 1. To develop with a Virtual Machine (VM), your computer should have
    at least 8GB of RAM and a 64-bit host OS.  AMD-V or Intel VT-x are
    also required (most computers have these).  Submitty is RAM and I/O
@@ -17,7 +26,10 @@ order: 2
 
    The latest Vagrant + VirtualBox combo that has been tested is _Vagrant 1.9.3_ and _VirtualBox 5.0.38_ (on Mac 10.12.6)
 
-   Below are quick steps to get everything installed and running. You can just go to the respective sites and download the necessary binaries (which you must do for Windows).
+   Below are quick steps to get everything installed and running.
+
+   **Windows Installation**
+   You can just go to the respective sites and download the necessary binaries.
 
    **Mac Installation**  
    Install [homebrew](http://brew.sh/) if you don't have it and then run:
@@ -111,25 +123,19 @@ order: 2
    website.
 
    * From a web browser (Chrome, Firefox, IE, etc.) on your host
-     computer, go to:  
-     <http://192.168.56.101/index.php?semester=s17&course=sample>
-     Edit the semester and course url variables to access other courses.
+     computer, go to:   
+     <http://192.168.56.101/index.php>  
+     (see the VM login & password info below)
 
    * You can test the submission, autograding, and viewing of the
      grades details by uploading sample submissions from the Submitty
      repository, located in one of these these directories:
-     <https://github.com/Submitty/Tutorial/tree/master/examples> (for "tutorial" course)
-     <https://github.com/Submitty/Submitty/tree/master/more_autograding_examples> (for "sample" course)<br>
 
-   * You will enter the TA grading website from grading links on the main navidation page.
-     _NOTE:  Because TA grading is still through a separate top level URL, you will need to enter your
-     password a 2nd time.  This will go away when we finish the move to a combined site.
-     (this still gives the security warning above?)_
+     For the "tutorial" course:  
+     <https://github.com/Submitty/Tutorial/tree/master/examples> 
 
-   * These URLS are configured:
-     * <http://192.168.56.101> (submission)
-     * <http://192.168.56.101/cgi-bin> (cgi-bin scripts)
-     * <http://192.168.56.101/hwgrading> (ta grading)
+     For the "sample" course:  
+     <https://github.com/Submitty/Submitty/tree/master/more_autograding_examples>
 
 
 8. When the VM is "up", you can connect from your host computer to the
@@ -144,7 +150,7 @@ order: 2
    You will connect to the VM as user `vagrant` initially.
 
 
-9. The following additional users exist on the VM:
+9. The following users exist on the VM:
 
    | user | password |
    |------|----------|
@@ -161,21 +167,15 @@ order: 2
    | student | student |
 
 
-10. The VM has the following three courses by default and they are all part of the current semester:
+10. The VM has the following four courses by default and they are all part of the current semester:
 
     *Note: The current semester is calculated by either using an `s` if in the month is < 7 else use `f`
     and then take the last two digits of the current year. So April 2017 would be `s17` while September
     2017 would be `f17`.*
 
+    * tutorial
     * sample
     * development
-    * tutorial
+    * blank
 
 
-11. Currently, there are four user accounts that can be used that have different permission levels within the system. Their password is the same as their username:
-
-    * developer
-    * instructor
-    * ta
-    * grader
-    * student
