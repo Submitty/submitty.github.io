@@ -82,7 +82,7 @@ It can contain the following:
   to give user ``smithj`` a grade lettter of ``D`` with a reason of 
   ``"Put in extraordinary effort."``:
 
-  ```
+  ```json
   "smithj" : {
      "grade": "D",
      "note": "Put in extraordinary effort."
@@ -98,12 +98,10 @@ It can contain the following:
   fail to get at least 34 points on their hw01 and hw02 scores combined, the code
   below could be used. 
 
-  ```
-  "warning": [
-  {
+  ```json
+  "warning": [{
      "msg": "Low HW 1&2",
      "ids" : [ "hw01", "hw02" ],
      "value" : 34
-  }
-  ]
+  }]
   ```
