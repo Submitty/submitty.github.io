@@ -27,14 +27,12 @@ launched by the
 
 #### Contact Us
 
-We have a public forum for questions about Submitty:
-
-[submitty@googlegroups.com](mailto:submitty@googlegroups.com)
+We have a public forum for questions about Submitty:  
+[submitty@googlegroups.com](mailto:submitty@googlegroups.com)  
 [https://groups.google.com/forum/#!forum/submitty][https://groups.google.com/forum/#!forum/submitty]
 
 
-Or you can contact the RPI Submitty development team:
-
+Or you can contact the RPI Submitty development team:  
 [submitty@cs.rpi.edu](mailto:submitty@cs.rpi.edu)
 
 
