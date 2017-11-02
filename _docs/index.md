@@ -27,8 +27,15 @@ launched by the
 
 #### Contact Us
 
-If you have a question or would like access to our demo site, please
-contact us at [submitty@cs.rpi.edu](mailto:submitty@cs.rpi.edu).
+We have a public forum for questions about Submitty:
+
+[submitty@googlegroups.com](mailto:submitty@googlegroups.com)
+[https://groups.google.com/forum/#!forum/submitty][https://groups.google.com/forum/#!forum/submitty]
+
+
+Or you can contact the RPI Submitty development team:
+
+[submitty@cs.rpi.edu](mailto:submitty@cs.rpi.edu)
 
 
 Please use the links on the sidebar to further explore Submitty.

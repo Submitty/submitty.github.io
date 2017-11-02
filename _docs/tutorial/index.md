@@ -4,24 +4,28 @@ title: Tutorial
 
 #### Demo Submitty
 
-As part of our SIGCSE 2017 demo presentation we are hosting a demo
-Submitty website.  Please contact us at
-[submitty@cs.rpi.edu](mailto:submitty@cs.rpi.edu) for access
-credentials to this demo site.
+To try out Submitty, follow the developer instructions to create a
+[Submitty instance on your local machine]
+(http://submitty.org/developer/vm_install_using_vagrant)
+using virtual machine using Vagrant and Virtual Box.
 
-With these credentials you will have access as a "student" to the
-tutorial course where you can upload sample student submissions and
-view the autograding results.  You will also have access as an
-"instructor" to your own course populated with a couple dozen students
-that you can grade, you can create new "gradeables", upload new
-autograder configs, and manage your course.
+Please use the Submitty Users Google Group to ask questions about
+installation or usage of Submitty:
 
-Alternatively, you may follow the [developer
-instructions](/developer/) to setup a private VM running
-Submitty on your own machine.
+[submitty@googlegroups.com](mailto:submitty@googlegroups.com)
+[https://groups.google.com/forum/#!forum/submitty][https://groups.google.com/forum/#!forum/submitty]
+
+Or contact the RPI Submitty development team:
+
+[submitty@cs.rpi.edu](mailto:submitty@cs.rpi.edu)
+if you have specific questions for us.
+
+
+
 
 
 #### SIGCSE 2017 Demo Presentation
+
 
 [Slides](https://github.com/Submitty/Tutorial/raw/master/presentation/Submitty%20Demo%20SIGCSE%20March%2010%202017.pdf)
   
