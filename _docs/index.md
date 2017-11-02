@@ -29,7 +29,7 @@ launched by the
 
 We have a public forum for questions about Submitty:  
 [submitty@googlegroups.com](mailto:submitty@googlegroups.com)  
-[https://groups.google.com/forum/#!forum/submitty][https://groups.google.com/forum/#!forum/submitty]
+[https://groups.google.com/forum/#!forum/submitty](https://groups.google.com/forum/#!forum/submitty)
 
 
 Or you can contact the RPI Submitty development team:  
