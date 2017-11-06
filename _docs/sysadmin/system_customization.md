@@ -185,7 +185,7 @@ sudo systemctl restart apache2.service
 ```
 
 By default, a Submitty electronic gradeable allows students to upload
-files totaling 100MB.  Instructors can adjust this limit per gradeable
+files totaling 100KB.  Instructors can adjust this limit per gradeable
 in the `config.json`, for example:
 
 ```
