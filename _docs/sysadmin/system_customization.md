@@ -190,5 +190,5 @@ in the `config.json`, for example:
 
 ```
 // 1 mb maximum submission size
-"max_submission_size" : 1000000,
+"max_submission_size" : 1000000
 ```
