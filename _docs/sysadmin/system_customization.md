@@ -160,3 +160,35 @@ However, this should be only applied to the `php.ini` running the web server and
 
 [bin/grade_students.sh]: https://github.com/Submitty/Submitty/blob/master/bin/grade_students.sh
 [INSTALL_SUBMITTY_template.sh]: https://github.com/Submitty/Submitty/blob/master/bin/.setup/INSTALL_template.sh
+
+
+### Allowing Large Student File Upload Submissions
+
+By default, Apache / Ubuntu limits the size of file upload by POST to
+10MB.  To increase this edit:
+
+'''
+/etc/php/7.0/fpm/php.ini
+'''
+
+Change these variables as appropriate:
+
+'''
+post_max_size
+upload_max_filesize
+'''
+
+And restart apache:
+
+'''
+sudo systemctl restart apache2.service
+'''
+
+By default, a Submitty electronic gradeable allows students to upload
+files totaling 100MB.  Instructors can adjust this limit per gradeable
+in the 'config.json', for example:
+
+'''
+// 1 mb maximum submission size
+"max_submission_size" : 1000000,
+'''

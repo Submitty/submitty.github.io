@@ -7,10 +7,11 @@ order: 2
 The instructions below will setup an instance of Submitty on your own
 hardware that will have several courses, many sample assignments, and
 a hundred students with assignment submissions so you can explore the
-features of Submitty.  Your host computer can run any modern operating
-system (Windows, Mac, or Unix/Linux).  The installation process will
-create a new Virtual Machine (VM) on your computer and the VM will use
-the Ubuntu GNU/Linux operating system.
+features of Submitty as it would appear "mid-semester".  Your host
+computer can run any modern operating system (Windows, Mac, or
+Unix/Linux).  The installation process will create a new Virtual
+Machine (VM) on your computer and the VM will use the Ubuntu GNU/Linux
+operating system.
 
 
 1. To develop with a Virtual Machine (VM), your computer should have
@@ -28,7 +29,7 @@ the Ubuntu GNU/Linux operating system.
 
    Below are quick steps to get everything installed and running.
 
-   **Windows Installation**
+   **Windows Installation**  
    You can just go to the respective sites and download the necessary binaries.
 
    **Mac Installation**  
@@ -169,13 +170,13 @@ the Ubuntu GNU/Linux operating system.
 
 10. The VM has the following four courses by default and they are all part of the current semester:
 
-    *Note: The current semester is calculated by either using an `s` if in the month is < 7 else use `f`
-    and then take the last two digits of the current year. So April 2017 would be `s17` while September
-    2017 would be `f17`.*
-
     * tutorial
     * sample
     * development
     * blank
+
+    *Note: The current semester is calculated by either using an `s` if in the month is < 7 else use `f`
+    and then take the last two digits of the current year. So April 2017 would be `s17` while September
+    2017 would be `f17`.*
 
 
