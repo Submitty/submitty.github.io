@@ -9,9 +9,9 @@ order: 2
     you want to upgrade.  For example:
 
     ```
-    cd /usr/local/submitty/GIT_CHECKOUT_Submitty                                                        
-    git checkout master                                                                                 
-    git pull origin master                                                                              
+    cd /usr/local/submitty/GIT_CHECKOUT_Submitty
+    git checkout master
+    git pull origin master
     ```
 
 
@@ -20,7 +20,7 @@ order: 2
     database for each database in the system:
 
     ```
-    sudo /usr/local/submitty/GIT_CHECKOUT_Submitty/.setup/update_database.py
+    sudo python3 /usr/local/submitty/GIT_CHECKOUT_Submitty/.setup/update_database.py
     ```
 
     Check the output of this script to be sure each course currently
@@ -33,7 +33,7 @@ order: 2
     currently happening.
 
     ```
-    sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh                                                 
+    sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh
     ```
 
 
