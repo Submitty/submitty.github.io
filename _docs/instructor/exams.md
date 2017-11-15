@@ -18,6 +18,9 @@ Explore the options / settings on your scanner.  Things to check:
 
 * Choose gray scale scanning (not black & white).
 
+* You may want to adjust the brightness / contrast to be sure to pick
+  up light handwriting.
+
 * Choose duplex mode (double sided scanning).  Even if your exam is
   single sided, the students might write on the back.
 
