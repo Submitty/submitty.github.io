@@ -27,8 +27,14 @@ order: 2
     in use has been processed.  Error messages about columns already
     existing can be safely ignored.
 
+
     Moving from v.1.0.1 to v.1.0.2 (release date: 11/6/2017) requires
     the database update.
+
+
+    A database update is suggested (not required) when switching to
+    v.1.0.3 (release date: 11/15/2017).
+
 
 
 3.  Then re-install the system.  This should take less than a minute.
