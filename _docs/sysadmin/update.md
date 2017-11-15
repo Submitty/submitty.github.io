@@ -28,12 +28,12 @@ order: 2
     existing can be safely ignored.
 
 
-    Moving from v.1.0.1 to v.1.0.2 (release date: 11/6/2017) requires
-    the database update.
+    * Moving from v.1.0.1 to v.1.0.2 (release date: 11/6/2017) requires
+      the database update.
 
 
-    A database update is suggested (not required) when switching to
-    v.1.0.3 (release date: 11/15/2017).
+    * A database update is suggested (not required) when switching to
+      v.1.0.3 (release date: 11/15/2017).
 
 
 
