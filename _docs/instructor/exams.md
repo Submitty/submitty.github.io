@@ -9,6 +9,31 @@ Submitty supports instructor upload of bulk PDF files to then be divided into in
 If there is TA grading, questions can also be assigned page numbers by either instructor or student. In the TA grading interface, clicking on a question will open the corresponding page in the PDF.
 
 
+### Tips for Scanning
+
+Explore the options / settings on your scanner.  Things to check:
+
+* 150-300 dpi works well for most exams (300 dpi might be necessary
+  for students with small cramped handwriting).
+
+* Choose gray scale scanning (not black & white).
+
+* Choose duplex mode (double sided scanning).  Even if your exam is
+  single sided, the students might write on the back.
+
+* Specify "Do not rotate".  Some scanners will attempt to detect
+  rotated pages and make errors rather than correct actual rotated pages.
+
+* Make sure "Blank page removal" is not selected.  This will only
+  throw off the page count!
+
+* Choose a new directory to save your scans.  Scans should hopefully
+  be sequentially numbered, or named with the timestamp to facilitate
+  orderly upload to Submitty.
+
+
+
+
 ### Creating PDF assignments
 
 #### Config:
