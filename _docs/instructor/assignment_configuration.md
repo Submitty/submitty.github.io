@@ -396,11 +396,42 @@ executables.
   **Command:** "origin"      
   **Description:** Moves the mouse to the origin of the student’s window.
 
-* AUTOMATICALLY GENERATED TEST CASE (IF NOT SPECIFIED... )
+* **Automatically Generated Submission Limit Test Case**
 
-  Limit on # of submissions, small point penalty applied after this limit.
+  Students are allowed to resubmit if they discover an error.  And
+  students should be able to submit partial work early and verify they
+  are on the right track.
 
-  FIXME: after implementation, document this!
+  However, we assume that students will do the bulk of their
+  development, testing, and debugging on a local machine.  To prevent
+  overuse of limited resources, Submitty adds a test case that adds a
+  small 1/10th of a point penalty for each submission over 20
+  submissions.
+  _Note that autograding totals round down to the nearest integer._
+
+
+  ```
+        {
+            "max_submissions": 20,
+            "penalty": -0.1,
+            "points": -5,
+            "title": "Submission Limit",
+            "type": "FileCheck"
+        }
+   ```
+
+   You may adjust this limit by pasting this syntax into your
+   config.json and adjusting the parameters.  For example:
+
+   [Hidden Test Case configuration with customized Submission Limit](https://github.com/Submitty/Submitty/blob/master/more_autograding_examples/cpp_hidden_tests/config/config.json)
+
+
+   Note, you can view the defaults added to your config file by
+   viewing:
+
+   ```
+   /var/local/submitty/courses/<SEMESTER>/<COURSE>/config/complete_config/complete_config_<GRADEABLE>.json 
+   ```
 
 
 ### Specification of a Textbox
