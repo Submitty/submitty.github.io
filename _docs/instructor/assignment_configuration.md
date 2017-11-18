@@ -412,16 +412,19 @@ executables.
 
   ```
         {
+            "title": "Submission Limit",
+            "type": "FileCheck",
             "max_submissions": 20,
             "penalty": -0.1,
-            "points": -5,
-            "title": "Submission Limit",
-            "type": "FileCheck"
+            "points": -5
         }
    ```
 
    You may adjust this limit by pasting this syntax into your
-   config.json and adjusting the parameters.  For example:
+   config.json and adjusting the parameters.  The student is allowed
+   `max_submissions` penalty-free submissions.  After that, they will
+   be charged `penalty` points per additional submission.  The maximum
+   penalty is set with the `points` parameter.  For example:
 
    [Hidden Test Case configuration with customized Submission Limit](https://github.com/Submitty/Submitty/blob/master/more_autograding_examples/cpp_hidden_tests/config/config.json)
 
