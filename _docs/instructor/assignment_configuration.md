@@ -396,7 +396,8 @@ executables.
   **Command:** "origin"      
   **Description:** Moves the mouse to the origin of the student’s window.
 
-* **Automatically Generated Submission Limit Test Case**
+
+### Automatically Generated Submission Limit Test Case
 
   Students are allowed to resubmit if they discover an error.  And
   students should be able to submit partial work early and verify they
