@@ -182,6 +182,14 @@ And restart apache:
 
 ```
 sudo systemctl restart apache2.service
+sudo systemctl restart php7.0-fpm.service
+```
+
+and/or
+
+```
+sudo service apache2 restart
+sudo service php7.0-fpm restart
 ```
 
 By default, a Submitty electronic gradeable allows students to upload
