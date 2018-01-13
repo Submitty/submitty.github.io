@@ -1,15 +1,15 @@
 ---
-title: System Customization 
+title: System Customization
 category: System Administrator
 order: 6
 ---
 
 
 _The optional instructions below are suggestions for the system
-administrators of a live Submitty installation._ 
+administrators of a live Submitty installation._
 
 
-### Customize upload students script 
+### Customize upload students script
 
 The system admin or instructor can upload student data from either
 an XLSX or CSV spreadsheet of their student classlist (obtained
@@ -61,7 +61,7 @@ to ensure that system errors can be reported and addressed.
 See cron job details in [INSTALL_SUBMITTY_template.sh][INSTALL_SUBMITTY_template.sh].
 
 
-### Configure log rotation 
+### Configure log rotation
 
 The defaults will work, but you may want to keep records around for
 longer and enable compression so that the logs don’t take up as
@@ -90,8 +90,8 @@ PASS_WARN_AGE   30
 Apply settings by running:
 
 ```     
-pam-auth-update 
-``` 
+pam-auth-update
+```
 
 Accept the defaults from the above command.
 
@@ -99,13 +99,13 @@ Edit `/etc/pam.d/common-password` to tweak settings under the line:
 
 ```
 # here are the per-package modules (the "Primary" block)
-``` 
+```
 
 along the lines of:
 
 ```    
 password  requisite  pam_passwdqc.so min=disabled,disabled,15,12,12 similar=deny enforce=everyone retry=3    
-``` 
+```
 
 Note: The values after min= correspond to password length minimum
 if they contain: a single character class, 2 classes, a passphrase,
@@ -123,12 +123,12 @@ We encourage you to edit `/etc/ssh/sshd_config` to use only stronger encryption 
 ```
 Protocol 2
 MACs hmac-sha1,umac-64@openssh.com,hmac-ripemd160
-Ciphers aes256-ctr,aes192-ctr,aes128-ctr,arcfour256,arcfour128 
+Ciphers aes256-ctr,aes192-ctr,aes128-ctr,arcfour256,arcfour128
 ```
 
 ### Block some brute-force ssh connections by typing the following at a command prompt:
 
-``` 
+```
 sudo bash
 iptables -I INPUT -p tcp --dport 22 -m state --state NEW -m recent --set
 iptables -A INPUT -p tcp --dport 22 -m state --state NEW -m recent --update --seconds 60 --hitcount 8 -j DROP
@@ -140,7 +140,7 @@ Edit ``` /etc/rc.local ``` to automatically reload the software
 firewall on boot and add the following just before the ``` exit 0 ```
 
 ```
-/sbin/iptables-restore < /root/eth0.fw 
+/sbin/iptables-restore < /root/eth0.fw
 ```
 
 Note: This method may not be appropriate or may need to be tuned
@@ -200,3 +200,13 @@ in the `config.json`, for example:
 // 1 mb maximum submission size
 "max_submission_size" : 1000000
 ```
+
+If you are having difficulty with student upload size, you can modify the
+following in /etc/php/7.0/fpm/php.ini:
+
+```
+memory_limit
+```
+
+Just be aware that modifying this number can have repercussions when multiple
+students are using the system at once.
