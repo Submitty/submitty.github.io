@@ -1,8 +1,26 @@
 ---
-title: Installation Troubleshooting
+title: Troubleshooting
 category: Developer
 order: 2
 ---
+
+If you are having trouble being able to view the Submitty webpage after a ```vagrant up``` you might need to 
+modify the interfaces in your VM. To fix this:
+
+As root modify ```/etc/network/interfaces``` and add:
+
+```
+# The host-only network interface
+auto eth1
+iface eth1 inet static
+address 192.168.56.101
+netmask 255.255.255.0
+network 192.168.56.0
+broadcast 192.168.56.255
+```
+
+Solution taken from: (https://gist.github.com/pjdietz/5768124) and (http://christophermaier.name/2010/09/01/host-only-networking-with-virtualbox/)
+
 
 During the install of the various packages referenced on [Vm Install Using Vagrant](vm_install_using_vagrant),
 you might have ran into a few errors along the way. Below are a few common errors, and what you can do to solve them.
