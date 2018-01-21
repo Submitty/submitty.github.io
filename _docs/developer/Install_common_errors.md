@@ -19,8 +19,9 @@ network 192.168.56.0
 broadcast 192.168.56.255
 ```
 
-Solution taken from: (https://gist.github.com/pjdietz/5768124) and (http://christophermaier.name/2010/09/01/host-only-networking-with-virtualbox/)
+References and useful links: [https://gist.github.com/pjdietz/5768124](https://gist.github.com/pjdietz/5768124) and [http://christophermaier.name/2010/09/01/host-only-networking-with-virtualbox/](http://christophermaier.name/2010/09/01/host-only-networking-with-virtualbox/)
 
+---
 
 During the install of the various packages referenced on [Vm Install Using Vagrant](vm_install_using_vagrant),
 you might have ran into a few errors along the way. Below are a few common errors, and what you can do to solve them.
