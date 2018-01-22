@@ -71,8 +71,8 @@ $ sudo /usr/local/submitty/bin/generate_repos.py <semester> <course_code> <proje
 
 _Note: In order to use this script, instructors for courses needing
 repositories should be given limited sudo access to run this script.
-For example, you may create a group named submitty_repo_gen that has
-sudo access to this command, and add the instructors in this group._
+For example, you may create a group named `submitty_repo_gen` that has
+sudo access to this command, and add the instructors to this group._
 
 If the third argument is not an existing gradeable_id, the user is
 prompted to confirm to make these repositories.  If confirmed, an
