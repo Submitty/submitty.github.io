@@ -66,8 +66,13 @@ Instructors can generate their repositories using a provided bin script `generat
 a bare shared repository for all students in a course. You can run this using:
 
 ```bash
-$ /usr/local/submitty/bin/generate_repos.py <semester> <course_code> <project_name/gradeable_id>
+$ sudo /usr/local/submitty/bin/generate_repos.py <semester> <course_code> <project_name/gradeable_id>
 ```
+
+_Note: In order to use this script, instructors for courses needing
+repositories should be given limited sudo access to run this script.
+For example, you may create a group named submitty_repo_gen that has
+sudo access to this command, and add the instructors in this group._
 
 If the third argument is not an existing gradeable_id, the user is
 prompted to confirm to make these repositories.  If confirmed, an
