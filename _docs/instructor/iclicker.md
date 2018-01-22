@@ -65,13 +65,15 @@ make iClickers work.
   The inner array format is:
 
   * **field:** ``"file"``  
-    **type:** _string_  
+    **type:** _array_  
     **REQUIRED**
 
-    A relative path to the iClicker session file (should look something like LYYMMDDHHII.csv,
-    where YY is the 2-digit year 00-99, MM is the 2-digit month 01-12, DD is the 2-digit day 01-31,
-    HH is the two digit hour 00-23, and II is the 2-digit minute 00-59). Multiple files can
-    be used for one lecture.
+    An array of strings, where each string is a relative path to a iClicker session file 
+   (should look something like LYYMMDDHHII.csv or .xml, where YY is the 2-digit year 00-99, 
+    MM is the 2-digit month 01-12, DD is the 2-digit day 01-31, HH is the two digit hour 00-23, 
+    and II is the 2-digit minute 00-59). Multiple files can be used for one lecture. Currently,
+    multiple files can be used for one question even, but the column number and correct answer(s)
+    must match in the files.
 
   * **field:** ``"column"``  
     **type:** _integer_  
