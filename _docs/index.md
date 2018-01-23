@@ -34,7 +34,7 @@ We have a public forum for questions about Submitty:
 
 
 Or you can contact the RPI Submitty development team:  
-[submitty@cs.rpi.edu](mailto:submitty@cs.rpi.edu)
-
+[submitty@cs.rpi.edu](mailto:submitty@cs.rpi.edu)  
+[submitty-admin@googlegroups.com](mailto:submitty-admin@googlegroups.com)  
 
 Please use the links on the sidebar to further explore Submitty.
