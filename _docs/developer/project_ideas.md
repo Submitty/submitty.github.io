@@ -26,18 +26,23 @@ category: Developer
      from material seen by peers).
 
 
----
-
 
 2. **Instructor interface for Plagiarism Detection**
 
-  The implementatino of the core plagiarism detection algorithm is
-  complete and we have an initial visualization of similarities
-  between the top matching pairs of assignment submissions.
+   The implementatino of the core plagiarism detection algorithm is
+   complete and we have an initial visualization of similarities
+   between the top matching pairs of assignment submissions.
 
+   [Open Issues related to Plagiarism Detection](https://github.com/Submitty/Submitty/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+plagiarism)
 
 
 3. **Web GUI for creating automated grading configurations**
+
+   Currently instructors must write a configuration as a config.json
+   (and any necessary additional files) and upload or store these
+   files on the local file system.  We would like to provide an
+   alternate web GUI interface for
+   
 
 4. **Static Analysis**
 
@@ -51,8 +56,8 @@ See also:
 
 * [Submitty GitHub Issue Tracker](https://github.com/Submitty/Submitty/issues)
 
-* [Developer](index) index page.
+* [Developer](index) index page
 
-* [How to Contribute](how_to_contribute) page.
+* [How to Contribute](how_to_contribute) page
 
 
