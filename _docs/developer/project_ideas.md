@@ -36,17 +36,32 @@ category: Developer
    [Open Issues related to Plagiarism Detection](https://github.com/Submitty/Submitty/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+plagiarism)
 
 
+
 3. **Web GUI for creating automated grading configurations**
 
    Currently instructors must write a configuration as a config.json
    (and any necessary additional files) and upload or store these
    files on the local file system.  We would like to provide an
-   alternate web GUI interface for
+   alternate web GUI interface for creating basic on moderately
+   complex autograding configurations.  The goal would be to
+   streamline the assignment configuration process for non-technical
+   instructors, relevant for use in
+   non-computer-science/non-programming courses.
    
+   [Assignment Configuration Instructions](http://submitty.org/instructor/assignment_configuration)
+
 
 4. **Static Analysis**
 
+
 5. **Forum**
+
+   A new feature for Spring 2018 is a Discussion Forum where
+   instructors can post announcements, students can ask questions,
+   instructors/TAs/other students can answer questions, students can
+   share images, etc.  
+
+   [Open Issues related to Forum](https://github.com/Submitty/Submitty/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+forum)
 
 
 6. 
