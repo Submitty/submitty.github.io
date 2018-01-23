@@ -6,7 +6,11 @@ category: Developer
 
 The projects listed below are roughly ordered by prior experience
 required.  Work has already begun on many of these projects, but we
-are looking for new team members to join these projects.
+are looking for new team members to join these projects.  Submit
+questions or comments on specific issues through our
+[Submitty GitHub Issue Tracker](https://github.com/Submitty/Submitty/issues)
+or [Contact us](http://submitty.org/index) to join the
+development team.
 
 
 1. **Peer Grading**   
