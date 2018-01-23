@@ -16,6 +16,10 @@ Please contribute by adding bugs or feature requests to our
 [Submitty GitHub Issue Tracker](https://github.com/Submitty/Submitty/issues).
 
 
+A list of Submitty projects (some new, some in progress):  
+[Project Ideas](project_ideas)
+
+
 To contribute your software changes back to this open source project,
 follow these steps:
 
