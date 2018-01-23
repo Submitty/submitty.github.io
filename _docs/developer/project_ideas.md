@@ -14,16 +14,19 @@ category: Developer
 
    [Open Issues related to Peer Grading](https://github.com/Submitty/Submitty/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+peer)
 
-  Advanced features related to peer grading:
+   Advanced features related to peer grading:
 
-  * Evaluating the quality of peer grading ("grading the grader") by
-    comparing peer grades
+   * Evaluating the quality of peer grading ("grading the grader") by
+     comparing peer grades
 
-  * Security (ensuring students only see the submission material of
-    peers they have been assigned to grade)
+   * Security (ensuring students only see the submission material of
+     peers they have been assigned to grade)
 
-  * Privacy/Anonymity (providing an option to redact student names
-    from material seen by peers).
+   * Privacy/Anonymity (providing an option to redact student names
+     from material seen by peers).
+
+
+---
 
 
 2. **Instructor interface for Plagiarism Detection**
