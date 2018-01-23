@@ -24,7 +24,7 @@ development team.
    benefits to the peer graders!
 
    When peer grading is enabled students will be assigned to review
-   and critique grade a small number of their classmates' work.  The
+   and critique a small number of their classmates' work.  The
    core implementation of peer grading is in progress, but incomplete.
 
    [Open Issues related to Peer Grading](https://github.com/Submitty/Submitty/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+peer)
@@ -48,10 +48,10 @@ development team.
 
    A new feature for Spring 2018 is a Discussion Forum where
    instructors can post announcements, students can ask questions,
-   instructors/TAs/other students can answer questions, students can
-   share images, etc.  
+   instructors/TAs/other students can answer questions, and students can
+   share ideas and images.  
 
-   [Open Issues related to Forum](https://github.com/Submitty/Submitty/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+forum)
+   [Open Issues related to the Discussion Forum](https://github.com/Submitty/Submitty/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+forum)
 
    Advanced features related to the Discussion Forum:
 
@@ -59,8 +59,10 @@ development team.
 
    * Notifications
 
+   * Performance with larger datasets and automated refresh for new posts.
+
    Experience Required: Some programming experience, willingness to
-   learn web and database development.
+   learn web and database development. 
 
 
 3. **Instructor interface for Plagiarism Detection**
@@ -97,15 +99,33 @@ development team.
    Experience Required: Some programming experience, willingness to
    learn web and database development.  Having served as a teaching
    assistant or instructor with experience in programming assignment
-   design is helpful.
+   design will be beneficial.
    
 
 5. **Static Analysis**
 
 
+6. **Website Security and Penetration Testing**
+
+   Submitty is responsible for securing confidential information.  It
+   is important that we regularly assess the security of this data.
+   Once a potential vulnerability is found, the system must be
+   promptly patched and documented to prevent future problems.
+
+   Experience Required: Computer security coursework and/or practical
+   experience searching for system vulnerabilities.
 
 
-6. 
+7. **Continuous Integration Testing**
+
+   Each commit and pull request to github launches continuous
+   integration testing of a portion of the Submitty code base.  We
+   would like to expand the coverage of the code
+
+   Experience Required: Advanced programming experience, experience
+   with the relevant programming languages, tuning system performance, 
+
+
 
 
 See also:
