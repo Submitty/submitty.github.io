@@ -3,13 +3,20 @@ title: Project Ideas
 category: Developer
 ---
 
-* *Instructor interface for Plagiarism Detection*
+* **Peer Grading**
+
+* **Instructor interface for Plagiarism Detection**
 
   The implementatino of the core plagiarism detection algorithm is
   complete and we have an initial visualization of similarities
   between the top matching pairs of assignment submissions.
 
-  
+* **Web GUI for creating automated grading configurations**
+
+* **Static Analysis**
+
+* **Forum**
+
 
 * 
 
