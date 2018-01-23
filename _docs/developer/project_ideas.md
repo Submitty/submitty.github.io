@@ -4,13 +4,22 @@ category: Developer
 ---
 
 
+The projects listed below are roughly ordered by prior experience
+required.  Work has already begun on many of these projects, but we
+are looking for new team members to join these projects.
+
+
 1. **Peer Grading**   
 
-   We provide a detailed rubric for manual grading of student
+   Currently we facilitate detailed rubric manual grading of student
    assignments by the instructor or TA.  We have extended this design
-   for use by peers.  Students can be assigned to review and critique
-   grade a small number of their classmates work.  This core
-   implementation is in progress, but incomplete.  
+   to include peer assessment, which can aid timeliness, quantity, and
+   quality of feedback for students in large courses with limited
+   instructional resources and has been shown to provide important
+   benefit for the peer graders as well.  Students can be assigned to
+   review and critique grade a small number of their classmates' work.
+   This core implementation of peer grading is in progress, but
+   incomplete.
 
    [Open Issues related to Peer Grading](https://github.com/Submitty/Submitty/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+peer)
 
@@ -25,6 +34,8 @@ category: Developer
    * Privacy/Anonymity (providing an option to redact student names
      from material seen by peers).
 
+   Experience Required: Some programming experience, willingness to
+   learn web and database development.
 
 
 2. **Instructor interface for Plagiarism Detection**
@@ -35,6 +46,27 @@ category: Developer
 
    [Open Issues related to Plagiarism Detection](https://github.com/Submitty/Submitty/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+plagiarism)
 
+   Experience Required: Some programming experience, willingness to
+   learn web and database development.
+
+
+5. **Discussion Forum**
+
+   A new feature for Spring 2018 is a Discussion Forum where
+   instructors can post announcements, students can ask questions,
+   instructors/TAs/other students can answer questions, students can
+   share images, etc.  
+
+   [Open Issues related to Forum](https://github.com/Submitty/Submitty/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+forum)
+
+   Advanced features related to the Discussion Forum:
+
+   * Team chat
+
+   * Notifications
+
+   Experience Required: Some programming experience, willingness to
+   learn web and database development.
 
 
 3. **Web GUI for creating automated grading configurations**
@@ -50,18 +82,15 @@ category: Developer
    
    [Assignment Configuration Instructions](http://submitty.org/instructor/assignment_configuration)
 
+   Experience Required: Some programming experience, willingness to
+   learn web and database development.  Having served as a teaching
+   assistant or instructor with experience in programming assignment
+   design is helpful.
+   
 
 4. **Static Analysis**
 
 
-5. **Forum**
-
-   A new feature for Spring 2018 is a Discussion Forum where
-   instructors can post announcements, students can ask questions,
-   instructors/TAs/other students can answer questions, students can
-   share images, etc.  
-
-   [Open Issues related to Forum](https://github.com/Submitty/Submitty/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+forum)
 
 
 6. 
