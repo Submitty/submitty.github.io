@@ -122,6 +122,8 @@ Running `/usr/local/submitty/SubmittyAnalysisTools/diagnostics -l python file.py
 }
 ```
 
+The ``token`` fields specify tokens that can be given to ``submitty_count``.
+
 ### Tokens
 
 A token is a representation of a syntactic feature as a member of a set of
