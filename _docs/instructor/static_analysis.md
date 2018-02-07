@@ -123,6 +123,13 @@ Running `/usr/local/submitty/SubmittyAnalysisTools/diagnostics -l python file.py
 ```
 
 The ``token`` fields specify tokens that can be given to ``submitty_count``.
+Notice that a token ``Plus`` is present between two ``IntegerLiteral`` tokens.
+You could verify that this is the right token by looking at the ``start_line``, ``end_line``, ``start_col``, and ``end_col`` fields, which indicate on what row and column the tokens begin and end within the file.
+Once you are sure that the token is correct, you could count it within student submissions with ``submitty_count``:
+
+```
+submitty_count -l python *.py
+```
 
 ### Tokens
 
