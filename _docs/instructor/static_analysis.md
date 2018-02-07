@@ -51,14 +51,14 @@ Currently, three feature types can be counted: tokens, nodes, and function calls
 The countable features contained in a given file can be identified using ``submitty_diagnostics``, for example as follows:
 
 ```
-submitty_diagnostics -l c file.py
+/usr/local/submitty/SubmittyAnalysisTools/diagnostics -l c file.py
 ```
 
 This tool outputs JSON data by default.
 Interative visualizations can be produced by specifying HTML format:
 
 ```
-submitty_diagnostics -l c --format html file.py
+/usr/local/submitty/SubmittyAnalysisTools/diagnostics -l c --format html file.py
 ```
 
 ### Tokens
