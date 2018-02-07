@@ -40,3 +40,6 @@ Counts the number of calls to the function "check1" in hw1.py. Function "check1"
 
 ```Python commonast.py -cpp –While -Void hw1.cpp -json ```
 Counts the number of while loops in hw1.cpp and prints a json representation of the AST.  
+
+
+Note: Running this on python files will work with the standard submitty install. In order to run this on C++ files, there is an additional install step. In GIT_CHECKOUT_SUBMITTY/.setup in the commonAST branch, run the python script ```clangInstallFinal.py``` Now run the INSTALL_SUBMITTY.sh script to complete the installation.
