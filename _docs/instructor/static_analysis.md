@@ -51,14 +51,75 @@ Currently, three feature types can be counted: tokens, nodes, and function calls
 The countable features contained in a given file can be identified using ``submitty_diagnostics``, for example as follows:
 
 ```
-/usr/local/submitty/SubmittyAnalysisTools/diagnostics -l c file.py
+/usr/local/submitty/SubmittyAnalysisTools/diagnostics -l python file.py
 ```
 
 This tool outputs JSON data by default.
-Interative visualizations can be produced by specifying HTML format:
+Interactive visualizations can be produced by specifying HTML format:
 
 ```
-/usr/local/submitty/SubmittyAnalysisTools/diagnostics -l c --format html file.py
+/usr/local/submitty/SubmittyAnalysisTools/diagnostics -l python --format html file.py
+```
+
+For example, if you would like to count additions, but are unsure of which token to count, you could use a test file like:
+
+```
+# file.py
+print(1 + 1)
+```
+
+Running `/usr/local/submitty/SubmittyAnalysisTools/diagnostics -l python file.py` on this file will produce the following output:
+
+```
+{
+    "/absolute/path/to/file.py": {
+        "tokens": [
+            {
+                "end_col": 6,
+                "token": "Identifier",
+                "start_line": 2,
+                "start_col": 1,
+                "end_line": 2
+            },
+            {
+                "end_col": 7,
+                "token": "LeftParen",
+                "start_line": 2,
+                "start_col": 6,
+                "end_line": 2
+            },
+            {
+                "end_col": 8,
+                "token": "IntegerLiteral",
+                "start_line": 2,
+                "start_col": 7,
+                "end_line": 2
+            },
+            {
+                "end_col": 10,
+                "token": "Plus",
+                "start_line": 2,
+                "start_col": 9,
+                "end_line": 2
+            },
+            {
+                "end_col": 12,
+                "token": "IntegerLiteral",
+                "start_line": 2,
+                "start_col": 11,
+                "end_line": 2
+            },
+            {
+                "end_col": 13,
+                "token": "RightParen",
+                "start_line": 2,
+                "start_col": 12,
+                "end_line": 2
+            }
+        ],
+        "nodes" : { ... node data here ... }
+    }
+}
 ```
 
 ### Tokens
