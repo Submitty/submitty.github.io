@@ -55,7 +55,7 @@ The countable features contained in a given file can be identified using ``submi
 ```
 
 This tool outputs JSON data by default.
-Interactive visualizations can be produced by specifying HTML format:
+An interactive view of the data can be produced by specifying HTML format:
 
 ```
 /usr/local/submitty/SubmittyAnalysisTools/diagnostics -l python --format html file.py
