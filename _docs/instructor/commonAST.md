@@ -40,7 +40,7 @@ You can count nodes on any number of filenames. The number returned will be the 
 ### Print Mode
 
 ```
-python commonast.py outputOption filename lang
+python commonast.py outputOption lang filename 
 ```
 
 Supported ```outputOption```s: 
@@ -54,7 +54,7 @@ Counts the number of for loops in hw1.py
 ```Python commonast.py -py –Call check1 hw1.py ```
 Counts the number of calls to the function "check1" in hw1.py. Function "check1" may or may not exist in hw1.py 
 
-```Python commonast.py -json hw1.cpp -cpp ```
+```Python commonast.py -json -cpp hw1.cpp  ```
 Prints a json representation of the AST of hw1.cpp  
 
 
