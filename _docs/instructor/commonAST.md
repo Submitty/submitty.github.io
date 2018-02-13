@@ -10,7 +10,7 @@ The tool functions in two modes: **count mode** and **print mode**
 ### Count Mode
 
 ```
-python commonast.py lang nodeType arg filename 
+python commonast.py lang nodeType arg filename1 filename2 .... filenamen 
 ```
 will output the number of ```nodeType```s under the argument ```arg``` in the source file ```filename``` which is written in language ```lang```. It will also output valuable information about the AST depending on the outputOption. 
 
@@ -34,6 +34,8 @@ Supported ```nodeType```s:
         * Specific call name that we want to count (example: only count the number of calls to print) 
 
 (The infrastructure is there to count many more nodes. I'm only adding them to this once they've been tested against Sam's tool to make sure they're correct) 
+
+You can count nodes on any number of filenames. The number returned will be the sum number of nodeTypes in all of the filenames. 
 
 ### Print Mode
 
