@@ -4,10 +4,13 @@ category: Instructor
 order: 9
 ---
 
-commonast.py is a static analysis tool to count different programming language constructs.
+commonast.py is a static analysis tool to count different programming language constructs. 
+The tool functions in two modes: **count mode** and **print mode**
+
+### Count Mode
 
 ```
-python commonast.py lang nodeType arg filename outputOption 
+python commonast.py lang nodeType arg filename 
 ```
 will output the number of ```nodeType```s under the argument ```arg``` in the source file ```filename``` which is written in language ```lang```. It will also output valuable information about the AST depending on the outputOption. 
 
@@ -32,10 +35,16 @@ Supported ```nodeType```s:
 
 (The infrastructure is there to count many more nodes. I'm only adding them to this once they've been tested against Sam's tool to make sure they're correct) 
 
+### Print Mode
+
+```
+python commonast.py outputOption filename lang
+```
+
 Supported ```outputOption```s: 
 * -json or -JSON 
 
-Example Calls: 
+### Example Calls: 
 
 ```Python commonast.py -py –For -Void hw1.py ```
 Counts the number of for loops in hw1.py 
@@ -43,11 +52,12 @@ Counts the number of for loops in hw1.py
 ```Python commonast.py -py –Call check1 hw1.py ```
 Counts the number of calls to the function "check1" in hw1.py. Function "check1" may or may not exist in hw1.py 
 
-```Python commonast.py -cpp –While -Void hw1.cpp -json ```
-Counts the number of while loops in hw1.cpp and prints a json representation of the AST.  
+```Python commonast.py -json hw1.cpp -cpp ```
+Prints a json representation of the AST of hw1.cpp  
 
 
-Note: Running this on python files will work with the standard submitty install. In order to run this on C++ files, there are some additional install steps:
+### Additional Install Steps:
+Running this on python files will work with the standard submitty install. In order to run this on C++ files, there are some additional install steps:
 1. navigate to ```/usr/local/submitty/GIT_CHECKOUT_SUBMITTY/.setup```
 2. run ```git checkout commonAST``` to switch to the correct branch
 3. run ```python clangInstall.py``` This could take a few hours
