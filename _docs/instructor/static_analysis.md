@@ -17,7 +17,7 @@ given assignment, supplying the type of feature to count, the feature itself,
 any number of source files, and optional configuration flags.  For example:
 
 ```
-"submitty_count --language python call print *.py"
+submitty_count --language python call print *.py
 ```
 
 _Note: `submitty_count` is an alias for a program installed on the
@@ -32,7 +32,7 @@ This example will output the number of calls to the function ``print`` in all
 of the Python source files in the current directory. Another example:
 
 ```
-"submitty_count -l c token Goto main.cpp"
+submitty_count -l c token Goto main.cpp
 ```
 
 This second example will output the number of occurrences of the token ``goto`` in the
@@ -48,7 +48,88 @@ ___
 
 ## Countable Features
 Currently, three feature types can be counted: tokens, nodes, and function calls.
+The countable features contained in a given file can be identified using ``submitty_diagnostics``, for example as follows:
 
+```
+/usr/local/submitty/SubmittyAnalysisTools/diagnostics -l python file.py
+```
+
+This tool outputs JSON data by default.
+An interactive view of the data can be produced by specifying HTML format:
+
+```
+/usr/local/submitty/SubmittyAnalysisTools/diagnostics -l python --format html file.py
+```
+
+For example, if you would like to count additions, but are unsure of which token to count, you could use a test file like:
+
+```
+# file.py
+print(1 + 1)
+```
+
+Running `/usr/local/submitty/SubmittyAnalysisTools/diagnostics -l python file.py` on this file will produce the following output:
+
+```
+{
+    "/absolute/path/to/file.py": {
+        "tokens": [
+            {
+                "end_col": 6,
+                "token": "Identifier",
+                "start_line": 2,
+                "start_col": 1,
+                "end_line": 2
+            },
+            {
+                "end_col": 7,
+                "token": "LeftParen",
+                "start_line": 2,
+                "start_col": 6,
+                "end_line": 2
+            },
+            {
+                "end_col": 8,
+                "token": "IntegerLiteral",
+                "start_line": 2,
+                "start_col": 7,
+                "end_line": 2
+            },
+            {
+                "end_col": 10,
+                "token": "Plus",
+                "start_line": 2,
+                "start_col": 9,
+                "end_line": 2
+            },
+            {
+                "end_col": 12,
+                "token": "IntegerLiteral",
+                "start_line": 2,
+                "start_col": 11,
+                "end_line": 2
+            },
+            {
+                "end_col": 13,
+                "token": "RightParen",
+                "start_line": 2,
+                "start_col": 12,
+                "end_line": 2
+            }
+        ],
+        "nodes" : { ... node data here ... }
+    }
+}
+```
+
+The ``token`` fields specify tokens that can be given to ``submitty_count``.
+Notice that a token ``Plus`` is present between two ``IntegerLiteral`` tokens.
+You could verify that this is the right token by looking at the ``start_line``, ``end_line``, ``start_col``, and ``end_col`` fields, which indicate on what row and column the tokens begin and end within the file.
+Once you are sure that the token is correct, you could count it within student submissions with ``submitty_count``:
+
+```
+submitty_count -l python *.py
+```
 
 ### Tokens
 
@@ -107,12 +188,6 @@ should be the first tool considered when writing an assignment that
 requires static analysis.  Only seek out more advanced options when
 necessary.
 
-__TODO: Insert instructions to produce the intermediate tokens so the
-instructor user can experiment.__
-
-__TODO: Insert link to list of valid tokens that can counted.__
-
-
 ### Nodes
 
 The next level of analysis enables counting _nodes_ within a parse tree, which
@@ -146,7 +221,7 @@ what kind of literal is present. This enables the counting of
 specific classes of node. For example:
 
 ```
-"submitty_count -l python literal *.py"
+submitty_count -l python literal *.py
 ```
 
 If run upon the code fragment from the start of this section, this will yield 3,
@@ -154,7 +229,7 @@ counting all literals used within the code. Contrast:
 which will return `3`.  In contrast:
 
 ```
-"submitty_count -l python integer *.py"
+submitty_count -l python integer *.py
 ```
 
 will return `2`, as it will only count the integer literals.
@@ -169,12 +244,6 @@ counting approach. However, these features have different nodes in the parse
 tree, so by counting nodes with certain tags it is possible to easily
 distinguish them.
 
-__TODO: Insert instructions to produce a human readable version of the
-parse tree so the instructor user can experiment.__
-
-__TODO: Insert link to valid tags (& nodes?) that can counted.__
-
-
 ### Function Calls
 
 This method is a bit higher level: it attempts via a language-dependent method
@@ -185,9 +254,5 @@ method at RPI is determining the number of calls to the ``print`` function
 present in Python code, for example:
 
 ```
-"submitty_count call print -l py *.py"
+submitty_count call print -l py *.py
 ```
-
-__TODO: Insert instructions to produce a human readable version of the
-functions found in a specific program(?) so the instructor user can experiment.__
-
