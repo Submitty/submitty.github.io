@@ -32,34 +32,40 @@ follow these steps:
 
 
 
-## Suggestions for new developers
+### Suggestions for new developers
 
+* Download & install Submitty, and try it out.  Read the instructor
+  documentation to learn the system.
 
-* Look through the issues list
+* Look through the issues list for some ideas of problems to explore.
 
-* Learn what sections of the code are relevant (so you’re not overwhelmed)
+* Learn how to use git.
 
-* Add & delete things to see what happens
+* Learn what sections of the code are relevant for those issues (so
+  you’re not overwhelmed).
 
-* Use inspector, browser debugger
+* Hint: Use "git grep" to search for variables/filenames/specific
+  strings within the source files/directories.  This can help you
+  locate relevant files.
 
-* Learn how to use git
+* Add & delete things to the code, re-install that portion of the
+  system and see what happens.
 
-* Use “git grep” to search for variables/filenames within the files/directories
+* Use inspector or browser debugger.
 
-* As you read the code, make a diagram for yourself of how the system fits together
+* As you read the code, make a diagram for yourself of how the system
+  fits together.
 
-* Use jsfiddle (for testing or demoing new things)
+* Use jsfiddle (for testing or demoing new things).
 
 * Keep a work diary / log: what did you plan to do today, keep track
   of how long it took you to do things, difficulties, how did you
-  solve it, helpful reference links, and what’s your plan for tomorrow
+  solve it, helpful reference links, and what’s your plan for
+  tomorrow.
 
-* Get familiar with vagrant ( instructions on the wiki)
+* Get familiar with vagrant.
 
-* Run the test suite locally 
-
-
+* Run the test suite locally. 
 
 
 Questions or comments can be sent to our Submitty support mailing
