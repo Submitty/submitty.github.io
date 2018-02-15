@@ -31,6 +31,37 @@ follow these steps:
      you can make a pull request to master.
 
 
+
+## Suggestions for new developers
+
+
+* Look through the issues list
+
+* Learn what sections of the code are relevant (so you’re not overwhelmed)
+
+* Add & delete things to see what happens
+
+* Use inspector, browser debugger
+
+* Learn how to use git
+
+* Use “git grep” to search for variables/filenames within the files/directories
+
+* As you read the code, make a diagram for yourself of how the system fits together
+
+* Use jsfiddle (for testing or demoing new things)
+
+* Keep a work diary / log: what did you plan to do today, keep track
+  of how long it took you to do things, difficulties, how did you
+  solve it, helpful reference links, and what’s your plan for tomorrow
+
+* Get familiar with vagrant ( instructions on the wiki)
+
+* Run the test suite locally 
+
+
+
+
 Questions or comments can be sent to our Submitty support mailing
 list: submitty@cs.rpi.edu
 
