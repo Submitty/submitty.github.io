@@ -2,7 +2,7 @@
 title: System Administrator
 ---
 
-To create a production server, you'll need a machine with Ubuntu 14.04
+To create a production server, you'll need a machine with Ubuntu 16.04
 server edition, an SSL certificate, a Postgres database, and SVN
 server (if needed). The details for each step are listed in the listed
 on the sidebar.
