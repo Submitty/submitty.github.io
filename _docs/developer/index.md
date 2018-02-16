@@ -70,9 +70,8 @@ follow these steps:
 ---
 
 
-We have created a new public  
-[Slack for Submitty Developers](https://join.slack.com/t/submitty/shared_invite/enQtMzE1NzgyMzUzNzI5LWNkNjUzYmZjOWJkNzdlM2QzNTM3MGYwNmQwMzQ3NjAwODUwYjI4MTRlZDNjZTFlMTk4ZjUzN2MxNzRjNDIwZTU)
+We have created a new public [Slack for Submitty Developers](https://join.slack.com/t/submitty/shared_invite/enQtMzE1NzgyMzUzNzI5LWNkNjUzYmZjOWJkNzdlM2QzNTM3MGYwNmQwMzQ3NjAwODUwYjI4MTRlZDNjZTFlMTk4ZjUzN2MxNzRjNDIwZTU)
 
-Questions or comments can be sent to our Submitty support mailing list:
+Questions or comments can be sent to our Submitty support mailing list:  
 submitty-admin@googlegroups
 
