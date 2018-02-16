@@ -67,7 +67,14 @@ follow these steps:
 
 * Run the test suite locally. 
 
+---
+
+
+We have created a new public Slack for Submitty Developers.
+Click on this link to join and ask questions:
+
+[Submitty Developers Slack](https://join.slack.com/t/submitty/shared_invite/enQtMzE1NzgyMzUzNzI5LWNkNjUzYmZjOWJkNzdlM2QzNTM3MGYwNmQwMzQ3NjAwODUwYjI4MTRlZDNjZTFlMTk4ZjUzN2MxNzRjNDIwZTU)
 
 Questions or comments can be sent to our Submitty support mailing
-list: submitty@cs.rpi.edu
+list: submitty-admin@googlegroups
 
