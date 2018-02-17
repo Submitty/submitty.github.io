@@ -21,4 +21,4 @@ Preliminary Design Notes
    yet viewed the detailed grade.
 
 * *white/grey buttons*: are infrequently-used optional actions.
-   Examples: Cancel an assignment.  Request a regrade.
+   Examples: Cancel an assignment submission.  Request a TA regrade.
