@@ -3,25 +3,24 @@ title: Publications
 order: 1
 ---
 
-* Supporting Team Submission and Peer Grading within Submitty
-  Matthew Peveler, Samuel Breese, Evan Maicus, Andrew Aikens, Timothy Cyrus, Elizabeth Dinella, James Anderson, Joshua Barthelmess Marisa Lee, Leon Montealegre, Jessica Wang, Buster Holzbauer, Barbara Cutler, and Ana Milanova
+* "Supporting Team Submission and Peer Grading within Submitty"  
+  Matthew Peveler, Samuel Breese, Evan Maicus, Andrew Aikens, Timothy Cyrus, Elizabeth Dinella, James Anderson, Joshua Barthelmess Marisa Lee, Leon Montealegre, Jessica Wang, Buster Holzbauer, Barbara Cutler, and Ana Milanova   
   Demo Presentation at ACM Technical Symposium on Computing Science Education (SIGCSE), March 2018
 
 
-* Program Analysis Tools in Automated Grading
-  Elizabeth Dinella, Samuel Breese, Evan Maicus, Barbara Cutler, Buster Holzbauer, and Ana Milanova
-  Poster at ACM Technical Symposium on Computing Science Education (SIGCSE), March 2018
+* ["Correlation of a Flexible Late Day Policy with Student Stress and Programming Assignment Plagiarism"](https://github.com/Submitty/publications/raw/master/2018_SIGCSE_poster_breese_et_al/Poster.pdf)   
+  Samuel Breese, Evan Maicus, Matthew Peveler, and Barbara Cutler   
+  Poster at ACM Technical Symposium on Computing Science Education (SIGCSE), March 2018  
 
 
-* Analysis of Container Based vs. Jailed Sandbox Autograding Systems
-  Matthew Peveler, Evan Maicus, Buster Holzbauer, and Barbara Cutler
-  Poster at ACM Technical Symposium on Computing Science Education (SIGCSE), March 2018
+* ["Program Analysis Tools in Automated Grading"](https://github.com/Submitty/publications/raw/master/2018_SIGCSE_poster_dinella_et_al/Poster.pdf)  
+  Elizabeth Dinella, Samuel Breese, Evan Maicus, Barbara Cutler, Buster Holzbauer, and Ana Milanova   
+  Poster at ACM Technical Symposium on Computing Science Education (SIGCSE), March 2018   
 
 
-* Correlation of a Flexible Late Day Policy with Student Stress and Programming Assignment Plagiarism
-  Samuel Breese, Evan Maicus, Matthew Peveler, and Barbara Cutler
-  Poster at ACM Technical Symposium on Computing Science Education (SIGCSE), March 2018
-
+* ["Analysis of Container Based vs. Jailed Sandbox Autograding Systems"](https://github.com/Submitty/publications/raw/master/2018_SIGCSE_poster_peveler_et_al/Poster.pdf)   
+  Matthew Peveler, Evan Maicus, Buster Holzbauer, and Barbara Cutler   
+  Poster at ACM Technical Symposium on Computing Science Education (SIGCSE), March 2018   
 
 
 * ["Submitty: An Open Source, Highly-Configurable Platform for Grading of Programming Assignments"](https://github.com/Submitty/Tutorial/raw/master/presentation/Submitty%20Demo%20SIGCSE%20March%2010%202017.pdf)  
