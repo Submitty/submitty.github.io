@@ -128,7 +128,7 @@ Note: These instructions should be run under root
    the machine, one way to do this is:
 
    ```
-   ls /home > /var/local/sumitty/instructors/valid
+   ls /home > /var/local/submitty/instructors/valid
    ```
 
 8. We recommend that you should leave the PostgreSQL setup unless you know what you're doing.
