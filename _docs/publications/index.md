@@ -3,7 +3,8 @@ title: Publications
 order: 1
 ---
 
-* ["Supporting Team Submission and Peer Grading within Submitty"](https://github.com/Submitty/publications/blob/master/2018_SIGCSE_demo_peveler_et_al/SIGCSE%202018%20Submitty%20Demo%20Presentation.pdf)  
+
+* ["Supporting Team Submission and Peer Grading within Submitty"](https://github.com/Submitty/publications/raw/master/2018_SIGCSE_demo_peveler_et_al/SIGCSE%202018%20Submitty%20Demo%20Presentation.pdf)  
   Matthew Peveler, Samuel Breese, Evan Maicus, Andrew Aikens, Timothy Cyrus, Elizabeth Dinella, James Anderson, Joshua Barthelmess Marisa Lee, Leon Montealegre, Jessica Wang, Buster Holzbauer, Barbara Cutler, and Ana Milanova   
   Demo Presentation at ACM Technical Symposium on Computing Science Education (SIGCSE), March 2018
 
