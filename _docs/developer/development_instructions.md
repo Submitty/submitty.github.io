@@ -77,6 +77,7 @@ branch).
   sudo /usr/local/submitty/GIT_CHECKOUT_Submitty/.setup/bin/partial_reset.py
   sudo /usr/local/submitty/GIT_CHECKOUT_Submitty/.setup/bin/setup_sample_courses.py
   sudo service php7.0-fpm restart
+  echo 'partial reset complete'
   ```   
 
 
