@@ -22,3 +22,10 @@ Preliminary Design Notes
 
 * *white/grey buttons*: are infrequently-used optional actions.
    Examples: Cancel an assignment submission.  Request a TA regrade.
+
+
+An example is the design for the navigation page
+
+[Issue #1045](https://github.com/Submitty/Submitty/issues/1045)
+
+![](https://user-images.githubusercontent.com/5871417/26992277-ea1b0a20-4d2b-11e7-8f88-902fb22c619a.png)
