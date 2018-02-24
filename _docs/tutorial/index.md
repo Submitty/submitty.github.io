@@ -18,16 +18,13 @@ Or contact the RPI Submitty development team at
 if you have specific questions for us.
 
 
-#### SIGCSE 2018 Demo Presentation
+#### Downloads
 
-[Slides](https://github.com/Submitty/publications/raw/master/2018_SIGCSE_demo_peveler_et_al/SIGCSE%202018%20Submitty%20Demo%20Presentation.pdf)
+[Slides from SIGCSE 2018 Demo](https://github.com/Submitty/publications/raw/master/2018_SIGCSE_demo_peveler_et_al/SIGCSE%202018%20Submitty%20Demo%20Presentation.pdf)
 
-
-#### SIGCSE 2017 Demo Presentation
-
-[Slides](https://github.com/Submitty/Tutorial/raw/master/presentation/Submitty%20Demo%20SIGCSE%20March%2010%202017.pdf)
+[Slides from SIGCSE 2017 Demo ](https://github.com/Submitty/Tutorial/raw/master/presentation/Submitty%20Demo%20SIGCSE%20March%2010%202017.pdf)
   
-[Download Examples](https://github.com/Submitty/Tutorial/archive/master.zip)
+[Autograding Tutorial Configurations & Example Submissions](https://github.com/Submitty/Tutorial/archive/master.zip)
 
 
 
