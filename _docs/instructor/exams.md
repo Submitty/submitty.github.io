@@ -40,6 +40,7 @@ We use the ScanSnap iX500 for scanning our exams. This works with [SANE](http://
 
 The downside to using Simple-scan on linux (as opposed to using the [vendor-provided drivers](http://scansnap.fujitsu.com/global/dl/) for OS X and Windows) is that the PDFs it outputs are fairly large - the PDFs we were getting on Windows were roughly 80MB at 300DPI for about 70 pages; on windows, you can get about 500 pages for the same filesize at the same DPI. There's probably other front-ends for SANE that will give compressed PDFs, but the couple others tested didn't scan at the full speed or do both sides. Submitty _can_ handle larger PDF uploads, assuming space is available.
 
+Additionally, simple-scan dumps a lot of autosaved files into `~/.cache/simple-scan/` (roughly 2GB of temp files per 80MB pdf generated). This balloons pretty quickly and required clearing that out every few times a PDF was exported.
 
 ### Creating PDF assignments
 
