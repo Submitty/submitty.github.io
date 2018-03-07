@@ -6,6 +6,7 @@ order: 9
 
 make_tree.js and make_tree_interactive.py are tools to visualize the json output from [commonAST](/intstructor/commonAST.md) and [static analysis](/instructor/static_analysis.md) as trees.
 
+
 ### make_tree.js
 
 ```
@@ -35,9 +36,12 @@ python make_tree_interactive ex1a.json
 ```
 Outputs an interactive .html tree from the data of ex1a.json
 
+<<<<<<< HEAD
 ### Example Output
 
 ![](/images/ex_tree.png)
+=======
+>>>>>>> 5188abe77ff5985f42e405d10d572079b51922b9
 
 ### Additional Install Steps
 make_tree.js requires the additional install of node.js in order to run. In order to install node.js on the VM, follow these steps:
