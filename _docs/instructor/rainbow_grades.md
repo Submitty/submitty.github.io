@@ -137,12 +137,17 @@ order: 7
     ```
 
 
-11. View the student-facing submission site and confirm that the data
+11. From the "Course Settings" tab (leftmost tab in the instructors
+    black option bar), make sure the "Display Rainbow Grades Summary"
+    option is checked (so the students can see the file).
+
+
+12. View the student-facing submission site and confirm that the data
     in `<username>_message.html` is presented at the top of the main Submitty page,
     and `<username>_summary.html` is presented to the student when they press the "View Grades" button on the main page.
 
 
-12. By default, the instructor table is sorted by overall grade.  But you can sort the list in different ways:
+13. By default, the instructor table is sorted by overall grade.  But you can sort the list in different ways:
 
     To group by section, then sort alphabetically (useful to enter final grades!)
     ```
