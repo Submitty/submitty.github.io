@@ -28,6 +28,9 @@ order: 7
    We recommend you put this in a convenient top-level directory,
    separate from the materials for a specific course.
 
+   Note: In order to use this tool on your local machine, you'll need
+   to install `git`, `make`, `ssh`, `rsync`, and `python3`.
+
 
 3. **Make a directory for preparing the grades**  
    This should not be within the RCOS repository checkout above.  
