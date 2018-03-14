@@ -68,12 +68,20 @@ body {
 	}
 }
 
+.main-nav{
+	@media (min-width: $mobile-break) {
+		height: 100vh;
+	}
+}
+
 .main {
 	//margin-top: $space + $nav-header-height;
 	margin-top: 8 * $space;
 
 	@media (min-width: $mobile-break) {
 		margin-top: 0;
+		height: 100vh;
+		overflow-y: scroll;
 	}
 }
 
@@ -203,7 +211,7 @@ header {
 		margin-left: -4px;
 	}
 
-	@media (min-width: $mobile-break) {
+	@media (min-width: $mobile-break) {	
 		h2 {
 			font-size: 2.65rem;
 		}
@@ -214,7 +222,7 @@ header {
 	}
 
 	@media (min-width: $full-width-break) {
-		margin-top: 55px;
+		padding-top: 55px;
 	}
 }
 
