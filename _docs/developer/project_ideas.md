@@ -112,7 +112,7 @@ development team.
 
    [Publications](http://submitty.org/publications/)
 
-   [Open Issues related to Static Progarm Analysis](https://github.com/Submitty/Submitty/issues?q=is%3Aissue+is%3Aopen+static+analysis+label%3A%22static+program+analysis%22)
+   [Open Issues related to Static Program Analysis](https://github.com/Submitty/Submitty/issues?q=is%3Aissue+is%3Aopen+static+analysis+label%3A%22static+program+analysis%22)
 
    Experience Required: Upper level coursework in programming
    languages, compilers, and/or program analysis.
