@@ -102,8 +102,20 @@ development team.
    design will be beneficial.
    
 
-5. **Static Analysis**
+5. **Static Program Analysis**
 
+   We are currently using simple static analysis in our intro
+   programming courses to verify students are using (or not using)
+   specific language features.  In order to expand these checks we are
+   working
+
+   [Publications](http://submitty.org/publications/)
+
+   [Open Issues related to Static Progarm Analysis](https://github.com/Submitty/Submitty/issues?q=is%3Aissue+is%3Aopen+static+analysis+label%3A%22static+program+analysis%22)
+
+   Experience Required: Upper level coursework in programming
+   languages, compilers, and/or program analysis.
+   
 
 6. **Website Security and Penetration Testing**
 
