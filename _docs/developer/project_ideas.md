@@ -133,10 +133,11 @@ development team.
 
    Each commit and pull request to github launches continuous
    integration testing of a portion of the Submitty code base.  We
-   would like to expand the coverage of the code
+   would like to expand the code coverage of our unit and integration
+   tests.
 
    Experience Required: Advanced programming experience, experience
-   with the relevant programming languages, tuning system performance, 
+   with the relevant programming languages, tuning system performance, etc.
 
 
 
