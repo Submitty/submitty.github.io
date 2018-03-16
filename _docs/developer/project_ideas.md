@@ -104,10 +104,11 @@ development team.
 
 5. **Static Program Analysis**
 
-   We are currently using simple static analysis in our intro
-   programming courses to verify students are using (or not using)
-   specific language features.  In order to expand these checks we are
-   working
+   We are currently using simple lexical (token-based) static analysis
+   in our intro programming courses to verify students are using (or
+   not using) specific language features.  In order to expand these
+   checks we are working on producing and analyzing an abstract syntax
+   tree of the submitted code.
 
    [Publications](http://submitty.org/publications/)
 
