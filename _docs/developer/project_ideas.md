@@ -102,8 +102,21 @@ development team.
    design will be beneficial.
    
 
-5. **Static Analysis**
+5. **Static Program Analysis**
 
+   We are currently using simple lexical (token-based) static analysis
+   in our intro programming courses to verify students are using (or
+   not using) specific language features.  In order to expand these
+   checks we are working on producing and analyzing an abstract syntax
+   tree of the submitted code.
+
+   [Publications](http://submitty.org/publications/)
+
+   [Open Issues related to Static Program Analysis](https://github.com/Submitty/Submitty/issues?q=is%3Aissue+is%3Aopen+static+analysis+label%3A%22static+program+analysis%22)
+
+   Experience Required: Upper level coursework in programming
+   languages, compilers, and/or program analysis.
+   
 
 6. **Website Security and Penetration Testing**
 
@@ -120,10 +133,11 @@ development team.
 
    Each commit and pull request to github launches continuous
    integration testing of a portion of the Submitty code base.  We
-   would like to expand the coverage of the code
+   would like to expand the code coverage of our unit and integration
+   tests.
 
    Experience Required: Advanced programming experience, experience
-   with the relevant programming languages, tuning system performance, 
+   with the relevant programming languages, tuning system performance, etc.
 
 
 

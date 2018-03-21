@@ -14,8 +14,8 @@ previously passing.
 
 Travis CI is also used test against several different versions of
 libraries to ensure compatibility.  For example, in preparation for
-upgrading to a new version of PHP, we currently build against PHP 5.5,
-5.6, and 7.0 to ensure that there is no code that is invalid on any
+upgrading to a new version of PHP, we currently build against PHP 7.0,
+7.1, and 7.2 to ensure that there is no code that is invalid on any
 platform.
 
 Currently, Travis is setup with these commands:
