@@ -4,7 +4,7 @@ category: Instructor
 order: 9
 ---
 
-make_tree.js and make_tree_interactive.py are tools to visualize the json output from [commonAST](/intstructor/commonAST.md) and [static analysis](/instructor/static_analysis.md) as trees.
+make_tree.js and make_tree_interactive.py are tools to visualize the json output from [commonAST](/intstructor/commonAST) and [static analysis](/instructor/static_analysis) as trees.
 
 
 ### make_tree.js
