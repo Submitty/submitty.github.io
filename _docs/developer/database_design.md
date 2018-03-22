@@ -12,7 +12,7 @@ order: 3
    15432 outside the VM. You can then connect by specifying localhost for
    the host and then `submitty_${SEMESTER}_${COURSE}` (replacing
    `${SEMESTER}` and `${COURSE}` with the actual one you want) for the DB
-   to connect to. The uesr and password are both `hsdbu`. All tables are then
+   to connect to. The user and password are both `hsdbu`. All tables are then
    located in the `public` schema.
 
    We recommed that to connect to the DB that you use one of the following
