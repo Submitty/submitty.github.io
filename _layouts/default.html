@@ -30,7 +30,7 @@
         <script>
             // This function moves the window to the specified #hash (if one exists)
             // as well as applies the 'current' class to the sidebar link for the
-            // page we're currently on.
+            // page we're currently on and scrolls sidebar to its position.
             document.onreadystatechange = function() {
                 if (this.readyState === "complete") {
                     var url = window.location.href;
@@ -46,6 +46,19 @@
                     for (var i = 0; i < elems.length; i++) {
                         if (elems[i].children[0].href === url) {
                             elems[i].className += " current";
+                            var el = elems[i];
+                            do {
+                                if (el.classList.contains('top-level')){
+                                    var topLevel = el;
+                                }
+                            } while (el = el.parentElement);
+                            if (!topLevel) break;
+                            offsetToScroll = topLevel.offsetTop;
+                            var sidebar = document.getElementsByClassName('main-nav');
+                            if (sidebar.length > 0){
+                                sidebar = sidebar[0];
+                            }
+                            sidebar.scrollTop = offsetToScroll;
                             break;
                         }
                     }
