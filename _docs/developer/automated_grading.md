@@ -79,8 +79,11 @@ processes on the primary machine.  To adjust this number:
    ```
 
    Make sure to insert the correct username and ip address for each
-   worker machine.  Also specify the number of simultaneous workers on each
-   worker machine.
+   worker machine.  Also specify the number of simultaneous workers on
+   each worker machine, and the capabilities of each machine.  At
+   least one machine in the pool must specify the capability
+   `"default"`.  The capabilities can be any string, and customized to
+   your courses and hardware.
 
    _NOTE: You may chose to do no autograding on the primary machine
    and ship all autograding tasks to the worker machines by specifying
@@ -191,7 +194,7 @@ be done manually._
 
 ---
 
-## Old instructions for Submitty prior to `v.1.1`
+## Autograding Information for Submitty Installation prior to `v.1.1`
 
 
 Submitty grades in parallel, under a scheduler daemon running
