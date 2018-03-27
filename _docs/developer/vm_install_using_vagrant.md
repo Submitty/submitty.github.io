@@ -41,9 +41,25 @@ operating system.
    ```
 
    **Ubuntu Installation**
-   ```
-   sudo apt-get install virtualbox
-   sudo apt-get install vagrant
+   
+   **NOTE:** The Ubuntu repository does not contain the latest version of Vagrant or VirtualBox.
+   To accomodate for this, we have changed the setup instructions until this is resolved.
+   Please make sure to replace *`<mydist>`* with your distribution name
+   (see [here](https://www.virtualbox.org/wiki/Linux_Downloads))
+   ```bash
+   # Add VirtualBox
+   sudo add-apt-repository "deb http://download.virtualbox.org/virtualbox/debian <mydist> contrib"
+   wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+   wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+   
+   # Add Vagrant
+   sudo add-apt-repository "deb https://vagrant-deb.linestarve.com/ any main"
+   sudo apt-key adv --keyserver pgp.mit.edu --recv-key
+	
+   sudo apt-get update
+   
+   # Install Packages
+   sudo apt-get install virtualbox-5.2 vagrant
    sudo vagrant plugin install vagrant-vbguest
    ```
 
