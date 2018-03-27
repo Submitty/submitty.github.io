@@ -33,8 +33,9 @@ worker machine.
 ## Default Configuration -- Single Server
 
 In the default system configuration, the shipper manager will launch 5
-shipper processes and the worker manager will launch 5 worker
-processes on the primary machine.  To adjust this number:
+shipper processes on the primary machine and the worker manager will
+launch 5 worker processes on the primary machine.  To adjust this
+number:
 
 1. As root, edit the `/usr/local/submitty/.setup/autograding_workers.json`
    settings and edit the `num_autograding_workers` field as desired:
@@ -64,7 +65,7 @@ processes on the primary machine.  To adjust this number:
 
 ## Multiple Physical Servers
 
-1. To specify additional physical machines as worker machines, add one or more an
+1. To specify additional physical machines as worker machines, add one or more
    additional object(s) to the `autograding_workers.json` file, one for each additional machine.  For example:
 
    ```
@@ -85,12 +86,12 @@ processes on the primary machine.  To adjust this number:
    `"default"`.  The capabilities can be any string, and customized to
    your courses and hardware.
 
-   _NOTE: You may chose to do no autograding on the primary machine
-   and ship all autograding tasks to the worker machines by specifying
+   _NOTE: You may specify that no autograding should be done on the primary machine
+   and instead ship all autograding tasks to the worker machines by specifying
    `num_autograding_workers` to be zero for the `"primary"` machine._  
    
 
-2. Setting up the worker machine:
+2. Setting up the worker machine(s):
 
    1. Download the Submitty github repository and run the installation scripts
       for the worker machine.
@@ -115,11 +116,15 @@ processes on the primary machine.  To adjust this number:
    specify jobs that should be shipped.  In your `config.json` file,
    add the `"required_capabilities"` field:
   
-    "required_capabilities" : "extra_ram",
+   ```
+   "required_capabilities" : "extra_ram"
+   ```
 
    If you don't include this field, it will be set to `"default"`.
-   The shipper will assign all assignments submitted to be graded by
-   this config to a machine that matches this field.
+   Each shipper process launched by the shipper manager is assigned to
+   a worker machine and regularly scans the autograding tasks,
+   searching for a submission with required capabilities that matches
+   the capabilities of its worker machine.
 
       _TODO: Discuss more, including machines and/or gradeable
       configs having multiple values for this field._
