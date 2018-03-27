@@ -3,13 +3,13 @@ title: Automated Grading
 category: Developer
 ---
 
-Starting with Submitty version `v.1.1`, automated grading is
+Starting with Submitty version `v.1.1.0`, automated grading is
 controlled by two daemons,
 [`submitty_autograding_shipper.py`](https://github.com/Submitty/Submitty/blob/master/bin/submitty_autograding_shipper.py)
 and
 [`submitty_autograding_worker.py`](https://github.com/Submitty/Submitty/blob/master/bin/submitty_autograding_worker.py).
 
-_NOTE: Versions of Submitty prior to `v.1.1` use a
+_NOTE: Versions of Submitty prior to `v.1.1.0` use a
 submitty_grading_scheduler -- see instructions at the bottom of this page._
 
 In the simple use case, with a single server, both daemons run on the
@@ -199,7 +199,7 @@ be done manually._
 
 ---
 
-## Autograding Information for Submitty Installation prior to `v.1.1`
+## Autograding Information for Submitty Installation prior to `v.1.1.0`
 
 
 Submitty grades in parallel, under a scheduler daemon running
