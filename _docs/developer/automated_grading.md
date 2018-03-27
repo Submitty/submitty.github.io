@@ -15,25 +15,26 @@ submitty_grading_scheduler -- see instructions at the bottom of this page._
 In the simple use case, with a single server, both daemons run on the
 same machine.  In more complex use cases Submitty can be configured to
 ship jobs from the *primary* machine to one or more *worker* machines.
-This can be useful is additional resources or specific hardware is
-necessary to grade some assignments.
+This can be useful to manage very large numbers of submissions near
+deadlines, or to facilitate use of specific hardware or extra
+resources for certain assignments.  grade some assignments.
 
-Autograding of multiple homeworks can be done in parallel.  The system
-administrator should adjust the Submitty configurations described
-below to match the hardware specifications and the typical homework
-submission for your courses.
+Automated grading of multiple homeworks can be done in parallel.  The
+system administrator should adjust the Submitty configurations
+described below to match the hardware specifications and the typical
+homework submission for your courses.
 
-The shipper daemon on the primary machine runs a *shipper process* for
-each *worker process* running on the primary machine or worker
-machine.
+The shipper manager/daemon on the primary machine runs a *shipper
+process* for each *worker process* running on the primary machine or
+worker machine.
 
 ---
 
 ## Default Configuration -- Single Server
 
-In the default system configuration, we will launch 5 shipper
-processes and 5 worker processes on the primary machine.  To adjust
-this number:
+In the default system configuration, the shipper manager will launch 5
+shipper processes and the worker manager will launch 5 worker
+processes on the primary machine.  To adjust this number:
 
 1. As root, edit the `/usr/local/submitty/.setup/autograding_workers.json`
    settings and edit the `num_autograding_workers` field as desired:
@@ -63,22 +64,22 @@ this number:
 
 ## Multiple Physical Servers
 
-1. To specify additional physical machines as worker machines, add an
-   additional object to the `autograding_workers.json` file per
-   machine.  For example:
+1. To specify additional physical machines as worker machines, add one or more an
+   additional object(s) to the `autograding_workers.json` file, one for each additional machine.  For example:
 
    ```
     "foobarbaz" : {
-	"address" : "foobarbaz.example.com",
-	"username": "submitty",
-	"capabilities": [
-	    "extra_ram"
-	],
-	"num_autograding_workers": 2
+        "address" : "foobarbaz.example.com",
+        "username": "submitty",
+        "capabilities": [
+            "extra_ram"
+        ],
+        "num_autograding_workers": 2
     }
    ```
 
-   Make sure to insert the correct username and ip address for your
+   Make sure to insert the correct username and ip address for each
+   worker machine.  Also specify the number of simultaneous workers on each
    worker machine.
 
    _NOTE: You may chose to do no autograding on the primary machine
@@ -88,23 +89,23 @@ this number:
 
 2. Setting up the worker machine:
 
-   a. Download the github repository and run the installation scripts
+   1. Download the Submitty github repository and run the installation scripts
       for the worker machine.
 
-      __TODO: Write these instructions.__
+      _TODO: Write these instructions._
       
-   b. Create the user account that will have access to send files from
+   2. Create the user account that will have access to send files from
       the primary machine to the worker machine.  In our example we
       name that user account `submitty`.  That user account must be in
       the `hwcron` and `hwcronphp` groups.
 
-      __TODO: proofread these instructions__
+      _TODO: proofread these instructions_
 
-   c. Generate and install an ssh key pair to allow the `hwcron` user
+   3. Generate and install an ssh key pair to allow the `hwcron` user
       on the primary machine to ssh to the worker machine using the
       specified username, without a password.
 
-      __TODO: Add instructions/details/link on key generation__
+      _TODO: Add instructions/details/link on key generation_
 
 
 3. Next, create homework assignment autograding configurations that
@@ -117,8 +118,8 @@ this number:
    The shipper will assign all assignments submitted to be graded by
    this config to a machine that matches this field.
 
-      __TODO: Discuss more, including machines and/or gradeable
-      configs having multiple values for this field.__
+      _TODO: Discuss more, including machines and/or gradeable
+      configs having multiple values for this field._
 
 ---
 
