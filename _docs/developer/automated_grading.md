@@ -7,7 +7,7 @@ Starting with Submitty version `v.1.1`, automated grading is
 controlled by two daemons,
 [`submitty_autograding_shipper.py`](https://github.com/Submitty/Submitty/blob/master/bin/submitty_autograding_shipper.py)
 and
-[`submitty_autograding_worker`](https://github.com/Submitty/Submitty/blob/master/bin/submitty_autograding_worker.py).
+[`submitty_autograding_worker.py`](https://github.com/Submitty/Submitty/blob/master/bin/submitty_autograding_worker.py).
 
 _NOTE: Versions of Submitty prior to `v.1.1` use a
 submitty_grading_scheduler -- see instructions at the bottom of this page._
@@ -17,7 +17,7 @@ same machine.  In more complex use cases Submitty can be configured to
 ship jobs from the *primary* machine to one or more *worker* machines.
 This can be useful to manage very large numbers of submissions near
 deadlines, or to facilitate use of specific hardware or extra
-resources for certain assignments.  grade some assignments.
+resources for certain assignments.  
 
 Automated grading of multiple homeworks can be done in parallel.  The
 system administrator should adjust the Submitty configurations
