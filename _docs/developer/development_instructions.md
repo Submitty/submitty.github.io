@@ -21,7 +21,7 @@ branch).
 ---
 
 * If you've made changes to files affecting the system installation
-  process (changes to `CONFIGURE_SUBMITTY.sh`, `install_system.sh`,
+  process (changes to `CONFIGURE_SUBMITTY.py`, `install_system.sh`,
   `Vagrantfile`), you should re-create your VM from scratch to ensure
   the changes are correct.  Exit the VM, and from a terminal your
   host machine within the Submitty GIT repository type:
@@ -53,6 +53,26 @@ branch).
    
   ```
   vagrant up --provision
+  ```
+
+
+* Alternately, in some cases it may be sufficient to refresh the
+  submitty system configurations:
+
+  ```
+  sudo python3 /usr/local/submitty/GIT_CHECKOUT_Submitty/.setup/CONFIGURE_SUBMITTY.py
+  ```
+
+  And/or update existing databases:
+
+  ```
+  sudo python3 /usr/local/submitty/GIT_CHECKOUT_Submitty/.setup/update_database.py
+  ```
+
+  And then re-install the submitty sources:
+
+  ```
+  sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh clean
   ```
 
 ---
