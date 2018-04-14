@@ -38,9 +38,9 @@ Explore the options / settings on your scanner.  Things to check:
 
 We use the ScanSnap iX500 for scanning our exams. This works with [SANE](http://www.sane-project.org/) out of the box; a variety of of front-ends for SANE exist that work well with this printer. [Simple-scan](https://github.com/GNOME/simple-scan) works fairly well - you will need to make sure to select the scanner in its preferences and set it to scan 'Both' sides of each page; you can then 'scan all pages from feeder' and then export multiple exams into one PDF, for bulk uploading.
 
-The downside to using Simple-scan on linux (as opposed to using the [vendor-provided drivers](http://scansnap.fujitsu.com/global/dl/) for OS X and Windows) is that the PDFs it outputs are fairly large - the PDFs we were getting on Windows were roughly 80MB at 300DPI for about 70 pages; on windows, you can get about 500 pages for the same filesize at the same DPI. There's probably other front-ends for SANE that will give compressed PDFs, but the couple others tested didn't scan at the full speed or do both sides. Submitty _can_ handle larger PDF uploads, assuming space is available.
+Scanning with 150DPI for text _and_ photos generates reasonably sized files - most PDFs generated are between 25 and 35MB for 140 pages.
 
-Additionally, simple-scan dumps a lot of autosaved files into `~/.cache/simple-scan/` (roughly 2GB of temp files per 80MB pdf generated). This balloons pretty quickly and required clearing that out every few times a PDF was exported.
+Additionally, simple-scan dumps a lot of autosaved files into `~/.cache/simple-scan/` (roughly 6.5GB of temporary files were generated in one night, with about 650MB of outputted files). This balloons pretty quickly and required clearing that out every few times a PDF was exported.
 
 ### Creating PDF assignments
 
