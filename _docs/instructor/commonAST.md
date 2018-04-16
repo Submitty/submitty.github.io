@@ -40,7 +40,7 @@ You can count nodes on any number of filenames. The number returned will be the 
 ### Print Mode
 
 ```
-python commonast.py outputOption lang filename 
+python commonast.py outputOption filename lang
 ```
 
 Supported ```outputOption```s: 
