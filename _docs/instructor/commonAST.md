@@ -64,5 +64,4 @@ Running this on python files will work with the standard submitty install. In or
 2. run ```git checkout commonAST``` to switch to the correct branch
 3. run ```python clangInstall.py``` This could take a few hours
 4. navigate to ```/usr/local/submitty/GIT_CHECKOUT_AnalysisTools/```
-5. run ```git checkout commonASTInitial``` to switch to the correct branch
-6. run ```sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh``` to complete the installation
+5. run ```sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh``` to complete the installation
