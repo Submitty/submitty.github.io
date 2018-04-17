@@ -37,7 +37,7 @@ In order to run this tool on many source code files, there are scripts designed 
    where the language options are "cpp" and "py" and the directory is absolute (not relative)
 2. Run python jsonDiffRunnerRunner.py to create the html visualization and report for all files in the directory. 
       ```
-      python jsonDiffRunnerRunner.py directory language
+      python3 jsonDiffRunnerRunner.py directory language
       ```
       Again, the language options are "cpp" and "py" and the directory must be absolute (not relative). 
       Here, the directory should be the directory used in step one, and the subdirectory out (directoryFromStep1/out/).
