@@ -61,7 +61,6 @@ Prints a json representation of the AST of hw1.cpp
 ### Additional Install Steps:
 Running this on python files will work with the standard submitty install. In order to run this on C++ files, there are some additional install steps:
 1. navigate to ```/usr/local/submitty/GIT_CHECKOUT_SUBMITTY/.setup```
-2. run ```git checkout commonAST``` to switch to the correct branch
-3. run ```python clangInstall.py``` This could take a few hours
-4. navigate to ```/usr/local/submitty/GIT_CHECKOUT_AnalysisTools/```
-5. run ```sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh``` to complete the installation
+2. run ```sudo python3 clangInstall.py``` This could take a few hours
+3. navigate to ```/usr/local/submitty/GIT_CHECKOUT_AnalysisTools/```
+4. run ```sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh``` to complete the installation
