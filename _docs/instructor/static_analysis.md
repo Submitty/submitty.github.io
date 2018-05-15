@@ -256,3 +256,7 @@ present in Python code, for example:
 ```
 submitty_count call print -l py *.py
 ```
+
+
+
+See also the [Visualization Tool for Abstract Syntax Trees](tree_tool).
