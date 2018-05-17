@@ -36,18 +36,19 @@ order: 2
       v.1.0.3 (release date: 11/15/2017).
 
 
-3.  __Usually you can skip this step...__  but it may be necessary to
-    update the installed base linux system packages.  This should be
-    safe to re-run on an existing Submitty system installation.  Note
-    that it will ask you to confirm some system configuration
-    settings, pressing return at each prompt will keep your current
-    configurations.
+3.  _NOTE: Usually you can skip this step._
+
+    It may be necessary to update the installed base linux system
+    packages.  This should be safe to re-run on an existing Submitty
+    system installation.  Note that it will ask you to confirm some
+    system configuration settings, pressing return at each prompt will
+    keep your current configurations.
 
     ```
     sudo /usr/local/submitty/GIT_CHECKOUT_Submitty/.setup/install_system.sh
     ```
 
-    Note: This step automatically launches the step below...
+    _NOTE: This step automatically launches the step below._
 
 
 4.  Then re-install the Submitty source code.  This should take less
