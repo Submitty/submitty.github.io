@@ -36,7 +36,7 @@ order: 2
       v.1.0.3 (release date: 11/15/2017).
 
 
-3.  Usually you can skip this step...  but it may be necessary to
+3.  __Usually you can skip this step...__  but it may be necessary to
     update the installed base linux system packages.  This should be
     safe to re-run on an existing Submitty system installation.  Note
     that it will ask you to confirm some system configuration
@@ -50,9 +50,9 @@ order: 2
     Note: This step automatically launches the step below...
 
 
-4.  Then re-install the system.  This should take less than a minute.
-    It will pause and restart from scratch any autograding that is
-    currently happening.
+4.  Then re-install the Submitty source code.  This should take less
+    than a minute.  It will pause and restart from scratch any
+    autograding that is currently happening.
 
     ```
     sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh
