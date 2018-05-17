@@ -36,8 +36,21 @@ order: 2
       v.1.0.3 (release date: 11/15/2017).
 
 
+3.  Usually you can skip this step...  but it may be necessary to
+    update the installed base linux system packages.  This should be
+    safe to re-run on an existing Submitty system installation.  Note
+    that it will ask you to confirm some system configuration
+    settings, pressing return at each prompt will keep your current
+    configurations.
 
-3.  Then re-install the system.  This should take less than a minute.
+    ```
+    sudo /usr/local/submitty/GIT_CHECKOUT_Submitty/.setup/install_system.sh
+    ```
+
+    Note: This step automatically launches the step below...
+
+
+4.  Then re-install the system.  This should take less than a minute.
     It will pause and restart from scratch any autograding that is
     currently happening.
 
@@ -46,7 +59,7 @@ order: 2
     ```
 
 
-4.  Depending on what has updated in the system, you may need to also
+5.  Depending on what has updated in the system, you may need to also
     rebuild the autograding scripts for your existing courses &
     gradeables.  And regrade the previously submitted assignments
     (especially if you're installing the update to fix a problem).
