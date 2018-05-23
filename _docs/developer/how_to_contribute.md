@@ -38,3 +38,60 @@ These guidelines drawn from:
 [https://github.com/blog/1943-how-to-write-the-perfect-pull-request](https://github.com/blog/1943-how-to-write-the-perfect-pull-request)
 
 [https://github.com/thoughtbot/guides/tree/master/code-review](https://github.com/thoughtbot/guides/tree/master/code-review)
+
+
+
+
+### How To Review a Pull Request (PR)
+
+So you've been assigned to review another developers code.  What do
+you need to do?
+
+
+* Make sure you understand the purpose of the PR.  Read the notes in
+  the PR and read the notes from any issues that are referenced in the
+  PR.
+
+  *What bug(s) is the PR attempting to fix?*  
+  If it's a bug, it's a good idea to try to reproduce the problem from
+  the current master branch.  Make sure you understand the sequence of
+  actions needed to produce the erroreous behavior.
+
+  *What new feature(s) is the PR adding?*  
+  If it's a new feature, make sure you understand the purpose of the
+  new feature and how it's supposed to work.  As needed, test the current
+  master branch to understand how the system works without the new feature.
+
+
+* Checkout the branch containing the bug fixes and/or new feature.
+  Re-install the system as necessary.  Test the system with typical
+  use cases.  Think out how a novice user will experience this portion
+  of the Submitty system.  Is it clear and intuitive?  Are the
+  instructions (on page or on submitty.org) clear?  As appropriate
+  leave comments for the PR author with specific suggestions for
+  improvement.
+
+  Test the system with extreme use cases / corner cases and try to
+  break the system / new feature.  If you find an error, leave a
+  comment in the PR describing how to reproduce the problem.
+
+
+* Look through the source code for the pull request.  Depending on
+  your familiarity with this portion of the code, your review may be
+  cursory or in depth.
+
+   * Does the new or modified code have adequate comments?
+
+   * Is the code well structured into functions and/or classes?
+
+   * Has the PR introduced code duplication?  Should the code make use
+     of existing functions?  Or modify existing functions with new
+     parameters so code sharing is feasible?
+
+   * Critique code for security-related vulnerabilities.
+
+   * Critique code for language-specific coding & style conventions.
+
+
+
+
