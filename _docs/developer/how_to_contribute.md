@@ -44,9 +44,8 @@ These guidelines drawn from:
 
 ### How To Review a Pull Request (PR)
 
-So you've been assigned to review another developers code.  What do
+So you've been assigned to review another developer's code.  What do
 you need to do?
-
 
 * Make sure you understand the purpose of the PR.  Read the notes in
   the PR and read the notes from any issues that are referenced in the
@@ -55,7 +54,7 @@ you need to do?
   *What bug(s) is the PR attempting to fix?*  
   If it's a bug, it's a good idea to try to reproduce the problem from
   the current master branch.  Make sure you understand the sequence of
-  actions needed to produce the erroreous behavior.
+  actions needed to produce the erroneous behavior.
 
   *What new feature(s) is the PR adding?*  
   If it's a new feature, make sure you understand the purpose of the
@@ -71,9 +70,9 @@ you need to do?
   leave comments for the PR author with specific suggestions for
   improvement.
 
-  Test the system with extreme use cases / corner cases and try to
-  break the system / new feature.  If you find an error, leave a
-  comment in the PR describing how to reproduce the problem.
+  Test the system with extreme use cases or corner cases.  Try to
+  break the overall system or new feature.  If you find an error,
+  leave a comment in the PR describing how to reproduce the problem.
 
 
 * Look through the source code for the pull request.  Depending on
@@ -93,5 +92,11 @@ you need to do?
    * Critique code for language-specific coding & style conventions.
 
 
+* Through the github review system, indicate whether you approve as is
+  or require changes on this PR before it can be merged.
+
+  If you have indicated that changes are necessary, be prompt in
+  following up with the PR author as the changes are made, and
+  eventually approving the merge.
 
 
