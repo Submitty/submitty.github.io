@@ -96,7 +96,6 @@ you need to do?
   or require changes on this PR before it can be merged.
 
   If you have indicated that changes are necessary, be prompt in
-  following up with the PR author as the changes are made, and
-  eventually approving the merge.
+  following up with the PR author as the changes are made.
 
 
