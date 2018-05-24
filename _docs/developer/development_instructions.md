@@ -129,6 +129,20 @@ branch).
 
 ---
 
+* When working on code in the `site`, `bin`, or `sbin` directories, you can enable a watcher
+  to re-install the code for those folders whenver something in them changes:
+  
+  ```
+  sudo /usr/local/submitty/GIT_CHECKOUT_Submitty/.setup/bin/code_watcher.py
+  ```
+  
+  This can be run from outside the vagrant machine by doing:
+  ```
+  vagrant ssh /usr/local/submitty/GIT_CHECKOUT_Submitty/.setup/bin/code_watcher.py
+  ```
+
+---
+
 * If you've changed the C++ code for the testing and autograding
   library, you must re-install the grading code (which rebuilds the
   grading library).
