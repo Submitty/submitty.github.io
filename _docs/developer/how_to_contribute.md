@@ -31,6 +31,12 @@ category: Developer
 * Be explicit about what you want feedback on, or why you are asking
   for specific reviewers.
 
+* Append '[WIP]' to the start of the PR title if you would like
+  feedback / detailed review on work in progress.  This indicates to
+  the reviewers and project managers that this feature is not ready to
+  be merged into the master branch.  When it is ready to merge, edit
+  the title to remove the '[WIP]'.
+
 These guidelines drawn from:
 
 [https://www.atlassian.com/blog/git/written-unwritten-guide-pull-requests](https://www.atlassian.com/blog/git/written-unwritten-guide-pull-requests)
