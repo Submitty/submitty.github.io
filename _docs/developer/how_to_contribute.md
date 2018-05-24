@@ -70,7 +70,7 @@ you need to do?
 
 * Checkout the branch containing the bug fixes and/or new feature.
   Re-install the system as necessary.  Test the system with typical
-  use cases.  Think out how a novice user will experience this portion
+  use cases.  Think about how a novice user will experience this portion
   of the Submitty system.  Is it clear and intuitive?  Are the
   instructions (on page or on submitty.org) clear?  As appropriate
   leave comments for the PR author with specific suggestions for
@@ -90,13 +90,22 @@ you need to do?
    * Is the code well structured into functions and/or classes?
 
    * Has the PR introduced code duplication?  Should the code make use
-     of existing functions?  Or modify existing functions with new
-     parameters so code sharing is feasible?
+     of existing functions/classes?  Or modify existing functions with
+     new parameters so code sharing is feasible?
 
    * Critique code for security-related vulnerabilities.
 
-   * Critique code for language-specific coding & style conventions.
+   * Critique code for programming language-specific coding & style
+     conventions.
 
+   * Does the PR require system level changes or database updates to
+     work with older, existing installations?  Does the PR include
+     necessary changes to automate these updates?
+
+
+* Is the PR title appropriate?  Are the PR notes sufficient?  Will a
+  system administrator understand the purpose & importance of
+  installing this commit on their system?  
 
 * Through the github review system, indicate whether you approve as is
   or require changes on this PR before it can be merged.
