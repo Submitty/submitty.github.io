@@ -138,7 +138,7 @@ branch).
   
   This can be run from outside the vagrant machine by doing:
   ```
-  vagrant ssh /usr/local/submitty/GIT_CHECKOUT_Submitty/.setup/bin/code_watcher.py
+  vagrant ssh -c "/usr/local/submitty/GIT_CHECKOUT_Submitty/.setup/bin/code_watcher.py"
   ```
 
 ---
