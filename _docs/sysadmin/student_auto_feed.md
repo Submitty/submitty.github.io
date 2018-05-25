@@ -10,11 +10,11 @@ fill or update classlists on a cron schedule._
 ## Table of Contents <a name="top"></a>
 1. [Requirements](#requirements)
 2. [Files](#files)
-3. [Deprecated Files](#deprecated_files)
-4. [Course Database Backups](#database_backups)
-5. [Student CSV](#student_csv)
+3. [Course Database Backups](#database_backups)
+4. [Student CSV](#student_csv)
   * [CSV Layout](#csv_layout)
-6. [Install on Ubuntu 16.04](#install)
+5. [Install on Ubuntu 16.04](#install)
+6. [Command Line Arguments](#cli_arguments)
 7. [Configuration](#configuration)
   * [Configurations (top)](#configurations_top)
   * [Database Connection](#config_database)
@@ -33,7 +33,7 @@ fill or update classlists on a cron schedule._
 
 ### 1. Requirements <a name="requirements"></a>
 * Submitty Student Auto Feed is intended to be managed by a systems administrator or similar IT professional.
-* PHP 5.4 or higher with `pgsql` and `iconv` extensions.
+* PHP 5.6 or higher with `pgsql` and `iconv` extensions.
   * Although not a necessity, the auto feed script can operate on the same server that Submitty is running on.
   * The `ssh2` extension is also required if the data feed CSV resides on a different server than the script is running from (this also includes running the script on the Submitty server).
 * A regularly updated CSV data feed of student enrollment.
@@ -47,20 +47,13 @@ Latest version of the auto feed script and supplmental files will be checked int
 * `accounts.php` -- **IMPORTANT** for Submitty servers utilizing PAM authentication.
 
 <small>[Back To Table of Contents](#top)</small>
-### 3. Deprecated Files <a name="deprecated_files"></a>
-These files remain in the repository but have not been updated.
-They are incompatible with the latest auto feed script and database schema.
-It is **highly _inadvisable_** to use these files.
-* `driver.php`
-* `restore_backup.php`
-* `submitty_users_data_backup.php`
+### 3. Course Database Backups <a name="database_backups"></a>
+Please use `db_backup.py` (located in [`sysadmin_tools/nightly_db_backup/`](https://github.com/Submitty/Submitty/tree/master/sysadmin_tools/nightly_db_backup)) on a cron schedule to create nightly backups of course databases.
+
+Run `db_backup.py -h` to see extended help and argument list.
 
 <small>[Back To Table of Contents](#top)</small>
-### 4. Course Database Backups <a name="student_csv"></a>
-Please use `db_backup.py` (located in [`Submitty/Docs/nightly_db_backup/`](https://github.com/Submitty/Submitty/tree/master/Docs/nightly_db_backup)) on a cron schedule to create nightly backups of course databases.
-
-<small>[Back To Table of Contents](#top)</small>
-### 5. Before Installing Auto Feed Script <a name="before_installing"></a>
+### 4. Before Installing Auto Feed Script <a name="student_csv"></a>
 It is important that you can receive a regularly updated data feed of student enrollment.
 The data should be tabulated (like a spreadsheet), but must be written as a CSV file.
 You will likely need the cooperation from your university's data warehouse and/or registrar.
@@ -74,7 +67,7 @@ Please take appropriate information protection measures.
 **_SUBMITTY IS NOT RESPONSIBLE FOR YOUR COURSE'S, DEPARTMENT'S, OR UNIVERSITY'S INFORMATION CONTROL POLICIES OR ACTIVITIES._**
 
 <small>[Back To Table of Contents](#top)</small>
-### 5.1 Student CSV Layout <a name="csv_layout"></a>
+### 4.1 Student CSV Layout <a name="csv_layout"></a>
 
 There are nine _required_ columns/fields, and one optional column/field processed by the submitty auto feed script.
 The student CSV data file may have additional fields, which will be ignored by, _but there may not be less than the nine columns/fields required_.
@@ -112,8 +105,8 @@ The columns/fields may be in any order.
   Quotation marks may be picked up as part of the data and fail certain validation checks.
 
 <small>[Back To Table of Contents](#top)</small>
-### 6. Install On Ubuntu 16.04 <a name="install"></a>
-As these are PHP scripts, they _should_ run on any computer that has PHP 5.4+ and the appropriate extensions installed.
+### 5. Install On Ubuntu 16.04 <a name="install"></a>
+As these are PHP scripts, they _should_ run on any computer that has PHP 5.6+ and the appropriate extensions installed.
 However, these instructions will focus on Ubuntu 16.04 (same OS that is supported for Submitty).  Ubuntu 16.04 uses PHP 7.0 by default.
 
 As Ubuntu is part of the Debian Linux family, these instructions are very likely to work with other Debian family distributions with, perhaps, minor adjustments.
@@ -137,6 +130,24 @@ sudo phpenmod php-pgsql php-iconv php-ssh2
 sudo chmod 0700 student_submitty_auto_feed.php
 sudo chmod 0600 config.php
 ```
+
+<small>[Back To Table of Contents](#top)</small>
+### 6. Command Line Arguments <a name="cli_arguments"></a>
+
+--- | ---
+`-h` `--help`    | Extended help including usage and argument list.
+`-t [term code]` | Manually set the term code.
+`-g`             | Guess the term code based on calendar month and year.
+
+Notes:
+- `-t` _and_ `-g` are mutually exclusive, but one or the other is required.
+- `-g` will guess the semester code in the form of **TYY**.
+  - **T** is the term:
+    - **s** for Spring (Jan - May)
+    - **u** for Summer (Jun - Jul)
+    - **f** for Fall (Aug - Dec)
+  - **YY** is the two digit year.
+  - e.g. **s18** is Spring of 2018.
 
 <small>[Back To Table of Contents](#top)</small>
 ### 7. Configuration <a name="configuration"></a>
@@ -384,7 +395,7 @@ In this case, `RA` may mean "Registered by Adviser" and `RW` may mean "Registere
 
 * You will need to coordinate with your University's registrar or data warehouse to determine what all the enrollment codes are.
 * You will need to replace/remove/add enrollment codes to this `define` that are found in your student CSV.
-* This example has two codes, but you may have more codes or list only one code.
+* This example has two codes, but you may have more codes or only one code.
 * Even if there is only one registration code, you _must_ have the `serialize( array(` and `)));` program code.
   * <small>`define` is used with singular items, so `serialize` is used to "pack" an array (list) into a singular item.
     The auto feed will "unpack" the list during runtime, thus `serialize` remains necessary even with one item lists.</small>
@@ -463,7 +474,7 @@ For a complete list of timezones: <http://php.net/manual/en/timezones.php>
 
 <small>[Back To Table of Contents](#top)</small>
 
-### PAM Authentication and `accounts.php` <a name="pam_authentication"></a>
+### 7. PAM Authentication and `accounts.php` <a name="pam_authentication"></a>
 The script `accounts.php` will automate the creation of local accounts used with PAM authentication.
 
 *This script is not needed when using database authentication.*
@@ -471,6 +482,8 @@ The script `accounts.php` will automate the creation of local accounts used with
 `accounts.php` must exist on the same server as Submitty, and it needs to be run as `root`.
 When the script is run, it will look for all existing courses and read all user entries from Submitty's course databases.
 Any missing local accounts are automatically generated.
+
+Run `accounts.php -h` to see extended help and argument list.
 
 It is recommended that this script is run every hour as a cron job.
 Should an instructor manually add a student to their course, the student's access to Submitty will be available "within an hour".
