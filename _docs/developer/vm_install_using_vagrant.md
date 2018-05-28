@@ -22,17 +22,18 @@ operating system.
 
 2. Enable [Virtualization](http://tinyurl.com/enable-virtualization)
    
-   **Mac Instructions**
+   **Mac Instructions**  
    Virtualization is generally enabled by default
    
-   **Windows 10 Instructions**
+   **Windows 10 Instructions**  
    Open Settings, navigate to _Advanced Startup_ and select _Restart Now_.
+   ![Relevant Screenshot](https://github.com/jaredsexton/submitty.github.io/blob/master/images/Virtualization_Instructions_1.png?raw=true)
    
    Navigate to _Troubleshoot -> Advanced Options -> UEFI Firmware Settings_ and restart as suggested.
    
    Navigate to _BIOS Settings_ from your PC's startup menu, locate _Virtualization Technology_ and enable it.
    
-   **Ubuntu Instructions**
+   **Ubuntu Instructions**  
    Enter BIOS (generally by pressing Del or F12 while booting) and navigate the _BIOS Settings_,
    locate _Virtualization_, and enable it.
    
