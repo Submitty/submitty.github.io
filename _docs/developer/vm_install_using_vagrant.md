@@ -21,6 +21,22 @@ operating system.
 
 
 2. Enable [Virtualization](http://tinyurl.com/enable-virtualization)
+   
+   **Mac Instructions**
+   Virtualization is generally enabled by default
+   
+   **Windows 10 Instructions**
+   Open Settings, navigate to _Advanced Startup_ and select _Restart Now_.
+   
+   Navigate to _Troubleshoot -> Advanced Options -> UEFI Firmware Settings_ and restart as suggested.
+   
+   Navigate to _BIOS Settings_ from your PC's startup menu, locate _Virtualization Technology_ and enable it.
+   
+   **Ubuntu Instructions**
+   Enter BIOS (generally by pressing Del or F12 while booting) and navigate the _BIOS Settings_,
+   locate _Virtualization_, and enable it.
+   
+   Be sure to choose _Hardware Virtualization_ in the _System -> Acceleration_ settings of the virtual machine you are using.
 
 
 3. Download and install [VirtualBox](https://www.virtualbox.org/), [Vagrant](https://www.vagrantup.com), and [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest).
@@ -157,7 +173,10 @@ operating system.
 
 8. When the VM is "up", you can connect from your host computer to the
    virtual machine via ssh.  Windows users will need to install SSH
-   software (e.g., Cygwin or Putty).  From a terminal in the
+   software (e.g., 
+   [Cygwin](https://www.cygwin.com/) or 
+   [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)).  
+   From a terminal in the
    repository directory type:
 
    ```
