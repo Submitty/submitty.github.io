@@ -6,17 +6,18 @@ order: 5
 
 ### UNIX Users and Groups
 
-1. Create local user accounts for the instructor and TAs for this course:
+1. Create local user accounts for the instructor and TAs for this course.
  
-2. Create new groups for this course (the exact names are not specified):
+2. Create new groups for this course (the exact names are not prescribed):
 
    ```
    addgroup <COURSE>
    addgroup <COURSE>_tas_www
    ```
 
-   If you are keeping old assignments around for comparison purposes, you may also want to add a group of just 
-   those that need access to the archives
+   If you plan to retain read-only archives of previous semesters for
+   plagiarism comparison purposes, you may also want to add a group of
+   just those that need access to the archives
 
    ```
    addgroup <COURSE>_archive
@@ -31,15 +32,15 @@ order: 5
 3. Add the instructors into the course groups:
 
    ```
-   adduser instructor <COURSE>
-   adduser instructor <COURSE>_tas_www
-   adduser instructor <COURSE>_archive
+   adduser <INSTRUCTOR> <COURSE>
+   adduser <INSTRUCTOR> <COURSE>_tas_www
+   adduser <INSTRUCTOR> <COURSE>_archive
    ```
 
 5. Add the TAs into the course group:
 
    ```
-   adduser ta <COURSE>_tas_www
+   adduser <TA> <COURSE>_tas_www
    ```
 
 6. Add special users `hwphp`, `hwcron`, and `hwcgi` to the `<COURSE>_tas_www` group:
@@ -63,25 +64,29 @@ order: 5
    Add the instructor (and head TA) to the course_builders group:
 
       ```
-      adduser instructor course_builders
+      adduser <INSTRUCTOR> course_builders
       ```
 
-   <!---   B. Give limited sudo to instructors and head TAs.  Update the sudoers file using
-      `visudo` and add an entry at the end:
 
-      ```
-      %course_builders	ALL=(ALL:ALL) /var/local/submitty/bin/new.svnuser.pl,/var/local/submitty/bin/rcsonly.pl,/usr/sbin/apache2ctl,/var/local/submitty/bin/validate.svn.pl,/var/local/submitty/bin/validate.rcs.pl
-      ```
+8. OPTIONAL: Create a private directory/repository for the course to
+   store custom gradeable autograding configurations.  For example:
 
-   (No longer needed at RPI)
-   -->
+   ```
+   sudo mkdir /var/local/submitty/private_course_repositories/<COURSE_NAME>
+   sudo chown -R <INSTRUCTOR>:<COURSE> /var/local/submitty/private_course_repositories/<COURSE_NAME>
+   sudo chmod -R 770 /var/local/submitty/private_course_repositories/<COURSE_NAME>
+   sudo chmod -R g+s /var/local/submitty/private_course_repositories/<COURSE_NAME> 
+   ```
 
-8. OPTIONAL: It has been helpful to create a dummy student account for
+
+9. OPTIONAL: It has been helpful to create a dummy student account for
    each instructor for testing purposes (e.g. `doej-stu`).
 
    ```
-   adduser instructor-stu
+   adduser <INSTRUCTOR>-stu
    ```
+
+
 
 
 ### Prepare the course directory and course database
@@ -156,9 +161,9 @@ order: 5
 
    (replacing `<SEMESTER>`, `<COURSE>`, and `<SECTION>`)
 
-   _NOTE: We intend to make a web UI to allow the instructor to create
-   the registrations sections which will eliminate this as a sysadmin
-   step in the future._
+   _NOTE: Instructors can now add registration sections (and delete
+   registration sections that have no registered students) through the
+   Submitty website._
 
 
 5. The instructor can add all other users (students, graders, other
