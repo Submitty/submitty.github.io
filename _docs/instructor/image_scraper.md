@@ -22,7 +22,8 @@ This tool scrapes images from SIS of students in a course by sections to a folde
 3.  [Download    Chromedriver](https://sites.google.com/a/chromium.org/chromedriver/downloads)
 
 4.  Install Chromedriver
-    [MacOS](https://www.kenst.com/2015/03/installing-chromedriver-on-mac-osx/)
+
+    [MacOS](https://www.kenst.com/2015/03/installing-chromedriver-on-mac-osx/):
     ```
     brew install chromedriver
     ```
