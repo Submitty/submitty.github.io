@@ -8,9 +8,9 @@ This tool scrapes images from SIS of students in a course by sections to a folde
 (term/course_section) with their RCS IDs as the names of the images.
 
 ### Installation
-1.  [Install Python 3] (https://www.python.org/downloads/)
+1.  [Install Python 3](https://www.python.org/downloads/)
 
-2.  [Install Selenium] (http://selenium-python.readthedocs.io/installation.html)
+2.  [Install Selenium](http://selenium-python.readthedocs.io/installation.html)
     ```
     pip install Selenium
     ```
@@ -19,10 +19,10 @@ This tool scrapes images from SIS of students in a course by sections to a folde
     C:\Python35\Scripts\pip.exe install selenium
     ```
 
-3.  [Download Chromedriver] (https://sites.google.com/a/chromium.org/chromedriver/downloads)
+3.  [Download    Chromedriver](https://sites.google.com/a/chromium.org/chromedriver/downloads)
 
 4.  Install Chromedriver
-    [MacOS] https://www.kenst.com/2015/03/installing-chromedriver-on-mac-osx/
+    [MacOS](https://www.kenst.com/2015/03/installing-chromedriver-on-mac-osx/)
     ```
     brew install chromedriver
     ```
@@ -36,14 +36,14 @@ This tool scrapes images from SIS of students in a course by sections to a folde
 ```
 python SIS_Images_Scraper.py
 ```
-This will run the program in terminal which will prompt the user to type in responses on the command-line.
+This will run the program in terminal/console which will prompt the user to type in responses on the command-line.
 
 ### Example Image Scraping
 
 1.  Login to SIS
 
     ```
-    User ID: 666555444
+    RIN: 666555444
     PIN: Submitty
     ```
 
