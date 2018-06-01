@@ -10,30 +10,25 @@ This tool scrapes images from SIS of students in a course by sections to a folde
 ### Installation
 1.  [Install Python 3](https://www.python.org/downloads/)
 
-2.  [Install Selenium](http://selenium-python.readthedocs.io/installation.html)
+2.  [Install Selenium](http://selenium-python.readthedocs.io/installation.html) (in terminal/command prompt)
     ```
-    pip install Selenium
-    ```
-    For Windows Users Example:
-    ```
-    C:\Python35\Scripts\pip.exe install selenium
+    pip install selenium
     ```
 
-3.  [Download    Chromedriver](https://sites.google.com/a/chromium.org/chromedriver/downloads)
-
-4.  Install Chromedriver
-
-    [MacOS](https://www.kenst.com/2015/03/installing-chromedriver-on-mac-osx/):
-    ```
-    brew install chromedriver
-    ```
-    Windows:
+3.  Install Chromedriver (in terminal/command prompt)
+    [Windows:](https://sites.google.com/a/chromium.org/chromedriver/downloads)
     ```
     Download and put chromedriver.exe in C:\Windows
     ```
+    MacOS:
+    ```
+    brew install chromedriver
+    ```
+    Note: Make sure Chrome browser, Chromedriver, and Selenium are all up-to-date.
+
 
 ### SIS_Images_Scraper.py
-
+[Download the python file](https://github.com/Submitty/InstructorTools)
 ```
 python SIS_Images_Scraper.py
 ```
