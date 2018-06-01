@@ -145,7 +145,7 @@ order: 5
 3. Add the instructor(s) to both the top level and course database:
 
    ```
-   sudo /usr/local/submitty/bin/adduser.py --course <SEMESTER> <COURSE> null <USERNAME>
+   sudo /usr/local/submitty/sbin/adduser.py --course <SEMESTER> <COURSE> null <USERNAME>
    ```
 
    This script will ask for more information about the user interactively.
