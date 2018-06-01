@@ -16,6 +16,7 @@ This tool scrapes images from SIS of students in a course by sections to a folde
     ```
 
 3.  Install Chromedriver (in terminal/command prompt)
+
     [Windows:](https://sites.google.com/a/chromium.org/chromedriver/downloads)
     ```
     Download and put chromedriver.exe in C:\Windows
@@ -28,11 +29,13 @@ This tool scrapes images from SIS of students in a course by sections to a folde
 
 
 ### SIS_Images_Scraper.py
-[Download the python file](https://github.com/Submitty/InstructorTools)
+[Download SIS_Images_Scraper.py](https://github.com/Submitty/InstructorTools)
+
+Run the python file in terminal/command prompt in the directory the file is located:
 ```
 python SIS_Images_Scraper.py
 ```
-This will run the program in terminal/console which will prompt the user to type in responses on the command-line.
+This will prompt the user to type in responses on the command-line.
 
 ### Example Image Scraping
 
