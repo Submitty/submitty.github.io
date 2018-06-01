@@ -12,7 +12,7 @@ This tool scrapes images from SIS of students in a course by sections to a folde
 
 2.  [Install Selenium](http://selenium-python.readthedocs.io/installation.html) (in terminal/command prompt)
     ```
-    pip install selenium
+    pip3 install selenium
     ```
 
 3.  Install Chromedriver (in terminal/command prompt)
@@ -27,13 +27,21 @@ This tool scrapes images from SIS of students in a course by sections to a folde
     ```
     Note: Make sure Chrome browser, Chromedriver, and Selenium are all up-to-date.
 
+4.  Install requests
+    ```
+    pip3 install requests
+    ```
+    If using an older version of Python 3 (< Python 3.4), user may need to install requests[security].
+    ```
+    pip3 install requests[security]
+    ```
 
 ### SIS_Images_Scraper.py
 [Download SIS_Images_Scraper.py](https://github.com/Submitty/InstructorTools)
 
 Run the python file in terminal/command prompt in the directory the file is located:
 ```
-python SIS_Images_Scraper.py
+python3 SIS_Images_Scraper.py
 ```
 This will prompt the user to type in responses on the command-line.
 
