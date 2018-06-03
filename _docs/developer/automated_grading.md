@@ -5,9 +5,9 @@ category: Developer
 
 Starting with Submitty version `v.1.1.0`, automated grading is
 controlled by two daemons,
-[`submitty_autograding_shipper.py`](https://github.com/Submitty/Submitty/blob/master/bin/submitty_autograding_shipper.py)
+[`submitty_autograding_shipper.py`](https://github.com/Submitty/Submitty/blob/master/sbin/submitty_autograding_shipper.py)
 and
-[`submitty_autograding_worker.py`](https://github.com/Submitty/Submitty/blob/master/bin/submitty_autograding_worker.py).
+[`submitty_autograding_worker.py`](https://github.com/Submitty/Submitty/blob/master/sbin/submitty_autograding_worker.py).
 
 _NOTE: Versions of Submitty prior to `v.1.1.0` use a
 submitty_grading_scheduler -- see instructions at the bottom of this page._
@@ -150,7 +150,7 @@ To do this:
    shipper manager and watch the output.
 
    ```
-   sudo su -c '/usr/local/submitty/bin/submitty_autograding_shipper.py' hwcron
+   sudo su -c '/usr/local/submitty/sbin/submitty_autograding_shipper.py' hwcron
    ```
 
    And similarly from each machine that will be autograding (including
@@ -158,7 +158,7 @@ To do this:
    watch the output:
 
    ```
-   sudo su -c '/usr/local/submitty/bin/submitty_autograding_shipper.py' hwcron
+   sudo su -c '/usr/local/submitty/sbin/submitty_autograding_shipper.py' hwcron
    ```
 
 
@@ -197,76 +197,3 @@ code & system configurations on the worker machines from the primary
 machines.  Currently installation/upgrade on the worker machines must
 be done manually._
 
----
-
-## Autograding Information for Submitty Installation prior to `v.1.1.0`
-
-
-Submitty grades in parallel, under a scheduler daemon running
-[`submitty_grading_scheduler.py`](https://github.com/Submitty/Submitty/blob/master/bin/submitty_grading_scheduler.py)
-which checks for jobs in the
-`/var/local/submitty/to_be_graded_interactive` and
-`/var/local/submitty/to_be_graded_batch` queues.  
-
----
-
-In the default system configuration, this script uses 5 parallel
-worker processes.  To adjust this number:
-
-1. As root, edit the `/usr/local/submitty/.set/INSTALL_SUBMITTY.sh`
-   settings and change this line:
-
-   ```
-   NUM_GRADING_SCHEDULER_WORKERS=5
-   ```
-
-2. Then re-install Submitty:
-
-   ```
-   sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh
-   ```
-
-NOTE:  If you re-run `CONFIGURE_SUBMITTY.sh` it will undo these changes.
-
----
-
-To debug new features for autograding, it can be helpful to run
-`submitty_grading_scheduler.py` interactively and inspect the output.
-
-To do this:
-
-1. Stop the daemon
-
-   ```
-   sudo systemctl stop submitty_grading_scheduler
-   ```
-
-2. Now, as the `hwcron` user, run the scheduler and watch the output.  
-
-   ```
-   sudo su -c '/usr/local/submitty/bin/submitty_grading_scheduler.py' hwcron
-   ```
-
-   Use control-C to stop when you've finished your debugging.
-
-3. Re-Start the daemon
-
-   ```
-   sudo systemctl start submitty_grading_scheduler
-   ```
-   
-   or
-
-   ```
-   sudo systemctl restart submitty_grading_scheduler
-   ```
-
-   You can check the status of the daemon:
-
-   ```
-   systemctl status submitty_grading_scheduler
-   ```
-
-NOTE: When you re-run `sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh`,
-it will stop and restart the autograding scheduler if it is running.  (But it will not
-start the scheduler, if it is not currently running.)
