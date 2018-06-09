@@ -22,14 +22,13 @@ Note: These instructions should be run under root
 
    ```
    mkdir -p /usr/local/submitty  
-   git clone https://github.com/Submitty/Submitty.git /usr/local/submitty/GIT_CHECKOUT_Submitty
+   git clone https://github.com/Submitty/Submitty.git /usr/local/submitty/GIT_CHECKOUT/Submitty
    ```
-
 
 3. Run the automated portion of the install.
 
    ```
-   cd /usr/local/submitty/GIT_CHECKOUT_Submitty  
+   cd /usr/local/submitty/GIT_CHECKOUT/Submitty
    ./.setup/install_system.sh
    ```
 
@@ -88,7 +87,7 @@ Note: These instructions should be run under root
    
    The basic commands to do this are:
    ```
-   cp /usr/local/submitty/GIT_CHECKOUT_Submitty/.setup/apache/submitty.conf /etc/apache2/sites-available/submitty.conf
+   cp /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/apache/submitty.conf /etc/apache2/sites-available/submitty.conf
    a2ensite submitty
    ```
    

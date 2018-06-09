@@ -87,9 +87,26 @@ operating system.
    git clone https://github.com/Submitty/Submitty.git
    ```
 
+   _OPTIONAL: If you will be developing code in one of the companion
+   Submitty repositories (e.g., AnalysisTools, Tutorial, Lichen), also
+   clone those repositories to the same directory.  For example:_
 
-3. Navigate to that directory on your computer in a shell/terminal and
-   type:
+     ```
+     home
+     └── myusername
+         └── Submitty
+             └── GIT_CHECKOUT
+                 ├── AnalysisTools  (optional)
+                 ├── Lichen         (optional)
+                 ├── Submitty
+                 └── Tutorial       (optional)
+     ```
+
+    _This host directory structure will be shared / synced between
+    your host operating system and the Submitty virtual machine._
+
+3. Navigate into the Submitty repository on your computer in a
+   shell/terminal and type:
 
    ```
    vagrant up

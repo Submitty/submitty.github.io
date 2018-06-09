@@ -32,7 +32,7 @@ _**NOTE:**_ make sure that your computer login name matches the name of the user
 11. Copy your file installation key. You will need it in the next step.
 
 ##### Semi-Automated Install
-1. Navigate to /usr/local/submitty/GIT_CHECKOUT/.setup/bin/
+1. Navigate to /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/bin/
 2. Open MatlabInstall.sh with your favorite text editor.
 3. Set the ABSOLUTE_PATH_TO_INSTALLATION_FILES variable to which you moved the files in step 3 above.
 4. Set the INSTALLATION_KEY variable to be equal to the key you copied in step 11 above.

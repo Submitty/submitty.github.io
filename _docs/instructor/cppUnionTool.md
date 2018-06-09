@@ -57,11 +57,3 @@ Counts the number of calls to the function "check1" in hw1.cpp. Function "check1
 ```Python unionToolRunner.py -json hw1.cpp  ```
 Prints a json representation of the AST of hw1.cpp  
 
-
-### Additional Install Steps:
-If you have not already followed the install steps for the commonAST tool there are some additional install steps:
-1. navigate to ```/usr/local/submitty/GIT_CHECKOUT_SUBMITTY/.setup```
-2. run ```git checkout commonAST``` to switch to the correct branch
-3. run ```python clangInstall.py``` This could take a few hours
-4. navigate to ```/usr/local/submitty/GIT_CHECKOUT_AnalysisTools/```
-5. run ```sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh``` to complete the installation

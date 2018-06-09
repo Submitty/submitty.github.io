@@ -80,9 +80,9 @@ Now you can browse the tables in the database window by expanding the tabs next 
 Under PhpStorm settings, open `Languages & Frameworks` > `PHP` > `Test Frameworks`. Press the `+` button to add a testing configuration, using the `PHPUnit by Remote Interpreter` type. Choose the Vagrant interpreter you set up in `Running code from vagrant`. Then set:
 
 - `PHPUnit Library`: `Use Composer autoloader`
-- `Path to script`: `/usr/local/submitty/GIT_CHECKOUT_Submitty/site/vendor/autoloader.php`
+- `Path to script`: `/usr/local/submitty/GIT_CHECKOUT/Submitty/site/vendor/autoloader.php`
 - Hit the arrows button to confirm that it can find PHPUnit
-- `Default Configuration File`: `/usr/local/submitty/GIT_CHECKOUT_Submitty/site/tests/phpunit.xml`
+- `Default Configuration File`: `/usr/local/submitty/GIT_CHECKOUT/Submitty/site/tests/phpunit.xml`
 
 Press `OK` to save the test configuration.
 

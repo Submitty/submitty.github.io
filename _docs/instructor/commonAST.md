@@ -58,8 +58,3 @@ Counts the number of calls to the function "check1" in hw1.py. Function "check1"
 Prints a json representation of the AST of hw1.cpp  
 
 
-### Additional Install Steps:
-Running this on python files will work with the standard submitty install. In order to run this on C++ files, there are some additional install steps: 
-1. navigate to ```/usr/local/submitty/GIT_CHECKOUT_SUBMITTY/.setup```
-2. run ```sudo python3 clangInstall.py``` This could take a few hours
-3. run ```sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh``` to complete the installation
