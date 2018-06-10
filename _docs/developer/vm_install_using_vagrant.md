@@ -88,7 +88,7 @@ operating system.
    ```
 
    _OPTIONAL: If you will be developing code in one of the companion
-   Submitty repositories (e.g., AnalysisTools, Tutorial, Lichen), also
+   Submitty repositories (e.g., AnalysisTools, Lichen, RainbowGrades, Tutorial), also
    clone those repositories to the same directory.  For example:_
 
      ```
@@ -98,6 +98,7 @@ operating system.
              └── GIT_CHECKOUT
                  ├── AnalysisTools  (optional)
                  ├── Lichen         (optional)
+                 ├── RainbowGrades  (optional)
                  ├── Submitty
                  └── Tutorial       (optional)
      ```
