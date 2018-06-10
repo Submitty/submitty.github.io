@@ -23,7 +23,7 @@ order: 7
 
 2. **Obtain the Rainbow Grades Chart Software**  
    On your local computer (recommended so you can preview the results
-   before posting), checkout the [Submitty RainbowGrades repository](https://github.com/Submitty/RainbowGrades/archive/master.zip)
+   before posting), download or checkout the [Submitty RainbowGrades repository](https://github.com/Submitty/RainbowGrades/archive/master.zip)
    so you have access to the [Rainbow Grades code](https://github.com/Submitty/RainbowGrades/tree/master/).
    We recommend you put this in a convenient top-level directory,
    separate from the materials for a specific course.
