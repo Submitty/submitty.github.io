@@ -21,7 +21,7 @@ Note: These instructions should be run under root
 2. After installing the operating system, clone the git repository:  
 
    ```
-   mkdir -p /usr/local/submitty  
+   mkdir -p /usr/local/submitty/GIT_CHECKOUT 
    git clone https://github.com/Submitty/Submitty.git /usr/local/submitty/GIT_CHECKOUT/Submitty
    ```
 
