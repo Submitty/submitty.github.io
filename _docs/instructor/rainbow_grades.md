@@ -23,13 +23,13 @@ order: 7
 
 2. **Obtain the Rainbow Grades Chart Software**  
    On your local computer (recommended so you can preview the results
-   before posting), checkout the [Submitty repository](https://github.com/Submitty/Submitty/archive/master.zip)
-   so you have access to the [Rainbow Grades code](https://github.com/Submitty/Submitty/tree/master/RainbowGrades).
+   before posting), checkout the [Submitty RainbowGrades repository](https://github.com/Submitty/RainbowGrades/archive/master.zip)
+   so you have access to the [Rainbow Grades code](https://github.com/Submitty/RainbowGrades/tree/master/).
    We recommend you put this in a convenient top-level directory,
    separate from the materials for a specific course.
 
    Note: In order to use this tool on your local machine, you'll need
-   to install `git`, `make`, `ssh`, `rsync`, and `python3`.
+   to install `git`, `make`, `ssh`, `rsync`, `wget`, and `python3`.
 
 
 3. **Make a directory for preparing the grades**  
@@ -167,5 +167,5 @@ order: 7
 
     etc.
 
-[SAMPLE_Makefile]: https://github.com/Submitty/Submitty/blob/master/RainbowGrades/SAMPLE_Makefile
-[SAMPLE_customization.json]: https://github.com/Submitty/Submitty/blob/master/RainbowGrades/SAMPLE_customization.json
+[SAMPLE_Makefile]: https://github.com/Submitty/RainbowGrades/blob/master/SAMPLE_Makefile
+[SAMPLE_customization.json]: https://github.com/Submitty/RainbowGrades/blob/master/SAMPLE_customization.json
