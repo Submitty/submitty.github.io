@@ -101,7 +101,7 @@ You'll need to install [the JetBrains IDE Support](https://chrome.google.com/web
 
 Then, you should be able to set breakpoints in your JavaScript files in PhpStorm and debug them.
 
-### If that doesn't work
+#### If that doesn't work
 
 Alternatively, you can debug in Chrome by using a custom run configuration. Open `Run` > `Edit Configurations`. Press the `+` button and add a `JavaScript Debug` configuration. Set:
 - `URL`: `http://192.168.56.101`
