@@ -4,7 +4,6 @@ category: System Administrator
 order: 2
 ---
 
-
 1.  To update the submitty code, get the specific branch/release to which
     you want to upgrade.  For example:
 
@@ -13,6 +12,18 @@ order: 2
     git checkout master
     git pull origin master
     ```
+
+    _
+    NOTE: If your system was initially installed prior to mid-June
+    2018, you'll need to manually update your repository structure:
+
+    old repository path suggestion: '/usr/local/submitty/GIT_CHECKOUT_Submitty'
+    new repository path suggestion: '/usr/local/submitty/GIT_CHECKOUT/Submitty'     
+    _
+
+
+
+
 
 
 2.  It may be necessary to update the database for the new version of
