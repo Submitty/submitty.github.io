@@ -92,3 +92,22 @@ Then you need to add a run configuration for PHPUnit. Open `Run` > `Edit Configu
 - `Use alternative configuration file`: Unchecked
 
 Press `OK` to save the test run configuration. You should be able to run it as normal (or even with coverage!) from the `Run` menu.
+
+## Debugging JavaScript in PhpStorm
+
+This one is not as guaranteed as the others. Make sure you have already ran the `Deploying updates to vagrant` steps. Also, you need to use Google Chrome for this. 
+
+You'll need to install [the JetBrains IDE Support](https://chrome.google.com/webstore/detail/jetbrains-ide-support/hmhgeddbohgjknpmjagkdomcpobmllji) plugin for Chrome. Then, after navigating to the page with the JavaScript you want to debug, right click the extension and press `Inspect in PhpStorm`. If it decides to work, you'll see a banner in Chrome that says `"JetBrains IDE Support" is debugging this browser`. Note that closing the banner will disconnect the debugger so you'll have to leave it up.
+
+Then, you should be able to set breakpoints in your JavaScript files in PhpStorm and debug them.
+
+#### If that doesn't work
+
+Alternatively, you can debug in Chrome by using a custom run configuration. Open `Run` > `Edit Configurations`. Press the `+` button and add a `JavaScript Debug` configuration. Set:
+- `URL`: `http://192.168.56.101`
+- `Browser`: `Chrome` (only option currently)
+- `Ensure breakpoints are detected when loading scripts`: Leave unchecked unless you're debugging some code that runs on page load
+
+In the `Remote URLs of local files (optional)` section, find `site/public` and give it a `Remote URL` of `http://192.168.56.101`.
+
+Press `OK` to save the run configuration. If you then `Debug` the configuration, it should open a new Chrome process and automatically start debugging, note that this Chrome will not have any of your user data / configuration / extensions. Note that if you `Run` the configuration you will not be able to debug JavaScript.
