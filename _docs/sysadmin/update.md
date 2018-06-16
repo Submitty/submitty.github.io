@@ -18,10 +18,8 @@ order: 2
     repository structure:_
 
 
-    _Old repository path suggestion:_ '/usr/local/submitty/GIT_CHECKOUT_Submitty'
+    _Old repository path suggestion:_ '/usr/local/submitty/GIT_CHECKOUT_Submitty'  
     _New repository path suggestion:_ '/usr/local/submitty/GIT_CHECKOUT/Submitty'     
-
-
 
 
 
