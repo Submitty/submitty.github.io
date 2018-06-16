@@ -13,13 +13,13 @@ order: 2
     git pull origin master
     ```
 
-    _
-    NOTE: If your system was initially installed prior to mid-June
-    2018, you'll need to manually update your repository structure:
+    _NOTE: If your system was initially installed prior to mid-June
+    2018, you'll need to manually update your Submitty source code
+    repository structure:_
 
-    old repository path suggestion: '/usr/local/submitty/GIT_CHECKOUT_Submitty'
-    new repository path suggestion: '/usr/local/submitty/GIT_CHECKOUT/Submitty'     
-    _
+
+    _Old repository path suggestion:_ '/usr/local/submitty/GIT_CHECKOUT_Submitty'
+    _New repository path suggestion:_ '/usr/local/submitty/GIT_CHECKOUT/Submitty'     
 
 
 
