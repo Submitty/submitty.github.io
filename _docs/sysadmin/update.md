@@ -6,9 +6,8 @@ order: 2
 
 
 **IMPORTANT NOTE: If your system was initially installed prior to
-mid-June 2018, you'll need to manually update your Submitty source
-code repository structure.  Please start with the section at the
-bottom of this page.**
+mid-June 2018, please start with the section at the bottom of this
+page.**
 
 
 
@@ -35,42 +34,41 @@ bottom of this page.**
     installation.  The system and database _migrations_ will
     automatically be applied.
     
-    Usually this installation will take less than a minute.  It will
-    pause and restart from scratch any autograding that is currently
-    happening.
+    Typically this re-installation will take less than a minute.  It
+    will pause and restart from scratch any autograding that is
+    currently happening.
 
 
-3.  Depending on what has updated in the system, you may need to also
-    rebuild the autograding scripts for your existing courses &
-    gradeables.  And regrade the previously submitted assignments
-    (especially if you're installing the update to fix a problem).
+3.  Depending on what has been updated in the system, you may need to
+    also rebuild the autograding scripts for your existing courses &
+    gradeables.  And you may need to regrade the previously submitted
+    assignments.
 
     See more information in:
     [Development Instructions](../developer/development_instructions)
 
 
----
 
-### Update Submitty -- Installations prior to early June 2018
+### Installations prior to early June 2018
 
 
-1.  First let's move your Submitty source code repository to a new location:
+1.  First let's move your Submitty source code repository to the suggested location:
 
-    _Old repository path suggestion:_ '/usr/local/submitty/GIT_CHECKOUT_Submitty'  
-    _New repository path suggestion:_ '/usr/local/submitty/GIT_CHECKOUT/Submitty'     
+    **Old repository path suggestion:**   `/usr/local/submitty/GIT_CHECKOUT_Submitty`  
+    **New repository path suggestion:**   `/usr/local/submitty/GIT_CHECKOUT/Submitty`     
 
-    If you have not modified any of the helper Submitty repositories
-    (GIT_CHECKOUT_Tutorial, GIT_CHECKOUT_AnalysisTools, etc.) stored in
-    neighboring directories, you can remove those repositories, the
-    installation & update scripts will re-clone & maintain these
-    checkouts in the new location.
+    If you have _not_ modified any of the helper Submitty repositories
+    (`GIT_CHECKOUT_Tutorial`, `GIT_CHECKOUT_AnalysisTools`, etc.) stored
+    in neighboring directories, you can remove those repositories and
+    the installation & update scripts will re-clone & maintain these
+    checkouts in a new location.
 
     Update the Submitty source code repository as described in step 1
     of previous section.
 
 
-2.  We need to manually apply updates to the course databases so they
-    match the database scheme for Submitty for early June 2018.  Run
+2.  Next, we need to apply updates to the course databases so they
+    match the database scheme for Submitty as of early June 2018.  Run
     this command:
 
     ```
@@ -80,7 +78,9 @@ bottom of this page.**
     Check the output of this script to be sure each course currently
     in use has been processed.  The script will print error messages
     for database edits that have been processed by a previous run of
-    this script.  Those error messages can be safely ignored.
+    this script (e.g. columns, relations, constrations, and tables
+    already existing, duplicate keys, etc.).  Those error messages can
+    be safely ignored as long as the script proceeds.
 
 
 3.  Next, it may be necessary to update the installed base linux
@@ -101,7 +101,7 @@ bottom of this page.**
     ```
 
     This script will ask you to interactively confirm some system
-    configuration settings.  Pressing 'enter/return' at each prompt
+    configuration settings.  Pressing `enter/return` at each prompt
     will keep your current configurations.
 
 
