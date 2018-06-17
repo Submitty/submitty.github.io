@@ -94,8 +94,8 @@ branch).
 
   ```
   cd /usr/local/submitty/GIT_CHECKOUT/Submitty/
-  sudo /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/bin/partial_reset.py
-  sudo /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/bin/setup_sample_courses.py
+  sudo python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/bin/partial_reset.py
+  sudo python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/bin/setup_sample_courses.py
   sudo service php7.0-fpm restart
   echo 'partial reset complete'
   ```   
@@ -133,12 +133,12 @@ branch).
   to re-install the code for those folders whenver something in them changes:
   
   ```
-  sudo /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/bin/code_watcher.py
+  sudo python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/bin/code_watcher.py
   ```
   
   This can be run from outside the vagrant machine by doing:
   ```
-  vagrant ssh -c "/usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/bin/code_watcher.py"
+  vagrant ssh -c "python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/bin/code_watcher.py"
   ```
 
 ---
