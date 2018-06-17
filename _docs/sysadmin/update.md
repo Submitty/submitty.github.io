@@ -29,9 +29,9 @@ page.**
     sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh
     ```
 
-    One of the early steps of this script checks your system for
-    updates to system installation and the database since your last
-    installation.  The system and database _migrations_ will
+    One of the early steps of this script checks your system
+    installation and course databases for updates since your last
+    installation.  The necessary system and database _migrations_ will
     automatically be applied.
     
     Typically this re-installation will take less than a minute.  It
@@ -39,8 +39,8 @@ page.**
     currently happening.
 
 
-3.  Depending on what has been updated in the system, you may need to
-    also rebuild the autograding scripts for your existing courses &
+3.  Depending on what has been updated in the system, you may also need to
+    rebuild the autograding scripts for your existing courses &
     gradeables.  And you may need to regrade the previously submitted
     assignments.
 
@@ -65,7 +65,7 @@ page.**
 
 
 2.  Now, update the Submitty source code repository as described in
-    step 1 of previous section.
+    step 1 of the previous section.
 
 
 3.  Next, we need to apply updates to the course databases so they
@@ -77,15 +77,15 @@ page.**
     ```
 
     Check the output of this script to be sure each course currently
-    in use has been processed.  The script will print error messages
-    for database edits that have been processed by a previous run of
+    in use has been processed.  Note that the script will print error messages
+    for database edits that have already been processed by a previous run of
     this script (e.g. columns, relations, constrations, and/or tables
     that already exist, duplicate keys, etc.).  These error messages
     can be safely ignored as long as the script proceeds.
 
 
-4.  Next, it may be necessary to update the installed base linux
-    system packages.  We do this by re-running the system installation
+4.  Next, it may be necessary to update the installed base Linux
+    system packages.  To do this, re-run the system installation
     script, which is safe to re-run on an existing Submitty system
     installation.
 
@@ -93,7 +93,7 @@ page.**
     sudo /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/install_system.sh
     ```
 
-    Note, that after finished with system installation, this script
+    Note: After finishing system installation updates, this script
     will automatically call...
 
 
