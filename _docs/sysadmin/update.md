@@ -6,15 +6,15 @@ order: 2
 
 
 **IMPORTANT NOTE: If your system was initially installed prior to
-mid-June 2018, please start with the section at the bottom of this
+early June 2018, please start with the section at the bottom of this
 page.**
 
 
 
 ### Update Submitty
 
-1.  To update the submitty code, get the specific branch/release to which
-    you want to upgrade.  For example:
+1.  To update the Submitty source code repository, get the specific
+    branch/release to which you want to upgrade.  For example:
 
     ```
     cd /usr/local/submitty/GIT_CHECKOUT/Submitty
@@ -52,7 +52,7 @@ page.**
 ### Installations prior to early June 2018
 
 
-1.  First let's move your Submitty source code repository to the suggested location:
+1.  First let's move your Submitty source code repository to its new suggested location:
 
     **Old repository path suggestion:**   `/usr/local/submitty/GIT_CHECKOUT_Submitty`  
     **New repository path suggestion:**   `/usr/local/submitty/GIT_CHECKOUT/Submitty`     
@@ -63,13 +63,14 @@ page.**
     the installation & update scripts will re-clone & maintain these
     checkouts in a new location.
 
-    Update the Submitty source code repository as described in step 1
-    of previous section.
+
+2.  Now, update the Submitty source code repository as described in
+    step 1 of previous section.
 
 
-2.  Next, we need to apply updates to the course databases so they
-    match the database scheme for Submitty as of early June 2018.  Run
-    this command:
+3.  Next, we need to apply updates to the course databases so they
+    match the database schema for Submitty as it was in early June
+    2018.  Run this command:
 
     ```
     sudo python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/update_database.py
@@ -78,15 +79,15 @@ page.**
     Check the output of this script to be sure each course currently
     in use has been processed.  The script will print error messages
     for database edits that have been processed by a previous run of
-    this script (e.g. columns, relations, constrations, and tables
-    already existing, duplicate keys, etc.).  Those error messages can
-    be safely ignored as long as the script proceeds.
+    this script (e.g. columns, relations, constrations, and/or tables
+    that already exist, duplicate keys, etc.).  These error messages
+    can be safely ignored as long as the script proceeds.
 
 
-3.  Next, it may be necessary to update the installed base linux
+4.  Next, it may be necessary to update the installed base linux
     system packages.  We do this by re-running the system installation
     script, which is safe to re-run on an existing Submitty system
-    installation.  
+    installation.
 
     ```
     sudo /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/install_system.sh
@@ -96,7 +97,7 @@ page.**
     will automatically call...
 
 
-3.  ```
+5.  ```
     sudo /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/CONFIGURE_SUBMITTY.sh
     ```
 
@@ -105,14 +106,14 @@ page.**
     will keep your current configurations.
 
 
-4.  Now your system state has been updated to early June 2018.
+6.  Now your system state has been updated to early June 2018.
 
     You're ready to continue with steps 2 & 3 in the previous section
     to automatically apply _migrations_ for Submitty changes from
     early June 2018 to present day.
 
-    And you will only need to apply the update steps in the first
-    section in the future.
+    In the future, you will only need to apply the steps in the first
+    section to update your Submitty installation.
     
                                                                                                     
                                                                                                     
