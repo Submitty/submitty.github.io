@@ -69,8 +69,8 @@ page.**
 
 
 3.  Next, we need to apply updates to the course databases so they
-    match the database schema for Submitty as it was in early June
-    2018.  Run this command:
+    match the database schema for Submitty as it was in early
+    June 2018.  Run this command:
 
     ```
     sudo python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/update_database.py
