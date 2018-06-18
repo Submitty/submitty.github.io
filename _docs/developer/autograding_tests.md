@@ -56,7 +56,7 @@ directories: `assignment_config`, `build`, `data`, and `validation`.
 
 The `assignment_config` directory should contain a C++ header file
 `config.json` (see [Assignment
-Configuration](Assignment-Configuration))
+Configuration](../instructor/assignment_configuration))
 specifying the details of the assignment upon which testing will be
 performed.
 
