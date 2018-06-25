@@ -10,14 +10,14 @@ order: 1
 
 The Submitty Homework Submission Server is currently supported only on
 **Ubuntu 16.04 64-bit Server**.  We are working towards support for Ubuntu
-16.04.  (We use the server edition of Ubuntu because it saves a lot of disk
+18.04.  _We use the server edition of Ubuntu because it saves a lot of disk
 space and doesn't include a lot of extra packages which will require
 more frequent updates.  You also have more options in some cases, and
-you can always add a graphical display manager to it after the fact if needed.)
+you can always add a graphical display manager to it after the fact if needed._
 
 After selecting your language, you can generally just select "Install
 Ubuntu Server".  (If you find you have hardware compatibility issues,
-you may need to look at the "Modes" or "Other Options")
+you may need to look at the "Modes" or "Other Options".)
 
 Unless you have an unusual keyboard, it is generally not worth having
 it detect your keyboard layout and you can accept the defaults.

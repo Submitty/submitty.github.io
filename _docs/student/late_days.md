@@ -30,11 +30,18 @@ The late day policy is subject to a few rules:
   assignment instructions and your course syllabus to determine the
   late day limit for each assignment.
 
-* If you have submitted an assignment late, and attempted to use more
-  late days than you have available or attempted to use more late days
-  than allowed on the assignment, your assignment late day status will
-  be "Bad" and your final assignment grade will be recorded as a zero.
-  You will not be charged late days for this assignment.
+* If you have submitted an assignment late and attempted to use more
+  late days than you have available, your late day status for that
+  assignment will be "Bad".
+  Similarly, if you submitted an assignment
+  late and attempted to use more late days than allowed on the
+  assignment, your late day status for that assignment will be "Bad".
+  Even though the status is "Bad", you will still be able to review
+  the autograding results, and you may even additional feedback and
+  points from manual TA/instructor grading.
+  However, if your late day status is "Bad", your final assignment grade total
+  will be recorded as a zero.  You will not be
+  charged late days for this assignment.
 
 * For team assignments, if the team chooses to submit the assignment
   _n_ days late, each member of the team will be charged _n_ late
@@ -74,6 +81,8 @@ policy that allows you to earn additional late days, and you have
 earned additional late days, you will see that information on the late
 day information page.
 
+If there is an error in the information in this table, consult the
+course syllabus and contact your TA or instructor as appropriate.
 
 
 ## Excused Absense Extensions
@@ -84,9 +93,9 @@ syllabus to learn the procedure for submitting the necessary
 documentation to request a formal excused absense extension for
 medical or personal reasons.
 
-Extensions allow you to submit assignment late without penalty and
+Extensions allow you to submit an assignment late without penalty and
 without being charged late days.  Your instructor may enter the
-extensions before or after you submit your assignment.  The late days
+extension before or after you submit your assignment.  The late days
 information for all assignments will be automatically re-calculated
 after new information is entered into the system.
 

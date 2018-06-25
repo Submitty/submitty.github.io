@@ -12,7 +12,7 @@ used for other things, you may need to adapt the instructions below and
 [install_system.sh](https://github.com/Submitty/Submitty/blob/master/.setup/install_system.sh)
 for your needs (as the script installs all of the dependencies that Submitty depends on).
 
-Note: These instructions should be run under root
+_Note: These instructions should be run under root/sudo._
 
 
 1. [Install Ubuntu 16.04 server edition](server_os)
@@ -29,7 +29,7 @@ Note: These instructions should be run under root
 
    ```
    cd /usr/local/submitty/GIT_CHECKOUT/Submitty
-   ./.setup/install_system.sh
+   bash ./.setup/install_system.sh
    ```
 
    You will be asked several questions by the 
@@ -38,8 +38,11 @@ Note: These instructions should be run under root
    1. Database Host
    2. Database User
    3. Database Password
-   4. Site URL
-   5. Enable Debugging (Not recommended if installing for production)
+   4. Timezone
+   5. Main Site URL
+   6. Version Control System (VCS) URL
+   7. Institution Name
+   8. Authentication Method (PAM or Database)
     
    Unless you have a database server already set up, you will most
    likely just specify `localhost` for the Database Host. You will need

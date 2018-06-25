@@ -90,7 +90,7 @@ page.**
     installation.
 
     ```
-    sudo /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/install_system.sh
+    sudo bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/install_system.sh
     ```
 
     Note: After finishing system installation updates, this script
@@ -98,7 +98,7 @@ page.**
 
 
 5.  ```
-    sudo /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/CONFIGURE_SUBMITTY.sh
+    sudo bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/CONFIGURE_SUBMITTY.sh
     ```
 
     This script will ask you to interactively confirm some system
@@ -114,10 +114,3 @@ page.**
 
     In the future, you will only need to apply the steps in the first
     section to update your Submitty installation.
-    
-                                                                                                    
-                                                                                                    
-
-
-
-
