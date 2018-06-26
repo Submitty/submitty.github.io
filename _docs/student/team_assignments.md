@@ -51,17 +51,16 @@ addresses through the “Manage Team” portal.
 
 ### Seek Team/Partner
 
-When a user clicks the ```Seek Team/Partner``` button, they will show
-up in the table below. From here, other users are able to invite them
-through the “Invite new teammates by their user ID” interface
-documented above.
+When you click on the ```Seek Team/Partner``` button, your name, user ID, and email address will be shown
+to all other students in the course.  
+This will enable other students/teams to contact you and invite you to join their team.
 
 ![](/images/team_seeking.png)
 
 ### Joining a Team
 
-If you receive an invite, it will be shown next to who sent the invite
-on the manage team screen. All you have to do is select accept to join
+If you receive an invite to join a team, the user ID of the student who sent the invite will be displayed.
+All you have to do is select "Accept" to join
 the team.
 
 ![](/images/team_invitations_2.png)
@@ -77,7 +76,7 @@ team.
 ![](/images/team_manage_2.png)
 
 If you forgot to create or form a team before the team lock date, you
-may only accept invitations to existing teams sent before the team or
+may only accept invitations to existing teams sent before the lock date or
 form a "team of one" that contains only yourself.  Consult the course
 syllabus and/or specific assignment instructions regarding penalties
 and procedures for team membership management after the team lock
