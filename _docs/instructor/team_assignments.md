@@ -21,10 +21,10 @@ After creating the gradeable, there will be an option under the Dates tab to set
 
 Instructors also have the option of making teams for the students.
 
-![](/images/team_creation_instructor.png)
+![](/images/team_grading_page.png)
 
 After opening grading for the team assignment, there are two different ways instructors can make teams:
-* Press the ```Import Teams Members``` button in the upper right to import teams via csv
+* Press the ```Import Teams Members``` button in the upper right to import teams (format of the teams should be csv with 6 columns: First Name, Last Name, User ID, Team ID, Team Registration Section, Team Rotating Section. The first row of the csv is assumed to be column headings and is ignored)
 * Press the pencil icon in the Edit Teams column for a student you'd like to put on a team to bring up the interface for creating a team
 
 ![](/images/team_create_teams.png)

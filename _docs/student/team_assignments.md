@@ -7,7 +7,7 @@ title: Team Assignments
 
 ![](/images/team_navigation.png)
 
-Team Assignments are assignments where students form teams and each team submits one assignment and is given one grade. In a sense, each team is its own student for the sake of the team assignment. Only one student from the team needs to submit for the entire team. The entire team shares submissions and late days (one late day used by the team uses a late from **each** student on the team).
+Team Assignments are assignments where students form teams and each team submits one assignment and is given one grade. In a sense, each team is its own student for the sake of the team assignment. Only one student from the team needs to submit for the entire team. The entire team shares submissions and late days (one late day used by the team uses a late day from **each** student on the team).
 
 ![](/images/team_submission.png)
 
