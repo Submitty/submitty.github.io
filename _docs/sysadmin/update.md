@@ -98,7 +98,7 @@ page.**
 
 
 5.  ```
-    sudo bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/CONFIGURE_SUBMITTY.sh
+    sudo python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/CONFIGURE_SUBMITTY.py
     ```
 
     This script will ask you to interactively confirm some system
