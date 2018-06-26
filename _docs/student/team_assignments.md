@@ -82,3 +82,6 @@ and procedures for team membership management after the team lock
 date.
 
 ![](/images/team_manage_3.png)
+
+
+See also the [Instructor Team Assignment](../instructor/team_assignment.md) documentation.

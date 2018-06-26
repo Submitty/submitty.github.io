@@ -3,6 +3,9 @@ category: Instructor
 title: Team Assignments
 ---
 
+See also the [Student Team Assignment](../instructor/team_assignment.md) documentation.
+
+
 ### Creating a Team Assignment
 
 To create a team assignment, simply select “Yes” under the “Is this a team assignment?” section when creating a gradeable.
@@ -32,3 +35,6 @@ After opening grading for the team assignment, there are two different ways inst
 Once a team has been made, the ```Import Teams Members``` button becomes ```Export Teams Members```, and clicking it will download a csv with the current teams, which can then be imported into another team assignment.
 
 ![](/images/team_export.png)
+
+
+
