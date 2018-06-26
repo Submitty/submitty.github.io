@@ -1,6 +1,6 @@
 ---
 category: Student
-title: Team Assignments for Students
+title: Team Assignments
 ---
 
 ### What are Team Assignments?
@@ -30,6 +30,7 @@ Once you are on a team, you can view your teammates through the “Manage Team�
 ![](/images/team_manage.png)
 
 ### Seek Team/Partner
+
 When a user clicks the ```Seek Team/Partner``` button, they will show up in the table below. From here, other users are able to invite them through the “Invite new teammates by their user ID” interface documented above.
 
 ![](/images/team_seeking.png)
@@ -43,7 +44,7 @@ If you receive an invite, it will be shown next to who sent the invite on the ma
 
 ### Locked Teams
 
-The instructor can at any time lock the teams. The manage team button will then change to a view team button. Once that happens, you will be unable to change your team.
+Your instructor can at any time lock the teams. The manage team button will then change to a view team button. Once that happens, you will be unable to change your team.
 
 ![](/images/team_manage_2.png)
 
