@@ -3,7 +3,7 @@ category: Instructor
 title: Team Assignments
 ---
 
-See also the [Student Team Assignment](../instructor/team_assignments) documentation.
+See also the [Student Team Assignment](../student/team_assignments) documentation.
 
 
 ### Creating a Team Assignment
