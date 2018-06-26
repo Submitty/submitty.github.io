@@ -20,8 +20,8 @@ Only one team member needs to upload the final submission for the team.
 As you're working one or more team members may submit different versions of the assignment,
 and by default, only the most recent submission will be graded by the
 TA/instructor and count towards your final semester grade.
-The team shares a submission version / timestamp history --
-see also [Managing Versions / Multiple Submissions](managing_versions),
+The team shares a submission version and timestamp history --
+see also [Managing Versions / Multiple Submissions](managing_versions).
 
 All members of the team can review the submission files, the
 autograding results, and the TA/instructor grade.  Everyone on the
@@ -51,17 +51,18 @@ addresses through the “Manage Team” portal.
 
 ### Seek Team/Partner
 
-When you click on the ```Seek Team/Partner``` button, your name, user ID, and email address will be shown
-to all other students in the course.  
-This will enable other students/teams to contact you and invite you to join their team.
+When you click on the ```Seek Team/Partner``` button, your name, user
+ID, and email address will be shown to all other students in the
+course.  This will enable other students/teams to contact you and
+invite you to join their team.
 
 ![](/images/team_seeking.png)
 
 ### Joining a Team
 
-If you receive an invite to join a team, the user ID of the student who sent the invite will be displayed.
-All you have to do is select "Accept" to join
-the team.
+If you receive an invite to join a team, the user ID of the student
+who sent the invite will be displayed.  All you have to do is click
+"Accept" to join the team.
 
 ![](/images/team_invitations_2.png)
 
@@ -75,7 +76,7 @@ team.
 
 ![](/images/team_manage_2.png)
 
-If you forgot to create or form a team before the team lock date, you
+If you forgot to create your team or invite all team members to your team before the team lock date, you
 may only accept invitations to existing teams sent before the lock date or
 form a "team of one" that contains only yourself.  Consult the course
 syllabus and/or specific assignment instructions regarding penalties
