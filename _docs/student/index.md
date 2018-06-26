@@ -16,4 +16,4 @@ title: Student
 
 [Reviewing TA Grades](reviewing_ta_grades)
 
-
+[Team Assignments](team_assignments)
