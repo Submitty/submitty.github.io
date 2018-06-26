@@ -7,25 +7,27 @@ title: Team Assignments
 
 ![](/images/team_navigation.png)
 
-Your instructor will either assign teams or you may be asked to form a
-team with your classmates.  Once your team is formed, any member of
-the team can submit for the team.  Team submission and review of
-autograding & TA grading results is similar to individual submission.
+Your instructor will either assign you and your classmates to teams or
+you will be asked to form a team with your classmates on your own.
+Consult the course syllabus and specific assignment instructions for
+information regarding minimum or maximum team size, etc.  Once your
+team is formed, any member of the team can submit for the team.  Team
+submission and review of autograding & TA grading results is similar
+to individual submission.
 
-Only one team member needs to upload the submission for the team.
-Multiple team members can submit different versions of the assignment,
+
+Only one team member needs to upload the final submission for the team.
+As you're working one or more team members may submit different versions of the assignment,
 and by default, only the most recent submission will be graded by the
-TA/instructor.  The team shares a submission version history and
-timestamps --
-see also [Managing Versions / Multiple Submissions](managing_versions.md),
+TA/instructor and count towards your final semester grade.
+The team shares a submission version / timestamp history --
+see also [Managing Versions / Multiple Submissions](managing_versions),
 
-All members can review the submission files, the autograding results,
-and the TA/instructor grade.  Everyone on the team receives
-the same grade.
-
-Also note that if late days are allowed for the assignment and the
-team submits 1 day late, every member of the team will be charged one
-[late days](late_days.md).
+All members of the team can review the submission files, the
+autograding results, and the TA/instructor grade.  Everyone on the
+team will receive the same grade.  Note that if [late days](late_days) are allowed
+for the assignment and the team submits 1 day late, every member of
+the team will be charged one late day.
 
 
 
@@ -84,4 +86,4 @@ date.
 ![](/images/team_manage_3.png)
 
 
-See also the [Instructor Team Assignment](../instructor/team_assignment.md) documentation.
+See also the [Instructor Team Assignments](../instructor/team_assignments) documentation.
