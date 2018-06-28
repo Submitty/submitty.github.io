@@ -115,4 +115,21 @@ you need to do?
   hopefully, in short order, approving that the code be merged into
   the master branch.
 
+### How To Edit Submitty.org
+
+If you want to add documentation to Submitty.org here's what you do.
+
+  * If you haven't already, you'll need to clone the git repo of 
+    Submitty.org
+
+    * The git repo is named submitty.github.io and the repo path 
+      Submitty/submitty.github.io
+
+  * After cloning the repo, go into the _docs folder. You will see a folder 
+    representing each Major catagory on Submitty.org
+
+  * Navigate to whichever page you want to edit and open it in your text editor of choice. 
+    The files are written in Markdown.
+
+  * After you are done editing, you can push the changes directly to master
 
