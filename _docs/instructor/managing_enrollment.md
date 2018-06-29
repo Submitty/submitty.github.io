@@ -25,6 +25,8 @@ Below are the instructions to manually add students who are not
 traditionally registered, to immediately add a student who registered
 late, or if the feed is not available for your course.
 
+See also [System Administrator / Student Auto Feed](../sysadmin/student_auto_feed)
+
 
 ### Add students one-at-a-time
 
@@ -92,11 +94,3 @@ late, or if the feed is not available for your course.
 
 
 
-### Scripts to facilitate automated registration and account creation
-
-
-NOTE:  See scripts in:
-
-[Submitty/SysadminTools](https://github.com/Submitty/SysadminTools)
-
-_TODO: FILL IN MORE DOCUMENTATION_
