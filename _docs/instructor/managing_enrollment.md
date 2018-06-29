@@ -26,79 +26,77 @@ traditionally registered, to immediately add a student who registered
 late, or if the feed is not available for your course.
 
 
-### For course NOT REQUIRING subversion repositories:
+### Add students one-at-a-time
 
-1. Edit `/var/local/submitty/instructors/authlist` to contain a list of
-   new userids to add (one per line)
+1.  Instructors can add students to their course from the "Students"
+    tab at the top black bar of their course page.
 
-2. Execute: 
+2.  Click on the "New Student" button in the upper right.  Fill out
+    the information requested.  The User ID cannot be edited after the
+    student is created.  The other fields can be edited later be
+    clicking on the pencil icon for that student.
 
-   ```
-   sudo /var/local/submitty/bin/authonly.pl
-   ```
+3.  If your Submitty installation uses database authentication, you will specify the
+    student's initial password on this page and they can change it
+    later.
 
-   _NOTE: When you need to add a few late add students to your course,
-   you only need to put the userids for the new accounts in this file.
-   All previously added accounts are unchanged.  Similarly, if you
-   include the userid of a student who already has an account, it will
-   not change that account._
+    Students can change their preferred first name and their password
+    from the main submitty page (from any course page, click on
+    "Submitty" in the breadcrumb bar, in the top left of the screen.
 
-   _When finished creating accounts, delete all of the names from the
-   file, so it is ready for the next instructor to add their
-   students._
+    Click on the pencil icon next to your first name to change your
+    preferred first name.
 
+    _TODO: FILL IN INFORMATION ON HOW TO CHANGE YOUR PASSWORD IF
+    DATABASE AUTHENTICATION..._
 
-### For courses REQUIRING subversion repositories:
-
-1. Edit `/var/local/submitty/instructors/svnlist` to contain a list of new
-   userids to add (one per line).
-
-2. Execute:
-
-   ```
-   sudo /var/local/submitty/bin/new.svnuser.pl
-   ```
-
-   If there are no errors, then execute:
-
-   ```
-   sudo apache2ctl graceful
-   ```
-
-   _See also note above._
+    Note: If your Submitty installation is using PAM authentication
+    the option to change your password through Submitty is not
+    available.  Your sysadmin will let you know if and how changing
+    your password is facilitated.
 
 
-### Add students to database (allows TA grading):
+4.  If your Submitty installation uses PAM authentication...
 
-1. Get the .xlsx spreadsheet with student registration details for
-   your course.
+    _TODO: FILL IN INFORMATION ON HOW TO CREATE THE ACCOUNT_
 
-2. Make sure it only contains the header row, and a row for each
-   student in your class (don't delete the header row, don't delete
-   any columns).
+    _TODO: FILL IN INFORMATION ON HOW TO SPECIFY INITIAL STUDENT PASSWORD_
 
-    * __RPI Computer Science Instructors:__
-    
-        * Do _not_ edit the class list spreadsheet as given to you by
-          a department administrative assistant.
+    _TODO: FILL IN INFORMATION ON HOW STUDENTS CAN OR CANNOT CHANGE THEIR PASSWORD_
 
-        * PLEASE NOTE THAT THIS IS CURRENTLY BROKEN; ONLY USE THE CSV
-          UPLOAD SOLUTION HERE FOR THE TIME BEING.  You may upload
-          the XLSX spreadsheet as is.  A CSV conversion of the unedited
-          spreadsheet is also acceptable, but not mandatory.
 
-    * __Instructors at other Universities:__ 
+### Add students by bulk file (.csv) upload
 
-      Your sysadmin should configure the Submitty grading system as to
-      what columns of your class list represent the _students'
-      enrolled section ID_, _students' first name_, _student's last
-      name_, and _students' university e-mail account_ (currently how
-      the computer systems login ID is determined).  Please contact
-      your dept. sysadmin if you are having problems with uploading
-      your spreadsheet.
-     
-3. Log into the hwgrading website.  (You must be an administrator for
-   that course.)
+1.  Instructors can add students in bulk to their course from the
+    "Students" tab at the top black bar of their course page.
 
-4. Select "System Management", "Upload Classlist", and then Browse to
-   select the file.
+2.  Prepare a comma separated values file with 6 columns:
+
+    '''
+    username, first name, last name, email, registration section, preferred first name
+    '''
+
+    Preferred first name is optional.
+    Registration section can be null.
+    Do not use a header row.
+
+    _TODO: IF USING DATABASE AUTHENTICATION, HOW DO WE SPECIFY THE PASSWORD?_
+
+3.  Click on the "Upload Classlist" button in the upper right.  Select
+    your prepared .csv file and press "Submit"
+
+
+4.  If your Submitty installation uses PAM authentication...
+
+    _TODO: FILL IN INFORMATION ON HOW TO CREATE THE ACCOUNT_
+
+
+
+### Scripts to facilitate automated registration and account creation
+
+
+NOTE:  See scripts in:
+
+[Submitty/SysadminTools](https://github.com/Submitty/SysadminTools)
+
+_TODO: FILL IN MORE DOCUMENTATION_
