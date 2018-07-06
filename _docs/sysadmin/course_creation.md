@@ -43,7 +43,7 @@ order: 5
    adduser <TA> <COURSE>_tas_www
    ```
 
-6. Add special users `hwphp`, `hwcron`, and `hwcgi` to the `<COURSE>_tas_www` group:
+6. Add special users `submitty_php`, `submitty_daemon`, and `submitty_cgi` to the `<COURSE>_tas_www` group:
 
    ```
    adduser submitty_php <COURSE>_tas_www
@@ -51,7 +51,7 @@ order: 5
    adduser submitty_cgi <COURSE>_tas_www
    ```
 
-   _NOTE: After adding the `hwphp` user to a new course group, you'll
+   _NOTE: After adding the `submitty_php` user to a new course group, you'll
    need to restart fpm to ensure that the webpage sees the change:_
 
    ```
@@ -61,7 +61,7 @@ order: 5
 
 7. Give permissions to create new users and update apache configurations
 
-   Add the instructor (and head TA) to the course_builders group:
+   Add the instructor (and head TA) to the submitty_course_builders group:
 
       ```
       adduser <INSTRUCTOR> submitty_course_builders
@@ -109,8 +109,8 @@ order: 5
 
    _Note: The TA group must contain the head instructor, any other
    instructors or head TAs who will help with configuration or builds
-   of the homework, and the special users `hwphp`, `hwcron`, and `hwcgi`.  Also
-   the instructor must be part of the `course_builders` group._
+   of the homework, and the special users `submitty_php`, `submitty_daemon`, and `submitty_cgi`.  Also
+   the instructor must be part of the `submitty_course_builders` group._
 
    _Note: You will sometimes need to restart PHP-FPM after adding a course._
    ```

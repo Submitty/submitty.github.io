@@ -57,8 +57,8 @@ is checked in the following way:
 
 Note: If you're using PAM, `authenticate.py` relies on the same method of checking PAM as Submitty (making a
 call to `http(s)://SUBMITTY_URL/cgi-bin/pam_check.cgi`), which requires that `authenticate.py` writes out a file
-that then `hwcgi` can read to check against PAM. As such, you'll have to add `hwcgi` to the `www-data` group:
-`useradd hwcgi www-data`. `install_system.sh` should handle this step for you.
+that then `submitty_cgi` can read to check against PAM. As such, you'll have to add `submitty_cgi` to the `www-data` group:
+`useradd submitty_cgi www-data`. `install_system.sh` should handle this step for you.
 
 #### Generating Repositories
 

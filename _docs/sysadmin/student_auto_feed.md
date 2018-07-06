@@ -199,11 +199,11 @@ These options are set in `config.php`.
 #### Database Connection<a name="config_database"></a>
 ```php
 define('DB_HOST',     'submitty.cs.myuniversity.edu');
-define('DB_LOGIN',    'hsdbu');
+define('DB_LOGIN',    'submitty_dbuser');
 define('DB_PASSWORD', 'DB.p4ssw0rd');
 ```
 
-These options specify the login to the Submitty database for the hostname of the database, the user login (typically `hsdbu`), and the password (same as used in Submitty setup).
+These options specify the login to the Submitty database for the hostname of the database, the user login (typically `submitty_dbuser`), and the password (same as used in Submitty setup).
 
 **IMPORTANT** -- Without this configuration, the auto feed cannot add or update course enrollments.
 
