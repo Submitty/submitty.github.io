@@ -80,10 +80,6 @@ access to run the commands below.
    submitted by students) and in the batch queue (items sent for
    reprocessing by any instructor).  
 
-   _Note that currently typical instructor users cannot access the
-   details of the interactive queue, thus only the status of the batch
-   queue is presented._
-
    It is often helpful to combine these two commands, e.g.:
 
    ```
