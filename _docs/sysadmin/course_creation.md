@@ -7,7 +7,7 @@ order: 5
 ### UNIX Users and Groups
 
 1. Create local user accounts for the instructor and TAs for this course.
- 
+
 2. Create new groups for this course (the exact names are not prescribed):
 
    ```
@@ -23,9 +23,9 @@ order: 5
    addgroup <COURSE>_archive
    ```
 
-   Our policy is that all current / recent / future instructors for a course are in the archive group and permissions 
-   for all folders and files from old semesters are changed to allow read only access by the archive group. If a head 
-   TA will be running plagiarism detection or needs access to old files, the head TA will be added to the archive 
+   Our policy is that all current / recent / future instructors for a course are in the archive group and permissions
+   for all folders and files from old semesters are changed to allow read only access by the archive group. If a head
+   TA will be running plagiarism detection or needs access to old files, the head TA will be added to the archive
    group for that semester, but by default head TAs are not added to the archive group.
 
 
@@ -46,16 +46,16 @@ order: 5
 6. Add special users `hwphp`, `hwcron`, and `hwcgi` to the `<COURSE>_tas_www` group:
 
    ```
-   adduser hwphp <COURSE>_tas_www
-   adduser hwcron <COURSE>_tas_www
-   adduser hwcgi <COURSE>_tas_www
+   adduser submitty_php <COURSE>_tas_www
+   adduser submitty_daemon <COURSE>_tas_www
+   adduser submitty_cgi <COURSE>_tas_www
    ```
 
    _NOTE: After adding the `hwphp` user to a new course group, you'll
    need to restart fpm to ensure that the webpage sees the change:_
 
    ```
-   sudo service php7.0-fpm restart   
+   sudo service php7.0-fpm restart
    ```
 
 
@@ -64,7 +64,7 @@ order: 5
    Add the instructor (and head TA) to the course_builders group:
 
       ```
-      adduser <INSTRUCTOR> course_builders
+      adduser <INSTRUCTOR> submitty_course_builders
       ```
 
 
@@ -75,7 +75,7 @@ order: 5
    sudo mkdir /var/local/submitty/private_course_repositories/<COURSE_NAME>
    sudo chown -R <INSTRUCTOR>:<COURSE> /var/local/submitty/private_course_repositories/<COURSE_NAME>
    sudo chmod -R 770 /var/local/submitty/private_course_repositories/<COURSE_NAME>
-   sudo chmod -R g+s /var/local/submitty/private_course_repositories/<COURSE_NAME> 
+   sudo chmod -R g+s /var/local/submitty/private_course_repositories/<COURSE_NAME>
    ```
 
 
@@ -99,21 +99,21 @@ order: 5
 2. Run the [create_course.sh script](https://github.com/Submitty/Submitty/blob/master/bin/create_course.sh)
    to create each new course.  For example:
 
-   ``` 
-   sudo /usr/local/submitty/sbin/create_course.sh <SEMESTER> <COURSE> smithj <COURSE>_tas_www 
+   ```
+   sudo /usr/local/submitty/sbin/create_course.sh <SEMESTER> <COURSE> smithj <COURSE>_tas_www
    ```
 
    This creates a course for the Fall 2016 semester, with course ID
    `<COURSE>`, head instructor `smithj` and TA group
-   `<COURSE>_tas_www`.  
+   `<COURSE>_tas_www`.
 
    _Note: The TA group must contain the head instructor, any other
    instructors or head TAs who will help with configuration or builds
    of the homework, and the special users `hwphp`, `hwcron`, and `hwcgi`.  Also
    the instructor must be part of the `course_builders` group._
-   
+
    _Note: You will sometimes need to restart PHP-FPM after adding a course._
-   ``` 
+   ```
    sudo service php7.0-fpm restart
    ```
 
@@ -121,10 +121,10 @@ order: 5
    with initial files in the data directory.  For this example (if you
    chose the default data directory location) the directory files will
    be here:
- 
-   ``` 
-   /var/local/submitty/courses/<SEMESTER>/<COURSE>/ 
-   ```  
+
+   ```
+   /var/local/submitty/courses/<SEMESTER>/<COURSE>/
+   ```
 
    The create course script also creates and populates the course
    database.  You can confirm that the database was created and
@@ -156,7 +156,7 @@ order: 5
 
    ```
    sudo su postgres
-   psql -d submitty_<SEMESTER>_<COURSE> -c "insert into sections_registration(sections_registration_id) values(<SECTION>);"
+   psql -d submitty -c "insert into courses_registration_sections values('<SEMESTER>', '<COURSE>', '<SECTION>');"
    ```
 
    (replacing `<SEMESTER>`, `<COURSE>`, and `<SECTION>`)
@@ -205,7 +205,7 @@ order: 5
     It may be necessary to first cleanup connections:
 
     ```
-    sudo su postgres    
+    sudo su postgres
     psql -d postgres -c "SELECT *, pg_terminate_backend(pid) FROM pg_stat_activity WHERE pid <> pg_backend_pid() AND datname = 'submitty_<SEMESTER>_<COURSE>';"
     ```
 
