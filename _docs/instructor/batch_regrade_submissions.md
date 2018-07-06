@@ -10,8 +10,9 @@ assignment configuration was detected after students submitted
 homeworks, you can queue these previous submissions for regrading by
 using the [`regrade.py` script][regrade.py].
 
-Note that all members of the `submitty_course_builders` group have
-limited superuser/sudo access to run the commands below.
+Note that all instructors should be members of the
+`submitty_course_builders` group and thus have limited superuser/sudo
+access to run the commands below.
 
 
 1. This script takes as arguments, one or more paths pointing to the
