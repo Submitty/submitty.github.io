@@ -123,17 +123,7 @@ _Note: These instructions should be run under root/sudo._
    For production, we strongly recommend that you get a certificate
    and use HTTPS/SSL.
 
-7. You need to either comment out the system call to validate.auth.pl
-   in **/var/local/submitty/bin/authonly.pl** and **new.svn.user.pl**
-   or populate **/var/local/submitty/instructors/valid** with a list
-   of valid userids.  If all valid users already have an account on
-   the machine, one way to do this is:
-
-   ```
-   ls /home > /var/local/submitty/instructors/valid
-   ```
-
-8. We recommend that you should leave the PostgreSQL setup unless you know what you're doing.
+7. We recommend that you should leave the PostgreSQL setup unless you know what you're doing.
    However, for the version of PostgreSQL that comes with Ubuntu (16.04), you can
    use UNIX sockets and disable the ability to connect to the DB via TCP. The socket
    improves query responses minorly while disabling TCP can better secure your DB if you don't
@@ -143,8 +133,10 @@ _Note: These instructions should be run under root/sudo._
    `hostssl`. You will also have to modify `/usr/local/submitty/.setup/INSTALL_SUBMITTY.sh` and
    change `DATABASE_HOST` to point to the socket, and then re-run the script.
 
-9. Test apache config with:  `apache2ctl -t`
+8. Test apache config with:  `apache2ctl -t` 
+
     If everything looks ok, restart apache with:  `service apache2 restart'
+
 
 ##### Troubleshooting Installation
 1. I cannot connect to PAM!

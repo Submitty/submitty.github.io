@@ -20,6 +20,8 @@ Run `jekyll` commands through Bundler to ensure you're using the right versions:
 $ bundle exec jekyll serve
 ~~~
 
+For Cygwin, make sure you have ruby-devel installed.
+
 ## Editing
 
 Edition is already optimised for adding, updating and removing documentation pages in CloudCannon.

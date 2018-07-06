@@ -29,3 +29,7 @@ An example is the design for the navigation page
 [Issue #1045](https://github.com/Submitty/Submitty/issues/1045)
 
 ![](https://i.imgur.com/TVk9qpy.jpg)
+
+[Issue #2153](https://github.com/Submitty/Submitty/issues/2153)
+
+![](https://i.imgur.com/suqhXhi.png)

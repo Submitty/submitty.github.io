@@ -173,7 +173,7 @@ order: 5
    Alternatively, students can be automatically added by connecting to
    data from the university registrar:
 
-   [using registration data feed](https://github.com/Submitty/Submitty/tree/master/Docs/student_auto_feed)
+   [using registration data feed](https://github.com/Submitty/SysadminTools/tree/master/student_auto_feed)
 
 
 
