@@ -111,3 +111,17 @@ Alternatively, you can debug in Chrome by using a custom run configuration. Open
 In the `Remote URLs of local files (optional)` section, find `site/public` and give it a `Remote URL` of `http://192.168.56.101`.
 
 Press `OK` to save the run configuration. If you then `Debug` the configuration, it should open a new Chrome process and automatically start debugging, note that this Chrome will not have any of your user data / configuration / extensions. Note that if you `Run` the configuration you will not be able to debug JavaScript.
+
+## Making debugging less annoying
+
+During debugging, you may get decently upset at how often you step into magic methods and class loaders etc. There's an easy fix for this:
+
+Under PhpStorm settings, open `Languages & Frameworks` > `PHP` > `Debug` > `Step Filters`. Check `Skip magic methods` and add the following to `Skipped Methods`:
+- `app\views\AbstractView->__construct`
+- `app\models\AbstractModel->convertName`
+- `app\models\AbstractModel->__call`
+- `app\libraries\Utils::startsWith`
+- `app\models\AbstractModel->app\models\{closure}`
+
+Add the following to `Skipped Files`:
+- Hit the `...` and navigate to `site/vendor/composer/ClassLoader.php`
