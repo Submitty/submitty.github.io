@@ -93,7 +93,7 @@ branch).
   Run this command:
 
   ```
-  sudo bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/bin/recreate_sample_courses.py
+  sudo bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/bin/recreate_sample_courses.sh
   ```   
 
 
