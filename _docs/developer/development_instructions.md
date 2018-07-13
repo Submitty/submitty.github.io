@@ -90,7 +90,7 @@ branch).
   pgAdmin) or else running the below scripts could put things into a
   broken state._
 
-  Run these commands:
+  Run this command:
 
   ```
   sudo bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/bin/recreate_sample_courses.py
