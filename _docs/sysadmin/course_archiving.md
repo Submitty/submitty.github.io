@@ -77,27 +77,32 @@ still a work in progress._
 ### Convert your Course Files & Directories to _Read Only_
 
 To prevent accidental modification, we recommend that you remove write
-access from folders and files for archived courses.  And consider
-switching the group for your course to limit access to the files of
-past semesters to the current instructors only.
+access from folders and files for archived courses.  And we suggest
+you consider switching the group for your course to limit access to
+the files of past semesters to the current instructors only.
 
 ```
 chmod ugo-w /var/local/submitty/courses/<SEMESTER>/<COURSE>
 ```
+
+Note that both of these changes can be nontrivial to revert (since the
+permissions and group ownership are nonuniform within the course
+directory.
 
 _TODO: Add more instructions and notes as the procedure is developed._
 
 
 ### Backup your Data
 
-Now's also a good time to backup the data for the course.
+Now's also a good time to make a final backup the data for the course.
 
 ```
 /var/local/submitty/courses/<SEMESTER>/<COURSE>
 ```
 
-We recommend that you preserve the submission files for the course if
-you plan to run Lichen Plagiarism Detection against past terms.
+We recommend that you preserve the submission files for the course in
+the current location if you plan to run Lichen Plagiarism Detection
+against past terms.
 
 ```
 /var/local/submitty/courses/<SEMESTER>/<COURSE>/submissions
@@ -114,13 +119,13 @@ repositories from:
 Note that a checkout of the files from the repo is stored in this
 folder for each submission click.  _Note: We intend to revise
 autograding to perform a shallow clone of the repository so this will
-not be a full clone with complete repository history.
+not be a full clone with complete repository history._
 
 ```
 /var/local/submitty/courses/<SEMESTER>/<COURSE>/checkout
 ```
 
-And make a dump of the current contents of the database.  
+Finally you may want to make a dump of the current contents of the database.  
 
 _TODO: Add instructions... _
 
