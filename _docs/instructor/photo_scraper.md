@@ -22,42 +22,58 @@ institutions.
 
 
 ### Installation
+
 1.  [Install Python 3](https://www.python.org/downloads/)
 
-2.  [Install Selenium](http://selenium-python.readthedocs.io/installation.html) (in terminal/command prompt)
+
+2.  [Install PIP](https://pip.pypa.io/en/stable/installing/), the Python package manager
+
+    [step-by-step instructions for Windows 10](https://matthewhorne.me/how-to-install-python-and-pip-on-windows-10/)
+
+
+3.  [Install Selenium](http://selenium-python.readthedocs.io/installation.html) (in terminal/command prompt)
     ```
     pip3 install selenium
     ```
 
-3.  Install Chromedriver (in terminal/command prompt)
 
-    [Windows:](https://sites.google.com/a/chromium.org/chromedriver/downloads)
-    ```
-    Download and put chromedriver.exe in C:\Windows
-    ```
-    MacOS:
+4.  Install Chromedriver (in terminal/command prompt)
+
+    On Windows:
+    [Download chromedriver.exe](https://sites.google.com/a/chromium.org/chromedriver/downloads)
+    and put it in C:\Windows
+
+    On MacOS:
     ```
     brew install chromedriver
     ```
-    Note: Make sure Chrome browser, Chromedriver, and Selenium are all up-to-date.
+
+    _Note: Make sure Chrome browser, Chromedriver, and Selenium are all up-to-date._
+
 
 4.  Install requests
+
     ```
     pip3 install requests
     ```
-    If using an older version of Python 3 (< Python 3.4), user may need to install requests[security].
+
+    If you're using an older version of Python 3 (< Python 3.4), you may need to install requests[security].
     ```
     pip3 install requests[security]
     ```
 
 ### PhotoScraper/RPI_SIS_Photo_Scraper.py
+
 [Download PhotoScraper/RPI_SIS_Photo_Scraper.py](https://github.com/Submitty/InstructorTools)
 
-Run the python file in terminal/command prompt in the directory the file is located:
+Doubleclick or run the python file in terminal/command prompt in the directory the file is located:
+
 ```
 python3 RPI_SIS_Photo_Scraper.py
 ```
+
 This will prompt the user to type in responses on the command-line.
+
 
 ### Example Photo Scraping
 
