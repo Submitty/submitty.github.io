@@ -29,7 +29,7 @@ still a work in progress._
     ```
 
 
-2. View all of the courses and their current stat:
+2. View all of the courses and their current status:
 
    ```
    select * from courses;
@@ -41,11 +41,11 @@ still a work in progress._
    select * from courses where semester='s18';
    ```
 
-   status=1 means the course is active.  All student users assigned to
-   a non-NULL registration section, and all limited access graders,
-   full access graders, and instructors can view the course.
+   *status = 1* means the course is active.  All student users
+   assigned to a non-NULL registration section, and all limited access
+   graders, full access graders, and instructors can view the course.
 
-   status=2 means the course is archived.  Only instructor users for
+   *status = 2* means the course is archived.  Only instructor users for
    that course can view the course.  _TODO: We intend for this access
    to be read only, but that is currently not implemented._
 
