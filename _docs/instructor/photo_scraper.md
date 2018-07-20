@@ -100,4 +100,4 @@ This will prompt the user to type in responses on the command-line.
     ```
     For Y, all the photos will be downloaded to their respective session/course_section
     folders in the current directory the RPI_SIS_Photo_Scraper.py file is located. In this example,
-    the folders the photos would be downloaded to is Fall 2017/CSCI 1200 02: DATA STRUCTURES, 43234 (30).
+    the folders the photos would be downloaded to is Fall-2017/CSCI-1200-02.
