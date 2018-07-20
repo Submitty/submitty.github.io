@@ -4,9 +4,9 @@ category: System Administrator
 ---
 
 After the term is completed you can archive the course.  This is done
-on per course, so if it is easy to keep one or more courses 'open' to
-allow a student to finish an incomplete, etc.  Note: This procedure is
-still a work in progress. 
+per course, so it is easy to keep one or more courses 'open' to
+allow a student to finish an incomplete, etc.  _Note: This procedure is
+still a work in progress._
 
 ### Edit the Master Submitty Database Status
 
@@ -29,10 +29,16 @@ still a work in progress.
     ```
 
 
-2. View your the courses and their current status:
+2. View all of the courses and their current stat:
 
    ```
    select * from courses;
+   ```
+
+   or:
+
+   ```
+   select * from courses where semester='s18';
    ```
 
    status=1 means the course is active.  All student users assigned to
@@ -41,7 +47,7 @@ still a work in progress.
 
    status=2 means the course is archived.  Only instructor users for
    that course can view the course.  _TODO: We intend for this access
-   to be read only, but that is currently not implemented.>
+   to be read only, but that is currently not implemented._
 
    Other status codes may be defined in the future.  
 
@@ -68,29 +74,51 @@ still a work in progress.
 
 ### Convert your Course Files & Directories to _Read Only_
 
-We recommend that you remove the `w`, write bit from folders and files
-for your course.  And consider switching the group for your course to
-limit access to the files of past semesters to the current instructors
-only.
+To prevent accidental modification, we recommend that you remove write
+access from folders and files for archived courses.  And consider
+switching the group for your course to limit access to the files of
+past semesters to the current instructors only.
 
 ```
-/var/local/submitty/courses/<SEMESTER>/<COURSE>
+chmod ugo-w /var/local/submitty/courses/<SEMESTER>/<COURSE>
 ```
+
+_TODO: Add more instructions and notes as the procedure is developed._
 
 
 ### Backup your Data
 
-Now's a good time to backup the data for the course.  Make a dump of
-the current contents of the database.  And copy the tree from
+Now's also a good time to backup the data for the course.
 
 ```
 /var/local/submitty/courses/<SEMESTER>/<COURSE>
 ```
 
-You may also want to backup the relevant version control system (VCS)
+We recommend that you preserve the submission files for the course if
+you plan to run Lichen Plagiarism Detection against past terms.
+
+```
+/var/local/submitty/courses/<SEMESTER>/<COURSE>/submissions
+```
+
+
+You may also want to backup and/or delete the relevant version control system (VCS)
 repositories from:
 
 ```
 /var/local/submitty/vcs/
 ```
+
+Note that a checkout of the files from the repo is stored in this
+folder for each submission click.  _Note: We intend to revise
+autograding to perform a shallow clone of the repository so this will
+not be a full clone with complete repository history.
+
+```
+/var/local/submitty/courses/<SEMESTER>/<COURSE>/checkout
+```
+
+And make a dump of the current contents of the database.  
+
+_TODO: Add instructions... _
 
