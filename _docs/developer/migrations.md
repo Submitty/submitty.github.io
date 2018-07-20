@@ -13,10 +13,10 @@ The migrations are applied automatically when you run:
 sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh
 ```
 
-See also: [System Administration/Update Submitty](../sysadmin/update)
+See also: [System Administration / Update Submitty](../sysadmin/update)
 
 
-## Manually Applying Migrations
+### Manually Applying Migrations
 
 To manually run or apply all new, unapplied migrations to your system
 and existing courses you can run:
@@ -38,11 +38,12 @@ sudo python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/migration/migrator.py -h
 ```
 
 
-## Rolling Back or Reverting a Migration
+### Rolling Back or Reverting a Migration
 
-To undo a migration (useful during development).  These commands will
-undo the most recent migration (in chronological order) to the
-system installation, master database, or course database, respectively:
+It is useful during development to rollback or undo a migration.
+The commands below will undo the most recent migration (in
+chronological order) to the system installation, master database, or
+course database, respectively:
 
 ```
 sudo python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/migration/migrator.py -e system rollback
@@ -57,7 +58,7 @@ sudo python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/migration/migrator.py -e 
 ```
 
 
-## Writing New Migrations
+### Writing New Migrations
 
 If your bugfix or new feature requires a change to the system
 installation, or the master or course database, or the course
@@ -65,19 +66,19 @@ directory or file structure:
 
 
 1.  You should make the necessary edits to build a new system from
-    scratch in:
+    scratch in the relevant files, e.g.:
 
-    GIT_CHECKOUT/Submitty/.setup/install_system.sh, or the files in
-    GIT_CHECKOUT/Submitty/.setup/distro_setup/, or the database schemas
+    `GIT_CHECKOUT/Submitty/.setup/install_system.sh`, or the files in
+    `GIT_CHECKOUT/Submitty/.setup/distro_setup/`
 
-    Or create new databases from scratch by editing the full schemas:
+    Or make changes to the complete database schema(s):
 
-    GIT_CHECKOUT/Submitty/migration/data/submitty_db.sql
-    GIT_CHECKOUT/Submitty/migration/data/course_tables.sql 
+    `GIT_CHECKOUT/Submitty/migration/data/submitty_db.sql`
+    `GIT_CHECKOUT/Submitty/migration/data/course_tables.sql` 
 
 
 2.  And you should also prepare a migration file of the appropriate
-    type (system, master, or course) to update an existing system and
+    type (`system`, `master`, or `course`) to update an existing system and
     existing courses.  A migration is a python file with 2 functions,
     `up` (called for the `migrate` command) and `down` (called for the
     `rollback` command).  Run the appropriate command below to create
@@ -95,16 +96,19 @@ directory or file structure:
     sudo python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/migration/migrator.py -e course create <MY_MIGRATION_NAME>
     ```
 
+    A new file will be created in the
+    appropriate subfolder of
+    `/usr/local/submitty/GIT_CHECKOUT/Submitty/migration/migrations/`.
     The file will be named with the current date (year, month, day,
-    hour, minute, second) and string migration name you supplied.
+    hour, minute, second) and migration name string you supplied.
 
-    See the existing migrations for examples.
+    See the [existing migrations](https://github.com/Submitty/Submitty/tree/master/migration/migrations) for examples.
 
-    In general, your down migration should only undo the necessary
+    NOTE:  In general, your `down` migration should only undo the necessary
     changes to make earlier versions of the Submitty software work.
-    If your migration is adding a column to an existing table in the
+    For example, if your migration is adding a column to an existing table in the
     database, it is probably not necessary or desirable to delete that
-    data in the `down` function.
+    data in the `down` function.  Your `down` function may be empty.
 
     Thus, it is important to ensure that the `up` migration can be
     re-run.  For example, your `up` function should not crash on adding the
