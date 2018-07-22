@@ -43,7 +43,7 @@ communication between students and the teaching staff.
 
    **_Merging Threads_** Often times students will ask the same question. Members of the teaching staff
    have the ability to merge similar threads. When merging a thread t1 into another thread t2,
-   it is only possible to merge t1 into t2 if t2s last post occurred after t1 was created.  
+   it is only possible to merge t1 into t2 if t2s last post occurred before t1 was created.
 
    **_Image Attachments_** users can upload up to 5 images per post.
 
