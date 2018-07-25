@@ -1,8 +1,36 @@
 ---
-title: Photo Scraper
+title: Student Photos
 category: Instructor
 order: 9
 ---
+
+In a large class, it can be difficult for instructors, full-access graders, and
+limited-access graders to learn student names. Now, there is an option to be able
+to look up a picture of each student. The Student Photos page can be accessed on
+the course main page with a blue button. The instructor can upload photos of
+students here and view all students’ photos. Full-access graders and
+limited-access graders also have access to this page. Full-access graders can
+see everyone’s photos while limited-access graders can only see the photos of
+the students in the registration sections they are assigned to.  
+
+* Without Photos:  
+  ![](/images/student_photos_empty_pic.png)  
+
+* Uploaded Photos:  
+  ![](/images/course_materials_uploaded_pic.png)  
+
+* ![](/images/student_photos_upload_button.png)  
+  This button is only available to instructors.
+  Clicking on it leads to a pop-up form to upload files:
+  ![](/images/student_photos_upload_form.png)  
+  PNG Images or zip files of PNG images can be dragged-and-dropped or added by
+  clicking in the box. They cannot exceed 10 mb or 10240 kb.
+  After hitting submit, please wait a couple seconds and then refresh the page.
+
+
+
+
+### Photo Scraper
 
 This tool scrapes student photos from Rensselear's Student Information System
 (SIS) portal that allows instructors to access the current and past
