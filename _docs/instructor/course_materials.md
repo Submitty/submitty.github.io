@@ -38,7 +38,7 @@ students can download the files or click on the pop-up window icon to view the f
       By default, all files will be uploaded to course_materials (the main directory level).
       However, there is an option that allows the instructor to add any sub-directories they wish.
 
-    * ![](/images/course_materials_unzip_checkbox.png)  
+    * ![](/images/course_materials_checkbox.png)  
       By default, this checkbox is unchecked. Clicking on it will unzip any zip files added into the box.
 
     * ![](/images/drag_and_drop.png)  

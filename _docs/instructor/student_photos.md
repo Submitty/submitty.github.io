@@ -16,7 +16,8 @@ the students in the registration sections they are assigned to.
 * Without Photos:  
   ![](/images/student_photos_empty_pic.png)  
 
-* Uploaded Photos:  
+* Photos Uploaded:  
+  _Note: Please use Google Chrome_  
   ![](/images/student_photos_uploaded_pic.png)  
 
 * ![](/images/student_photos_upload_button.png)  
@@ -25,7 +26,8 @@ the students in the registration sections they are assigned to.
   ![](/images/student_photos_upload_form.png)  
   PNG Images or zip files of PNG images can be dragged-and-dropped or added by
   clicking in the box. They cannot exceed 10 mb or 10240 kb.
-  After hitting submit, please wait a couple seconds and then refresh the page.
+  After hitting submit, if it does not automatically refresh after a couple seconds,
+  please refresh the page.
 
 
 
