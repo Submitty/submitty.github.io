@@ -31,7 +31,7 @@ students can download the files or click on the pop-up window icon to view the f
 
 5.  ![](/images/course_materials_upload_button.png)  
     This button is only available to instructors. Clicking on it leads to a pop-up form to upload files:
-    ![](/images/course_materials_upload_form.png)
+    ![](/images/course_materials_upload_form_v2.png)
 
 
     * ![](/images/course_materials_folder.png)  
