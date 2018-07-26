@@ -16,11 +16,11 @@ the students in the registration sections they are assigned to.
 * Without Photos:  
   ![](/images/student_photos_empty_pic.png)  
 
-* Photos Uploaded:  
-  _Note: Please use Google Chrome_  
+* Photos Uploaded:    
   ![](/images/student_photos_uploaded_pic.png)  
 
 * ![](/images/student_photos_upload_button.png)  
+  _Note: Please use Google Chrome to upload images._  
   This button is only available to instructors on the top right hand side of the page.
   Clicking on it leads to a pop-up form to upload files:
   ![](/images/student_photos_upload_form.png)  
