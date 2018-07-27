@@ -5,30 +5,41 @@ order: 9
 ---
 
 In a large class, it can be difficult for instructors, full-access graders, and
-limited-access graders to learn student names. Now, there is an option to look up
-a picture of each student. The Student Photos page can be accessed on
-the course main page with a blue button. The instructor can upload photos of
-students here and view all students’ photos. Full-access graders and
+limited-access graders to learn the names of their students.  The Student Photos page is accessed from
+a blue button at the top of the course main page.  Instructors can upload .png photos of
+their students and view all uploaded students’ photos. Full-access graders and
 limited-access graders also have access to this page. Full-access graders can
-see all students' photos while limited-access graders can only see the photos of
-the students in the registration sections they are assigned to.  
+see photos of all students in the course, while limited-access graders can only see the photos of
+the students in their assigned registration sections.  
 
-* Without Photos:  
+* Prior to photo upload:
   ![](/images/student_photos_empty_pic.png)  
 
-* Photos Uploaded:    
+* After photo upload:
   ![](/images/student_photos_uploaded_pic.png)  
 
-* ![](/images/student_photos_upload_button.png)  
-  _Note: Please use Google Chrome to upload images._  
-  This button is only available to instructors on the top right hand side of the page.
-  Clicking on it leads to a pop-up form to upload files:
-  ![](/images/student_photos_upload_form.png)  
-  PNG Images or zip files of PNG images can be dragged-and-dropped or added by
-  clicking in the box. They cannot exceed 10 mb or 10240 kb.
-  After hitting submit, if it does not automatically refresh after a couple seconds,
-  please refresh the page.
 
+### How to Upload Photos
+
+  * _Note: Please use Google Chrome to upload images._
+
+  * Photos must be .png file format and must be named with the
+    students username (lowercase), e.g., `smithj.png`
+
+  * Click the "Upload Student Photos" button on the top right hand side
+    of the page.  This option is only available to instructors.
+
+    ![](/images/student_photos_upload_button.png)  
+
+  * You may drag and drop or click to launch a file browser.  Select
+    one or more .png files, and/or one or more zip files of .png files.
+  
+    ![](/images/student_photos_upload_form.png)
+
+    The total file size per upload should not exceed 10mb or 10240 kb.
+    
+  * After hitting submit, if it does not automatically refresh after a
+    couple seconds, please refresh the page.
 
 
 
