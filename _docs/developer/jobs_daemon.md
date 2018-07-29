@@ -5,7 +5,7 @@ category: Developer
 
 
 Submitty has a daemon to run various helper jobs.  The system is
-configured by default to run at most 5 jobs in parallel.  When an
+configured by default to run at most five jobs in parallel.  When an
 instructor creates or edits a gradeable, the build script for the
 autograding configuration is automatically placed into this job queue.
 Similarly, when a new plagiarism detection task is created or an
@@ -17,21 +17,21 @@ existing one is edited, a job is placed in the queue.
    `/var/local/submitty/daemon_job_queue/` directory.
 
 
-* To restart the daemon:
+*  To restart the daemon:
 
    ```
    sudo systemctl restart submitty_daemon_jobs_handler
    ```
 
 
-* To stop the daemon:
+*  To stop the daemon:
 
    ```
    sudo systemctl stop submitty_daemon_jobs_handler
    ```
 
 
-* When debugging, it can be helpful to manually run the daemon and
+*  When debugging, it can be helpful to manually run the daemon and
    inspect the output:
 
    ```
@@ -39,14 +39,14 @@ existing one is edited, a job is placed in the queue.
    ```
 
 
-* To start the daemon:
+*  To start the daemon:
 
    ```
    sudo systemctl stop submitty_daemon_jobs_handler
    ```
 
 
-* To check the status of the daemon:
+*  To check the status of the daemon:
 
    ```
    sudo systemctl status submitty_daemon_jobs_handler
