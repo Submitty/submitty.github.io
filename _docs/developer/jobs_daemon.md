@@ -54,4 +54,4 @@ existing one is edited, a job is placed in the queue.
 
 _NOTE: When you re-run `sudo
 /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh`, it will stop and
-restart the jobs daemon if it is running.
+restart the jobs daemon if it is running._
