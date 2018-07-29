@@ -52,6 +52,5 @@ existing one is edited, a job is placed in the queue.
    sudo systemctl status submitty_daemon_jobs_handler
    ```
 
-_NOTE: When you re-run `sudo
-/usr/local/submitty/.setup/INSTALL_SUBMITTY.sh`, it will stop and
+_NOTE: When you re-run `sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh`, it will stop and
 restart the jobs daemon if it is running._

@@ -187,8 +187,7 @@ To do this:
    sudo systemctl status submitty_autograding_worker
    ```
 
-_NOTE: When you re-run `sudo
-/usr/local/submitty/.setup/INSTALL_SUBMITTY.sh`, it will stop and
+_NOTE: When you re-run `sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh`, it will stop and
 restart the autograding shipper and worker if it is running.  (But it
 will not start the scheduler, if it is not currently running.)_
 
