@@ -3,46 +3,56 @@ title: Room Templates
 category: Instructor
 ---
 
+
 _NOTE: This is a work-in-progress._
+
+Room templates works in coordination with the Rainbow Grades
+[Exam Seating](exam_customization).
+
 
 ### Using/Creating Room Templates
 
-There are some templates from rooms at RPI in the repository.
+The repository contains a variety of room templates for the specific facilities at RPI:
+[Sample room template from RPI](https://github.com/Submitty/Submitty/tree/master/site/room_templates)
 
-One needs root access to edit these files on the server.  In order to
-make a new room for your institution, you can simply edit these files
-until the generated template matches what you're looking for.
+These files define the basic geometry of the room including number of
+rows and aisle placement.  These files will produce a vector graphics
+rendering of the room.  These files are similar to each other, but
+with slight tweaks to the curvature and to the number of seats in each
+section.
 
-These are stored in the repo as:
+One needs sudo/root access to edit the room templates or install new
+templates on the server.  In order to make a new room for your
+institution, you can simply edit these files until the generated
+template matches what you're looking for.
 
+Once installed, these files are stored in the repo here:
 `site/room_templates/{building}/{room}.twig`
 
-These files are similar to each other, but with slight tweaks to the
-curvature and to the number of seats in each section.
-
-[Sample room template from RPI](https://github.com/Submitty/Submitty/tree/master/site/room_templates)
 
 
 
 ### Using/Creating Seating Configs 
 
-To configure which seats in the room will be designated as which
-sections, you must upload configs.
-
-The location to place all of the configs for the rooms that will be used for seating is:
-`{course_dir}/uploads/seating/{gradeable_id}/{building}/{room}.json`
+For a specific exam, an instructor can specify which rows of the room
+will be used or skipped, and partition the room into "zones".  The
+instructor will provide a configuration file for each room for each
+quiz/test/exam gradeable.
 
 Some examples of these can be found in the repo:
-
-
 [Sample seating configurations](https://github.com/Submitty/Submitty/tree/master/sample_files/seating_configs)
 
+These files will soon _(fingers crossed)_ be prepared and installed
+by the Rainbow Grades configuration.
+
+Once prepared and installed these files are located here:
+`{course_dir}/uploads/seating/{gradeable_id}/{building}/{room}.json`
 
 
 
 ### Student Seating Assignments
 
-The location where the student generated seating assignments will be placed is:
+Rainbow Grades will The location where the student generated seating assignments will be placed is:
 `{course_dir}/reports/seating/{gradeable_id}/{user_id}.json`
 
 
@@ -61,12 +71,14 @@ The location where the student generated seating assignments will be placed is:
 
 ```
 
+These files will soon _(fingers crossed)_ be prepared and installed
+by the Rainbow Grades configuration.
 
 
+### Selecting the Active Gradeable for Seating Assignments
 
 Once all the templates, configs, and by-user seating assignments are
-in place, the instructor can go the course settings page and select
-that gradeable as the room seating gradeable to use.
+in place, the instructor specifies the gradeable from the Course Settings page:
 
 ![](/images/room_templates_course_settings.png)
 

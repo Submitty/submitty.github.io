@@ -4,7 +4,12 @@ category: Instructor
 order: 14
 ---
 
+
 _NOTE: This is a work-in-progress._
+
+Rainbow Grades Exam Seating works in coordination with the
+[Room Templates](room_templates) interface.
+
 
 1. Add ``"exam_seating"`` to the ``"display"`` array in `customization.json` .
 
