@@ -10,6 +10,14 @@ Room templates works in coordination with the Rainbow Grades
 [Exam Seating](exam_customization).
 
 
+Submitty can assist in assigning specific seats to each student for
+exams.  When a student logs into the course, they will see a custom
+message and diagram describing the time and location of their
+exam.  For example:
+
+![](/images/room_templates_nav_page.png)
+
+
 ### Using/Creating Room Templates
 
 The repository contains a variety of room templates for the specific facilities at RPI:
@@ -82,11 +90,9 @@ in place, the instructor specifies the gradeable from the Course Settings page:
 
 ![](/images/room_templates_course_settings.png)
 
-Then, when a student logs into the course, they will see a message at
-the top of their navigation page telling them when and where the exam
-is.
 
-![](/images/room_templates_nav_page.png)
+
+### Missing / Incomplete Data and Errors
 
 If the building and room names in the student's json file do not match
 the names of the above directories, they will see a message instead of
