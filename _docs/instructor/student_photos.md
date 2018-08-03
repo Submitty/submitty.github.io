@@ -91,6 +91,17 @@ institutions.
     brew install chromedriver
     ```
 
+    On Linux:
+    If you are using Chromium and see `FileNotFoundError: [Errno 2] No such file or directory: 'chromedriver'`, you may need to add it to your path, by adding the following to your ~/.bashrc:
+    ```
+    PATH=$PATH:/usr/lib/chromium-browser
+    ```
+
+    For WSL users you will want to first do the following, then follow the advice above for Linux:
+    ```
+    sudo apt install chromium-browser chromium-chromedriver
+    ```
+
     _Note: Make sure Chrome browser, Chromedriver, and Selenium are all up-to-date._
 
 
