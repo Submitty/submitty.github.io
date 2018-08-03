@@ -1,9 +1,9 @@
 ---
 title: Room Templates
 category: Instructor
-order: 18
 ---
 
+_NOTE: This is a work-in-progress._
 
 ### Using/Creating Room Templates
 

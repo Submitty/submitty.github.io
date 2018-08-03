@@ -4,7 +4,7 @@ category: Instructor
 order: 14
 ---
 
-NOTE: This approach may change in the near future.
+_NOTE: This is a work-in-progress._
 
 1. Add ``"exam_seating"`` to the ``"display"`` array in `customization.json` .
 
