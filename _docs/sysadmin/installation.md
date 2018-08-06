@@ -36,27 +36,23 @@ _Note: These instructions should be run under root/sudo._
    [CONFIGURE_SUBMITTY.sh script](https://github.com/Submitty/Submitty/blob/master/.setup/CONFIGURE_SUBMITTY.sh).
    These questions are:
    1. Database Host
-   2. Database User
-   3. Database Password
+   2. Submitty Database User/Role
+   3. Submitty Database User/Role Password
    4. Timezone
    5. Main Site URL
    6. Version Control System (VCS) URL
    7. Institution Name
    8. Authentication Method (PAM or Database)
 
-   Unless you have a database server already set up, you will most
-   likely just specify `localhost` for the Database Host. You will need
-   to create a DB user to use for the system as well. A basic way to do this
-   would be (Note: change the password for the user):
+   If you already have your database server installed and set up, you
+   will most likely just specify `localhost` for the Database Host.
+   Note: The database user is not a Linux user, just a user/role
+   within the database server.  If you don't already have a role for
+   the submitty database user/role, the script will create that for
+   you with the specified name & password.
 
-   ```
-   su postgres -c "psql -c \"CREATE ROLE submitty_dbuser WITH SUPERUSER CREATEDB CREATEROLE LOGIN PASSWORD 'PASSWORD'\""
-   ```
-
-   and then the DB User would be `submitty_dbuser` and the DB Password would be whatever you set.
-
-   Do not enable debugging unless you are developing code on a non-production
-   machine.
+   NOTE: Do not enable debugging unless you are developing code on a
+   non-production machine.
 
 
 4. Edit PHP Settings
