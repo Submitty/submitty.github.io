@@ -10,11 +10,13 @@ launched by the
 [Department of Computer Science](http://www.cs.rpi.edu/) at
 [Rensselaer Polytechnic Institute](http://www.rpi.edu/).
 
-My GSoC project invovled working on the Plagiarism Detector of Submitty Organization.
+My GSoC project invovled working on the Plagiarism Detector (also called "Lichen") of Submitty Organization.
 Along with my GSoC project, I also worked on implementing some crucial features and fixing bugs.
 Working on various features and bugs throughout Submitty helped me learn even more about Software Development.
 
 Throughout my GSoC journey, I learnt about Working of Plagiarism Detector, Web Techologies, Servers, Travis Testing.
+
+
 
 
 
@@ -26,7 +28,7 @@ Throughout my GSoC journey, I learnt about Working of Plagiarism Detector, Web T
 	Microsoft Language Servers are used by various text editors like Sublime, Atom, etc and it provide the text editor with the features like AutoComplete Suggestion, References, etc. We aimed at sending a file and getting its tokens from the server, but due to no direct client request method for tokens, couldn't integrate Microsoft Language Server.
 	So finally made tokenizers similar to how language server do tokenization internally. This involved exploring codebase of [Cquery language server](https://github.com/cquery-project/cquery), [Palantir Language Server](https://github.com/palantir/python-language-server), and [Java Language Server](https://github.com/georgewfraser/vscode-javac).
 
-	**Link to commits**-
+	**Link to commits (merged)**-
 
 
 	[Python and CPP tokenizers](https://github.com/Submitty/Lichen/commit/00348500a1fbd01f6a14d54d399f6e8f73034e9b)
@@ -47,7 +49,7 @@ Throughout my GSoC journey, I learnt about Working of Plagiarism Detector, Web T
 
 	![](/images/lichen_color_click.png)	
 
-	**Link to commits**-
+	**Link to commits (merged)**-
 
 	[Lichen first draft](https://github.com/Submitty/Submitty/commit/2b6d91b0ac34df21d2991cb935656c90bb5cd9d7)
 
@@ -60,7 +62,7 @@ Throughout my GSoC journey, I learnt about Working of Plagiarism Detector, Web T
 	
 3.	**Implemented backend for New Plagiarism Detector**
 	
-	**Link to commits**-
+	**Link to commits (merged)**-
 
 	[Lichen first draft](https://github.com/Submitty/Submitty/commit/2b6d91b0ac34df21d2991cb935656c90bb5cd9d7)	
 
@@ -68,14 +70,14 @@ Throughout my GSoC journey, I learnt about Working of Plagiarism Detector, Web T
 
 	Automated the plagiarism detector to do various jobs from interface itself. This includes creating configuration file for gradeable for which the plagiarism is to be run, editing configuration, rerunning plagirism detector for a gradeable, delete plagiarism results for a gradeable.
 
-	**Link to commits**-
+	**Link to commits (merged)**-
 
 	[Run lichen plagiarism as submitty daemon job](https://github.com/Submitty/Submitty/commit/fe7128093e69b809e53b93ae97c33dbee8c14612)
 
 
 ### Ongoing task 
 
-1.  **Initial Test Suite for Plagiarism Detector**
+1.  **Initial Test Suite for Plagiarism Detector (no pull request yet)**
 
 
 	I am currently working on testing and debugging of Plagiarism Detector. This involves creating regression test for plagiarism detector. This Regression test will check whether the tokenization, hashing of token sequence and matching of hashes is done correctly. This regression test then will be integrated to travis.
@@ -86,7 +88,7 @@ Throughout my GSoC journey, I learnt about Working of Plagiarism Detector, Web T
 
 1.	**Extended Registration section from numeric to alphanumeric**
 	
-	**Link to commits-**
+	**Link to commits (merged)-**
 
 	[Alphanumeric registraiton section](https://github.com/Submitty/Submitty/commit/3423da9ff01f7ff2f82c237d144b22a1d84b076f)
 
@@ -94,7 +96,7 @@ Throughout my GSoC journey, I learnt about Working of Plagiarism Detector, Web T
 
 	This feature can be used instructor to delete a gradeable provided some constraints are matched.
 
-	**Link to commits-**
+	**Link to commits (merged)-**
 
 	[Delete gradeable feature](https://github.com/Submitty/Submitty/commit/09a2c9247980238763d3e3d71d46fe3796d9068a)
 
@@ -102,7 +104,7 @@ Throughout my GSoC journey, I learnt about Working of Plagiarism Detector, Web T
 
 	This feature help instructor transport the teams from one gradeable to another. This can be used in cases where instructor wants same teams accross many gradeables in course.
 
-	**Link to commits-**
+	**Link to commits (merged)-**
 
 	[Team member export and import feature](https://github.com/Submitty/Submitty/commit/deafde544c23725880eb2a36887f4a8a812af518)
 
@@ -110,13 +112,13 @@ Throughout my GSoC journey, I learnt about Working of Plagiarism Detector, Web T
 
 	This feature allows instructor to rebuild a gradeable from interface itself rather than going to server and running rebuild script there.
 
-	**Link to commits-**
+	**Link to commits (merged)-**
 
 	[Assignments can be rebuild from interface](https://github.com/Submitty/Submitty/commit/33e60f59905e4f12888663448ad3411f7fc5a4f7)
 
-### Commit History (including all commits)
+### Commit History (including all commits which got merged)
 	
 
-[link 1](https://github.com/Submitty/Submitty/commits?author=tushargr)
+[Commits in Submitty/Submitty repo](https://github.com/Submitty/Submitty/commits?author=tushargr)
 
-[link 2](https://github.com/Submitty/Lichen/commits?author=tushargr)
+[Commits in Submitty/Lichen repo](https://github.com/Submitty/Lichen/commits?author=tushargr)
