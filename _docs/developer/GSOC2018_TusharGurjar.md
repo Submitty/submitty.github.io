@@ -122,3 +122,13 @@ Throughout my GSoC journey, I learnt about Working of Plagiarism Detector, Web T
 [Commits in Submitty/Submitty repo](https://github.com/Submitty/Submitty/commits?author=tushargr)
 
 [Commits in Submitty/Lichen repo](https://github.com/Submitty/Lichen/commits?author=tushargr)
+
+
+### Building the project
+
+For building the project, it will require to build complete Submitty System.
+
+1.	Instructions for building Submitty- [link](http://submitty.org/developer/vm_install_using_vagrant)
+
+2.	For using Submitty and its Plagiarism Detector, follow instructions at [Welcome/Tutorial](http://submitty.org/tutorial/) and [Instructor/Plagirism Detection](http://submitty.org/instructor/plagiarism)
+  
