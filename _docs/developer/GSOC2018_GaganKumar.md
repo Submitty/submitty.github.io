@@ -14,9 +14,9 @@ Worked with Submitty on Discussion Forum under Google Summer of Code 2018. *Barb
 
 #### What I learned
 
-I got to work hands on using twig templates along with PHP giving high code reusability and secure code. Using E2E tests reduces a lot of time as compared to testing applications manually. I got exposed to writing complex SQL queries. 
+I got hands-on experience using twig templates along with PHP giving high code reusability and secure code. Using E2E tests reduces a lot of time as compared to testing applications manually. I got exposed to writing complex SQL queries. 
 
-This project helped to inculcate a spirit of teamwork in me and also instilled the coordination, cooperation and management required to work in a team.
+This project helped to inculcate a spirit of teamwork in me and instilled the coordination, cooperation and management required to work in a team.
 
 I also absorbed the importance of code reviews/feedbacks by others as they might have a completely different angle to view the problem.
 
@@ -35,7 +35,7 @@ Submitty has a student-faculty portal named **Discussion Forum**. It can be used
 
   - Thread list paging ([#2473](https://github.com/Submitty/Submitty/pull/2473))
 
-  Forum page has thread list in the left column. However, as the semester grows, the number of threads can dramatically increase the page loading time. Introducing paging in thread list not only decreases the page loading time but it also enhances user experience by loading limited threads in a view at a time .
+  Forum page has thread list in the left column. However, as the semester grows, the number of threads can dramatically increase the page loading time. Introducing paging in thread list not only decreases the page loading time but it also enhances the user experience by loading limited threads in a view at a time.
 
 - Merge Common Threads
   - Forum: Show Merged threads ([#2599](https://github.com/Submitty/Submitty/pull/2599))
@@ -45,7 +45,7 @@ Submitty has a student-faculty portal named **Discussion Forum**. It can be used
 
 - Notifications ([#2591](https://github.com/Submitty/Submitty/pull/2591))
 
-  Notifications are needed so that the user is kept updated about the associated events.  Submitty now supports notifications which get triggered when -
+  Notifications are needed so that the user is kept updated about the associated events. Submitty, now supports notifications which get triggered when -
 
   - There’s a new announcement,
   - Someone replies to your posts,
@@ -62,11 +62,11 @@ Submitty has a student-faculty portal named **Discussion Forum**. It can be used
 
 - Allow students to pin threads ([#1973](https://github.com/Submitty/Submitty/pull/1973))
 
-  It's possible that there are a few threads which students want to monitor closely. Thus, each student can pin the threads of their interest and move them to top in their thread list.
+  It's possible that there are a few threads which students want to watch closely. Thus, each student can pin the threads of their interest and move them to top in their thread list.
 
 - Posts/Threads related
 
-  The code responsible for thread creation form, posts reply form and edit posts/thread form now share a common twig template.
+  The code responsible for thread creation form, posts reply form and edit posts/thread form now shares a common twig template.
 
   - Allow the original author to edit post/thread ([#2301](https://github.com/Submitty/Submitty/pull/2301))
 
@@ -78,9 +78,9 @@ Submitty has a student-faculty portal named **Discussion Forum**. It can be used
 
   - Recover posts/thread  ([#2248](https://github.com/Submitty/Submitty/pull/2248))
 
-    It's possible that after sometime, the instructor wants to recover a post/thread. He can do the same easily just by clicking undelete button attached to any post.
+    It's possible that after some time, the instructor wants to recover a post/thread. He can do the same easily just by clicking the undelete button attached to any post.
 
-  - Multiple Attachments ([#2242](https://github.com/Submitty/Submitty/pull/2242))
+  - Multiple Attachments ([#2243](https://github.com/Submitty/Submitty/pull/2243))
 
     Allowing a user to dynamically add/remove multiple attachments either one by one or multiple at once while creating a thread or replying to a post. Also visually show the attached image as a thumbnail to avoid the mistake of attaching the wrong file. 
 
@@ -108,7 +108,7 @@ Submitty has a student-faculty portal named **Discussion Forum**. It can be used
 
 - Selenium E2E Tests for the forum
 
-  Worked on basic end to end selenium tests for discussion forum. [(test_forum.py)](https://github.com/Submitty/Submitty/blob/master/tests/e2e/test_forum.py)
+  Worked on basic end to end selenium tests for the discussion forum. [(test_forum.py)](https://github.com/Submitty/Submitty/blob/master/tests/e2e/test_forum.py)
 
 - Refactoring DB Queries
 
