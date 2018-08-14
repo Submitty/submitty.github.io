@@ -1,0 +1,92 @@
+- name: Welcome
+  link: index
+  children:
+    - name: Tutorial
+    - name: Publications
+
+- name: Student
+  children:
+    - name: Login to Submitty
+      link: login
+    - name: Course Navigation
+      link: navigation
+    - name: Submission
+    - name: Automated Testing
+    - name: Late Days & Extensions
+      link: late_days
+    - name: Managing Versions
+    - name: Reviewing TA Grades
+    - name: Team Assignments
+
+- name: TA or Grader
+  link: grader
+
+- name: Instructor
+  children:
+    - name: Course Settings
+    - name: Managing Enrollment
+    - name: Create or Edit a Gradeable
+      link: create_edit_gradeable
+    - name: Directory Structure
+    - name: Assignment Configuration
+    - name: Static Analysis
+    - name: Tree Tool
+    - name: Log Files
+    - name: Batch Regrade Submissions
+    - name: Rainbow Grades
+      link: false
+      children:
+        - name: Overview
+        - name: Customization Basics
+        - name: Gradeables Customization
+          link: gradeables
+        - name: Exam Seating
+          link: exam_customization
+        - name: iClicker Instructions
+    - name: Late Days
+    - name: Team Assignments
+    - name: Website Customization
+    - name: Plagiarism Detection
+    - name: Bulk PDF Upload
+    - name: Photo Scraper
+
+- name: System Administrator
+  link: sysadmin
+  children:
+    - name: Server OS
+    - name: Installation
+    - name: Update Submitty
+      link: update
+    - name: Database Overview
+    - name: Course Creation
+    - name: Setting up Internal Git
+      link: git
+    - name: System Customization Checklist
+      link: system_customization
+    - name: Student Auto Feed
+
+- name: Developer
+  children:
+    - name: VM Install using Vagrant
+    - name: Development Instructions
+      children:
+        - name: Troubleshooting
+    - name: PhpStorm Setup Instructions
+      link: phpstorm
+    - name: Database Design
+    - name: Automated Grading
+    - name: JSON Configuration Files
+    - name: JSON Responses
+    - name: Coding Style Guide
+    - name: Interface Design
+      link: interface_design_style_guide
+    - name: Project Ideas
+    - name: How to Contribute
+    - name: Autograding Tests
+    - name: PHP Unit Tests
+    - name: End to End Tests
+    - name: Travis CI
+    - name: Rainbow Grades Tests
+    - name: Configuring Tie In Programs
+    - name: GSOC2018_TusharGurjar
+      link: GSOC2018_TusharGurjar
