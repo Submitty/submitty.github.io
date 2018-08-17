@@ -38,7 +38,7 @@ Copy the following code into `/etc/apache2/sites-available/submitty.conf`:
     </Files>
 ```
 
-Authentication for Git is handled by `/usr/local/submitty/sbin/authentication.py` through the Python3 AWSGI module
+Authentication for Git is handled by `/usr/local/submitty/sbin/authentication.py` through the Python3 WSGI module
 for Apache2 (mod_wsgi) which allows us to utilize a python script to handle the authentication process for repository
 access. Unfortunately, do to limitations within the module, the user that runs this script must be the same user
 that own the Apache2 process. To limit access to any criticial information by a user that isn't handled by Submitty,
@@ -90,17 +90,20 @@ the following `http(s)://GIT_URL/git/<semester>/<course>[/<gradeable_id>]/user_i
 
 #### Grading Repositories
 
-To grade a repository, Submitty must have access to it through the hwcron user. 
+To grade a repository, Submitty must have access to it through the `submitty_daemon` user. 
 
 If you're only using internal repositories (those located under `/var/local/submitty/vcs/git`), then you don't 
-need to do anything futher to support grading these. As part of the `install_system.sh` script, `hwcron` user is
-added to the `www-data` group which grants it access to all files under the VCS folder and as it's
-using direct paths does not require it to go through `authentication.py` and hence does not need a
-specific username/password setup for it.
+need to do anything futher to support grading these, as if the VCS URL is detected as having the submission url,
+it will replace that URL with the absolute file path for `submitty_daemon` to use to checkout.
+
+An example of this would be that you set the submission url to be "https://submitty.cs.rpi.edu" and give the VCS url
+for a gradeable to be "https://submitty.cs.rpi.edu/{$vcs_type}/{$course}/{$semester}/{$gradeable_id}/{$user_id}", 
+then `submitty_daemon` will subsitute in the full absolute path
+`/var/local/submitty/vcs/{$vcs_type}/{$semester}/{$course}/{$gradeable_id}/{$user_id}` to use.
 
 ### Using External Git
 
-If you're using external repos (those located at `http(s)://` endpoints), then you'll need to setup `hwcron` to
+If you're using external repos and websites unconnected to Submitty, then you'll need to setup `submitty_daemon` to
 have access to those repos via SSH. Instructions for adding an SSH key to your account is available for 
 [Github](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) and 
 [Gitlab](https://docs.gitlab.com/ee/ssh/). The gist of these is as follows for Linux (focusing on Github):
