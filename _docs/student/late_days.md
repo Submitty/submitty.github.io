@@ -50,7 +50,7 @@ The late day policy is subject to a few rules:
   assignment.
 
 
-## How to I use a Late Day?
+## How do I use a Late Day?
 
 To use a late day, simply submit the assignment as normal.  The page
 will display a banner of information about the deadline and a popup
@@ -68,8 +68,7 @@ submission or cancel your submission.
 ## How many Late Days have I used so far?
 
 To review the late day status and usage for all of your assignments,
-click on the "Show my late days information" button from the main
-navigation page for the course.
+click on the "My Late Days" link from the sidebar.
 
 ![](/images/LateDays.png)
 
