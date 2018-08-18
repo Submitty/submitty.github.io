@@ -59,7 +59,7 @@
       link: update
     - name: Database Overview
     - name: Course Creation
-    - name: Setting up Internal Git
+    - name: Setting up Git
       link: git
     - name: System Customization Checklist
       link: system_customization
