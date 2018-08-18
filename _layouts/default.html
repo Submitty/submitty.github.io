@@ -80,112 +80,63 @@
                 <input type="submit" value="Search" style="display: none;">
             </form>
             <ul>
+                {% for entry in site.data.links %}
                 <li class="nav-item top-level">
-                    <a href="/index">Welcome</a>
+                    {% assign top_link = entry.name | replace: ' ', '_' | downcase %}
+                    {% if entry.link != false %}
+                        {% if entry.link %}
+                            {% assign top_link = entry.link %}
+                        {% endif %}
+                    <a href="/{{ top_link }}">
+                    {% endif %}
+                    {{ entry.name }}
+                    {% if entry.link != false %}
+                    </a>
+                    {% endif %}
+                    {% if entry.children %}
                     <ul>
-                        <li class="nav-item ">
-                            <a href="/tutorial">Tutorial</a>
+                        {% for child in entry.children %}
+                        <li class="nav-item">
+                            {% assign child_link = child.name | replace: ' ', '_' | downcase %}
+                            {% if child.link != false %}
+                                {% if child.link %}
+                                    {% assign child_link = child.link %}
+                                {% endif %}
+                            <a href="/{{ top_link }}/{{ child_link }}">
+                            {% else %}
+                            <div>
+                            {% endif %}
+                            {{ child.name }}
+                            {% if child.link != false %}
+                            </a>
+                            {% else %}
+                            </div>
+                            {% endif %}
+                            {% if child.children %}
+                            <ul>
+                                {% for subchild in child.children %}
+                                <li class="nav-item inner">
+                                    {% assign subchild_link = subchild.name | replace: ' ', '_' | downcase %}
+                                    {% if subchild.link != false %}
+                                        {% if subchild.link %}
+                                            {% assign subchild_link = subchild.link %}
+                                        {% endif %}
+                                    <a href="/{{ top_link }}/{{ child_link }}/{{ subchild_link }}">
+                                    {% endif %}
+                                    {{ subchild.name }}
+                                    {% if subchild.link != false %}
+                                    </a>
+                                    {% endif %}
+                                </li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
                         </li>
-                        <li class="nav-item ">
-                            <a href="/publications">Publications</a>
-                        </li>
+                        {% endfor %}
                     </ul>
+                    {% endif %}
                 </li>
-
-                <li class="nav-item top-level">
-                    <a href="/student/">Student</a>
-                    <ul>
-                      <li class="nav-item "><a href="/student/login">Login to Submitty</a></li>
-                      <li class="nav-item "><a href="/student/navigation">Course Navigation</a></li>
-                      <li class="nav-item "><a href="/student/submission">Submission</a></li>
-                      <li class="nav-item "><a href="/student/automated_testing">Automated Testing</a></li>
-                      <li class="nav-item "><a href="/student/late_days">Late Days & Extensions</a></li>
-                      <li class="nav-item "><a href="/student/managing_versions">Managing Versions</a></li>
-                      <li class="nav-item "><a href="/student/reviewing_ta_grades">Reviewing TA Grades</a></li>
-                      <li class="nav-item "><a href="/student/team_assignments">Team Assignments</a></li>
-                    </ul>
-                </li>
-
-                <li class="nav-item top-level">
-                    <a href="/grader/">TA or Grader</a>
-                </li>
-
-                <li class="nav-item top-level ">
-                    <a href="/instructor/">Instructor</a>
-                    <ul>
-                        <li class="nav-item "><a href="/instructor/course_settings">Course Settings</a></li>
-                        <li class="nav-item "><a href="/instructor/managing_enrollment">Managing Enrollment</a></li>
-                        <li class="nav-item "><a href="/instructor/create_edit_gradeable">Create or Edit a Gradeable</a></li>
-                        <li class="nav-item "><a href="/instructor/directory_structure">Directory Structure</a></li>
-                        <li class="nav-item "><a href="/instructor/assignment_configuration">Assignment Configuration</a></li>
-                        <li class="nav-item "><a href="/instructor/static_analysis">Static Analysis</a></li>
-                        <li class="nav-item "><a href="/instructor/tree_tool">Tree Tool</a></li>
-                        <li class="nav-item "><a href="/instructor/log_files">Log Files</a></li>
-                        <li class="nav-item "><a href="/instructor/batch_regrade_submissions">Batch Regrade Submissions</a></li>
-                        <li class="nav-item "><div>Rainbow Grades</div>
-			<ul>
-	                        <li class="nav-item inner "><a href="/instructor/rainbow_grades">Overview</a></li>
-	                        <li class="nav-item inner "><a href="/instructor/customization">Customization Basics</a></li>
-	                        <li class="nav-item inner "><a href="/instructor/gradeables">Gradeables Customization</a></li>
-	                        <li class="nav-item inner "><a href="/instructor/exam_customization">Exam Seating</a></li>
-                                <li class="nav-item inner "><a href="/instructor/room_templates">Room Templates</a></li>
-	                        <li class="nav-item inner "><a href="/instructor/iclicker">iClicker Instructions</a></li>
-			</ul>
-			</li>
-                        <li class="nav-item "><a href="/instructor/late_days">Late Days</a></li>
-                        <li class="nav-item "><a href="/instructor/team_assignments">Team Assignments</a></li>
-                        <li class="nav-item "><a href="/instructor/website_customization">Website Customization</a></li>
-                        <li class="nav-item "><a href="/instructor/plagiarism">Plagiarism Detection</a></li>
-                        <li class="nav-item "><a href="/instructor/exams">Bulk PDF Upload</a></li>
-                        <li class="nav-item "><a href="/instructor/course_materials">Course Materials</a></li>
-                        <li class="nav-item "><a href="/instructor/student_photos">Student Photos</a></li>
-                        <li class="nav-item "><a href="/instructor/forum">Discussion Forum</a></li>
-                    </ul>
-                </li>
-                  <li class="nav-item top-level ">
-                    <a href="/sysadmin/">System Administrator</a>
-                    <ul>
-                        <li class="nav-item "><a href="/sysadmin/server_os">Server OS</a></li>
-                        <!--<li class="nav-item "><a href="/sysadmin/dependencies">Dependencies</a></li>-->
-                        <li class="nav-item "><a href="/sysadmin/installation">Installation</a></li>
-                        <li class="nav-item "><a href="/sysadmin/update">Update Submitty</a></li>
-                        <li class="nav-item "><a href="/sysadmin/database_overview">Database Overview</a></li>
-                        <li class="nav-item "><a href="/sysadmin/course_creation">Course Creation</a></li>
-                        <li class="nav-item "><a href="/sysadmin/git">Setting up Internal Git</a></li>
-                        <li class="nav-item "><a href="/sysadmin/system_customization">System Customization Checklist</a></li>
-                        <li class="nav-item "><a href="/sysadmin/student_auto_feed">Student Auto Feed</a></li>
-                        <li class="nav-item "><a href="/sysadmin/course_archiving">Course Archiving</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item top-level ">
-                    <a href="/developer/">Developer</a>
-                    <ul>
-                        <li class="nav-item "><a href="/developer/vm_install_using_vagrant">VM Install using Vagrant</a></li>
-                        <li class="nav-item "><a href="/developer/development_instructions">Development Instructions</a></li>
-                        <ul>
-                          <li class="nav-item inner "><a href="\developer/Install_common_errors">Troubleshooting</a></li>
-                        <ul>
-                        <li class="nav-item "><a href="/developer/phpstorm">PhpStorm Setup Instructions</a></li>
-                        <li class="nav-item "><a href="/developer/database_design">Database Design</a></li>
-                        <li class="nav-item "><a href="/developer/migrations">Migrations</a></li>
-                        <li class="nav-item "><a href="/developer/automated_grading">Automated Grading</a></li>
-                        <li class="nav-item "><a href="/developer/jobs_daemon">Jobs Daemon</a></li>
-                        <li class="nav-item "><a href="/developer/json_configuration_files">JSON Configuration Files</a></li>
-                        <li class="nav-item "><a href="/developer/json_responses">JSON Responses</a></li>
-                        <li class="nav-item "><a href="/developer/coding_style_guide">Coding Style Guide</a></li>
-                        <li class="nav-item "><a href="/developer/interface_design_style_guide">Interface Design</a></li>
-                        <li class="nav-item "><a href="/developer/project_ideas">Project Ideas</a></li>
-                        <li class="nav-item "><a href="/developer/how_to_contribute">How to Contribute</a></li>
-                        <li class="nav-item "><a href="/developer/autograding_tests">Autograding Tests</a></li>
-                        <li class="nav-item "><a href="/developer/php_unit_tests">PHP Unit Tests</a></li>
-                        <li class="nav-item "><a href="/developer/end_to_end_tests">End-to-End Tests</a></li>
-                        <li class="nav-item "><a href="/developer/travis_ci">Travis CI</a></li>
-                        <li class="nav-item "><a href="/developer/rainbow_grades_tests">Rainbow Grades Tests</a></li>
-                        <li class="nav-item "><a href="/developer/configuring_tie_in_programs">Configuring Tie In Programs</a></li>
-                    </ul>
-                </li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
+                {% endfor %}
             </ul>
         </header>
 
