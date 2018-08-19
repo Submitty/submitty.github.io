@@ -95,13 +95,19 @@
                             {% if child.children %}
                             <ul>
                                 {% for subchild in child.children %}
-                                <li class="nav-item inner">
+                                {% assign subchild_link = subchild.name | replace: ' ', '_' | downcase %}
+                                {% if subchild.link %}
+                                    {% assign subchild_link = subchild.link %}
+                                {% endif %}
+                                {% assign full_subchild_link = full_child_link | append: '/' | append: subchild_link %}
+                                {% assign subchild_extra = '' %}
+                                {% if full_subchild_link == page.url %}
+                                    {% assign subchild_extra = subchild_extra | append: ' current' %}
+                                {% endif %}
+                                <li class="nav-item inner {{ subchild_extra }}">
                                     {% assign subchild_link = subchild.name | replace: ' ', '_' | downcase %}
                                     {% if subchild.link != false %}
-                                        {% if subchild.link %}
-                                            {% assign subchild_link = subchild.link %}
-                                        {% endif %}
-                                    <a href="{{ top_link }}/{{ child_link }}/{{ subchild_link }}">
+                                    <a href="{{ full_subchild_link }}">
                                     {% endif %}
                                     {{ subchild.name }}
                                     {% if subchild.link != false %}
