@@ -1,5 +1,6 @@
 ---
 title: Student
+permalink: /student
 ---
 
 [How do I login to Submitty?](login)

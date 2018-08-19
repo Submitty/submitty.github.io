@@ -1,5 +1,6 @@
 ---
 title: System Administrator
+permalink: /sysadmin
 ---
 
 To create a production server, you'll need a machine with Ubuntu 16.04

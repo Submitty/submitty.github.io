@@ -1,5 +1,6 @@
 ---
 title: Welcome
+permalink: /index
 ---
 
 [Submitty](http://submitty.org) is an open source programming

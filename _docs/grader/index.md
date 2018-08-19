@@ -1,5 +1,6 @@
 ---
 title: TA or Grader
+permalink: /grader
 ---
 
 ### TA Navigation Page

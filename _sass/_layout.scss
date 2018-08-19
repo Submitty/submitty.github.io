@@ -130,6 +130,8 @@ header {
 			height: $emblem-size;
 			//width: $emblem-size;
 			margin-right: $space - 5;
+			margin-left: -10px;
+			max-width: none;
 		}
 	}
 
@@ -280,7 +282,7 @@ nav > ul {
 	&.top-level > a {
 		line-height: 1.5;
 		font-weight: 600;
-		padding-left: $space;
+		//padding-left: $space;
 	}
 
         &.inner > a {
