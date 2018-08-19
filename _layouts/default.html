@@ -27,44 +27,7 @@
                 ga('send', 'pageview');
             </script>
         {% endif %}
-        <script>
-            // This function moves the window to the specified #hash (if one exists)
-            // as well as applies the 'current' class to the sidebar link for the
-            // page we're currently on and scrolls sidebar to its position.
-            document.onreadystatechange = function() {
-                if (this.readyState === "complete") {
-                    var url = window.location.href;
-                    console.log(url);
-                    if (url.indexOf('#') !== -1) {
-                        var oldHash = url.substr(url.indexOf('#'));
-                        location.hash = '';
-                        location.hash = oldHash;
-                        url = url.substr(0, url.indexOf('#'));
-                    }
-                    console.log(url);
-                    var elems = document.getElementsByClassName('nav-item');
-                    for (var i = 0; i < elems.length; i++) {
-                        if (elems[i].children[0].href === url) {
-                            elems[i].className += " current";
-                            var el = elems[i];
-                            do {
-                                if (el.classList.contains('top-level')){
-                                    var topLevel = el;
-                                }
-                            } while (el = el.parentElement);
-                            if (!topLevel) break;
-                            offsetToScroll = topLevel.offsetTop;
-                            var sidebar = document.getElementsByClassName('main-nav');
-                            if (sidebar.length > 0){
-                                sidebar = sidebar[0];
-                            }
-                            sidebar.scrollTop = offsetToScroll;
-                            break;
-                        }
-                    }
-                }
-            }
-        </script>
+        <script type="text/javascript" src="{{ site.baseurl }}/scripts/main.js"></script>
     </head>
 
     <body>
@@ -81,28 +44,45 @@
             </form>
             <ul>
                 {% for entry in site.data.links %}
-                <li class="nav-item top-level">
-                    {% assign top_link = entry.name | replace: ' ', '_' | downcase %}
+                {% assign top_link = entry.name | replace: ' ', '_' | downcase %}
+                {% assign extra_class = "" %}
+                
+                {% if entry.link %}
+                    {% assign top_link = entry.link %}
+                {% endif %}
+                {% assign top_link = "/" | append: top_link %}
+                {% if page.url contains top_link %}
+                    {% assign extra_class = extra_class | append: ' open' %}
+                {% endif %}
+                {% if entry.children %}
+                    {% assign extra_class = extra_class | append: ' has-children' %}
+                {% else %}
+                    {% assign extra_class = extra_class | append: ' no-children' %}
+                {% endif %}
+                <li class="nav-item top-level {{ extra_class }}">
                     {% if entry.link != false %}
-                        {% if entry.link %}
-                            {% assign top_link = entry.link %}
-                        {% endif %}
-                    <a href="/{{ top_link }}">
+                    <a href="{{ top_link }}">
                     {% endif %}
+                    <i class="nav-arrow"></i>
                     {{ entry.name }}
                     {% if entry.link != false %}
                     </a>
                     {% endif %}
                     {% if entry.children %}
-                    <ul>
+                    <ul class="inner-nav">
                         {% for child in entry.children %}
-                        <li class="nav-item">
                             {% assign child_link = child.name | replace: ' ', '_' | downcase %}
+                            {% if child.link %}
+                                {% assign child_link = child.link %}
+                            {% endif %}
+                            {% assign full_child_link = top_link | append: '/' | append: child_link %}
+                            {% assign inner_extra = '' %}
+                            {% if full_child_link == page.url %}
+                                {% assign inner_extra = inner_extra | append: ' current' %}
+                            {% endif %}
+                        <li class="nav-item {{ inner_extra }}">
                             {% if child.link != false %}
-                                {% if child.link %}
-                                    {% assign child_link = child.link %}
-                                {% endif %}
-                            <a href="/{{ top_link }}/{{ child_link }}">
+                            <a href="{{ full_child_link }}">
                             {% else %}
                             <div>
                             {% endif %}
@@ -115,13 +95,19 @@
                             {% if child.children %}
                             <ul>
                                 {% for subchild in child.children %}
-                                <li class="nav-item inner">
+                                {% assign subchild_link = subchild.name | replace: ' ', '_' | downcase %}
+                                {% if subchild.link %}
+                                    {% assign subchild_link = subchild.link %}
+                                {% endif %}
+                                {% assign full_subchild_link = full_child_link | append: '/' | append: subchild_link %}
+                                {% assign subchild_extra = '' %}
+                                {% if full_subchild_link == page.url %}
+                                    {% assign subchild_extra = subchild_extra | append: ' current' %}
+                                {% endif %}
+                                <li class="nav-item inner {{ subchild_extra }}">
                                     {% assign subchild_link = subchild.name | replace: ' ', '_' | downcase %}
                                     {% if subchild.link != false %}
-                                        {% if subchild.link %}
-                                            {% assign subchild_link = subchild.link %}
-                                        {% endif %}
-                                    <a href="/{{ top_link }}/{{ child_link }}/{{ subchild_link }}">
+                                    <a href="{{ full_subchild_link }}">
                                     {% endif %}
                                     {{ subchild.name }}
                                     {% if subchild.link != false %}

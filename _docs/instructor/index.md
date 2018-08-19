@@ -1,5 +1,6 @@
 ---
 title: Instructor
+permalink: /instructor
 ---
 
 ### Instructor Navigation Page
