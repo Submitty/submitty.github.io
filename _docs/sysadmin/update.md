@@ -29,11 +29,20 @@ page.**
     sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh
     ```
 
+    If you provide the optional `restart_web` option, the script will
+    also restart Apache and PHP-FPM:
+
+    ```
+    sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh restart_web
+    ```
+
     One of the early steps of this script checks your system
     installation and course databases for updates since your last
     installation.  The necessary system and database _migrations_ will
     automatically be applied.
-    
+
+    See also: [Developer / Migrations](../developer/migrations)
+
     Typically this re-installation will take less than a minute.  It
     will pause and restart from scratch any autograding that is
     currently happening.
@@ -45,7 +54,7 @@ page.**
     assignments.
 
     See more information in:
-    [Development Instructions](../developer/development_instructions)
+    [Developer / Development Instructions](../developer/development_instructions)
 
 
 

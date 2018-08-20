@@ -97,7 +97,7 @@ order: 4
 
    On the other hand, if you are writing custom configurations within
    a private repository (that is not accessible to the system
-   ```hwcron``` user, you will need to manually re-run this build
+   ```submitty_daemon``` user, you will need to manually re-run this build
    script.
 
    For more details, please see: 

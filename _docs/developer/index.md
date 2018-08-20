@@ -1,5 +1,6 @@
 ---
 title: Developer
+permalink: /developer
 ---
 
 As a developer, you'll need to set up the full system on your own

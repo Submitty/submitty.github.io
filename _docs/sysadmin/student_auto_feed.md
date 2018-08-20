@@ -41,14 +41,14 @@ fill or update classlists on a cron schedule._
 
 <small>[Back To Table of Contents](#top)</small>
 ### 2. Files <a name="files"></a>
-Latest version of the auto feed script and supplmental files will be checked into the `master` branch in [`Submitty/Docs/student_auto_feed/`](https://github.com/Submitty/Submitty/tree/master/Docs/student_auto_feed)
+Latest version of the auto feed script and supplmental files will be checked into the `master` branch in [`SysadminTools/student_auto_feed/`](https://github.com/Submitty/SysadminTools/tree/master/student_auto_feed)
 * `submitty_student_auto_feed.php` -- Executable PHP script to read student registration CSV and update Submitty classlist enrollment.
 * `config.php` -- **REQUIRED** config file for `submitty_student_auto_feed.php`
 * `accounts.php` -- **IMPORTANT** for Submitty servers utilizing PAM authentication.
 
 <small>[Back To Table of Contents](#top)</small>
 ### 3. Course Database Backups <a name="database_backups"></a>
-Please use `db_backup.py` (located in [`sysadmin_tools/nightly_db_backup/`](https://github.com/Submitty/Submitty/tree/master/sysadmin_tools/nightly_db_backup)) on a cron schedule to create nightly backups of course databases.
+Please use `db_backup.py` (located in [`SysadminTools/nightly_db_backup/`](https://github.com/Submitty/SysadminTools/tree/master/nightly_db_backup)) on a cron schedule to create nightly backups of course databases.
 
 Run `db_backup.py -h` to see extended help and argument list.
 
@@ -199,11 +199,11 @@ These options are set in `config.php`.
 #### Database Connection<a name="config_database"></a>
 ```php
 define('DB_HOST',     'submitty.cs.myuniversity.edu');
-define('DB_LOGIN',    'hsdbu');
+define('DB_LOGIN',    'submitty_dbuser');
 define('DB_PASSWORD', 'DB.p4ssw0rd');
 ```
 
-These options specify the login to the Submitty database for the hostname of the database, the user login (typically `hsdbu`), and the password (same as used in Submitty setup).
+These options specify the login to the Submitty database for the hostname of the database, the user login (typically `submitty_dbuser`), and the password (same as used in Submitty setup).
 
 **IMPORTANT** -- Without this configuration, the auto feed cannot add or update course enrollments.
 

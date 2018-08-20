@@ -211,10 +211,9 @@ operating system.
    |------|----------|
    | vagrant | vagrant |
    | root | vagrant |
-   | hsdbu | hsdbu |
-   | hwcgi | hwcgi |
-   | hwphp | hwphp |
-   | hwcron | hwcron |
+   | submitty_cgi | submitty_cgi |
+   | submitty_php | submitty_php |
+   | submitty_daemon | submitty_daemon |
    | instructor | instructor |
    | ta | ta |
    | developer | developer |

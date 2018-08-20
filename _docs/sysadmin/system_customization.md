@@ -42,10 +42,10 @@ Specifically, the configuration, submission, and results data for all courses:
 /var/local/submitty/courses/
 ```
 
-And the central location of the student SVN repositories (if used):
+And the central location of the student VCS (git/svn/etc. version control) repositories (if used):
 
 ```
-/var/lib/svn/
+/var/local/submitty/vcs/
 ```
 
 You may want to back up more of `/var/local/submitty` to save configurations and logs, but be sure to exclude
@@ -54,7 +54,7 @@ You may want to back up more of `/var/local/submitty` to save configurations and
 
 ### Capture cron error messages
 
-The ``` hwcron ``` user runs the [bin/grade_students.sh][bin/grade_students.sh]
+The ```submitty_daemon``` user runs the [bin/grade_students.sh][bin/grade_students.sh]
 script.  STDERR output from this script should be logged or emailed
 to ensure that system errors can be reported and addressed.
 
@@ -113,7 +113,7 @@ if they contain: a single character class, 2 classes, a passphrase,
 
 
 __Note: If you would like to allow local machine passwords for pam
-authentication, make sure the hwcgi user is in the shadow group.__
+authentication, make sure the `submitty_cgi` user is in the shadow group.__
 
 
 ### Secure SSH

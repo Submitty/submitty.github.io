@@ -10,6 +10,10 @@ assignment configuration was detected after students submitted
 homeworks, you can queue these previous submissions for regrading by
 using the [`regrade.py` script][regrade.py].
 
+Note that all instructors should be members of the
+`submitty_course_builders` group and thus have limited superuser/sudo
+access to run the commands below.
+
 
 1. This script takes as arguments, one or more paths pointing to the
    portion of the course directory structure to be regraded.
@@ -17,19 +21,19 @@ using the [`regrade.py` script][regrade.py].
    * For example, to regrade student smithj's 5th submission for hw02, run this command:
 
      ```
-     /usr/local/submitty/bin/regrade.py /var/local/submitty/courses/f16/csci1200/submissions/hw02/smithj/5
+     sudo /usr/local/submitty/bin/regrade.py /var/local/submitty/courses/f16/csci1200/submissions/hw02/smithj/5
      ```
 
    * Instead to regrade every version of student smithj's hw02, run this command:
   
      ```
-     /usr/local/submitty/bin/regrade.py /var/local/submitty/courses/f16/csci1200/submissions/hw02/smithj 
+     sudo /usr/local/submitty/bin/regrade.py /var/local/submitty/courses/f16/csci1200/submissions/hw02/smithj 
      ```
 
    * And similarly, to regrade all students submissions of hw02, run this command:
 
      ```
-     /usr/local/submitty/bin/regrade.py /var/local/submitty/courses/f16/csci1200/submissions/hw02 
+     sudo /usr/local/submitty/bin/regrade.py /var/local/submitty/courses/f16/csci1200/submissions/hw02 
      ```
 
    * You can use wildcards in your pattern as well.  To regrade all of
@@ -46,14 +50,14 @@ using the [`regrade.py` script][regrade.py].
      wildcard expansion exceeds the maximum argument list length._
 
      ```
-     /usr/local/submitty/bin/regrade.py /var/local/submitty/courses/f16/csci1200/submissions/*/smithj 
+     sudo /usr/local/submitty/bin/regrade.py /var/local/submitty/courses/f16/csci1200/submissions/*/smithj 
      ```
 
    * You may also use a relative path.  If you are currently in the
      `/var/local/submitty/courses/f16/csci1200/` directory, you can run:
 
      ```
-     /usr/local/submitty/bin/regrade.py submissions/hw02/smithj/5
+     sudo /usr/local/submitty/bin/regrade.py submissions/hw02/smithj/5
      ```
 
 
@@ -68,7 +72,7 @@ using the [`regrade.py` script][regrade.py].
    submissions.
 
    ```
-   /usr/local/submitty/bin/grading_done.py 
+   sudo /usr/local/submitty/bin/grading_done.py 
    ```
 
    This command will display the number of grading processes, the
@@ -76,14 +80,10 @@ using the [`regrade.py` script][regrade.py].
    submitted by students) and in the batch queue (items sent for
    reprocessing by any instructor).  
 
-   _Note that currently typical instructor users cannot access the
-   details of the interactive queue, thus only the status of the batch
-   queue is presented._
-
    It is often helpful to combine these two commands, e.g.:
 
    ```
-   /usr/local/submitty/bin/regrade.py /var/local/submitty/courses/f16/csci1200/submissions/hw02 && /usr/local/submitty/bin/grading_done.py 
+   sudo /usr/local/submitty/bin/regrade.py /var/local/submitty/courses/f16/csci1200/submissions/hw02 && sudo /usr/local/submitty/bin/grading_done.py 
    ```
 
 [regrade.py]: https://github.com/Submitty/Submitty/blob/master/bin/regrade.py

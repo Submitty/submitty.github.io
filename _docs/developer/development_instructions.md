@@ -90,14 +90,10 @@ branch).
   pgAdmin) or else running the below scripts could put things into a
   broken state._
 
-  Run these commands:
+  Run this command:
 
   ```
-  cd /usr/local/submitty/GIT_CHECKOUT/Submitty/
-  sudo python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/bin/partial_reset.py
-  sudo python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/bin/setup_sample_courses.py
-  sudo service php7.0-fpm restart
-  echo 'partial reset complete'
+  sudo bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/bin/recreate_sample_courses.sh
   ```   
 
 

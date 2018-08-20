@@ -32,3 +32,69 @@ $full-width-break: $nav-width + ($space * 4) + $content-max-width;
 @import "code";
 @import "tables";
 @import "layout";
+
+header.main-nav > ul {
+  margin-bottom: 30px;
+}
+
+.top-level > .inner-nav {
+  display: none;
+}
+
+.top-level.open > .inner-nav {
+  display: block;
+}
+
+.nav-arrow {
+  display: none;
+  position: relative;
+  margin-left: -32px;
+  width: 12px;
+}
+
+.has-children .nav-arrow {
+  display: inline-block;
+}
+
+.nav-arrow:before {
+  /*
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  */
+  display: block;
+  content: "";
+  margin: -.25em 0 0 -.4em;
+
+  width: .5em;
+  height: .5em;
+  border-right: .15em solid #3f4657;
+  border-top: .15em solid #3f4657;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition-duration: .3s;
+  transition-duration: .3s;
+}
+
+.nav-item.open .nav-arrow:before {
+  margin-left: -.25em;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.top-level.no-children {
+  margin-left: -16px;
+}
+
+.content h1 svg.anchor,
+.content h2 svg.anchor,
+.content h3 svg.anchor {
+  margin-left: 10px;
+  visibility: hidden;
+}
+
+.content h1:hover svg.anchor,
+.content h2:hover svg.anchor,
+.content h3:hover svg.anchor {
+  visibility: visible;
+}

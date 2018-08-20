@@ -101,11 +101,11 @@ number:
    2. Create the user account that will have access to send files from
       the primary machine to the worker machine.  In our example we
       name that user account `submitty`.  That user account must be in
-      the `hwcron` and `hwcronphp` groups.
+      the `submitty_daemon` and `submitty_daemonphp` groups.
 
       _TODO: proofread these instructions_
 
-   3. Generate and install an ssh key pair to allow the `hwcron` user
+   3. Generate and install an ssh key pair to allow the `submitty_daemon` user
       on the primary machine to ssh to the worker machine using the
       specified username, without a password.
 
@@ -146,11 +146,11 @@ To do this:
    sudo systemctl stop submitty_autograding_worker
    ```
 
-2. Now, as the `hwcron` user, from the primary machine, run the
+2. Now, as the `submitty_daemon` user, from the primary machine, run the
    shipper manager and watch the output.
 
    ```
-   sudo su -c '/usr/local/submitty/sbin/submitty_autograding_shipper.py' hwcron
+   sudo su -c '/usr/local/submitty/sbin/submitty_autograding_shipper.py' submitty_daemon
    ```
 
    And similarly from each machine that will be autograding (including
@@ -158,7 +158,7 @@ To do this:
    watch the output:
 
    ```
-   sudo su -c '/usr/local/submitty/sbin/submitty_autograding_shipper.py' hwcron
+   sudo su -c '/usr/local/submitty/sbin/submitty_autograding_shipper.py' submitty_daemon
    ```
 
 
@@ -187,8 +187,7 @@ To do this:
    sudo systemctl status submitty_autograding_worker
    ```
 
-_NOTE: When you re-run `sudo
-/usr/local/submitty/.setup/INSTALL_SUBMITTY.sh`, it will stop and
+_NOTE: When you re-run `sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh`, it will stop and
 restart the autograding shipper and worker if it is running.  (But it
 will not start the scheduler, if it is not currently running.)_
 

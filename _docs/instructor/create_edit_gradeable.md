@@ -40,8 +40,9 @@ gradeables: electronic submission, numeric, or checkboxes.
 
    **_Electronic Submission_** should be used for
    homework/project/exercise file uploads by students (e.g., code,
-   .pdfs, images, etc.).  Electronic Submission can be automatically
-   graded, fully manually graded, or a combination of both.
+   .pdfs, images, etc.) or submitted via VCS.  Electronic Submission 
+   can be automatically graded, fully manually graded, or a combination
+   of both.
 
    **_Numeric_** is used for data entry of quizzes or exams where the
    scores for each student are a simple array of one or more numbers
@@ -243,4 +244,31 @@ you must re-run the BUILD_XXXX.sh script.
    compilation, runner, and validation components of automated grading
    that are helpful in debugging assignment configurations.
 
+### Using Git
 
+Submitty supports utilizing Git for handling submissions by students.
+When a student hits "submit", Submitty performs a clone of their
+repository. Submitty then does a checkout of the last revision made before
+the timestamp of when they hit the submit button.
+
+To configure Git for an assignment, you will want to select type 
+"Electronic File" and then "Version Control System (VCS) Repository".
+You will then be presented with a textbox to type in the repo url to
+use. If the string does not start with a / nor has a "://" in it, it
+will combine the contents of the textbox with the base url. You will
+see the URL/path that will be shown to the users underneath the text
+box.
+
+![](/images/create_gradeable_git.png)
+
+Additionally, the text field supports the following list of "variables"
+which get replaced during execution of Submitty:
+* {$vcs_type} - VCS type being used (currently always git)
+* {$gradeable_id} - ID of gradeable being submitted
+* {$user_id} - ID of user who is submitting 
+* {$team_id} - ID of team who is submitting
+
+Submitty comes with a setup for an internal Git server out of the box,
+but if you wish to use an external source, such as Github, you may need
+to configure Submitty to be able to access those repos via SSH. See 
+[System Administrator/Setting Up Git](/sysadmin/git) for more details.

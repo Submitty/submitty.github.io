@@ -15,7 +15,7 @@ For example:
 ```
 
 In this file you can change the background colors, fonts, etc.
-Make sure that the ``hwphp`` user has read access to this file.
+Make sure that the ``submitty_php`` user has read access to this file.
 
 
 ### Embedding Submitty within an IFrame
