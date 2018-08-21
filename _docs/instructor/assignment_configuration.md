@@ -336,15 +336,16 @@ executables.
   **type:** _array of textbox objects_  (Described below)  
   **default value:** ``empty``  
 
+
 ### Specification of a Networked Gradeable
 
 * **field:** ``"container_name"``  
   **type:** _string_  
   **default value** ``"container0"``, ``"container1"``, etc.  
   **USE:** Used to refer to a container when specifying a network. Student output
-  per testcase is stored in the <container_name>/ directory.  
+  per testcase is stored in the <container_name>/ subdirectory.  
   **RESERVED VALUES:** The name _"router"_ specifies a docker node through which
-  all messages flow. See the router provided in Submitty Tutorial 16 as an
+  all messages flow. See the router provided in [Submitty Tutorial 16](https://github.com/Submitty/Tutorial/tree/master/examples/16_docker_network_python) as an
   example.
 
 
@@ -358,7 +359,7 @@ executables.
   **type:** _array of strings_  
   **default value:** ``[]``  
   **USE:** Specifies which containers a container can connect to. __NOTE:__ The
-  router automatically places itself to intercept all communications without
+  router automatically places itself between all nodes to intercept, log, and relay all communications without
   additional specification.
 
 
@@ -403,7 +404,7 @@ In the example above, a sleep is used on the client to ensure that the server
 starts before it.
 
 3. A known bug is causing standard out to fail to flush its buffer in networked
-gradeables (confirmed in python). As such all professor and student code should either
+gradeables (confirmed in Python).  As such all professor and student code should either
 explicitly flush their stdout or write to a file.
 
 ### Types of Action
