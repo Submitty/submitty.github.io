@@ -159,7 +159,7 @@ configuration directory:
    this assignment and submission version.
    Note:  The copied files can be controlled with the
    ```work_to_details``` variable in ```config.json```.
-   
+
 ![](/images/files_for_validation.png)
 
 
@@ -337,6 +337,76 @@ executables.
   **default value:** ``empty``  
 
 
+### Specification of a Networked Gradeable
+
+* **field:** ``"container_name"``  
+  **type:** _string_  
+  **default value** ``"container0"``, ``"container1"``, etc.  
+  **USE:** Used to refer to a container when specifying a network. Student output
+  per testcase is stored in the <container_name>/ subdirectory.  
+  **RESERVED VALUES:** The name _"router"_ specifies a docker node through which
+  all messages flow. See the router provided in [Submitty Tutorial 16](https://github.com/Submitty/Tutorial/tree/master/examples/16_docker_network_python) as an
+  example.
+
+
+* **field:** ``"commands"``  
+  **type:** _string_ -or- _array of strings_  
+  **default value:** ``""``  
+  **USE:** The commands executed by this docker image. Executed sequentially.
+
+
+* **field:** ``"outgoing_connections"``  
+  **type:** _array of strings_  
+  **default value:** ``[]``  
+  **USE:** Specifies which containers a container can connect to. __NOTE:__ The
+  router automatically places itself between all nodes to intercept, log, and relay all communications without
+  additional specification.
+
+
+* **field:** ``"container_image"``  
+  **type:** _string_  
+  **default value:** ``ubuntu:custom``  
+  **USE:** If the specified docker_image is present on the submitty system, the
+  container will be built using it.
+
+#### Example Specification:
+
+
+```
+"containers" : [
+                {
+                    "container_name" : "server",
+                    "commands" : ["python3 server.py server"],
+                    "outgoing_connections" : ["client"]
+                    "container_image" : "ubuntu:custom"
+                },
+                {
+                    "container_name" : "client",
+                    "commands" : ["sleep 1", "python3 client.py client 0"],
+                    "outgoing_connections" : ["server"]
+                },
+                {
+                    "container_name" : "router",
+                    "commands" : ["python3 router.py"]
+                }
+```
+
+#### Notes:
+
+1. All networks are specified such that a _"router"_ node intercepts and relays
+student messages. This allows an instructor to log all messages sent within the
+system, as well as to add rules in regards to message delay and loss. A router
+must be hand specified by the instructor per testcase. See Submitty Tutorial 16
+for an example router.
+
+2. It can be important to ensure your container's start in the correct order.
+In the example above, a sleep is used on the client to ensure that the server
+starts before it.
+
+3. A known bug is causing standard out to fail to flush its buffer in networked
+gradeables (confirmed in Python).  As such all professor and student code should either
+explicitly flush their stdout or write to a file.
+
 ### Types of Action
 * **Action:** ``"Delay"``   
   **Command:** "delay (number of seconds)"   
@@ -434,7 +504,7 @@ executables.
    viewing:
 
    ```
-   /var/local/submitty/courses/<SEMESTER>/<COURSE>/config/complete_config/complete_config_<GRADEABLE>.json 
+   /var/local/submitty/courses/<SEMESTER>/<COURSE>/config/complete_config/complete_config_<GRADEABLE>.json
    ```
 
 
