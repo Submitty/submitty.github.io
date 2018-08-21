@@ -5,7 +5,7 @@ permalink: /developer
 
 As a developer, you'll need to set up the full system on your own
 computer.  The easiest method is to 
-[run the system within a virtual machine (VM)](vm_install_using_vagrant).
+[run the system within a virtual machine (VM)](/developer/vm_install_using_vagrant).
 Alternately, you can install the system natively on a dedicated
 computer and allow outside access (which requires more steps to set up
 networking, SSL/https, etc.) by following the
@@ -18,17 +18,17 @@ Please contribute by adding bugs or feature requests to our
 
 
 A list of Submitty projects (some new, some in progress):  
-[Project Ideas](project_ideas)
+[Project Ideas](developer/project_ideas)
 
 
 To contribute your software changes back to this open source project,
 follow these steps:
 
-  1. Run the [C++ Test Suite](autograding_tests) locally.
+  1. Run the [C++ Test Suite](/developer/autograding_tests) locally.
 
   2. Push your work to an appropriately named new branch on GitHub.
 
-  3. When your code has passed all of the [Travis CI Tests](travis_ci), then
+  3. When your code has passed all of the [Travis CI Tests](/developer/travis_ci), then
      you can make a pull request to master.
 
 
@@ -74,5 +74,5 @@ follow these steps:
 We have created a new public [Slack for Submitty Developers](https://join.slack.com/t/submitty/shared_invite/enQtMzE1NzgyMzUzNzI5LWNkNjUzYmZjOWJkNzdlM2QzNTM3MGYwNmQwMzQ3NjAwODUwYjI4MTRlZDNjZTFlMTk4ZjUzN2MxNzRjNDIwZTU)
 
 Questions or comments can be sent to our Submitty support mailing list:  
-submitty-admin@googlegroups
+[submitty-admin@googlegroups.com](mailto:submitty-admin@googlegroups.com)
 

@@ -3,18 +3,18 @@ title: Student
 permalink: /student
 ---
 
-[How do I login to Submitty?](login)
+[How do I login to Submitty?](/student/login)
 
-[Course Navigation Page](navigation)
+[Course Navigation Page](/student/navigation)
 
-[Uploading a New Submission](submission)
+[Uploading a New Submission](/student/submission)
 
-[Examining the Results of Automated Testing](automated_testing)
+[Examining the Results of Automated Testing](/student/automated_testing)
 
-[What are Late Days?](late_days)
+[What are Late Days?](/student/late_days)
 
-[How do I roll-back or cancel my submission?](managing_versions)
+[How do I roll-back or cancel my submission?](/student/managing_versions)
 
-[Reviewing TA Grades](reviewing_ta_grades)
+[Reviewing TA Grades](/student/reviewing_ta_grades)
 
-[Team Assignments](team_assignments)
+[Team Assignments](/student/team_assignments)
