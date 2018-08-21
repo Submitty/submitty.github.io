@@ -88,13 +88,15 @@ header.main-nav > ul {
 
 .content h1 svg.anchor,
 .content h2 svg.anchor,
-.content h3 svg.anchor {
+.content h3 svg.anchor,
+.content h4 svg.anchor {
   margin-left: 10px;
   visibility: hidden;
 }
 
 .content h1:hover svg.anchor,
 .content h2:hover svg.anchor,
-.content h3:hover svg.anchor {
+.content h3:hover svg.anchor,
+.content h4:hover svg.anchor {
   visibility: visible;
 }
