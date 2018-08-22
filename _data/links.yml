@@ -49,6 +49,7 @@
     - name: Plagiarism Detection
     - name: Bulk PDF Upload
     - name: Photo Scraper
+      link: student_photos
     - name: Silent Edit
 
 - name: System Administrator
