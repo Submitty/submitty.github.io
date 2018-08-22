@@ -51,7 +51,9 @@
                     {% assign top_link = entry.link %}
                 {% endif %}
                 {% assign top_link = "/" | append: top_link %}
-                {% if page.url contains top_link %}
+                {% assign top_link_length = top_link | size %}
+                {% assign page_url_slice = page.url | slice: 0, top_link_length %}
+                {% if page_url_slice == top_link %}
                     {% assign extra_class = extra_class | append: ' open' %}
                 {% endif %}
                 {% if entry.children %}
