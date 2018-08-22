@@ -47,10 +47,13 @@
     - name: Team Assignments
     - name: Website Customization
     - name: Plagiarism Detection
+      link: plagiarism
     - name: Bulk PDF Upload
+      link: exams
     - name: Photo Scraper
       link: student_photos
-    - name: Silent Edit
+    - name: Silent Grade Editing
+      link: silent_editing
 
 - name: System Administrator
   link: sysadmin
