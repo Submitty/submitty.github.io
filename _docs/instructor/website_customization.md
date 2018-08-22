@@ -35,8 +35,8 @@ files to the website.  They will be stored here:
 
 ```
 /var/local/submitty/courses/f18/sample/site/top_bar.html
-/var/local/submitty/courses/f18/sample/site/left_bar.html
-/var/local/submitty/courses/f18/sample/site/right_bar.html
+/var/local/submitty/courses/f18/sample/site/left_sidebar.html
+/var/local/submitty/courses/f18/sample/site/right_sidebar.html
 /var/local/submitty/courses/f18/sample/site/bottom_bar.html
 ```
 
@@ -44,7 +44,7 @@ Make sure that the ``submitty_php`` user has read access to this files.
 If you edit these files directly, make sure that the ``submitty_php`` user has read/write access to these files.
 
 [A sample top_bar.html file](https://github.com/Submitty/Submitty/blob/master/sample_files/site_theme/top_bar.html)  
-[A sample left_bar.html file](https://github.com/Submitty/Submitty/blob/master/sample_files/site_theme/left_bar.html)
+[A sample left_sidebar.html file](https://github.com/Submitty/Submitty/blob/master/sample_files/site_theme/left_sidebar.html)
 
 
 
