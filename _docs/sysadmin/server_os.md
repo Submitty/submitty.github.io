@@ -5,15 +5,35 @@ order: 1
 ---
 
 
-### Ubuntu 16.04 Server Edition
+### Ubuntu Server Edition
 
+The Submitty Homework Submission Server is currently supported on
+**Ubuntu 16.04<br> 64-bit Server** and **Ubuntu 18.04 64-bit Server**.
 
-The Submitty Homework Submission Server is currently supported only on
-**Ubuntu 16.04 64-bit Server**.  We are working towards support for Ubuntu
-18.04.  _We use the server edition of Ubuntu because it saves a lot of disk
+_We use the server edition of Ubuntu because it saves a lot of disk
 space and doesn't include a lot of extra packages which will require
 more frequent updates.  You also have more options in some cases, and
 you can always add a graphical display manager to it after the fact if needed._
+
+We encourage the use of **18.04** as we plan to deprecate support for 16.04 at
+some point.  If you choose to use **18.04**, it is important to download
+Canonical's traditional server release.
+
+_The default ISO that Canonical provides as an automatic download, at their
+main server download page, is a new **"Live"** server edition with a new
+installer called "Subiquity".  This version is missing some package repositories
+required by Submitty, and therefore is unsupported._
+
+**Please download the traditional server edition ISO with the traditional
+installer from Canonical.**
+
+NOTE: _amd64_ is the edition compatible with Intel processors.
+
+- [Ubuntu 16.04 Server Release Page](http://cdimage.ubuntu.com/releases/16.04/release/)
+- [Ubuntu 18.04 Server Release Page](http://cdimage.ubuntu.com/releases/18.04/release/)<br>
+
+
+### Initial Setup
 
 After selecting your language, you can generally just select "Install
 Ubuntu Server".  (If you find you have hardware compatibility issues,
@@ -21,7 +41,6 @@ you may need to look at the "Modes" or "Other Options".)
 
 Unless you have an unusual keyboard, it is generally not worth having
 it detect your keyboard layout and you can accept the defaults.
-
 
 
 ### Setting up networking
@@ -74,9 +93,9 @@ It is fine to select "OpenSSH Server" from the menu, but do not have
 it set up LAMP/Apache from the menu.  You will need more control over
 the options and will do it later.
 
-### Install git  
+### Install git
 
-After the machine reboots, log in and install git:  
+After the machine reboots, log in and install git:
 
 ```
 apt-get install git

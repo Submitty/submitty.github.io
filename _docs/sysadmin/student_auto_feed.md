@@ -105,9 +105,9 @@ The columns/fields may be in any order.
   Quotation marks may be picked up as part of the data and fail certain validation checks.
 
 <small>[Back To Table of Contents](#top)</small>
-### 5. Install On Ubuntu 16.04 <a name="install"></a>
+### 5. Install On Ubuntu Server <a name="install"></a>
 As these are PHP scripts, they _should_ run on any computer that has PHP 5.6+ and the appropriate extensions installed.
-However, these instructions will focus on Ubuntu 16.04 (same OS that is supported for Submitty).  Ubuntu 16.04 uses PHP 7.0 by default.
+However, these instructions will focus on Ubuntu server (same OS that is supported for Submitty).  Ubuntu 16.04 uses PHP 7.0 by default, and Ubuntu 18.04 uses PHP 7.2 by default.
 
 As Ubuntu is part of the Debian Linux family, these instructions are very likely to work with other Debian family distributions with, perhaps, minor adjustments.
 
@@ -115,6 +115,7 @@ As Ubuntu is part of the Debian Linux family, these instructions are very likely
 ```bash
 sudo apt-get install php php-pgsql php-iconv php-ssh2
 ```
+   NOTE: `php-iconv` is not needed in Ubuntu 18.04.  It is part of the `php-common` package installed with `php`.
 2. Ensure the extensions are active.
 ```bash
 sudo phpenmod php-pgsql php-iconv php-ssh2
@@ -122,7 +123,7 @@ sudo phpenmod php-pgsql php-iconv php-ssh2
 3. Create a directory on the server to run the scripts and copy `submitty_student_auto_feed.php` and `config.php` from the repository to your new directory.
   *  `submitty_student_auto_feed.php` and `config.php` both should reside in the same directory and both must be accessible by the same user account.
   * `root` is technically _not_ required to run the auto feed, but the account owning the script files will be responsible to run the auto feed via cron.
-4. It is highly advisable for sysadmins to set user-level only permissions to the auto feed script files.
+4. File permissions:
   * `submitty_student_auto_feed.php` is intended to be executable.
   * `config.php` is _not_ intended to be executable.
   * The following sets owner only permissions of "Read/Write/Execute" to `submitty_student_auto_feed.php` and "Read/Write" (non executable) to `config.php`:
@@ -351,6 +352,7 @@ That is, the first column of the CSV is #0, the second column is #1, the third c
   The entire course code would be the __prefix__ and __number__ combined.
 
   __*IMPORTANT:*__ The student CSV must have separate columns for the prefix/dept code and the course number.
+  This permits the auto feed script to process enrollment for courses in multiple departments.
 
   __*For Example*__ |
   _Prefix_ | "CSIS" (Computer Science and Information Systems dept.)
@@ -474,14 +476,13 @@ For a complete list of timezones: <http://php.net/manual/en/timezones.php>
 
 <small>[Back To Table of Contents](#top)</small>
 
-### 7. PAM Authentication and `accounts.php` <a name="pam_authentication"></a>
+### 8. PAM Authentication and `accounts.php` <a name="pam_authentication"></a>
 The script `accounts.php` will automate the creation of local accounts used with PAM authentication.
 
 *This script is not needed when using database authentication.*
 
 `accounts.php` must exist on the same server as Submitty, and it needs to be run as `root`.
-When the script is run, it will look for all existing courses and read all user entries from Submitty's course databases.
-Any missing local accounts are automatically generated.
+This script is intended to read user entries from Submitty's course databases generate any missing local accounts needed for PAM authentication.
 
 Run `accounts.php -h` to see extended help and argument list.
 
