@@ -15,7 +15,7 @@ for your needs (as the script installs all of the dependencies that Submitty dep
 _Note: These instructions should be run under root/sudo._
 
 
-1. [Install Ubuntu 16.04 server edition](server_os)
+1. [Install Ubuntu 16.04 or 18.04 server edition](server_os)
 
 
 2. After installing the operating system, clone the git repository:
@@ -51,7 +51,7 @@ _Note: These instructions should be run under root/sudo._
    the submitty database user/role, the script will create that for
    you with the specified name & password.
 
-   NOTE: Do not enable debugging unless you are developing code on a
+   IMPORTANT: Do _**not**_ enable debugging unless you are developing code on a
    non-production machine.
 
 
@@ -121,48 +121,75 @@ _Note: These instructions should be run under root/sudo._
    that begin with Directory and end with /Directory).
 
    Alternately, we provide
-   [submitty_http.conf](https://github.com/Submitty/Submitty/blob/master/.setup/apache/submitty_http.conf) to
-   run Submitty on just HTTP. We recommend only using this
-   if you are planning on developing for Submitty.
-   For production, we strongly recommend that you get a certificate
-   and use HTTPS/SSL.
+   [submitty_http.conf](https://github.com/Submitty/Submitty/blob/master/.setup/apache/submitty_http.conf)
+   to run Submitty on just HTTP.  We recommend only using this if you are
+   planning on developing for Submitty.  For production, we strongly recommend
+   that you get a certificate and use HTTPS/SSL.
 
-7. We recommend that you should leave the PostgreSQL setup unless you know what you're doing.
-   However, for the version of PostgreSQL that comes with Ubuntu (16.04), you can
-   use UNIX sockets and disable the ability to connect to the DB via TCP. The socket
-   improves query responses minorly while disabling TCP can better secure your DB if you don't
-   plan to connect to it via localhost, IP, etc. The socket by default is run at
-   `/var/run/postgresql`. To disable TCP, you will need to edit
-   `/etc/postgresql/9.5/main/pg_hba.conf` and disable all the lines that start with `host` and
-   `hostssl`. You will also have to modify `/usr/local/submitty/.setup/INSTALL_SUBMITTY.sh` and
-   change `DATABASE_HOST` to point to the socket, and then re-run the script.
+6. We recommend that you should leave the PostgreSQL setup unless you know what
+   you're doing.  However, for the version of PostgreSQL that comes with Ubuntu
+   Server, you _may_ use UNIX sockets and disable the ability to connect to the
+   DB via TCP. The socket improves query responses minorly while disabling TCP
+   can better secure your DB if you don't plan to connect to it via localhost,
+   IP, etc. The socket by default is run at `/var/run/postgresql`. To disable
+   TCP, you will need to edit `/etc/postgresql/9.5/main/pg_hba.conf` and
+   disable all the lines that start with `host` and `hostssl`. You will also
+   have to modify `/usr/local/submitty/.setup/INSTALL_SUBMITTY.sh` and change
+   `DATABASE_HOST` to point to the socket, and then re-run the script.
 
-8. Test apache config with:  `apache2ctl -t` 
+   NOTES:
+   - When using Ubuntu 18.04, the configuration file path to disable TCP is
+     `/etc/postgresql/10/main/pg_hba.conf`.
+   - If you intend to run the [Student Auto Feed](student_auto_feed), do not
+     disable TCP.
 
-    If everything looks ok, restart apache with:  `service apache2 restart'
+7. Test apache config with:  `apache2ctl -t`
+
+   If everything looks ok, restart apache with:  `service apache2 restart'
 
 
-##### Troubleshooting Installation
-1. I cannot connect to PAM!
+### Troubleshooting
+- **I cannot connect to PAM!**
+  1. Submitty authenticates PAM through the python module
+     [python-pam](https://pypi.python.org/pypi/python-pam/) using the
+     `submitty_cgi` user. By default, we assume you're going to use local accounts
+     for authentication and as such `submitty_cgi` has been added to the `shadow`
+     group so that it can read /etc/password which is necessary for PAM to work.
 
-Submitty authenticates PAM through the python module
-[python-pam](https://pypi.python.org/pypi/python-pam/) using the `submitty_cgi` user. By default, we
-assume you're going to use local accounts for authentication and as such `submitty_cgi` has been
-added to the `shadow` group so that it can read /etc/password which is necessary for PAM to work.
+     To test PAM, you can do:
 
-To test PAM, you can do:
-```bash
-$ sudo su submitty_cgi -c python3
-Python 3.5.1 (default, Jun 29 2016, 13:08:31)
-[GCC 4.9.2] on linux2
-Type "help", "copyright", "credits" or "license" for more information.
->>> import pam
->>> p = pam.pam()
->>> p.authenticate('username', 'password')
-True
-```
-(where `username` and `password` match some account on the machine).
+     ```bash
+     $ sudo su submitty_cgi -c python3
+     Python 3.5.1 (default, Jun 29 2016, 13:08:31)
+     [GCC 4.9.2] on linux2
+     Type "help", "copyright", "credits" or "license" for more information.
+     >>> import pam
+     >>> p = pam.pam()
+     >>> p.authenticate('username', 'password')
+     True
+     ```
 
-If you get an error about module pam not being found, that means that `submitty_cgi` does not have the proper permissions to
-the module and if you get False on authentication, then `submitty_cgi` does not have the proper permissions to check the
-right files via PAM.
+     (where `username` and `password` match some account on the machine).
+
+     If you get an error about module pam not being found, that means that
+     `submitty_cgi` does not have the proper permissions to the module and if
+     you get False on authentication, then `submitty_cgi` does not have the
+     proper permissions to check the right files via PAM.
+
+  2. If the PAM module is functioning, but Submitty is still erroring during
+     user authentication, check `/var/log/apache2/submitty.log` for these
+     entries with a recent timestamp:
+
+     1. `AH01630: client denied by server configuration: /usr/local/submitty/site/cgi-bin/pam_check.cgi`
+     2. `POST /cgi-bin/pam_check.cgi HTTP/1.1" 403 470 "-" "-"`
+
+     This indicates that apache is blocking the execution of Submitty's
+     authentication code.  Try adding this line to `submitty.conf` under the
+     heading `<Directory "/usr/local/submitty/site/cgi-bin">`.
+
+     - `Require all granted`
+
+- **Installation Fails During NTP Setup**
+  1.  This is indicative that you installed the Ubuntu 18.04 "Live" server.
+      "Live" server is unsupported.  Please install the traditional server.
+      Please see the [Server OS](server_os) page for more details.
