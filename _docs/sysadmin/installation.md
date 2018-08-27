@@ -55,6 +55,14 @@ _Note: These instructions should be run under root/sudo._
    non-production machine.
 
 
+4. Run installations specific to your university.  
+   For example:  [RPI Computer Science specific installations](https://github.com/Submitty/Submitty/blob/master/.setup/distro_setup/ubuntu/rpi.sh)
+
+   ```
+   sudo bash /usr/local/submitty/.setup/distro_setup/ubuntu/rpi.sh
+   ```
+
+
 4. Edit PHP Settings
 
    We recommend for security that you modify your PHP installation and disable certain PHP functions.
