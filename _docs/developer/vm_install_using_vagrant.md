@@ -175,8 +175,14 @@ operating system.
    website.
 
    * From a web browser (Chrome, Firefox, IE, etc.) on your host
-     computer, go to:   
+     computer,
+
+     If you have the Ubuntu 18.04 VM, go to:
+     <http://192.168.56.111/index.php>  
+
+     If you have the Ubuntu 16.04 VM, go to:
      <http://192.168.56.101/index.php>  
+
      (see the VM login & password info below)
 
    * You can test the submission, autograding, and viewing of the
