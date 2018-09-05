@@ -349,7 +349,7 @@ executables.
   **type:** _string_  
   **default value** ``"container0"``, ``"container1"``, etc.  
   **USE:** Used to refer to a container when specifying a network. Student output
-  per testcase is stored in the <container_name>/ subdirectory.    
+  per testcase is stored in the container_name/ subdirectory.    
   **RESERVED VALUES:** The name _"router"_ specifies a docker node through which
   all messages flow. See the router provided in [Submitty Tutorial 16](https://github.com/Submitty/Tutorial/tree/master/examples/16_docker_network_python)
    as an example.
@@ -415,7 +415,43 @@ starts before it.
 gradeables (confirmed in Python).  As such all professor and student code should either
 explicitly flush their stdout or write to a file.
 
-### Types of Action
+### Dispatcher Actions (Standard Input)
+
+It is possible to communicate with an assignment running in docker via standard input.
+
+```
+"dispatcher_actions" :
+[
+  {
+    "action" : "delay",
+    "seconds" : 2
+  },
+  {
+    "containers" : ["container0"],
+    "action" : "stdin",
+    "string" : "Hi there! I'm container0\n"
+  },
+  {
+    "containers" : ["container1"],
+    "action" : "stdin",
+    "string" : "Hi there! I'm container1\n"
+  }
+],
+```
+
+Dispatcher actions are specified at the testcase level and are delivered
+sequentially to student containers.  There are two types of action, ``stdin`` and ``delay``. Delays specify a
+floating point number of seconds delay before the next action is
+processed. Standard Input Actions deliver a string to any containers
+whose names are specified in the "containers" array. Please note that
+many languages require a newline at the end of an input expected on
+stdin.
+
+### Interfacing With Graphics Applications
+
+It is possible to provide keyboard and mouse input to running student graphics applications.
+
+#### Types of Graphics Application Actions
 * **Action:** ``"Delay"``   
   **Command:** "delay (number of seconds)"   
   **Description:** Delays a number of seconds before the next action is taken. Useful if the results of the previous action may take some time to render.
