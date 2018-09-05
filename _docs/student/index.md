@@ -18,3 +18,5 @@ permalink: /student
 [Reviewing TA Grades](/student/reviewing_ta_grades)
 
 [Team Assignments](/student/team_assignments)
+
+[Testing Networked Applications Locally](/student/testing_networks)
