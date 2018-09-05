@@ -56,7 +56,7 @@ Once you have created a few containers, you can create a network with this comma
 ```
 docker network create --driver bridge network_name
 ```
-Where you can specify their own network_name
+Where you can specify your own network_name.
 
 Then, you can connect your containers to the network as follows:
 ```
