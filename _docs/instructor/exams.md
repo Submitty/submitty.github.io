@@ -9,6 +9,39 @@ Submitty supports instructor upload of bulk PDF files to then be divided into in
 If there is TA grading, questions can also be assigned page numbers by either instructor or student. In the TA grading interface, clicking on a question will open the corresponding page in the PDF.
 
 
+
+### Preparing the Exams for Scanning
+
+* If you notice a student has extra pages or missing pages, or the
+  exam is rather crumpled, set them to the side for individual
+  scanning at the end.
+
+* Scanning ~100-150 pages at a time works well, so for example if your
+  exam is 14 pages (7 sheets of paper, front & back), separating the
+  paper exams into stacks of 7-10 works well.
+
+* Make most stacks the exact same count, and make sure the person
+  working the scanner knows how many pages to expect per pack (e.g. 98
+  pages or 140 pages).  The scanner person should check the page count
+  after each scan and try to catch problems early.
+
+* Use scissors to cut the staple corner off the exams.  Tap the exam
+  papers on a table to align the sheets and make it less likely to jam
+  or crumble in the feeder when scanning.
+
+* Put a post-it note on the cover of the first exam of each page
+  (remove the postit for the actual scan), and give a letter/name to
+  each exam pile.  Have that name match the scanned file name (either
+  change the file name or write the scanner-generated name on the
+  postit after scanning).  This will help tracking down the pile if it
+  needs to be re-scanned because of stuck pages or scan quality
+  settings.
+
+* Optional: Re-Staple the exams after scanning.  Note: This is less
+  necessary if you've pre-printed exams with each students name on
+  every page.
+
+
 ### Tips for Scanning
 
 Explore the options / settings on your scanner.  Things to check:
@@ -34,13 +67,28 @@ Explore the options / settings on your scanner.  Things to check:
   be sequentially numbered, or named with the timestamp to facilitate
   orderly upload to Submitty.
 
+
+
+
 #### Scanning with the ScanSnap iX500 on Linux
 
-We use the ScanSnap iX500 for scanning our exams. This works with [SANE](http://www.sane-project.org/) out of the box; a variety of of front-ends for SANE exist that work well with this printer. [Simple-scan](https://github.com/GNOME/simple-scan) works fairly well - you will need to make sure to select the scanner in its preferences and set it to scan 'Both' sides of each page; you can then 'scan all pages from feeder' and then export multiple exams into one PDF, for bulk uploading.
+We use the ScanSnap iX500 for scanning our exams. This works with
+[SANE](http://www.sane-project.org/) out of the box; a variety of of
+front-ends for SANE exist that work well with this
+printer. [Simple-scan](https://github.com/GNOME/simple-scan) works
+fairly well - you will need to make sure to select the scanner in its
+preferences and set it to scan 'Both' sides of each page; you can then
+'scan all pages from feeder' and then export multiple exams into one
+PDF, for bulk uploading.
 
-Scanning with 150DPI for text _and_ photos generates reasonably sized files - most PDFs generated are between 25 and 35MB for 140 pages.
+Scanning with 150DPI for text _and_ photos generates reasonably sized
+files - most PDFs generated are between 25 and 35MB for 140 pages.
 
-Additionally, simple-scan dumps a lot of autosaved files into `~/.cache/simple-scan/` (roughly 6.5GB of temporary files were generated in one night, with about 650MB of outputted files). This balloons pretty quickly and required clearing that out every few times a PDF was exported.
+Additionally, simple-scan dumps a lot of autosaved files into
+`~/.cache/simple-scan/` (roughly 6.5GB of temporary files were
+generated in one night, with about 650MB of outputted files). This
+balloons pretty quickly and required clearing that out every few times
+a PDF was exported.
 
 ### Creating PDF assignments
 
