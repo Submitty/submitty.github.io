@@ -1,7 +1,7 @@
 ---
 title: Rainbow Grades
 category: Instructor
-order: 7
+order: 8
 ---
 
 ![](http://submitty.org/images/rainbow_grades.png)
@@ -48,7 +48,9 @@ order: 7
    Set the variables at the top of the file
    (`USERNAME`, `RAINBOW_GRADES_DIRECTORY`, `HWSERVER`, `REPORTS_DIRECTORY`)
 
-   Note:  When using the development VM, you can connect to the server as the instructor user:
+   If you are not a developer, jump to step 5 after setting these variables.
+
+   Note (**FOR DEVELOPERS ONLY**):  When using the development VM, you can connect to the server as the instructor user:
 
    ```
    ssh -p 2222 instructor@127.0.0.1

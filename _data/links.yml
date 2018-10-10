@@ -43,6 +43,8 @@
         - name: Exam Seating
           link: exam_customization
         - name: iClicker Instructions
+        - name: RPI VPN on WSL Instructions
+          link: wsl_vpn
     - name: Late Days
     - name: Team Assignments
     - name: Website Customization
