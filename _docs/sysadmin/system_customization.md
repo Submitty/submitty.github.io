@@ -168,8 +168,10 @@ By default, Apache / Ubuntu limits the size of file upload by POST to
 10MB.  To increase this edit:
 
 ```
-/etc/php/7.0/fpm/php.ini
+/etc/php/7.2/fpm/php.ini
 ```
+
+_Note: Ubuntu 18.04 is using 7.2, but older versions might be using `php7.0-fpm`._
 
 Change these variables as appropriate:
 
@@ -182,15 +184,17 @@ And restart apache:
 
 ```
 sudo systemctl restart apache2.service
-sudo systemctl restart php7.0-fpm.service
+sudo systemctl restart php7.2-fpm.service
 ```
 
 and/or
 
 ```
 sudo service apache2 restart
-sudo service php7.0-fpm restart
+sudo service php7.2-fpm restart
 ```
+
+_Note: Ubuntu 18.04 is using 7.2, but older versions might be using `php7.0-fpm`._
 
 By default, a Submitty electronic gradeable allows students to upload
 files totaling 100KB.  Instructors can adjust this limit per gradeable
@@ -202,7 +206,7 @@ in the `config.json`, for example:
 ```
 
 If you are having difficulty with student upload size, you can modify the
-following in /etc/php/7.0/fpm/php.ini:
+following in /etc/php/7.2/fpm/php.ini:
 
 ```
 memory_limit
