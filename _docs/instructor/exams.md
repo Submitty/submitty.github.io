@@ -157,3 +157,10 @@ PDF preview contains the first page of the pdf. If you want to view the full PDF
 To submit for a student, enter their user ID and press enter or click submit. Autofill for user ID brings up students who do not yet have any submissions for this gradeable.
 
 Once submitted, the split PDF item is moved from `/uploads/split_pdf/gradeable_id` to its corresponding location in the `/submissions/gradeable_id/user_id` folder. 
+
+### Bulk Upload and Split with QR codes
+
+For large bulk uploads or PDF's that need to be split into different sizes, there is an option to use QR codes instead of a fixed page count.
+This can be choosen by selecting 'bulk upload' in the upload section for assignments then checking the 'split with qr codes?' box. You can select and optional prefix if your QR codes contains and encoded prefix.
+For example if you select a prefix of 'fall_18_' and a qr code contains the string 'fall_18_userID', the resulting string will be 'userID'
+After decoding, the student_id text_area will be autofilled with the qr code along with a count of split pages. Invalid user ID's will be highlighted in red.
