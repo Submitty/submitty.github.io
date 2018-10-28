@@ -104,11 +104,11 @@ Then, you should be able to set breakpoints in your JavaScript files in PhpStorm
 #### If that doesn't work
 
 Alternatively, you can debug in Chrome by using a custom run configuration. Open `Run` > `Edit Configurations`. Press the `+` button and add a `JavaScript Debug` configuration. Set:
-- `URL`: `http://192.168.56.101`
+- `URL`: `http://192.168.56.111`
 - `Browser`: `Chrome` (only option currently)
 - `Ensure breakpoints are detected when loading scripts`: Leave unchecked unless you're debugging some code that runs on page load
 
-In the `Remote URLs of local files (optional)` section, find `site/public` and give it a `Remote URL` of `http://192.168.56.101`.
+In the `Remote URLs of local files (optional)` section, find `site/public` and give it a `Remote URL` of `http://192.168.56.111`.
 
 Press `OK` to save the run configuration. If you then `Debug` the configuration, it should open a new Chrome process and automatically start debugging, note that this Chrome will not have any of your user data / configuration / extensions. Note that if you `Run` the configuration you will not be able to debug JavaScript.
 
