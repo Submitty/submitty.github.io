@@ -63,7 +63,7 @@ Follow instructions 2 - 4 on [this website](https://confluence.jetbrains.com/dis
 Open a database window by going to `View` > `Tool Windows` > `Database`. Press the `+` button and under `Data Source` choose to add a `PostgreSQL` database. Then set the following:
 
 - `Host`: `127.0.0.1`
-- `Port`: `15432`
+- `Port`: `16432`
 - `Database`: `submitty`
 - `User`: `vagrant`
 - `Password`: `vagrant`
