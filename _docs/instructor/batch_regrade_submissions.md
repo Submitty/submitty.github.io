@@ -61,6 +61,14 @@ access to run the commands below.
      ```
 
 
+   * You may also use the optional `--active_only` flag to skip all
+     versions that are not currently the active version:
+
+     ```
+     sudo /usr/local/submitty/bin/regrade.py --active_only /var/local/submitty/courses/f16/csci1200/submissions/hw02 
+     ```
+
+
 2. If the number of submissions matching the specified
    pattern is greater than 50, the script will require interactive
    confirmation [y/n] before queueing those homework submissions for
