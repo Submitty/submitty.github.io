@@ -9,7 +9,7 @@ order: 3
    The Vagrant VM sets up PostgreSQL such that you can access it from
    within the VM as well as from outside it for ease of development. When
    you start Vagrant, it will map the port 5432 inside the VM to the port
-   15432 outside the VM. You can then connect by specifying localhost for
+   16432 outside the VM. You can then connect by specifying localhost for
    the host and then `submitty_${SEMESTER}_${COURSE}` (replacing
    `${SEMESTER}` and `${COURSE}` with the actual one you want) for the DB
    to connect to. The user and password are both `submitty_dbuser`. All tables are then
