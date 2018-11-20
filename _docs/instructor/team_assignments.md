@@ -31,7 +31,7 @@ create new teams or invite new members to existing teams.
 
 ![](/images/team_assignment_creation_2.png)
 
-### Creating Teams
+### Creating And Editing Teams
 
 Instructors also have the option of making teams for the students.
 
@@ -50,9 +50,19 @@ button for that assignment.  You have 2 options:
   are no teams for this gradeable.
 
 * Press the pencil icon in the Edit Teams column for a student you'd
-  like to put on a team to bring up the interface for creating a team
+  like to put on a team to bring up the interface for editing a team
 
-  ![](/images/team_create_teams.png)
+  * In the left "Team Member IDs" part, the grey blocks mean the
+  existing members and the white blocks means the one you are going to
+  add. You can use red "x" button to delete members. When adding 
+  members, there will be a drop-down list to help you search.
+
+  ![](/images/team_edit_team_2.png)
+
+  * Below is the "Team History" part. You can see the information of 
+  editing and adding history.
+
+  ![](/images/team_edit_team.png)
 
 
 Once at least one team has been formed, you will have the option to
