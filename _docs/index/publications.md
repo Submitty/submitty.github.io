@@ -6,13 +6,13 @@ order: 1
 
 
 
-* ["Autograding Distributed Algorithms in Networked Containers"](https://github.com/Submitty/publications/raw/master/2019_SIGCSE_Grading_Networked_Applications/2019_SIGCSE_Grading_Networked_Applications.pdf)
-Evan Maicus, Matthew Peveler, Stacy Patterson, and Barbara Cutler
+* ["Autograding Distributed Algorithms in Networked Containers"](https://github.com/Submitty/publications/raw/master/2019_SIGCSE_Grading_Networked_Applications/2019_SIGCSE_Grading_Networked_Applications.pdf)  
+Evan Maicus, Matthew Peveler, Stacy Patterson, and Barbara Cutler  
 Proceedings of the 50th ACM Technical Symposium on Computer Science Education (SIGCSE '19)</em>, February 2019.
 
 
-* ["Comparing Jailed Sandboxes vs Containers Within an Autograding System"](https://github.com/Submitty/publications/raw/master/2018_SIGCSE_demo_peveler_et_al/SIGCSE%202018%20Submitty%20Demo%20Presentation.pdf)
-Matthew Peveler, Evan Maicus, and Barbara Cutler
+* ["Comparing Jailed Sandboxes vs Containers Within an Autograding System"](https://github.com/Submitty/publications/raw/master/2018_SIGCSE_demo_peveler_et_al/SIGCSE%202018%20Submitty%20Demo%20Presentation.pdf)  
+Matthew Peveler, Evan Maicus, and Barbara Cutler  
 Proceedings of the 50th ACM Technical Symposium on Computer Science Education (SIGCSE '19)</em>, February 2019.
 
 
