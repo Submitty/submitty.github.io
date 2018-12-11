@@ -80,18 +80,18 @@ order: 8
 6. **Start your customization**  
    In order to run Rainbow Grades you will need to set up a `customization.json` file. While we
    provide a sample file as a starting point, you will need to make changes in order to tailor
-   Rainbow Grades for your course. Starting details are on the [Customization Basics](/instructor/customization) page.
+   Rainbow Grades for your course. Starting details are on the [Customization Basics](/instructor/rainbow_grades/customization) page.
 
 7. **Add in gradeables**  
    Once you've set up general course information, you'll want to focus on adding gradeables
    to your `customization.json` file. This array describes each assignment to Rainbow Grades.
    You will likely update this many times throughout the semester. Since there are several
-   features specific to this array, it has its own instructions on the [Gradeables Customization](/instructor/gradeables) page.
+   features specific to this array, it has its own instructions on the [Gradeables Customization](/instructor/rainbow_grades/gradeables) page.
 
 8. **Other customization extras**  
    `customization.json` supports other options. While the list may evolve over time, we currently
-   provide documentation for [assigned exam seating](/instructor/exam_customization) and 
-   [iClicker integration](/instructor/iclicker) on their own pages.
+   provide documentation for [assigned exam seating](/instructor/rainbow_grades/exam_customization) and
+   [iClicker integration](/instructor/rainbow_grades/iclicker_instructions) on their own pages.
 
 
 9. **Generate the reports**.   
