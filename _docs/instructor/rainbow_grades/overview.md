@@ -80,7 +80,7 @@ order: 8
 6. **Start your customization**  
    In order to run Rainbow Grades you will need to set up a `customization.json` file. While we
    provide a sample file as a starting point, you will need to make changes in order to tailor
-   Rainbow Grades for your course. Starting details are on the [Customization Basics](/instructor/rainbow_grades/customization) page.
+   Rainbow Grades for your course. Starting details are on the [Customization Basics](/instructor/rainbow_grades/customization_basics) page.
 
 7. **Add in gradeables**  
    Once you've set up general course information, you'll want to focus on adding gradeables
