@@ -91,7 +91,7 @@ order: 8
 8. **Other customization extras**  
    `customization.json` supports other options. While the list may evolve over time, we currently
    provide documentation for [assigned exam seating](/instructor/rainbow_grades/exam_customization) and
-   [iClicker integration](/instructor/rainbow_grades/iclicker) on their own pages.
+   [iClicker integration](/instructor/rainbow_grades/iclicker_instructions) on their own pages.
 
 
 9. **Generate the reports**.   
