@@ -37,7 +37,18 @@ Variable names should be all lowercase and contain underscores to distinguish be
 We will follow the jQuery style guide for styling our code. All the Javascript code will be minified when in production so readability is the main goal so things like liberal use of spacing and the like are preferred.
 
 ### Python
-For Python, please follow the guidelines laid out in [PEP-8](https://www.python.org/dev/peps/pep-0008/). Your code should pass through [Pylint](http://www.pylint.org/) without issue. Additionally, all code written should be runnable by both Python 2 and Python 3. You can use this [cheatsheet](http://python-future.org/compatible_idioms.html) to aid in this endeavor.
+For Python, we use [flake8](http://flake8.pycqa.org/en/latest/) to check Python code such that it follows things laid out in
+[PEP-8](https://www.python.org/dev/peps/pep-0008/), [PEP-257](https://www.python.org/dev/peps/pep-0257/), etc. The code is
+linted as part of our automated Travis-CI testsuite to ensure compliance. To locally lint the code, you will need to
+install three modules:
+
+    pip3 install flake8 flake8-bugbear flake8-docstrings
+
+and then you can just run `flake8` at the root to check all files or pass it an individual file to check just that.
+To see all files that are currently checked as part of Travis-CI, please look at the `.flake8` config file.
+
+For version of Python that code should support, you must support the minimum version of Python3 that comes by default
+with our supported distros, which at this time is Python 3.4 in Debian 7.
 
 ### Java
 For Java, please follow the guidelines laid out in the [Oracle Style Guide](http://www.oracle.com/technetwork/java/javase/documentation/codeconvtoc-136057.html).
