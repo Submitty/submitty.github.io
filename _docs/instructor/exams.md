@@ -74,10 +74,10 @@ Explore the options / settings on your scanner.  Things to check:
 
 #### Scanning with the ScanSnap iX500 on Linux
 
-We use the ScanSnap iX500 for scanning our exams. This works with
+We use the portable ScanSnap iX500 for scanning our exams. This works with
 [SANE](http://www.sane-project.org/) out of the box; a variety of of
 front-ends for SANE exist that work well with this
-printer. [Simple-scan](https://github.com/GNOME/simple-scan) works
+scanner. [Simple-scan](https://github.com/GNOME/simple-scan) works
 fairly well - you will need to make sure to select the scanner in its
 preferences and set it to scan 'Both' sides of each page; you can then
 'scan all pages from feeder' and then export multiple exams into one
@@ -87,9 +87,11 @@ Scanning with 150DPI with the photo setting generates reasonably sized
 files - most PDFs generated are between 25 and 35MB for 140 pages.
 
 Make sure you select 'Photo' from the Scan settings dropown in the top left corner:
+
 ![](/images/linux_scansnap_photo.png)
 
 And in the preferences menu, under Quality, select 150 dpi and adjust the brightness and contrast:
+
 ![](/images/linux_scansnap_150dpi.png)
 
 Check the quality and brightness/contrast of your initial scan.  The
