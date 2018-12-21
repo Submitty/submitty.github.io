@@ -25,19 +25,21 @@ If there is TA grading, questions can also be assigned page numbers by either in
   pages or 140 pages).  The scanner person should check the page count
   after each scan and try to catch problems early.
 
-* Use scissors to cut the staple corner off the exams.  Tap the exam
-  papers on a table to align the sheets and make it less likely to jam
-  or crumble in the feeder when scanning.
+* Use scissors to cut the staple corner off the exams.  *IMPORTANT:
+  Carefully cut off the smallest amount of paper with the staple.  If
+  you cut too much, the scanner feeder might fail to load the sheets
+  of paper.*  Tap the exam papers on a table to align the sheets and
+  make it less likely to jam or crumble in the feeder when scanning.
 
 * Put a post-it note on the cover of the first exam of each page
-  (remove the postit for the actual scan), and give a letter/name to
+  (remove the post-it for the actual scan), and give a letter/name to
   each exam pile.  Have that name match the scanned file name (either
   change the file name or write the scanner-generated name on the
   postit after scanning).  This will help tracking down the pile if it
   needs to be re-scanned because of stuck pages or scan quality
   settings.
 
-* Optional: Re-Staple the exams after scanning.  Note: This is less
+* Optional: Re-staple the exams after scanning.  Note: This is less
   necessary if you've pre-printed exams with each students name on
   every page.
 
@@ -81,8 +83,21 @@ preferences and set it to scan 'Both' sides of each page; you can then
 'scan all pages from feeder' and then export multiple exams into one
 PDF, for bulk uploading.
 
-Scanning with 150DPI for text _and_ photos generates reasonably sized
+Scanning with 150DPI with the photo setting generates reasonably sized
 files - most PDFs generated are between 25 and 35MB for 140 pages.
+
+Make sure you select 'Photo' from the Scan settings dropown in the top left corner:
+![](/images/linux_scansnap_photo.png)
+
+And in the preferences menu, under Quality, select 150 dpi and adjust the brightness and contrast:
+![](/images/Login.png)
+
+Check the quality and brightness/contrast of your initial scan.  The
+background of white paper should scan light grey to ensure you pick up
+light pencil marks and erased writing.  Make sure that the output
+pixel values are true greyscale.  If your pixels are clamped to black
+and white or clamped to a few shades of grey you will likely struggle
+to read the full range of pencil markings.
 
 Additionally, simple-scan dumps a lot of autosaved files into
 `~/.cache/simple-scan/` (roughly 6.5GB of temporary files were
