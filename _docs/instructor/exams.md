@@ -181,3 +181,9 @@ For large bulk uploads or PDF's that need to be split into different sizes, ther
 This can be choosen by selecting 'bulk upload' in the upload section for assignments then checking the 'split with qr codes?' box. You can select and optional prefix if your QR codes contains and encoded prefix.
 For example if you select a prefix of 'fall_18_' and a qr code contains the string 'fall_18_userID', the resulting string will be 'userID'
 After decoding, the student_id text_area will be autofilled with the qr code along with a count of split pages. Invalid user ID's will be highlighted in red.
+
+
+Check out our work-in-progress instructor tool for preparing
+customized exams with QR codes:
+
+[QR TestMaker](https://github.com/Submitty/InstructorTools/tree/master/QR_TestMaker)
