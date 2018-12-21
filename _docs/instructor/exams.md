@@ -90,7 +90,7 @@ Make sure you select 'Photo' from the Scan settings dropown in the top left corn
 ![](/images/linux_scansnap_photo.png)
 
 And in the preferences menu, under Quality, select 150 dpi and adjust the brightness and contrast:
-![](/images/Login.png)
+![](/images/linux_scansnap_150dpi.png)
 
 Check the quality and brightness/contrast of your initial scan.  The
 background of white paper should scan light grey to ensure you pick up
