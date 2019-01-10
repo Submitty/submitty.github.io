@@ -1,5 +1,5 @@
 ---
-title: Installation
+title: Worker Installation
 category: System Administrator
 order: 2
 ---
