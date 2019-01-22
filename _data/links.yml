@@ -11,6 +11,8 @@
     - name: Course Navigation
       link: navigation
     - name: Submission
+    - name: Submission via GIT
+      link: git_submission
     - name: Automated Testing
     - name: Late Days & Extensions
       link: late_days
@@ -29,6 +31,8 @@
       link: create_edit_gradeable
     - name: Directory Structure
     - name: Assignment Configuration
+    - name: Facilitating Submission via GIT
+      link: managing_git
     - name: Static Analysis
     - name: Tree Tool
     - name: Log Files
@@ -66,7 +70,7 @@
       link: update
     - name: Database Overview
     - name: Course Creation
-    - name: Setting up Git
+    - name: Setting up Internal Git
       link: git
     - name: System Customization Checklist
       link: system_customization
