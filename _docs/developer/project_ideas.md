@@ -163,6 +163,8 @@ Us](http://submitty.org/index) to join the development team.
 
    * Performance with larger datasets and automated refresh for new posts.
 
+   [Gagan Kumar's GSOC Summer 2018 Project](/developer/GSOC2018_GaganKumar)
+   
    _Experience Required: Some programming experience, willingness to
    learn web and database development._
 
@@ -183,6 +185,8 @@ Us](http://submitty.org/index) to join the development team.
    decision on plagiarism vs. coincidental matching.
 
    [Open Issues related to Plagiarism Detection](https://github.com/Submitty/Submitty/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+plagiarism)
+
+   [Tushar Gurjar's GSOC Summer 2018 Project](/developer/GSOC2018_TusharGurjar)
 
    _Experience Required: Some programming experience, willingness to
    learn web and database development.  Experience with a wide variety
