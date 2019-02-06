@@ -78,9 +78,9 @@ Us](http://submitty.org/index) to join the development team.
 
 
 
-3. **Web GUI for creating automated grading configurations**
+3. **Streamline instructor configuration of automated grading**
 
-   Currently instructors must write a configuration as a config.json
+   Currently, instructors must write a configuration as a config.json
    (and any necessary additional files) and upload or store these
    files on the local file system.  We would like to provide an
    alternate web GUI interface for creating basic on moderately
@@ -91,12 +91,33 @@ Us](http://submitty.org/index) to join the development team.
    
    [Assignment Configuration Instructions](http://submitty.org/instructor/assignment_configuration)
 
+
+   **Automated Creation of Expected Output Files**
+
+   At present, instructors must upload expected output files for each
+   autograding test case. This means that, should a test case change,
+   its expected results must be manually regenerated and updated by
+   the instructor. Rather than uploading expected output files, we
+   would like to provide instructors with the option to provide a
+   solution executable and a set of inputs. Under this model, expected
+   output files can then be generated at assignment build time.
+
+   **Randomly Generate Testcase Input**
+
+   Once the automated generation of expected output files is complete,
+   it becomes possible to generate expected output for randomly
+   generated input files. Under this model, instructors will provide a
+   set of rules for test input generation. At grading time, these
+   rules will be used to generate an input for a testcase. This input
+   will then be fed to an instructor provided solution to generate
+   expected output.
+
    _Experience Required: Some programming experience, willingness to
    learn web and database development.  Having served as a teaching
    assistant or instructor with experience in programming assignment
    design will be beneficial._
 
-   _GSOC Proposal Tag:_ `instructor/grader UI`
+   _GSOC Proposal Tag:_ `instructor UI`
 
  
 
@@ -104,18 +125,22 @@ Us](http://submitty.org/index) to join the development team.
 
    Submitty's primary platform target are web browsers on standard
    laptop and desktop computers, where students will do their
-   development and instructors/TAs will view or download and grade
-   those assignments.
+   software development and instructors/TAs will view or download and grade
+   complex assignments.
 
    However, as Submitty has expanded to include elements from learning
-   management platforms such as the discussion forum, instructor
+   management platforms such as a discussion forum, instructor
    announcements and notifications, student photos and information,
-   and presentation of semester grades, our users have
+   small grading tasks such as taking attendance, and presentation of
+   semester grades, our users have requested additional
+   mobile-friendly access and features.
 
-   _Experience Required: Some programming experience, willingness to
-   learn web, database, and mobile computing development technologies.
-   Personal access to variety of different operating systems, and
-   phone/tablet hardware will be beneficial._
+   _Experience Required: Critical eye for visual design, some
+   programming experience with html, css, javascript, reactive designs
+   (e.g., bootstrap), and willingness to learn additional web, database, and
+   mobile computing development technologies.  Personal access to
+   variety of different operating systems, and phone/tablet hardware
+   will be beneficial._
 
    _GSOC Proposal Tag:_ `mobile-friendly website`
 
@@ -135,38 +160,45 @@ Us](http://submitty.org/index) to join the development team.
 
 6. **Instructional Materials and Documentation**
 
-   We would like to provide more starter material for instructors
-   teaching introductory programming courses in middle and high
-   schools, including AP Computer Science.
+   We would like to reduce the learning curve for new instructors and
+   provide more starter material for instructors teaching introductory
+   programming courses in middle and high schools, including AP
+   Computer Science.
 
    _Experience Required: Some programming experience, willingness to
    learn web and database development.  Having served as a teaching
    assistant or instructor with experience in programming assignment
    design will be beneficial._
 
-   _GSOC Proposal Tag:_ `instructional materials/documentation`
+   _GSOC Proposal Tags:_ `instructor UI` and/or `instructional materials/documentation`
 
 
 
 6. **Discussion Forum**
 
-   A new feature for Spring 2018 is a Discussion Forum where
-   instructors can post announcements, students can ask questions,
+   The discussion forum is now a mature component of Submitty.
+   Instructors can post announcements, students can ask questions,
    instructors/TAs/other students can answer questions, and students can
-   share ideas and images.  
+   share ideas, code, images, and links.
+
+   Current and future development work on the forum includes:
+
+   * Performance and design analysis and code refactor to facilitate large
+     datasets and automated refresh for new posts.
+
+   * Team chat and direct messages.
+
+   * Assignment regrade requests via private student-grader discussion thread.
+
+   * Integration of grading tasks with forum posts and participation.
 
    [Open Issues related to the Discussion Forum](https://github.com/Submitty/Submitty/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+forum)
 
-   Advanced features related to the Discussion Forum:
-
-   * Team chat
-
-   * Performance with larger datasets and automated refresh for new posts.
-
    [Gagan Kumar's GSOC Summer 2018 Project](/developer/GSOC2018_GaganKumar)
    
-   _Experience Required: Some programming experience, willingness to
-   learn web and database development._
+   _Experience Required: Prior experience with web development (html,
+   twig, css, javascript, and ajax) and manipulating and optimizing
+   complex database queries._
 
    _GSOC Proposal Tag:_ `discussion forum`
 
@@ -175,14 +207,11 @@ Us](http://submitty.org/index) to join the development team.
 
 7. **Instructor interface for Plagiarism Detection**
 
-   The initial implementation of the core plagiarism detection
-   algorithm is complete.  And we have an initial visualization of
-   similarities between the top matching pairs of assignment
-   submissions.  Outstanding work includes testing and debugging,
-   detection of common code (e.g., instructor-provided code),
-   extension to languages other than Python, C/C++, and Java, more
-   intuitive visualization (to allow the instructor to make final
-   decision on plagiarism vs. coincidental matching.
+   The design for our initial visualization of similarities between
+   the top matching pairs of assignment submissions is compete.
+   Outstanding work includes large-scale performance testing, quality
+   of results debugging, development of a regression test suite, and
+   extension to languages other than Python, C/C++, and Java.
 
    [Open Issues related to Plagiarism Detection](https://github.com/Submitty/Submitty/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+plagiarism)
 
@@ -193,9 +222,6 @@ Us](http://submitty.org/index) to join the development team.
    of programming languages is beneficial._
 
    _GSOC Proposal Tag:_ `plagiarism detection`
-
-
-
 
    
 
@@ -214,7 +240,7 @@ Us](http://submitty.org/index) to join the development team.
    _Experience Required: Upper level coursework in programming
    languages, compilers, and/or program analysis._
 
-   _GSOC Proposal Tag:_ `other`
+   _GSOC Proposal Tag:_ `static program analysis`
 
 
 9. **Continuous Integration Testing**
