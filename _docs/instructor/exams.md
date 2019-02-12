@@ -178,9 +178,18 @@ Once submitted, the split PDF item is moved from `/uploads/split_pdf/gradeable_i
 ### Bulk Upload and Split with QR codes
 
 For large bulk uploads or PDF's that need to be split into different sizes, there is an option to use QR codes instead of a fixed page count.
-This can be choosen by selecting 'bulk upload' in the upload section for assignments then checking the 'split with qr codes?' box. You can select and optional prefix if your QR codes contains and encoded prefix.
-For example if you select a prefix of 'fall_18_' and a qr code contains the string 'fall_18_userID', the resulting string will be 'userID'
-After decoding, the student_id text_area will be autofilled with the qr code along with a count of split pages. Invalid user ID's will be highlighted in red.
+This can be choosen by selecting 'bulk upload' in the upload section for assignments then checking the 'split with qr codes?' box. 
+
+![](/images/bulkupload_qrsplit.PNG) 
+
+There are optional prefix and suffix text areas can remove parts of the string contained within the QR code. For example if your QR code contained the string `f18_12_student123` and your prefix was `f18_12_` the resulting string would be `student123`.
+
+If you are using a URL in your QR code, the prefix and suffix boxes can remove URL components, for example 
+`https://student123.com/image.png` will result in `student123` if the prefix is `https://` and the suffix is `.com/image.png`
+
+*Note: the prefix substring must exactly match with a substring at the beginning of the QR string and the suffix must match a substring from the end, otherwise they will not be removed from the QR string.*
+
+After processing, the `student_id` text area will be autofilled with the string contained in the QR code along with a pagecount. Invalid user ID's will be highlighted in red.
 
 
 Check out our work-in-progress instructor tool for preparing
