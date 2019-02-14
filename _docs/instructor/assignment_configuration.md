@@ -260,8 +260,8 @@ executables.
 
 * **field:** ``"type"``  
   **type:** _string_   
-  **value:** ``"compilation"``, ``"file_check"``, or ``"execution"``  
-  **default value:** ``"execution"``  
+  **value:** ``"Compilation"``, ``"FileCheck"``, or ``"Execution"``  
+  **default value:** ``"Execution"``  
 
   _Each test case has a type, the type dictates whether actions are
   necessary for that test case during the different phases of
