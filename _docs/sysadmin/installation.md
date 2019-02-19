@@ -59,7 +59,7 @@ _Note: These instructions should be run under root/sudo._
    For example:  [RPI Computer Science specific installations](https://github.com/Submitty/Submitty/blob/master/.setup/distro_setup/ubuntu/rpi.sh)
 
    ```
-   sudo bash /usr/local/submitty/.setup/distro_setup/ubuntu/rpi.sh
+   sudo bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/distro_setup/ubuntu/rpi.sh
    ```
 
 
