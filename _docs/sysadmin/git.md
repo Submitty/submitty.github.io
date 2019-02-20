@@ -27,6 +27,13 @@ Copy the following code into `/etc/apache2/sites-available/submitty.conf`:
 
 ```
     ScriptAlias /git/ /usr/local/submitty/site/cgi-bin/git-http-backend/
+
+    # Override the Require ip from cgi-bin Directory section to
+    # allow outside access
+    <Location "/git">
+        Require all granted
+    </Location>
+
     <Directory /usr/lib/git-core>
         Options +ExecCGI +SymLinksIfOwnerMatch
         AllowOverride None
