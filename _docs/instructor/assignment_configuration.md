@@ -248,7 +248,7 @@ executables.
   The instructor can also override / customize the default
   restrictions on use of system call within the student code by
   whitelisting additional categories of system calls:
-  [grading/system_call_categories.h][grading/system_call_categories.h]
+  [grading/system_call_categories.cpp][grading/system_call_categories.cpp]
   [grading/seccomp_functions.cpp][grading/seccomp_functions.cpp]
 
   _FIXME: UPDATE & DOCUMENT_
@@ -755,6 +755,6 @@ It is possible to provide keyboard and mouse input to running student graphics a
 
 
 [grading/default_config.h]: https://github.com/Submitty/Submitty/blob/master/grading/default_config.h
-[grading/system_call_categories.h]: https://github.com/Submitty/Submitty/blob/master/grading/system_call_categories.h
+[grading/system_call_categories.cpp]: https://github.com/Submitty/Submitty/blob/master/grading/system_call_categories.cpp
 [grading/seccomp_functions.cpp]: https://github.com/Submitty/Submitty/blob/master/grading/seccomp_functions.cpp
 [cpp_custom]: https://github.com/Submitty/Submitty/tree/master/more_autograding_examples/cpp_custom
