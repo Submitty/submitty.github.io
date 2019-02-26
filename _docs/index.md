@@ -29,13 +29,16 @@ launched by the
 #### Contact Us
 
 
-We have a public forum for questions about Submitty:  
+We have a public mailing list for instructor and student questions and feedback about Submitty:  
 [submitty@googlegroups.com](mailto:submitty@googlegroups.com)  
 [https://groups.google.com/forum/#!forum/submitty](https://groups.google.com/forum/#!forum/submitty)
 
 
-Or you can contact the RPI Submitty development team:  
-[submitty@cs.rpi.edu](mailto:submitty@cs.rpi.edu)  
+We have a public [Slack server for Submitty Developers](https://join.slack.com/t/submitty/shared_invite/enQtMzE1NzgyMzUzNzI5LWNkNjUzYmZjOWJkNzdlM2QzNTM3MGYwNmQwMzQ3NjAwODUwYjI4MTRlZDNjZTFlMTk4ZjUzN2MxNzRjNDIwZTU)
+
+
+Or you can contact the core Submitty development team:
 [submitty-admin@googlegroups.com](mailto:submitty-admin@googlegroups.com)  
+
 
 Please use the links on the sidebar to further explore Submitty.
