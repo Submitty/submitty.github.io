@@ -37,7 +37,7 @@ We have a public mailing list for instructor and student questions and feedback 
 We have a public [Slack server for Submitty Developers](https://join.slack.com/t/submitty/shared_invite/enQtMzE1NzgyMzUzNzI5LWNkNjUzYmZjOWJkNzdlM2QzNTM3MGYwNmQwMzQ3NjAwODUwYjI4MTRlZDNjZTFlMTk4ZjUzN2MxNzRjNDIwZTU)
 
 
-Or you can contact the core Submitty development team:
+Or you can contact the core Submitty development team:  
 [submitty-admin@googlegroups.com](mailto:submitty-admin@googlegroups.com)  
 
 

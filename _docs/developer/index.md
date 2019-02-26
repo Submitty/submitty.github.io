@@ -38,19 +38,21 @@ follow these steps:
 * Download & install Submitty, and try it out.  Read the instructor
   documentation to learn the system.
 
-* Look through the issues list for some ideas of problems to explore.
+* Look through the [issues
+  list](https://github.com/Submitty/Submitty/issues) for some ideas of
+  problems to explore.
 
 * Learn how to use git.
 
 * Learn what sections of the code are relevant for those issues (so
   you’re not overwhelmed).
 
-* Hint: Use "git grep" to search for variables/filenames/specific
+  _Hint: Use "git grep" to search for variables/filenames/specific
   strings within the source files/directories.  This can help you
-  locate relevant files.
+  locate relevant files._
 
 * Add & delete things to the code, re-install that portion of the
-  system and see what happens.
+  system and see what happens.  See also [Development Instructions](development_instructions).
 
 * Use inspector or browser debugger.
 
