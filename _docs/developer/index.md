@@ -5,7 +5,7 @@ permalink: /developer
 
 As a developer, you'll need to set up the full system on your own
 computer.  The easiest method is to 
-[run the system within a virtual machine (VM)](dev/vm_install_using_vagrant).
+[run the system within a virtual machine (VM)](developer/vm_install_using_vagrant).
 Alternately, you can install the system natively on a dedicated
 computer and allow outside access (which requires more steps to set up
 networking, SSL/https, etc.) by following the
@@ -52,7 +52,7 @@ follow these steps:
   locate relevant files._
 
 * Add & delete things to the code, re-install that portion of the
-  system and see what happens.  See also [Development Instructions](dev/development_instructions).
+  system and see what happens.  See also [Development Instructions](developer/development_instructions).
 
 * Use inspector or browser debugger.
 
