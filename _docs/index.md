@@ -31,19 +31,20 @@ launched by the
 
 #### Contact Us
 
-Instructors and system administrators who are interested in setting up a
-production Submitty installations at their school are welcome and encouraged to
-use the Submitty Google Groups mailing list:  
-[submitty@googlegroups.com](mailto:submitty@googlegroups.com)  
-[https://groups.google.com/forum/#!forum/submitty](https://groups.google.com/forum/#!forum/submitty)
-
-or contact the core Submitty development team:  
-submitty-admin@googlegroups.com
-
-
 Are you interested in joining the Submitty Development Team?  Please read:  
 [Suggestions for New Developers](/developer/)  and  [How to Contribute](/developer/how_to_contribute).
 
 We also have a public [Slack server for Submitty Developers](https://join.slack.com/t/submitty/shared_invite/enQtMzE1NzgyMzUzNzI5LWNkNjUzYmZjOWJkNzdlM2QzNTM3MGYwNmQwMzQ3NjAwODUwYjI4MTRlZDNjZTFlMTk4ZjUzN2MxNzRjNDIwZTU)
+
+
+
+Instructors and system administrators who are interested in setting up a
+production Submitty installations at their school are welcome and encouraged to
+use the Submitty Google Groups mailing list:  
+[submitty@googlegroups.com](mailto:submitty@googlegroups.com)  
+[https://groups.google.com/forum/#!forum/submitty](https://groups.google.com/forum/#!forum/submitty)  
+or contact the core Submitty development team:  
+[submitty-admin@googlegroups.com](mailto:submitty-admin@googlegroups.com)
+
 
 Please use the links on the sidebar to further explore Submitty.
