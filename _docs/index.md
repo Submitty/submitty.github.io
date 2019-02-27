@@ -15,16 +15,19 @@ launched by the
 
 #### Key Features
 
-*  Secure testing of many languages: Python, C/C++, Java, Scheme, Prolog, SPIM, and anything available on GNU / Linux!
-*  Customizable automated grading with immediate feedback to students
-*  Advanced grading tools: static analysis, JUnit, code coverage, memory debuggers, etc.
+*  Secure testing of many languages: Python, C/C++, Java, Scheme, Prolog, SQL, SPIM, and anything available on GNU / Linux!
+*  Customizable automated grading with immediate feedback to students, and optional "hidden" tests
+*  Advanced grading tools: static analysis, JUnit, code coverage, memory debuggers, networked and distributed assignments, screenshots/gifs of graphics assignments, and database assignments
+*  Instructors have full access to logs for debugging, launch batch regrading, custom containers (Docker)
 *  Student upload by drag-and-drop, zip upload, or version control
-*  Correct mistakes through multiple submissions, flexible ``late day'' policy, hidden tests
-*  Interface for complementary instructor/TA manual grading, overall grade summaries 
-*  Instructors have full access to logs for debugging, launch batch regrading
-*  Scales to multiple courses with thousands of students
-*  Supports multiple instructors and TAs per course
+*  Correct mistakes through multiple submissions, flexible ``late day'' policy
+*  Interface for complementary instructor/TA manual grading, anonymized peer grading
+*  Instructor bulk upload of scanned .pdf exams, QR code name matching, pdf annotation
+*  Supports course material hosting, team assignments, overall grades spreadsheet, plagiarism detection
+*  Integrated discussion forum, notifications, and email announcements
+*  Scales to multiple courses, thousands of students, multiple instructors and TAs per course
 *  Open-source, free to use, install on your own hardware, or VPS
+
 
 #### Contact Us
 
