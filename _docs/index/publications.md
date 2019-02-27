@@ -16,6 +16,17 @@ Matthew Peveler, Evan Maicus, and Barbara Cutler
 Proceedings of the 50th ACM Technical Symposium on Computer Science Education (SIGCSE '19), February 2019.
 
 
+* ["Facilitating Discussion-Based Grading and Private Channels via an Integrated Forum"](https://github.com/Submitty/publications/raw/master/2019_SIGCSE_Discussion_Forum/2019_SIGCSE_Discussion_Forum.pdf)  
+Andrew Aikens, Gagan Kumar, Shail Patel, Evan Maicus, Matthew Peveler, and Barbara Cutler  
+Poster at ACM Technical Symposium on Computing Science Education (SIGCSE), February 2019
+
+
+* ["Lichen: Customizable, Open Source Plagiarism Detection in Submitty"](https://github.com/Submitty/publications/raw/master/2019_SIGCSE_Lichen_Plagiarism_Detection/2019_SIGCSE_Lichen_Plagiarism_Detection.pdf)  
+Matthew Peveler, Tushar Gurjar, Evan Maicus, Andrew Aikens, and Barbara Cutler  
+Poster at ACM Technical Symposium on Computing Science Education (SIGCSE), February 2019
+
+
+
 * ["Correlation of a Flexible Late Day Policy with Student Stress and Programming Assignment Plagiarism"](https://github.com/Submitty/publications/raw/master/2018_SIGCSE_poster_breese_et_al/Poster.pdf)   
   Samuel Breese, Evan Maicus, Matthew Peveler, and Barbara Cutler   
   Poster at ACM Technical Symposium on Computing Science Education (SIGCSE), February 2018  
