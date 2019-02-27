@@ -3,7 +3,7 @@ title: Project Ideas
 category: Developer
 ---
 
-We are excited that Submitty has been accepted as a Google Summer of
+We are excited to announce that Submitty has been accepted as a Google Summer of
 Code (GSOC) organization for Summer 2019.  
 [https://summerofcode.withgoogle.com](https://summerofcode.withgoogle.com)  
 This is our second year participating in GSOC.  
