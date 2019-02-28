@@ -37,7 +37,6 @@ Are you interested in joining the Submitty Development Team?  Please read:
 We also have a public [Slack server for Submitty Developers](https://join.slack.com/t/submitty/shared_invite/enQtMzE1NzgyMzUzNzI5LWNkNjUzYmZjOWJkNzdlM2QzNTM3MGYwNmQwMzQ3NjAwODUwYjI4MTRlZDNjZTFlMTk4ZjUzN2MxNzRjNDIwZTU)
 
 
-
 Instructors and system administrators who are interested in setting up a
 production Submitty installations at their school are welcome and encouraged to
 use the Submitty Google Groups mailing list:  
