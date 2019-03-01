@@ -15,6 +15,7 @@ Proceedings of the 50th ACM Technical Symposium on Computer Science Education (S
 * ["Comparing Jailed Sandboxes vs Containers Within an Autograding System"](https://github.com/Submitty/publications/raw/master/2019_SIGCSE_Sandbox_vs_Docker/2019_SIGCSE_Sandbox_vs_Docker.pdf)  
 Matthew Peveler, Evan Maicus, and Barbara Cutler  
 Proceedings of the 50th ACM Technical Symposium on Computer Science Education (SIGCSE '19), February 2019.
+[(slides)](https://github.com/Submitty/publications/raw/master/2019_SIGCSE_Sandbox_vs_Docker/2019_SIGCSE_Sandbox_vs_Docker_slides.pdf)
 
 
 * ["Facilitating Discussion-Based Grading and Private Channels via an Integrated Forum"](https://github.com/Submitty/publications/raw/master/2019_SIGCSE_Discussion_Forum/2019_SIGCSE_Discussion_Forum.pdf)  
