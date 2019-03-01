@@ -87,6 +87,12 @@ feature design discussion.  We have a small administration team and
 very much appreciate the Submitty community working together to help new
 developers.
 
+When asking for help on installation, please include your host
+operating system & version, and your versions of vagrant and virtual
+box.  When asking for help on how to patch bugs or implement new features,
+please describe what you've done to get started, what you've figured
+out, and specifically where you're stuck.
+
 _Special Request: Please do not contact administrator individuals by Slack
 direct private message or personal email to ask technical questions.
 It is likely that other developers have the same or similar questions
