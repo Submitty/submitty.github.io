@@ -17,7 +17,7 @@ Please contribute by adding bugs or feature requests to our
 
 
 A list of Submitty projects (some new, some in progress):  
-[Project Ideas](project_ideas)
+[Project Ideas](/developer/project_ideas)
 
 
 
