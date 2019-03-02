@@ -73,7 +73,7 @@ A list of Submitty projects (some new, some in progress):
 
 * Help by [Reviewing the Pull Requests](/developer/how_to_contribute#how-to-review-a-pull-request-pr) of other developers.
 
-* [Improve the online documentation for Submitty](/developer/how_to_contribute#how-to-edit-submittyorg).
+* [Improve the online documentation for Submitty](/developer/how_to_contribute#how-to-edit-submittyorg-documentation)
 
 
 
