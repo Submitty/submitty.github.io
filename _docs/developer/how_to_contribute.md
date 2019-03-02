@@ -142,7 +142,7 @@ you need to do?
 
 ### How To Edit Submitty.org Documentation
 
-If you want to add documentation to Submitty.org here's what you do.
+If you want to update or add documentation to Submitty.org here's what you do:
 
   * If you haven't already, you'll need to clone the git repo of 
     Submitty.org
