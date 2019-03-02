@@ -32,7 +32,7 @@ launched by the
 #### Contact Us
 
 Are you interested in joining the Submitty Development Team?  Please read:  
-[Suggestions for New Developers](/developer/)  and  [How to Contribute](/developer/how_to_contribute).
+[Suggestions for New Developers](/developer)  and  [How to Contribute](/developer/how_to_contribute).
 
 We also have a public [Slack server for Submitty Developers](https://join.slack.com/t/submitty/shared_invite/enQtMzE1NzgyMzUzNzI5LWNkNjUzYmZjOWJkNzdlM2QzNTM3MGYwNmQwMzQ3NjAwODUwYjI4MTRlZDNjZTFlMTk4ZjUzN2MxNzRjNDIwZTU)
 
