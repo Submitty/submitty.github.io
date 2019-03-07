@@ -65,7 +65,7 @@ A list of Submitty projects (some new, some in progress):
 * Get familiar with vagrant.
 
 * Run the relevant portions of test suite locally:  
-  [Autograding Test Suite](autograding_tests)  
+  [Autograding Test Suite](/developer/autograding_tests)  
   [PHP Unit Tests](/developer/php_unit_tests)  
   [End-to-End Tests](/developer/end_to_end_tests)  
 
