@@ -14,10 +14,11 @@ for your needs (as the script installs all of the dependencies that Submitty dep
 
 **Note:** Part of the installation process consists of changing the default umask
 for users from 002 to 027 to better protect the files that Submitty generates
-during operation and lower risk of accidently exposing them to anyone on the
-file system. This does mean that installing certain things (like python packages
-through pip) into a global scope will need to have their permissions updated or
-else only the owner will be able to read/execute it.
+during operation as well as any instructors who are SSHing into the machine and
+so as to not potentially allow other access to confidential material. This does
+mean that installing certain things (like python packages through pip) into a
+global scope will need to have their permissions updated or else only the owner
+will be able to read/execute it.
 
 _Note: These instructions should be run under root/sudo._
 
