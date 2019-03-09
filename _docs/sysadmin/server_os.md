@@ -4,99 +4,40 @@ category: System Administrator
 order: 1
 ---
 
-
-### Ubuntu Server Edition
+### Supported Distros
 
 The Submitty Homework Submission Server is currently supported on
-**Ubuntu 16.04<br> 64-bit Server** and **Ubuntu 18.04 64-bit Server**.
+the following platforms:
 
-_We use the server edition of Ubuntu because it saves a lot of disk
-space and doesn't include a lot of extra packages which will require
-more frequent updates.  You also have more options in some cases, and
-you can always add a graphical display manager to it after the fact if needed._
+| Distro | Version | Supported           | Release Page |
+|--------|---------|---------------------|--------------|
+| Ubuntu | 16.04   | Yes (Until 05/2019) | [Release Page](http://releases.ubuntu.com/xenial/)
+| Ubuntu | 18.04   | Yes                 | [Release Page](http://releases.ubuntu.com/bionic/)
+| Debian | 8       | Yes (Until 05/2019) | [Release Page](https://www.debian.org/releases/jessie/)
 
-We encourage the use of **18.04** as we plan to deprecate support for 16.04 at
-some point.  If you choose to use **18.04**, it is important to download
-Canonical's traditional server release.
+We suggest you using the amd64 releases for a release when
+installing it. Support for other architectures should mostly
+work, but are unsupported. We also suggest using the server
+installation option if available to save on size of the image.
 
-_The default ISO that Canonical provides as an automatic download, at their
-main server download page, is a new **"Live"** server edition with a new
-installer called "Subiquity".  This version is missing some package repositories
-required by Submitty, and therefore is unsupported._
-
-**Please download the traditional server edition ISO with the traditional
-installer from Canonical.**
-
-NOTE: _amd64_ is the edition compatible with Intel processors.
-
-- [Ubuntu 16.04 Server Release Page](http://cdimage.ubuntu.com/releases/16.04/release/)
-- [Ubuntu 18.04 Server Release Page](http://cdimage.ubuntu.com/releases/18.04/release/)<br>
-
-
-### Initial Setup
-
-After selecting your language, you can generally just select "Install
-Ubuntu Server".  (If you find you have hardware compatibility issues,
-you may need to look at the "Modes" or "Other Options".)
-
-Unless you have an unusual keyboard, it is generally not worth having
-it detect your keyboard layout and you can accept the defaults.
-
-
-### Setting up networking
-
-If you have more than one network interface, select the one you want
-to be the primary interface for the host.
-
-If you are using a static ip address rather than dhcp, you may want to
-cancel the dhcp detections when they come up, or select "Go back" to
-fix it.  It is also possible to edit it manually after installation is
-complete.
-
+Note: We commit to supporting at least the latest LTS version of
+Ubuntu. Additionally, after officially supporting that version,
+we will drop support of the last LTS release after the end of the
+next academic year from when we added support of the new LTS version.
+For the other distros, we will attempt to support the latest version
+before dropping support, but may drop support at anytime.
 
 ### Partitioning the disk
 
-If this is a standalone machine with no other information on the disk,
-it is ok to let it unmount partitions that are not in use.  You may want to select
-manual partitioning and set up more partitions to keep submissions
-from filling up the root partition.
+Assuming this is a standalone machine with no other information on the
+disk, we recommend to manually partition the machine in such a way so
+as to not allow submissions (which is the largest amount of data that
+Submitty uses) from filling up the root partition.
+
 
 ```
 /     30G   (set as the primary partition and make it bootable)
 swap  (1-2 times the amount of memory you have)
 /usr  30G
 /var  the rest of the space to hold the bulk of the submissions
-```
-
-Select "Finish partitioning and write changes to disk"
-
-
-### Proxy
-
-Unless you know otherwise, assume you are not using a proxy server.
-(If you know you have one available, it may speed up the process
-through caching if you have a lot of machines to set up that use the
-same files).
-
-
-### Updates
-
-We suggest selecting "Install security updates automatically" to keep
-the server as secure as possible.  If you have a lot of systems,
-Landscape will let you administer a lot of machines through a central
-interface for a fee.
-
-
-### Selecting packages
-
-It is fine to select "OpenSSH Server" from the menu, but do not have
-it set up LAMP/Apache from the menu.  You will need more control over
-the options and will do it later.
-
-### Install git
-
-After the machine reboots, log in and install git:
-
-```
-apt-get install git
 ```
