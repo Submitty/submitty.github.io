@@ -38,6 +38,9 @@ operating system.
    locate _Virtualization_, and enable it.
    
    Be sure to choose _Hardware Virtualization_ in the _System -> Acceleration_ settings of the virtual machine you are using.
+   
+   **NOTE** 
+   If vagrant fails to build up after running the command "vagrant up", try disabling secure boot from the boot menu.
 
 
 3. Download and install [VirtualBox](https://www.virtualbox.org/), [Vagrant](https://www.vagrantup.com), and [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest).
@@ -116,7 +119,18 @@ operating system.
    Vagrant will build your VM.  This will take maybe 30 minutes to a
    few hours depending on your Internet connection speed.  When this
    command finishes, your VM is ready to use.
-
+   
+   If an error is thrown after running this command, type:
+   ```
+   sudo apt-get remove --purge virtualbox 
+   ```
+   This will remove Virtual Box.Then type:
+   ```
+   sudo rm ~/"VirtualBox VMs" -Rf
+   sudo rm ~/.config/VirtualBox/ -Rf
+   ```
+   This will delete all virtual machine settings. Then install
+   the latest version of Virtual Box and vagrant from the links given in step 3 (using Ubuntu Software).
 
 5. To stop and restart the VM:
 
