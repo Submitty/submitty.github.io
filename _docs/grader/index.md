@@ -23,8 +23,8 @@ assigned sections:
 
 ![](/images/TA_overview.png)
 
-Students who have not yet be assigned a TA grade appear as blue
-"Grade" buttons.
+Students who have not yet been assigned a TA grade have blue
+"Grade" buttons under the "TA Grading" column.
 
 ![](/images/TA_index.png)
 
@@ -38,9 +38,9 @@ grading interface.  The 4 panes are:
   any of the files, or "pop out" a browser window to view a single
   file.
 
-* Grading Rubric (green) - divided into one or more components specified
+* Grading Rubric (green border) - divided into one or more components specified
 
-* Student Information (black)
+* Student Information (black border)
 
 ![](/images/TA_grading_panes.png)
 
@@ -55,10 +55,10 @@ assignment.
 ### TA Grading of Non-Electronic Assignments
 
 Submitty can also be used to record grades for items that are not
-strictly electronic upload of files.
+strictly electronic uploads of files.
 
 Submitty provides a spreadsheet-like interface for the data entry of
-numeric gradeable (e.g. Quizzes or Tests).  The instructor specifies
+numeric gradeables (e.g. Quizzes or Tests).  The instructor specifies
 the number of problems, and the maximum score for each problem.  The
 total score for each student is summed automatically.
 
