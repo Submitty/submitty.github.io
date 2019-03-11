@@ -31,7 +31,7 @@ You'll need to install the
 Using HomeBrew on a Mac:
 
 ```
-brew install chromedriver
+brew cask install chromedriver
 ```
 
 ---
