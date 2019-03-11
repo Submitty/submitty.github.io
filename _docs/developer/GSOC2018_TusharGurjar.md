@@ -10,11 +10,11 @@ launched by the
 [Department of Computer Science](http://www.cs.rpi.edu/) at
 [Rensselaer Polytechnic Institute](http://www.rpi.edu/).
 
-My GSoC project invovled working on the Plagiarism Detector (also called "Lichen") of Submitty Organization.
+My GSoC project involved working on the Plagiarism Detector (also called "Lichen") of Submitty Organization.
 Along with my GSoC project, I also worked on implementing some crucial features and fixing bugs.
 Working on various features and bugs throughout Submitty helped me learn even more about Software Development.
 
-Throughout my GSoC journey, I learnt about Working of Plagiarism Detector, Web Techologies, Servers, Travis Testing.
+Throughout my GSoC journey, I learnt about Working of Plagiarism Detector, Web Technologies, Servers, Travis Testing.
 
 
 
@@ -68,7 +68,7 @@ Throughout my GSoC journey, I learnt about Working of Plagiarism Detector, Web T
 
 4.  **Automated the new Plagiarism Interface by integrating to Submitty Daemon**
 
-	Automated the plagiarism detector to do various jobs from interface itself. This includes creating configuration file for gradeable for which the plagiarism is to be run, editing configuration, rerunning plagirism detector for a gradeable, delete plagiarism results for a gradeable.
+	Automated the plagiarism detector to do various jobs from interface itself. This includes creating configuration file for gradeable for which the plagiarism is to be run, editing configuration, rerunning plagiarism detector for a gradeable, delete plagiarism results for a gradeable.
 
 	**Link to commits (merged)**-
 
@@ -90,7 +90,7 @@ Throughout my GSoC journey, I learnt about Working of Plagiarism Detector, Web T
 	
 	**Link to commits (merged)-**
 
-	[Alphanumeric registraiton section (#2069)](https://github.com/Submitty/Submitty/commit/3423da9ff01f7ff2f82c237d144b22a1d84b076f)
+	[Alphanumeric registration section (#2069)](https://github.com/Submitty/Submitty/commit/3423da9ff01f7ff2f82c237d144b22a1d84b076f)
 
 2.	**Implemented Delete Gradeable Feature**
 
@@ -102,7 +102,7 @@ Throughout my GSoC journey, I learnt about Working of Plagiarism Detector, Web T
 
 3. 	**Implemented Team Export & Import Feature from one gradeable to other**
 
-	This feature help instructor transport the teams from one gradeable to another. This can be used in cases where instructor wants same teams accross many gradeables in course.
+	This feature help instructor transport the teams from one gradeable to another. This can be used in cases where instructor wants same teams across many gradeables in course.
 
 	**Link to commits (merged)-**
 
@@ -130,5 +130,5 @@ For building the project, it will require to build complete Submitty System.
 
 1.	Instructions for building Submitty- [Developer/VM Install using Vagrant](http://submitty.org/developer/vm_install_using_vagrant)
 
-2.	For using Submitty and its Plagiarism Detector, follow instructions at [Welcome/Tutorial](http://submitty.org/tutorial/) and [Instructor/Plagirism Detection](http://submitty.org/instructor/plagiarism)
+	.	For using Submitty and its Plagiarism Detector, follow instructions at [Welcome/Tutorial](https://submitty.org/index/tutorial) and [Instructor/Plagiarism Detection](http://submitty.org/instructor/plagiarism)
 
