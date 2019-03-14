@@ -130,5 +130,5 @@ For building the project, it will require to build complete Submitty System.
 
 1.	Instructions for building Submitty- [Developer/VM Install using Vagrant](http://submitty.org/developer/vm_install_using_vagrant)
 
-	.	For using Submitty and its Plagiarism Detector, follow instructions at [Welcome/Tutorial](https://submitty.org/index/tutorial) and [Instructor/Plagiarism Detection](http://submitty.org/instructor/plagiarism)
+2.	For using Submitty and its Plagiarism Detector, follow instructions at [Welcome/Tutorial](https://submitty.org/index/tutorial) and [Instructor/Plagiarism Detection](http://submitty.org/instructor/plagiarism)
 
