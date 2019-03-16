@@ -3,7 +3,7 @@ title: How To Contribute
 category: Developer
 ---
 
-Be sure to read the [Suggestions for New Developers](/developer/#suggestions-for-new-developers).
+Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-new-developers).
 
 ### How to make a Pull Request (PR) to Submitty 
 
