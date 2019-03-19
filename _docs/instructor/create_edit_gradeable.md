@@ -50,7 +50,7 @@ gradeables: electronic submission, numeric, or checkboxes.
    like interface for manual data entry of the numeric scores per
    problem that are summed for a total score.  Or you can just enter
    the total score as a single column.  We also provide a .csv upload
-   if you numeric scores for this gradeable are already in an
+   if your numeric scores for this gradeable are already in an
    electronic format.
 
    **_Checkpoints_** should be used for manually graded items with one
