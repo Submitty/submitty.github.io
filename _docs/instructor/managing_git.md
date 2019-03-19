@@ -101,7 +101,7 @@ _TODO:_
    For example:
 
    ```
-   python3  ~/Submitty/GIT_CHECKOUT/Submitty/git_provided_code.py  https://submitty.myuniversity.edu/git s19 csci1200 hw1 ~/teaching/s19/hw1/src 'provided hw1 code' ~/teaching/s19/students.txt
+   python3  ~/Submitty/GIT_CHECKOUT/InstructorTools/GitProvidedCode/git_provided_code.py  https://submitty.myuniversity.edu/git s19 csci1200 hw1 ~/teaching/s19/hw1/src 'provided hw1 code' ~/teaching/s19/students.txt
    ```
 
    _IMPORTANT: Note that without a trailing slash on the provided code

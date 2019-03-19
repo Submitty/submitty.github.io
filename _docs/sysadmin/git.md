@@ -27,6 +27,13 @@ Copy the following code into `/etc/apache2/sites-available/submitty.conf`:
 
 ```
     ScriptAlias /git/ /usr/local/submitty/site/cgi-bin/git-http-backend/
+
+    # Override the Require ip from cgi-bin Directory section to
+    # allow outside access
+    <Location "/git">
+        Require all granted
+    </Location>
+
     <Directory /usr/lib/git-core>
         Options +ExecCGI +SymLinksIfOwnerMatch
         AllowOverride None
@@ -95,12 +102,12 @@ have access to those repos via SSH. Instructions for adding an SSH key to your a
 [Github](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) and 
 [Gitlab](https://docs.gitlab.com/ee/ssh/). The gist of these is as follows for Linux (focusing on Github):
 
-1. Login to the hwcron user.
+1. Login to the submitty_daemon user.
 1. Open a terminal and generate a new SSH key:
 `
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 `
-1. Enter file location for ssh key. (ex: /home/hwcron/.ssh/id_github)
+1. Enter file location for ssh key. (ex: /home/submitty_daemon/.ssh/id_github)
 1. Enter a passphrase for the SSH key.
 1. Add the key to the ssh-agent. (See [this article](http://mah.everybody.org/docs/ssh#run-ssh-agent) 
    on setting up ssh-agent to start on login).

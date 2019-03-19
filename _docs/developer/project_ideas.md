@@ -3,6 +3,10 @@ title: Project Ideas
 category: Developer
 ---
 
+We are excited to announce that Submitty has been accepted as a Google Summer of
+Code (GSOC) organization for Summer 2019.  
+[https://summerofcode.withgoogle.com](https://summerofcode.withgoogle.com)  
+This is our second year participating in GSOC.  
 
 The projects listed below target a variety of different topics and
 require different levels of prior experience.  Work has already begun
@@ -218,8 +222,11 @@ Us](http://submitty.org/index) to join the development team.
    [Tushar Gurjar's GSOC Summer 2018 Project](/developer/GSOC2018_TusharGurjar)
 
    _Experience Required: Some programming experience, willingness to
-   learn web and database development.  Experience with a wide variety
-   of programming languages is beneficial._
+   learn web and database development.  Having served as a teaching
+   assistant or instructor with experience grading programs and
+   identifying or handling potential cases of academic dishonesty will
+   be beneficial.  Experience with a wide variety of programming
+   languages is beneficial._
 
    _GSOC Proposal Tag:_ `plagiarism detection`
 

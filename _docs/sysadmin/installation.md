@@ -7,15 +7,23 @@ order: 2
 These instructions will help guide you to installing Submitty onto a
 server (whether on a dedicated machine or a VM).
 
-Note: We assume that you're installing Submitty on a dedicated machine. If this machine is
+**Note**: We assume that you're installing Submitty on a dedicated machine. If this machine is
 used for other things, you may need to adapt the instructions below and
 [install_system.sh](https://github.com/Submitty/Submitty/blob/master/.setup/install_system.sh)
 for your needs (as the script installs all of the dependencies that Submitty depends on).
 
+**Note:** Part of the installation process consists of changing the default umask
+for users from 002 to 027 to better protect the files that Submitty generates
+during operation as well as any instructors who are SSHing into the machine and
+so as to not potentially allow other access to confidential material. This does
+mean that installing certain things (like python packages through pip) into a
+global scope will need to have their permissions updated or else only the owner
+will be able to read/execute it.
+
 _Note: These instructions should be run under root/sudo._
 
 
-1. [Install Ubuntu 16.04 or 18.04 server edition](server_os)
+1. [Install Ubuntu 18.04 server edition (or other supported distro)](server_os)
 
 
 2. After installing the operating system, clone the git repository:
@@ -59,7 +67,7 @@ _Note: These instructions should be run under root/sudo._
    For example:  [RPI Computer Science specific installations](https://github.com/Submitty/Submitty/blob/master/.setup/distro_setup/ubuntu/rpi.sh)
 
    ```
-   sudo bash /usr/local/submitty/.setup/distro_setup/ubuntu/rpi.sh
+   sudo bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/distro_setup/ubuntu/rpi.sh
    ```
 
 
