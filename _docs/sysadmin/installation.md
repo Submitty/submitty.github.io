@@ -26,23 +26,23 @@ _Note: These instructions should be run under root/sudo._
 1. [Install Ubuntu 18.04 server edition (or other supported distro)](server_os)
 
 
-2. After installing the operating system, clone the git repository:
+2. Run the bootstrap script:
+   ```
+   curl https://raw.githubusercontent.com/Submitty/Submitty/bootstrap/.setup/bootstrap.sh | bash
+   ```
+   
+   or clone the git repository and run the installer (requires git and lsb-release to be installed):
 
    ```
    mkdir -p /usr/local/submitty/GIT_CHECKOUT
    git clone https://github.com/Submitty/Submitty.git /usr/local/submitty/GIT_CHECKOUT/Submitty
-   ```
-
-3. Run the automated portion of the install.
-
-   ```
    cd /usr/local/submitty/GIT_CHECKOUT/Submitty
    bash ./.setup/install_system.sh
    ```
 
-   You will be asked several questions by the
-   [CONFIGURE_SUBMITTY.sh script](https://github.com/Submitty/Submitty/blob/master/.setup/CONFIGURE_SUBMITTY.sh).
-   These questions are:
+   Note: During installation, you will be asked several questions by the
+   [CONFIGURE_SUBMITTY.py script](https://github.com/Submitty/Submitty/blob/master/.setup/CONFIGURE_SUBMITTY.py)
+   script. These questions are:
    1. Database Host
    2. Submitty Database User/Role
    3. Submitty Database User/Role Password
@@ -58,9 +58,6 @@ _Note: These instructions should be run under root/sudo._
    within the database server.  If you don't already have a role for
    the submitty database user/role, the script will create that for
    you with the specified name & password.
-
-   IMPORTANT: Do _**not**_ enable debugging unless you are developing code on a
-   non-production machine.
 
 
 4. Run installations specific to your university.  
