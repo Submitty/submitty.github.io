@@ -454,7 +454,7 @@ It is possible to provide keyboard and mouse input to running student graphics a
 #### Delay
 Delays a number of seconds before the next action is taken. Useful if the results of the previous action may take some time to render.  
 
-**Fields:**:  
+**Fields:**
 *  **action:** ``"delay"``   
 *  **seconds:** An integer or floating point number greater than 0.
 
@@ -472,7 +472,7 @@ names using the ```name``` field.
 
 **Fields:**
 * **action:** ```screenshot```   
-* **name:** ***(optional)*** A unique name for the image. **NOTE: Do not include file extensions**  
+* **name:** *(optional)* A unique name for the image. **NOTE: Do not include file extensions**  
 
 ```
 {
@@ -489,9 +489,9 @@ names using the ```name``` field.
 **Fields:**  
 * **action:** ```gif```   
 * **seconds:**  The duration of the gif in seconds. An integer or floating point number greater than 0.
-* **frames_per_second:**  ***(optional)*** The integer number of frames to be captured per second. Defaults to 10. Max value is 30.
-* **preserve_individual_frames:** ***(optional)*** Boolean. If true, all individual frames are archived as png files. Defaults to false.
-* **name:** ***(optional)*** A unique name for the gif. **NOTE: Do not include file extensions**  
+* **frames_per_second:**  *(optional)* The integer number of frames to be captured per second. Defaults to 10. Max value is 30.
+* **preserve_individual_frames:** *(optional)* Boolean. If true, all individual frames are archived as png files. Defaults to false.
+* **name:** *(optional)* A unique name for the gif. **NOTE: Do not include file extensions**  
 
 ```
 {
@@ -511,8 +511,8 @@ the sequence are pressed sequentially without delay.
 **Fields:**
 * **action:** ```type```
 * **string:** The string to be typed. Note that each character is entered one after the other. To press all keys together, see the ```key``` command.
-* **delay_in_seconds:** ***(optional)*** An integer or floating point number greater than 0. Specifies the delay between repetitions.
-* **presses:** ***(optional)*** An integer greater than zero. Specifies the number of repetitions.
+* **delay_in_seconds:** *(optional)* An integer or floating point number greater than 0. Specifies the delay between repetitions.
+* **presses:** *(optional)* An integer greater than zero. Specifies the number of repetitions.
 
 ```
 {
@@ -528,8 +528,8 @@ Presses one or more keys. This action may be done over delayed repetitions.
 **Fields:**
 * **action:** ```key```
 * **key_combination:**  The key combination to be pressed. Keys can be chained together using the character ```+``` (e.g. ```a+b``` presses  ```a``` and ```b``` at the same time). For a list of keys, see the ```xdotool``` key list.  To press keys one after the other, see the ```type``` command.
-* **delay_in_seconds:** ***(optional)*** An integer or floating point number greater than 0. Specifies the delay between repetitions.
-* **presses:** ***(optional)*** An integer greater than zero. Specifies the number of repetitions.
+* **delay_in_seconds:** *(optional)* An integer or floating point number greater than 0. Specifies the delay between repetitions.
+* **presses:** *(optional)* An integer greater than zero. Specifies the number of repetitions.
 
 ```
 {
@@ -545,11 +545,11 @@ The standard version of click and drag starts either at the mouse’s current po
 
 **Fields:**
 * **action:** ```click and drag```
-* **start_x:** ***(optional)*** An integer starting x position for the mouse in window coordinates. Values will be clamped to within the window's size. Defaults to zero.
-* **start_y:** ***(optional)*** An integer starting y position for the mouse in window coordinates. Values will be clamped to within the window's size. Defaults to zero.
-* **end_x:** ***(optional)*** An integer ending x position for the mouse in window coordinates. Values will be clamped to within the window's size. Defaults to zero.
-* **end_y:** ***(optional)*** An integer ending y position for the mouse in window coordinates. Values will be clamped to within the window's size. Defaults to zero.
-* **mouse_button:** ***(optional)*** ```left```, ```middle```, or ```right```. The mouse button to be clicked. Defaults to ```left```.
+* **start_x:** *(optional)* An integer starting x position for the mouse in window coordinates. Values will be clamped to within the window's size. Defaults to zero.
+* **start_y:** *(optional)* An integer starting y position for the mouse in window coordinates. Values will be clamped to within the window's size. Defaults to zero.
+* **end_x:** *(optional)* An integer ending x position for the mouse in window coordinates. Values will be clamped to within the window's size. Defaults to zero.
+* **end_y:** *(optional)* An integer ending y position for the mouse in window coordinates. Values will be clamped to within the window's size. Defaults to zero.
+* **mouse_button:** *(optional)* ```left```, ```middle```, or ```right```. The mouse button to be clicked. Defaults to ```left```.
 
 ```
 {
@@ -567,9 +567,9 @@ The delta version of click and drag starts at the current mouse position, clicks
 
 **Fields:**
 * **action:** ```click and drag```
-* **end_x:** ***(optional)*** The amount of x distance over which the click and drag will move. Defaults to zero.
-* **end_y:** ***(optional)*** The amount of y distance over which the click and drag will move. Defaults to zero.
-* **mouse_button:** ***(optional)*** ```left```, ```middle```, or ```right```. The mouse button to be clicked. Defaults to ```left```.
+* **end_x:** *(optional)* The amount of x distance over which the click and drag will move. Defaults to zero.
+* **end_y:** *(optional)* The amount of y distance over which the click and drag will move. Defaults to zero.
+* **mouse_button:** *(optional)* ```left```, ```middle```, or ```right```. The mouse button to be clicked. Defaults to ```left```.
 
 ```
 {
@@ -585,7 +585,7 @@ Processes a mousedown and a mouseup of the specified mouse button. Defaults to l
 
 **Fields:**
 * **action:** ```click```
-* **mouse_button:** ***(optional)*** ```left```, ```middle```, or ```right```. The mouse button to be clicked. Defaults to ```left```.
+* **mouse_button:** *(optional)* ```left```, ```middle```, or ```right```. The mouse button to be clicked. Defaults to ```left```.
 
 ```
 {
@@ -599,8 +599,8 @@ Moves the mouse from its current position to the x and y provided, clamped to th
 
 **Fields:**
 * **action:** ```mouse move``` or ```move mouse``` or ```move```
-* **end_x:** ***(optional)*** An integer ending x position for the mouse in window coordinates. Values will be clamped to within the window's size. Defaults to zero.
-* **end_y:** ***(optional)*** An integer ending y position for the mouse in window coordinates.Values will be clamped to within the window's size. Defaults to zero.
+* **end_x:** *(optional)* An integer ending x position for the mouse in window coordinates. Values will be clamped to within the window's size. Defaults to zero.
+* **end_y:** *(optional)* An integer ending y position for the mouse in window coordinates.Values will be clamped to within the window's size. Defaults to zero.
 
 ```
 {
@@ -624,13 +624,13 @@ Moves the mouse to the center of the student’s window.
 
 #### Move Mouse to Origin
 Moves the mouse to the origin (upper left) of the student’s window.  
-  
+
 **Fields:**
 * **action:** ```origin```
 
 ```
 {
-"action" : "origin"
+  "action" : "origin"
 }
 ```
 
