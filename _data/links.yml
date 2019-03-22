@@ -60,6 +60,8 @@
       link: student_photos
     - name: Silent Grade Editing
       link: silent_editing
+    - name: Discussion Forum
+      link: forum
 
 - name: System Administrator
   link: sysadmin
