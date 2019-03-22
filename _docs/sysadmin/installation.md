@@ -41,7 +41,7 @@ _Note: These instructions should be run under root/sudo._
    ```
 
    Note: During installation, you will be asked several questions by the
-   [CONFIGURE_SUBMITTY.py script](https://github.com/Submitty/Submitty/blob/master/.setup/CONFIGURE_SUBMITTY.py)
+   [CONFIGURE_SUBMITTY.py](https://github.com/Submitty/Submitty/blob/master/.setup/CONFIGURE_SUBMITTY.py)
    script. These questions are:
    1. Database Host
    2. Submitty Database User/Role
