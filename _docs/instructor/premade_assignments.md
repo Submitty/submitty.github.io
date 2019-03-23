@@ -32,60 +32,73 @@ in a zip file
 #### Homework 1
 
 Description: 
-
+```
 Hello World
 match data types 
 arithmetic
-
+```
 Prerequisites:
-
+```
 Be able to run java programs
-
+```
 Learning Objective:
-
+```
 Output to console
-data types
-mathmatical operations (addition, subtraction, multiplication, division, modulo)
-
+data types (int, double, char, boolean, String)
+mathmatical operations (+, -, *, \, %)
+```
 #### Homework 2
-TODO
-Description: 
 
+Description: 
+```
+```
 
 Prerequisites:
-
+```
+```
 
 Learning Objective:
-
+```
+```
 
 #### Homework 3
-TODO
-Description: 
 
+Description: 
+```
+```
 
 Prerequisites:
-
+```
+```
 
 Learning Objective:
-
+```
+```
 
 #### Homework 4
-TODO
-Description: 
 
+Description: 
+```
+```
 
 Prerequisites:
-
+```
+```
 
 Learning Objective:
-
+```
+```
 
 #### Homework 5
-TODO
-Description: 
 
+Description: 
+```
+```
 
 Prerequisites:
-
+```
+```
 
 Learning Objective:
+```
+```
