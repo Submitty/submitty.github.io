@@ -62,6 +62,7 @@
       link: silent_editing
     - name: Discussion Forum
       link: forum
+    - name: Preemade Assignments
 
 - name: System Administrator
   link: sysadmin
