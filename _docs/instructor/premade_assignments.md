@@ -31,15 +31,10 @@ in a zip file
 
 #### Homework 1
 
-Description: 
-```
-Hello World
-match data types 
-arithmetic
-```
 Prerequisites:
 ```
-Be able to run java programs
+Be able to run java 
+No other experiance needed
 ```
 Learning Objective:
 ```
@@ -47,11 +42,8 @@ Output to console
 data types (int, double, char, boolean, String)
 mathmatical operations (+, -, *, \, %)
 ```
+<!---
 #### Homework 2
-
-Description: 
-```
-```
 
 Prerequisites:
 ```
@@ -63,10 +55,6 @@ Learning Objective:
 
 #### Homework 3
 
-Description: 
-```
-```
-
 Prerequisites:
 ```
 ```
@@ -76,10 +64,6 @@ Learning Objective:
 ```
 
 #### Homework 4
-
-Description: 
-```
-```
 
 Prerequisites:
 ```
@@ -91,10 +75,6 @@ Learning Objective:
 
 #### Homework 5
 
-Description: 
-```
-```
-
 Prerequisites:
 ```
 ```
@@ -102,3 +82,4 @@ Prerequisites:
 Learning Objective:
 ```
 ```
+-->
