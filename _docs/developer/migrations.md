@@ -82,7 +82,7 @@ It may be useful to get an overview of the status of migrations for the
 different environments. To do this, run:
 
 ```
-sudo python3 /usr/local/submitty/GTI_CHECKOUT/Submitty/migration/run_migrator.py -e <environment> status
+sudo python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/migration/run_migrator.py -e <environment> status
 ```
 
 This will output a table showing the migrations that are `UP` or `DOWN`.
