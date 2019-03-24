@@ -105,6 +105,8 @@ operating system.
 6. Navigate into the Submitty repository on your computer in a
    shell/terminal and type:
 
+   _Windows should run CMD or powershell on administrator mode_
+   
    ```
    vagrant up
    ```
