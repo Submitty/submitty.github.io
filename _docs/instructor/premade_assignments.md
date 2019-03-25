@@ -8,8 +8,8 @@ order: 18
 
 This page is intended for high school teachers who are teaching
 AP Computer Science A. It contains instructions on how to access
-the premade jave assignmens. The assignments can be accessed at 
-[Java Assignment Repository](https://github.com/Submitty/IntroToJava)
+the premade jave assignments. The assignments can be accessed at 
+[Java Assignment Repository](https://github.com/Submitty/IntroToJava).
 All of the assignments are intended to be completed in a week.
 
 ### Assignment Structure
