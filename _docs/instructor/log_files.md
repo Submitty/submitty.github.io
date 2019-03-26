@@ -20,13 +20,21 @@ out, or uploads an assignment.
  /var/local/submitty/logs/access/<DATE>.log
 ```
 
-
 ### Site Error Logs
 
 If there is an error while using the website, a detailed error message
 may be added to the site error logs. These logs are stored at:
 ```
 /var/local/submitty/logs/site_errors/<DATE>.log
+```
+
+### TA Grading Logs
+
+During the course of grading, actions taken by graders (e.g. opening
+a component, saving a component, etc.) are logged which can be later
+referenced. These logs are stored at:
+```
+/var/local/submitty/logs/ta_grading/<DATE>.log
 ```
 
 ### Autograding Queue Logs
