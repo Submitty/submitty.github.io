@@ -1,6 +1,6 @@
 ---
 title: Log Files
-category: Developer
+category: Instructor
 order: 4
 ---
 
