@@ -7,9 +7,12 @@ order: 4
 Submitty writes out logs for a variety of things, which can help instructors
 and sysadmins to debug when things go wrong as well as view certain diagnostic
 information. Most of these logs are named with a "<DATE>" which is named
-as YYYYMMDD to allow for sorting of the files by name by date. Each type
-of log is written out by a Submitty system user, and then readeable by anyone
-in the instructor/course_builders group.
+as YYYYMMDD to allow for sorting of the files by name by date. Logs written to
+`/var/local/submitty/` are owned by a Submitty system user and viewable by any
+instructor (or anyone in the course_builders group). Logs written under a course
+(e.g. under `/var/local/submitty/courses/<SEMESTER>/<COURSE>`) are owned by
+the head instructor and readable by any TAs/instructors in the course with SSH
+access.
 
 ### User Access Logs
 
