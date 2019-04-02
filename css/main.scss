@@ -39,20 +39,30 @@ header.main-nav > ul {
 
 .top-level > .inner-nav {
   display: none;
+  margin-left: 20px;
 }
 
-.top-level.open > .inner-nav {
+.has-children > ul {
+  display: none;
+}
+
+.has-children.open > ul {
   display: block;
 }
 
 .nav-arrow {
   display: none;
   position: relative;
-  margin-left: -32px;
   width: 12px;
+  line-height: 1.5;
+  cursor: pointer;
 }
 
-.has-children .nav-arrow {
+.no-children > .nav-arrow {
+  display: none;
+}
+
+.has-children > .nav-arrow {
   display: inline-block;
 }
 
@@ -82,8 +92,54 @@ header.main-nav > ul {
   transform: rotate(135deg);
 }
 
-.top-level.no-children {
-  margin-left: -16px;
+.no-children {
+  margin-left: 20px;
+}
+
+.inner-nav > .no-children {
+  margin-left: 18px;
+}
+
+.inner-nav-arrow {
+  display: none;
+  position: relative;
+  width: 12px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.no-children > .inner-nav-arrow {
+  display: none;
+}
+
+.has-children > .inner-nav-arrow {
+  display: inline-block;
+}
+
+.inner-nav-arrow:before {
+  /*
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  */
+  display: block;
+  content: "";
+  margin: -.25em 0 0 0em;
+
+  width: .3em;
+  height: .3em;
+  border-right: .10em solid #3f4657;
+  border-top: .10em solid #3f4657;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition-duration: .3s;
+  transition-duration: .3s;
+}
+
+.nav-item.open > .inner-nav-arrow:before {
+  margin-top: -10px;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
 }
 
 .content h1 svg.anchor,
@@ -99,4 +155,12 @@ header.main-nav > ul {
 .content h3:hover svg.anchor,
 .content h4:hover svg.anchor {
   visibility: visible;
+}
+
+.inner-nav > li.nav-item > ul {
+  margin-top: 10px;
+}
+
+.nav-item.inner {
+  margin-left: 20px;
 }
