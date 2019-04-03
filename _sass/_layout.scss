@@ -100,8 +100,9 @@ header {
 	background-color: $nav-background-color;
 
 	ul {
+		list-style-type: none;
 		padding: 0;
-		margin: 0;
+		margin: 0 10px 0 20px;
 	}
 
 	h1 {
@@ -131,6 +132,9 @@ header {
 			//width: $emblem-size;
 			margin-right: $space - 5;
 			margin-left: -10px;
+			@media (max-width: $mobile-break) {
+				margin-left: -100px;
+			}
 			max-width: none;
 		}
 	}
@@ -238,6 +242,12 @@ header > ul {
 	}
 }
 
+@media (min-width: $mobile-break) {
+	header > ul {
+		margin-top: 10px;
+	}
+}
+
 nav > ul {
 	padding: $space / 2 0;
 
@@ -247,10 +257,9 @@ nav > ul {
 }
 
 .nav-item {
-	display: block;
 	font-family: "Open Sans", sans-serif;
 	line-height: 1;
-	margin: 0;
+	margin: 0 0 10px 0;
 
 	nav:not(.full-navigation) & > ul {
 		display: none;
@@ -264,12 +273,16 @@ nav > ul {
 		color: #666;
 		text-decoration: none;
 		font-size: 1.4rem;
-		padding: $space / 2 0 $space / 2 $space * 2;
-		display: block;
 	}
 
 	> div {
 		font-style: italic;
+	}
+
+	> span {
+		font-style: italic;
+		font-size: 1.4rem;
+		color: #666;
 	}
 
 	&.current > a,
@@ -285,10 +298,9 @@ nav > ul {
 		//padding-left: $space;
 	}
 
-        &.inner > a {
+	&.inner > a {
 		line-height: 1.5;
-		font-size: 1.2rem;
-		padding-left: $space * 3;
+		font-size: 1.3rem;
 	}
 }
 

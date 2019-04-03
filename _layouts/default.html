@@ -27,7 +27,7 @@
                 ga('send', 'pageview');
             </script>
         {% endif %}
-        <script type="text/javascript" src="{{ site.baseurl }}/scripts/main.js"></script>
+        <script type="text/javascript" src="{{ site.baseurl }}/scripts/main.js" defer></script>
     </head>
 
     <body>
@@ -39,7 +39,7 @@
                 <button type="button" class="open-nav" id="open-nav"></button>
             </h1>
             <form action="{{ site.baseurl }}/search/" method="get">
-                <input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+                <input type="text" name="q" id="search-input" placeholder="Search">
                 <input type="submit" value="Search" style="display: none;">
             </form>
             <ul>
@@ -62,10 +62,10 @@
                     {% assign extra_class = extra_class | append: ' no-children' %}
                 {% endif %}
                 <li class="nav-item top-level {{ extra_class }}">
+                    <i class="nav-arrow nav-click"></i>
                     {% if entry.link != false %}
                     <a href="{{ top_link }}">
                     {% endif %}
-                    <i class="nav-arrow"></i>
                     {{ entry.name }}
                     {% if entry.link != false %}
                     </a>
@@ -77,22 +77,37 @@
                             {% if child.link %}
                                 {% assign child_link = child.link %}
                             {% endif %}
+
                             {% assign full_child_link = top_link | append: '/' | append: child_link %}
+
+                            {% assign child_link_length = full_child_link | size %}
+                            {% assign child_url_slice = page.url | slice: 0, child_link_length %}
+
                             {% assign inner_extra = '' %}
+
+                            {% if child_url_slice == full_child_link %}
+                                {% assign inner_extra = inner_extra | append: ' open' %}
+                            {% endif %}
                             {% if full_child_link == page.url %}
                                 {% assign inner_extra = inner_extra | append: ' current' %}
                             {% endif %}
+                            {% if child.children %}
+                                {% assign inner_extra = inner_extra | append: ' has-children' %}
+                            {% else %}
+                                {% assign inner_extra = inner_extra | append: ' no-children' %}
+                            {% endif %}
                         <li class="nav-item {{ inner_extra }}">
+                            <i class="inner-nav-arrow nav-click"></i>
                             {% if child.link != false %}
                             <a href="{{ full_child_link }}">
                             {% else %}
-                            <div>
+                            <span>
                             {% endif %}
                             {{ child.name }}
                             {% if child.link != false %}
                             </a>
                             {% else %}
-                            </div>
+                            </span>
                             {% endif %}
                             {% if child.children %}
                             <ul>
@@ -147,11 +162,5 @@
                 </div>
             </footer>
         </section>
-
-        <script>
-            document.getElementById('open-nav').addEventListener('click', function() {
-                document.body.classList.toggle('nav-open');
-            });
-        </script>
     </body>
 </html>
