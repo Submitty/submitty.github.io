@@ -133,7 +133,7 @@ configuration directory:
 #### Third Phase: Validation
 
 1. Copy specific files as needed from the student's submission
-   languages) to the ```tmp_work``` subdirectory.
+   languages to the ```tmp_work``` subdirectory.
    Note: These files are specified with the ```submission_to_validation``` variable
    in ```config.json```.
 
@@ -154,7 +154,7 @@ configuration directory:
 
 7. Write the ```results.json``` and ```grade.txt``` files.
 
-8. Copy files as needed form the ```tmp_work``` directory for archive
+8. Copy files as needed from the ```tmp_work``` directory for archive
    to the details subfolder of the student's results directory for
    this assignment and submission version.
    Note:  The copied files can be controlled with the
@@ -246,7 +246,7 @@ executables.
   **type:** _array of strings_  
 
   The instructor can also override / customize the default
-  restrictions on use of system call within the student code by
+  restrictions on use of system calls within the student code by
   whitelisting additional categories of system calls:
   [grading/system_call_categories.cpp][grading/system_call_categories.cpp]
   [grading/seccomp_functions.cpp][grading/seccomp_functions.cpp]
@@ -290,7 +290,7 @@ executables.
 
 * **field:** ``"extra_credit"``  
   **type:** _boolean_  
-  **default value:** false
+  **default value:** ``false``
 
 
 * **field:** ``"filename"``  
@@ -302,7 +302,7 @@ executables.
   **type:** _string_ or _array of strings_  
   **REQUIRED** for ``"compilation"`` testcases
 
-  _FIXME:  Should we rename/collapse this field to to filename??_
+  _FIXME:  Should we rename/collapse this field to filename??_
 
 
 * **field:** ``"command"``  
@@ -330,7 +330,7 @@ executables.
 
 * **field:** ``"actions"``   
   **type:** _array of action strings_ (described below)   
-  **default value:** empty.
+  **default value:** ``empty``
 
 * **field:** ``"textboxes"``  
   **type:** _array of textbox objects_  (Described below)  
@@ -338,7 +338,7 @@ executables.
 
 
 ### Specification of a Networked Gradeable
-* **field** ``use_router``  
+* **field** ``"use_router"``  
   **type:** _boolean_  
   **default value** ``true``  
   **USE:** Used to determine whether a router will be injected into the network.  
@@ -407,7 +407,7 @@ system, as well as to add rules in regards to message delay and loss. A router
 must be hand specified by the instructor per testcase. See Submitty Tutorial 16
 for an example router.
 
-2. It can be important to ensure your container's start in the correct order.
+2. It can be important to ensure your containers start in the correct order.
 In the example above, a sleep is used on the client to ensure that the server
 starts before it.
 
@@ -440,7 +440,7 @@ It is possible to communicate with an assignment running in docker via standard 
 ```
 
 Dispatcher actions are specified at the testcase level and are delivered
-sequentially to student containers.  There are two types of action, ``stdin`` and ``delay``. Delays specify a
+sequentially to student containers.  There are two types of actions, ``stdin`` and ``delay``. Delays specify a
 floating point number of seconds delay before the next action is
 processed. Standard Input Actions deliver a string to any containers
 whose names are specified in the "containers" array. Please note that
@@ -799,7 +799,7 @@ Moves the mouse to the origin (upper left) of the student’s window.
 
 ### Validation Methods
 
-  * These methods only require only an ``"actual_file"``:
+  * These methods only require an ``"actual_file"``:
 
      * ``"warnIfNotEmpty"`` - Will throw a warning, but not cause the test to
        fail if the specified file is not empty
@@ -860,7 +860,7 @@ Moves the mouse to the origin (upper left) of the student’s window.
 
         * **field:** ``"comparison"``  
           **type:** _string_  
-          **value:** ``"ge"``, ``"lt"``, FIXME FINISH LIST  
+          **value:** ``"gt"``, ``"ge"``, ``"lt"``, ``"le"``, FIXME FINISH LIST  
           **REQUIRED**  
 
 
