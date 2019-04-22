@@ -25,6 +25,9 @@ _Note: These instructions should be run under root/sudo._
 
 1. [Install Ubuntu 18.04 server edition (or other supported distro)](server_os)
 
+   Note: If you are duplicating an existing Submitty installation onto a new server, you should
+   synchronize `/etc/passwd`, `/etc/shadow`, `/etc/group`, and `/etc/gshadow` before installing
+   the rest of Submitty to avoid mismatched UIDs and GIDs of the Submitty users.
 
 2. Run the bootstrap script:
    ```
