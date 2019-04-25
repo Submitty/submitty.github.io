@@ -8,33 +8,19 @@ order: 6
 _The optional instructions below are suggestions for the system
 administrators of a live Submitty installation._
 
-
-### Customize upload students script
-
-The system admin or instructor can upload student data from either
-an XLSX or CSV spreadsheet of their student classlist (obtained
-from the university registrar).
-
-```
-sudo ./bin/setcsvfields W X Y Z
-```
-
-Since the format of this data may vary between universities, this
-command allows customization of what columns from the spreadsheet
-represent students first name (W), last name (X), campus e-mail
-(Y), and registration Section ID (Z).
-
-For example: If the students' first name is column 13, last name
-is column 12, e-mail is column 15, and section ID is column 7, then
-the command is:
-
-```
-sudo ./bin/setcsvfields 13 12 15 7
-```
+## Table of Contents <a name="toc"></a>
+* [Schedule backups of production server data](#schedule_backups)
+* [Capture cron error messages](#capture_cron)
+* [Configure log rotation](#log_rotation)
+* [Set password policy](#password_policy)
+* [Secure SSH](#secure_ssh)
+* [Block some brute-force ssh connections](#block_brute_force)
+* [Disable PHP Functions](#disable_php_functions)
+* [Allowing Large Student File Upload Submissions](#large_submissions)
+* [Adding Additional Links To The Footer](#footer_links)
 
 
-
-### Schedule backups of production server data
+### Schedule backups of production server data <a name="schedule_backups"></a>
 
 Specifically, the configuration, submission, and results data for all courses:
 
@@ -42,54 +28,63 @@ Specifically, the configuration, submission, and results data for all courses:
 /var/local/submitty/courses/
 ```
 
-And the central location of the student VCS (git/svn/etc. version control) repositories (if used):
+And the central location of the student VCS (e.g. git version control) repositories (if used):
 
 ```
 /var/local/submitty/vcs/
 ```
 
 You may want to back up more of `/var/local/submitty` to save configurations and logs, but be sure to exclude
-   `/var/local/submitty/to_be_graded_batch` and to_be_graded_interactive
+   `/var/local/submitty/to_be_graded_batch` and `to_be_graded_interactive`.
+
+<small>[Back To Table of Contents](#toc)</small>
 
 
-### Capture cron error messages
+### Capture cron error messages <a name="capture_cron"></a>
 
-The ```submitty_daemon``` user runs the [bin/grade_students.sh][bin/grade_students.sh]
-script.  STDERR output from this script should be logged or emailed
-to ensure that system errors can be reported and addressed.
+The `submitty_daemon` user runs the [sbin/send_email.py](https://github.com/Submitty/Submitty/blob/master/sbin/send_email.py)
+script.  Console output from this script can be emailed to a sysadmin to ensure that errors can be reported and addressed.
 
-See cron job details in [INSTALL_SUBMITTY_template.sh][INSTALL_SUBMITTY_template.sh].
+The first line should be set as `MAILTO=` with a valid email address.  For example:
+```
+MAILTO=sysadmins@lists.myuniversity.edu
+* * * * * python3 /usr/local/submitty/sbin/send_email.py
+```
+
+<small>[Back To Table of Contents](#toc)</small>
 
 
-### Configure log rotation
+### Configure log rotation <a name="log_rotation"></a>
 
 The defaults will work, but you may want to keep records around for
 longer and enable compression so that the logs don’t take up as
-much space.  Edit /etc/logrotate.conf and change the log rotation,
-retention, and compression settings to suit your situation.  The
+much space.  Edit `/etc/logrotate.conf` and change the `log rotation`,
+`retention`, and `compression` settings to suit your situation.  The
 comments in the file will tell you what each setting is for, or see
 [logrotate(8)](http://www.linuxcommand.org/man_pages/logrotate8.html) for more
 details.
 
+<small>[Back To Table of Contents](#toc)</small>
 
-### Set password policy
+
+### Set password policy <a name="password_policy"></a>
 
 It is a good idea to enforce strong passwords and password aging
 Edit `/etc/login.defs` to set default password and account expiration
 and set the umask to block world readable/writable files by default
 (search for the keywords and update the values after them)
 
-```     
+```
 UMASK 027
 
 PASS_MAX_DAYS   730
 PASS_MIN_DAYS   0
-PASS_WARN_AGE   30    
-```    
+PASS_WARN_AGE   30
+```
 
 Apply settings by running:
 
-```     
+```
 pam-auth-update
 ```
 
@@ -103,11 +98,11 @@ Edit `/etc/pam.d/common-password` to tweak settings under the line:
 
 along the lines of:
 
-```    
-password  requisite  pam_passwdqc.so min=disabled,disabled,15,12,12 similar=deny enforce=everyone retry=3    
+```
+password  requisite  pam_passwdqc.so min=disabled,disabled,15,12,12 similar=deny enforce=everyone retry=3
 ```
 
-Note: The values after min= correspond to password length minimum
+Note: The values after `min=` correspond to password length minimum
 if they contain: a single character class, 2 classes, a passphrase,
 3 classes, 4 classes.
 
@@ -115,8 +110,12 @@ if they contain: a single character class, 2 classes, a passphrase,
 __Note: If you would like to allow local machine passwords for pam
 authentication, make sure the `submitty_cgi` user is in the shadow group.__
 
+<small>[Back To Table of Contents](#toc)</small>
 
-### Secure SSH
+
+### Secure SSH <a name="secure_ssh"></a>
+
+__IMPORTANT: This applies to Ubuntu 16.04 only.  Do not do this on Ubuntu 18.04.__
 
 We encourage you to edit `/etc/ssh/sshd_config` to use only stronger encryption sets along the lines of:
 
@@ -126,7 +125,10 @@ MACs hmac-sha1,umac-64@openssh.com,hmac-ripemd160
 Ciphers aes256-ctr,aes192-ctr,aes128-ctr,arcfour256,arcfour128
 ```
 
-### Block some brute-force ssh connections by typing the following at a command prompt:
+<small>[Back To Table of Contents](#toc)</small>
+
+
+### Block some brute-force ssh connections by typing the following at a command prompt: <a name="block_brute_force"></a>
 
 ```
 sudo bash
@@ -136,8 +138,8 @@ iptables-save > /root/eth0.fw
 exit
 ```
 
-Edit ``` /etc/rc.local ``` to automatically reload the software
-firewall on boot and add the following just before the ``` exit 0 ```
+Edit `/etc/rc.local` to automatically reload the software
+firewall on boot and add the following just before the `exit 0`
 
 ```
 /sbin/iptables-restore < /root/eth0.fw
@@ -148,7 +150,10 @@ if you normally expect a lot of ssh connections from a given host.
 You may also opt to whitelist addresses or networks that are
 allowed to connect more frequently.
 
-### Disable PHP Functions
+<small>[Back To Table of Contents](#toc)</small>
+
+
+### Disable PHP Functions <a name="disable_php_functions"></a>
 
 To improve the security of the system, it might be useful to disable various unused PHP functions. This can be done by modifying the [disabled_functions](https://secure.php.net/manual/en/ini.core.php#ini.disable-functions) directive. Provided below is the setting used within our Vagrant and live setup:
 
@@ -158,20 +163,13 @@ disable_functions = popen,pclose,proc_open,chmod,php_real_logo_guid,php_egg_logo
 
 However, this should be only applied to the `php.ini` running the web server and not applied to the `cgi/php.ini` which does require some of these functions to function properly.
 
-[bin/grade_students.sh]: https://github.com/Submitty/Submitty/blob/master/bin/grade_students.sh
-[INSTALL_SUBMITTY_template.sh]: https://github.com/Submitty/Submitty/blob/master/bin/.setup/INSTALL_template.sh
+<small>[Back To Table of Contents](#toc)</small>
 
 
-### Allowing Large Student File Upload Submissions
+### Allowing Large Student File Upload Submissions <a name="large_submissions"></a>
 
-By default, Apache / Ubuntu limits the size of file upload by POST to
-10MB.  To increase this edit:
-
-```
-/etc/php/7.0/fpm/php.ini
-```
-
-Change these variables as appropriate:
+By default, Apache / Ubuntu limits the size of file upload by POST to 10MB.
+To increase this, edit `/etc/php/7.2/fpm/php.ini` and change these variables as appropriate:
 
 ```
 post_max_size
@@ -182,31 +180,56 @@ And restart apache:
 
 ```
 sudo systemctl restart apache2.service
-sudo systemctl restart php7.0-fpm.service
+sudo systemctl restart php7.2-fpm.service
 ```
 
 and/or
 
 ```
 sudo service apache2 restart
-sudo service php7.0-fpm restart
+sudo service php7.2-fpm restart
 ```
 
-By default, a Submitty electronic gradeable allows students to upload
-files totaling 100KB.  Instructors can adjust this limit per gradeable
-in the `config.json`, for example:
+By default, a Submitty electronic gradeable allows students to upload files totaling 100KB.
+Instructors can adjust this limit per gradeable in the `config.json`, for example:
 
 ```
 // 1 mb maximum submission size
 "max_submission_size" : 1000000
 ```
 
-If you are having difficulty with student upload size, you can modify the
-following in /etc/php/7.0/fpm/php.ini:
+If you are having difficulty with student upload size, you can modify `memory_limit` in `/etc/php/7.2/fpm/php.ini`.
 
-```
-memory_limit
-```
+Just be aware that modifying this number can have repercussions when multiple students are using the system at once.
 
-Just be aware that modifying this number can have repercussions when multiple
-students are using the system at once.
+<small>[Back To Table of Contents](#toc)</small>
+
+
+### Adding Additional Links To The Footer <a name="footer_links"></a>
+
+You may add additional links to be shown in the footer.  i.e. you may link to pages related to your institution or public policy notices.
+Additional links will appear to the right of the copyright notice and credit links to Github and RCOS.
+
+1. Create an empty file `footer_links.json` and place it in Submitty's system configuration folder.
+  * The configuration folder is typically `/usr/local/submitty/config`.
+2. The `footer_links.json` file must be readable by the `submitty_php` user.
+  * e.g. Set ownership of the file to `root:submitty_php` and permissions to `RW-R-----`.
+3. Every link requires a `title` property and a `url` property.
+  * An `icon` property is optional.  Check [here](https://fontawesome.com/v4.7.0/icons/) for a list of icons.
+4. Here is an example `footer_links.json`.  Make sure your JSON file is properly formatted with square brackets, curly braces, commas, etc.
+```
+[
+    {
+        "title": "Dept of Computer Science",
+        "url": "https://www.myuniversity.edu/computer_science"
+    },
+    {
+        "icon": "universal-access",
+        "title": "Accessibility Policy",
+        "url": "https://www.myuniversity.edu/info/accessibilitypolicy"
+    }
+]
+```
+5. If any links do not display, they probably have failed validation.  Validation can be particular, so please carefully proofread `footer_links.json` with instructions 1—4.
+
+<small>[Back To Table of Contents](#toc)</small>
