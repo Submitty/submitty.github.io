@@ -38,49 +38,45 @@ operating system.
    locate _Virtualization_, and enable it.
    
    Be sure to choose _Hardware Virtualization_ in the _System -> Acceleration_ settings of the virtual machine you are using.
+   
+   **NOTE** 
+   If using secure boot, vagrant may fail to work with VirtualBox. You will then either need to disable secure boot from
+   the boot menu/BIOS or follow [these steps](https://era86.github.io/2018/01/24/vagrant-virtualbox-secureboot-in-ubuntu-1604.html)
+   to self-sign the necessary packages to run vagrant and VirtualBox.
 
 
-3. Download and install [VirtualBox](https://www.virtualbox.org/), [Vagrant](https://www.vagrantup.com), and [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest).
-
-   The latest Vagrant + VirtualBox combo that has been tested is _Vagrant 1.9.3_ and _VirtualBox 5.0.38_ (on Mac 10.12.6)
+3. Download and install [VirtualBox](https://www.virtualbox.org/), [Vagrant](https://www.vagrantup.com).
 
    Below are quick steps to get everything installed and running.
 
    **Windows Installation**  
    You can just go to the respective sites and download the necessary binaries.
 
-   **Mac Installation**  
-   Install [homebrew](http://brew.sh/) if you don't have it and then run:
+   **Mac Installation**
+   You can either go to respective sites and download the necessary binaries or install [homebrew](http://brew.sh/) 
+   if you don't have it and then run:
    ```
    brew cask install virtualbox
    brew cask install vagrant
-   sudo vagrant plugin install vagrant-vbguest
    ```
 
-   **Ubuntu Installation**
+   **Ubuntu/Debian Installation**
    
-   **NOTE:** The Ubuntu repository does not contain the latest version of Vagrant or VirtualBox.
-   To accomodate for this, we have changed the setup instructions until this is resolved.
-   Please make sure to replace *`<mydist>`* with your distribution name
-   (see [here](https://www.virtualbox.org/wiki/Linux_Downloads))
-   ```bash
-   # Add VirtualBox
-   sudo add-apt-repository "deb http://download.virtualbox.org/virtualbox/debian <mydist> contrib"
-   wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
-   wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
-   
-   # Add Vagrant
-   sudo add-apt-repository "deb https://vagrant-deb.linestarve.com/ any main"
-   sudo apt-key adv --keyserver pgp.mit.edu --recv-key
-	
-   sudo apt-get update
-   
-   # Install Packages
-   sudo apt-get install virtualbox-5.2 vagrant
-   sudo vagrant plugin install vagrant-vbguest
-   ```
+   **NOTE:** The Ubuntu repository does not contain the latest version of Vagrant or VirtualBox and using
+   them may not work nor are they supported. We recommend that you either download the necessary binaries
+   from their respective steps or follow the steps outlined below for each:
+   VirtualBox: https://www.virtualbox.org/wiki/Linux_Downloads
+   Vagrant: https://vagrant-deb.linestarve.com/
 
-2. Clone [the Submitty repository](https://github.com/Submitty/Submitty) to a location on
+4. Install [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest).
+
+   Open your terminal/cmd.exe and run:
+   ```
+   vagrant plugin install vagrant-vbguest
+   ```
+   Note: You will want to run `vagrant plugin update` every once in a while to keep the plugin up-to-date.
+
+5. Clone [the Submitty repository](https://github.com/Submitty/Submitty) to a location on
    your computer (the "host").
 
    ```
@@ -106,9 +102,11 @@ operating system.
     _This host directory structure will be shared / synced between
     your host operating system and the Submitty virtual machine._
 
-3. Navigate into the Submitty repository on your computer in a
+6. Navigate into the Submitty repository on your computer in a
    shell/terminal and type:
 
+   _Windows should run CMD or powershell on administrator mode_
+   
    ```
    vagrant up
    ```
@@ -116,9 +114,20 @@ operating system.
    Vagrant will build your VM.  This will take maybe 30 minutes to a
    few hours depending on your Internet connection speed.  When this
    command finishes, your VM is ready to use.
+   
+   If an error is thrown after running this command, type:
+   ```
+   sudo apt-get remove --purge virtualbox 
+   ```
+   This will remove Virtual Box.Then type:
+   ```
+   sudo rm ~/"VirtualBox VMs" -Rf
+   sudo rm ~/.config/VirtualBox/ -Rf
+   ```
+   This will delete all virtual machine settings. Then install
+   the latest version of Virtual Box and vagrant from the links given in step 3 (using Ubuntu Software).
 
-
-5. To stop and restart the VM:
+7. To stop and restart the VM:
 
    * When you are finished working, you can suspend the virtual
      machine (save state, a little faster to restart):
@@ -153,11 +162,10 @@ operating system.
      If the VM breaks, simply `destroy`/`up` as normal.
 
      NOTE: when resuming work, you may see this warning several
-     times, `default: Warning: Remote connection
-     disconnect. Retrying..  .` These warnings are not harmful and can
-     be ignored.
+     times, `default: Warning: Remote connection disconnect. Retrying..  .` 
+     These warnings are not harmful and can be ignored.
 
-6. To completely delete the virtual machine (such as to start over from
+8. To completely delete the virtual machine (such as to start over from
    scratch with a fresh VM), type:
 
    ```
@@ -171,12 +179,21 @@ operating system.
    ```
 
 
-7. When the VM is "up", you can go visit the homework submission
+9. When the VM is "up", you can go visit the homework submission
    website.
 
    * From a web browser (Chrome, Firefox, IE, etc.) on your host
-     computer, go to:   
+     computer,
+
+     If you have the Ubuntu 18.04 VM, go to:
+     <http://192.168.56.111/index.php>  
+
+     If you have the Ubuntu 16.04 VM, go to:
      <http://192.168.56.101/index.php>  
+     
+     If you have the Debian 8 VM, go to:
+     <http://192.168.56.201/index.php>
+
      (see the VM login & password info below)
 
    * You can test the submission, autograding, and viewing of the
@@ -190,7 +207,7 @@ operating system.
      <https://github.com/Submitty/Submitty/tree/master/more_autograding_examples>
 
 
-8. When the VM is "up", you can connect from your host computer to the
+10. When the VM is "up", you can connect from your host computer to the
    virtual machine via ssh.  Windows users will need to install SSH
    software (e.g., 
    [Cygwin](https://www.cygwin.com/) or 
@@ -202,10 +219,10 @@ operating system.
    vagrant ssh
    ```
 
-   You will connect to the VM as user `vagrant` initially.
+   You will connect to the VM as the `root` user.
 
 
-9. The following users exist on the VM:
+11. The following users exist on the VM:
 
    | user | password |
    |------|----------|
@@ -221,7 +238,7 @@ operating system.
    | student | student |
 
 
-10. The VM has the following four courses by default and they are all part of the current semester:
+12. The VM has the following four courses by default and they are all part of the current semester:
 
     * tutorial
     * sample

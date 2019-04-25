@@ -116,16 +116,16 @@ institutions.
     pip3 install requests[security]
     ```
 
-### PhotoScraper/RPI_SIS_Photo_Scraper.py
+### PhotoScraper/RPI_SIS_PhotoScraper.py
 
-[Download PhotoScraper/RPI_SIS_Photo_Scraper.py](https://github.com/Submitty/InstructorTools)
+[Download PhotoScraper/RPI_SIS_PhotoScraper.py](https://github.com/Submitty/InstructorTools)
 
 Save the file in a convenient location.  Then Double-click or run the
 python file in terminal/command prompt in the directory the file is
 located:
 
 ```
-python3 RPI_SIS_Photo_Scraper.py
+python3 RPI_SIS_PhotoScraper.py
 ```
 
 This will prompt the user to type in responses on the command-line.
@@ -171,5 +171,5 @@ This will prompt the user to type in responses on the command-line.
     Exit
     ```
     For Y, all the photos will be downloaded to their respective session/course_section
-    folders in the current directory the RPI_SIS_Photo_Scraper.py file is located. In this example,
+    folders in the current directory the RPI_SIS_PhotoScraper.py file is located. In this example,
     the folders the photos would be downloaded to is Fall-2017/CSCI-1200-02.

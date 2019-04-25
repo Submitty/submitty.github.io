@@ -158,7 +158,7 @@ To do this:
    watch the output:
 
    ```
-   sudo su -c '/usr/local/submitty/sbin/submitty_autograding_shipper.py' submitty_daemon
+   sudo su -c '/usr/local/submitty/sbin/submitty_autograding_worker.py' submitty_daemon
    ```
 
 

@@ -4,6 +4,7 @@ category: System Administrator
 order: 5
 ---
 
+
 ### UNIX Users and Groups
 
 1. Create local user accounts for the instructor and TAs for this course.
@@ -51,12 +52,14 @@ order: 5
    adduser submitty_cgi <COURSE>_tas_www
    ```
 
-   _NOTE: After adding the `submitty_php` user to a new course group, you'll
+   _Note: After adding the `submitty_php` user to a new course group, you'll
    need to restart fpm to ensure that the webpage sees the change:_
 
    ```
-   sudo service php7.0-fpm restart
+   sudo service php7.2-fpm restart
    ```
+
+   _Note: Ubuntu 18.04 is using 7.2, but older versions might be using `php7.0-fpm`._
 
 
 7. Give permissions to create new users and update apache configurations
@@ -114,8 +117,10 @@ order: 5
 
    _Note: You will sometimes need to restart PHP-FPM after adding a course._
    ```
-   sudo service php7.0-fpm restart
+   sudo service php7.2-fpm restart
    ```
+
+   _Note: Ubuntu 18.04 is using 7.2, but older versions might be using `php7.0-fpm`._
 
    You can confirm that a directory has been created and populated
    with initial files in the data directory.  For this example (if you

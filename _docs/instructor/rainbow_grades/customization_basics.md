@@ -30,6 +30,7 @@ It can contain the following:
 * ``"exam_seating"``: Shows exam seating assignments. To display the assignment on the Submitty course homepage,
   the instructor should make sure "Display Rainbow Grades Custom Message" is enabled in "Course Settings" on the Submitty
   course page.
+* ``"display_rank_to_individual"``: Shows each student's rank in the course, independent of section.
 
 * **field:** ``"display_benchmark"``  
   **type:** _array of strings_  

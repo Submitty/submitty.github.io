@@ -7,34 +7,45 @@ order: 2
 These instructions will help guide you to installing Submitty onto a
 server (whether on a dedicated machine or a VM).
 
-Note: We assume that you're installing Submitty on a dedicated machine. If this machine is
+**Note**: We assume that you're installing Submitty on a dedicated machine. If this machine is
 used for other things, you may need to adapt the instructions below and
 [install_system.sh](https://github.com/Submitty/Submitty/blob/master/.setup/install_system.sh)
 for your needs (as the script installs all of the dependencies that Submitty depends on).
 
+**Note:** Part of the installation process consists of changing the default umask
+for users from 002 to 027 to better protect the files that Submitty generates
+during operation as well as any instructors who are SSHing into the machine and
+so as to not potentially allow other access to confidential material. This does
+mean that installing certain things (like python packages through pip) into a
+global scope will need to have their permissions updated or else only the owner
+will be able to read/execute it.
+
 _Note: These instructions should be run under root/sudo._
 
 
-1. [Install Ubuntu 16.04 or 18.04 server edition](server_os)
+1. [Install Ubuntu 18.04 server edition (or other supported distro)](server_os)
 
+   Note: If you are duplicating an existing Submitty installation onto a new server, you should
+   synchronize `/etc/passwd`, `/etc/shadow`, `/etc/group`, and `/etc/gshadow` before installing
+   the rest of Submitty to avoid mismatched UIDs and GIDs of the Submitty users.
 
-2. After installing the operating system, clone the git repository:
+2. Run the bootstrap script:
+   ```
+   curl https://raw.githubusercontent.com/Submitty/Submitty/master/.setup/bootstrap.sh | bash
+   ```
+   
+   or clone the git repository and run the installer (requires git and lsb-release to be installed):
 
    ```
    mkdir -p /usr/local/submitty/GIT_CHECKOUT
    git clone https://github.com/Submitty/Submitty.git /usr/local/submitty/GIT_CHECKOUT/Submitty
-   ```
-
-3. Run the automated portion of the install.
-
-   ```
    cd /usr/local/submitty/GIT_CHECKOUT/Submitty
    bash ./.setup/install_system.sh
    ```
 
-   You will be asked several questions by the
-   [CONFIGURE_SUBMITTY.sh script](https://github.com/Submitty/Submitty/blob/master/.setup/CONFIGURE_SUBMITTY.sh).
-   These questions are:
+   Note: During installation, you will be asked several questions by the
+   [CONFIGURE_SUBMITTY.py](https://github.com/Submitty/Submitty/blob/master/.setup/CONFIGURE_SUBMITTY.py)
+   script. These questions are:
    1. Database Host
    2. Submitty Database User/Role
    3. Submitty Database User/Role Password
@@ -51,20 +62,26 @@ _Note: These instructions should be run under root/sudo._
    the submitty database user/role, the script will create that for
    you with the specified name & password.
 
-   IMPORTANT: Do _**not**_ enable debugging unless you are developing code on a
-   non-production machine.
+
+4. Run installations specific to your university.  
+   For example:  [RPI Computer Science specific installations](https://github.com/Submitty/Submitty/blob/master/.setup/distro_setup/ubuntu/rpi.sh)
+
+   ```
+   sudo bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/distro_setup/ubuntu/rpi.sh
+   ```
 
 
 4. Edit PHP Settings
 
    We recommend for security that you modify your PHP installation and disable certain PHP functions.
-   To do this, edit `/etc/php/7.0/fpm/php.ini`  and find the entry for `disable_functions` and prepend the list of
+   To do this, edit `/etc/php/7.2/fpm/php.ini`  and find the entry for `disable_functions` and prepend the list of
    disabled functions with:
 
    ```
    popen,pclose,proc_open,chmod,php_real_logo_guid,php_egg_logo_guid,php_ini_scanned_files,php_ini_loaded_file,readlink,symlink,link,set_file_buffer,proc_close,proc_terminate,proc_get_status,proc_nice,getmyuid,getmygid,getmyinode,putenv,get_current_user,magic_quotes_runtime,set_magic_quotes_runtime,import_request_variables,ini_alter,stream_socket_client,stream_socket_server,stream_socket_accept,stream_socket_pair,stream_get_transports,stream_wrapper_restore,mb_send_mail,openlog,syslog,closelog,pfsockopen,posix_kill,apache_child_terminate,apache_get_modules,apache_get_version,apache_lookup_uri,apache_reset_timeout,apache_response_headers,virtual,system,phpinfo,exec,shell_exec,passthru,
    ```
 
+   _Note: Ubuntu 18.04 is using 7.2, but older versions might be using `php7.0-fpm`._
 
 5. Setup Apache
 

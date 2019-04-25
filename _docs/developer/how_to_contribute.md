@@ -3,6 +3,26 @@ title: How To Contribute
 category: Developer
 ---
 
+Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-new-developers).
+
+### How to make a Pull Request (PR) to Submitty 
+
+* Contributors from outside the Submitty GitHub organization should
+  clone the repo on their own GitHub page, and create a branch with
+  the modifications to be included with this PR.  _Note: If
+  appropriate, please grant write access to the submitty organization
+  administrators so we can more conveniently make small edits (e.g.,
+  UI text wording changes).  In some cases this can speed up the
+  approval and merging of your contributions._
+
+  Contributors who are already active members of the Submitty GitHub
+  organization can make a branch within the Submitty organization
+  repo.  _Note: This is preferred since it allows other members of the
+  organization to push changes to the branch, and work as a group on
+  larger features._
+
+  PRs can be made from either type of branch.
+
 * Each pull request (PR) should be addressing/closing an open issue.
   *Usually*.
 
@@ -11,12 +31,12 @@ category: Developer
 * Titles of PR, Issues, and commits should be <= 50 characters.
   *Usually*.
 
-* Include the string "Closes #1234" within the comment so that the
+* Include the string "Closes #1234" within the top comment of the PR so that the
   issue will be automatically closed issue when the pull request is
   merged.
 
 * The commit message should talk about *WHAT* changed, and *WHY*. Not
-  *HOW*.  How is the diff, and you don’t need to repeat it.
+  *HOW*.  How is the diff, and you don't need to repeat it.
 
 * Comments explaining the code should be *in* the code, rather than in
   the PR message or comments.
@@ -31,11 +51,16 @@ category: Developer
 * Be explicit about what you want feedback on, or why you are asking
   for specific reviewers.
 
+* Prepend '[Bugfix]' to the start of the PR title if the contribution
+  is primarily fixing an error with an existing Submitty feature.
+
 * Prepend '[WIP]' to the start of the PR title if you would like
   feedback / detailed review on work in progress.  This indicates to
   the reviewers and project managers that this feature is not ready to
   be merged into the master branch.  When it is ready to merge, edit
   the title to remove the '[WIP]'.
+
+
 
 These guidelines drawn from:
 
@@ -115,9 +140,9 @@ you need to do?
   hopefully, in short order, approving that the code be merged into
   the master branch.
 
-### How To Edit Submitty.org
+### How To Edit Submitty.org Documentation
 
-If you want to add documentation to Submitty.org here's what you do.
+If you want to update or add documentation to Submitty.org here's what you do:
 
   * If you haven't already, you'll need to clone the git repo of 
     Submitty.org
@@ -126,10 +151,14 @@ If you want to add documentation to Submitty.org here's what you do.
       Submitty/submitty.github.io
 
   * After cloning the repo, go into the _docs folder. You will see a folder 
-    representing each Major catagory on Submitty.org
+    representing each Major category on Submitty.org
 
   * Navigate to whichever page you want to edit and open it in your text editor of choice. 
     The files are written in Markdown.
 
-  * After you are done editing, you can push the changes directly to master
+  * Run Jekyll locally to generate and view the webpages and proofread your edits:
+    [README.md](https://github.com/Submitty/submitty.github.io/blob/master/README.md)
+
+  * After you are done editing, you can submit a pull request for review.  
+    _Note: Members of the Submitty GitHub organization can directly push changes to master without review (appropriate for small edits)._
 

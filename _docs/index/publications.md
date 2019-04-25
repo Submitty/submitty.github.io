@@ -4,6 +4,36 @@ order: 1
 ---
 
 
+
+
+* ["Autograding Distributed Algorithms in Networked Containers"](https://github.com/Submitty/publications/raw/master/2019_SIGCSE_Grading_Networked_Applications/2019_SIGCSE_Grading_Networked_Applications.pdf)  
+Evan Maicus, Matthew Peveler, Stacy Patterson, and Barbara Cutler  
+Proceedings of the 50th ACM Technical Symposium on Computer Science Education (SIGCSE '19), February 2019.  
+[(slides)](https://github.com/Submitty/publications/raw/master/2019_SIGCSE_Grading_Networked_Applications/2019_SIGCSE_Grading_Networked_Applications_SLIDES.pdf)  
+
+
+* ["Comparing Jailed Sandboxes vs Containers Within an Autograding System"](https://github.com/Submitty/publications/raw/master/2019_SIGCSE_Sandbox_vs_Docker/2019_SIGCSE_Sandbox_vs_Docker.pdf)  
+Matthew Peveler, Evan Maicus, and Barbara Cutler  
+Proceedings of the 50th ACM Technical Symposium on Computer Science Education (SIGCSE '19), February 2019.
+[(slides)](https://github.com/Submitty/publications/raw/master/2019_SIGCSE_Sandbox_vs_Docker/2019_SIGCSE_Sandbox_vs_Docker_slides.pdf)
+
+
+* ["Facilitating Discussion-Based Grading and Private Channels via an Integrated Forum"](https://github.com/Submitty/publications/raw/master/2019_SIGCSE_Discussion_Forum/2019_SIGCSE_Discussion_Forum.pdf)  
+Andrew Aikens, Gagan Kumar, Shail Patel, Evan Maicus, Matthew Peveler, and Barbara Cutler  
+Poster at ACM Technical Symposium on Computing Science Education (SIGCSE), February 2019
+
+
+* ["Lichen: Customizable, Open Source Plagiarism Detection in Submitty"](https://github.com/Submitty/publications/raw/master/2019_SIGCSE_Lichen_Plagiarism_Detection/2019_SIGCSE_Lichen_Plagiarism_Detection.pdf)  
+Matthew Peveler, Tushar Gurjar, Evan Maicus, Andrew Aikens, and Barbara Cutler  
+Poster at ACM Technical Symposium on Computing Science Education (SIGCSE), February 2019
+
+
+
+* ["Correlation of a Flexible Late Day Policy with Student Stress and Programming Assignment Plagiarism"](https://github.com/Submitty/publications/raw/master/2018_SIGCSE_poster_breese_et_al/Poster.pdf)   
+  Samuel Breese, Evan Maicus, Matthew Peveler, and Barbara Cutler   
+  Poster at ACM Technical Symposium on Computing Science Education (SIGCSE), February 2018  
+
+
 * ["Supporting Team Submission and Peer Grading within Submitty"](https://github.com/Submitty/publications/raw/master/2018_SIGCSE_demo_peveler_et_al/SIGCSE%202018%20Submitty%20Demo%20Presentation.pdf)  
   Matthew Peveler, Samuel Breese, Evan Maicus, Andrew Aikens, Timothy Cyrus, Elizabeth Dinella, James Anderson, Joshua Barthelmess, Marisa Lee, Leon Montealegre, Jessica Wang, Buster Holzbauer, Barbara Cutler, and Ana Milanova   
   Demo Presentation at ACM Technical Symposium on Computing Science Education (SIGCSE), February 2018

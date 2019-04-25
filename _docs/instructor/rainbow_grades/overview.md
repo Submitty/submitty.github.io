@@ -1,7 +1,7 @@
 ---
 title: Rainbow Grades
 category: Instructor
-order: 7
+order: 8
 ---
 
 ![](http://submitty.org/images/rainbow_grades.png)
@@ -48,7 +48,9 @@ order: 7
    Set the variables at the top of the file
    (`USERNAME`, `RAINBOW_GRADES_DIRECTORY`, `HWSERVER`, `REPORTS_DIRECTORY`)
 
-   Note:  When using the development VM, you can connect to the server as the instructor user:
+   If you are not a developer, jump to step 5 after setting these variables.
+
+   Note (**FOR DEVELOPERS ONLY**):  When using the development VM, you can connect to the server as the instructor user:
 
    ```
    ssh -p 2222 instructor@127.0.0.1
@@ -78,18 +80,18 @@ order: 7
 6. **Start your customization**  
    In order to run Rainbow Grades you will need to set up a `customization.json` file. While we
    provide a sample file as a starting point, you will need to make changes in order to tailor
-   Rainbow Grades for your course. Starting details are on the [Customization Basics](/instructor/customization) page.
+   Rainbow Grades for your course. Starting details are on the [Customization Basics](/instructor/rainbow_grades/customization_basics) page.
 
 7. **Add in gradeables**  
    Once you've set up general course information, you'll want to focus on adding gradeables
    to your `customization.json` file. This array describes each assignment to Rainbow Grades.
    You will likely update this many times throughout the semester. Since there are several
-   features specific to this array, it has its own instructions on the [Gradeables Customization](/instructor/gradeables) page.
+   features specific to this array, it has its own instructions on the [Gradeables Customization](/instructor/rainbow_grades/gradeables) page.
 
 8. **Other customization extras**  
    `customization.json` supports other options. While the list may evolve over time, we currently
-   provide documentation for [assigned exam seating](/instructor/exam_customization) and 
-   [iClicker integration](/instructor/iclicker) on their own pages.
+   provide documentation for [assigned exam seating](/instructor/rainbow_grades/exam_customization) and
+   [iClicker integration](/instructor/rainbow_grades/iclicker_instructions) on their own pages.
 
 
 9. **Generate the reports**.   

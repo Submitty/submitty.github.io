@@ -11,6 +11,8 @@
     - name: Course Navigation
       link: navigation
     - name: Submission
+    - name: Submission via GIT
+      link: git_submission
     - name: Automated Testing
     - name: Late Days & Extensions
       link: late_days
@@ -29,6 +31,8 @@
       link: create_edit_gradeable
     - name: Directory Structure
     - name: Assignment Configuration
+    - name: Facilitating Submission via GIT
+      link: managing_git
     - name: Static Analysis
     - name: Tree Tool
     - name: Log Files
@@ -43,6 +47,8 @@
         - name: Exam Seating
           link: exam_customization
         - name: iClicker Instructions
+        - name: RPI VPN on WSL Instructions
+          link: wsl_vpn
     - name: Late Days
     - name: Team Assignments
     - name: Website Customization
@@ -54,6 +60,9 @@
       link: student_photos
     - name: Silent Grade Editing
       link: silent_editing
+    - name: Discussion Forum
+      link: forum
+    - name: Premade Assignments
 
 - name: System Administrator
   link: sysadmin
@@ -64,7 +73,7 @@
       link: update
     - name: Database Overview
     - name: Course Creation
-    - name: Setting up Git
+    - name: Setting up Internal Git
       link: git
     - name: System Customization Checklist
       link: system_customization
@@ -79,6 +88,7 @@
     - name: PhpStorm Setup Instructions
       link: phpstorm
     - name: Database Design
+    - name: Migrations
     - name: Automated Grading
     - name: JSON Configuration Files
     - name: JSON Responses
@@ -95,3 +105,5 @@
     - name: Configuring Tie In Programs
     - name: GSOC2018_TusharGurjar
       link: GSOC2018_TusharGurjar
+    - name: GSOC2018_GaganKumar
+      link: GSOC2018_GaganKumar
