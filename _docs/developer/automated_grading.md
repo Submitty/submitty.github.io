@@ -196,3 +196,26 @@ code & system configurations on the worker machines from the primary
 machines.  Currently installation/upgrade on the worker machines must
 be done manually._
 
+
+---
+
+## Restart all Shippers and Workers on Primary and Remote Machines
+
+The following script will stop and restart all of the shippers &
+workers on the primary and worker machines, in the right order.
+
+```
+sudo python3 /usr/local/submitty/sbin/restart_shipper_and_all_workers.py 
+```
+
+If one of the remote machines is not reachable, its use will be
+disabled on the primary machine.  Once it is rebooted or the network
+is repaired it must be manually re-enabled by editing the appropriate
+field in this configuration file:
+
+```
+/usr/local/submitty/config/autograding_workers.json
+```
+
+Then the script above can be re-run to start remote grading on that
+machine.
