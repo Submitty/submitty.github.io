@@ -8,21 +8,21 @@ order: 6
 _The optional instructions below are suggestions for the system
 administrators of a live Submitty installation._
 
-## <a name="toc">Table of Contents</a>
-* [Customize upload students script](#setcsvfields)
-* [Schedule backups of production server data](#schedule_backups)
-* [Capture cron error messages](#capture_cron)
-* [Configure log rotation](#log_rotation)
-* [Set password policy](#password_policy)
-* [Secure SSH](#secure_ssh)
-* [Block some brute-force ssh connections](#block_brute_force)
-* [Disable PHP Functions](#disable_php_functions)
-* [Allowing Large Student File Upload Submissions](#large_submissions)
-* [Show system message to all users](#system_messages)
-* [Adding Additional Links To The Footer](#footer_links)
+## Table of Contents
+* [Customize upload students script](#customize-upload-students-script)
+* [Schedule backups of production server data](#schedule-backups-of-production-server-data)
+* [Capture cron error messages](#capture-cron-error-messages)
+* [Configure log rotation](#configure-log-rotation)
+* [Set password policy](#set-password-policy)
+* [Secure SSH](#secure-ssh)
+* [Block some brute-force ssh connections](#block-some-brute-force-ssh-connections-by-typing-the-following-at-a-command-prompt)
+* [Disable PHP Functions](#disable-php-functions)
+* [Allowing Large Student File Upload Submissions](#allowing-large-student-file-upload-submissions)
+* [Show system message to all users](#show-system-message-to-all-users)
+* [Adding Additional Links To The Footer](#adding-additional-links-to-the-footer)
 
 
-### <a name="setcsvfields">Customize upload students script</a>
+### Customize upload students script
 
 The system admin or instructor can upload student data from either
 an XLSX or CSV spreadsheet of their student classlist (obtained
@@ -45,10 +45,10 @@ the command is:
 sudo ./bin/setcsvfields 13 12 15 7
 ```
 
-<small>[Back To Table of Contents](#toc)</small>
+<small>[Back To Table of Contents](#table-of-contents)</small>
 
 
-### <a name="schedule_backups">Schedule backups of production server data</a>
+### Schedule backups of production server data
 
 Specifically, the configuration, submission, and results data for all courses:
 
@@ -65,10 +65,10 @@ And the central location of the student VCS (e.g. git version control) repositor
 You may want to back up more of `/var/local/submitty` to save configurations and logs, but be sure to exclude
    `/var/local/submitty/to_be_graded_batch` and `to_be_graded_interactive`.
 
-<small>[Back To Table of Contents](#toc)</small>
+<small>[Back To Table of Contents](#table-of-contents)</small>
 
 
-### <a name="capture_cron">Capture cron error messages</a>
+### Capture cron error messages
 
 The `submitty_daemon` user runs the [sbin/send_email.py](https://github.com/Submitty/Submitty/blob/master/sbin/send_email.py)
 script.  Console output from this script can be emailed to a sysadmin to help ensure that errors can be reported and addressed.
@@ -79,10 +79,10 @@ MAILTO=sysadmins@lists.myuniversity.edu
 * * * * * python3 /usr/local/submitty/sbin/send_email.py
 ```
 
-<small>[Back To Table of Contents](#toc)</small>
+<small>[Back To Table of Contents](#table-of-contents)</small>
 
 
-### <a name="log_rotation">Configure log rotation</a>
+### Configure log rotation
 
 The defaults will work, but you may want to keep records around for
 longer and enable compression so that the logs don’t take up as
@@ -92,10 +92,10 @@ comments in the file will tell you what each setting is for, or see
 [logrotate(8)](http://www.linuxcommand.org/man_pages/logrotate8.html) for more
 details.
 
-<small>[Back To Table of Contents](#toc)</small>
+<small>[Back To Table of Contents](#table-of-contents)</small>
 
 
-### <a name="password_policy">Set password policy</a>
+### Set password policy
 
 It is a good idea to enforce strong passwords and password aging
 Edit `/etc/login.defs` to set default password and account expiration
@@ -138,10 +138,10 @@ if they contain: a single character class, 2 classes, a passphrase,
 __Note: If you would like to allow local machine passwords for pam
 authentication, make sure the `submitty_cgi` user is in the shadow group.__
 
-<small>[Back To Table of Contents](#toc)</small>
+<small>[Back To Table of Contents](#table-of-contents)</small>
 
 
-### <a name="secure_ssh">Secure SSH</a>
+### Secure SSH
 
 __IMPORTANT: This applies to Ubuntu 16.04 only.  Do not do this on Ubuntu 18.04.__
 
@@ -153,10 +153,10 @@ MACs hmac-sha1,umac-64@openssh.com,hmac-ripemd160
 Ciphers aes256-ctr,aes192-ctr,aes128-ctr,arcfour256,arcfour128
 ```
 
-<small>[Back To Table of Contents](#toc)</small>
+<small>[Back To Table of Contents](#table-of-contents)</small>
 
 
-### <a name="block_brute_force">Block some brute-force ssh connections by typing the following at a command prompt:</a>
+### Block some brute-force ssh connections by typing the following at a command prompt:
 
 ```
 sudo bash
@@ -178,10 +178,10 @@ if you normally expect a lot of ssh connections from a given host.
 You may also opt to whitelist addresses or networks that are
 allowed to connect more frequently.
 
-<small>[Back To Table of Contents](#toc)</small>
+<small>[Back To Table of Contents](#table-of-contents)</small>
 
 
-### <a name="disable_php_functions">Disable PHP Functions</a>
+### Disable PHP Functions
 
 To improve the security of the system, it might be useful to disable various unused PHP functions. This can be done by modifying the [disabled_functions](https://secure.php.net/manual/en/ini.core.php#ini.disable-functions) directive. Provided below is the setting used within our Vagrant and live setup:
 
@@ -191,10 +191,10 @@ disable_functions = popen,pclose,proc_open,chmod,php_real_logo_guid,php_egg_logo
 
 However, this should be only applied to the `php.ini` running the web server and not applied to the `cgi/php.ini` which does require some of these functions to function properly.
 
-<small>[Back To Table of Contents](#toc)</small>
+<small>[Back To Table of Contents](#table-of-contents)</small>
 
 
-### <a name="large_submissions">Allowing Large Student File Upload Submissions</a>
+### Allowing Large Student File Upload Submissions
 
 By default, Apache / Ubuntu limits the size of file upload by POST to
 10MB.  To increase this edit:
@@ -247,10 +247,10 @@ memory_limit
 Just be aware that modifying this number can have repercussions when multiple
 students are using the system at once.
 
-<small>[Back To Table of Contents](#toc)</small>
+<small>[Back To Table of Contents](#table-of-contents)</small>
 
 
-### <a name="system_messages">Show system message to all users</a>
+### Show system message to all users
 
 Submitty allows showing a message to all users on all pages. This is useful for advertising
 events that affect all users, such as system maintainence windows where it would be unavailable.
@@ -259,10 +259,10 @@ This message is shown in a yellow bar displayed underneath the header.
 To add or remove this message, edit `/usr/local/submitty/config/submitty.json` and add/remove the
 key/value for `system_message`. If the key exists, but is empty, no message will be shown.
 
-<small>[Back To Table of Contents](#toc)</small>
+<small>[Back To Table of Contents](#table-of-contents)</small>
 
 
-### <a name="footer_links">Adding Additional Links To The Footer</a>
+### Adding Additional Links To The Footer
 
 You may add additional links to be shown in the footer.  i.e. you may link to pages related to your institution or public policy notices.
 Additional links will appear to the right of the copyright notice and credit links to Github and RCOS.
@@ -289,6 +289,6 @@ Additional links will appear to the right of the copyright notice and credit lin
 ```
 5. If any links do not display, they probably have failed validation.  Validation can be particular, so please carefully proofread `footer_links.json` with instructions 1—4.
 
-<small>[Back To Table of Contents](#toc)</small>
+<small>[Back To Table of Contents](#table-of-contents)</small>
 
 
