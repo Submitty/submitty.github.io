@@ -9,7 +9,6 @@ _The optional instructions below are suggestions for the system
 administrators of a live Submitty installation._
 
 ## Table of Contents
-* [Customize upload students script](#customize-upload-students-script)
 * [Schedule backups of production server data](#schedule-backups-of-production-server-data)
 * [Capture cron error messages](#capture-cron-error-messages)
 * [Configure log rotation](#configure-log-rotation)
@@ -20,32 +19,6 @@ administrators of a live Submitty installation._
 * [Allowing Large Student File Upload Submissions](#allowing-large-student-file-upload-submissions)
 * [Show system message to all users](#show-system-message-to-all-users)
 * [Adding Additional Links To The Footer](#adding-additional-links-to-the-footer)
-
-
-### Customize upload students script
-
-The system admin or instructor can upload student data from either
-an XLSX or CSV spreadsheet of their student classlist (obtained
-from the university registrar).
-
-```
-sudo ./bin/setcsvfields W X Y Z
-```
-
-Since the format of this data may vary between universities, this
-command allows customization of what columns from the spreadsheet
-represent students first name (W), last name (X), campus e-mail
-(Y), and registration Section ID (Z).
-
-For example: If the students' first name is column 13, last name
-is column 12, e-mail is column 15, and section ID is column 7, then
-the command is:
-
-```
-sudo ./bin/setcsvfields 13 12 15 7
-```
-
-<small>[Back To Table of Contents](#table-of-contents)</small>
 
 
 ### Schedule backups of production server data
