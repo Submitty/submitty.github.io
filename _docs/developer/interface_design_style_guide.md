@@ -4,7 +4,7 @@ category: Developer
 order: 6
 ---
 
-Preliminary Design Notes
+## Preliminary Design Notes
 
 * *blue buttons*: say "please click me", this is an action you should
    take.  Examples: Click here to form a team.  Click here to submit
@@ -33,3 +33,46 @@ An example is the design for the navigation page
 [Issue #2153](https://github.com/Submitty/Submitty/issues/2153)
 
 ![](https://i.imgur.com/suqhXhi.png)
+
+---
+## Voluntary Product Accessibility Template
+
+Web accessibility in interface design is very important for Submitty.  Please
+familiarize yourself with web accessibility and incorporate these standards
+into your interface design.  [WebAIM](https://webaim.org/) is a thorough and
+comprehensive resource for learning and utilizing web accessibility standards.
+
+Please also read Submitty.org's [page on VPAT](vpat)
+
+### Summary
+
+1. [All interactive controls must be usable by the keyboard](#all-interactive-controls-must-be-usable-by-the-keyboard)
+2. All interactive controls require a textual description
+3. Layout tables versus data tables
+4. All visual elements need to adhere to a minimum contrast ratio.
+5. Examine Your Interface Design with WAVE
+
+### All Interactive Controls Must Be Usable By The Keyboard
+
+Users with motor impairments may not be using a mouse.  Also, there are
+unimpaired users who also prefer the use of keyboard navigation for its
+speed and efficiency.
+
+#### DO
+* All interactive controls can be reached via the `tab` key.
+    * Controls defined should be in a natural order in your code.
+* Control focus is always visible.
+
+#### DO NOT
+* Use the `tab-index` property.
+* Use the `aria-hidden` property.
+* Rely solely on the `onclick` javascript event handler.
+
+
+
+
+
+
+
+
+
