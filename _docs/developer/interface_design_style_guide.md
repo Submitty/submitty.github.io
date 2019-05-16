@@ -48,3 +48,6 @@ and comprehensive resource for learning and utilizing web accessibility
 standards.
 
 Please also read Submitty.org's [page on web accessibility](web_accessibility).
+
+If you have any questions about web accessibility for Submitty, please post
+your question in Submitty's slack channel and be sure to tag `@pbailie`.

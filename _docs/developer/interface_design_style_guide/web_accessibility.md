@@ -22,7 +22,10 @@ Within the Unites States, web accessibility is also compelled by the [Americans 
 Many United States universities have policies requiring web accessibility
 implementation in their web services.
 
-## Summary
+If you have any questions about web accessibility for Submitty, please post
+your question in Submitty's slack channel and be sure to tag `@pbailie`.
+
+## Guidelines
 
 This is not an all-comprehensive list of web accessibility issues, but rather
 a summary of common and important steps to be mindful of.  Following these
@@ -35,18 +38,22 @@ detail on web accessibility.
 1. [Examine your interface design with WAVE](#examine-your-interface-design-with-wave)
 2. [All interactive controls must be usable by the keyboard](#all-interactive-controls-must-be-usable-by-the-keyboard)
 3. [All interactive controls require a textual description](#all-interactive-controls-require-a-textual-description)
-4. Layout tables versus data tables
-5. All visual elements need to adhere to a minimum contrast ratio.
+4. [Layout tables versus data tables](#layout-tables-versus-data-tables)
+5. [All visual elements need to adhere to a minimum contrast ratio](#all-visual-elements-need-to-adhere-to-a-minimum-contrast-ratio)
 
 ### Examine Your Interface Design With WAVE
 
 The Web Accessibility Evaluation (WAVE) tool is a browser plugin that can
 analyze your UI design and point out accessibility problems.
 
-Please correct all errors and warnings given.  WAVE will provide advice on what
+Please correct all errors and warnings shown.  WAVE will provide advice on what
 you can do.  However, the absence of any errors and warnings does not mean your
 UI is properly web accessible.  WAVE is *not* the final analysis of web
 accessibility, but rather it is the first.
+
+There are times when WAVE cannot provide an exact right or wrong judgment.
+At these times, developers need to understand web accessibility principles
+and apply their own judgment.
 
 #### DO
 * Install the [WAVE plugin](https://wave.webaim.org/extension/) for your
@@ -57,8 +64,8 @@ built.
 
 #### DO NOT
 * Automatically assume there are no accessibility problems when no errors or
-warnings are given.  WAVE analysis is the start of good web accessibility
-design, not the end.
+warnings are given.  WAVE analysis is a productive beginning of good web
+accessibility design, not the end.
 
 ### All Interactive Controls Must Be Usable By The Keyboard
 
@@ -73,7 +80,6 @@ speed and efficiency.
 
 #### DO NOT
 * Use the `tab-index` property.
-* Use the `aria-hidden` property on any interactive control.
 * Rely solely on the `onclick` javascript event handler.
 * Reprogram `TAB` without defining a different key that can be used to navigate
 to the next control.
@@ -101,4 +107,28 @@ hyperlinks anchored on a font-awesome icon.
 #### DO NOT
 * Use the `aria-hidden` property on any hyperlink, control, or form element.
     * There are many code examples of attaching `aria-hidden="true"` to
-    font-awesome icon hyperlinks.  These examples are incorrect!
+    font-awesome icon hyperlinks.  This is often incorrect.
+
+### Layout Tables Versus Data Tables
+
+TO DO: SUMMARY
+
+#### DO
+* Provide a proper table caption and header with data tables.
+    * If you do not want to provide a caption for a data table, include an
+    empty `<caption />` tag.
+
+#### DO NOT
+* Provide a header, footer, or caption in layout tables.
+
+### All Visual Elements Need To Adhere To A Minimum Contrast Ratio
+
+TO DO: SUMMARY
+
+#### DO
+* Use WAVE to examine the contrast ratio of visible elements, especially text.
+    * You can also use this [contrast ratio check website](https://webaim.org/resources/contrastchecker/) provided by WebAIM.org.
+* A contrast ratio of at least 4.5:1 is generally a good minimum target in most cases.  Achieving at least 7.1:1 is better.
+
+#### DO NOT
+* Ignore contrast ratio in favor of aesthetic appeal.
