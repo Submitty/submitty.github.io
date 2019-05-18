@@ -57,7 +57,15 @@ operating system.
    brew cask install virtualbox
    brew cask install vagrant
    ```
-
+  
+   **NOTE:** If you run into issues when booting up the VM on your second and subsequent vagrant up, it may be due to the version of VirtualBox you are running. As of 5/18/19, VirtualBox version 6.0.8 may fail after your initial setup.  
+   If you encounter this issue run:
+   ```
+   # make sure you don't have any vbox instances running
+   brew cask uninstall virtualbox
+   brew cask install https://raw.githubusercontent.com/caskroom/homebrew-cask/d7f8219fa51f7c96a17c346acfab547a6af7f956/Casks/virtualbox.rb
+   vagrant up
+   ```
    **Ubuntu/Debian Installation**
 
    **NOTE:** The Ubuntu repository does not contain the latest version of Vagrant or VirtualBox and using
