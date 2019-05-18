@@ -113,11 +113,18 @@ operating system.
    few hours depending on your Internet connection speed.  When this
    command finishes, your VM is ready to use.
 
-   If an error is thrown after running this command, type:
+   If an error is thrown after running this command, you may try uninstalling Virtual Box and all
+   virtual machines by typing the following commands:
+   
+   _(Note: This should only be done if you do not have any other virtual machines.)_
+   
+   To remove Virtual Box type:
+   
    ```
-   sudo apt-get remove --purge virtualbox 
+   sudo apt-get remove --purge virtualbox
    ```
-   This will remove Virtual Box.Then type:
+   To remove all virtual machines and configuration files type:
+   
    ```
    sudo rm ~/"VirtualBox VMs" -Rf
    sudo rm ~/.config/VirtualBox/ -Rf
