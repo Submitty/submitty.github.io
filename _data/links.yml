@@ -77,6 +77,8 @@
       link: git
     - name: System Customization Checklist
       link: system_customization
+    - name: Email Configuration
+      link: email_configuration
     - name: Student Auto Feed
 
 - name: Developer
