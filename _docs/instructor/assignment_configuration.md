@@ -198,8 +198,11 @@ executables.
 
 
 * **field:** ``"testcases"``  
-  **type:** _array of testcase objects_ (defined below)  
+  **type:** _array of testcase objects_ ([defined below](#specification-of-a-testcase))  
   **REQUIRED**
+  
+* **field:** ``"notebook"``  
+  **type:** _array of notebook objects_ ([defined below](#specification-of-a-notebook))  
 
 
 * **field:** ``"assignment_message"``  
@@ -335,6 +338,40 @@ executables.
 * **field:** ``"textboxes"``  
   **type:** _array of textbox objects_  (Described below)  
   **default value:** ``empty``  
+  
+  
+### Specification of a Notebook
+
+
+* **field:** ``"title"``  
+  **type:** _string_  
+
+* **field:** ``"description"``  
+  **type:** _string_  
+
+* **field:** ``"images"``  
+  **type:** _array of image objects_ ([defined below](#specification-of-an-image-object))  
+  
+* **field:** ``"input"``  
+  **type:** _array of input objects_  ([defined below](#specification-of-notebook-input-objects))  
+  
+  
+### Specification of Notebook Input Objects
+
+
+* **field:** ``"type"``  
+  **type:** _string_  
+  **value:** ``"short_answer"``, ``"codebox"``, or ``"multiplechoice"``  
+  **description:** Specifies the type of input to display
+  
+* **field:** ``"label"``  
+  **type:** _string_  
+  **description:** The string to be displayed above the input
+  
+* **field:** ``"filename"``  
+  **type:** _string_  
+  **description:** Specify a filename that the captured input data will be written to
+
 
 
 ### Specification of a Networked Gradeable
@@ -706,19 +743,19 @@ Moves the mouse to the origin (upper left) of the student’s window.
 
 * **field:** ``"image_name"``  
   **type:** _string_   
-  **value:** Name of the image file to be displayed.
+  **value:** Name of the image file to be displayed.  
   **default value:** ``""``
 
 
 * **field:** ``"image_height"``  
   **type:** _int_   
-  **value:** Numeric height in pixels to display the image at.
-  **default value:** ``0`` _(displays at native image height)_
+  **value:** Numeric height in pixels to display the image at.  
+  **default value:** ``0`` _(displays at native image height)_  
 
 
 * **field:** ``"image_width"``  
   **type:** _int_   
-  **value:** Numeric width in pixels to display the image at.
+  **value:** Numeric width in pixels to display the image at.  
   **default value:** ``0`` _(displays at native image width)_
 
 
