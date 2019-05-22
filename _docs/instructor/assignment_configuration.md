@@ -416,7 +416,7 @@ executables.
 
 
 * **field:** ``"images"``  
-  **type:** _array of image objects_ (Described below)  
+  **type:** _array of image objects_   
   **value:** list of the images to be displayed.  
   **default value:** ``empty``
 
