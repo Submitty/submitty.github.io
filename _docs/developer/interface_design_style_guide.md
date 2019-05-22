@@ -43,9 +43,10 @@ visually impaired and must use an assistive screen reader application or device.
 
 Web accessibility in interface design is very important for Submitty.  Please
 familiarize yourself with web accessibility and incorporate these standards into
-your interface design.  [WebAIM.org](https://webaim.org/intro/) is a thorough
-and comprehensive resource for learning and utilizing web accessibility
-standards.
+your interface design.  [The A11Y Project](https://a11yproject.com/) provides
+some very easy to read tips, and [WebAIM.org](https://webaim.org/intro/) is a
+leading, thorough, and comprehensive resource for learning and utilizing web
+accessibility standards.
 
 Please also read Submitty.org's [page on web accessibility](web_accessibility).
 
