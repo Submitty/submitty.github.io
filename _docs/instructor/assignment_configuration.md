@@ -364,7 +364,10 @@ executables.
   **type:** _string_   
   **value:** Name of the image file to be displayed.  
   **default value:** ``""``
-
+  
+* **field:** ``"alt"``  
+  **type:** _string_   
+  **value:** Specify alternate text that describes the image, for use with accessibility screen readers.  
 
 * **field:** ``"image_height"``  
   **type:** _int_   
