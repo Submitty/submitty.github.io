@@ -37,7 +37,7 @@ shipper processes on the primary machine and the worker manager will
 launch 5 worker processes on the primary machine.  To adjust this
 number:
 
-1. As root, edit the `/usr/local/submitty/.setup/autograding_workers.json`
+1. As root, edit the `/usr/local/submitty/config/autograding_workers.json`
    settings and edit the `num_autograding_workers` field as desired:
 
    ```
