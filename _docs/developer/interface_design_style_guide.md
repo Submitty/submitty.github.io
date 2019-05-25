@@ -39,13 +39,16 @@ An example is the design for the navigation page
 Some Submitty users may be physically impaired in such a way that common UI
 design models could inhibit their use of Submitty.  Some users may be incapable
 of using a mouse perhaps due to injury or recent surgery.  Other users may be
-visually impaired and must use an assistive screen reader application or device.
+visually impaired and may require an assistive screen reader application or
+device.  Also users who may not have any physical restrictions can still be
+impeded by temporary environmental circumstances — such as bright sunlight, on a
+gorgeous day, washing out the text of a laptop display.
 
 Web accessibility in interface design is very important for Submitty.  Please
-familiarize yourself with web accessibility and incorporate these standards into
+familiarize yourself with web accessibility and implement these standards into
 your interface design.  [The A11Y Project](https://a11yproject.com/) provides
 some very easy to read tips, and [WebAIM.org](https://webaim.org/intro/) is a
-leading, thorough, and comprehensive resource for learning and utilizing web
+leading, thorough, and comprehensive resource for learning about web
 accessibility standards.
 
 Please also read Submitty.org's [page on web accessibility](web_accessibility).
