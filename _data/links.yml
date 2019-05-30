@@ -75,11 +75,15 @@
     - name: Course Creation
     - name: Setting up Internal Git
       link: git
+    - name: Worker Installation
+      link: worker_installation
     - name: System Customization Checklist
       link: system_customization
     - name: Email Configuration
       link: email_configuration
     - name: Student Auto Feed
+    - name: Course Archiving
+      link: course_archiving
 
 - name: Developer
   children:
