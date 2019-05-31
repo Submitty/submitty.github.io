@@ -97,5 +97,5 @@ The user should only be used for submitty related activities.
 2. Give the untrusted user access to the Xserver
 
    ```
-   xhost + SI:localuser:untrusted00
+   xhost +SI:localuser:untrusted00
    ```
