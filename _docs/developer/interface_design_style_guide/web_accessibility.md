@@ -9,12 +9,14 @@ physical limitations to use and enjoy a website's entire services.  Often,
 web accessibility is associated with disability, but disability does not have to
 be understood to be a strictly chronic state (e.g. blindness).  Accessibility
 also helps people with conditional disabilities, such as those recovering from
-surgery.  And disabilities do not have to be medically related.  Someone
-accessing a website under direct sunlight (which washes out the device's
-display), or maybe someone is using a lab terminal that happens to have a
-malfunctioning mouse also benefit from web accessibility.  And finally, even
-users who have no limitations can also benefit as keyboard navigation can be
-much faster than mouse navigation.
+surgery.
+
+Disabilities do not have to be medically related.  Someone accessing a website
+under direct sunlight (which washes out colors of an LCD display), or maybe
+someone is using a lab terminal that happens to have a malfunctioning mouse,
+also benefit from web accessibility.  And finally, even users who have no
+limitations can also benefit as keyboard navigation can be much faster than
+mouse navigation.
 
 ## What is "VPAT"?
 
@@ -22,30 +24,29 @@ At times, you may come across the phrase "Voluntary Product Accessibility
 Template" or "VPAT".  For the purposes of Submitty development, VPAT refers to
 website accessibility.
 
-In actuality, VPAT is a report of accessibility implementations in information
-and communications technology that is required of any institute receiving United
-States federal grants under [Section 508 of the Rehabilitation Act of 1973](https://en.wikipedia.org/wiki/Section_508_Amendment_to_the_Rehabilitation_Act_of_1973).
+In actuality, a VPAT is a report that explains how an information and/or
+communications technology conforms to accessibility standards under [Section 508 of the Rehabilitation Act of 1973](https://en.wikipedia.org/wiki/Section_508_Amendment_to_the_Rehabilitation_Act_of_1973).
 Within the United States, web accessibility is also compelled by the [Americans with Disabilities Act of 1990](https://en.wikipedia.org/wiki/Americans_with_Disabilities_Act_of_1990).
 
 As such, many United States universities have policies requiring web
-accessibility in their web services.  If you have any questions about web
-accessibility for Submitty, please post your question in Submitty's slack
-channel and be sure to tag `@pbailie`.
+accessibility, which makes this important to Submitty.
 
 ## Beginning Guidelines
-
 This is not a complete list of web accessibility standards, but rather a
-selection of guidelines to help you get started.  Please refer to articles at [WebAIM.org](https://webaim.org/intro/)
-and [The A11y Project](https://a11yproject.com/) for greater detail on web
-accessibility.
+selection of guidelines to help you get started.  Please refer to articles at
+[WebAIM.org](https://webaim.org/intro/) and [The A11y Project](https://a11yproject.com/)
+for greater detail on web accessibility.
 
 1. [Examine your interface design with WAVE](#examine-your-interface-design-with-wave)
 2. [The Most Important Concept](#the-most-important-concept)
-3. [Do not use HTML for styling](#do-not-use-html-for-styling)
+3. [HTML and CSS](#html-and-css)
 4. [All interactive controls must be usable by the keyboard](#all-interactive-controls-must-be-usable-by-the-keyboard)
 5. [All interactive controls require a textual description](#all-interactive-controls-require-a-textual-description)
 6. [Layout tables versus data tables](#layout-tables-versus-data-tables)
 7. [All visual elements need to adhere to a minimum contrast ratio](#all-visual-elements-need-to-adhere-to-a-minimum-contrast-ratio)
+
+If you have any questions on web accessibility, please post them in Submitty's
+slack channel and tag `@pbailie`.
 
 ### Examine Your Interface Design With WAVE
 The [Web Accessibility Evaluation (WAVE) tool](https://wave.webaim.org/extension/)
@@ -91,22 +92,19 @@ hyperlinks anchored on a font-awesome icon.
     do not describe what the link is for.
 * Do not use the `aria-hidden` property on any hyperlink, control, or form
 element.
-    * There are many Internet code examples of attaching `aria-hidden="true"` to
-    font-awesome icon hyperlinks.  These examples are incorrect.
+    * There are many Internet code examples that show `aria-hidden="true"`
+    attached to font-awesome icon hyperlinks.  These examples are incorrect.
 
 ### HTML and CSS
-These notes are important for good web design, in general.
+
 
 #### DO:
 * Do use CSS for styling.
-    * `site/public/css/server.css` is where most developer provided CSS for
-    Submitty resides.
 
 #### DO NOT:
 * Do not use HTML for styling.
     * For Example: *Never* use a header tag just to make text larger.  Header
     tags should be used for outlining.
-* Do not use inline styling.
 
 ### All Interactive Controls Must Be Usable By The Keyboard
 Keyboard users navigate forward through a website with `TAB` and backwards with
