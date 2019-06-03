@@ -121,7 +121,7 @@ Keyboard users navigate forward through a website with `TAB` and backwards with
 * Do not use the `tabindex` property to alter the tab ordering from the natural
 flow.
     * (using `tabindex='0'` to permit an element to receive focus is OK).
-* Do not rely solely on the `onclick` javascript event handler.
+* Do not rely solely on the `onclick()` javascript event handler.
 * Do not reprogram `TAB` without defining a different key that can be used to navigate
 to the next control.
     * Within `site/public/js/server.js` is a function, `enableTabsInTextArea()`,
@@ -141,23 +141,25 @@ table.
 
 #### DO
 * Do provide a proper table caption and header with data tables.
-    * *All* columns must have a header.
+    * *All*  columns must have a header.
     * A `<caption>` tag is always expected, so use `<caption />` when you do not
     want to display a caption.
 
 #### DO NOT
 * Do not provide a header, footer, or caption in layout tables.
-* Do not nest tables within tables (data and layout).
+* For both data and layout tables, there should be no internal nesting of any
+kind.
 
 ### All Visual Elements Need To Adhere To A Minimum Contrast Ratio
-TO DO: SUMMARY
+A minimum amount of contrast should exist between the text and background, known
+as "contrast ratio".
 
 #### DO
 * Do use WAVE to examine the contrast ratio of visible elements, especially
 text.
-    * You can also use this [contrast ratio check website](https://webaim.org/resources/contrastchecker/) provided by WebAIM.org.
-* Do attain a contrast ratio of at least 4.5:1 is generally a good minimum
-target in most cases.  Achieving at least 7.1:1 is better.
+    * You can also use this [contrast ratio check website](https://webaim.org/resources/contrastchecker/) provided by WebAIM.org.<br>
+* Do attain a contrast ratio of at least 4.5:1.  This is an acceptable minimum
+target in most cases.  Achieving a contrast ratio of 7.1:1 would be ideal.
 
 #### DO NOT
-* Ignore contrast ratio in favor of aesthetic appeal.
+* Do not ignore contrast ratio in favor of aesthetic appeal.
