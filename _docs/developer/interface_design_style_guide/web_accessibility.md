@@ -24,7 +24,7 @@ At times, you may come across the phrase "Voluntary Product Accessibility
 Template" or "VPAT".  For the purposes of Submitty development, VPAT refers to
 website accessibility.
 
-In actuality, a VPAT is a report that explains how an information and/or
+In actuality, a VPAT is a report that explains how an information or
 communications technology conforms to accessibility standards under [Section 508 of the Rehabilitation Act of 1973](https://en.wikipedia.org/wiki/Section_508_Amendment_to_the_Rehabilitation_Act_of_1973).
 Within the United States, web accessibility is also compelled by the [Americans with Disabilities Act of 1990](https://en.wikipedia.org/wiki/Americans_with_Disabilities_Act_of_1990).
 
@@ -60,8 +60,7 @@ issues as the UI is being developed rather than fix it after the UI is fully
 built.
 * Do read WAVE's suggestions on how to correct errors and warnings.  This will
 help you learn more about accessibility.
-* Do correct *all* errors (red icons) and *all* warnings (yellow icons) issued
-by WAVE.
+* Do correct *all* errors (red icons) and warnings (yellow icons).
 
 #### DO NOT
 * Do not automatically assume there are no accessibility problems when no errors
@@ -73,8 +72,7 @@ not the end.
     their best judgment.
 
 ### The Most Important Concept
-When the most important concept of web accessibility is summarized to a single
-word, that word is *"context"*.
+The most important word used to summarize web accessibility is *"context"*.
 
 #### DO:
 * Do ensure every interactive element has a clear and concise textual description.
@@ -90,20 +88,19 @@ hyperlinks anchored on a font-awesome icon.
 * Do not describe interactive elements ambiguously.
     * For example, hyperlinks labeled "Go here", "Link", "Click this", etc.
     do not describe what the link is for.
-* Do not use the `aria-hidden` property on any hyperlink, control, or form
-element.
+* Do not include `aria-hidden="true"` on any interactive element.
+`aria-hidden="true"` makes an element invisible to screen readers.
     * There are many Internet code examples that show `aria-hidden="true"`
-    attached to font-awesome icon hyperlinks.  These examples are incorrect.
+    added to font-awesome icon hyperlinks.  These examples are incorrect.
 
 ### HTML and CSS
-
 
 #### DO:
 * Do use CSS for styling.
 
 #### DO NOT:
 * Do not use HTML for styling.
-    * For Example: *Never* use a header tag just to make text larger.  Header
+    * For example, *never* use a header tag just to make text larger.  Header
     tags should be used for outlining.
 
 ### All Interactive Controls Must Be Usable By The Keyboard
@@ -147,6 +144,7 @@ table.
 * Do not provide a header, footer, or caption in layout tables.
 * For both data and layout tables, there should be no internal nesting of any
 kind.
+    * For example, do not nest tables within tables.
 
 ### All Visual Elements Need To Adhere To A Minimum Contrast Ratio
 A minimum amount of contrast should exist between the text and background, known
@@ -157,7 +155,8 @@ as "contrast ratio".
 text.
     * You can also use this [contrast ratio check website](https://webaim.org/resources/contrastchecker/) provided by WebAIM.org.<br>
 * Do attain a contrast ratio of at least 4.5:1.  This is an acceptable minimum
-target in most cases.  Achieving a contrast ratio of 7.1:1 would be ideal.
+target in most cases.  Although achieving a contrast ratio of 7:1 or better is
+ideal.
 
 #### DO NOT
 * Do not ignore contrast ratio in favor of aesthetic appeal.
