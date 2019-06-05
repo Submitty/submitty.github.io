@@ -29,7 +29,7 @@ submissions in that a notebook may contain several different types of inputs or 
   | required | false |
   | type | string |
   | value | Programming language that will be entered into the short answer box and will be used for syntax highlighting. |
-  | Notes | [CodeMirror](https://codemirror.net/) is used to generate codebox inputs.  Therefore when selecting a value for this field you may select one from their [list of languages](https://codemirror.net/mode/index.html). |
+  | notes | [CodeMirror](https://codemirror.net/) is used to generate codebox inputs.  Therefore when selecting a value for this field you may select one from their [list of languages](https://codemirror.net/mode/index.html). |
   
   | Rows |
   | ----- |
@@ -53,7 +53,7 @@ submissions in that a notebook may contain several different types of inputs or 
   | required | true |
   | type | array |
   | value | An array of javascript objects which describe a value and description for each choice. |
-  | notes | Each choice should take the form of ``{"value": "1", "description: "Choice 1"}`` |
+  | notes | Each choice should take the form of ``{"value": "1", "description": "Choice 1"}`` |
   
 ###### Choices Example
 
