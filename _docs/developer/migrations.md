@@ -162,6 +162,7 @@ directory or file structure:
     in the future. Your `down` function may be empty.
 
     Thus, it is important to ensure that the `up` migration can be
-    re-run.  For example, your `up` function should not crash on adding the
-    column if the column already exists.
+    re-run after the corresponding `down` migration is run.  For example, 
+    your `up` function should not crash on adding the column if the column
+    already exists.
 
