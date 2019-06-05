@@ -1,7 +1,7 @@
 ---
 title: Assignment Configuration
-category: Instructor
-order: 5
+category: Assignment Configuration
+order: 1
 ---
 
 

@@ -31,6 +31,11 @@
       link: create_edit_gradeable
     - name: Directory Structure
     - name: Assignment Configuration
+      link: false
+      children:
+        - name: Main
+          link: assignment_configuration
+        - name: Notebook
     - name: Facilitating Submission via GIT
       link: managing_git
     - name: Static Analysis
