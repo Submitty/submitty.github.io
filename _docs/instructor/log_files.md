@@ -1,28 +1,50 @@
 ---
 title: Log Files
-category: Developer
+category: Instructor
 order: 4
 ---
 
+Submitty writes out logs for a variety of things, which can help instructors
+and sysadmins to debug when things go wrong as well as view certain diagnostic
+information. Most of these logs are named with a "<DATE>" which is named
+as YYYYMMDD to allow for sorting of the files by name by date. Logs written to
+`/var/local/submitty/` are owned by a Submitty system user and viewable by any
+instructor (or anyone in the course_builders group). Logs written under a course
+(e.g. under `/var/local/submitty/courses/<SEMESTER>/<COURSE>`) are owned by
+the head instructor and readable by any TAs/instructors in the course with SSH
+access.
+
 ### User Access Logs
 
-These logs record each time a user (successfully) logs in, or logs
+These logs record each time a user (successfully) logs in, logs
 out, or uploads an assignment.
 
 ```
  /var/local/submitty/logs/access/<DATE>.log
 ```
 
-_FIXME: CHECK/DOCUMENT WHO SHOULD HAVE ACCESS TO THESE LOGS...  everyone, or only root?_
+### Site Error Logs
 
+If there is an error while using the website, a detailed error message
+may be added to the site error logs. These logs are stored at:
+```
+/var/local/submitty/logs/site_errors/<DATE>.log
+```
 
+### TA Grading Logs
+
+During the course of grading, actions taken by graders (e.g. opening
+a component, saving a component, etc.) are logged which can be later
+referenced. These logs are stored at:
+```
+/var/local/submitty/logs/ta_grading/<DATE>.log
+```
 
 ### Autograding Queue Logs
 
-Instructors with ssh access have permission and are encouraged to
-examine the logs of all automated grading.  The records for each day
-are stored in files named with the year, month, and day.  For example:
-
+These contain a log of all autograding actions taken by the machine,
+e.g. shipping a job, the worker acting on a job, etc. If something
+does not get autograded as expected, these are good place to start.
 
 ```
 /var/local/submitty/logs/autograding/<DATE>.txt
@@ -45,12 +67,14 @@ student confusion or automated grading problems.  For example:
 cat /var/local/submitty/logs/autograding/*.txt | grep s17 | grep csci1200 | grep hw02 | grep smithj
 ```
 
-
 If there was a fatal error with the process of autograding (hopefully
 rare!), the keyword "ERROR" may appear on the grading line.
 
-
-
+However, in such a case, it may be useful to examine any stack traces
+that were thrown related to the error, which are located in
+```
+/var/local/submitty/autograding/stack_traces/<DATE>.txt
+```
 
 ### Autograding Results Logs
 
@@ -90,27 +114,13 @@ results.json
 grade.txt
 ```
 
-
-
-### TA Grading Logs
-
-If there is an error during TA grading (hopefully rare!), a detailed error message may
-be added to the TA grading logs.  The logs are also stored in files
-named with the year, month, and day.  For example:
-
-```
-/var/local/submitty/logs/site_errors/<DATE>.log
-```
-
-_FIXME: CHECK/DOCUMENT WHO SHOULD HAVE ACCESS TO THESE LOGS...  everyone, or only root?_
-
-
-
-
-### Grading Configuration Logs
+### Gradeable Configuration Logs
 
 If there was an error when building the configuration for the
 automated grading for a specific gradeable you can inspect the cmake
-and make log files.
-
-_FIXME: add the location of these logfiles, and write FAQ / debugging tips_
+and make log files. These files can be found at:
+```
+/var/local/submitty/courses/<SEMESTER>/<COURSE>/build/<GRADEABLE_ID>/
+    log_cmake_output.txt
+    log_make_output.txt
+```

@@ -12,8 +12,8 @@ there are the gradeables, users, grades, etc. that are specific only to that cou
 
 The schema for these databases are contained within the Submitty repo under site/data:  
 
-* [master DB](https://github.com/Submitty/Submitty/blob/master/site/data/submitty_db.sql)  
-* [course DB](https://github.com/Submitty/Submitty/blob/master/site/data/course_tables.sql)  
+* [master DB](https://github.com/Submitty/Submitty/blob/master/migration/migrator/data/submitty_db.sql)  
+* [course DB](https://github.com/Submitty/Submitty/blob/master/migration/migrator/data/course_tables.sql)  
 
 As we use the master DB to contain all users in the system, we use this as the central
 place to run most inserts/updates of User data, using triggers to sync that data to all

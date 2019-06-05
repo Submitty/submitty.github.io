@@ -133,7 +133,7 @@ configuration directory:
 #### Third Phase: Validation
 
 1. Copy specific files as needed from the student's submission
-   languages) to the ```tmp_work``` subdirectory.
+   languages to the ```tmp_work``` subdirectory.
    Note: These files are specified with the ```submission_to_validation``` variable
    in ```config.json```.
 
@@ -154,7 +154,7 @@ configuration directory:
 
 7. Write the ```results.json``` and ```grade.txt``` files.
 
-8. Copy files as needed form the ```tmp_work``` directory for archive
+8. Copy files as needed from the ```tmp_work``` directory for archive
    to the details subfolder of the student's results directory for
    this assignment and submission version.
    Note:  The copied files can be controlled with the
@@ -198,8 +198,11 @@ executables.
 
 
 * **field:** ``"testcases"``  
-  **type:** _array of testcase objects_ (defined below)  
+  **type:** _array of testcase objects_ ([defined below](#specification-of-a-testcase))  
   **REQUIRED**
+  
+* **field:** ``"notebook"``  
+  **type:** _array of notebook objects_ ([defined below](#specification-of-a-notebook))  
 
 
 * **field:** ``"assignment_message"``  
@@ -246,7 +249,7 @@ executables.
   **type:** _array of strings_  
 
   The instructor can also override / customize the default
-  restrictions on use of system call within the student code by
+  restrictions on use of system calls within the student code by
   whitelisting additional categories of system calls:
   [grading/system_call_categories.cpp][grading/system_call_categories.cpp]
   [grading/seccomp_functions.cpp][grading/seccomp_functions.cpp]
@@ -290,7 +293,7 @@ executables.
 
 * **field:** ``"extra_credit"``  
   **type:** _boolean_  
-  **default value:** false
+  **default value:** ``false``
 
 
 * **field:** ``"filename"``  
@@ -302,7 +305,7 @@ executables.
   **type:** _string_ or _array of strings_  
   **REQUIRED** for ``"compilation"`` testcases
 
-  _FIXME:  Should we rename/collapse this field to to filename??_
+  _FIXME:  Should we rename/collapse this field to filename??_
 
 
 * **field:** ``"command"``  
@@ -330,15 +333,97 @@ executables.
 
 * **field:** ``"actions"``   
   **type:** _array of action strings_ (described below)   
-  **default value:** empty.
+  **default value:** ``empty``
 
 * **field:** ``"textboxes"``  
   **type:** _array of textbox objects_  (Described below)  
   **default value:** ``empty``  
+  
+  
+### Specification of a Notebook
+
+
+* **field:** ``"title"``  
+  **type:** _string_  
+  **value:** Title of the item (ex. Question 1)  
+
+* **field:** ``"description"``  
+  **type:** _string_  
+
+* **field:** ``"images"``  
+  **type:** _array of image objects_  
+  
+* **field:** ``"input"``  
+  **type:** _array of input objects_   
+  
+  
+### Specification of an Image Object
+
+
+* **field:** ``"image_name"``  
+  **type:** _string_   
+  **value:** Name of the image file to be displayed.  
+  **default value:** ``""``
+  
+* **field:** ``"alt"``  
+  **type:** _string_   
+  **value:** Specify alternate text that describes the image, for use with accessibility screen readers.  
+
+* **field:** ``"image_height"``  
+  **type:** _int_   
+  **value:** Numeric height in pixels to display the image at.  
+  **default value:** ``0`` _(displays at native image height)_  
+
+
+* **field:** ``"image_width"``  
+  **type:** _int_   
+  **value:** Numeric width in pixels to display the image at.  
+  **default value:** ``0`` _(displays at native image width)_
+
+  
+### Specification of Notebook Input Objects
+
+
+* **field:** ``"type"``  
+  **type:** _string_  
+  **value:** ``"short_answer"``, ``"codebox"``, or ``"multiplechoice"``  
+  **description:** Specifies the type of input to display
+  
+  
+### Specification of a Short Answer box (short_answer)
+
+
+* **field:** ``"label"``  
+  **type:** _string_   
+  **value:** String description of what to write in the short answer box.  
+  **default value:** ``""``
+  
+  
+* **field:** ``"starter_value_string"``  
+  **type:** _string_   
+  **value:** The text to be prepopulated into the input box  
+
+
+* **field:** ``"rows"``  
+  **type:** _int_   
+  **value:** Numeric height of the textbox in rows.  
+  **default value:** ``1``
+
+
+* **field:** ``"filename"``  
+  **type:** _string_  
+  **value:** Specify a filename that the captured input data will be written to
+
+
+* **field:** ``"images"``  
+  **type:** _array of image objects_   
+  **value:** list of the images to be displayed.  
+  **default value:** ``empty``
+
 
 
 ### Specification of a Networked Gradeable
-* **field** ``use_router``  
+* **field** ``"use_router"``  
   **type:** _boolean_  
   **default value** ``true``  
   **USE:** Used to determine whether a router will be injected into the network.  
@@ -407,7 +492,7 @@ system, as well as to add rules in regards to message delay and loss. A router
 must be hand specified by the instructor per testcase. See Submitty Tutorial 16
 for an example router.
 
-2. It can be important to ensure your container's start in the correct order.
+2. It can be important to ensure your containers start in the correct order.
 In the example above, a sleep is used on the client to ensure that the server
 starts before it.
 
@@ -440,7 +525,7 @@ It is possible to communicate with an assignment running in docker via standard 
 ```
 
 Dispatcher actions are specified at the testcase level and are delivered
-sequentially to student containers.  There are two types of action, ``stdin`` and ``delay``. Delays specify a
+sequentially to student containers.  There are two types of actions, ``stdin`` and ``delay``. Delays specify a
 floating point number of seconds delay before the next action is
 processed. Standard Input Actions deliver a string to any containers
 whose names are specified in the "containers" array. Please note that
@@ -451,65 +536,188 @@ stdin.
 
 It is possible to provide keyboard and mouse input to running student graphics applications.
 
-#### Types of Graphics Application Actions
-* **Action:** ``"Delay"``   
-  **Command:** "delay (number of seconds)"   
-  **Description:** Delays a number of seconds before the next action is taken. Useful if the results of the previous action may take some time to render.
-  **_NOTE:_** _It is recommended that the first action be a delay of some sort to provide additional time for window initialization._
+#### Delay
+Delays a number of seconds before the next action is taken. Useful if the results of the previous action may take some time to render.  
 
-
-* **Action:** ``"Screenshot"``   
-  **Command:** "screenshot"      
-  **Description:** Takes a screenshot of the display. Screenshots are stored as .png files, are labeled sequentially per test case (e.g. 0.png), and should be treated as such. Internally, files are prepended with the number of the test case (e.g. test01_0.png), but this title should not be used for validation.   
-  **Validation:**  Per screenshot, include a variation of the following in your config.json    
+**Fields:**
+*  **action:** ``"delay"``   
+*  **seconds:** An integer or floating point number greater than 0.
 
 ```
-{   
-  "actual_file": "0.png",   
-  "description": "This description will be shown to the student",    
-  "method": "fileExists",    
-  "show_actual": "always",   
-  "show_message": "always"   
-}  
+{
+  "action" : "delay",
+  "seconds" : 1
+}
 ```
 
-* **Action:** ``"Type"``   
-  **Command:** "type 'sequence to type' (optional number of repetitions) (optional delay between repetitions)"      
-  **Description:** Types a sequence one or more times with a delay between each repetition. By default, the sequence is typed once with a .1 second delay. Buttons within the sequence are pressed sequentially without delay.   
-  **Example:** The command “type 'asdf' 2 3” types the characters asdf, pauses for three seconds, and then types them a second time.
+#### Screenshot
+Takes a screenshot of the display. Screenshots are stored as .png files. By default, screenshots
+are labeled sequentially per test case (e.g. screenshot_0.png), but they may be given custom
+names using the ```name``` field.  
+
+**Fields:**
+* **action:** ```screenshot```   
+* **name:** *(optional)* A unique name for the image. **NOTE: Do not include file extensions**  
+
+```
+{
+  "action" : "screenshot",
+  "name" : "custom_screenshot_name"
+}
+```
+
+#### GIF
+Creates an animated gif of the display. By default, gifs
+are labeled sequentially per test case (e.g. gif_0.gif), but they may be given custom
+names using the ```name``` field.  
+
+**Fields:**  
+* **action:** ```gif```   
+* **seconds:**  The duration of the gif in seconds. An integer or floating point number greater than 0.
+* **frames_per_second:**  *(optional)* The integer number of frames to be captured per second. Defaults to 10. Max value is 30.
+* **preserve_individual_frames:** *(optional)* Boolean. If true, all individual frames are archived as png files. Defaults to false.
+* **name:** *(optional)* A unique name for the gif. **NOTE: Do not include file extensions**  
+
+```
+{
+  "action" : "gif",
+  "seconds" : 5,
+  "frames_per_second" : 15,
+  "preserve_individual_frames" : false,
+  "name" : "custom_gif_name"
+}
+```
+
+#### Type  
+Types a sequence of keys one or more times with a delay between each repetition.
+By default, the sequence is typed once with a .1 second delay. Keys within
+the sequence are pressed sequentially without delay.
+
+**Fields:**
+* **action:** ```type```
+* **string:** The string to be typed. Note that each character is entered one after the other. To press all keys together, see the ```key``` command.
+* **delay_in_seconds:** *(optional)* An integer or floating point number greater than 0. Specifies the delay between repetitions.
+* **presses:** *(optional)* An integer greater than zero. Specifies the number of repetitions.
+
+```
+{
+  "action" : "type",
+  "delay_in_seconds" : 1,
+  "presses" : 5
+}
+```
+
+#### Key  
+Presses one or more keys. This action may be done over delayed repetitions.  
+
+**Fields:**
+* **action:** ```key```
+* **key_combination:**  The key combination to be pressed. Keys can be chained together using the character ```+``` (e.g. ```a+b``` presses  ```a``` and ```b``` at the same time). For a list of keys, see the ```xdotool``` key list.  To press keys one after the other, see the ```type``` command.
+* **delay_in_seconds:** *(optional)* An integer or floating point number greater than 0. Specifies the delay between repetitions.
+* **presses:** *(optional)* An integer greater than zero. Specifies the number of repetitions.
+
+```
+{
+  "action" : "type",
+  "delay_in_seconds" : 1,
+  "presses" : 5
+}
+```
 
 
-* **Action:** ``"Click and Drag"``   
-  * **Click and Drag (standard)**   
-    * **Command:** "click and drag (optional mouse_button) (optional start_x) (optional start_y) end_x end_y"   
-    * **Description:** The standard version of click and drag starts either at the mouse’s current position or at a position specified by the user. If a mouse button has been specified, that button is pressed down at that position, otherwise, the left mouse button is pressed. The mouse is then moved to coordinates specified by the end position, and the held button is released.   
-  * **Click and Drag Delta**   
-    * **Command:** "click and drag delta <optional mouse_button> end_x end_y"   
-    * **Description:** The delta version of click and drag starts at the current mouse position, clicks the desired mouse button (or left if one isn’t provided) and then moves a specified number of pixels  before releasing. The function is wrapping, so it will repeatedly click and drag until the desired distance has been moved.   
-  * **_NOTE:_**
-    * _The mouse is clamped within the student’s window with a one pixel inner boundary to avoid accidental resizing._
-    * _The valid mouse buttons are "left", "right", and "middle"_.
+#### Click and Drag  
+The standard version of click and drag starts either at the mouse’s current position or at a position specified by the user. If a mouse button has been specified, that button is pressed down at that position, otherwise, the left mouse button is pressed. The mouse is then moved to coordinates specified by the end position, and the held button is released.  
 
+**Fields:**
+* **action:** ```click and drag```
+* **start_x:** *(optional)* An integer starting x position for the mouse in window coordinates. Values will be clamped to within the window's size. Defaults to zero.
+* **start_y:** *(optional)* An integer starting y position for the mouse in window coordinates. Values will be clamped to within the window's size. Defaults to zero.
+* **end_x:** *(optional)* An integer ending x position for the mouse in window coordinates. Values will be clamped to within the window's size. Defaults to zero.
+* **end_y:** *(optional)* An integer ending y position for the mouse in window coordinates. Values will be clamped to within the window's size. Defaults to zero.
+* **mouse_button:** *(optional)* ```left```, ```middle```, or ```right```. The mouse button to be clicked. Defaults to ```left```.
 
-* **Action:** ``"Click"``   
-  **Command:** "click (optional ‘left’ ‘right’ or ‘middle’)"      
-  **Description:** Processes a mousedown and a mouseup of the specified mouse button. Defaults to left click.   
+```
+{
+  "action" : "click and drag",
+  "start_x" : 0,
+  "start_y" : 0,
+  "end_x" : 100,
+  "end_y" : 100,
+  "mouse_button" : "left"
+}
+```
 
+#### Click and Drag Delta
+The delta version of click and drag starts at the current mouse position, clicks the desired mouse button (or left if one isn’t provided) and then moves a specified number of pixels  before releasing. The mouse may not leave the window bounds. However, the function is wrapping, so it will repeatedly click and drag until the desired distance has been moved.   
 
-* **Action:** ``"Mouse Move"``   
-  **Command:** "mouse move (x_position) (y_position)"      
-  **Description:** Moves the mouse from its current position to the x and y provided, clamped to the screen. Note that the x and y position provided are specified in relative (window) coordinates.   
+**Fields:**
+* **action:** ```click and drag```
+* **end_x:** *(optional)* The amount of x distance over which the click and drag will move. Defaults to zero.
+* **end_y:** *(optional)* The amount of y distance over which the click and drag will move. Defaults to zero.
+* **mouse_button:** *(optional)* ```left```, ```middle```, or ```right```. The mouse button to be clicked. Defaults to ```left```.
 
+```
+{
+  "action" : "click and drag delta",
+  "end_x" : 1000,
+  "end_y" : 1000,
+  "mouse_button" : "left"
+}
+```
 
-* **Action:** ``"Center Mouse"``   
-  **Command:** "center"      
-  **Description:** Moves the mouse to the center of the student’s window.   
+####  Click  
+Processes a mousedown and a mouseup of the specified mouse button. Defaults to left click.  
 
+**Fields:**
+* **action:** ```click```
+* **mouse_button:** *(optional)* ```left```, ```middle```, or ```right```. The mouse button to be clicked. Defaults to ```left```.
 
-* **Action:** ``"Move Mouse to Origin"``   
-  **Command:** "origin"      
-  **Description:** Moves the mouse to the origin of the student’s window.
+```
+{
+  "action" : "click",
+  "mouse_button" : "left"
+}
+```
 
+#### Mouse Move   
+Moves the mouse from its current position to the x and y provided, clamped to the screen. Values are provided in screen coordinates.  
+
+**Fields:**
+* **action:** ```mouse move``` or ```move mouse``` or ```move```
+* **end_x:** *(optional)* An integer ending x position for the mouse in window coordinates. Values will be clamped to within the window's size. Defaults to zero.
+* **end_y:** *(optional)* An integer ending y position for the mouse in window coordinates.Values will be clamped to within the window's size. Defaults to zero.
+
+```
+{
+  "action" : "move",
+  "end_x" : 100,
+  "end_y" : 100
+}
+```
+
+#### Center Mouse   
+Moves the mouse to the center of the student’s window.     
+
+**Fields:**
+* **action:** ```center```
+
+```
+{
+  "action" : "center"
+}
+```
+
+#### Move Mouse to Origin
+Moves the mouse to the origin (upper left) of the student’s window.  
+
+**Fields:**
+* **action:** ```origin```
+
+```
+{
+  "action" : "origin"
+}
+```
 
 ### Automatically Generated Submission Limit Test Case
 
@@ -552,51 +760,7 @@ It is possible to provide keyboard and mouse input to running student graphics a
    ```
 
 
-### Specification of a Textbox
 
-
-* **field:** ``"label"``  
-  **type:** _string_   
-  **value:** String description of what to write in the textbox.
-  **default value:** ``""``
-
-
-* **field:** ``"rows"``  
-  **type:** _int_   
-  **value:** Numeric height of the textbox in rows.
-  **default value:** ``1``
-
-
-* **field:** ``"filename"``  
-  **type:** _string_   
-  **value:** String name of the text file generated by submission of the textbox. (ex. input1.txt)
-  **default value:** ``""``
-
-
-* **field:** ``"images"``  
-  **type:** _array of image objects_ (Described below)  
-  **value:** list of the images to be displayed.
-  **default value:** ``empty``
-
-#### Specification of an Image Object
-
-
-* **field:** ``"image_name"``  
-  **type:** _string_   
-  **value:** Name of the image file to be displayed.
-  **default value:** ``""``
-
-
-* **field:** ``"image_height"``  
-  **type:** _int_   
-  **value:** Numeric height in pixels to display the image at.
-  **default value:** ``0`` _(displays at native image height)_
-
-
-* **field:** ``"image_width"``  
-  **type:** _int_   
-  **value:** Numeric width in pixels to display the image at.
-  **default value:** ``0`` _(displays at native image width)_
 
 
 ### Specification of a Validation Object
@@ -676,7 +840,7 @@ It is possible to provide keyboard and mouse input to running student graphics a
 
 ### Validation Methods
 
-  * These methods only require only an ``"actual_file"``:
+  * These methods only require an ``"actual_file"``:
 
      * ``"warnIfNotEmpty"`` - Will throw a warning, but not cause the test to
        fail if the specified file is not empty
@@ -737,7 +901,7 @@ It is possible to provide keyboard and mouse input to running student graphics a
 
         * **field:** ``"comparison"``  
           **type:** _string_  
-          **value:** ``"ge"``, ``"lt"``, FIXME FINISH LIST  
+          **value:** ``"gt"``, ``"ge"``, ``"lt"``, ``"le"``, FIXME FINISH LIST  
           **REQUIRED**  
 
 

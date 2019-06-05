@@ -9,11 +9,11 @@ order: 1
 The Submitty Homework Submission Server is currently supported on
 the following platforms:
 
-| Distro | Version | Supported           | Release Page |
-|--------|---------|---------------------|--------------|
-| Ubuntu | 16.04   | Yes (Until 05/2019) | [Release Page](http://releases.ubuntu.com/xenial/)
-| Ubuntu | 18.04   | Yes                 | [Release Page](http://releases.ubuntu.com/bionic/)
-| Debian | 8       | Yes (Until 05/2019) | [Release Page](https://www.debian.org/releases/jessie/)
+| Distro | Version | Supported            | Release Page |
+|--------|---------|----------------------|--------------|
+| Ubuntu | 18.04   | Yes                  | [Release Page](http://releases.ubuntu.com/bionic/)
+| Ubuntu | 16.04   | No  (Since 05/2019)  | [Release Page](http://releases.ubuntu.com/xenial/)
+| Debian | 8       | No  (Since 05/2019)  | [Release Page](https://www.debian.org/releases/jessie/)
 
 We suggest you using the amd64 releases for a release when
 installing it. Support for other architectures should mostly

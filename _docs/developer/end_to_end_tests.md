@@ -24,11 +24,30 @@ a different browser stack by modifying the `setUpClass` method in
 You'll need to install the
 [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/getting-started)
 to allow selenium access to utilize Chrome. You can either download the binary
-from the above site or use your OS' package manager, e.g. for Mac, use
-homebrew:
+from the above site or use your OS' package manager. For convinence, we list
+some options for installation on Mac, Linux, and Windows below. For any step
+that lists `<CHROMEDRIVER_VERSION>`, you will have to determine the appropriate
+version using the [Version Selection](https://sites.google.com/a/chromium.org/chromedriver/downloads/version-selection)
+page from the above link.
+
+For Mac, using homebrew:
 ```
 brew cask install chromedriver
 ```
+
+For Linux, use:
+```
+wget https://chromedriver.storage.googleapis.com/<CHROMEDRIVER_VERSION>/chromedriver_linux64.zip && \
+unzip chromedriver_linux64.zip && \
+sudo mv chromedriver /usr/local/bin/chromedriver && \
+sudo chown root:root /usr/local/bin/chromedriver && \
+sudo chmod +x /usr/local/bin/chromedriver
+```
+
+For Windows, download the appropriate version and place it on your 
+[PATH](https://helpdeskgeek.com/windows-10/add-windows-path-environment-variable/).
+
+_NOTE_: You will need to make sure to keep chromedriver up-to-date as Chrome auto-updates itself.
 
 ---
 

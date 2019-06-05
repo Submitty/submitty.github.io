@@ -56,6 +56,8 @@ Under PhpStorm settings, open `Languages & Frameworks` > `PHP` > `Debug`. In the
 
 Press the `Validate` button to make sure the setup works.
 
+At this point you may see an error message that says ```Specified URL is not reachable, caused by: 'Request failed with status code 404'```.  You may safely disregard this message.
+
 Follow instructions 2 - 4 on [this website](https://confluence.jetbrains.com/display/PhpStorm/Zero-configuration+Web+Application+Debugging+with+Xdebug+and+PhpStorm) to prepare PhpStorm for debugging and add bookmarklets to enable xdebug from your browser.
 
 ## Connecting to the PostgreSQL database

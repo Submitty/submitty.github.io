@@ -42,7 +42,7 @@ existing one is edited, a job is placed in the queue.
 *  To start the daemon:
 
    ```
-   sudo systemctl stop submitty_daemon_jobs_handler
+   sudo systemctl start submitty_daemon_jobs_handler
    ```
 
 

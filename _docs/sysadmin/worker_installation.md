@@ -1,7 +1,6 @@
 ---
 title: Worker Installation
 category: System Administrator
-order: 2
 ---
 
 A Submitty instance is capable of leveraging additional machines to distribute
@@ -87,3 +86,16 @@ The user should only be used for submitty related activities.
     required_capabilities : 'CAPABILITY'
   ```
   to ship your jobs to a worker with the capability CAPABILITY.
+
+
+# Additional Instructions for Graphics Application Workers
+
+1. Make sure the display will not go to sleep
+
+   __FIXME: add instructions__
+
+2. Give the untrusted user access to the Xserver
+
+   ```
+   xhost +SI:localuser:untrusted00
+   ```

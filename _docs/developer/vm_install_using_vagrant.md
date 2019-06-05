@@ -13,32 +13,30 @@ Unix/Linux).  The installation process will create a new Virtual
 Machine (VM) on your computer and the VM will use the Ubuntu GNU/Linux
 operating system.
 
-
 1. To develop with a Virtual Machine (VM), your computer should have
    at least 8GB of RAM and a 64-bit host OS.  AMD-V or Intel VT-x are
    also required (most computers have these).  Submitty is RAM and I/O
    intensive, so more RAM and a fast disk are better.
 
-
 2. Enable [Virtualization](http://tinyurl.com/enable-virtualization)
-   
+
    **Mac Instructions**  
    Virtualization is generally enabled by default
-   
+
    **Windows 10 Instructions**  
    Open Settings, navigate to _Advanced Startup_ and select _Restart Now_.
    ![Relevant Screenshot](https://github.com/jaredsexton/submitty.github.io/blob/master/images/Virtualization_Instructions_1.png?raw=true)
-   
+
    Navigate to _Troubleshoot -> Advanced Options -> UEFI Firmware Settings_ and restart as suggested.
-   
+
    Navigate to _BIOS Settings_ from your PC's startup menu, locate _Virtualization Technology_ and enable it.
-   
+
    **Ubuntu Instructions**  
    Enter BIOS (generally by pressing Del or F12 while booting) and navigate the _BIOS Settings_,
    locate _Virtualization_, and enable it.
-   
+
    Be sure to choose _Hardware Virtualization_ in the _System -> Acceleration_ settings of the virtual machine you are using.
-   
+
    **NOTE** 
    If using secure boot, vagrant may fail to work with VirtualBox. You will then either need to disable secure boot from
    the boot menu/BIOS or follow [these steps](https://era86.github.io/2018/01/24/vagrant-virtualbox-secureboot-in-ubuntu-1604.html)
@@ -61,7 +59,7 @@ operating system.
    ```
 
    **Ubuntu/Debian Installation**
-   
+
    **NOTE:** The Ubuntu repository does not contain the latest version of Vagrant or VirtualBox and using
    them may not work nor are they supported. We recommend that you either download the necessary binaries
    from their respective steps or follow the steps outlined below for each:
@@ -105,6 +103,8 @@ operating system.
 6. Navigate into the Submitty repository on your computer in a
    shell/terminal and type:
 
+   _Windows should run CMD or powershell on administrator mode_
+
    ```
    vagrant up
    ```
@@ -112,12 +112,19 @@ operating system.
    Vagrant will build your VM.  This will take maybe 30 minutes to a
    few hours depending on your Internet connection speed.  When this
    command finishes, your VM is ready to use.
+
+   If an error is thrown after running this command, you may try uninstalling Virtual Box and all
+   virtual machines by typing the following commands:
    
-   If an error is thrown after running this command, type:
+   _(Note: This should only be done if you do not have any other virtual machines.)_
+   
+   To remove Virtual Box type:
+   
    ```
-   sudo apt-get remove --purge virtualbox 
+   sudo apt-get remove --purge virtualbox
    ```
-   This will remove Virtual Box.Then type:
+   To remove all virtual machines and configuration files type:
+   
    ```
    sudo rm ~/"VirtualBox VMs" -Rf
    sudo rm ~/.config/VirtualBox/ -Rf
@@ -188,7 +195,7 @@ operating system.
 
      If you have the Ubuntu 16.04 VM, go to:
      <http://192.168.56.101/index.php>  
-     
+
      If you have the Debian 8 VM, go to:
      <http://192.168.56.201/index.php>
 
@@ -204,37 +211,32 @@ operating system.
      For the "sample" course:  
      <https://github.com/Submitty/Submitty/tree/master/more_autograding_examples>
 
-
 10. When the VM is "up", you can connect from your host computer to the
-   virtual machine via ssh.  Windows users will need to install SSH
-   software (e.g., 
-   [Cygwin](https://www.cygwin.com/) or 
-   [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)).  
-   From a terminal in the
-   repository directory type:
+    virtual machine via ssh.  Windows users will need to install SSH
+    software (e.g.,
+    [Cygwin](https://www.cygwin.com/) or
+    [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) ).
+    From a terminal in the repository directory type:
 
-   ```
-   vagrant ssh
-   ```
+    ```sh
+    vagrant ssh
+    ```
 
-   You will connect to the VM as the `root` user.
-
+    You will connect to the VM as the `root` user.
 
 11. The following users exist on the VM:
 
-   | user | password |
-   |------|----------|
-   | vagrant | vagrant |
-   | root | vagrant |
-   | submitty_cgi | submitty_cgi |
-   | submitty_php | submitty_php |
-   | submitty_daemon | submitty_daemon |
-   | instructor | instructor |
-   | ta | ta |
-   | developer | developer |
-   | postgres | postgres |
-   | student | student |
-
+    | user | password | role |
+    |------|----------|-------|
+    | vagrant | vagrant | OS user |
+    | root | vagrant | OS user |
+    | submitty_cgi | submitty_cgi | Submitty process |
+    | submitty_php | submitty_php | Submitty process |
+    | submitty_daemon | submitty_daemon | Submitty process |
+    | postgres | postgres | database process |
+    | instructor | instructor | Submitty user |
+    | ta | ta | Submitty user |
+    | student | student | Submitty user |
 
 12. The VM has the following four courses by default and they are all part of the current semester:
 
@@ -246,5 +248,3 @@ operating system.
     *Note: The current semester is calculated by either using an `s` if in the month is < 7 else use `f`
     and then take the last two digits of the current year. So April 2017 would be `s17` while September
     2017 would be `f17`.*
-
-

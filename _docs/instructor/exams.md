@@ -88,11 +88,11 @@ files - most PDFs generated are between 25 and 35MB for 140 pages.
 
 Make sure you select 'Photo' from the Scan settings dropown in the top left corner:
 
-![](/images/linux_scansnap_photo.png)
+![](/images/linux_scansnap_photo.png){:width="300px"}
 
 And in the preferences menu, under Quality, select 150 dpi and adjust the brightness and contrast:
 
-![](/images/linux_scansnap_150dpi.png)
+![](/images/linux_scansnap_150dpi.png){:width="500px"}
 
 Check the quality and brightness/contrast of your initial scan.  The
 background of white paper should scan light grey to ensure you pick up
@@ -107,92 +107,133 @@ generated in one night, with about 650MB of outputted files). This
 balloons pretty quickly and required clearing that out every few times
 a PDF was exported.
 
-### Creating PDF assignments
 
-#### Config:
+### Creating the New Gradeable for Bulk PDF Upload
 
-For exams/quizzes/assignments where the instructor will bulk upload large multiple exam/assignment PDFS, use
-```
-/usr/local/submitty/more_autograding_examples/pdf_exam/config
-```
-This makes sure the file size is adequate. Otherwise, using 
-```
-/usr/local/submitty/more_autograding_examples/upload_only/config
-```
-will suffice.
+Click "New Gradeable" from the left sidebar and fill out the form.  Be
+sure to select the Gradeable Type: "TA/Instructor will (bulk) upload
+scanned .pdf for online manual grading".
 
-#### View/submit/download/version settings:
+![](/images/bulkupload_newgradeable.png){:width="600px"}
 
-* _"Should students be able to view submissions?"_ controls whether students can see the gradeable. If this is for an exam/quiz/any instructor uploaded PDF, the recommended process is selecting __No__ to start with then changing to __Yes__ once grades have been released. 
+This gradeable is associated by default with the provided `pdf_exam`
+configuration, which will allow you to upload batches of exams with
+file size totaling up to 100 mb.
 
-* _"Should students be able to make submissions?"_ controls whether students can make submissions. If this is for an exam/quiz/any instructor uploaded PDF, select __No__. 
+![](/images/bulkupload_autogradingconfig.png){:width="800px"}
 
-* _"Should students be able to download files?"_ controls whether students can download submission files. If this is for an exam/quiz/any instructor uploaded PDF, select __Yes__ if you want to allow students to see their uploaded exams. 
+_Note: You may need to ask your system admin to increase the
+Ubuntu/Apache/php-fpm default upload limit for the server._
 
-* _"Should students be able to view/download any version or just the active version?"_ controls whether students can view/download any or all versions. If this is for an exam/quiz/any instructor uploaded PDF, select __Active version only__.
+[https://submitty.org/sysadmin/system_customization#allowing-large-student-file-upload-submissions](https://submitty.org/sysadmin/system_customization#allowing-large-student-file-upload-submissions)
 
-In summary,
-
-| Setting        | Student View                           | Student Submit  | Student Download | Student Version     |
-| -------------- | -------------------------------------- | --------------- | ---------------- | ------------------- |
-| Default        | Yes                                    | Yes             | No               | Any version         | 
-| Exam/quiz/etc. | No until grades are released, then Yes | No              | Yes              | Active version only |
-
-#### Pages assigned to components:
-
-For _"Is this a PDF with a page assigned to each component?"_, select __Yes__ if this is a PDF upload where each component has an assigned page.
-
-If yes, the question _"Who will assign pages to components?"_ appears. The two options are either instructor (such as an exam/quiz/any instructor uploaded PDF) or student (any student uploaded PDF).
-
-If the instructor assigns pages, then for each component there is input for the page number the component corresponds to. If it spans multiple pages, input the first page the component appears on.
-
-If the student assigns pages, then on homework submission page students will have input boxes for each component, and those will be saved to a json called `student_pages.json` within their submissions folder.
+By default, the uploaded scanned pdf will be visible to students (and
+downloadable) when the scores from manual grading are released.  You
+can modify this setting from the "Submissions/Autograding" tab.
 
 
-### TA grading
 
-In the TA grading interface, if any pages are assigned to a component, clicking on a component will bring you to the assigned page.
+### Manual Rubric Preparation and Page Correspondence
+
+You will presumably be grading this assignment manually -- by TA or
+instructor.  If the assignment is formatted with problems on
+specific pages, you can assign those pages as you prepare the manual
+rubric.  Then, when the grader clicks to open a specific component of
+the rubric, the students pdf file will be scrolled to that page.  
+
+![](/images/bulkupload_assignedpages.png){:width="800px"}
+
+Note: Alternately, if the student controls the layout of problems to pages
+within the document, you can request that they specify the page
+assignment when they upload the file.
+
+
 
 ### Bulk PDF Upload
 
-On the gradeable submission page, the instructor has three options: Normal Submission, Make Submission for a Student, and Bulk Upload. For uploading bulk PDFs for exams/quizzes/assignments, select __Bulk Upload__.
-
-Input the number of pages for each exam/quiz/assignment.
-
-In the drag and drop box, upload the bulk exam PDF. You may submit more than one PDF at once, but the box's maximum total size is 10Mb.
-
-On submit, the bulk PDF is uploaded to the course's `/uploads/bulk_pdf/gradeable_id` folder and the split PDF items to `/uploads/split_pdf/gradeable_id` folder.
-
-After the page reloads, another section on the page will appear called "Unassigned PDF Uploads".
+On the gradeable submission page, the instructor has three options:
+Normal Submission, Make Submission for a Student, and Bulk Upload. For
+uploading bulk PDFs for exams/quizzes/assignments, select __Bulk
+Upload__.
 
 
-### Split item submission
+The default bulk upload does not expect a QR code on the cover page of
+each exam.  Instead you will specify the length of each students exam
+in number of pages, for example, 10 pages.  We'll expect each bulk
+.pdf you upload to be a multiple of this number.
 
-The "Unassigned PDF Uploads" section contains all items within the `/uploads/split_pdf/gradeable_id` folder.
+![](/images/bulkupload_submission.png){:width="500px"}
 
-PDF preview contains the first page of the pdf. If you want to view the full PDF, click on the popout icon.
-To submit for a student, enter their user ID and press enter or click submit. Autofill for user ID brings up students who do not yet have any submissions for this gradeable.
+In the drag and drop box, upload the bulk exam PDF. You may submit
+more than one PDF at once, but the box's maximum total size is 100Mb
+(see note above about the Ubuntu/Apache/php-fpm limits).
 
-Once submitted, the split PDF item is moved from `/uploads/split_pdf/gradeable_id` to its corresponding location in the `/submissions/gradeable_id/user_id` folder. 
+On submit, the bulk PDF is uploaded to the course's
+`/uploads/bulk_pdf/gradeable_id` folder and the split PDF items to
+`/uploads/split_pdf/gradeable_id` folder.
 
-### Bulk Upload and Split with QR codes
-
-For large bulk uploads or PDF's that need to be split into different sizes, there is an option to use QR codes instead of a fixed page count.
-This can be choosen by selecting 'bulk upload' in the upload section for assignments then checking the 'split with qr codes?' box. 
-
-![](/images/bulkupload_qrsplit.PNG) 
-
-There are optional prefix and suffix text areas can remove parts of the string contained within the QR code. For example if your QR code contained the string `f18_12_student123` and your prefix was `f18_12_` the resulting string would be `student123`.
-
-If you are using a URL in your QR code, the prefix and suffix boxes can remove URL components, for example 
-`https://student123.com/image.png` will result in `student123` if the prefix is `https://` and the suffix is `.com/image.png`
-
-*Note: the prefix substring must exactly match with a substring at the beginning of the QR string and the suffix must match a substring from the end, otherwise they will not be removed from the QR string.*
-
-After processing, the `student_id` text area will be autofilled with the string contained in the QR code along with a pagecount. Invalid user ID's will be highlighted in red.
+After the page reloads, another section on the page will appear called
+"Unassigned PDF Uploads".
 
 
-Check out our work-in-progress instructor tool for preparing
-customized exams with QR codes:
+
+
+### Associating PDFs with Students in your Course
+
+The "Unassigned PDF Uploads" section contains all items within the
+`/uploads/split_pdf/gradeable_id` folder.
+
+PDF preview contains the first page of the pdf. If you want to view
+the full PDF, click on the popout icon.  To submit for a student,
+enter their user ID and press enter or click submit. Autofill for user
+ID brings up students who do not yet have any submissions for this
+gradeable.
+
+Once submitted, the split PDF item is moved from
+`/uploads/split_pdf/gradeable_id` to its corresponding location in the
+`/submissions/gradeable_id/user_id` folder.
+
+
+
+
+### Automatic Association of PDFs using Customized Exams with QR Codes
+
+Alternatively, if you have included a QR code on the coversheet of
+every exam packet, the system can separate or split your large bulk
+.pdf upload on the QR codes, and use the data from the QR code to help
+associate the individual pdfs with students in your class.
+
+![](/images/bulkupload_submission_qr.png){:width="500px"}
+
+The system will decode the QR code to a string, e.g., `smithj`.  We
+expect that string to be the user_id of a student in the course.
+
+If the string contains a prefix and or a suffix in addition to the
+user_id, you should specify those strings.  For example, you may
+choose to use QR codes of the pattern `csci1000_smithj` and then would
+specific `csci1000` as the prefix and leave the suffix blank.
+
+If you are using a URL in your QR code, the prefix and suffix boxes
+can remove URL components, for example
+`https://myuniversity.edu/csci1000/student123/image.png` will result
+in `student123` if the prefix is `https://myuniversity.edu/csci1000/`
+and the suffix is `/image.png`.
+
+*Note: the prefix substring must exactly match with a substring at the
+ beginning of the QR string and the suffix must match a substring from
+ the end, otherwise they will not be removed from the QR string.*
+
+After processing, the `student_id` text area will be autofilled with
+the string contained in the QR code along with a pagecount. Invalid
+user ID's will be highlighted in pink.  Individual pdfs that do not
+match the expected page count will be highlighted in red.
+
+![](/images/bulkupload_labeling.png){:width="600px"}
+
+
+### Preparing PDFs with Custom QR Codes per Student
+
+Check out our instructor tool for preparing customized exams with QR
+codes:
 
 [QR TestMaker](https://github.com/Submitty/InstructorTools/tree/master/QR_TestMaker)

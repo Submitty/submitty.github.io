@@ -60,6 +60,9 @@
       link: student_photos
     - name: Silent Grade Editing
       link: silent_editing
+    - name: Discussion Forum
+      link: forum
+    - name: Premade Assignments
 
 - name: System Administrator
   link: sysadmin
@@ -72,9 +75,15 @@
     - name: Course Creation
     - name: Setting up Internal Git
       link: git
+    - name: Worker Installation
+      link: worker_installation
     - name: System Customization Checklist
       link: system_customization
+    - name: Email Configuration
+      link: email_configuration
     - name: Student Auto Feed
+    - name: Course Archiving
+      link: course_archiving
 
 - name: Developer
   children:
@@ -97,6 +106,7 @@
     - name: Autograding Tests
     - name: PHP Unit Tests
     - name: End to End Tests
+    - name: Updating Dependencies
     - name: Travis CI
     - name: Rainbow Grades Tests
     - name: Configuring Tie In Programs
