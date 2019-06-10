@@ -101,6 +101,8 @@
     - name: Coding Style Guide
     - name: Interface Design
       link: interface_design_style_guide
+      children:
+        - name: Web Accessibility
     - name: Project Ideas
     - name: How to Contribute
     - name: Autograding Tests
