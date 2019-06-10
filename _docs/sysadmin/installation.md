@@ -45,7 +45,7 @@ _Note: These instructions should be run under root/sudo._
 
    Note: During installation, you will be asked several questions by the
    [CONFIGURE_SUBMITTY.py](https://github.com/Submitty/Submitty/blob/master/.setup/CONFIGURE_SUBMITTY.py)
-   script. These questions are:
+   script. Pressing enter will select the default option. These questions are:
    1. Database Host
    2. Submitty Database User/Role
    3. Submitty Database User/Role Password
@@ -74,8 +74,8 @@ _Note: These instructions should be run under root/sudo._
 4. Edit PHP Settings
 
    We recommend for security that you modify your PHP installation and disable certain PHP functions.
-   To do this, edit `/etc/php/7.2/fpm/php.ini`  and find the entry for `disable_functions` and prepend the list of
-   disabled functions with:
+   To do this, edit `/etc/php/7.2/fpm/php.ini`  and find the entry for `disable_functions` and make sure the list of
+   disabled functions contains:
 
    ```
    popen,pclose,proc_open,chmod,php_real_logo_guid,php_egg_logo_guid,php_ini_scanned_files,php_ini_loaded_file,readlink,symlink,link,set_file_buffer,proc_close,proc_terminate,proc_get_status,proc_nice,getmyuid,getmygid,getmyinode,putenv,get_current_user,magic_quotes_runtime,set_magic_quotes_runtime,import_request_variables,ini_alter,stream_socket_client,stream_socket_server,stream_socket_accept,stream_socket_pair,stream_get_transports,stream_wrapper_restore,mb_send_mail,openlog,syslog,closelog,pfsockopen,posix_kill,apache_child_terminate,apache_get_modules,apache_get_version,apache_lookup_uri,apache_reset_timeout,apache_response_headers,virtual,system,phpinfo,exec,shell_exec,passthru,
@@ -94,7 +94,7 @@ _Note: These instructions should be run under root/sudo._
    [.setup/apache/submitty.conf](https://github.com/Submitty/Submitty/blob/master/.setup/apache/submitty.conf)
    which you can just copy to `/etc/apache2/sites-available`. You will
    need to replace all instances of `__your_domain__` with your actual
-   domain (don't include the `https://` part of it) and
+   domain / IP (don't include the `https://` part of it) and
    `/path/to/ssl/certificate/` to the actual path for your SSL certificate.
 
    Note: If you used Let's Encrypt, your certificates will be at
@@ -133,7 +133,15 @@ _Note: These instructions should be run under root/sudo._
    [submitty_http.conf](https://github.com/Submitty/Submitty/blob/master/.setup/apache/submitty_http.conf)
    to run Submitty on just HTTP.  We recommend only using this if you are
    planning on developing for Submitty.  For production, we strongly recommend
-   that you get a certificate and use HTTPS/SSL.
+   that you get a certificate and use HTTPS/SSL. Similarly, enable this with:
+   ```
+   a2ensite submitty_http.conf
+   ``` 
+   and be sure to replace all instances of `__your_domain__` with your actual
+   domain / IP.
+
+   At this point, you should be able to access the site by going to `your_domain`
+   through a browser.
 
 6. We recommend that you should leave the PostgreSQL setup unless you know what
    you're doing.  However, for the version of PostgreSQL that comes with Ubuntu

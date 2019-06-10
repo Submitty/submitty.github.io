@@ -51,15 +51,13 @@ _NOTE_: You will need to make sure to keep chromedriver up-to-date as Chrome aut
 
 ---
 
-To run the test suite (while in the root folder):
+To run the test suite, navigate to `../Submitty/tests` and run:
 
 ```
-python3 -m unittest discover -v --start-directory tests
+python3 -m unittest
 ```
-(if in `tests/` directory, you can leave off the `--start-discovery tests` flag)
   
-To run an individual file or testcase, navigate into the `tests/` directory
-and then run:
+To run an individual file or testcase, run:
 ```
 python3 -m unittest e2e.<module_name>.<ClassName>
 python3 -m unittest e2e.<module_name>.<ClassName>.<function_name>
@@ -70,3 +68,13 @@ An example of running the login tests:
 python3 -m unittest e2e.test_login.TestLogin
 python3 -m unittest e2e.test_login.TestLogin.test_login
 ```
+
+To disable headless mode and view the browser while running a test, 
+edit `tests/e2e/base_testcase.py` and comment the line
+```
+self.options.add_argument('--headless')
+```
+
+**Note:** If you are using a non-standard installation of Submitty, you must
+edit `tests/e2e/base_testcase.py` and change the constant `TEST_URL`
+to reflect your installation's IP address.

@@ -3,13 +3,22 @@ title: System Administrator
 permalink: /sysadmin
 ---
 
-To create a production server, you'll need a machine with Ubuntu 16.04
-server edition, an SSL certificate, a Postgres database, and an SVN
-server (if needed). The details for each step are listed in the sidebar.
+[What OS should I use / How should I partition it?](/sysadmin/server_os)
 
-After the machine is prepared, you'll then need to follow the course
-creation instructions for each course that will be supported on that
-machine.
+[Initial Installation](/sysadmin/installation)
 
-Be sure to review the 
-[System Customization Checklist](/sysadmin/system_customization).
+[Updating Submitty](/sysadmin/update)
+
+[Database schema, triggers, and troubleshooting](/sysadmin/database_overview)
+
+[Creating new courses and managing pre-existing ones](/sysadmin/course_creation)
+
+[Using internal and external Git](/sysadmin/git)
+
+[Suggestions for system administrators](/sysadmin/system_customization)
+
+[Using an email to send notifications](/sysadmin/email_configuration)
+
+[Automatically updating classlists on a schedule](/sysadmin/student_auto_feed)
+
+[Archiving a course after a term completes](/sysadmin/course_archiving)
