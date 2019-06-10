@@ -53,7 +53,8 @@ missing some packages.
 `curl_init()` errors can be solved by checking if `php-curl` is installed
 `ZipArchive` errors can be solved by checking if `php-zip` is installed
 `DataBase driver missing` can be solved by checking if `php-sqlite` is installed.
-You can install all 3 on Ubuntu/Debain with:
+You can install all 3 on Ubuntu/Debian with for PHP 7.2, for other versions
+change the `7.2` to the version of PHP you have locally installed:
 ```
 sudo apt-get -y install -q php7.2-cli php-curl php-zip php7.2-mbstring php7.2-xml php7.2-xdebug php7.2-sqlite3
 ```
