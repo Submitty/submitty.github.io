@@ -22,7 +22,7 @@ You can either get the .phar files for it or much more easily use
 composer install
 ```
 
-This will download PHPUnit and PHPUnit-Selenium to the local machine
+This will download PHPUnit to the local machine
 and make it available via the vendor directory.
 
 If composer fails, you may be missing some required PHP modules.
@@ -53,7 +53,10 @@ missing some packages.
 `curl_init()` errors can be solved by checking if `php-curl` is installed
 `ZipArchive` errors can be solved by checking if `php-zip` is installed
 `DataBase driver missing` can be solved by checking if `php-sqlite` is installed.
-
+You can install all 3 on Ubuntu/Debain with:
+```
+sudo apt-get -y install -q php7.2-cli php-curl php-zip php7.2-mbstring php7.2-xml php7.2-xdebug php7.2-sqlite3
+```
 ## Mac Installation
 
 If using a Mac computer, the following commands can be run to set
