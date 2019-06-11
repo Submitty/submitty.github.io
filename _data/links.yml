@@ -105,6 +105,8 @@
     - name: How to Contribute
     - name: Autograding Tests
     - name: PHP Unit Tests
+      children:
+        - name: Writing Unit Tests
     - name: End to End Tests
     - name: Updating Dependencies
     - name: Travis CI
