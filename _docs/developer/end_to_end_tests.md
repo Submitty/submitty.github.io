@@ -56,6 +56,10 @@ To run the test suite, navigate to `../Submitty/tests` and run:
 ```
 python3 -m unittest
 ```
+
+**Note:** If you are using a non-standard installation of Submitty, you must
+edit `tests/e2e/base_testcase.py` and change the constant `TEST_URL`
+to reflect your installation's IP address.
   
 To run an individual file or testcase, run:
 ```
@@ -81,6 +85,15 @@ you press Enter in the terminal. To do this, add the following line into your te
 self.wait_user_input()
 ```
 
-**Note:** If you are using a non-standard installation of Submitty, you must
-edit `tests/e2e/base_testcase.py` and change the constant `TEST_URL`
-to reflect your installation's IP address.
+Furthermore, Selenium's `wait.until` is another way to slow down tests. 
+It waits until an element loads or times out after a maximum time. This is 
+useful for both debugging and writing tests. For example, the following snippet 
+waits until an `h1` element containing "My Heading" appears and fails after 
+10 secs if nothing shows up.
+
+```
+ wait = WebDriverWait(self.browser, 10)
+        wait.until(
+            EC.presence_of_element_located(
+                (By.XPATH, "//h1[contains(text(),'My Heading')]")))
+```
