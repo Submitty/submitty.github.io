@@ -70,9 +70,15 @@ python3 -m unittest e2e.test_login.TestLogin.test_login
 ```
 
 To disable headless mode and view the browser while running a test, 
-edit `tests/e2e/base_testcase.py` and comment the line
+edit `tests/e2e/base_testcase.py` and comment out the line:
 ```
 self.options.add_argument('--headless')
+```
+
+To slow down the tests for debugging, you can pause execution until 
+you press Enter in the terminal. To do this, add the following line into your test:
+```
+self.wait_user_input()
 ```
 
 **Note:** If you are using a non-standard installation of Submitty, you must
