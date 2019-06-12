@@ -30,7 +30,7 @@ PRs throughout the next few weeks.  Links within the site will be
 updated to use the new router.
 
 If your production installation or vagrant virtual machine
-installation is (from mid-June 2019, `v.19.06.01` or later,) then you
+installation is recent (from mid-June 2019, `v.19.06.01` or later) then you
 shouldn't have to change anything manually.
 
 If your installation is a bit older, in order to use the shortened
@@ -86,7 +86,7 @@ Edit your Apache configuration:
 
 
 5.  Now it should be safe to update the Submitty software on your
-    machine to v19.06.01 or later
+    machine to v.19.06.01 or later
 
     ```
     sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh
