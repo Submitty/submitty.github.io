@@ -93,7 +93,7 @@ Edit your Apache configuration:
     ```
 
 
-5.  And then you should be able to use the shortned URLs, for example to
+5.  And then you should be able to use the shortened URLs, for example to
     access the main navigation page of one of your existing courses.
 
     ```
