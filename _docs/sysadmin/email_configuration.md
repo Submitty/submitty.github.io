@@ -33,11 +33,10 @@ users.
    {
        "email_user": "<SPECIAL USER NAME>",
        "email_password": "<PASSWORD FOR SPECIAL USER NAME>",
-       "email_sender": "submitty@myuniversity.edu"
-       "email_reply_to": "submitty_do_not_reply@myuniversity.edu"
+       "email_sender": "submitty@myuniversity.edu",
+       "email_reply_to": "submitty_do_not_reply@myuniversity.edu",
        "email_server_hostname": "mail.myuniversity.edu",
-       "email_server_port": 587,
-       "email_logs_path": "/var/local/submitty/logs/emails"
+       "email_server_port": 587
    }
    ```
 
