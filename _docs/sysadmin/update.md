@@ -10,6 +10,7 @@ early June 2018, please start with the section at the bottom of this
 page.**
 
 
+Please also see [Installation Version Notes](version_notes)
 
 ### Update Submitty
 
