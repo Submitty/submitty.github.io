@@ -86,7 +86,11 @@ Edit your Apache configuration:
 
 
 5.  Now it should be safe to update the Submitty software on your
+<<<<<<< HEAD
     machine to v.19.06.01 or later
+=======
+    machine to v19.06.01 or later
+>>>>>>> cd094aa8efb87d3db308f5fae21a64a57d0ebf72
 
     ```
     sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh
