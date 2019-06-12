@@ -33,8 +33,9 @@ class Test {
     }
 
     public function method(
-        $arg1,
-        $arg2
+        $long_arg_name_1,
+        $another_long_name,
+        $third_long_name
     ) {
         // code
     }
