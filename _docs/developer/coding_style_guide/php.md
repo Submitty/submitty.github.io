@@ -6,23 +6,51 @@ order: 6
 
 __Minimum Version__: 7.2
 
-For PHP, please follow the PSR's as laid out by the language developers, except for the cases listed below. Primarily of interest is [PSR-1](http://www.php-fig.org/psr/psr-1/) and [PSR-2](http://www.php-fig.org/psr/psr-2/), though [PSR-4](http://www.php-fig.org/psr/psr-4/) does lay down some useful info about Namespaces in conjunction with autoloading (which is necessary for any new classes added to the system to ensure proper autoloading). Additionally, PHP code should be written such that the [minimum version of PHP that is still supported](http://php.net/supported-versions.php) would work. 
+For PHP, we use a foundation of [PSR-1](https://www.php-fig.org/psr/psr-1/)
+and [PSR-2](https://www.php-fig.org/psr/psr-2/) and then customize from
+there. These customizations are highlighted below:
 
-#### if-elseif-else blocks
-Each control function should begin on their own line and have one space between the conditional and the opening bracket
-```php
-<?php
-if ($a) {
-    // stuff
+### Linting Code
+
+We use a custom standard for the [phpcs](https://github.com/squizlabs/PHP_CodeSniffer) tool,
+available at [Submitty/submitty-php-codesniffer](https://github.com/Submitty/submitty-php-codesniffer).
+You can run this against your code by running it (assuming in the `site/` directory):
+```
+vendor/bin/phpcs --standard=Submitty path/to/dir/or/file.php
+```
+
+### Control Structures
+
+* There MUST be one space after the control structure keyword
+* There MUST NOT be a space after the opening parenthesis
+* There MUST NOT be a space before the closing parenthesis
+* There MUST be one space between the closing parenthesis and the opening brace
+* The structure body MUST be indented once
+* The closing brace MUST be on the next line after the body
+* There MUST be one newline between closing brace and the next control structure keyword except for do-while
+
+```
+if ($foo) {
+    // code
 }
-elseif ($b) {
-    // stuff
+elseif ($bar) {
+    // code
 }
 else {
-    // stuff
+    // code
 }
 ```
 
-#### Variable Names
-Variable names should be all lowercase and contain underscores to distinguish between words in the variable.  
-```$this_is_variable ```
+```
+do {
+    // code
+} while ($foo);
+```
+
+
+### Naming Conventions
+
+* Classes should use `StudlyCaps`
+* Functions should use `camelCase`
+* Constants should be `UPPERCASE`
+* Variables and properties should use `snake_case`
