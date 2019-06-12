@@ -49,7 +49,9 @@ familiarize yourself with web accessibility and implement these standards into
 your interface design.  [The A11Y Project](https://a11yproject.com/) provides
 some very easy to read tips, and [WebAIM.org](https://webaim.org/intro/) is a
 leading, thorough, and comprehensive resource for learning about web
-accessibility standards.  Please also read [Submitty.org's page on web accessibility](https://submitty.org/developer/interface_design_style_guide/web_accessibility).
+accessibility standards.
+
+Please also read [Submitty.org's page on web accessibility](https://submitty.org/developer/interface_design_style_guide/web_accessibility).
 
 If you have any questions about web accessibility for Submitty, please post
 your question in Submitty's slack channel and be sure to tag `@pbailie`.
