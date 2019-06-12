@@ -3,7 +3,7 @@ title: Student
 permalink: /student
 ---
 
-[How do I login to Submitty?](/student/login)
+[How do I login to Submitty?](login)
 
 [Course Navigation Page](/student/navigation)
 
