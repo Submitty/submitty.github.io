@@ -19,6 +19,28 @@ You can run this against your code by running it (assuming in the `site/` direct
 vendor/bin/phpcs --standard=Submitty path/to/dir/or/file.php
 ```
 
+### Classes, Methods
+
+* The opening brace for the class MUST go on the same line as the class name; the closing brace
+  for the class MUST go on the next line after the body.
+* The opening brace for a method MUST have one space between it and the closing parenthesis.
+* The closing brace for a method MUST go on the next line following the body.
+
+```
+class Test {
+    public function foo() {
+        // code
+    }
+
+    public function method(
+        $arg1,
+        $arg2
+    ) {
+        // code
+    }
+}
+```
+
 ### Control Structures
 
 * There MUST be one space after the control structure keyword
