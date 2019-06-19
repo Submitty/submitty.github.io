@@ -103,6 +103,12 @@
     - name: JSON Configuration Files
     - name: JSON Responses
     - name: Coding Style Guide
+      children:
+        - name: Python
+        - name: C++
+        - name: PHP
+        - name: JavaScript
+        - name: CSS
     - name: Interface Design
       link: interface_design_style_guide
       children:
