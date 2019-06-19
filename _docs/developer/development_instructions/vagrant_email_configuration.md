@@ -5,7 +5,7 @@ category: Developer
 
 
 When configured, Submitty can send instructor announcements and other
-important messages to users.  Please see the System Administrator
+important messages to users via email.  Please see the System Administrator
 Documentation: [Email Configuration](../../sysadmin/email_configuration)
 
 On the developer vagrant machine, the sending of emails is simulated with the
