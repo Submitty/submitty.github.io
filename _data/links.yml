@@ -93,6 +93,8 @@
     - name: Development Instructions
       children:
         - name: Troubleshooting
+        - name: Email Configuration
+          link: vagrant_email_configuration
     - name: PhpStorm Setup Instructions
       link: phpstorm
     - name: Database Design
