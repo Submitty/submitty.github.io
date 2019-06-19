@@ -36,7 +36,7 @@ users.
        "email_sender": "submitty@myuniversity.edu",
        "email_reply_to": "submitty_do_not_reply@myuniversity.edu",
        "email_server_hostname": "mail.myuniversity.edu",
-       "email_server_port": 587
+       "email_server_port": 25
    }
    ```
 
@@ -102,3 +102,6 @@ it's not working:
    * * * * python3 /usr/local/submitty/sbin/send_email.py
    ```
 
+
+
+Developers, please see also [Vagrant Email Configuration](../developer/development_instructions/vagrant_email_configuration).
