@@ -269,3 +269,18 @@ operating system.
     *Note: The current semester is calculated by either using an `s` if in the month is < 7 else use `f`
     and then take the last two digits of the current year. So April 2017 would be `s17` while September
     2017 would be `f17`.*
+
+
+
+13. If it has been a while since your last `vagrant destroy` and
+    `vagrant up` you may need to update/upgrade/reinstall the virtual box,
+    vagrant, vagrant vb-guest, and the installed boxes on your system:
+
+    On Mac:
+
+    ```
+    brew cask reinstall virtualbox
+    brew cask reinstall vagrant
+    vagrant plugin update
+    vagrant box update
+    ```
