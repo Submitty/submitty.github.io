@@ -235,8 +235,22 @@ executables.
 
   The instructor can override / customize various resource limitations
   for the testing process.  The default values for these resource
-  limits are specified here: [grading/default_config.h][grading/default_config.h]
-
+  limits are specified here: [grading/default_config.h][grading/default_config.h].
+  
+  Depending on the testcase type, there is a minimum RLIMIT value that will be used,
+  regardless if the limit it set lower in the configuration file.
+  
+  If the Testcase is for compliation, it will use the following minimum RLIMIT values:
+  * RLIMIT_CPU: 60
+  * RLIMIT_FSIZE: 10MB
+  * RLIMIT_RSS: 1GB
+  
+  If the Testcase is using the submitty_count utility, it will have the following minimum RLIMIT values:
+  * RLIMIT_NPROC: 1000
+  * RLIMIT_NOFILE: 1000
+  * RLIMIT_CPU: 60
+  * RLIMIT_AS: RLIM_INFINITY
+  * RLIMIT_SIGPENDING: 100
 
   _FIXME: UPDATE & DOCUMENT_
 
