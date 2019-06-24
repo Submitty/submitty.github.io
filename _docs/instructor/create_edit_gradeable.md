@@ -125,10 +125,18 @@ gradeable (even sections they are not assigned).  Limited access
 graders are restricted.
 
 
-###  Grading by **_Registration Section_** or **_Rotating Section_**
+###  Grader Assignment Method
 
+Grader Assignment Method can be chosen for each gradeable.  It specifies 
+the set of students assigned to each grader.
 
-* Gradeables assigned by **_Registration Section_** are graded by a
+* Gradeables set to **_All Access Grading_** (0) give all graders with
+  sufficient permission access to all student submissions.
+  
+  _NOTE: This is the same as selecting "Rotating Section" and assigning
+  all sections to every grader._
+  
+* Gradeables set to **_Registration Section_** (1) assign a
   fixed set of one or more graders per section across all gradeables
   for the entire term.  For example, grader John is assigned to
   registration sections 1 and 2.  For gradeables "g1", "g2", "g3",
@@ -140,13 +148,12 @@ graders are restricted.
   checkpoint data entry, and exam data entry._
 
 
-* Gradeables assigned by **_Rotating Section_** are graded by a set of
-  users per gradeable (not fixed for the entire term).  For gradeables
-  "g4", "g5", "g6", which are graded by rotating section, John may be
-  assigned different sets of users to grade. For "g4" he may grade
-  users assigned to rotating section 3, for "g5" he may grade users in
-  rotating sections 1 and 2, and for "g6" he may not be assigned any
-  rotating sections.
+* Gradeables set to **_Rotating Section_** (2) allow for a grader to be
+  assigned a different set of students per gradeable.  For example,
+  gradeables "g4", "g5", "g6", are graded by rotating section.  For "g4" 
+  John may be assigned to grade users in rotating section 3, for "g5" he 
+  may grade users in rotating sections 1 and 2, and for "g6" he may not 
+  be assigned any rotating sections.
 
   _NOTE: Often rotating section grading is useful for homework
   grading.  This way each student receives feedback from multiple TAs
