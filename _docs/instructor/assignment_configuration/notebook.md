@@ -1,6 +1,6 @@
 ---
 title: Notebook
-category: Assignment Configuration
+category: Instructor
 order: 2
 ---
 

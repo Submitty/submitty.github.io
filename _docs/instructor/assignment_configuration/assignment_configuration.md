@@ -1,6 +1,6 @@
 ---
 title: Assignment Configuration
-category: Assignment Configuration
+category: Instructor
 order: 1
 ---
 
@@ -202,7 +202,7 @@ executables.
   **REQUIRED**
   
 * **field:** ``"notebook"``  
-  **type:** _array of notebook objects_ ([notebook docs](notebook))  
+  **type:** _array of notebook objects_ ([notebook docs](notebook))
 
 
 * **field:** ``"assignment_message"``  

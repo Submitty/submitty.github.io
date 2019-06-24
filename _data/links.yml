@@ -35,7 +35,7 @@
     - name: Assignment Configuration
       link: false
       children:
-        - name: Main
+        - name: Overall
           link: assignment_configuration
         - name: Notebook
     - name: Facilitating Submission via GIT
