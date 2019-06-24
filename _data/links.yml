@@ -18,6 +18,8 @@
       link: late_days
     - name: Managing Versions
     - name: Reviewing TA Grades
+    - name: Grade Inquiries
+      link: grade_inquiry_student
     - name: Team Assignments
 
 - name: TA or Grader
@@ -60,6 +62,8 @@
       link: student_photos
     - name: Silent Grade Editing
       link: silent_editing
+    - name: Grade Inquiries
+      link: grade_inquiry_instructor
     - name: Discussion Forum
       link: forum
     - name: Premade Assignments
