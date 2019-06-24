@@ -145,13 +145,14 @@ you need to do?
 If you want to update or add documentation to Submitty.org here's what you do:
 
   * If you haven't already, you'll need to clone the git repo of 
-    Submitty.org
+    Submitty.org:
 
-    * The git repo is named submitty.github.io and the repo path 
-      Submitty/submitty.github.io
+    ```
+    git clone https://github.com/Submitty/submitty.github.io.git
+    ```
 
   * After cloning the repo, go into the _docs folder. You will see a folder 
-    representing each Major category on Submitty.org
+    representing each major category on Submitty.org
 
   * Navigate to whichever page you want to edit and open it in your text editor of choice. 
     The files are written in Markdown.

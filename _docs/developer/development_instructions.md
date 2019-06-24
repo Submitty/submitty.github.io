@@ -18,6 +18,8 @@ to changes you have made within your local Submitty checkout
 (including pulling new code from GitHub or switching to another
 branch).
 
+Please also see [Installation Version Notes](../../sysadmin/version_notes)
+
 ---
 
 * If you've made changes to files affecting the system installation

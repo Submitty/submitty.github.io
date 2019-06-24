@@ -76,6 +76,8 @@
     - name: Installation
     - name: Update Submitty
       link: update
+    - name: Installation Version Notes
+      link: version_notes
     - name: Database Overview
     - name: Course Creation
     - name: Setting up Internal Git
@@ -96,6 +98,8 @@
     - name: Development Instructions
       children:
         - name: Troubleshooting
+        - name: Email Configuration
+          link: vagrant_email_configuration
     - name: PhpStorm Setup Instructions
       link: phpstorm
     - name: Database Design
@@ -104,12 +108,22 @@
     - name: JSON Configuration Files
     - name: JSON Responses
     - name: Coding Style Guide
+      children:
+        - name: Python
+        - name: C++
+        - name: PHP
+        - name: JavaScript
+        - name: CSS
     - name: Interface Design
       link: interface_design_style_guide
+      children:
+        - name: Web Accessibility
     - name: Project Ideas
     - name: How to Contribute
     - name: Autograding Tests
     - name: PHP Unit Tests
+      children:
+        - name: Writing Unit Tests
     - name: End to End Tests
     - name: Updating Dependencies
     - name: Travis CI

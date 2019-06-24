@@ -224,6 +224,27 @@ operating system.
 
     You will connect to the VM as the `root` user.
 
+    If `vagrant ssh` asks for a password for the root@127.0.0.1 user and "vagrant" without the quotation marks does not work, look at the vagrant ssh config file and make note of the hostname and port.
+
+    ```sh
+    vagrant ssh-config
+    ```
+
+    Then directly ssh into the VM by
+
+    ```sh
+    ssh vagrant@hostname -p port
+    ```
+
+    If it asks for password, it should be "vagrant"
+    and then 
+
+    ```sh
+    sudo su
+    ```
+
+    to login as the root user. You should then see you are logged in as root@vagrant.
+
 11. The following users exist on the VM:
 
     | user | password | role |
@@ -248,3 +269,18 @@ operating system.
     *Note: The current semester is calculated by either using an `s` if in the month is < 7 else use `f`
     and then take the last two digits of the current year. So April 2017 would be `s17` while September
     2017 would be `f17`.*
+
+
+
+13. If it has been a while since your last `vagrant destroy` and
+    `vagrant up` you may need to update/upgrade/reinstall the virtual box,
+    vagrant, vagrant vb-guest, and the installed boxes on your system:
+
+    On Mac:
+
+    ```
+    brew cask reinstall virtualbox
+    brew cask reinstall vagrant
+    vagrant plugin update
+    vagrant box update
+    ```
