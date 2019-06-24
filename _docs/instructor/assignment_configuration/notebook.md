@@ -4,7 +4,7 @@ category: Assignment Configuration
 order: 2
 ---
 
-Instructors may create special gradeable submissions called notebooks.  Notebooks are different from standard file
+Instructors may create gradeable submissions called notebooks.  Notebooks are different from standard file
 submissions in that a notebook may contain several different types of inputs or outputs.  The available types of input 
 and outputs are defined by setting the ``type`` and are as follows:
 
