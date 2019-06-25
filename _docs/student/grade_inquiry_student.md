@@ -1,9 +1,12 @@
 ---
 category: Student
-title: Grade Inquiries
+title: Opening a Grade Inquiry
 ---
 
-After recieving a grade you may want to ask the grader about the grade you recieved. The grade inquiry feature allows you to have a discussion with the grader about their thoughts on your work. 
+See also [Enabling Grade Inquiries](../instructor/grade_inquiry_instructor)
+See also [Resolving a Grade Inquiry](../grader/grade_inquiry_grader)
+
+After receiving a grade you may want to ask the grader about the grade you received. The grade inquiry feature allows you to have a discussion with the grader about their thoughts on your work. 
 ### Submitting a Grade Inquiry
 Press the 'Submit Grade Inquiry' button below the TA/Instructor grade.
 ![](/images/student_submit_grade_inquiry.PNG)

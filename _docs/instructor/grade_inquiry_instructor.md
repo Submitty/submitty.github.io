@@ -1,9 +1,12 @@
 ---
 category: Instructor
-title: Grade Inquiries
+title: Enabling Grade Inquiries
 ---
 
-It is important for students to have the ability to understand why they recieved the grade that they recieved. Grade Inquiries allow graders and individual students to have a discussion on their work.
+See also [Opening a Grade Inquiry](../student/grade_inquiry_student)
+See also [Resolving a Grade Inquiry](../grader/grade_inquiry_grader)
+
+It is important for students to have the ability to understand why they received the grade that they received. Grade Inquiries allow graders and individual students to have a discussion on their work.
 
 ### Enabling Grade Inquires
 1. Check the checkbox next to 'Grade Inquires allowed' under Grading.
