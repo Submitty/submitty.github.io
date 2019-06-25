@@ -7,9 +7,18 @@ Documentation for PHPUnit can be found [here](https://phpunit.readthedocs.io/en/
 
 
 PHP unit tests are located at `Submitty/site/app/tests`. The test structure should mirror the actual source code structure, except
-that every class in the tests directory has the prefix *Tester* at the end. For example a test for the `SubmissionController.php` class would be called `SubmissionControllerTester.php` in the tests directory.
+that every class in the tests directory has the suffix *Tester* at the end. For example a test for the `SubmissionController.php` class would be called `SubmissionControllerTester.php` in the tests directory.
 
 Each tester class should extend `BaseUnitTest`. Individual methods should be public and being with the word "test" in lowercase in order for PHPUnit to run them. Helper functions in the tester class can be private, public, or protected and they will be ignored as long as they do *not* begin with the word "test". For example 
+
+Most tests in Submitty assert against the JSON response sent back, the specifications for Submitty's JSON responses can be found [here](../json_responses)
+
+Here are some example Unit tests:
+- [SubmissionControllerTester.php](https://github.com/Submitty/Submitty/blob/master/site/tests/app/controllers/submission/SubmissionControllerTester.php)
+- [AuthenticationControllerTester.php](https://github.com/Submitty/Submitty/blob/master/site/tests/app/controllers/AuthenticationControllerTester.php)
+- [AbstractDatabaseTester](https://github.com/Submitty/Submitty/blob/master/site/tests/app/libraries/database/AbstractDatabaseTester.php)
+- [CourseTester.php](https://github.com/Submitty/Submitty/blob/master/site/tests/app/models/CourseTester.php)
+
 ```php
 protected function createMockUser()
 ```
