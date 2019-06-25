@@ -3,7 +3,8 @@ title: Student
 permalink: /student
 ---
 
-[How do I login to Submitty?](/student/login)
+
+[How do I login to Submitty?](login)
 
 [Course Navigation Page](/student/navigation)
 
@@ -17,6 +18,9 @@ permalink: /student
 
 [Reviewing TA Grades](/student/reviewing_ta_grades)
 
+[Grade inquiries](/student/grade_inquiry_student)
+
 [Team Assignments](/student/team_assignments)
 
 [Testing Networked Applications Locally](/student/testing_networks)
+

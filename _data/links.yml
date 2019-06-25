@@ -18,6 +18,8 @@
       link: late_days
     - name: Managing Versions
     - name: Reviewing TA Grades
+    - name: Grade Inquiries
+      link: grade_inquiry_student
     - name: Team Assignments
 
 - name: TA or Grader
@@ -31,6 +33,11 @@
       link: create_edit_gradeable
     - name: Directory Structure
     - name: Assignment Configuration
+      link: false
+      children:
+        - name: Overall
+          link: assignment_configuration
+        - name: Notebook
     - name: Facilitating Submission via GIT
       link: managing_git
     - name: Static Analysis
@@ -60,6 +67,8 @@
       link: student_photos
     - name: Silent Grade Editing
       link: silent_editing
+    - name: Grade Inquiries
+      link: grade_inquiry_instructor
     - name: Discussion Forum
       link: forum
     - name: Premade Assignments
@@ -71,6 +80,8 @@
     - name: Installation
     - name: Update Submitty
       link: update
+    - name: Installation Version Notes
+      link: version_notes
     - name: Database Overview
     - name: Course Creation
     - name: Setting up Internal Git
@@ -91,6 +102,8 @@
     - name: Development Instructions
       children:
         - name: Troubleshooting
+        - name: Email Configuration
+          link: vagrant_email_configuration
     - name: PhpStorm Setup Instructions
       link: phpstorm
     - name: Database Design
@@ -99,6 +112,12 @@
     - name: JSON Configuration Files
     - name: JSON Responses
     - name: Coding Style Guide
+      children:
+        - name: Python
+        - name: C++
+        - name: PHP
+        - name: JavaScript
+        - name: CSS
     - name: Interface Design
       link: interface_design_style_guide
       children:

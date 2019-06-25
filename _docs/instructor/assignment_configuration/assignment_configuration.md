@@ -1,7 +1,7 @@
 ---
 title: Assignment Configuration
 category: Instructor
-order: 5
+order: 1
 ---
 
 
@@ -202,7 +202,7 @@ executables.
   **REQUIRED**
   
 * **field:** ``"notebook"``  
-  **type:** _array of notebook objects_ ([defined below](#specification-of-a-notebook))  
+  **type:** _array of notebook objects_ ([notebook docs](notebook))
 
 
 * **field:** ``"assignment_message"``  
@@ -235,8 +235,22 @@ executables.
 
   The instructor can override / customize various resource limitations
   for the testing process.  The default values for these resource
-  limits are specified here: [grading/default_config.h][grading/default_config.h]
-
+  limits are specified here: [grading/default_config.h][grading/default_config.h].
+  
+  Depending on the testcase type, there is a minimum RLIMIT value that will be used,
+  regardless if the limit it set lower in the configuration file.
+  
+  If the Testcase is for compliation, it will use the following minimum RLIMIT values:
+  * RLIMIT_CPU: 60
+  * RLIMIT_FSIZE: 10MB
+  * RLIMIT_RSS: 1GB
+  
+  If the Testcase is using the submitty_count utility, it will have the following minimum RLIMIT values:
+  * RLIMIT_NPROC: 1000
+  * RLIMIT_NOFILE: 1000
+  * RLIMIT_CPU: 60
+  * RLIMIT_AS: RLIM_INFINITY
+  * RLIMIT_SIGPENDING: 100
 
   _FIXME: UPDATE & DOCUMENT_
 
@@ -338,87 +352,6 @@ executables.
 * **field:** ``"textboxes"``  
   **type:** _array of textbox objects_  (Described below)  
   **default value:** ``empty``  
-  
-  
-### Specification of a Notebook
-
-
-* **field:** ``"title"``  
-  **type:** _string_  
-  **value:** Title of the item (ex. Question 1)  
-
-* **field:** ``"description"``  
-  **type:** _string_  
-
-* **field:** ``"images"``  
-  **type:** _array of image objects_  
-  
-* **field:** ``"input"``  
-  **type:** _array of input objects_   
-  
-  
-### Specification of an Image Object
-
-
-* **field:** ``"image_name"``  
-  **type:** _string_   
-  **value:** Name of the image file to be displayed.  
-  **default value:** ``""``
-  
-* **field:** ``"alt"``  
-  **type:** _string_   
-  **value:** Specify alternate text that describes the image, for use with accessibility screen readers.  
-
-* **field:** ``"image_height"``  
-  **type:** _int_   
-  **value:** Numeric height in pixels to display the image at.  
-  **default value:** ``0`` _(displays at native image height)_  
-
-
-* **field:** ``"image_width"``  
-  **type:** _int_   
-  **value:** Numeric width in pixels to display the image at.  
-  **default value:** ``0`` _(displays at native image width)_
-
-  
-### Specification of Notebook Input Objects
-
-
-* **field:** ``"type"``  
-  **type:** _string_  
-  **value:** ``"short_answer"``, ``"codebox"``, or ``"multiplechoice"``  
-  **description:** Specifies the type of input to display
-  
-  
-### Specification of a Short Answer box (short_answer)
-
-
-* **field:** ``"label"``  
-  **type:** _string_   
-  **value:** String description of what to write in the short answer box.  
-  **default value:** ``""``
-  
-  
-* **field:** ``"starter_value_string"``  
-  **type:** _string_   
-  **value:** The text to be prepopulated into the input box  
-
-
-* **field:** ``"rows"``  
-  **type:** _int_   
-  **value:** Numeric height of the textbox in rows.  
-  **default value:** ``1``
-
-
-* **field:** ``"filename"``  
-  **type:** _string_  
-  **value:** Specify a filename that the captured input data will be written to
-
-
-* **field:** ``"images"``  
-  **type:** _array of image objects_   
-  **value:** list of the images to be displayed.  
-  **default value:** ``empty``
 
 
 

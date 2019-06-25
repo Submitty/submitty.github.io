@@ -8,6 +8,12 @@ This is the documentation website for [Submitty](http://submitty.org) the RPI Ho
 
 Edition was built with [Jekyll](http://jekyllrb.com/) version 3.3.1, but should support newer versions as well.
 
+To use bundler, you first need to have ruby-developer installed. For Linux:
+
+~~~bash
+$ apt-get install ruby-dev
+~~~
+
 Install the dependencies with [Bundler](http://bundler.io/):
 
 ~~~bash
@@ -19,8 +25,6 @@ Run `jekyll` commands through Bundler to ensure you're using the right versions:
 ~~~bash
 $ bundle exec jekyll serve
 ~~~
-
-For Cygwin, make sure you have ruby-devel installed.
 
 ## Editing
 
