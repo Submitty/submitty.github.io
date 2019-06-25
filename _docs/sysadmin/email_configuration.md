@@ -24,24 +24,22 @@ users.
    These limits may require adjustment of the `send_email.py` script.
    
 
-2. Edit this configuration file:  `/usr/local/submitty/config/email.json`
+2. Run `sudo python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/CONFIGURE_SUBMITTY.py` and enter each email field.
 
+   `/config/email.json` should then contain this with your settings
 
-   Add the following fields to the file (edit as appropriate):
-
-   ```
-   {
-       "email_user": "<SPECIAL USER NAME>",
-       "email_password": "<PASSWORD FOR SPECIAL USER NAME>",
-       "email_sender": "submitty@myuniversity.edu",
-       "email_reply_to": "submitty_do_not_reply@myuniversity.edu",
-       "email_server_hostname": "mail.myuniversity.edu",
-       "email_server_port": 25
-   }
-   ```
-
-   *NOTE:*  The user (login name) and sender (appears on the
-    `From:` line of the emails) might not be exactly the same.
+    ```
+    {
+      "email_enabled": "true"
+      "email_user": "<SPECIAL USER NAME>",
+      "email_password": "<PASSWORD FOR SPECIAL USER NAME>",
+      "email_sender": "submitty@myuniversity.edu",
+      "email_reply_to": "submitty_do_not_reply@myuniversity.edu",
+      "email_server_hostname": "mail.myuniversity.edu",
+      "email_server_port": 25
+    }
+    ```
+    
 
 
 3. Ensure the permissions of this file allow read access by the
