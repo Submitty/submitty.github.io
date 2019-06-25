@@ -1,13 +1,15 @@
 - name: Welcome
   link: index
   children:
+    - name: Overview
+      link: ../index
     - name: Tutorial
     - name: Publications
 
 - name: Student
   children:
     - name: Login to Submitty
-      link: login
+      link: ../student
     - name: Course Navigation
       link: navigation
     - name: Submission
@@ -18,15 +20,22 @@
       link: late_days
     - name: Managing Versions
     - name: Reviewing TA Grades
-    - name: Grade Inquiries
+    - name: Opening a Grade Inquiry
       link: grade_inquiry_student
     - name: Team Assignments
 
 - name: TA or Grader
   link: grader
+  children:
+    - name: Overview
+      link: ../grader
+    - name: Resolving a Grade Inquiry
+      link: grade_inquiry_grader
 
 - name: Instructor
   children:
+    - name: Overview
+      link: ../instructor
     - name: Course Settings
     - name: Managing Enrollment
     - name: Create or Edit a Gradeable
@@ -35,7 +44,7 @@
     - name: Assignment Configuration
       link: false
       children:
-        - name: Overall
+        - name: Overview
           link: assignment_configuration
         - name: Notebook
     - name: Facilitating Submission via GIT
@@ -67,7 +76,7 @@
       link: student_photos
     - name: Silent Grade Editing
       link: silent_editing
-    - name: Grade Inquiries
+    - name: Enabling Grade Inquiries
       link: grade_inquiry_instructor
     - name: Discussion Forum
       link: forum
@@ -77,6 +86,7 @@
   link: sysadmin
   children:
     - name: Server OS
+      link: ../sysadmin
     - name: Installation
     - name: Update Submitty
       link: update
@@ -98,6 +108,8 @@
 
 - name: Developer
   children:
+    - name: Overview
+      link: ../developer
     - name: VM Install using Vagrant
     - name: Development Instructions
       children:

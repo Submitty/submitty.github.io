@@ -1,4 +1,5 @@
 ---
+category: Grader
 title: TA or Grader
 permalink: /grader
 ---

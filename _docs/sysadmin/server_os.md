@@ -1,7 +1,7 @@
 ---
 title: Server OS
 category: System Administrator
-order: 1
+permalink: /sysadmin
 ---
 
 ### Supported Distros

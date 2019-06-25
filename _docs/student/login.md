@@ -1,6 +1,7 @@
 ---
 category: Student
 title: How do I Login to Submitty?
+permalink: /student
 ---
 
 What is the Homework Submission Server URL for your course?  (Your
