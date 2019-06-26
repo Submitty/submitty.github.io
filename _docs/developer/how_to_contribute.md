@@ -62,7 +62,8 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
       way.  However some operations, like edits to the Apache
       configuration will not be performed automatically via a
       migration because these files commonly have customizations that
-      make automation difficult or problematic.
+      make automation difficult or problematic.  
+      See also: [Installation Version Notes](../sysadmin/version_notes)
 
 * Include the string `Closes #1234` or `Fixes #1234` within the top
   comment of the PR so that GitHub issue will be automatically closed
