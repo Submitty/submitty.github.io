@@ -9,17 +9,17 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
 
 * Contributors from outside the Submitty GitHub organization should
   clone the repo on their own GitHub page, and create a branch with
-  the modifications to be included with this PR.  _Note: If
-  appropriate, please grant write access to the submitty organization
+  the modifications to be included with this PR.  _Note: Please
+  grant write access to the submitty organization
   administrators so we can more conveniently make small edits (e.g.,
-  UI text wording changes).  In some cases this can speed up the
+  UI text wording changes).  This can speed up the
   approval and merging of your contributions._
 
   Contributors who are already active members of the Submitty GitHub
   organization can make a branch within the Submitty organization
-  repo.  _Note: This is preferred since it allows other members of the
-  organization to push changes to the branch, and work as a group on
-  larger features._
+  repo.  _Note: This is the preferred method, since it allows other
+  members of the organization to directly push changes to the branch
+  (with fewer steps), and allows work as a group on larger features._
 
   PRs can be made from either type of branch.
 
@@ -28,12 +28,46 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
 
 * The PR title should be useful and descriptive (not just the issue#).
 
-* Titles of PR, Issues, and commits should be <= 50 characters.
-  *Usually*.
+    * Titles of PR, Issues, and commits should be <= 50 characters.  *Usually*.
 
-* Include the string "Closes #1234" within the top comment of the PR so that the
-  issue will be automatically closed issue when the pull request is
-  merged.
+    * Suggested format of the PR Title:
+
+      ```
+      [<TYPE>:<MODULE>] <SUBJECT>
+      ```
+
+      Where `<TYPE>` is one of the following:  
+      `Bugfix`, `Documentation`, `Refactor`, `Dependency`, `Testing`, `Feature`, `UI/UX`, `VPAT`, etc.
+
+      And `<MODULE>` is one of the following:  
+      `Submission`, `Forum`, `TAGrading`, `Autograding`, `RainbowGrades`, etc.
+
+      _Note that `(#<PR NUMBER>)` is appended to the title
+      automatically by GitHub when the PR is merged with "squash &
+      merge".  Do not include this when you open a new pull request._
+
+      **IMPORTANT:** If this PR requires system administrator action
+      before/after installation, the PR title should be prefixed by
+      `[SYSADMIN ACTION]` and the commit message should describe the
+      specific actions required and include links to additional
+      documentation as appropriate.  For example:
+
+      ```
+      [SYSADMIN ACTION][<TYPE>:<MODULE>] <SUBJECT>
+      ```
+
+      Most moderate database changes and software package
+      installation/updates will be handled automatically by
+      [migrations](migrations) and do not need to be flagged in this
+      way.  However some operations, like edits to the Apache
+      configuration should not be performed automatically via a
+      migration because these files commonly have customizations that
+      make automation difficult or problematic.    
+      See also: [Installation Version Notes](../sysadmin/version_notes)
+
+* Include the string `Closes #1234` or `Fixes #1234` within the top
+  comment of the PR so that GitHub issue will be automatically closed
+  when the pull request is merged.
 
 * The commit message should talk about *WHAT* changed, and *WHY*. Not
   *HOW*.  How is the diff, and you don't need to repeat it.
@@ -161,5 +195,3 @@ If you want to update or add documentation to Submitty.org here's what you do:
     [README.md](https://github.com/Submitty/submitty.github.io/blob/master/README.md)
 
   * After you are done editing, you can submit a pull request for review.  
-    _Note: Members of the Submitty GitHub organization can directly push changes to master without review (appropriate for small edits)._
-

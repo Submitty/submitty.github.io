@@ -5,7 +5,7 @@ category: Developer
 
 We use [database migrations](https://en.wikipedia.org/wiki/Schema_migration) 
 to handle updating Submitty's databases, both in development and production, 
-in such a way that it's repeatable, easy to see the status of a given database,
+in such a way that it is repeatable, easy to see the status of a given database,
 and that we are not left with partial DB upgrades due to a broken script.
 
 To do this, we utilize a custom migration tool written for Submitty, 
@@ -31,6 +31,15 @@ For all commands, it is required that you pass in the environment you wish
 to operate on to migrator.
 
 See also: [System Administration / Update Submitty](../sysadmin/update)
+
+NOTE: Some mandatory installation updates _should not be implemented_
+via the migration system if automatic updates may be problematic due
+to customized installation.  For example, Submitty updates will not
+attempt to automatically edit the Apache configuration.  PR's requiring
+manual system administrator edits before/after installation should be
+prefixed by `[SYSADMIN ACTION]`.
+
+See also: [How to make a Pull Request(PR) to Submitty](how_to_contribute#how-to-make-a-pull-request-pr-to-submitty)
 
 
 ### Manually Applying Migrations
