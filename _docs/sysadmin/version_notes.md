@@ -4,6 +4,37 @@ category: System Administrator
 order: 2
 ---
 
+## Late June 2019 -- v19.06.02 -- Authentication API
+
+Must add one additional line to the Apache configuration edits below.
+Then follow the same instructions to restart Apache.
+
+   ```
+   <Directory /usr/local/submitty/site/public>
+        Require all granted
+        Order allow,deny
+        Allow from all
+
+        RewriteEngine On
+
+        # If the requested filename exists, simply serve it.                                             
+        RewriteCond %{REQUEST_FILENAME} -f
+        RewriteRule ^ - [L]
+
+        # Else rewrite urls to use index.php, however we have to be aware of two                         
+        # possible conditions of whether index.php is in the URL already or not.                         
+        # To be backwards compatible, we want to ensure that having /index.php                           
+        # is valid and usable. In anycase, we rewrite everything up-to /index.php                        
+        # to be the "url" parameter of the query, and then append whatever else we                       
+        # had in the QUERY_STRING after it.                                                              
+        RewriteRule ^(.+)/index\.php$ /index.php?url=$1&%{QUERY_STRING} [NC,END]
+        RewriteRule ^(.+)$ /index.php?url=$1&%{QUERY_STRING} [NC,END]
+
+        SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1 
+
+    </Directory>
+    ```
+
 
 ## June 2019 -- v19.06.01 -- URL Rewrite Rules
 
