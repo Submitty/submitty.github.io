@@ -4,7 +4,7 @@ category: System Administrator
 order: 2
 ---
 
-## Late June 2019 -- v19.06.02 -- Authentication API
+## Late June 2019 -- v.19.06.02 -- Authentication API
 
 Must add one additional line to the Apache configuration edits below.
 Then follow the same instructions to restart Apache.
@@ -36,7 +36,7 @@ Then follow the same instructions to restart Apache.
     ```
 
 
-## June 2019 -- v19.06.01 -- URL Rewrite Rules
+## June 2019 -- v.19.06.01 -- URL Rewrite Rules
 
 Beginning with version `v.19.06.01` of the main Submitty repository we
 will be using the [Symfony router](https://symfony.com/) to shorten
