@@ -60,9 +60,9 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
       installation/updates will be handled automatically by
       [migrations](migrations) and do not need to be flagged in this
       way.  However some operations, like edits to the Apache
-      configuration will not be performed automatically via a
+      configuration should not be performed automatically via a
       migration because these files commonly have customizations that
-      make automation difficult or problematic.  
+      make automation difficult or problematic.    
       See also: [Installation Version Notes](../sysadmin/version_notes)
 
 * Include the string `Closes #1234` or `Fixes #1234` within the top
