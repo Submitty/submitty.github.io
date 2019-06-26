@@ -33,7 +33,7 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
     * Suggested format of the PR Title:
 
       ```
-      [<TYPE>:<MODULE>] <SUBJECT> (#<PR NUMBER>)
+      [<TYPE>:<MODULE>] <SUBJECT>
       ```
 
       Where `<TYPE>` is one of the following:  
@@ -42,8 +42,27 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
       And `<MODULE>` is one of the following:  
       `Submission`, `Forum`, `TAGrading`, `Autograding`, `RainbowGrades`, etc.
 
-      _Note that `(#<PR NUMBER>)` is appended automatically by GitHub.
-      Do not include this when you open a new pull request._
+      _Note that `(#<PR NUMBER>)` is appended to the title
+      automatically by GitHub when the PR is merged with "squash &
+      merge".  Do not include this when you open a new pull request._
+
+      **IMPORTANT:** If this PR requires system administrator action
+      before/after installation, the PR title should be prefixed by
+      `[SYSADMIN ACTION]` and the commit message should describe the
+      specific actions required and include links to additional
+      documentation as appropriate.  For example:
+
+      ```
+      [SYSADMIN ACTION][<TYPE>:<MODULE>] <SUBJECT>
+      ```
+
+      Most moderate database changes and software package
+      installation/updates will be handled automatically by
+      [migrations](migrations) and do not need to be flagged in this
+      way.  However some operations, like edits to the Apache
+      configuration will not be performed automatically via a
+      migration because these files commonly have customizations that
+      make automation difficult or problematic.
 
 * Include the string `Closes #1234` or `Fixes #1234` within the top
   comment of the PR so that GitHub issue will be automatically closed
