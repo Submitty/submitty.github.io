@@ -175,5 +175,3 @@ If you want to update or add documentation to Submitty.org here's what you do:
     [README.md](https://github.com/Submitty/submitty.github.io/blob/master/README.md)
 
   * After you are done editing, you can submit a pull request for review.  
-    _Note: Members of the Submitty GitHub organization can directly push changes to master without review (appropriate for small edits)._
-
