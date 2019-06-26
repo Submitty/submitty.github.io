@@ -66,7 +66,7 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
 
 * Include the string `Closes #1234` or `Fixes #1234` within the top
   comment of the PR so that GitHub issue will be automatically closed
-  issue when the pull request is merged.
+  when the pull request is merged.
 
 * The commit message should talk about *WHAT* changed, and *WHY*. Not
   *HOW*.  How is the diff, and you don't need to repeat it.
@@ -194,5 +194,3 @@ If you want to update or add documentation to Submitty.org here's what you do:
     [README.md](https://github.com/Submitty/submitty.github.io/blob/master/README.md)
 
   * After you are done editing, you can submit a pull request for review.  
-    _Note: Members of the Submitty GitHub organization can directly push changes to master without review (appropriate for small edits)._
-
