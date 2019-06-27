@@ -34,7 +34,7 @@ See also: [System Administration / Update Submitty](../sysadmin/update)
 
 NOTE: Some mandatory installation updates _should not be implemented_
 via the migration system if automatic updates may be problematic due
-to customized installation.  For example, Submitty updates will not
+to customized installation.  For example, Submitty updates should not
 attempt to automatically edit the Apache configuration.  PR's requiring
 manual system administrator edits before/after installation should be
 prefixed by `[SYSADMIN ACTION]`.

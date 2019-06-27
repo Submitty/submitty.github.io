@@ -57,7 +57,7 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
       ```
 
       Most moderate database changes and software package
-      installation/updates will be handled automatically by
+      installation/updates should be handled automatically by
       [migrations](migrations) and do not need to be flagged in this
       way.  However some operations, like edits to the Apache
       configuration should not be performed automatically via a
