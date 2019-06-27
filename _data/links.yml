@@ -92,6 +92,9 @@
       link: update
     - name: Installation Version Notes
       link: version_notes
+      children:
+        - name: v19.06.02
+        - name: v.19.06.01
     - name: Database Overview
     - name: Course Creation
     - name: Setting up Internal Git
