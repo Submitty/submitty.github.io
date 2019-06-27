@@ -100,8 +100,12 @@ hyperlinks anchored on a font-awesome icon.
 
 #### DO NOT:
 * Do not use HTML for styling.
-    * For example, *never* use a header tag just to make text larger.  Header
+    * *Never* use a header tag just to make text larger.  Header
     tags should be used for outlining.
+    * *Never* use <br> to separate paragraphs or to create spacing.
+    * Do not use <div> in place of <button>.
+    * Do not use <div> when you could use something more descriptive -
+    see semantic HTML elements [here](https://www.w3schools.com/html/html5_semantic_elements.asp)
 
 ### All Interactive Controls Must Be Usable By The Keyboard
 Keyboard users navigate forward through a website with `TAB` and backwards with
