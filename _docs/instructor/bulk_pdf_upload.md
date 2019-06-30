@@ -1,5 +1,5 @@
 ---
-title: Exam / Quiz / Assignment PDF Uploads
+title: Bulk PDF Upload
 category: Instructor
 order: 11
 ---

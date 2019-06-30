@@ -71,7 +71,7 @@
     - name: Plagiarism Detection
       link: plagiarism
     - name: Bulk PDF Upload
-      link: exams
+      link: bulk_pdf_upload
     - name: Photo Scraper
       link: student_photos
     - name: Silent Grade Editing
