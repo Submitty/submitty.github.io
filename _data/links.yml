@@ -42,11 +42,24 @@
       link: create_edit_gradeable
     - name: Directory Structure
     - name: Assignment Configuration
-      link: false
+      link: assignment_configuration
       children:
-        - name: Overview
-          link: assignment_configuration
+        - name: Configuration Path
+          link: configuration_path
+        - name: Autograding Configuration Structure
+          link: structure
+        - name: Phases of Autograding
+          link: phases
+        - name: Autograding Specification
+          link: specification
+        - name: Distributed / Networked Applications
+          link: networking
+        - name: Graphics Applications
+          link: graphics
+        - name: Validation
+          link: validation
         - name: Notebook
+          link: notebook
     - name: Facilitating Submission via GIT
       link: managing_git
     - name: Static Analysis

@@ -1,7 +1,6 @@
 ---
 title: Notebook
-category: Instructor
-order: 2
+category: Instructor -- Autograding Configuration
 ---
 
 Instructors may create gradeable submissions called notebooks.  Notebooks are different from standard file
