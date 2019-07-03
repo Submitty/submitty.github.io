@@ -284,3 +284,10 @@ operating system.
     vagrant plugin update
     vagrant box update
     ```
+    
+### Troubleshooting
+
+##### Vagrant up fails
+
+- Ensure you have the most recent version of the base machine by running ```vagrant box update``` from your Submitty
+directory
