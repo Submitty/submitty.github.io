@@ -50,6 +50,7 @@ For Windows, download the appropriate version and place it on your
 _NOTE_: You will need to make sure to keep chromedriver up-to-date as Chrome auto-updates itself.
 
 ---
+
 Because some tests utilize autograding, you must ensure the autograding shippers and workers are running before testing.
 To start the autograding systems run:
 
@@ -60,6 +61,7 @@ sudo systemctl start submitty_autograding_worker
 ```
 
 See also: [Automated Grading](automated_grading)
+
 ---
 
 To run the test suite, navigate to `../Submitty/tests` and run:
