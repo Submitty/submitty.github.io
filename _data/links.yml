@@ -106,6 +106,7 @@
     - name: Installation Version Notes
       link: version_notes
       children:
+        - name: v19.07.00
         - name: v19.06.02
         - name: v.19.06.01
     - name: Database Overview
