@@ -272,15 +272,22 @@ operating system.
 
 
 
-13. If it has been a while since your last `vagrant destroy` and
-    `vagrant up` you may need to update/upgrade/reinstall the virtual box,
-    vagrant, vagrant vb-guest, and the installed boxes on your system:
+### Troubleshooting
 
-    On Mac:
+##### Vagrant up fails
 
-    ```
-    brew cask reinstall virtualbox
-    brew cask reinstall vagrant
-    vagrant plugin update
-    vagrant box update
-    ```
+
+If it has been a while since your last `vagrant destroy` and `vagrant up` you may need to 
+update/upgrade/reinstall the virtual box, vagrant, vagrant vb-guest, and the installed 
+boxes on your system:
+
+For example, on Mac:
+
+```
+brew cask reinstall virtualbox
+brew cask reinstall vagrant
+vagrant plugin update
+vagrant box update
+```
+
+Similar instructions for other OS.
