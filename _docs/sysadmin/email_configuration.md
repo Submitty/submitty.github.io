@@ -43,6 +43,7 @@ users.
     *NOTE:*  The user (login name) and sender (appears on the
     `From:` line of the emails) might not be exactly the same.
 
+
 3. Ensure the permissions of this file allow read access by the
 `submitty_daemon` user:
 
