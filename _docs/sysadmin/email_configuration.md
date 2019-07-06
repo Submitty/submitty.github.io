@@ -26,7 +26,7 @@ users.
 
 2. Run `sudo python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/CONFIGURE_SUBMITTY.py` and enter each email field.
 
-   `/config/email.json` should then contain this with your settings
+   `/usr/local/submitty/config/email.json` should now contain:
 
     ```
     {
@@ -39,8 +39,9 @@ users.
       "email_server_port": 25
     }
     ```
-    
 
+    *NOTE:*  The user (login name) and sender (appears on the
+    `From:` line of the emails) might not be exactly the same.
 
 3. Ensure the permissions of this file allow read access by the
 `submitty_daemon` user:
