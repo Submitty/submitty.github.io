@@ -1,0 +1,92 @@
+---
+layout: default
+---
+
+{{ content }}
+
+{% for endpoint in site.data.api_data %}
+	{% if endpoint.group == page.title %}
+        <h4 id={{ endpoint.title | slugify }}>{{ endpoint.title | upcase }}</h4>
+		<b>{{ endpoint.type }} {{ endpoint.url }}</b><br /><br />
+		{% if endpoint.examples %}
+			<h5>Example</h5>
+				{% for example in endpoint.examples %}
+					<pre>{{ example.content }}</pre>
+				{% endfor %}
+		{% endif %}
+		{% if endpoint.header %}
+			<h5>Header</h5>
+				<table>
+					<thead>
+						<tr>
+							<th style="width: 30%">Field</th>
+							<th style="width: 10%">Type</th>
+							<th style="width: 60%">Description</th>
+						</tr>
+					</thead>
+					{% for param in endpoint.header.fields.Header %}
+						<tr>
+							<td><code>{{ param.field }}</code></td>
+							<td>{{ param.type }}</td>
+							<td>{{ param.description }}</td>
+						</tr>
+					{% endfor %}
+				</table>
+		{% endif %}
+		{% if endpoint.parameter %}
+			<h5>Parameters</h5>
+				<table>
+					<thead>
+						<tr>
+							<th style="width: 30%">Field</th>
+							<th style="width: 10%">Type</th>
+							<th style="width: 60%">Description</th>
+						</tr>
+					</thead>
+					{% for param in endpoint.parameter.fields.Parameter %}
+						<tr>
+							<td><code>{{ param.field }}</code></td>
+							<td>{{ param.type }}</td>
+							<td>{{ param.description }}</td>
+						</tr>
+					{% endfor %}
+				</table>
+		{% endif %}
+		{% if endpoint.success %}
+			<h5>Success</h5>
+			<table>
+				<thead>
+					<tr>
+						<th style="width: 30%">Field</th>
+						<th style="width: 10%">Type</th>
+						<th style="width: 60%">Description</th>
+					</tr>
+				</thead>
+				{% for param in endpoint.success.fields["Success 200"] %}
+					<tr>
+						<td><code>{{ param.field }}</code></td>
+						<td>{{ param.type }}</td>
+						<td>{{ param.description }}</td>
+					</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+		{% if endpoint.error %}
+			<h5>Error</h5>
+			<table>
+				<thead>
+					<tr>
+						<th style="width: 30%">Type</th>
+						<th style="width: 70%">Message</th>
+					</tr>
+				</thead>
+				{% for param in endpoint.error.fields["Error 4xx"] %}
+					<tr>
+						<td><code>{{ param.field }}</code></td>
+						<td>{{ param.description }}</td>
+					</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+	{% endif %}
+{% endfor %}
