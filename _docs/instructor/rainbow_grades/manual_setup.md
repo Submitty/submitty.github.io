@@ -1,5 +1,5 @@
 ---
-title: Rainbow Grades
+title: Manual Setup
 category: Instructor
 order: 8
 ---

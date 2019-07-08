@@ -69,7 +69,8 @@
     - name: Rainbow Grades
       link: false
       children:
-        - name: Overview
+        - name: Automatic Setup
+        - name: Manual Setup
         - name: Customization Basics
         - name: Gradeables Customization
           link: gradeables
