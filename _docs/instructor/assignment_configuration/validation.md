@@ -156,10 +156,84 @@ category: Instructor -- Autograding Configuration
      See:
      [cpp custom test case example][cpp_custom]
 
-     _FIXME: Document this!_
+### Python Custom Validation
 
+In cases in which an assignment cannot be properly validated using one of
+the default validation methods, it is possible to write a custom python script
+to validate student output.
+
+At a high level, the structure of such a validator is simple:
+
+As input, a python custom validator can take:
+1. Any files produced by a student during a testcase.
+2. A json file, entitled ```custom_validator_input.json```. This json file
+     is the validation object within the config.json that invokes this
+     custom validator.
+3. Command line arguments provided to this validator.
+
+As output, a python custom validator provides:
+On standard output, a json of the following form:
+
+```
+{
+  'status' : "success"
+  'data': {
+            # Score is on a range from zero (no credit) to 1 (full credit)
+            'score' : score,
+            # A message to the student
+            'message' : message,
+            # The status of the submission (indicates if the
+            # student succeeded at the testcase).
+            # Values can be 'information', 'failure', 'warning'
+            # or 'success'.
+            'status':status
+          }
+}
+
+
+OR
+
+{
+  'status' : "failure"
+  'message' : 'A failure message to help you debug the error'
+}
+```
+
+A python custom validator must use the method ```custom_validator``` and should
+provide a the command that will be used to execute the custom script. This script must be housed in a ```custom_validation_code``` directory within
+the configuration directory for the assignment.
+
+#### Example Testcase Using a Python Custom Validator:
+```
+{
+    "title" : "Sum of 5 random numbers",
+    "command" : "./a.out 5",
+    "points" : 8,
+    "validation" : [
+        {
+            "method" : "custom_validator",
+            "command" : "python3 grader.py --numbers 5",
+            "actual_file" : "STDOUT.txt"
+        }
+    ]
+}
+```
+
+In the above example, the custom validator ```grader.py``` will be executed,
+and will be given the following json as ```custom_validator_input.json```:
+
+```
+{
+    "method" : "custom_validator",
+    "command" : "python3 grader.py --numbers 5",
+    "actual_file" : "STDOUT.txt"
+}
+```
+
+For more information, please follow view the [python custom test case example][python_custom].
 
 [grading/default_config.h]: https://github.com/Submitty/Submitty/blob/master/grading/default_config.h
 [grading/system_call_categories.cpp]: https://github.com/Submitty/Submitty/blob/master/grading/system_call_categories.cpp
 [grading/seccomp_functions.cpp]: https://github.com/Submitty/Submitty/blob/master/grading/seccomp_functions.cpp
 [cpp_custom]: https://github.com/Submitty/Submitty/tree/master/more_autograding_examples/cpp_custom
+[python_custom]: https://github.com/Submitty/Submitty/tree/master/more_autograding_examples/python_custom_validation
