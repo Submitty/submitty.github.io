@@ -163,6 +163,10 @@
     - name: Travis CI
     - name: Rainbow Grades Tests
     - name: Configuring Tie In Programs
+    - name: API
+      children:
+        - name: Authentication
+        - name: Courses
     - name: GSOC2018_TusharGurjar
       link: GSOC2018_TusharGurjar
     - name: GSOC2018_GaganKumar

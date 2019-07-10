@@ -77,9 +77,9 @@ _TODO:_
 
 
 1. First, generate the repos as directed above.
-   clone/download the the following script:
+   clone/download the following script:
 
-2. Then, to distribute instructor-provided code, clone/download the the following script:
+2. Then, to distribute instructor-provided code, clone/download the following script:
 
    [GIT Provided Code Script](https://github.com/Submitty/InstructorTools/blob/master/GitProvidedCode/git_provided_code.py)
 

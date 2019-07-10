@@ -1,0 +1,178 @@
+[
+  {
+    "type": "POST",
+    "url": "/api/token",
+    "title": "Get Token",
+    "group": "Authentication",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "user_id",
+            "description": "<p>User's unique ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "password",
+            "description": "<p>User's password.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "token",
+            "description": "<p>Access token for the user.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "AuthenticationException",
+            "description": "<p>Could not login using that user id or password.</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "InvalidArguments",
+            "description": "<p>Cannot leave user id or password blank.</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "curl -d \"user_id=instructor&password=instructor\" -X POST http://192.168.56.111/api/token",
+        "type": "curl"
+      }
+    ],
+    "version": "0.0.0",
+    "filename": "./site/app/controllers/AuthenticationController.php",
+    "groupTitle": "Authentication",
+    "name": "PostApiToken"
+  },
+  {
+    "type": "GET",
+    "url": "/api/courses",
+    "title": "List Courses",
+    "group": "Courses",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User's token.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Course[]",
+            "optional": false,
+            "field": "unarchived_courses",
+            "description": "<p>List of unarchived courses.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "unarchived_courses.semester",
+            "description": "<p>Semester of the course.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "unarchived_courses.title",
+            "description": "<p>Title of the course.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "unarchived_courses.display_name",
+            "description": "<p>Displayed name of the course.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Course[]",
+            "optional": false,
+            "field": "archived_courses",
+            "description": "<p>List of archived courses.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "archived_courses.semester",
+            "description": "<p>Semester of the course.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "archived_courses.title",
+            "description": "<p>Title of the course.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "archived_courses.display_name",
+            "description": "<p>Displayed name of the course.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./site/app/controllers/HomePageController.php",
+    "groupTitle": "Courses",
+    "name": "GetApiCourses"
+  },
+  {
+    "type": "POST",
+    "url": "/api/:semester/:course/reports/summaries",
+    "title": "Generate grade summary",
+    "group": "Courses",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User's token.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./site/app/controllers/admin/ReportController.php",
+    "groupTitle": "Courses",
+    "name": "PostApiSemesterCourseReportsSummaries"
+  }
+]
