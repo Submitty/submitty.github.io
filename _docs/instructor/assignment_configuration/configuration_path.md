@@ -7,7 +7,15 @@ category: Instructor -- Autograding Configuration
 ### Select An Autograding Configurations
 
 From the second tab of the edit gradeable page, the instructor
-specifies the path to the autograding configuration.
+specifies the path to the autograding configuration file.  Use the 
+text box to search the dropdown menu populated with existing 
+configuration options, or manually type in the full path to a 
+configuration file.
+
+The dropdown menu is populated by provided configurations, 
+uploaded configurations, and configurations within the Course 
+Autograding Configuration Directory. This is explained in more
+detail below.
 
 _TODO: Insert screenshot of interface to select the autograding
 configuration._
