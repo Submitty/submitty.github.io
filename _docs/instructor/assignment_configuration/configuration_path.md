@@ -17,9 +17,7 @@ uploaded configurations, and configurations within the Course
 Autograding Configuration Directory. This is explained in more
 detail below.
 
-_TODO: Insert screenshot of interface to select the autograding
-configuration._
-
+![](/images/config_path_interface.png)
 
 ### Provided Configurations
 
@@ -34,9 +32,13 @@ left-right seating assignment, 2 & 3 page test notes upload._
 ### Interface to Upload Autograding Configuration
 
 Instructors may prepare and upload autograding configurations through
-the website.
+the website by selecting the "Upload a custom autograding configuration"
+button.  After uploading a chosen file, it will appear in the list of 
+previous uploads below.  The uploaded configurations are numbered by 
+default, but the name can be edited by clicking on the pencil to the 
+left of each configuration.
 
-_TODO: Insert screenshot of interface._
+![](/images/config_upload_interface.png)
 
 Note: These uploaded configurations are stored in the course directory:
 
@@ -53,7 +55,7 @@ configurations.
 ### Course Autograding Configuration Directory
 
 Alternatively, instructors with ssh access to the machine are
-encouraged to instead directly prepare and edit their autograding
+encouraged to instead prepare and edit their autograding
 configurations directly on the server.
 
 Specifically, to allow backups and re-use of assignment
@@ -76,6 +78,10 @@ etc.
 
 The path or paths that are relevant to a course can be set from the
 Course Settings Page, by specifying the Course Autograding Config
-Directory.
+Directory.  To include multiple paths, separate the desired paths with 
+commas within the text box.  The directories will be searched for 
+folders containing a file named 'config.json'.  Folders that are 
+found will be displayed in the dropdown menu, as well as warnings if 
+an error is encountered while searching the directory.
 
-_TODO: Insert screenshot of interface._
+![](/images/config_repo_box.png)
