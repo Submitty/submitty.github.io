@@ -3,6 +3,8 @@ title: Automatic Setup
 category: Instructor
 ---
 
+_NOTE:  This is a work-in-progress._
+
 ### Enable viewing of rainbow grades
 
 Before beginning you must enable viewing of rainbow grades:
