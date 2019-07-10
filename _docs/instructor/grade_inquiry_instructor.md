@@ -4,17 +4,19 @@ title: Enabling Grade Inquiries
 ---
 
 It is important for students to have the ability to understand why
-they received the grade that they received. Grade Inquiries allow
+they received a specific grade.  Grade Inquiries allow
 graders and individual students to have a discussion on their work.
 
-1. From the "Course Settings" page,  
-   under the "Grading" section,  
-   check the checkbox next to 'Grade Inquires Allowed'.
+
+1. First, grade inquiries must be enabled for the course.  From the
+   "Course Settings" page, under the "Grading" section, check the
+   checkbox next to 'Grade Inquires Allowed'.
    
    ![](/images/grade_inquiry/instructor_course_enable_grade_inquiry.PNG)
 
-2. From the "Gradeables" page, click the pencil icon to edit the
-   settings for a specific assignment. 
+2. Second, grade inquiries must be enabled for each assignment, as
+   desired. From the "Gradeables" page, click the pencil icon to edit
+   the settings for a specific assignment.
 
    ![](/images/grade_inquiry/instructor_grade_inquiry_gradeable_pencil.PNG)
 
