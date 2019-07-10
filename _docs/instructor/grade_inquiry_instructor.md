@@ -11,22 +11,22 @@ graders and individual students to have a discussion on their work.
    under the "Grading" section,  
    check the checkbox next to 'Grade Inquires Allowed'.
    
-   ![](/images/instructor_course_enable_grade_inquiry.PNG)
+   ![](/images/grade_inquiry/instructor_course_enable_grade_inquiry.PNG)
 
 2. From the "Gradeables" page, click the pencil icon to edit the
    settings for a specific assignment. 
 
-   ![](/images/instructor_grade_inquiry_gradeable_pencil.PNG)
+   ![](/images/grade_inquiry/instructor_grade_inquiry_gradeable_pencil.PNG)
 
 3. From the "General" tab, make sure 'yes' is checked for
    'Will grade inquiries be enabled for this assignment?'  
 
-   ![](/images/instructor_gradeable_enable_grade_inquiry.PNG)
+   ![](/images/grade_inquiry/instructor_gradeable_enable_grade_inquiry.PNG)
 
 4. Finally, go to the "Dates" tab and set the 'Grade Inquiry Due Date'
    to a desired time in the future.
    
-   ![](/images/instructor_grade_inquiry_due_date.PNG)
+   ![](/images/grade_inquiry/instructor_grade_inquiry_due_date.PNG)
 
    Students must make the initial post to the grade inquiry system
    before that date.  Once the date passes, students and graders will
