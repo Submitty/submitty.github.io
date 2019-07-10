@@ -51,6 +51,19 @@ _NOTE_: You will need to make sure to keep chromedriver up-to-date as Chrome aut
 
 ---
 
+Because some tests utilize autograding, you must ensure the autograding shippers and workers are running before testing.
+To start the autograding systems run:
+
+```
+sudo systemctl start submitty_autograding_shipper
+sudo systemctl start submitty_autograding_worker
+/usr/local/submitty/.setup/INSTALL_SUBMITTY.sh
+```
+
+See also: [Automated Grading](automated_grading)
+
+---
+
 To run the test suite, navigate to `../Submitty/tests` and run:
 
 ```

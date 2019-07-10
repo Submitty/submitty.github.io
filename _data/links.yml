@@ -42,11 +42,24 @@
       link: create_edit_gradeable
     - name: Directory Structure
     - name: Assignment Configuration
-      link: false
+      link: assignment_configuration
       children:
-        - name: Overview
-          link: assignment_configuration
+        - name: Configuration Path
+          link: configuration_path
+        - name: Autograding Configuration Structure
+          link: structure
+        - name: Phases of Autograding
+          link: phases
+        - name: Autograding Specification
+          link: specification
+        - name: Distributed / Networked Applications
+          link: networking
+        - name: Graphics Applications
+          link: graphics
+        - name: Validation
+          link: validation
         - name: Notebook
+          link: notebook
     - name: Facilitating Submission via GIT
       link: managing_git
     - name: Static Analysis
@@ -56,7 +69,8 @@
     - name: Rainbow Grades
       link: false
       children:
-        - name: Overview
+        - name: Automatic Setup
+        - name: Manual Setup
         - name: Customization Basics
         - name: Gradeables Customization
           link: gradeables
@@ -93,6 +107,7 @@
     - name: Installation Version Notes
       link: version_notes
       children:
+        - name: v19.07.00
         - name: v19.06.02
         - name: v.19.06.01
     - name: Database Overview
@@ -148,6 +163,10 @@
     - name: Travis CI
     - name: Rainbow Grades Tests
     - name: Configuring Tie In Programs
+    - name: API
+      children:
+        - name: Authentication
+        - name: Courses
     - name: GSOC2018_TusharGurjar
       link: GSOC2018_TusharGurjar
     - name: GSOC2018_GaganKumar
