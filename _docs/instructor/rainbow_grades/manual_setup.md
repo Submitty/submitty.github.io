@@ -6,39 +6,48 @@ order: 8
 
 ![](http://submitty.org/images/rainbow_grades.png)
 
-1. **Export the grades from the TA grading system / database**    
-   Go to the TA grading website.  From the top menu, select "HWReports,
-   CSV Reports, and Grade Summaries", then Click "Generate Grade
+1. **Export the 'Grade Summaries' (complete data for each student)**
+   Go to the Submitty website.  Click 'Grade Reports' from the left sidebar.
+   Then Click "Generate Grade
    Summaries".  Once the grade summary reports have been created, the
    browser will finish reloading the page and display a green box with
-   "Successfully Generated GradeSummaries" in it. Currently this box
+   "Successfully Generated Grade Summaries" in it. Currently this box
    disappears automatically a few seconds after is is loaded.
 
-   Those json files are saved here:   
+   Those json files are saved on the server here:   
 
    ```
    /var/local/submitty/courses/<semester>/<course>/reports/all_grades/<username>_summary.json
    ```
 
 
-2. **Obtain the Rainbow Grades Chart Software**  
-   On your local computer (recommended so you can preview the results
-   before posting), download or checkout the [Submitty RainbowGrades repository](https://github.com/Submitty/RainbowGrades/archive/master.zip)
-   so you have access to the [Rainbow Grades code](https://github.com/Submitty/RainbowGrades/tree/master/).
-   We recommend you put this in a convenient top-level directory,
-   separate from the materials for a specific course.
-
-   Note: In order to use this tool on your local machine, you'll need
+2. In order to run RainbowGrades on your local machine, you'll need
    to install `git`, `make`, `ssh`, `rsync`, `wget`, and `python3`.
 
 
-3. **Make a directory for preparing the grades**  
-   This should not be within the RCOS repository checkout above.  
+
+3. **Obtain the Rainbow Grades Chart Software**  
+   On your local computer (recommended so you can preview the results
+   before posting), clone both the 
+   [Submitty/Submitty repository](https://github.com/Submitty/Submitty/tree/master/)
+   and the
+   [Submitty/RainbowGrades repository](https://github.com/Submitty/RainbowGrades/tree/master/).
+   We recommend you put this in a convenient top-level directory,
+   separate from the materials for a specific course.  These directories should be in neighboring folders, e.g.:
+
+   ```
+   ~/Submitty/GIT_CHECKOUT/Submitty
+   ~/Submitty/GIT_CHECKOUT/RainbowGrades
+   ```
+
+
+4. **Make a directory for preparing the grades**  
+   This should not be within either of the Submitty repository checkouts above.  
    If you have a repository/dropbox for your course, put it there (and
    then you can backup the configuration files)
 
    Copy the [`SAMPLE_Makefile`][SAMPLE_Makefile] and
-   [`SAMPLE_customization.json`][SAMPLE_customization.json]
+   [`SAMPLE_customization.json`][SAMPLE_customization.json] files from the RainbowGrades repository
    to that new directory (in the instructions below we'll assume you
    called the directory `grades_summary`).  Change the names to
    `Makefile` & `customization.json`.
@@ -70,7 +79,8 @@ order: 8
    make pull
    ``` 
 
-   This should copy those files to this local directory:
+   This will ask for your password on the server, and then it should
+   copy those files to this local directory:
 
    ```
    grades_summary/raw_data/<username>_summary.json
