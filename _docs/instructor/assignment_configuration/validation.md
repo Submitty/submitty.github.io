@@ -171,7 +171,7 @@ As input, a python custom validator can take:
      custom validator.
 3. Command line arguments provided to this validator.
 
-On standard output,a python custom validator _must_ output a json of the following form:
+On standard output, a python custom validator _must_ output a json of the following form:
 
 ```
 {
