@@ -171,22 +171,20 @@ As input, a python custom validator can take:
      custom validator.
 3. Command line arguments provided to this validator.
 
-As output, a python custom validator provides:
-On standard output, a json of the following form:
+On standard output,a python custom validator _must_ output a json of the following form:
 
 ```
 {
   'status' : "success"
   'data': {
             # Score is on a range from zero (no credit) to 1 (full credit)
-            'score' : score,
+            "score" : score,
             # A message to the student
-            'message' : message,
+            "message" : message,
             # The status of the submission (indicates if the
             # student succeeded at the testcase).
-            # Values can be 'information', 'failure', 'warning'
-            # or 'success'.
-            'status':status
+            # Values can be "information", "failure", "warning", or "success".
+            "status": status
           }
 }
 
@@ -230,7 +228,7 @@ and will be given the following json as ```custom_validator_input.json```:
 }
 ```
 
-For more information, please follow view the [python custom test case example][python_custom].
+For more information, please follow view the [python custom test case example][python_custom], and especially the ```grader.py``` file within.
 
 [grading/default_config.h]: https://github.com/Submitty/Submitty/blob/master/grading/default_config.h
 [grading/system_call_categories.cpp]: https://github.com/Submitty/Submitty/blob/master/grading/system_call_categories.cpp
