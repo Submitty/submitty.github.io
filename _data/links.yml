@@ -67,7 +67,7 @@
     - name: Log Files
     - name: Batch Regrade Submissions
     - name: Rainbow Grades
-      link: false
+      link: rainbow_grades
       children:
         - name: Automatic Setup
         - name: Manual Setup

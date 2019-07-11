@@ -1,10 +1,7 @@
 ---
 title: Manual Setup
 category: Instructor
-order: 8
 ---
-
-![](http://submitty.org/images/rainbow_grades.png)
 
 1. **Export the 'Grade Summaries' (complete data for each student)**
    Go to the Submitty website.  Click 'Grade Reports' from the left sidebar.
