@@ -163,6 +163,7 @@
     - name: Travis CI
     - name: Rainbow Grades Tests
     - name: Configuring Tie In Programs
+    - name: Router
     - name: API
       children:
         - name: Authentication
