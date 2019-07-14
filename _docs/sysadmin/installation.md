@@ -85,21 +85,12 @@ _Note: These instructions should be run under root/sudo._
 
 5. Setup Apache
 
-   Note: If you don't have a SSL certificate for your server, we recommend
-   using [Let's Encrypt](https://letsencrypt.org/) to get one. It's recommended
-   that you use [certbot](https://certbot.eff.org/) to do this (and to have
-   an HTTP configuration up).
-
-   We provide a default apache configuration at
+   To access Submitty's web interface, you will need to setup Apache for it.
+   To help you along, we provide an annotated apache configuration for Submitty at
    [.setup/apache/submitty.conf](https://github.com/Submitty/Submitty/blob/master/.setup/apache/submitty.conf)
-   which you can just copy to `/etc/apache2/sites-available`. You will
+   which you can copy to `/etc/apache2/sites-available/submitty.conf`. You will
    need to replace all instances of `__your_domain__` with your actual
-   domain / IP (don't include the `https://` part of it) and
-   `/path/to/ssl/certificate/` to the actual path for your SSL certificate.
-
-   Note: If you used Let's Encrypt, your certificates will be at
-   `/etc/letsencrypt/live/__your_domain__`, otherwise the common place to
-   look would be `/etc/apache2/ssl`.
+   domain / IP (don't include the `https://` part of it).
 
    The basic commands to do this are:
    ```
@@ -107,7 +98,28 @@ _Note: These instructions should be run under root/sudo._
    a2ensite submitty
    ```
 
-   We also recommend that you Edit `/etc/apache2/conf-enabled/security.conf` to ensure
+   The annotated apache configuration above is setup only for HTTP. For production
+   systems, we highly recommend setting up SSL/HTTPS for the server. If your institute
+   or organization does not have a centralized SSL provider to use, we recommend
+   using [Let's Encrypt](https://letsencrypt.org/) to get one through their
+   [certbot](https://certbot.eff.org/) tool, which should handle upgrading the Submitty
+   apache configuration to SSL for you. The generated certificates will
+   be available under `/etc/letsencrypt/live/__your_domain__`. If going through
+   a centralized provider, they should provide instructions about where to place
+   the certificates (commonly at `/etc/ssl` or `/etc/apache2/ssl`) and the changes
+   necessary for Apache. See [this page](https://httpd.apache.org/docs/2.4/ssl/ssl_howto.html)
+   for more details about the various settings for SSL.
+
+   Note: It's recommended that after setting up SSL, that you add the following block to
+   redirect all HTTP requests to HTTPS:
+   ```
+   <VirtualHost __your_domain__:80>
+        ServerName __your_domain__
+        Redirect / https://__your_domain__/
+   </Virtualhost>
+   ```
+
+   We also recommend that you edit `/etc/apache2/conf-enabled/security.conf` to ensure
    these options below are set to limit the information the server
    gives to potential hackers:
 
@@ -128,17 +140,6 @@ _Note: These instructions should be run under root/sudo._
    ``` /etc/apache2/apache2.conf ``` so that you do not risk
    configuration conflicts with your other configurations.  (Things
    that begin with Directory and end with /Directory).
-
-   Alternately, we provide
-   [submitty_http.conf](https://github.com/Submitty/Submitty/blob/master/.setup/apache/submitty_http.conf)
-   to run Submitty on just HTTP.  We recommend only using this if you are
-   planning on developing for Submitty.  For production, we strongly recommend
-   that you get a certificate and use HTTPS/SSL. Similarly, enable this with:
-   ```
-   a2ensite submitty_http.conf
-   ``` 
-   and be sure to replace all instances of `__your_domain__` with your actual
-   domain / IP.
 
    At this point, you should be able to access the site by going to `your_domain`
    through a browser.
