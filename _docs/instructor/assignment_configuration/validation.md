@@ -228,7 +228,7 @@ and will be given the following json as ```custom_validator_input.json```:
 }
 ```
 
-For more information, please follow view the [python custom test case example][python_custom], and especially the ```grader.py``` file within.
+For more information, please view the [python custom test case example][python_custom], and especially the ```grader.py``` file within.
 
 [grading/default_config.h]: https://github.com/Submitty/Submitty/blob/master/grading/default_config.h
 [grading/system_call_categories.cpp]: https://github.com/Submitty/Submitty/blob/master/grading/system_call_categories.cpp
