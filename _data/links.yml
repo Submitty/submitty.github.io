@@ -60,6 +60,8 @@
           link: validation
         - name: Notebook
           link: notebook
+    - name: Course Materials
+      link: course_materials
     - name: Facilitating Submission via GIT
       link: managing_git
     - name: Static Analysis
@@ -94,6 +96,8 @@
       link: grade_inquiry_instructor
     - name: Discussion Forum
       link: forum
+    - name: Grade Override
+      link: grade_override
     - name: Premade Assignments
 
 - name: System Administrator
