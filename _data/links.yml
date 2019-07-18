@@ -94,6 +94,8 @@
       link: grade_inquiry_instructor
     - name: Discussion Forum
       link: forum
+    - name: Grade Override
+      link: grade_override
     - name: Premade Assignments
 
 - name: System Administrator

@@ -1,11 +1,15 @@
 ---
-title: Course Settings
+title: Grade Override
 category: Instructor
-order: 2
 ---
-###When to Override
+### When to Override
+
+
    * **example:** example
-###Grade Override
+   
+   
+### How to Grade Override
+
 From an instructor account, you can select "Grade Override" to manually change a student's grade.
 
 ![](/images/OverrideEmpty.png) 
@@ -14,7 +18,7 @@ Once on the page, select the gradeable that contains the student's grade that ne
 
 ![](/images/OverrideSelected.png)
 
-Enter the student id, the new mark you want to give the student, and any comments you have.
+Enter the student's RCSID, the new mark you want to give the student, and any comments you have.
 Then, click "Submit" to submit the changes for the student.
 
 ![](/images/OverrideEntered.png)
