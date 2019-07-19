@@ -13,7 +13,7 @@ To use bundler, you first need to have ruby-developer installed. For Linux:
 ~~~bash
 $ apt-get install ruby-dev
 ~~~
-
+Clone this folder, and enter it in the command line
 Install the dependencies with [Bundler](http://bundler.io/):
 
 ~~~bash
