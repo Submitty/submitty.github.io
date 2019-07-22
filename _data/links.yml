@@ -125,6 +125,7 @@
     - name: Student Auto Feed
     - name: Course Archiving
       link: course_archiving
+    - name: Rainbow Grades
 
 - name: Developer
   children:
