@@ -13,61 +13,58 @@ Materials" label in the navigation bar.
 
 ![](/images/course_materials_overview.png)
 
-### Features
 
-1.  ![](/images/course_materials_download.png) Downloads the file.
+### Uploading Course Materials
 
-2.  ![](/images/course_materials_delete.png) Deletes the folder/file.  
-    _The delete option is only available to instructors._
-    
-3. Clicking on the "Set Folder Release Date" launches a pop-up form to det the release date of that folder's contents.
-    ![](/images/course_materials_set_folder_button.png)
-    ![](/images/course_materials_set_indiv_folder_popup.png)
-    ![](/images/course_materials_set_individual_never.png)
-    ![](/images/course_materials_set_individual_now.png)
-    Result of individual folder being set:
-    ![](/images/course_materials_individual_folder_done.png)
-    _The share with students option is only available to instructors._
-    
-4.  Clicking on the release date box, launches the date/time selector window shown below.  
-    ![](/images/DatepickerClose.png)  
-    There are three options:
-    
-    now
-    ![](/images/DatepickerSingleNow.png)
-    
-    never
-    ![](/images/DatepickerSingleNever.png)
-    
-    imminent (within 10 years)
+* Instructors may click on the "Upload Materials" button to launch a
+    pop-up form to upload files:
+      
+    ![](/images/course_materials_upload_form_v3.png)
+      
+    By default, all files will be uploaded to `course_materials`
+    subdirectory of the course.  But you may specify one or more
+    sub-directories within that folder.  If these subfolders do not
+    yet exist, they will be created automatically.
+
+    ![](/images/course_materials_option_subdir.png)  
+
+* Note: The total size of all files uploaded at one time must be less
+  than or equal to 10 mb or the value of the
+  [upload file size limit](../sysadmin/system_customization#allowing-large-student-file-upload-submissions)
+  for your server.
+
+
+
+### Date & Time Students can View Materials
+
+* Instructors can click on the "Share with students on" release date
+    box for a file, to specify launches the date/time selector window
+    shown below.
+
+    ![](/images/DatepickerClose.png)
+
+    In addition to selecting the date and time for release from the
+    calender, there are shortcut buttons for "now" and "end of time"
+    at the bottom.
+        
     ![](/images/DatepickerSingleSoon.png)
     
-    The colors correspond with the legend at the top of the screen to allow you to quickly visually know what has been released.
+* The dates are visualized in 3 colors: green = released, yellow =
+    will be released in the near future, red = will not be
+    released for at least 10 years.
+    
     ![](/images/course_materials_legend.png)
-    _The share with students option is only available to instructors._
 
 
-5. Clicking on the "Open/Close All Folders" button opens or closes all of the folders:
-    From this:
-    ![](/images/course_materials_overview.png)
-    To this:
-    ![](/images/course_materials_open_all.png)
-    And back:
-    ![](/images/course_materials_overview.png)
-6. Clicking the "Set All Release Dates" launches a pop-up form to set the release date of all the folders:
-    ![](/images/course_materials_set_all_popup.png)
-    ![](/images/course_materials_set_all_picker.png)
-    ![](/images/course_materials_all_changed.png)
-7. Clicking on the "Upload Materials" button launches a pop-up form to upload files:  
-      
-   ![](/images/course_materials_upload_form_v3.png)
-      
-  * ![](/images/course_materials_option_subdir.png)  
-    By default, all files will be uploaded to `course_materials` subdirectory of the course.
-    But you may specify one or more sub-directories within that folder.
-    If these subfolders do not yet exist, they will be created automatically.
+
+* Alternatively, instead of specifying the date for each file one at
+    a time, the instructor may click on "Set Folder Release Date" to
+    set the release date for all files within that folder (and all
+    subfolders).
+
+    ![](/images/course_materials_set_individual_now.png)
+
+    ![](/images/course_materials_individual_folder_done.png)
 
 
-  * Note: The total size of all files uploaded at one time must be less than or equal to 10 mb or 10,240 kb.  
 
-  _The upload materials option is only available to instructors._
