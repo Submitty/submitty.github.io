@@ -31,7 +31,7 @@ _Note: These instructions should be run under root/sudo._
 
 2. Run the bootstrap script:
    ```
-   curl https://raw.githubusercontent.com/Submitty/Submitty/master/.setup/bootstrap.sh | bash
+   bash -c "$(curl -s https://raw.githubusercontent.com/Submitty/Submitty/master/.setup/bootstrap.sh)"
    ```
    
    or clone the git repository and run the installer (requires git and lsb-release to be installed):
