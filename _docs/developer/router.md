@@ -13,7 +13,7 @@ The router takes a request as input, matches it against a predefined collection 
 
 **Validity checking** checks if the user is authorized to access certain parts of Submitty. For example, a user who is not logged in is not allowed to go anywhere else but login page. Also, a student will be prevented from accessing pages only accessible to instructors. If validity checking is not passed, the user will be redirected to appropriate pages or, for API calls, get JSON responses with fail status.
 
-**Function call** is a process that calls the proper function. All parameters in the URL except those starting with `_` will be passed into the functions. The function returns a `Response` which carries necessary information to display.
+**Function call** is a process that calls the proper function. All parameters in the URL will be passed into the functions if there are corresponding parameter definitions in function signatures. The function returns a `Response` which carries necessary information to display.
 
 ### Usage
 
@@ -36,7 +36,7 @@ public function showHomepage() {...}
 
 #### Route with Course Information
 
-A majority of links in Submitty require course information to return correct contents. Therefore, it is necessary for the router to know which `(semester, course)` tuple is requested. It is needed to prepend the route with `/{_semester}/{_course}`.
+A majority of links in Submitty require course information to return correct contents. Therefore, it is necessary for the router to know which `(semester, course)` tuple is requested. It is needed to prepend the route with `/{_semester}/{_course}`. The course information will be loaded automatically before calling the function.
 
 ```php
 /**
@@ -58,9 +58,9 @@ Sometimes we may want to pass parameters to functions. Wrapping the parameter na
 public function showHomeworkPage($gradeable_id){...}
 ```
 
-Note that `{_semester}` and `{_course}` are actually special cases of parameters that are only visible to the router and are removed before calling the function. This is to reduce the redundancy because the controller methods do not necessarily need `semester` or `course` parameters.
+Note that `{_semester}` and `{_course}` are actually special cases of parameters that are automatically processed by the router.
 
-Also, note that parameters in the `GET` query are passed to the function too without the need for explicit definition.
+Also, note that parameters in the `GET` query are passed to the function too without the need for explicit definition as long as parameter names are the same.
 
 ```php
 /**
@@ -71,9 +71,29 @@ public function loginForm($old = null) {...}
 
 The value of `$old` will be set to `Submitty` if you go to `/authentication/login?old=submitty`.
 
+#### Route with Parameter Requirements
+
+In some cases, you may want routes to match number-only parameters, or those not starting with certain words. This could be done by adding a `requirements` field in the route definition.
+
+```php
+/**
+ * @Route("/{_semester}/{_course}/notifications/{nid}", requirements={"nid": "[1-9]\d*"})
+ */
+public function openNotification($nid) {...}
+```
+
+```php
+/**
+ * @Route("/{_semester}/{_course}", requirements={"_semester": "^(?!api)[^\/]+", "_course": "[^\/]+"})
+ */
+public function navigationPage() {...}
+```
+
 #### Route that Uses `POST`
 
 To prevent [cross-site request forgery](https://en.wikipedia.org/wiki/Cross-site_request_forgery), all `POST` requests (except those related to authentication) are forced to pass CSRF checks. While the router can automatically detect `POST` requests by seeing if `$_POST` is empty, it is recommended to explicitly state that the route accepts only `POST` access considering that `$_POST` may be empty for `POST` requests.
+
+Note that, by default, the `methods` of routes are set to be `ALL`, which means the route accepts all kind of requests. Therefore, in some cases one route may be masked by another. If you have two routes with the same name, please specify the `methods` of both.
 
 ```php
 /**
