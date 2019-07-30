@@ -20,7 +20,8 @@ from individual to team or from team to individual._
 Selecting "Yes" will open a new option for maximum team size, which
 refers to the maximum number of members that can join a team
 (including the student who creates it).  _Note that instructors can
-manage teams and override the maximum team size._
+manage teams and override the maximum team size (see section "Creating
+and Editing Teams" below)._
 
 
 ### Team Lock Date
@@ -33,12 +34,13 @@ create new teams or invite new members to existing teams.
 
 ### Creating And Editing Teams
 
-Instructors also have the option of making teams for the students.
+Instructors also have the option of forming and managing teams for the students.
 
 ![](/images/team_grading_page.png)
 
 Once you've made the team assignment, click on the "Preview Grading"
-button for that assignment.  You have 2 options:
+button for that assignment.  And then "Index of Grading Details for
+All Students".  For team formation you have 2 options:
 
 * Prepare a common-separated values file (.csv) with 6 columns: First
   Name, Last Name, User ID, Team ID, Team Registration Section, and
