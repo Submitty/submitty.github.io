@@ -23,6 +23,7 @@
     - name: Opening a Grade Inquiry
       link: grade_inquiry_student
     - name: Team Assignments
+    - name: Discussion Forum
 
 - name: TA or Grader
   link: grader
