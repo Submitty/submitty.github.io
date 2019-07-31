@@ -43,14 +43,19 @@ A list of Submitty projects (some new, some in progress):
 * Learn what sections of the code are relevant for those issues (so
   you’re not overwhelmed).
 
-  _Hint: Use "git grep" to search for variables/filenames/specific
-  strings within the source files/directories.  This can help you
-  locate relevant files._
+   * Hint: Use "git grep" to search for variables/filenames/specific
+     strings within the source files/directories.  This can help you
+     locate relevant files.
 
 * Add & delete things to the code, re-install that portion of the
   system and see what happens.  See also [Development Instructions](developer/development_instructions).
 
-* Use inspector or browser debugger.
+* Use inspector, browser debugger, javascript console, etc.
+
+   * Hint: It is helpful to set your javascript console errors to
+     be persistent (so they don't disappear when the page reloads).
+     E.g., in Chrome, you need to set "Console:Preserve log on
+     navigation", or in Firefox, "Enable persistent logs".
 
 * As you read the code, make a diagram for yourself of how the system
   fits together.
