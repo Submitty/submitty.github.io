@@ -23,6 +23,7 @@
     - name: Opening a Grade Inquiry
       link: grade_inquiry_student
     - name: Team Assignments
+    - name: Discussion Forum
 
 - name: TA or Grader
   link: grader
@@ -60,6 +61,8 @@
           link: validation
         - name: Notebook
           link: notebook
+    - name: Course Materials
+      link: course_materials
     - name: Facilitating Submission via GIT
       link: managing_git
     - name: Static Analysis
@@ -109,7 +112,6 @@
     - name: Installation Version Notes
       link: version_notes
       children:
-        - name: v19.07.00
         - name: v19.06.02
         - name: v.19.06.01
     - name: Database Overview

@@ -1,6 +1,6 @@
 ---
 category: Student
-title: Examing the Results of Automated Testing
+title: Examining the Results of Automated Testing
 ---
 
 The webpage displays a summary of the results on the test cases
