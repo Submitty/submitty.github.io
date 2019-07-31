@@ -4,9 +4,12 @@ category: System Administrator
 ---
 
 
-Submitty can be configured to send instructor announcements by email
-and send email (customizable -- *work in progress*) notifications to
-users.
+Submitty can be configured to send email notifications in addition to
+on-site notications of actions such as instructor announcements, new
+messages on the discussion forum, responses to grade inquiries,
+etc.  See also [notification settings](../student/notification_settings).
+
+First, the Submitty server must be configured to send email:
 
 
 1. Obtain an email address that will be the sender for all email.
@@ -21,8 +24,9 @@ users.
    Learn what rate limits are configured for this email address.
    E.g., number of total emails sent per minute and/or number of
    emails sent per hour to external (non-university) email addresses.
-   These limits may require adjustment of the `send_email.py` script.
-   
+   These limits may require adjustment of the `send_email.py` script
+   (currently set to send a maximum of 100 email messages per minute).   
+
 
 2. Run `sudo python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/CONFIGURE_SUBMITTY.py` and enter each email field.
 
@@ -50,6 +54,14 @@ users.
     ```
     -r--r----- 1 root submitty_daemonphp     email.json
     ```
+
+4. Confirm that a cron job is scheduled to run every minute.  The file
+`/etc/cron.d/submitty` should contain the following line:
+
+    ```
+    * * * * * submitty_daemon   python3 /usr/local/submitty/sbin/send_email.py
+    ```
+
 
 
 ## Troubleshooting
@@ -94,13 +106,8 @@ it's not working:
    /usr/local/submitty/sbin/send_email.py
    ```
 
-   *NOTE:* This script is configured to run once per minute by the
-    `submitty_daemon` user.  Ensure that `submitty_daemon`'s crontab
-    file is in order, for example:
 
-   ```
-   * * * * python3 /usr/local/submitty/sbin/send_email.py
-   ```
+4. You can also check for cron errors in the general system logs:  `/var/log/syslog`
 
 
 
