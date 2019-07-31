@@ -24,6 +24,7 @@
       link: grade_inquiry_student
     - name: Team Assignments
     - name: Discussion Forum
+    - name: Notification Settings
 
 - name: TA or Grader
   link: grader
