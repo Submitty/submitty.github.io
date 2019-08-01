@@ -1,6 +1,6 @@
 ---
 category: Student
-title: How do I Login to Submitty?
+title: How Do I Login to Submitty?
 permalink: /student
 ---
 
@@ -24,7 +24,8 @@ After you login, another page appears with your course and personal information 
 
 This page is your gateway to the rest of Submitty. From here, you can enter
 your current courses and past courses if your professor archived them. You can also view your student
-information and change your name if your preferred name does not match school records.
+information, change your name if your preferred name does not match school records, and if available
+at your school, change your password.
 
 ## How Can I Access My Courses?
 
@@ -40,3 +41,17 @@ A form will pop up with a place to change your first and last names. Edit your p
 last name, then click "Submit". To exit the form without saving your entry, click "Close".
 
 ![](/images/PreferredNameForm.png)
+
+## How Can I Change My Password?
+
+If your system uses database passwords specific to this server, you can change your password. Under
+your email in the "About You" right box, if the option is available to you, it will say "Change Password".
+
+![](/images/HomepagePassword.png)
+
+To do so, click the pencil to the right of "Change Password" and a form will pop up. Fill in your current
+password in the top box on the form and your new password in the bottom box, then click the "Submit" button.
+If you want to exit the form without saving the changes, simply click the "Close" button.
+
+![](/images/ChangePasswordForm.png)
+
