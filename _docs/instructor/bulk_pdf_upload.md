@@ -228,8 +228,22 @@ the string contained in the QR code along with a pagecount. Invalid
 user ID's will be highlighted in pink.  Individual pdfs that do not
 match the expected page count will be highlighted in red.
 
-![](/images/bulkupload_labeling.png){:width="600px"}
+![Bulk upload submission](/images/bulkupload_labeling.png){:width="600px"}
 
+### Automatic Student ID Number Detection
+
+Instead of associating student IDs with QR codes you can provide 
+a space for students to write their student ID number in. This 
+will require placing a QR code to detect the region to scan.
+
+*Note: QRs must be placed to the left of the digit entry box and must be taller than the box*
+
+The QR code and digit entry box can be placed anywhere on the packet cover sheet and will be automatically located and scanned, currently you cannot have any other print to the right of the digit entry box.
+
+To use this function select the 'Detect Student ID's' box on the 
+submission page.
+
+![Bulk upload submission with OCR enabled](/images/bulkuploadsubmission_ocr.png)
 
 ### Preparing PDFs with Custom QR Codes per Student
 
