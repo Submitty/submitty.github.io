@@ -230,7 +230,7 @@ match the expected page count will be highlighted in red.
 
 ![Bulk upload submission](/images/bulkupload_labeling.png){:width="600px"}
 
-### Automatic Student ID Number Detection
+### Automatic Student ID Number Detection (*Work in progress!*)
 
 Instead of associating student IDs with QR codes you can provide 
 a space for students to write their student ID number in. This 
