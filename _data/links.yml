@@ -139,6 +139,7 @@
         - name: Troubleshooting
         - name: Email Configuration
           link: vagrant_email_configuration
+        - name: Miscellaneous
     - name: PhpStorm Setup Instructions
       link: phpstorm
     - name: Database Design
