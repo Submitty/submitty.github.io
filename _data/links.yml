@@ -170,9 +170,8 @@
     - name: Configuring Tie In Programs
     - name: Router
     - name: API
-      children:
-        - name: Authentication
-        - name: Courses
+      link: https://api.submitty.org
+      extern: true
     - name: GSOC2018_TusharGurjar
       link: GSOC2018_TusharGurjar
     - name: GSOC2018_GaganKumar
