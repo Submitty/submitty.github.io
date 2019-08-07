@@ -78,7 +78,11 @@
                                 {% assign child_link = child.link %}
                             {% endif %}
 
-                            {% assign full_child_link = top_link | append: '/' | append: child_link %}
+                            {% if child.extern != true %}
+                                {% assign full_child_link = top_link | append: '/' | append: child_link %}
+                            {% else %}
+                                {% assign full_child_link = child.link %}
+                            {% endif %}
 
                             {% assign child_link_length = full_child_link | size %}
                             {% assign child_url_slice = page.url | slice: 0, child_link_length %}
