@@ -19,17 +19,28 @@ in ascending or descending order.  Select the option once for ascending order, p
 **Random:** Sort students in a pseudo-randomized order.  The random order is different for each gradeable.  The purpose
 of this sorting order is to help distribute bias that comes along with always being graded first or last for each assignment.
 
-### Prev / Next Ungraded Student Buttons
+### Prev / Next Student Buttons
 
-These buttons, located on the TA grading interface, allow the grader to move to the previous or next ungraded submission.
+![](/images/sorting_and_navigation/prev_next_buttons.png)
 
-With no component open selecting the next ungraded student button will move to the next submission with *any* component
-ungraded.  This mode is useful when a grader is responsible for grading all components for a given submission.
+These buttons allow the grader to move to the next submission.
+
+**Limited access graders:** These buttons will only move to submissions within the grader's assigned sections.
+
+**Full access graders:** These buttons can be used to browse submissions from all sections.
+
+### Prev / Next Assigned Ungraded Student Buttons
+
+These buttons allow the grader to move to the previous or next ungraded submission.
+It is worth noting that these buttons will only move to ungraded submissions within a grader's assigned sections.
+
+With no component open, selecting the next ungraded student button will move to the next submission with *any* component
+ungraded.  This mode is useful when a grader is responsible for grading all components for a given submission. *(See image below)*
 
 ![](/images/sorting_and_navigation/closed_components.png)
 
 When a component is open, selecting the next ungraded student button will move to the next submission with
 *that specific component* ungraded.  This mode is most useful when multiple graders are grading a single submission, each
-working on different components.
+working on different components. *(See image below)*
 
 ![](/images/sorting_and_navigation/open_components.png)
