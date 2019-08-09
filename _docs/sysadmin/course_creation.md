@@ -150,7 +150,7 @@ order: 5
 3. Add existing instructor(s) to the course database:
 
    ```
-   sudo /usr/local/submitty/sbin/adduser_course.py --course <SEMESTER> <COURSE> null <USERNAME>
+   sudo /usr/local/submitty/sbin/adduser_course.py <USERNAME> <SEMESTER> <COURSE> null
    ```
 
 
