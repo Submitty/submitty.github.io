@@ -10,7 +10,7 @@ At the system level, Submitty has 3 levels of user access.  This
 information is stored in the master `Submitty` database, `users`
 table, `user_access_level` column.
 
-* **Superuser = 1**
+* **Superuser = 1**  
     This special category of user should be rarely
     used, limited to system administrators.  Most capabilities of
     superusers are still in the planning stages; for example, being
@@ -18,14 +18,14 @@ table, `user_access_level` column.
     add new terms, etc.  Currently most of this functionality is only
     available from the GNU/Linux command line.
 
-* **Faculty = 2**
+* **Faculty = 2**  
     This category of user should be limited to faculty
     at your institution.  Faculty users can make new courses,
     restricted toqterms that have already been defined, and
     limited to sharing a Linux group of one of their pre-existing
     courses.
 
-* **User = 3**
+* **User = 3**  
     All other users -- students, teaching assistants,
     graders, etc.
 
@@ -72,18 +72,20 @@ following groups.
     because they are closer in age or cohort to the students in the
     class. 
 
-* **Student = 4**
+* **Student = 4**  
     Finally we have the student group, who has no access to grading.
     Note that users who are in the Student Group who are assigned to the NULL
     registration section (indicating they have dropped the course)
     will not be able to access the course.
 
 
-_NOTE: User Access Level for the system is a separate from User Group
+_NOTE:_ User Access Level for the system is a separate from User Group
 for each course.  Typically users with **Faculty** User Access Level
 will be in the **Instructor** Group for each of their courses, but
 this is not required.  In fact, it can be helpful to for faculty users
 to explore the Submitty interface for a specific course as a member of
 the **Student** User Group.  And sometimes it is useful to put the
 head graduate teaching assistant in the **Instructor** group for a
-large course so they can assist with course management._
+large course so they can assist with course management.
+
+See also [Create or Edit Gradeable](../instructor/create_edit_gradeable#grading-user-groups).
