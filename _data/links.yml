@@ -116,6 +116,7 @@
         - name: v19.06.02
         - name: v.19.06.01
     - name: Database Overview
+    - name: User Access Level
     - name: Course Creation
     - name: Setting up Internal Git
       link: git
