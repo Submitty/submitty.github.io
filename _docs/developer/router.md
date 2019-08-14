@@ -138,14 +138,8 @@ It is recommended to use `snake_case` for URLs consisting of multiple words.
 
 #### How to construct URLs?
 
-For PHP, use `Core::buildNewUrl` or `Core::buildNewCourseUrl`.
+For PHP, use `Core::buildUrl` or `Core::buildCourseUrl`.
 
-For JavaScript, use `buildNewUrl` or `buildNewCourseUrl`.
+For JavaScript, use `buildUrl` or `buildCourseUrl`.
 
-`Core::buildNewCourseUrl` in PHP and `buildNewCourseUrl` in Javascript will prepend course information to the URL (e.g. `/f19/sample`).
-
-#### Is `run()` needed?
-
-No. It needs to be nullified, but not removed.
-
-The router calls individual functions directly. There are no centralized `run()`s. However, as the old router has not been completely removed yet, it is necessary to keep it there as it is required by the abstract controller. That being said, it is **required** to remove the content of `run()`, replacing it with `return null` or other code that does nothing, or it will be possible for users to circumvent validity check that is implemented in the new router.
+`Core::buildCourseUrl` in PHP and `buildCourseUrl` in Javascript will prepend course information to the URL (e.g. `/f19/sample`).
