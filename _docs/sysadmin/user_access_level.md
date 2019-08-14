@@ -3,17 +3,6 @@ title: User Access Level
 category: System Administrator
 ---
 
-<<<<<<< HEAD
-At the
-
-![](/images/access_level.png)
-
-
-### User Group
-
-Within a specific ourse
-=======
-
 ### User Access Level
 
 At the system level, Submitty has 3 levels of user access.  This
@@ -99,4 +88,3 @@ head graduate teaching assistant in the **Instructor** group for a
 large course so they can assist with course management.
 
 See also [Create or Edit Gradeable](../instructor/create_edit_gradeable#grading-user-groups).
->>>>>>> 0cca4a9efe951445564bacf42d0edb7f37f3bea4
