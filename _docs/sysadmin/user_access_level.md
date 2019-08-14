@@ -3,7 +3,6 @@ title: User Access Level
 category: System Administrator
 ---
 
-
 ### User Access Level
 
 At the system level, Submitty has 3 levels of user access.  This

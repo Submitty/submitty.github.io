@@ -174,7 +174,18 @@
     - name: API
       link: https://api.submitty.org
       extern: true
-    - name: GSOC2018_TusharGurjar
-      link: GSOC2018_TusharGurjar
-    - name: GSOC2018_GaganKumar
-      link: GSOC2018_GaganKumar
+    - name: Google Summer of Code
+      children:
+        - name: 2019 Fon Noel
+          link: 2019_FonNoel
+        - name: 2019 Drumil Patel
+          link: 2019_DrumilPatel
+        - name: 2019 Anubhav Singh
+          link: 2019_AnubhavSingh
+        - name: 2019 Xiao Han
+          link: 2019_XiaoHan
+        - name: 2018 Tushar Gurjar
+          link: 2018_TusharGurjar
+        - name: 2018 Gagan Kumar
+          link: 2018_GaganKumar
+
