@@ -6,18 +6,18 @@ category: Developer
 
 Submitty participated in [Google Summer of Code 2019](https://summerofcode.withgoogle.com/):
 
-* [Fon Noel](2019_FonNoel)
+* [Fon Noel](/developer/google_summer_of_code/2019_FonNoel)
 
-* [Drumil Patel](2019_DrumilPatel)
+* [Drumil Patel](/developer/google_summer_of_code/2019_DrumilPatel)
 
-* [Anubhav Singh](2019_AnubhavSingh)
+* [Anubhav Singh](/developer/google_summer_of_code/2019_AnubhavSingh)
 
-* [Xiao Han](2019_XiaoHan)
+* [Xiao Han](/developer/google_summer_of_code/2019_XiaoHan)
 
 Submitty participated in [Google Summer of Code 2018](https://summerofcode.withgoogle.com/archive/2018/projects/):
 
 
-* [Discussion Forum by Gagan Kumar](2018_GaganKumar)
+* [Discussion Forum by Gagan Kumar](/developer/google_summer_of_code/2018_GaganKumar)
 
-* [Instructor Interface for Plagiarism Detection by Tushar Gurjar](2018_TusharGurjar)
+* [Instructor Interface for Plagiarism Detection by Tushar Gurjar](/developer/google_summer_of_code/2018_TusharGurjar)
 
