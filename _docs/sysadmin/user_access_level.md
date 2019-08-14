@@ -20,7 +20,7 @@ table, `user_access_level` column.
 * **Faculty = 2**  
     This category of user should be limited to faculty
     at your institution.  Faculty users can make new courses,
-    restricted toqterms that have already been defined, and
+    restricted to terms that have already been defined, and
     limited to sharing a Linux group of one of their pre-existing
     courses.
 
@@ -46,7 +46,7 @@ following groups.
 
 * **Instructor = 1**  
     Instructors can add students and graders to the
-    course, change the group or role of users in the course, mange 
+    course, change the group or role of users in the course, manage 
     registration and rotating sections, create and edit gradeables,
     upload course materials, etc.
 
@@ -78,10 +78,10 @@ following groups.
     will not be able to access the course.
 
 
-_NOTE:_ User Access Level for the system is a separate from User Group
+_NOTE:_ User Access Level for the system is separate from User Group
 for each course.  Typically users with **Faculty** User Access Level
 will be in the **Instructor** Group for each of their courses, but
-this is not required.  In fact, it can be helpful to for faculty users
+this is not required.  In fact, it can be helpful for faculty users
 to explore the Submitty interface for a specific course as a member of
 the **Student** User Group.  And sometimes it is useful to put the
 head graduate teaching assistant in the **Instructor** group for a
