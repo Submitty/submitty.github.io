@@ -25,6 +25,7 @@
     - name: Team Assignments
     - name: Discussion Forum
     - name: Notifications & Email
+      link: notifications
 
 - name: TA or Grader
   link: grader
