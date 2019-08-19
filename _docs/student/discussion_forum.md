@@ -17,6 +17,8 @@ are the code blocks (fixed width font) and external url links.  We provide
 quick link buttons to insert the markdown formatting characters for
 these features into your post.
 
+The discussion forum does not support image markdown (`![alt](linkToImage)`). Markdown syntax for images will be converted to a hyperlink. 
+
 _TODO: ADD EXAMPLES & SCREENSHOTS_
 
 _TODO: ADD LINK TO MORE COMPLETE MARKDOWN TUTORIAL_
