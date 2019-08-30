@@ -51,6 +51,11 @@ From `Submitty/site` you can run the command `vendor/bin/phpunit --configuration
 During development you can run individual test classes by giving a path to a test class as the second argument, for example the command from `Submitty/site`
 `vendor/bin/phpunit tests/app/authentication/DatabaseAuthenticationTester.php` will run only the test methods in DatabaseAuthenticationTester.php
 
+You can run individual test functions by passing in the `--filter` flag, e.g:
+```
+vendor/bin/phpunit --filter myTestFunction tests/app/examplePath/exampleClass.php
+```
+
 You can pass in the `--debug` flag when using PHPUnit to see PHP output, this can be useful when writing new tests.
 
 After running the testing suite you can see code coverage output under `Submitty/site/tests/report`.
