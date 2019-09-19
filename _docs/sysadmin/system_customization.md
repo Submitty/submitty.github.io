@@ -170,7 +170,7 @@ However, this should be only applied to the `php.ini` running the web server and
 
 ### Increasing the max number of files that can be uploaded at once
 
-By default PHP restricts uploading 20 files at a time. To change this limit, edit:
+By default, PHP only allows 20 files to be uploaded at a time. To change this limit, edit:
 
 ```
 /etc/php/7.2/fpm/php.ini
@@ -182,17 +182,9 @@ and modify the variable:
 upload_max_filesize
 ```
 
-Then restart PHP and apache
+Then restart PHP
 ```
-sudo systemctl restart apache2.service
-sudo systemctl restart php7.2-fpm.service
-```
-
-and/or
-
-```
-sudo service apache2 restart
-sudo service php7.2-fpm restart
+systemctl reload php7.2-fpm
 ```
 
 ### Allowing Large Student File Upload Submissions
