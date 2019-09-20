@@ -221,6 +221,13 @@ running `--filter testFoo` will run them both. Alternatively, you can also direc
 `vendor/bin/phpunit tests/app/authentication/DatabaseAuthenticationTester.php` will run
 only the test methods in `DatabaseAuthenticationTester.php`.
 
+The two concepts above can be combined to run a specific test function in a specific
+class by doing:
+
+```bash
+vendor/bin/phpunit -c tests/phpunit.xml --filter testFunction tests/app/path/to/TestClass.php
+```
+
 You can pass in the `--debug` flag when using PHPUnit to see PHP output, this can be
 useful when writing new tests.
 
