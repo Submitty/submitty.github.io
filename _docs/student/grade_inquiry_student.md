@@ -66,4 +66,12 @@ state. This is useful if either the grader closed the inquiry or the student can
 
 To reopen the grade inquiry the student must type write a response and click the blue 'Reopen Grade Inquiry'. The student must write a response.
 
+### Grade Inquiry Per Component
 
+If an instructor enables grade inquiry per component for a gradeable, the student can make a grade inquiry that references a specific question. For example, assume there is a component of the gradeable named Read Me and a component named Documentation. A student can make two separate grade inquiries for each of these components. The grader(s) who graded that component will get notified if they are a grader that can be shown.
+
+![](/images/grade_inquiry/student_grade_inquiry_per_component.PNG)
+
+The 'All' tab is not a tab students can post grade inquiries in, but from that tab students can see all posts and what component it was posted in.
+
+![](/images/grade_inquiry/student_all_tab_grade_inquiry_per_component.PNG) 
