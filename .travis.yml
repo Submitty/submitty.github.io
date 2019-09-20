@@ -1,0 +1,15 @@
+language: ruby
+
+# get this version from https://github.com/github/pages-gem/blob/master/.ruby-version
+rvm:
+  - 2.5.3
+
+before_install:
+  - gem update --system
+  - gem install bundler
+
+install:
+  - bundle install
+
+script:
+  - bundle exec jekyll build
