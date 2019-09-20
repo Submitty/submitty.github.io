@@ -94,7 +94,6 @@ to be used within a group of tests. This is known state is called a _fixture_
 for the test, and they can be defined around each test, or around all tests in
 a class.
 
-
 To setup a fixture that are run around each individual test, you can use the
 `setUp` and `tearDown` functions. These are defined by doing:
 
