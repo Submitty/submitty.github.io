@@ -20,9 +20,10 @@ functions in the tester class can be private, public, or protected and they will
 ignored as long as they do *not* begin with the word "test". For example, `createMockUser`
 will not be run, while `testUploadOneBucket` would be.
 
-Each test method should make an assertion, such as `assertTrue` or `assertFalse`,
-otherwise the test will get labeled as a "risky test" by PHPUnit. You can find a list
-of all PHPUnit assertions [here](https://phpunit.readthedocs.io/en/latest/assertions.html).
+Each test method should make an assertion, such as `assertTrue`, `assertFalse`,
+`assertSame`, otherwise the test will get labeled as a "risky test" by PHPUnit. You can
+find a list of all PHPUnit assertions
+[here](https://phpunit.readthedocs.io/en/latest/assertions.html).
 
 Most tests for controllers in Submitty assert against the JSON response sent back, the
 specifications for Submitty's JSON responses can be found [here](../json_responses).
@@ -33,6 +34,58 @@ Here are some example Unit tests:
 - [AuthenticationControllerTester.php](https://github.com/Submitty/Submitty/blob/master/site/tests/app/controllers/AuthenticationControllerTester.php)
 - [AbstractDatabaseTester](https://github.com/Submitty/Submitty/blob/master/site/tests/app/libraries/database/AbstractDatabaseTester.php)
 - [CourseTester.php](https://github.com/Submitty/Submitty/blob/master/site/tests/app/models/CourseTester.php)
+
+## Parameterized Testing
+
+Sometimes, while writing tests, you may find yourself wanting to test the same piece of
+code, but just needing to change one variable. To handle this, you ca use the concept
+of _Paramterized Tests_. To do this, you will add a _Data Provider_ to your test
+function. The data provider is a function that returns an array or generator that is
+then passed to your test function. The test function is linked to the data provider, by
+adding a `@dataProvider` annotation. The data provider function should return an array of
+arrays where each inner array is the list of arguments that will be passed to your test
+function. Here is an example of this all put together:
+
+```php
+public function additionProvider() {
+    return [
+        [0, 0, 0],
+        [0, 1, 1],
+        [1, 0, 1],
+        [1, 2, 3]
+    ];
+}
+
+/**
+ * @dataProvider additionProvider
+ */
+public function testAddition($num_1, $num_2, $expected) {
+    $this->assertSame($expected, $num_1 + $num_2);
+}
+```
+
+As mentioned above, you can use
+[Generators](https://www.php.net/manual/en/language.generators.overview.php)
+for the return of a data provider, which helps to minimize memory usage
+if constructing larger objects. The above example using generators would look like:
+
+```php
+public function additionProvider() {
+    yield [0, 0, 0];
+    yield [0, 1, 1];
+    yield [1, 0, 1];
+    yield [1, 2, 3];
+}
+
+/**
+ * @dataProvider additionProvider
+ */
+public function testAddition($num_1, $num_2, $expected) {
+    $this->assertSame($expected, $num_1 + $num_2);
+}
+```
+
+For more details, see [PHPUnit Data Providers](https://phpunit.readthedocs.io/en/latest/writing-tests-for-phpunit.html#data-providers).
 
 ## Test Setup/Teardown
 
