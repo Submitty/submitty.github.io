@@ -3,56 +3,187 @@ title: Writing Unit Tests
 category: Developer
 order: 2
 ---
-Documentation for PHPUnit can be found [here](https://phpunit.readthedocs.io/en/8.2/)
+Documentation for PHPUnit can be found [here](https://phpunit.readthedocs.io/en/latest/).
 
+PHP unit tests are located at `Submitty/site/app/tests`. The test structure should
+mirror the actual source code  structure, except that every class in the tests
+directory has the suffix *Tester* at the end. For example a test for the
+`SubmissionController.php` class would be called `SubmissionControllerTester.php` in
+the tests directory. The namespace for the test class should be same as the base
+class, with the addition of a `tests\` prefix.
 
-PHP unit tests are located at `Submitty/site/app/tests`. The test structure should mirror the actual source code structure, except that every class in the tests directory has the suffix *Tester* at the end. For example a test for the `SubmissionController.php` class would be called 
-`SubmissionControllerTester.php` in the tests directory.
+Each tester class should minimally extend `PHPUnit\Framework\TestCase`, however, there
+are a number of useful utility functions in `BaseUnitTest` that it may be beneficial
+to extend off that instead. Individual methods should be public and
+being with the word "test" in lowercase in order for PHPUnit to run them. Helper
+functions in the tester class can be private, public, or protected and they will be
+ignored as long as they do *not* begin with the word "test". For example, `createMockUser`
+will not be run, while `testUploadOneBucket` would be.
 
-Each tester class should extend `BaseUnitTest`. Individual methods should be public and being with the word "test" in lowercase in order for PHPUnit to run them. Helper functions in the tester class can be private, public, or protected and they will be ignored as long as they do *not* begin with the word "test". For example 
+Each test method should make an assertion, such as `assertTrue` or `assertFalse`,
+otherwise the test will get labeled as a "risky test" by PHPUnit. You can find a list
+of all PHPUnit assertions [here](https://phpunit.readthedocs.io/en/latest/assertions.html).
 
-Most tests in Submitty assert against the JSON response sent back, the specifications for Submitty's JSON responses can be found [here](../json_responses)
+Most tests for controllers in Submitty assert against the JSON response sent back, the
+specifications for Submitty's JSON responses can be found [here](../json_responses).
 
 Here are some example Unit tests:
+
 - [SubmissionControllerTester.php](https://github.com/Submitty/Submitty/blob/master/site/tests/app/controllers/submission/SubmissionControllerTester.php)
 - [AuthenticationControllerTester.php](https://github.com/Submitty/Submitty/blob/master/site/tests/app/controllers/AuthenticationControllerTester.php)
 - [AbstractDatabaseTester](https://github.com/Submitty/Submitty/blob/master/site/tests/app/libraries/database/AbstractDatabaseTester.php)
 - [CourseTester.php](https://github.com/Submitty/Submitty/blob/master/site/tests/app/models/CourseTester.php)
 
-```php
-protected function createMockUser()
-```
-Will not be ran by PHPUnit, whereas 
-```php
-public function testUploadOneBucket()
-```
-will be.
+## Test Setup/Teardown
 
-You can initialize data for tests using the `setUp` function:
+When running tests, it's often times useful to be able to define a common state
+to be used within a group of tests. This is known state is called a _fixture_
+for the test, and they can be defined around each test, or around all tests in
+a class.
+
+
+To setup a fixture that are run around each individual test, you can use the
+`setUp` and `tearDown` functions. These are defined by doing:
+
 ```php
-public function setUp(): void{
-	//init
+// Runs before a test
+public function setUp(): void {
+    // setup
+}
+
+// Runs after a test
+public function tearDown(): void {
+    // cleanup
 }
 ```
-The `tearDown` function is used to clean up after a test
+
+*Note: you only need to remove external resources during tearDown such as new files
+created during setUp, or to unset global variables.*
+
+Alternatively, if a group of tests are all going to share the same variable or resource,
+you can define a setUp and tearDown that will run once per class by doing:
+
 ```php
-public function tearDown(): void{
-	//cleanup
+// Runs before all tests in class
+public static function setUpBeforeClass(): void {
+    // setup
+}
+
+public static function tearDownAfterClass(): void {
+    // cleanup
 }
 ```
-*Note: you only need to remove external resources during tearDown such as new files created during setUp, or to unset global variables.*
 
-Each test method should make an assertion, such as `assertTrue` or `assertFalse`, otherwise the test will get labeled as a "risky test" by PHPUnit. You can find a list of all PHPUnit assertions [here](https://phpunit.readthedocs.io/en/8.2/assertions.html)
+For more information, see [PHPUnit Fixtures](https://phpunit.readthedocs.io/en/latest/fixtures.html).
+
+## Mocking
+
+Often times while writing and running the tests, it is useful to create _Test Doubles_
+or _mocks_, allowing you to abstract away a test from requiring difficult to setup
+classes or resources. A chief example of this is creating a mock for the database
+layer, so that one not need PostgreSQL setup for running the unit tests. By creating a
+mock, you can precisely define what the methods should return, allowing a much easier
+time testing certain conditions or parts of code.
+
+For PHPUnit, you can easily create a mock class by doing:
+
+```php
+$mock = $this->createMock(ConcreteClass::class); // create mock object
+$mock
+    ->expects($this->once()) // define how many times the method will be called
+    ->method('method_name') // what method to mock
+    ->willReturn(true); // what calling the mocked method will return
+```
+
+Due to the dynamic nature of how method calls work for models, mocking for them is
+slightly more cumbersome. If you wish to mock a model, it is easiest to just use the
+`createMockModel` function in `BaseUnitTest`. Similarily, to avoid some amount of the
+boilerplate of setting up all necessary pieces of using a mock of `Core` (such as
+having query interface, mock user, etc.), you can use `createMockCore`.
+
+For more information on mocks, and the things you can do with them, see
+[PHPUnit Test Doubles](https://phpunit.readthedocs.io/en/latest/test-doubles.html).
+
+For mocking PHP builtin functions like `header`, `setcookie`, `die`, etc, we use the
+[php-mock-phpunit](https://github.com/php-mock/php-mock-phpunit) library that adds an
+extension to PHPUnit. Usage of this relies on how
+[PHP Namespaces work](https://www.php.net/manual/en/language.namespaces.rules.php). For
+example, imagine you have the following code:
+
+```php
+<?php
+
+namespace app;
+
+die("test");
+```
+
+Running this, `die` will first attempt to execute a function at `app\die()` and if that
+does not exist, run the global definition. `php-mock-phpunit` uses this concept, and
+allows us to define the builtins relative to the namespace of a class being tested.
+For the following example, we will assume the class you are trying to test has the
+namespace of `app\libraries`. Creating a function mock is then similar to creating
+a class mock:
+
+```php
+$mock = $this->getFunctionMock("app\\libraries", "time");
+$mock
+    ->expects($this->once()) // how many times will function be called
+    ->willReturn(3); // value to return on function usage
+```
+
+This only works if you leave the function
+call unqualified, and so do not qualify them by adding a leading slash, so for the
+above example, do not do `\die()`, use `die()`. Additionally, due to a bug/quirk
+of the PHP engine, you will want to add the `@runInSeparateProcess` annotation above
+any test that mocks builtins:
+
+```php
+/**
+ * @runInSeparateProcess
+ */
+public function testBuiltin() {
+    $time = $this->getFunctionMock("app\\libraries", "time");
+    // rest of the test
+}
+```
+
+_Note: While mocking is useful and powerful, you should attempt to use a real concrete
+definition as much as possible as mocks will not necessarily capture behavior changes
+in the mocked class that can yield subtle bugs._
 
 ## Running Tests
 
-From `Submitty/site` you can run the command `vendor/bin/phpunit --configuration tests/phpunit.xml` to start the testing suite.
+From `Submitty/site` you can run the command
+`vendor/bin/phpunit --configuration tests/phpunit.xml` to start the testing suite.
 
-During development you can run individual test classes by giving a path to a test class as the second argument, for example the command from `Submitty/site`
-`vendor/bin/phpunit tests/app/authentication/DatabaseAuthenticationTester.php` will run only the test methods in DatabaseAuthenticationTester.php
+To run just an individual class or test, you can use the `--filter` flag on PHPUnit.
+For example, to run the function `testInvalidProperty` would be
+`vendor/bin/phpunit -c tests/phpunit.xml --filter testInvalidProperty` and running all
+of `AccessControlTester` would be
+`vendor/bin/phpunit -c tests/phpunit.xml --filter AccessControlTester`. Be aware, filter
+can match aaginst partial strings, so if you have two tests `testFoo` and `testFooBar`,
+running `--filter testFoo` will run them both. Alternatively, you can also directly run
+`phpunit` against a specific class by passing the path to the test class directly to
+`phpunit`, for example
+`vendor/bin/phpunit tests/app/authentication/DatabaseAuthenticationTester.php` will run
+only the test methods in `DatabaseAuthenticationTester.php`.
 
-You can pass in the `--debug` flag when using PHPUnit to see PHP output, this can be useful when writing new tests.
+You can pass in the `--debug` flag when using PHPUnit to see PHP output, this can be
+useful when writing new tests.
 
-After running the testing suite you can see code coverage output under `Submitty/site/tests/report`.
+## Code Coverage
 
-*Note code coverage will only be generated after running the entire test suite.*
+_Note, to view code coverage information, you will need either
+[xdebug](https://xdebug.org/) or [pcov](https://github.com/krakjoe/pcov). If not using
+the debugger in xdebug, it is recommended to use pcov as it is orders of magnitude
+faster (~ 1 min vs ~15 min).
+
+Assuming you have one of the two above installed, after running the test suite, or some
+part of it, a report is generated showing the code coverage of tests in
+`Submitty/site/tests/report`. While the concept of increasing code coverage is good,
+please make sure you are writing tests to properly validate behavior, show edge
+cases, etc. and not just for the sake of increasing the code coverage number.
+
+*Note code coverage will only be generated for the tests you run, and will overwrite
+previously generated code coverage reports.*
