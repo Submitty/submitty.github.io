@@ -38,7 +38,19 @@ graders and individual students to have a discussion on their work.
 See also [Opening a Grade Inquiry](../student/grade_inquiry_student) and
 [Resolving a Grade Inquiry](../grader/grade_inquiry_grader).
 
+### Grade Inquiry Per Component
 
+There is also an option to allow grade inquiries to be made for specific grading components. This feature is called grade inquiry per component. With this feature enabled, the grader who graded the component that grade inquiry is under will get notified if the grader can be shown.
+
+To activate grade inquiry per component, go to the edit gradeable for the desired gradeable. If grade inquiries are enabled, the 'Will grade inquiries per component be enabled for this assignment?' option will be shown. Make sure 'yes' is selected.
+
+![](/images/grade_inquiry/grade_inquiry_per_component_allowed.PNG)
+
+If this option is selected when grade inquiries have already been made, all the grade inquiry posts will be in the all tab and if the grade inquiry was unresolved the grader can resolve it from the all tab. Once they resolve it, that grade inquiry can not be reopened. If desired, another grade inquiry must be made under a component.
+
+![](/images/grade_inquiry/grader_all_grade_inquiry.PNG)
+
+On the other hand, if this option is deselected when grade inquiries per components have already been made, all post will still be shown however the statuses will be missing. It is not recommended to toggle grade inquiry per component once students can inquiry. 
 
 
 

@@ -27,7 +27,6 @@ fill or update classlists on a cron schedule._
   * [Expected Term Code](#expected-term-code)
   * [Windows Encoding Conversion](#windows-encoding-conversion)
   * [End of Line Detection](#end-of-line-detection)
-  * [About "allow_url_fopen"](#about-allow_url_fopen)
   * [Timezone](#timezone)
 8. [PAM Authentication and `accounts.php`](#8-pam-authentication-and-accountsphp)
 
@@ -142,17 +141,6 @@ sudo chmod 0600 config.php
 --- | ---
 `-h` `--help`    | Extended help including usage and argument list.
 `-t [term code]` | Manually set the term code.
-`-g`             | Guess the term code based on calendar month and year.
-
-Notes:
-- `-t` _and_ `-g` are mutually exclusive, but one or the other is required.
-- `-g` will guess the semester code in the form of **TYY**.
-  - **T** is the term:
-    - **s** for Spring (Jan - May)
-    - **u** for Summer (Jun - Jul)
-    - **f** for Fall (Aug - Dec)
-  - **YY** is the two digit year.
-  - e.g. **s18** is Spring of 2018.
 
 <small>[Back To Table of Contents](#table-of-contents)</small>
 ### 7. Configuration
@@ -233,44 +221,12 @@ Consult with your University's IT department regarding _unauthenticated_ email.
 <small>[Back To Table of Contents](#table-of-contents)</small>
 #### CSV File Access
 ```php
-define('CSV_AUTH',               'remote_keypair');
-define('CSV_FILE',               '/path/to/datafile.csv');
-define('CSV_REMOTE_SERVER',      'fileserver.myuniversity.edu');
-define('CSV_AUTH_USER',          'remote_user');
-define('CSV_AUTH_PASSWORD',      null);
-define('CSV_AUTH_PUBKEY',        '/path/to/rsa_key.pub');
-define('CSV_AUTH_PRIVKEY',       '/path/to/rsa_key.pfx');
-define('CSV_PRIVKEY_PASSPHRASE', 'MySecretPassphrase');
+define('CSV_FILE', '/path/to/datafile.csv');
 ```
 
 These constants define how the CSV data can be accessed.
-* `CSV_AUTH` determines what kind of authenticated access is needed.
-   Options are `local`, `remote_password`, and `remote_keypair`.
-   * `local` means that the CSV file resides on the same computer that is executing the auto script.
-   * `remote_password` means that the CSV file resides on a different computer, and a password is required to access the CSV file (using SFTP).
-   * `remote_keypair` means that the CSV file resides on a different computer, and a private/public keypair is required to access the CSV file (using SFTP).
-     Note that there is a caveat (explained below) with using private/public keypair in Ubuntu.
-* `CSV_FILE` is the path to the _full_ file (_not_ including hostname when the file is remotely accessed).
-* `CSV_REMOTE_SERVER` is the hostname of the remote server hosting the CSV file.
-  Ignored when `CSV_AUTH` is set to `local`.
-* `CSV_AUTH_USER` is the user name used to access a remote CSV file when `CSV_AUTH` is set to `remote_password` or `remote_keypair`.
-* `CSV_AUTH_PASSWORD` is the password used to access a remote CSV when `CSV_AUTH` is set to `remote_password`.
-* `CSV_AUTH_PUBKEY` is the path to a copy of the remote server's public keyfile when `CSV_AUTH` is set to `remote_keypair`.
-* `CSV_AUTH_PRIVKEY` is the path to the local machine's private keyfile when `CSV_AUTH` is set to `remote_keypair`.
-  * Note that the local computer's _public_ key needs to be copied to the remote machine that stores the CSV.
-  * **_NEVER_** divulge the local computer's private key.
-* `CSV_PRIVKEY_PASSPHRASE` is the decryption passphrase used to read your local computer's private key.
-  * The private key does not have to be encrypted, in which case this option should be set to `null` (without quotes).
-  * **IMPORTANT** -- To use an encrypted private key with an Ubuntu SSH/SFTP host,
-    The [`libssh2`](https://launchpad.net/ubuntu/xenial/+source/libssh2) library needs be manually recompiled with [`OpenSSH`](https://www.openssh.com/) (as opposed to [`libgcrypt20-dev`](https://launchpad.net/ubuntu/xenial/+package/libgcrypt20-dev))
-    Otherwise, authentication will always fail.
-    _This is not a bug of the student auto feed script_, but an unfortunate consequence of Canonical's compiling of the [`libssh2`](https://launchpad.net/ubuntu/xenial/+source/libssh2) library.
-
-    Your options are as follows:
-    * Recompile [`libssh2`](https://launchpad.net/ubuntu/xenial/+source/libssh2) yourself.
-      _Recompiling [`libssh2`](https://launchpad.net/ubuntu/xenial/+source/libssh2) is out of the scope of Submitty, and therefore Submitty developers are unlikely to be able to provide assistance._
-    * Don't encrypt the private key (this does carry additional data security risk).
-    * Host/run the student auto feed script on a different Linux distribution or operating system.
+* `CSV_FILE` is the absolute path to the CSV data file.
+* This script does not currently support network access to the CSV data file.
 
 <small>[Back To Table of Contents](#table-of-contents)</small>
 #### CSV Delimiter
@@ -390,10 +346,7 @@ That is, the first column of the CSV is #0, the second column is #1, the third c
 <small>[Back To Table of Contents](#table-of-contents)</small>
 #### Student Registration Codes
 ```php
-define('STUDENT_REGISTERED_CODES', serialize( array(
-'RA',
-'RW'
-)));
+define('STUDENT_REGISTERED_CODES', array('RA', 'RW'));
 ```
 
 This option is a little more complicated to look at, but is actually not any more difficult than the others.
@@ -406,9 +359,7 @@ In this case, `RA` may mean "Registered by Adviser" and `RW` may mean "Registere
 * You will need to coordinate with your University's registrar or data warehouse to determine what all the enrollment codes are.
 * You will need to replace/remove/add enrollment codes to this `define` that are found in your student CSV.
 * This example has two codes, but you may have more codes or only one code.
-* Even if there is only one registration code, you _must_ have the `serialize( array(` and `)));` program code.
-  * <small>`define` is used with singular items, so `serialize` is used to "pack" an array (list) into a singular item.
-    The auto feed will "unpack" the list during runtime, thus `serialize` remains necessary even with one item lists.</small>
+* Even if there is only one registration code, you _must_ have the `array(` and `));` program code.
 * Don't forget the commas -- just like in an English list, every item (code) is separated by commas.
 * Any student not associated with a registration code as listed in this option is assumed to have dropped the course or has otherwise been unregistered for some reason.
   In which case, an update will occur in Submitty's database to reflect the student is no longer enrolled in that course.
@@ -425,7 +376,7 @@ Every term (semester) should be associated with a unique code.
 This code will have to be updated by a sysadmin, as needed.
 
 Per example, above, `201705` might be a code for the Summer 2017 semester.
-That is `201705` might be year 2017, starting month 5 (which is May).
+That is `201705` might be year 2017, starting month 5 (May).
 
 The student auto feed will check every row for this code and compare it with this `define` statement.
 Rows that do not match the `define` value will be ignored.
@@ -448,17 +399,6 @@ ini_set('auto_detect_line_endings', true);
 ```
 In summary, this `define` shouldn't be changed.
 It ensures that CSV files exported by Microsoft Excel for Macintosh are correctly processed.
-
-<small>[Back To Table of Contents](#table-of-contents)</small>
-#### About "allow_url_fopen"
-```php
-ini_set("allow_url_fopen", true);
-```
-This entry is only relevant when the student CSV file must be remotely accessed<br> (q.v. [CSV File Access](#csv_file_access)).
-Setting this value to `true` permits resolving the domain name of another server.
-Otherwise, the server would have to be accessed via IP address.
-
-This setting is irrelevant when the student CSV can be locally accessed.
 
 <small>[Back To Table of Contents](#table-of-contents)</small>
 #### Timezone

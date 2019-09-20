@@ -24,7 +24,8 @@
       link: grade_inquiry_student
     - name: Team Assignments
     - name: Discussion Forum
-    - name: Notification Settings
+    - name: Notifications & Email
+      link: notifications
 
 - name: TA or Grader
   link: grader
@@ -113,9 +114,11 @@
     - name: Installation Version Notes
       link: version_notes
       children:
+        - name: v19.08.03
         - name: v19.06.02
         - name: v.19.06.01
     - name: Database Overview
+    - name: User Access Level
     - name: Course Creation
     - name: Setting up Internal Git
       link: git
@@ -128,6 +131,7 @@
     - name: Student Auto Feed
     - name: Course Archiving
       link: course_archiving
+    - name: Rainbow Grades
 
 - name: Developer
   children:
@@ -139,6 +143,7 @@
         - name: Troubleshooting
         - name: Email Configuration
           link: vagrant_email_configuration
+        - name: Miscellaneous
     - name: PhpStorm Setup Instructions
       link: phpstorm
     - name: Database Design
@@ -170,10 +175,20 @@
     - name: Configuring Tie In Programs
     - name: Router
     - name: API
+      link: https://api.submitty.org
+      extern: true
+    - name: Google Summer of Code
       children:
-        - name: Authentication
-        - name: Courses
-    - name: GSOC2018_TusharGurjar
-      link: GSOC2018_TusharGurjar
-    - name: GSOC2018_GaganKumar
-      link: GSOC2018_GaganKumar
+        - name: 2019 Fon Noel
+          link: 2019_FonNoel
+        - name: 2019 Drumil Patel
+          link: 2019_DrumilPatel
+        - name: 2019 Anubhav Singh
+          link: 2019_AnubhavSingh
+        - name: 2019 Xiao Han
+          link: 2019_XiaoHan
+        - name: 2018 Tushar Gurjar
+          link: 2018_TusharGurjar
+        - name: 2018 Gagan Kumar
+          link: 2018_GaganKumar
+

@@ -57,3 +57,17 @@ student initiates a grade inquiry or regrade request via email or in
 person during office hours.  
 
 ![](/images/grade_inquiry/instructor_grade_inquiry_submit.PNG)
+
+### Grade Inquiry Per Component
+
+If grade inquiry per component is enabled, grade inquiries can be made for a specific component. For example, assume there is a component of the gradeable named Read Me and a component named Documentation. Now two separate grade inquiries can be made for each of these components. The grader(s) who graded that component will get notified if they are a grader that can be shown.
+
+![](/images/grade_inquiry/grader_grade_inquiry_per_component.PNG)
+
+The 'All' tab is not a tab graders can post grade inquiries in, but from that tab graders can see all posts and what component it was posted in.
+
+![](/images/grade_inquiry/grader_all_tab_grade_inquiry_per_component.PNG) 
+
+In the rare case this feature is turned on when there are already normal grade inquiries, the grade inquiry will still be accessible from the all tab. If only the grade inquiry is unresolved, then only the grader can respond and resolve the grade inquiry. After the grade inquiry is resolved further grade inquiry actions for that grade inquiry are disabled. If further actions are needed a new grade inquiry should be made under the correct component.
+
+![](/images/grade_inquiry/grader_all_grade_inquiry.PNG)
