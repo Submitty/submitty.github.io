@@ -210,4 +210,4 @@ _Note: These instructions should be run under root/sudo._
 - **Installation Fails During NTP Setup**
   1.  This is indicative that you installed the Ubuntu 18.04 "Live" server.
       "Live" server is unsupported.  Please install the traditional server.
-      Please see the [Server OS](server_os) page for more details.
+      Please see the [Server OS](/sysadmin) page for more details.
