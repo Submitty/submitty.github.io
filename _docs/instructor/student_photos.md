@@ -6,41 +6,40 @@ order: 9
 
 In a large class, it can be difficult for instructors, full-access graders, and
 limited-access graders to learn the names of their students.  The Student Photos page is accessed from
-a blue button at the top of the course main page.  Instructors can upload .png photos of
+a blue button at the top of the course main page.  Instructors can upload photos of
 their students and view all uploaded students’ photos. Full-access graders and
 limited-access graders also have access to this page. Full-access graders can
 see photos of all students in the course, while limited-access graders can only see the photos of
-the students in their assigned registration sections.  
+the students in their assigned registration sections.
 
 * Prior to photo upload:
-  ![](/images/student_photos_empty_pic.png)  
+  ![](/images/student_photos_empty_pic.png)
 
 * After photo upload:
-  ![](/images/student_photos_uploaded_pic.png)  
+  ![](/images/student_photos_uploaded_pic.png)
 
 
 ### How to Upload Photos
 
   * _Note: Please use Google Chrome to upload images._
 
-  * Photos must be .png file format and must be named with the
-    students username (lowercase), e.g., `smithj.png`
+  * Photos must be a valid image (`png`, `jpeg`, `jpg`, or `gif`) and must
+    be named with the students username (lowercase), e.g., `smithj.png`
 
   * Click the "Upload Student Photos" button on the top right hand side
     of the page.  This option is only available to instructors.
 
-    ![](/images/student_photos_upload_button.png)  
+    ![](/images/student_photos_upload_button.png)
 
   * You may drag and drop or click to launch a file browser.  Select
-    one or more .png files, and/or one or more zip files of .png files.
-  
+    one or more image files, and/or one or more zip files of image files.
+
     ![](/images/student_photos_upload_form.png)
 
     The total file size per upload should not exceed 10mb or 10240 kb.
-    
+
   * After hitting submit, if it does not automatically refresh after a
     couple seconds, please refresh the page.
-
 
 
 ### Photo Scraper
