@@ -43,7 +43,7 @@ to start over, you would need to do:
 ```
 sudo su postgres
 psql -c "CREATE DATABASE submitty;"
-psql -d submitty -f /usr/local/submitty/GIT_CHECKOUT/Submitty/migration/data/submitty_db.sql
+psql -d submitty -f /usr/local/submitty/GIT_CHECKOUT/Submitty/migration/migrator/data/submitty_db.sql
 psql -d submitty -c "alter schema public owner to submitty_dbuser;"
 ```
 
