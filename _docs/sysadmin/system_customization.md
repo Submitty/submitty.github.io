@@ -16,6 +16,8 @@ administrators of a live Submitty installation._
 * [Secure SSH](#secure-ssh)
 * [Block some brute-force ssh connections](#block-some-brute-force-ssh-connections-by-typing-the-following-at-a-command-prompt)
 * [Disable PHP Functions](#disable-php-functions)
+* [Increasing the max number of files that can be uploaded at once](#increasing-the-max-number-of-files-that-can-be-uploaded-at-once
+)
 * [Allowing Large Student File Upload Submissions](#allowing-large-student-file-upload-submissions)
 * [Show system message to all users](#show-system-message-to-all-users)
 * [Adding Additional Links To The Footer](#adding-additional-links-to-the-footer)
@@ -166,6 +168,24 @@ However, this should be only applied to the `php.ini` running the web server and
 
 <small>[Back To Table of Contents](#table-of-contents)</small>
 
+### Increasing the max number of files that can be uploaded at once
+
+By default, PHP only allows 20 files to be uploaded at a time. To change this limit, edit:
+
+```
+/etc/php/7.2/fpm/php.ini
+```
+
+and modify the variable:
+
+```
+upload_max_filesize
+```
+
+Then restart PHP
+```
+systemctl reload php7.2-fpm
+```
 
 ### Allowing Large Student File Upload Submissions
 
