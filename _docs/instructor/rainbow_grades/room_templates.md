@@ -7,7 +7,7 @@ category: Instructor
 _NOTE: This is a work-in-progress._
 
 Room Templates works in coordination with the Rainbow Grades
-[Exam Seating](exam_customization).
+[Exam Seating](/instructor/rainbow_grades/exam_customization).
 
 
 Submitty can assist in assigning specific seats to each student for
