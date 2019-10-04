@@ -64,7 +64,7 @@ help you learn more about accessibility.
 
 #### DO NOT
 * Do not automatically assume there are no accessibility problems when no errors
-or warnings are given.  WAVE analysis is the beginning of web accessable design,
+or warnings are given.  WAVE analysis is the beginning of web accessible design,
 not the end.
     * Purple icons note that an accessibility related element has been
     identified.  WAVE cannot say if these elements are implemented correctly or
@@ -82,7 +82,7 @@ The most important word used to summarize web accessibility is *"context"*.
     * [w3schools.com article on `<label>`](https://www.w3schools.com/tags/tag_label.asp).
 * Do provide an `aria-label` property on any hyperlink, control, or other
 interactive element that has no textual label or description.  This includes
-hyperlinks anchored on a font-awesome icon.
+hyperlinks anchored on a font icon.
     * [WebAIM.org article on using `aria` labeling](https://webaim.org/techniques/forms/advanced).
 
 #### DO NOT:
@@ -92,9 +92,8 @@ hyperlinks anchored on a font-awesome icon.
 * Do not include `aria-hidden="true"` on any interactive element.
 `aria-hidden="true"` makes an element invisible to screen readers.
     * There are many Internet code examples that show `aria-hidden="true"`
-    added to font-awesome icons.  This only makes sense when an icon
-    is an non-interactive element or the icon is associated with another
-    element that can handle user interaction.
+    added to font icons.  This only makes sense when a font icon
+    is non-interactive.
 
 ### HTML, CSS, and Javascript
 
@@ -111,7 +110,7 @@ hyperlinks anchored on a font-awesome icon.
     used for outlining.
     * *Never* use `<br>` to separate paragraphs or to create spacing.
     * Do not use `<div>` in place of `<button>`.
-* Do not use `<div>` when you could use something more descriptive -
+* Do not use `<div>` when you could use something more descriptive —
 see [semantic HTML elements](https://www.w3schools.com/html/html5_semantic_elements.asp)
 * Do not place `<script>` _between_ `<head>` and `<body>`.
 * Do not use javascript to mimic a link.
