@@ -93,7 +93,7 @@ meaningfully versioned beyond being committed into this repository.
 The version of [Submitty/pdf-annotate.js](https://github.com/Submitty/pdf-annotate.js) that
 is installed to the server is handled by `.setup/bin/version.sh` where the minified
 copy of the sourcecode is gotten via HTTP and installed to `site/public/js/pdf`. This gets
-updated/installed as part of running `INSTALL_SUBMITTY.sh` to update the rest of Submitty.
+updated/installed as part of running `install_submitty.sh` to update the rest of Submitty.
 
 #### PDF.js
 

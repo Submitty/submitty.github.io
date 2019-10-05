@@ -27,14 +27,14 @@ Please also see [Installation Version Notes](version_notes)
 2.  Then re-install the Submitty source code.
 
     ```
-    sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh
+    sudo bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/install_submitty.sh
     ```
 
     If you provide the optional `restart_web` option, the script will
     also restart Apache and PHP-FPM:
 
     ```
-    sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh restart_web
+    sudo bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/install_submitty.sh restart_web
     ```
 
     One of the early steps of this script checks your system
@@ -64,8 +64,8 @@ Please also see [Installation Version Notes](version_notes)
 
 1.  First let's move your Submitty source code repository to its new suggested location:
 
-    **Old repository path suggestion:**   `/usr/local/submitty/GIT_CHECKOUT_Submitty`  
-    **New repository path suggestion:**   `/usr/local/submitty/GIT_CHECKOUT/Submitty`     
+    **Old repository path suggestion:**   `/usr/local/submitty/GIT_CHECKOUT_Submitty`
+    **New repository path suggestion:**   `/usr/local/submitty/GIT_CHECKOUT/Submitty`
 
     If you have _not_ modified any of the helper Submitty repositories
     (`GIT_CHECKOUT_Tutorial`, `GIT_CHECKOUT_AnalysisTools`, etc.) stored

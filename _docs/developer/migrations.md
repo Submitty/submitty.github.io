@@ -3,16 +3,16 @@ title: Migrations
 category: Developer
 ---
 
-We use [database migrations](https://en.wikipedia.org/wiki/Schema_migration) 
-to handle updating Submitty's databases, both in development and production, 
+We use [database migrations](https://en.wikipedia.org/wiki/Schema_migration)
+to handle updating Submitty's databases, both in development and production,
 in such a way that it is repeatable, easy to see the status of a given database,
 and that we are not left with partial DB upgrades due to a broken script.
 
-To do this, we utilize a custom migration tool written for Submitty, 
+To do this, we utilize a custom migration tool written for Submitty,
 [migrator](https://github.com/Submitty/Submitty/tree/master/migration). This tool
 can be used manually, as well as being baked into the
 installation/upgarde procedure of Submitty. For instance, running
-`/usr/local/submitty/.setup/INSTALL_SUBMITTY.sh` will apply any pending
+`bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/install_submitty.sh` will apply any pending
 migrations for all environments.
 
 The migrator tool has three distinct "environments" that all have their
@@ -112,7 +112,7 @@ directory or file structure:
     Or make changes to the complete database schema(s):
 
     `GIT_CHECKOUT/Submitty/migration/data/submitty_db.sql`
-    `GIT_CHECKOUT/Submitty/migration/data/course_tables.sql` 
+    `GIT_CHECKOUT/Submitty/migration/data/course_tables.sql`
 
 
 2.  And you should also prepare a migration file of the appropriate
@@ -148,11 +148,11 @@ directory or file structure:
     session, and then for course migration, the semester and course
     being affected. For interacting with the DB, you'll mainly just
     want to use:
-    
+
     ```
     database.execute("SQL QUERY TO RUN")
     ```
-    
+
     which will run the query automatically within a transaction that's
     started before running the migration file.
 
@@ -161,7 +161,7 @@ directory or file structure:
 
     NOTE: The `up` and `down` functions are optional to be defined and
     you can omit the function if you do not need it for your migration.
-  
+
     NOTE: In general, your `down` migration should only undo the
     necessary changes to make earlier versions of the Submitty
     software work.  For example, if your migration is adding a column
@@ -171,7 +171,6 @@ directory or file structure:
     in the future. Your `down` function may be empty.
 
     Thus, it is important to ensure that the `up` migration can be
-    re-run after the corresponding `down` migration is run.  For example, 
+    re-run after the corresponding `down` migration is run.  For example,
     your `up` function should not crash on adding the column if the column
     already exists.
-

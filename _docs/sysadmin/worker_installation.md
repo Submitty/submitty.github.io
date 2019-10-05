@@ -39,7 +39,7 @@ The user should only be used for submitty related activities.
    You will be asked to provide the name of your submitty user by the
    [CONFIGURE_SUBMITTY.sh script](https://github.com/Submitty/Submitty/blob/master/.setup/CONFIGURE_SUBMITTY.sh).
 
-5. Run installations specific to your university.  
+5. Run installations specific to your university.
    For example:  [RPI Computer Science specific installations](https://github.com/Submitty/Submitty/blob/master/.setup/distro_setup/ubuntu/rpi.sh)
 
    ```
@@ -57,8 +57,8 @@ The user should only be used for submitty related activities.
 7. Next, we must set up an ssh key so that submitty_daemon user on the primary
   machine can copy files to our worker machine.
 
-  On primary submitty:  
-  ___NOTE: ssh-keygen asks for the name of your submitty user.___  
+  On primary submitty:
+  ___NOTE: ssh-keygen asks for the name of your submitty user.___
   ___NOTE: The ssh-copy-id line requires a replacement___
   ```
   su submitty_daemon
@@ -68,7 +68,7 @@ The user should only be used for submitty related activities.
   ```
 
 8. Finally, we must add the machine to the list of workers available to our
-  primary machine. To do this:  
+  primary machine. To do this:
   *  Log on to the primary Submitty machine.
   *  Open ```/usr/local/submitty/config/autograding_workers.json``` with your favorite text editor.
   *  Add a new entry with a unique key.
@@ -79,9 +79,9 @@ The user should only be used for submitty related activities.
   *  Add the name of the submitty user on the machine as the username.
   *  Set the machine to be enabled.
 
-9. Run ```/usr/local/submitty/.setup/INSTALL_SUBMITTY.sh``` so that the changes take effect.
+9. Run ```bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/install_submitty.sh``` so that the changes take effect.
 
-10. Inside of your assignment configurations, you may now add the line  
+10. Inside of your assignment configurations, you may now add the line
   ```
     required_capabilities : 'CAPABILITY'
   ```

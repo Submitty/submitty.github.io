@@ -32,7 +32,7 @@ Please also see [Installation Version Notes](../../sysadmin/version_notes)
   vagrant destroy
   vagrant up
   ```
-  
+
   _NOTE: This process will take a bit of time (~30 minutes), and
   requires an internet connection.  It will delete any assignments
   you've uploaded to your VM installation.  And it will erase any
@@ -52,7 +52,7 @@ Please also see [Installation Version Notes](../../sysadmin/version_notes)
   ```
 
   If the vagrant box is not running, you would run the command:
-   
+
   ```
   vagrant up --provision
   ```
@@ -74,7 +74,7 @@ Please also see [Installation Version Notes](../../sysadmin/version_notes)
   And then re-install the submitty sources:
 
   ```
-  sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh clean
+  sudo bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/install_submitty.sh clean
   ```
 
 ---
@@ -83,7 +83,7 @@ Please also see [Installation Version Notes](../../sysadmin/version_notes)
 * If you've changed the script to create a new course
   (`create_course.sh`), or the schema for the course database
   (`tables.sql`), we need to delete all courses, and recreate the
-  course databases, users, and sample submission uploads.  
+  course databases, users, and sample submission uploads.
 
   _NOTE: To avoid accidental use on the live server, the partial
   reset script first checks for the existence of a .vagrant folder._
@@ -96,7 +96,7 @@ Please also see [Installation Version Notes](../../sysadmin/version_notes)
 
   ```
   sudo bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/bin/recreate_sample_courses.sh
-  ```   
+  ```
 
 
   If there are changes to the auxiliary Tutorial or AnalysisTools
@@ -108,32 +108,32 @@ Please also see [Installation Version Notes](../../sysadmin/version_notes)
 
 ---
 
-* If you've changed `INSTALL_SUBMITTY_HELPER.sh`, or if you've changed
+* If you've changed `install_submitty.sh`, or if you've changed
   any php/website files, re-install:
 
   ```
-  sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh
+  sudo bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/install_submitty.sh
   ```
 
   _NOTE: This command uses rsync and should run reasonably fast since
   it's only copying and rebuilding what has changed._
 
   If you've moved/deleted files, it's good to do a fresh install of
-  the Submitty code:  
+  the Submitty code:
 
   ```
-  sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh clean
+  sudo bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/install_submitty.sh clean
   ```
 
 ---
 
 * When working on code in the `site`, `bin`, or `sbin` directories, you can enable a watcher
   to re-install the code for those folders whenver something in them changes:
-  
+
   ```
   sudo python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/bin/code_watcher.py
   ```
-  
+
   This can be run from outside the vagrant machine by doing:
   ```
   vagrant ssh -c "python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/bin/code_watcher.py"
@@ -152,9 +152,9 @@ Please also see [Installation Version Notes](../../sysadmin/version_notes)
   In either case, run:
 
   ```
-  sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh clean
+  sudo bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/install_submitty.sh clean
   ```
-  
+
   _NOTE: The `clean` argument is usually not necessary, and
   installation runs faster without it._
 
@@ -173,11 +173,11 @@ Please also see [Installation Version Notes](../../sysadmin/version_notes)
 
   And see also [Batch Regrade Homeworks](../instructor/batch_regrade_submissions)
 
-  For convenience, here are the commands to copy-paste to install, 
+  For convenience, here are the commands to copy-paste to install,
   build all courses, and regrade everything.
 
   ```
-  sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh clean && \
+  sudo bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/install_submitty.sh clean && \
   for s in /var/local/submitty/courses/*/*; do c=`basename $s`; ${s}/BUILD_${c}.sh; done && \
   echo 'y' | /usr/local/submitty/bin/regrade.py /var/local/submitty/courses/ && \
   /usr/local/submitty/bin/grading_done.py
@@ -192,7 +192,7 @@ Please also see [Installation Version Notes](../../sysadmin/version_notes)
   ```
   /var/local/submitty/courses/s17/course_01/BUILD_course_01.sh
   ```
-   
+
   And see also [Batch Regrade Homeworks](../instructor/batch_regrade_submissions)
 
 ---
@@ -207,7 +207,7 @@ Please also see [Installation Version Notes](../../sysadmin/version_notes)
 
 ---
 
-* If you need to test time and/or date dependent elements, you can change it in the vagrant machine so 
+* If you need to test time and/or date dependent elements, you can change it in the vagrant machine so
 you don't have to wait.
 To remove the syncing and set your own time:
 
@@ -220,7 +220,7 @@ To check the date, helpful to make sure the date and time you set has stuck:
 
     ```
     date
-    ``` 
+    ```
 To sync back with the current time:
 
     ```
@@ -232,8 +232,8 @@ To sync back with the current time:
 * If the JavaScript files have changed and there are errors or you do not see the changes then you may need to clear your browser's cache
 
 
-   For Chrome: Choose the menu button, then "More tools", then "Clear browsing data"  
+   For Chrome: Choose the menu button, then "More tools", then "Clear browsing data"
 
-   For Firefox: Choose the menu button, then "Options", then "Advanced" in the "Network" tab under "Cached Web Content" click "Clear Now"  
+   For Firefox: Choose the menu button, then "Options", then "Advanced" in the "Network" tab under "Cached Web Content" click "Clear Now"
 
-   For Edge: Choose the Hub icon then the History icon, then "Clear all history"  
+   For Edge: Choose the Hub icon then the History icon, then "Clear all history"

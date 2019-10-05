@@ -17,7 +17,7 @@ same machine.  In more complex use cases Submitty can be configured to
 ship jobs from the *primary* machine to one or more *worker* machines.
 This can be useful to manage very large numbers of submissions near
 deadlines, or to facilitate use of specific hardware or extra
-resources for certain assignments.  
+resources for certain assignments.
 
 Automated grading of multiple homeworks can be done in parallel.  The
 system administrator should adjust the Submitty configurations
@@ -54,7 +54,7 @@ number:
 2. Then re-install Submitty:
 
    ```
-   sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh
+   sudo bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/install_submitty.sh
    ```
 
    _NOTE: If you delete the `autograding_workers.json` file and re-run
@@ -88,8 +88,8 @@ number:
 
    _NOTE: You may specify that no autograding should be done on the primary machine
    and instead ship all autograding tasks to the worker machines by specifying
-   `num_autograding_workers` to be zero for the `"primary"` machine._  
-   
+   `num_autograding_workers` to be zero for the `"primary"` machine._
+
 
 2. Setting up the worker machine(s):
 
@@ -97,7 +97,7 @@ number:
       for the worker machine.
 
       _TODO: Write these instructions._
-      
+
    2. Create the user account that will have access to send files from
       the primary machine to the worker machine.  In our example we
       name that user account `submitty`.  That user account must be in
@@ -115,7 +115,7 @@ number:
 3. Next, create homework assignment autograding configurations that
    specify jobs that should be shipped.  In your `config.json` file,
    add the `"required_capabilities"` field:
-  
+
    ```
    "required_capabilities" : "extra_ram"
    ```
@@ -131,7 +131,7 @@ number:
 
 ---
 
-## Debugging 
+## Debugging
 
 To debug new features for autograding, it can be helpful to run
 `submitty_autograding_shipper.py` and `submitty_autograding_worker.py`
@@ -172,7 +172,7 @@ To do this:
    sudo systemctl start submitty_autograding_shipper
    sudo systemctl start submitty_autograding_worker
    ```
-   
+
    or
 
    ```
@@ -187,7 +187,7 @@ To do this:
    sudo systemctl status submitty_autograding_worker
    ```
 
-_NOTE: When you re-run `sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh`, it will stop and
+_NOTE: When you re-run `sudo bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/install_submitty.sh`, it will stop and
 restart the autograding shipper and worker if it is running.  (But it
 will not start the scheduler, if it is not currently running.)_
 
@@ -205,7 +205,7 @@ The following script will stop and restart all of the shippers &
 workers on the primary and worker machines, in the right order.
 
 ```
-sudo python3 /usr/local/submitty/sbin/restart_shipper_and_all_workers.py 
+sudo python3 /usr/local/submitty/sbin/restart_shipper_and_all_workers.py
 ```
 
 If one of the remote machines is not reachable, its use will be
