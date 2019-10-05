@@ -151,7 +151,9 @@ _Note: These instructions should be run under root/sudo._
    can better secure your DB if you don't plan to connect to it via localhost,
    IP, etc. The socket by default is run at `/var/run/postgresql`. To disable
    TCP, you will need to edit `/etc/postgresql/9.5/main/pg_hba.conf` and
-   disable all the lines that start with `host` and `hostssl`.
+   disable all the lines that start with `host` and `hostssl`. You will need
+   to re-run `CONFIGURE_SUBMITTY.py` to update the database host to point to
+   the socket, and re-run `install_submitty.sh`.
 
    NOTES:
    - When using Ubuntu 18.04, the configuration file path to disable TCP is
