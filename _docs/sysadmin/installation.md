@@ -33,7 +33,7 @@ _Note: These instructions should be run under root/sudo._
    ```
    bash -c "$(curl -s https://raw.githubusercontent.com/Submitty/Submitty/master/.setup/bootstrap.sh)"
    ```
-   
+
    or clone the git repository and run the installer (requires git and lsb-release to be installed):
 
    ```
@@ -63,7 +63,7 @@ _Note: These instructions should be run under root/sudo._
    you with the specified name & password.
 
 
-4. Run installations specific to your university.  
+4. Run installations specific to your university.
    For example:  [RPI Computer Science specific installations](https://github.com/Submitty/Submitty/blob/master/.setup/distro_setup/ubuntu/rpi.sh)
 
    ```
@@ -151,9 +151,7 @@ _Note: These instructions should be run under root/sudo._
    can better secure your DB if you don't plan to connect to it via localhost,
    IP, etc. The socket by default is run at `/var/run/postgresql`. To disable
    TCP, you will need to edit `/etc/postgresql/9.5/main/pg_hba.conf` and
-   disable all the lines that start with `host` and `hostssl`. You will also
-   have to modify `/usr/local/submitty/.setup/INSTALL_SUBMITTY.sh` and change
-   `DATABASE_HOST` to point to the socket, and then re-run the script.
+   disable all the lines that start with `host` and `hostssl`.
 
    NOTES:
    - When using Ubuntu 18.04, the configuration file path to disable TCP is

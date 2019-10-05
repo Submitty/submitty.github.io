@@ -11,7 +11,7 @@ can be broken down largely into a couple of categories:
 4. Front-End Libraries
 
 ## Other Submitty Repositories
-While much of the code that makes up Submitty resides within the primary 
+While much of the code that makes up Submitty resides within the primary
 [Submitty/Submitty](https://github.com/Submitty/Submitty) repository, there are some components
 that reside outside of it. These include:
 1. [Submitty/AnalysisTools](https://github.com/Submitty/AnalysisTools)
@@ -19,11 +19,11 @@ that reside outside of it. These include:
 1. [Submitty/RainbowGrades](https://github.com/Submitty/RainbowGrades)
 1. [Submitty/Tutorial](https://github.com/Submitty/Tutorial)
 
-Each of these dependencies are installed/updated as part of the process of running INSTALL_SUBMITTY.sh,
+Each of these dependencies are installed/updated as part of the process of running install_submitty.sh,
 which in-turn calls `.setup/bin/update_repos.sh` to either clone or update the repo as necessary. The
 version that gets installed for each of these is defined in `.setup/bin/versions.sh`. Each of these
 are cloned into `${SUBMITTY_INSTALL_DIR}/GIT_CHECKOUT/`. Additionally, we do download the
-generated binaries for the appropriate version of Submitty/AnalysisTools into 
+generated binaries for the appropriate version of Submitty/AnalysisTools into
 `${SUBMITTY_INSTALL_DIR}/SubmittyAnalysisTools` to avoid the expensive process of getting the
 whole stack toolchain to compile it on the spot.
 
@@ -46,14 +46,14 @@ analysis and test runners for some languages. These are:
 The versions that we install of these is defined in `.setup/bin/versions.sh`. These are only
 installed at initial system installation as part of `.setup/install_system.sh`. For
 each of these, we download the compiled versions of the tool and then install into the
-appropriate directory (e.g. `${SUBMITTY_INSTALL_DIR}/java_tools` for Java stuff, 
+appropriate directory (e.g. `${SUBMITTY_INSTALL_DIR}/java_tools` for Java stuff,
 `${SUBMITTY_INSTALL_DIR}/drmemory`).
 
 ## Front-End Libraries
 Submitty relies on a number of front-end JS/CSS libraries to help make it look and
-feel the way it does. Each of these are checked-in and available in the 
+feel the way it does. Each of these are checked-in and available in the
 Submitty/Submitty repository. One of the overarching goals is that Submitty should
-not make any calls to outside servers for running the UI. 
+not make any calls to outside servers for running the UI.
 
 The dependencies that fall udner this cateogry include:
 1. jQuery
