@@ -62,7 +62,7 @@ database (for course migrations).
 To see additional options, run:
 
 ```
-sudo python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/migration/migrator.py -h
+sudo python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/migration/run_migrator.py -h
 ```
 
 
