@@ -8,7 +8,7 @@ The system configuration and state are stored in several different
 types of JSON data files.  demonstration purposes we assume the system
 has a user "smithj" and assignment "hw1".  The examples below are
 relative to a top level course path
-```/var/local/submitty/f16/csci1100/```, for assignment ```hw1``` and
+```/var/local/submitty/courses/f16/csci1100/```, for assignment ```hw1``` and
 student ```smithj```. Listed are first the JSON files and then
 examples of these JSON files.
 
