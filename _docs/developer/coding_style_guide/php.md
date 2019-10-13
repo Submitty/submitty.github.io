@@ -6,18 +6,21 @@ order: 6
 
 __Minimum Version__: 7.2
 
-For PHP, we use a foundation of [PSR-1](https://www.php-fig.org/psr/psr-1/)
-and [PSR-2](https://www.php-fig.org/psr/psr-2/) and then customize from
-there. These customizations are highlighted below:
+For PHP, we use a foundation of [PSR-1](https://www.php-fig.org/psr/psr-1/) and
+[PSR-12](https://www.php-fig.org/psr/psr-12/), with some slight modifications on
+code structure and naming conventions. These customizations are shown below.
 
 ### Linting Code
 
 We use a custom standard for the [phpcs](https://github.com/squizlabs/PHP_CodeSniffer) tool,
 available at [Submitty/submitty-php-codesniffer](https://github.com/Submitty/submitty-php-codesniffer).
-You can run this against your code by running it (assuming in the `site/` directory):
+You can lint your code, assuming that you are in `site/` by doing:
+
 ```
-vendor/bin/phpcs --standard=Submitty path/to/dir/or/file.php
+vendor/bin/phpcs --standard=tests/ruleset.xml [path/to/file/or/directory]
 ```
+
+where if you leave off the path, it will analyze all files and directories for Submitty.
 
 ### Classes, Methods
 
