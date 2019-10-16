@@ -16,7 +16,7 @@ We use a custom standard for the [phpcs](https://github.com/squizlabs/PHP_CodeSn
 available at [Submitty/submitty-php-codesniffer](https://github.com/Submitty/submitty-php-codesniffer).
 You can run this against your code by running it (assuming in the `site/` directory):
 ```
-vendor/bin/phpcs --standard=Submitty path/to/dir/or/file.php
+vendor/bin/phpcs --standard=SubmittyStandard path/to/dir/or/file.php
 ```
 
 ### Classes, Methods
