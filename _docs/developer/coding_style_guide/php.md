@@ -22,6 +22,15 @@ vendor/bin/phpcs --standard=tests/ruleset.xml [path/to/file/or/directory]
 
 where if you leave off the path, it will analyze all files and directories for Submitty.
 
+Additionally, you can apply the automatic fixer to your code by running:
+
+```
+vendor/bin/phpcbf --standard=tests/ruleset.xml [path/to/file/or/directory]
+```
+
+where this can fix a large range of possible PHPCS style errors, though some may require
+manual intervention.
+
 ### Classes, Methods
 
 * The opening brace for the class MUST go on the same line as the class name; the closing brace
