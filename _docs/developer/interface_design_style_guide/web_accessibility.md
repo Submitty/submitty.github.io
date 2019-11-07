@@ -39,7 +39,7 @@ for greater detail on web accessibility.
 
 1. [Examine your interface design with WAVE](#examine-your-interface-design-with-wave)
 2. [The Most Important Concept](#the-most-important-concept)
-3. [HTML and CSS](#html-and-css)
+3. [HTML, CSS, and Javascript](#html-css-and-javascript)
 4. [All interactive controls must be usable by the keyboard](#all-interactive-controls-must-be-usable-by-the-keyboard)
 5. [All interactive controls require a textual description](#all-interactive-controls-require-a-textual-description)
 6. [Layout tables versus data tables](#layout-tables-versus-data-tables)
@@ -64,7 +64,7 @@ help you learn more about accessibility.
 
 #### DO NOT
 * Do not automatically assume there are no accessibility problems when no errors
-or warnings are given.  WAVE analysis is the beginning of web accessable design,
+or warnings are given.  WAVE analysis is the beginning of web accessible design,
 not the end.
     * Purple icons note that an accessibility related element has been
     identified.  WAVE cannot say if these elements are implemented correctly or
@@ -76,12 +76,13 @@ The most important word used to summarize web accessibility is *"context"*.
 
 #### DO:
 * Do ensure every interactive element has a clear and concise textual description.
+* Do ensure every page has a unique title.
 * Do wrap a form element's label within a `<label>` tag with associated `for` and
 `id` properties.
     * [w3schools.com article on `<label>`](https://www.w3schools.com/tags/tag_label.asp).
 * Do provide an `aria-label` property on any hyperlink, control, or other
 interactive element that has no textual label or description.  This includes
-hyperlinks anchored on a font-awesome icon.
+hyperlinks anchored on a font icon.
     * [WebAIM.org article on using `aria` labeling](https://webaim.org/techniques/forms/advanced).
 
 #### DO NOT:
@@ -91,21 +92,28 @@ hyperlinks anchored on a font-awesome icon.
 * Do not include `aria-hidden="true"` on any interactive element.
 `aria-hidden="true"` makes an element invisible to screen readers.
     * There are many Internet code examples that show `aria-hidden="true"`
-    added to font-awesome icon hyperlinks.  These examples are incorrect.
+    added to font icons.  This only makes sense when a font icon
+    is non-interactive.
 
-### HTML and CSS
+### HTML, CSS, and Javascript
 
 #### DO:
+* Do _carefully_ adhere to HTML 5 standards.
+    * w3.org provides an online [HTML validator](https://validator.w3.org/#validate_by_input).
+    Validating HTML 5 is marked "experimental", but it is still be a useful tool
+    to provide feedback on potential problems and errors.
 * Do use CSS for styling.
 
 #### DO NOT:
 * Do not use HTML for styling.
-    * *Never* use a header tag just to make text larger.  Header
-    tags should be used for outlining.
-    * *Never* use <br> to separate paragraphs or to create spacing.
-    * Do not use <div> in place of <button>.
-    * Do not use <div> when you could use something more descriptive -
-    see semantic HTML elements [here](https://www.w3schools.com/html/html5_semantic_elements.asp)
+    * *Never* use a header tag just to make text larger.  Header tags should be
+    used for outlining.
+    * *Never* use `<br>` to separate paragraphs or to create spacing.
+    * Do not use `<div>` in place of `<button>`.
+* Do not use `<div>` when you could use something more descriptive —
+see [semantic HTML elements](https://www.w3schools.com/html/html5_semantic_elements.asp)
+* Do not place `<script>` _between_ `<head>` and `<body>`.
+* Do not use javascript to mimic a link.
 
 ### All Interactive Controls Must Be Usable By The Keyboard
 Keyboard users navigate forward through a website with `TAB` and backwards with
@@ -121,6 +129,7 @@ Keyboard users navigate forward through a website with `TAB` and backwards with
 flow.
     * (using `tabindex='0'` to permit an element to receive focus is OK).
 * Do not rely solely on the `onclick()` javascript event handler.
+    * `onclick()` is OK when an equivalent `onkeypress()` handler exists.
 * Do not reprogram `TAB` without defining a different key that can be used to navigate
 to the next control.
     * Within `site/public/js/server.js` is a function, `enableTabsInTextArea()`,
@@ -161,6 +170,9 @@ text.
 * Do attain a contrast ratio of at least 4.5:1.  This is an acceptable minimum
 target in most cases.  Although achieving a contrast ratio of 7:1 or better is
 ideal.
+* Do ensure that all text is specifically assigned a color in CSS, including
+black text.
 
 #### DO NOT
 * Do not ignore contrast ratio in favor of aesthetic appeal.
+* Do not rely on users' browser settings to render black text by default.
