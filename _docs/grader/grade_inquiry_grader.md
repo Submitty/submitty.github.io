@@ -44,7 +44,7 @@ and [Enabling Grade Inquiries](../instructor/grade_inquiry_instructor).
 
 ### Reopening Grade Inquiries
 
-If a grade inquiry was prematurely closed or resolved the grader can reopen the grade inquiry by pressing the blue 'Reopen Grade Inquiry' button.
+If a grade inquiry was prematurely closed or resolved, the grader can reopen the grade inquiry by pressing the blue 'Reopen Grade Inquiry' button.
 
 ![](/images/grade_inquiry/instructor_reload_grade_inquiry.PNG)
 
@@ -60,7 +60,7 @@ person during office hours.
 
 ### Grade Inquiry Per Component
 
-If grade inquiry per component is enabled, grade inquiries can be made for a specific component. For example, assume there is a component of the gradeable named Read Me and a component named Documentation. Now two separate grade inquiries can be made for each of these components. The grader(s) who graded that component will get notified if they are a grader that can be shown.
+If grade inquiry per component is enabled, grade inquiries can be made for a specific component. For example, assume there is a component of the gradeable named ReadMe and a component named Documentation. Now two separate grade inquiries can be made for each of these components. The grader(s) who graded that component will get notified if they are a grader that can be shown.
 
 ![](/images/grade_inquiry/grader_grade_inquiry_per_component.PNG)
 

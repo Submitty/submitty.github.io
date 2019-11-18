@@ -39,7 +39,7 @@ Once you have selected all necessary files, press "Submit".
 Then wait patiently for your assignment to be graded.  The page will
 automatically refresh when grading is complete.  If the assignment is
 computationally intensive or if the server is busy grading your
-classmates work, you may need to wait longer.
+classmate's work, you may need to wait longer.
 
 
 ![](/images/Submission_Result_Buggy.png)
