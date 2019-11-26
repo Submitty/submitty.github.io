@@ -118,6 +118,36 @@ public function modifyCourseMaterialsFilePermission($filename, $checked)
 
 For more examples about `@AccessControl`, please read [the documentation in the code](https://github.com/Submitty/Submitty/blob/master/site/app/libraries/routers/AccessControl.php).
 
+#### Route for API
+
+To create a route for the [Submitty API](https://api.submitty.org), the only difference from above is prepending `/api` to
+the route definition. You can define several routes for the same method, generally having one API route and one Web route.
+Any route that uses the `/api` goes through a slightly different authentication mechanism involving
+[JSON Web Tokens](https://api.submitty.org/#authentication).
+
+For example, the following route is the API for list of courses:
+
+```php
+/**
+ * @Route("/home/courses/new", methods={"POST"})
+ * @Route("/api/courses", methods={"POST"})
+ */
+public function createCourse()
+```
+
+And an API route for a method within a course:
+
+```php
+/**
+ * @Route("/{_semester}/{_course}/users", methods={"GET"})
+ * @Route("/api/{_semester}/{_course}/users", methods={"GET"})
+ */
+public function getStudents()
+```
+
+Any API endpoint must either return a `JsonResponse` or a `RedirectResponse`
+(see [below](/developer/router#what-is-the-response-object-is-it-required) for more information).
+
 ### FAQ
 
 Here are some frequently asked questions regarding the router.
