@@ -17,6 +17,7 @@ On the developer vagrant machine, the sending of emails is simulated with the
 
    ```
    {
+       "email_enabled": true,
        "email_sender": "submitty@myuniversity.edu",
        "email_reply_to": "submitty_do_not_reply@myuniversity.edu",
        "email_server_hostname": "localhost",
