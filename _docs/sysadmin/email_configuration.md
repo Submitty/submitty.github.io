@@ -34,7 +34,7 @@ First, the Submitty server must be configured to send email:
 
     ```
     {
-      "email_enabled": "true"
+      "email_enabled": true,
       "email_user": "<SPECIAL USER NAME>",
       "email_password": "<PASSWORD FOR SPECIAL USER NAME>",
       "email_sender": "submitty@myuniversity.edu",
