@@ -83,7 +83,7 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
 
      * When merged, this PR body will be part of the documentation for
        the next Submitty release.  Thus, the contents should be
-       understandable to an average Submitty instructor use or system
+       understandable to an average Submitty instructor user or system
        administrator.  The description can include links to related
        issues or PRs, but this description should not require the user
        to follow links to have a general understanding of the PR
@@ -94,7 +94,7 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
        automatically closed when the pull request is merged.
 
      * The commit message should talk about *WHAT* changed, and
-        **WHY*. Not HOW*.  How is the diff, and you don't need to repeat
+        *WHY*. Not *HOW*.  How is the diff, and you don't need to repeat
        it.
 
      * Comments explaining the code should be *in* the code, rather than in
