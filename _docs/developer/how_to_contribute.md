@@ -26,11 +26,14 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
 * Each pull request (PR) should be addressing/closing an open issue.
   *Usually*.
 
-* The PR title should be useful and descriptive (not just the issue#).
+* The PR title should be useful and descriptive.
+
+    * The PR title should not include the issue #.  (The issue# is not
+      a meaningful description of the PR.)
 
     * Titles of PR, Issues, and commits should be <= 50 characters.  *Usually*.
 
-    * Suggested format of the PR Title:
+    * Format of the PR Title:
 
       ```
       [<TYPE>:<MODULE>] <SUBJECT>
@@ -46,8 +49,17 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
       automatically by GitHub when the PR is merged with "squash &
       merge".  Do not include this when you open a new pull request._
 
-      **IMPORTANT:** If this PR requires system administrator action
-      before/after installation, the PR title should be prefixed by
+    * Prepend '[Bugfix]' to the start of the PR title if the contribution
+      is primarily fixing an error with an existing Submitty feature.
+
+    * Prepend '[WIP]' to the start of the PR title if you would like
+      feedback / detailed review on work in progress.  This indicates
+      to the reviewers and project managers that this feature is not
+      ready to be merged into the master branch.  When it is ready to
+      merge, edit the title to remove the '[WIP]'.
+
+    * **IMPORTANT:** If this PR requires system administrator action
+      before/after installation, the PR title should be prepended with
       `[SYSADMIN ACTION]` and the commit message should describe the
       specific actions required and include links to additional
       documentation as appropriate.  For example:
@@ -65,34 +77,39 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
       make automation difficult or problematic.    
       See also: [Installation Version Notes](../sysadmin/version_notes)
 
-* Include the string `Closes #1234` or `Fixes #1234` within the top
-  comment of the PR so that GitHub issue will be automatically closed
-  when the pull request is merged.
 
-* The commit message should talk about *WHAT* changed, and *WHY*. Not
-  *HOW*.  How is the diff, and you don't need to repeat it.
 
-* Comments explaining the code should be *in* the code, rather than in
-  the PR message or comments.
+* The body of the PR should describe the purpose of the PR.
 
-* Including screenshots in the issue or PR message is helpful for UI
-  changes.
+     * When merged, this PR body will be part of the documentation for
+       the next Submitty release.  Thus, the contents should be
+       understandable to an average Submitty instructor use or system
+       administrator.  The description can include links to related
+       issues or PRs, but this description should not require the user
+       to follow links to have a general understanding of the PR
+       purpose.
 
-* The comments should explain a bit about the purpose/history/overview
-  -- don't assume the reader knows it (or link to the issue that
-  explains everything).
+     * Include the string `Closes #1234` or `Fixes #1234` within the
+       top comment of the PR so that GitHub issue will be
+       automatically closed when the pull request is merged.
 
-* Be explicit about what you want feedback on, or why you are asking
-  for specific reviewers.
+     * The commit message should talk about *WHAT* changed, and
+        **WHY*. Not HOW*.  How is the diff, and you don't need to repeat
+       it.
 
-* Prepend '[Bugfix]' to the start of the PR title if the contribution
-  is primarily fixing an error with an existing Submitty feature.
+     * Comments explaining the code should be *in* the code, rather than in
+       the PR message or comments.
 
-* Prepend '[WIP]' to the start of the PR title if you would like
-  feedback / detailed review on work in progress.  This indicates to
-  the reviewers and project managers that this feature is not ready to
-  be merged into the master branch.  When it is ready to merge, edit
-  the title to remove the '[WIP]'.
+     * Including screenshots in the issue or PR message is helpful for UI
+       changes.
+
+     * The comments should explain a bit about the
+       purpose/history/overview -- don't assume the reader knows it
+       (or link to the issue that explains everything).
+
+     * Be explicit about what you want feedback on, or why you are asking
+       for specific reviewers.
+
 
 
 
