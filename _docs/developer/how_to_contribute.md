@@ -28,35 +28,50 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
 
 * The PR title should be useful and descriptive.
 
-    * The PR title should not include the issue #.  (The issue# is not
-      a meaningful description of the PR.)
-
     * Titles of PR, Issues, and commits should be <= 50 characters.  *Usually*.
 
-    * Format of the PR Title:
+    * The PR title should not include the issue #.  
+
+    * To help developers, system administrators, and users who are
+      reading the release notes, please categorize your contribution
+      by formatting your PR title as follows:
 
       ```
       [<TYPE>:<MODULE>] <SUBJECT>
       ```
 
       Where `<TYPE>` is one of the following:  
-      `Bugfix`, `Documentation`, `Refactor`, `Dependency`, `Testing`, `Feature`, `UI/UX`, `VPAT`, etc.
+      * `Bugfix`,   
+      * `Feature`,   
+      * `Refactor`,   
+      * `Testing` (includes sample data),  
+      * `Documentation`,  
+      * `VPAT`,  
+      * `UI/UX/API` (includes mobile), or  
+      * `Dependency`.
 
       And `<MODULE>` is one of the following:  
-      `Submission`, `Forum`, `TAGrading`, `Autograding`, `RainbowGrades`, etc.
+      * `Submission` (includes bulk uploads, teams, late days and other student features),
+      * `Autograding` (includes router),   
+      * `Forum`,   
+      * `Notifications` (includes email and grade inquiries),  
+      * `TAGrading` (includes PDF annotation),  
+      * `InstructorUI` (includes course and gradeable configuration, course materials),  
+      * `RainbowGrades`, or  
+      * `System` (includes installation, migrations, vagrant).
 
-      _Note that `(#<PR NUMBER>)` is appended to the title
+      And `<SUBJECT>` adds more specific details.
+
+      _Note that `#<PR NUMBER>` is appended to the title
       automatically by GitHub when the PR is merged with "squash &
       merge".  Do not include this when you open a new pull request._
 
-    * Prepend '[Bugfix]' to the start of the PR title if the contribution
-      is primarily fixing an error with an existing Submitty feature.
-
-    * Prepend '[WIP]' to the start of the PR title if you would like
+    * Prepend `[WIP]` to the start of the PR title if you would like
       feedback / detailed review on work in progress.  This indicates
       to the reviewers and project managers that this feature is not
       ready to be merged into the master branch.  When it is ready to
-      merge, edit the title to remove the '[WIP]'.
+      merge, edit the title to remove the `[WIP]`.  Note that WIP branches
+      skip some phases of continuous integration (CI) testing.
 
     * **IMPORTANT:** If this PR requires system administrator action
       before/after installation, the PR title should be prepended with
