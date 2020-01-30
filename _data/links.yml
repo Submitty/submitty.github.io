@@ -163,6 +163,11 @@
       link: interface_design_style_guide
       children:
         - name: Web Accessibility
+    - name: Developing the PHP Site
+      children:
+        - name: Controllers
+        - name: Models
+        - name: Views
     - name: Project Ideas
     - name: How to Contribute
     - name: Autograding Tests
@@ -192,4 +197,3 @@
           link: 2018_TusharGurjar
         - name: 2018 Gagan Kumar
           link: 2018_GaganKumar
-
