@@ -5,6 +5,8 @@
       link: ../index
     - name: Tutorial
     - name: Publications
+    - name: Contact Us
+      link: ../contact
 
 - name: Student
   children:
