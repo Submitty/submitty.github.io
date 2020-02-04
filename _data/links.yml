@@ -84,6 +84,7 @@
           link: gradeables
         - name: Exam Seating
           link: exam_customization
+        - name: Room Templates
         - name: iClicker Instructions
         - name: RPI VPN on WSL Instructions
           link: wsl_vpn
