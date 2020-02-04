@@ -87,6 +87,7 @@ The user should only be used for submitty related activities.
   ```
   to ship your jobs to a worker with the capability CAPABILITY.
 
+11. Note that if you are filtering or blocking ssh traffic, you will want to whitelist connections from the main submitty server into any workers you set up.
 
 # Additional Instructions for Graphics Application Workers
 
