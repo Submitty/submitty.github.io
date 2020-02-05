@@ -91,7 +91,7 @@ Us](http://submitty.org/contact).
    systems and/or networking programming.  Experience with virtual
    machines and Docker containerization is beneficial._
 
-   _GSOC Proposal Tag:_ `docker autograding`
+   _GSOC Proposal Tag:_ `docker/containers` and `autograding`
 
 
 
@@ -120,11 +120,11 @@ Us](http://submitty.org/contact).
    assistant or instructor with experience in programming assignment
    design will be beneficial._
 
-   _GSOC Proposal Tag:_ `instructor UI`
+   _GSOC Proposal Tag:_ `autograding`
 
  
 
-4. **Mobile-Friendly Website and/or Phone/Tablet Application**
+4. **Mobile-Friendly Website and Progressive Web App (PWA)**
 
    Submitty's primary platform target are web browsers on standard
    laptop and desktop computers, where students will do their
@@ -137,6 +137,15 @@ Us](http://submitty.org/contact).
    small grading tasks such as taking attendance, and presentation of
    semester grades, our users have requested additional
    mobile-friendly access and features.
+
+   We have made good progress on revising the css for many of the
+   Submitty pages/features to successfully target a variety of display
+   resolutions.  Some of the complex pages still need to be
+   "mobile-ified": e.g., Discussion Forum, TA grading.
+
+   We would also like to explore the implementation and maintenance of
+   a progressive web app, which would leverage this website
+   re-targeting and allow push notifications.
 
    _Experience Required: Critical eye for visual design, some
    programming experience with html, css, javascript, reactive designs
@@ -173,7 +182,7 @@ Us](http://submitty.org/contact).
    assistant or instructor with experience in programming assignment
    design will be beneficial._
 
-   _GSOC Proposal Tags:_ `instructor UI` and/or `instructional materials/documentation`
+   _GSOC Proposal Tags:_ `documentation`
 
 
 
@@ -246,7 +255,7 @@ Us](http://submitty.org/contact).
    _Experience Required: Upper level coursework in programming
    languages, compilers, and/or program analysis._
 
-   _GSOC Proposal Tag:_ `static program analysis`
+   _GSOC Proposal Tag:_ `autograding`
 
 
 9. **Continuous Integration Testing**
