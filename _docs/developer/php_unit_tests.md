@@ -8,7 +8,7 @@ These are general details and instructions for testing the PHP code
 with PHPUnit. OS specific instructions are below.
 
 The primary method of testing for the PHP code is _Unit Testing_, along
-with [End to End Tests](end_to_end_tests.md)
+with [End to End Tests](end_to_end_tests)
 
 These tests require that you have
 [PHPUnit](https://phpunit.de/) on your system. PHP 7.2 or PHP 7.3 is 
