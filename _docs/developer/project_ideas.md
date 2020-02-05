@@ -3,18 +3,19 @@ title: Project Ideas
 category: Developer
 ---
 
-We are excited to announce that Submitty has been accepted as a Google Summer of
-Code (GSOC) organization for Summer 2019.  
-[https://summerofcode.withgoogle.com](https://summerofcode.withgoogle.com)  
-This is our second year participating in GSOC.  
+Submitty was proud to be selected for participation in Google Summer of Code (GSoC) in
+2018 and 2019: [https://summerofcode.withgoogle.com](https://summerofcode.withgoogle.com)  
+Through this program we have supported and mentored six fantastic students:
+[https://submitty.org/developer/google_summer_of_code](https://submitty.org/developer/google_summer_of_code)  
 
-The projects listed below target a variety of different topics and
+
+The project ideas listed below target a variety of different topics and
 require different levels of prior experience.  Work has already begun
 on many of these projects, but we are looking for new team members to
 join these projects.  Submit questions or comments on specific issues
 through our [Submitty GitHub Issue
 Tracker](https://github.com/Submitty/Submitty/issues) or [Contact
-Us](http://submitty.org/index) to join the development team.
+Us](http://submitty.org/contact).
 
 
 1. **Peer Grading**   
@@ -67,17 +68,30 @@ Us](http://submitty.org/index) to join the development team.
 
    [Publications](http://submitty.org/publications/)
 
-   We would like to use Submitty to automatically test and grade
-   homework assignments that require modifications to the operating
-   system kernel.  Before doing so on a production machine, we must
-   need to do testing to ensure the right controls are in place.
+   We provide container images appropriate for the most common
+   programming languages (Python, C/C++, Java) used in introductory
+   programming courses.
+
+   [https://hub.docker.com/u/submitty](https://hub.docker.com/u/submitty)
+
+   The next step is to facilitate the creation and server installation
+   of instructor-customized container images (with specific languages,
+   packages, databases, etc.).  Care must be taken to ensure small
+   container size and efficient performance.
+
+   Advanced project idea: We would like to use Submitty to
+   automatically test and grade homework assignments that require
+   modifications to the operating system kernel.  Before doing so on a
+   production machine, we must need to do testing to ensure the right
+   controls are in place.
+
+   [Open Issues related to Container Autograding](https://github.com/Submitty/Submitty/labels/Docker%2FDockerImages)
 
    _Experience Required: Upper level coursework experience in operating
    systems and/or networking programming.  Experience with virtual
    machines and Docker containerization is beneficial._
 
    _GSOC Proposal Tag:_ `docker autograding`
-
 
 
 
@@ -95,26 +109,11 @@ Us](http://submitty.org/index) to join the development team.
    
    [Assignment Configuration Instructions](http://submitty.org/instructor/assignment_configuration)
 
-
-   **Automated Creation of Expected Output Files**
-
-   At present, instructors must upload expected output files for each
-   autograding test case. This means that, should a test case change,
-   its expected results must be manually regenerated and updated by
-   the instructor. Rather than uploading expected output files, we
-   would like to provide instructors with the option to provide a
-   solution executable and a set of inputs. Under this model, expected
-   output files can then be generated at assignment build time.
-
-   **Randomly Generate Testcase Input**
-
-   Once the automated generation of expected output files is complete,
-   it becomes possible to generate expected output for randomly
-   generated input files. Under this model, instructors will provide a
-   set of rules for test input generation. At grading time, these
-   rules will be used to generate an input for a testcase. This input
-   will then be fed to an instructor provided solution to generate
-   expected output.
+   We have preliminary support for automated creation of expected
+   output files (from and instructor solution -- currently limited to
+   Python) and randomized test case input.  This project will include
+   documentation, examples, and extending output generation to
+   instructor solutions in compiled languages.
 
    _Experience Required: Some programming experience, willingness to
    learn web and database development.  Having served as a teaching
