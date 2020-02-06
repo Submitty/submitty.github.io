@@ -190,9 +190,8 @@ Us](http://submitty.org/contact).
    automatic updates with new data from the server.  For example, we
    have begun implementation to dynamically load new threads and posts
    in the discussion forum (without requiring the user to manually
-   refresh the page).  
-   
-   * Discussion Forum
+   refresh the page).  Other pages that will benefit from live updates
+   include:
    
    * Office Hours Queue
 
@@ -256,15 +255,15 @@ Us](http://submitty.org/contact).
 
 10. **Continuous Integration Testing**
 
-   Each commit and pull request to github launches continuous
-   integration testing of a portion of the Submitty code base.  We
-   would like to expand the code coverage of our unit and integration
-   tests.
+    Each commit and pull request to github launches continuous
+    integration testing of a portion of the Submitty code base.  We
+    would like to expand the code coverage of our unit and integration
+    tests.
 
-   _Experience Required: Advanced programming experience, experience
-   with the relevant programming languages, tuning system performance, etc._
+    _Experience Required: Advanced programming experience, experience
+    with the relevant programming languages, tuning system performance, etc._
 
-   _GSOC Proposal Tag:_ `security/testing`  
+    _GSOC Proposal Tag:_ `security/testing`  
 
 
 
