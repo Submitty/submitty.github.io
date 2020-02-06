@@ -190,54 +190,24 @@ Us](http://submitty.org/contact).
    automatic updates with new data from the server.  For example, we
    have begun implementation to dynamically load new threads and posts
    in the discussion forum (without requiring the user to manually
-   refresh the page).
-
-   Current and future development work on the forum includes:
-
-   * Team chat and direct messages.
-
-   * Assignment regrade requests via private student-grader discussion thread.
-
-   * Integration of grading tasks with forum posts and participation.
-
-   [Open Issues related to the Discussion Forum](https://github.com/Submitty/Submitty/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+forum)
-
-   [Gagan Kumar's GSOC Summer 2018 Project](/developer/GSOC2018_GaganKumar)
+   refresh the page).  
    
-   _Experience Required: Prior experience with web development (html,
-   twig, css, javascript, and ajax) and manipulating and optimizing
-   complex database queries._
+   * Discussion Forum
+   
+   * Office Hours Queue
 
-   _GSOC Proposal Tag:_ `discussion forum`
+   * Checkpoint Grading
 
+   * TA Grading
 
+   _Experience Required: Prior experience with web development and
+   asynchronous programming (php, javascript, and APIs)._
 
-
-7. **Instructor interface for Plagiarism Detection**
-
-   The design for our initial visualization of similarities between
-   the top matching pairs of assignment submissions is compete.
-   Outstanding work includes large-scale performance testing, quality
-   of results debugging, development of a regression test suite, and
-   extension to languages other than Python, C/C++, and Java.
-
-   [Open Issues related to Plagiarism Detection](https://github.com/Submitty/Submitty/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+plagiarism)
-
-   [Tushar Gurjar's GSOC Summer 2018 Project](/developer/GSOC2018_TusharGurjar)
-
-   _Experience Required: Some programming experience, willingness to
-   learn web and database development.  Having served as a teaching
-   assistant or instructor with experience grading programs and
-   identifying or handling potential cases of academic dishonesty will
-   be beneficial.  Experience with a wide variety of programming
-   languages is beneficial._
-
-   _GSOC Proposal Tag:_ `plagiarism detection`
+   _GSOC Proposal Tag:_ `web sockets`
 
 
 
-
-5. **Website Security and Penetration Testing**
+7. **Website Security and Penetration Testing**
 
    Submitty is responsible for securing confidential information.  It
    is important that we regularly assess the security of this data.
@@ -250,7 +220,7 @@ Us](http://submitty.org/contact).
    _GSOC Proposal Tag:_ `security/testing`  
 
 
-6. **Instructional Materials and Documentation**
+8. **Instructional Materials and Documentation**
 
    We would like to reduce the learning curve for new instructors and
    provide more starter material for instructors teaching introductory
@@ -266,9 +236,7 @@ Us](http://submitty.org/contact).
 
 
 
-   
-
-8. **Static Program Analysis**
+9. **Static Program Analysis**
 
    We currently using simple lexical (token-based) static analysis
    in our intro programming courses to verify students are using (or
@@ -286,7 +254,7 @@ Us](http://submitty.org/contact).
    _GSOC Proposal Tag:_ `autograding`
 
 
-9. **Continuous Integration Testing**
+10. **Continuous Integration Testing**
 
    Each commit and pull request to github launches continuous
    integration testing of a portion of the Submitty code base.  We
