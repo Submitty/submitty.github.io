@@ -68,7 +68,7 @@ Us](http://submitty.org/contact).
    Advanced features related to web accessibility:
 
    * Creation of automated integration tests to ensure sustained
-     accesibility.
+     accessibility.
 
    * Refactor css style sheets into modules to facilitate future
      development.
@@ -80,7 +80,41 @@ Us](http://submitty.org/contact).
    _GSOC Proposal Tag:_ `web accessibility`
 
 
-2. **Containers for Automated Grading**
+3. **Mobile-Friendly Website and Progressive Web App (PWA)**
+
+   Submitty's primary platform target are web browsers on standard
+   laptop and desktop computers, where students will do their
+   software development and instructors/TAs will view or download and grade
+   complex assignments.
+
+   However, as Submitty has expanded to include elements from learning
+   management platforms such as a discussion forum, instructor
+   announcements and notifications, student photos and information,
+   small grading tasks such as taking attendance, and presentation of
+   semester grades, our users have requested additional
+   mobile-friendly access and features.
+
+   We have made good progress on revising the css for many of the
+   Submitty pages/features to successfully target a variety of display
+   resolutions.  Some of the complex pages still need to be
+   "mobile-ified": e.g., Discussion Forum, TA grading.
+
+   We would also like to explore the implementation and maintenance of
+   a progressive web app, which would leverage this website
+   re-targeting and allow push notifications.
+
+   _Experience Required: Critical eye for visual design, some
+   programming experience with html, css, javascript, reactive designs
+   (e.g., bootstrap), and willingness to learn additional web, database, and
+   mobile computing development technologies.  Personal access to
+   variety of different operating systems, and phone/tablet hardware
+   will be beneficial._
+
+   _GSOC Proposal Tag:_ `mobile-friendly website`
+
+
+
+4. **Containers for Automated Grading**
 
    Automated testing of student submitted software carries system and
    security risks from malicious code but also simply buggy or inefficient
@@ -122,8 +156,7 @@ Us](http://submitty.org/contact).
 
 
 
-
-3. **Streamline instructor configuration of automated grading**
+5. **Streamline instructor configuration of automated grading**
 
    Currently, instructors must write a configuration as a config.json
    (and any necessary additional files) and upload or store these
@@ -151,79 +184,15 @@ Us](http://submitty.org/contact).
 
  
 
-4. **Mobile-Friendly Website and Progressive Web App (PWA)**
+6. **Web Sockets for Live Page Updates**
 
-   Submitty's primary platform target are web browsers on standard
-   laptop and desktop computers, where students will do their
-   software development and instructors/TAs will view or download and grade
-   complex assignments.
-
-   However, as Submitty has expanded to include elements from learning
-   management platforms such as a discussion forum, instructor
-   announcements and notifications, student photos and information,
-   small grading tasks such as taking attendance, and presentation of
-   semester grades, our users have requested additional
-   mobile-friendly access and features.
-
-   We have made good progress on revising the css for many of the
-   Submitty pages/features to successfully target a variety of display
-   resolutions.  Some of the complex pages still need to be
-   "mobile-ified": e.g., Discussion Forum, TA grading.
-
-   We would also like to explore the implementation and maintenance of
-   a progressive web app, which would leverage this website
-   re-targeting and allow push notifications.
-
-   _Experience Required: Critical eye for visual design, some
-   programming experience with html, css, javascript, reactive designs
-   (e.g., bootstrap), and willingness to learn additional web, database, and
-   mobile computing development technologies.  Personal access to
-   variety of different operating systems, and phone/tablet hardware
-   will be beneficial._
-
-   _GSOC Proposal Tag:_ `mobile-friendly website`
-
-
-5. **Website Security and Penetration Testing**
-
-   Submitty is responsible for securing confidential information.  It
-   is important that we regularly assess the security of this data.
-   Once a potential vulnerability is found, the system must be
-   promptly patched and documented to prevent future problems.
-
-   _Experience Required: Computer security coursework and/or practical
-   experience searching for system vulnerabilities._
-
-   _GSOC Proposal Tag:_ `security/testing`  
-
-
-6. **Instructional Materials and Documentation**
-
-   We would like to reduce the learning curve for new instructors and
-   provide more starter material for instructors teaching introductory
-   programming courses in middle and high schools, including AP
-   Computer Science.
-
-   _Experience Required: Some programming experience, willingness to
-   learn web and database development.  Having served as a teaching
-   assistant or instructor with experience in programming assignment
-   design will be beneficial._
-
-   _GSOC Proposal Tags:_ `documentation`
-
-
-
-6. **Discussion Forum**
-
-   The discussion forum is now a mature component of Submitty.
-   Instructors can post announcements, students can ask questions,
-   instructors/TAs/other students can answer questions, and students can
-   share ideas, code, images, and links.
+   Several modules of the Submitty website would benefit from
+   automatic updates with new data from the server.  For example, we
+   have begun implementation to dynamically load new threads and posts
+   in the discussion forum (without requiring the user to manually
+   refresh the page).
 
    Current and future development work on the forum includes:
-
-   * Performance and design analysis and code refactor to facilitate large
-     datasets and automated refresh for new posts.
 
    * Team chat and direct messages.
 
@@ -264,6 +233,38 @@ Us](http://submitty.org/contact).
    languages is beneficial._
 
    _GSOC Proposal Tag:_ `plagiarism detection`
+
+
+
+
+5. **Website Security and Penetration Testing**
+
+   Submitty is responsible for securing confidential information.  It
+   is important that we regularly assess the security of this data.
+   Once a potential vulnerability is found, the system must be
+   promptly patched and documented to prevent future problems.
+
+   _Experience Required: Computer security coursework and/or practical
+   experience searching for system vulnerabilities._
+
+   _GSOC Proposal Tag:_ `security/testing`  
+
+
+6. **Instructional Materials and Documentation**
+
+   We would like to reduce the learning curve for new instructors and
+   provide more starter material for instructors teaching introductory
+   programming courses in middle and high schools, including AP
+   Computer Science.
+
+   _Experience Required: Some programming experience, willingness to
+   learn web and database development.  Having served as a teaching
+   assistant or instructor with experience in programming assignment
+   design will be beneficial._
+
+   _GSOC Proposal Tags:_ `documentation`
+
+
 
    
 
