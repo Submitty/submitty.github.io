@@ -52,6 +52,33 @@ Us](http://submitty.org/contact).
    _GSOC Proposal Tag:_ `peer grading`
 
 
+2. **Web Accessibility**
+
+   We strive to ensure that all Submitty users can efficiently access
+   information and interact with their peers and instructors through
+   the website.  In this project we will continue to refactor the html
+   and css syntax to follow [W3C web
+   standards](https://www.w3.org/standards/) and redesign and improve
+   the appearance and useability of our website.
+
+   Please read this page on [Web Accessibility Guidelines](interface_design_style_guide/web_accessibility).
+
+   [Open Issues related to Web Accessibility/VPAT](https://github.com/Submitty/Submitty/issues?q=is%3Aopen+is%3Aissue+label%3A%22VPAT+%2F+Accessibility+%2F+Screen+reader%22)
+
+   Advanced features related to web accessibility:
+
+   * Creation of automated integration tests to ensure sustained
+     accesibility.
+
+   * Refactor css style sheets into modules to facilitate future
+     development.
+
+   _Experience Required: Prior experience with web development (e.g.,
+   html, css, templating, javascript, and php), and design aesthetic
+   experience is beneficial._
+
+   _GSOC Proposal Tag:_ `web accessibility`
+
 
 2. **Containers for Automated Grading**
 
