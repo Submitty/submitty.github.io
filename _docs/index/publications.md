@@ -5,6 +5,20 @@ order: 1
 
 
 
+* ["Autograding Interactive Computer Graphics Applications"](https://github.com/Submitty/publications/raw/master/2020_SIGCSE_Grading_Computer_Graphics/2020_SIGCSE_Grading_Computer_Graphics.pdf)  
+Evan Maicus, Matthew Peveler, Andrew Aikens, and Barbara Cutler  
+Proceedings of the 51st ACM Technical Symposium on Computer Science Education (SIGCSE '20), March 2020.
+
+
+* ["Random Input and Automated Output Generation in Submitty"](https://github.com/Submitty/publications/raw/master/2020_SIGCSE_Random_Input/2020_SIGCSE_Random_Input.pdf)  
+Evan Maicus,  Drumil Patel, Matthew Peveler, and Barbara Cutler  
+Poster at ACM Technical Symposium on Computing Science Education (SIGCSE), February 2020
+
+
+* ["Automated and Manual Grading of Web Assignments"](https://github.com/Submitty/publications/raw/master/2020_SIGCSE_Grading_Web_Assignments/2020_SIGCSE_Grading_Web_Assignments.pdf)
+Matthew Peveler, Evan Maicus, and Barbara Cutler  
+Poster at ACM Technical Symposium on Computing Science Education (SIGCSE), February 2020
+
 
 * ["Autograding Distributed Algorithms in Networked Containers"](https://github.com/Submitty/publications/raw/master/2019_SIGCSE_Grading_Networked_Applications/2019_SIGCSE_Grading_Networked_Applications.pdf)  
 Evan Maicus, Matthew Peveler, Stacy Patterson, and Barbara Cutler  
