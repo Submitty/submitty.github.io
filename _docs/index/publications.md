@@ -15,7 +15,7 @@ Evan Maicus,  Drumil Patel, Matthew Peveler, and Barbara Cutler
 Poster at ACM Technical Symposium on Computing Science Education (SIGCSE), March 2020.  
 
 
-* ["Automated and Manual Grading of Web Assignments"](https://github.com/Submitty/publications/raw/master/2020_SIGCSE_Grading_Web_Assignments/2020_SIGCSE_Grading_Web_Assignments.pdf)
+* ["Automated and Manual Grading of Web Assignments"](https://github.com/Submitty/publications/raw/master/2020_SIGCSE_Grading_Web_Assignments/2020_SIGCSE_Grading_Web_Assignments.pdf)  
 Matthew Peveler, Evan Maicus, and Barbara Cutler  
 Poster at ACM Technical Symposium on Computing Science Education (SIGCSE), March 2020.  
 
