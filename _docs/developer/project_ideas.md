@@ -3,10 +3,11 @@ title: Project Ideas
 category: Developer
 ---
 
-Submitty was proud to be selected for participation in Google Summer of Code (GSoC) in
-2018 and 2019: [https://summerofcode.withgoogle.com](https://summerofcode.withgoogle.com)  
-Through this program we have supported and mentored six fantastic students:
-[https://submitty.org/developer/google_summer_of_code](https://submitty.org/developer/google_summer_of_code)  
+Submitty is excited and proud to be selected for participation
+in [Google Summer of Code (GSoC)](https://summerofcode.withgoogle.com/) in Summer 2020.
+Please read the "[How to work with us](https://summerofcode.withgoogle.com/organizations/5545536448364544/)" section at the bottom of our GSoC page.
+[GSoC Project Reports](google_summer_of_code) written by the fantastic students
+we supported and mentored through GSOC in 2018 and 2019.
 
 
 The project ideas listed below target a variety of different topics and

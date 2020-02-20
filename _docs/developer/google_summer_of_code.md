@@ -4,6 +4,16 @@ category: Developer
 ---
 
 
+Submitty is excited and proud to be selected for participation
+[Google Summer of Code (GSoC) in Summer 2020](https://summerofcode.withgoogle.com/organizations/5545536448364544/)!
+Please read the "How to work with us" section at the bottom of our GSoC page.
+
+[![](/images/GSoC.png)](https://summerofcode.withgoogle.com/organizations/5545536448364544/)
+
+
+
+
+
 Submitty participated in [Google Summer of Code 2019](https://summerofcode.withgoogle.com/):
 
 * [Fon Noel](/developer/google_summer_of_code/2019_FonNoel)
