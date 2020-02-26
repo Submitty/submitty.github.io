@@ -1,7 +1,7 @@
 ---
-title: The Digital Queue
-category: Instructor
-order: 19
+title: The Queue
+category: Grader
+order: 4
 ---
 
 ### Overview of the Queue

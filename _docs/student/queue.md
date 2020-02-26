@@ -1,5 +1,5 @@
 ---
-title: The Digital Queue
+title: The Queue
 category: Student
 ---
 

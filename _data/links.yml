@@ -28,6 +28,7 @@
     - name: Discussion Forum
     - name: Notifications & Email
       link: notifications
+    - name: Queue
 
 - name: TA or Grader
   link: grader
@@ -37,6 +38,7 @@
     - name: Sorting and Navigation
     - name: Resolving a Grade Inquiry
       link: grade_inquiry_grader
+    - name: Queue
 
 - name: Instructor
   children:
