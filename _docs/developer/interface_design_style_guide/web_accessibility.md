@@ -33,16 +33,22 @@ accessibility, which makes this important to Submitty.
 
 ## Beginning Guidelines
 This is not a complete list of web accessibility standards, but rather a
-selection of guidelines to help you get started.  Please refer to articles at
-[WebAIM.org](https://webaim.org/intro/) and [The A11y Project](https://a11yproject.com/)
-for greater detail on web accessibility.
+selection of guidelines to help you get started.
+
+Articles at [WebAIM.org](https://webaim.org/intro/) and [The A11y Project](https://a11yproject.com/)
+can help you get started.  The W3C provides in depth industry recommendations on
+web accessible design called [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/)
+(a.k.a. "WCAG").
+
+**IMPORTANT:** Rensselaer requires conformance to WCAG 2.0 level AA.  Stricter
+conformance is encouraged.
 
 1. [Examine your interface design with WAVE](#examine-your-interface-design-with-wave)
 2. [The Most Important Concept](#the-most-important-concept)
 3. [HTML, CSS, and Javascript](#html-css-and-javascript)
 4. [All interactive controls must be usable by the keyboard](#all-interactive-controls-must-be-usable-by-the-keyboard)
 5. [All interactive controls require a textual description](#all-interactive-controls-require-a-textual-description)
-6. [Layout tables versus data tables](#layout-tables-versus-data-tables)
+6. [Data tables versus layout tables](#data-tables-versus-layout-tables)
 7. [All visual elements need to adhere to a minimum contrast ratio](#all-visual-elements-need-to-adhere-to-a-minimum-contrast-ratio)
 
 If you have any questions on web accessibility, please post them in Submitty's
@@ -60,16 +66,21 @@ issues as the UI is being developed rather than fix it after the UI is fully
 built.
 * Do read WAVE's suggestions on how to correct errors and warnings.  This will
 help you learn more about accessibility.
-* Do correct *all* errors (red icons) and warnings (yellow icons).
+    * WAVE errors and alerts provide relevant links to WCAG for further explanation.
+* Do correct *all* errors (red icons).
+* Do examine *all* alerts (yellow icons).  Alerts mark areas that are potentially
+problematic.  They are not necessarily problematic, but often are.
 
 #### DO NOT
 * Do not automatically assume there are no accessibility problems when no errors
-or warnings are given.  WAVE analysis is the beginning of web accessible design,
+or alerts are given.  WAVE analysis is the beginning of web accessible design,
 not the end.
-    * Purple icons note that an accessibility related element has been
-    identified.  WAVE cannot say if these elements are implemented correctly or
-    not, so it is up to the developer to understand web accessibility and use
-    their best judgment.
+
+#### NOTE
+* Purple icons show where an accessibility related property has been identified.
+WAVE cannot say if these properties are implemented correctly or not, so it is up
+to the developer to understand web accessibility and use their best judgment.
+
 
 ### The Most Important Concept
 The most important word used to summarize web accessibility is *"context"*.
@@ -98,7 +109,8 @@ hyperlinks anchored on a font icon.
 ### HTML, CSS, and Javascript
 
 #### DO:
-* Do _carefully_ adhere to HTML 5 standards.
+* Do _carefully_ adhere to HTML 5 standards.  This helps ensure your user interface
+is not accidentally misrepresented by assistive technologies.
     * w3.org provides an online [HTML validator](https://validator.w3.org/#validate_by_input).
     Validating HTML 5 is marked "experimental", but it is still be a useful tool
     to provide feedback on potential problems and errors.
@@ -116,8 +128,8 @@ see [semantic HTML elements](https://www.w3schools.com/html/html5_semantic_eleme
 * Do not use javascript to mimic a link.
 
 ### All Interactive Controls Must Be Usable By The Keyboard
-Keyboard users navigate forward through a website with `TAB` and backwards with
-`SHIFT+TAB`.
+Keyboard users navigate forward through a form with `[TAB]` and backwards with
+`[SHIFT]+[TAB]`.
 
 #### DO
 * Do ensure all interactive controls can be reached using the keyboard.
@@ -129,35 +141,34 @@ Keyboard users navigate forward through a website with `TAB` and backwards with
 flow.
     * (using `tabindex='0'` to permit an element to receive focus is OK).
 * Do not rely solely on the `onclick()` javascript event handler.
-    * `onclick()` is OK when an equivalent `onkeypress()` handler exists.
-* Do not reprogram `TAB` without defining a different key that can be used to navigate
-to the next control.
+    * `onclick()` is OK when an equivalent `onkeypress()` handler or similar logic
+    exists.
+* Do not reprogram `[TAB]` without defining a different key that can be used to
+navigate to the next control.
     * Within `site/public/js/server.js` is a function, `enableTabsInTextArea()`,
-    that reprograms `TAB` to indent text within a `textarea` control while
-    adopting `ESC` to navigate forward.  `SHIFT+TAB` is not changed, and
-    therefore still provides backwards page navigation.
+    that reprograms `[TAB]` to indent text within a `<textarea>` control while
+    adopting `[ESC]` to navigate forward.  `[SHIFT]+[TAB]` is not changed, and
+    therefore still provides backwards navigation.
 
-### Layout Tables Versus Data Tables
-Tables are supposed to be used to display tabulated data, but they are also
-useful to easily layout other elements, such as a user interface.
+### Data Tables Versus Layout Tables
+Tables are supposed to be used to display tabulated data, but have also been
+used as a guide to layout other elements, such as a user interface.  Tables whose
+primary purpose is to display tabulated data are called "data tables".  Those
+tables used to primarily layout other elements are "layout tables".  
 
-Tables whose primary purpose is to display tabulated data are called "data
-tables".  Those tables used to primarily layout other elements are "layout
-tables".  When tables have a mixture of data and other elements, the developer
-should use their best judgment as to which has a higher precedence within the
-table.
+Layout tables should be discouraged as some assistive technologies do not represent
+the layout particularly well.  Please use CSS to layout your user interface.
 
 #### DO
-* Do provide a proper table caption and header with data tables.
-    * *All*  columns must have a header.
-    * A `<caption>` tag is always expected, so use `<caption />` when you do not
-    want to display a caption.
+* Data tables must have a header for every column.
 
 #### DO NOT
-* Do not provide a header, footer, or caption in layout tables.
-* For both data and layout tables, there should be no internal nesting of any
-kind.
-    * For example, do not nest tables within tables.
+* Do not nest tables within tables.
+
+#### UPDATE
+* It is no longer recommended to use `<caption />` when a table should not have
+a caption.  According to W3C's validator, this is an HTML 5 error.  Please omit the
+`<caption>` tag when a caption is not needed.
 
 ### All Visual Elements Need To Adhere To A Minimum Contrast Ratio
 A minimum amount of contrast should exist between the text and background, known
@@ -166,7 +177,8 @@ as "contrast ratio".
 #### DO
 * Do use WAVE to examine the contrast ratio of visible elements, especially
 text.
-    * You can also use this [contrast ratio check website](https://webaim.org/resources/contrastchecker/) provided by WebAIM.org.<br>
+    * You can also use this [contrast ratio check website](https://webaim.org/resources/contrastchecker/)
+    provided by WebAIM.org.
 * Do attain a contrast ratio of at least 4.5:1.  This is an acceptable minimum
 target in most cases.  Although achieving a contrast ratio of 7:1 or better is
 ideal.
