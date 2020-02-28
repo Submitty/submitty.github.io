@@ -35,14 +35,6 @@ accessibility, which makes this important to Submitty.
 This is not a complete list of web accessibility standards, but rather a
 selection of guidelines to help you get started.
 
-Articles at [WebAIM.org](https://webaim.org/intro/) and [The A11y Project](https://a11yproject.com/)
-can help you get started.  The W3C provides in depth industry recommendations on
-web accessible design called [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/)
-(a.k.a. "WCAG").
-
-**IMPORTANT:** Rensselaer requires conformance to WCAG 2.0 level AA.  Stricter
-conformance is encouraged.
-
 1. [Examine your interface design with WAVE](#examine-your-interface-design-with-wave)
 2. [The Most Important Concept](#the-most-important-concept)
 3. [HTML, CSS, and Javascript](#html-css-and-javascript)
@@ -50,6 +42,11 @@ conformance is encouraged.
 5. [All interactive controls require a textual description](#all-interactive-controls-require-a-textual-description)
 6. [Data tables versus layout tables](#data-tables-versus-layout-tables)
 7. [All visual elements need to adhere to a minimum contrast ratio](#all-visual-elements-need-to-adhere-to-a-minimum-contrast-ratio)
+
+Articles at [WebAIM.org](https://webaim.org/intro/) and [The A11y Project](https://a11yproject.com/)
+provide additional guidance.  The W3C has authored a series of in-depth industry
+recommendations called [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/)
+(a.k.a. "WCAG").
 
 If you have any questions on web accessibility, please post them in Submitty's
 slack channel and tag `@pbailie`.
