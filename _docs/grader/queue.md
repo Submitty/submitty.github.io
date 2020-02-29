@@ -80,7 +80,7 @@ others will also be able to see a student is being helped and for how long
 however, the status button only appear green to the instructor who started
 helping the student. Students should be removed from the by using "Finish Helping"
 button. However, if a student needs to be removed from the queue and was never helped
-this can be down with the "Remove" button
+this can be down with the "Remove" button.
 ![](/images/queue/queue_finish_green.png)
 ![](/images/queue/queue_finish_blue.png)
 
