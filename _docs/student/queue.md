@@ -4,7 +4,7 @@ category: Student
 ---
 
 ### Overview of the Queue
-A new way to organize, assist, and empower students to get the help they need
+A new way to organize, assist, and empower students to get the help they need.
 
 ### What is the Queue
 ![](/images/queue/queue_main_view.png)
