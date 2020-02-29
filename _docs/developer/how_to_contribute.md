@@ -174,7 +174,7 @@ you need to do?
       ```
     * If the PR is from a fork of the main Submitty repository, first
       create a new branch based of the pull request ID (PR_ID). The new branch
-      will be called BRANCHNAME in this example
+      will be called BRANCH_NAME in this example
       ```
       git fetch origin pull/PR_ID/head:BRANCH_NAME
       ```
