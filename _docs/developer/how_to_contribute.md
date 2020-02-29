@@ -167,6 +167,23 @@ you need to do?
   instructions (on page or on submitty.org) clear?  As appropriate
   leave comments for the PR author with specific suggestions for
   improvement.
+    * If the PR is a branch of the main Submitty repository, you can
+      check it out with
+      ```
+      git checkout BRANCH_NAME
+      ```
+    * If the PR is from a fork of the main Submitty repository, first
+      create a new branch based of the pull request ID (PR_ID). The new branch
+      will be called BRANCHNAME in this example
+      ```
+      git fetch origin pull/PR_ID/head:BRANCH_NAME
+      ```
+      Then, checkout the new branch.
+      ```
+      git checkout BRANCH_NAME
+      ```
+      Now you have a version of the code in a new branch on the main repo.
+      Review the PR normally and delete the temporary branch when you are done
 
   Test the system with extreme use cases or corner cases.  Try to
   break the overall system or new feature.  If you find an error,
