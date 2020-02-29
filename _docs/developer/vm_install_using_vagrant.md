@@ -191,7 +191,7 @@ operating system.
      computer,
 
      If you have the Ubuntu 18.04 VM, go to:
-     <http://192.168.56.111/index.php>  
+     <http://localhost:1501/index.php>
 
      If you have the Ubuntu 16.04 VM, go to:
      <http://192.168.56.101/index.php>  
