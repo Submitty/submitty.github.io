@@ -114,6 +114,15 @@ and outputs are defined by setting the ``type`` and are as follows:
   | value | true or false |
   | notes | If true allows multiple values to be selected, if false only one value may be selected. |
   
+  | Allow psuedo-randomization |
+  | ----- |
+  | field | randomize_order |
+  | required | false |
+  | default | false |
+  | type | bool |
+  | value | true or false |
+  | notes | If true, choices are psuedo-randomized, i.e for given pair of gradeable and student, order of choices is always same. |
+
 ### Markdown
 
   | Markdown |
