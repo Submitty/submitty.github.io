@@ -68,7 +68,7 @@ access to by checking the box next to the desiered queues.
 
 Sometimes it may be necessary to change the code for an existing queue. this can be done
 without clearing out the existing students in the queue by selecting a queue and creating 
-new code under settings
+new code under settings.
 Image
 
 ### Helping Students in the Queue
