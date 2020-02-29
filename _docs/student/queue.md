@@ -21,7 +21,7 @@ is particularly helpful for physically handicapped students who
 may find moving to write their name on the board a difficult task.
 In addition students with social anxieties may be less likely to 
 want to draw attention to themself but the queue allows them to get
-help without the extra attention that comes from raising your hand
+help without the extra attention that comes from raising your hand.
 
 ### Joining the Queue
 ![](/images/queue/queue_join.png)
