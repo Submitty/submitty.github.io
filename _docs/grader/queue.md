@@ -5,7 +5,7 @@ order: 4
 ---
 
 ### Overview of the Queue
-A new way to organize, assist, and empower students to get the help they need
+A new way to organize, assist, and empower students to get the help they need.
 
 ### Recent Updates
 Students who have not been helped yet today will appear with a star next to the 
