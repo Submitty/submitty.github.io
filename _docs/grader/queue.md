@@ -54,7 +54,7 @@ enter your own. Then select open queue
 
 ### Managing a Queue
 The queue is designed so it can stay available for the duration of the class.
-While the settings does give you the option to delete the queue an open a new
+While the settings does give you the option to delete the queue and open a new
 one, opening and closing a queue is the preferred method. In addition you have
 the ability to clear out all students in the queue by selecting empty queue.
 
