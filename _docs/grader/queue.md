@@ -50,7 +50,7 @@ From here enter a unique name which can be used to identify your
 queue. Then for an added layer of security generate a code to prevent
 people who do not know the code from entering the queue. This code can
 be random by selecting the refresh icon to the right of the code or 
-enter your own. Then select open queue
+enter your own. Then select open queue.
 
 ### Managing a Queue
 The queue is designed so it can stay available for the duration of the class.
