@@ -21,7 +21,7 @@ to move to the board and write your name on a central board or
 draw attention to yourself.
 
 ### Who does the Queue help
-The queue is meant to be used by anyones. However, this feature
+The queue is meant to be used by anyone. However, this feature
 is particularly helpful for physically handicapped students who
 may find moving to write their name on the board a difficult task.
 In addition students with social anxieties may be less likely to 
@@ -95,4 +95,3 @@ The queue history shows that the backlog of students from that day. By default t
 only shows the most recent activity but the enitre backlog is available to view. The history
 keeps track of who was helped, how long they waited and were helped for, who helped them. As
 well as the option to restore their place in the queue if they were accidently removed.
-
