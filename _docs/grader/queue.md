@@ -32,7 +32,7 @@ help without the extra attention that comes from raising your hand
 The queue is ideal for any situation where there is a constant flow 
 of students needing help from instructors. The queue helps manage the
 students waiting to be helped as well as the students currently being 
-helped and keeps track of previously helped students
+helped and keeps track of previously helped students.
 
 ### Enabling the Queue
 ![](/images/queue/queue_enable.png)
