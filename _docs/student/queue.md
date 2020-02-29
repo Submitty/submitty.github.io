@@ -29,7 +29,7 @@ help without the extra attention that comes from raising your hand
 Students can join the queue by going to the queue section from the left side
 and entering their name, selecting a queue name from the drop down list, and
 entering the code for that queue. If you are unsure which queue you want to join
-or the code for that queue ask your instructor running that queue
+or the code for that queue ask your instructor running that queue.
 
 ### Waiting in the Queue
 ![](/images/queue/queue_waiting.png)
