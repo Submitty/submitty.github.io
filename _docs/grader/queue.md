@@ -45,7 +45,7 @@ should have a new option on the left side of the screen.
 ### Opening new Queue
 ![](/images/queue/queue_new_queue.png)
 
-In order to open a new queue you need to toggle the filter settings1
+In order to open a new queue you need to toggle the filter settings.
 From here enter a unique name which can be used to identify your
 queue. Then for an added layer of security generate a code to prevent
 people who do not know the code from entering the queue. This code can
