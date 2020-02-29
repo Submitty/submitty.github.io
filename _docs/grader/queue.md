@@ -9,7 +9,7 @@ A new way to organize, assist, and empower students to get the help they need
 
 ### Recent Updates
 Students who have not been helped yet today will appear with a star next to the 
-"help" button
+"help" button.
 
 ### What is the Queue
 ![](/images/queue/queue_main_view.png)
