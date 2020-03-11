@@ -173,6 +173,7 @@
         - name: Controllers
         - name: Models
         - name: Views
+        - name: Feature Flags
     - name: Project Ideas
     - name: How to Contribute
     - name: Autograding Tests
