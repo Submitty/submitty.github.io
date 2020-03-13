@@ -1,11 +1,13 @@
 ---
-title: The Queue
+title: Managing the Office Hours Queue
 category: Grader
 order: 4
 ---
 
 ### Overview of the Queue
 A new way to organize, assist, and empower students to get the help they need.
+
+Students, please read [Getting Help through the Office Hours Queue](../students/queue)
 
 ### Recent Updates
 Students who have not been helped yet today will appear with a star next to the 
