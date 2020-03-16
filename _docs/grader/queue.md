@@ -42,6 +42,9 @@ In order to use the queue, the primary instructor for the course
 needs to enable the features inside of course setting. Once enabled you
 should have a new option on the left side of the screen.
 
+In the event remote instruction becomes necessary instructors can enable
+the option for student to enter contact information to allow remote office hours
+
 ### Opening new Queue
 ![](/images/queue/queue_new_queue.png)
 

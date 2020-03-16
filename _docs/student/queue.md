@@ -31,6 +31,9 @@ and entering their name, selecting a queue name from the drop down list, and
 entering the code for that queue. If you are unsure which queue you want to join
 or the code for that queue ask your instructor running that queue.
 
+If enabled the student may have the option to enter contact information. This is
+too allow the teaching staff to hold office hours remotely
+
 ### Waiting in the Queue
 ![](/images/queue/queue_waiting.png)
 
