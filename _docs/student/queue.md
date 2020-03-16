@@ -1,5 +1,5 @@
 ---
-title: The Queue
+title: Getting Help through the Office Hours Queue
 category: Student
 ---
 
@@ -52,3 +52,5 @@ The queue history shows that the backlog of each student when they were helped t
 By default the history only shows the most recent activity but the enitre backlog is available 
 to view. The history keeps track of when the student was helped, how long they waited and
 which instructor helped them.
+
+Instructors and graders, please also read [Managing the Office Hours Queue](../grader/queue)
