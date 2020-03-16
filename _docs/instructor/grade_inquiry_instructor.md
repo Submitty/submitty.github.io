@@ -5,8 +5,9 @@ title: Enabling Grade Inquiries
 
 It is important for students to have the ability to understand why
 they received a specific grade.  Grade Inquiries allow
-graders and individual students to have a discussion on their work.
-
+graders and individual students to have a discussion on their work, and by configuring
+grade inquiry dates graders can make sure that students will get enough time to review
+their work and come up with better grade inquiries.
 
 1. First, grade inquiries must be enabled for the course.  From the
    "Course Settings" page, under the "Grading" section, check the
@@ -25,13 +26,13 @@ graders and individual students to have a discussion on their work.
 
    ![](/images/grade_inquiry/instructor_gradeable_enable_grade_inquiry.PNG)
 
-4. Finally, go to the "Dates" tab and set the 'Grade Inquiry Due Date'
-   to a desired time in the future.
+4. Finally, go to the "Dates" tab and set the 'Grade Inquiry Start Date'
+    and 'Grade Inquiry Due Date' to a desired time in the future.
    
-   ![](/images/grade_inquiry/instructor_grade_inquiry_due_date.PNG)
+   ![](/images/grade_inquiry/instructor_grade_inquiry_dates.PNG)
 
    Students must make the initial post to the grade inquiry system
-   before that date.  Once the date passes, students and graders will
+   in between the grade inquiry start and grade inquiry end date.  Once the due date will pass, students and graders will
    be able to continue the conversation only for any unresolved grade
    inquiries.
 
