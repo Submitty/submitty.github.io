@@ -24,7 +24,20 @@ Submitty provides a number of simple autograding configurations that
 can be selected from the drop down selection menu (prefixed by
 "PROVIDED").  These default, provided autograding configurations are:
 
-_TODO: Insert documentation of the upload only, pdf_exam, iclicker,
+#### Upload Only
+This is the most basic configuration file with no autograding. The upload only configuration corresponds to the following config.json file
+
+```javascript
+{
+    "max_submission_size" : 1000000,
+    "assignment_message" : "1 mb maximum total file upload.  \nNo automatic grading for this assignment.",
+    "testcases" : [ ] 
+}
+```
+This allows the student to submit multiple files. However, the total size of all files must be less than 1MB (Do note that in this particular case we take 1MB to be 10<sup>6</sup> bytes and not 2<sup>20</sup> bytes). This type of grading configuration DOES NOT provide any autograding. The student submissions must be checked manually by the instructor or ta.
+
+
+_TODO: Insert documentation of the pdf_exam, iclicker,
 left-right seating assignment, 2 & 3 page test notes upload._
 
 
