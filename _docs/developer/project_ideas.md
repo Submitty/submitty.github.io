@@ -128,7 +128,7 @@ Us](http://submitty.org/contact).
    manage and limit system resources (time, CPU, processes, memory,
    files, system calls, sockets, etc.)
 
-   [Publications](http://submitty.org/publications/)
+   [Publications](https://submitty.org/index/publications)
 
    We provide container images appropriate for the most common
    programming languages (Python, C/C++, Java) used in introductory
@@ -244,7 +244,7 @@ Us](http://submitty.org/contact).
    checks we are working on producing and analyzing an abstract syntax
    tree of the submitted code.
 
-   [Publications](http://submitty.org/publications/)
+   [Publications](https://submitty.org/index/publications)
 
    [Open Issues related to Static Program Analysis](https://github.com/Submitty/Submitty/issues?q=is%3Aissue+is%3Aopen+static+analysis+label%3A%22static+program+analysis%22)
 
