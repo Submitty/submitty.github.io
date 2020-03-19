@@ -31,10 +31,9 @@ On the developer vagrant machine, the sending of emails is simulated with the
    ```bash
    systemctl status nullsmtpd
    ```
-   If it is not running, you can run the following 2 commands to enable it:
+   If it is not running, run the following command to start it:
    ```bash
    systemctl start nullsmtpd
-   systemctl enable nullsmtpd
    ```
 
 
