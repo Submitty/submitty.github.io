@@ -15,7 +15,7 @@ On the developer vagrant machine, the sending of emails is simulated with the
 
 1. The email configuration file, `/usr/local/submitty/config/email.json`, should contain:
 
-   ```
+   ```json
    {
        "email_enabled": true,
        "email_sender": "submitty@myuniversity.edu",
@@ -28,8 +28,13 @@ On the developer vagrant machine, the sending of emails is simulated with the
 
 2. Verify that the `nullsmtpd` daemon is running:
 
-   ```
+   ```bash
    systemctl status nullsmtpd
+   ```
+   If it is not running, you can run the following 2 commands to enable it:
+   ```bash
+   systemctl start nullsmtpd
+   systemctl enable nullsmtpd
    ```
 
 
