@@ -83,7 +83,7 @@ operating system.
    
    **NOTE:** If you are not currently part of the Submitty organization on Github, you may want to
    [fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
-   the repo and use the git url from your fork instead.
+   the repo and use the git url from your fork instead, especially if you are looking to contribute.
 
    _OPTIONAL: If you will be developing code in one of the companion
    Submitty repositories (e.g., AnalysisTools, Lichen, RainbowGrades, Tutorial), also
