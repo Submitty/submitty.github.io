@@ -49,6 +49,9 @@ on the left sidebar of all course pages.
 
 ![](/images/queue/queue_menu.png)
 
+
+### Student Contact Information for Remote Assistance
+
 If students will be connecting to the queue for remote office hours or
 remote tutoring, the instructor user should also check the box to require
 that students provide contact information.  The format of this contact
@@ -60,6 +63,13 @@ required to provide a phone number, email address, or remote meeting
 URL.
 
 ![](/images/queue/queue_enable_completed.png)
+
+If you have requested that students provide contact information to
+allow remote office hours and remote tutoring, that information will
+appear beneath each student's entry in the office hours queue.
+
+![](/images/queue/queue_contact_information.png)
+
 
 ### Creating a New Office Hours Queue
 
