@@ -57,7 +57,7 @@ remote tutoring, the instructor user should also check the box to require
 that students provide contact information.  The format of this contact
 information is flexible.  You should inform your students of the
 recommended procedure for receiving remote tutoring help.  You can do
-this in the customizable "Message to Students", and through other
+this in the customizable "Welcome Message", and through other
 communication and lecture materials.  For example, students might be
 required to provide a phone number, email address, or remote meeting
 URL.
