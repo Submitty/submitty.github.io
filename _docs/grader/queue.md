@@ -33,7 +33,7 @@ TAs/instructors. The queue helps manage the students waiting to be
 helped as well as the students currently being helped.  We store all
 relevant timestamps for each entry in the queue.  Usage statistics can
 be tracked, analyzed, and instructional resources balanced
-appropriately.  *NOTE: Queue Statistics coming soon!*
+appropriately.  *NOTE: Office Hours Queue Statistics coming soon!*
 
 
 ### Enabling the Office Hours Queue
@@ -50,65 +50,68 @@ on the left sidebar of all course pages.
 ![](/images/queue/queue_menu.png)
 
 If students will be connecting to the queue for remote office hours or
-remote tutoring, the instructor user also check the box to require
+remote tutoring, the instructor user should also check the box to require
 that students provide contact information.  The format of this contact
 information is flexible.  You should inform your students of the
-recommended procedure for receiving remote tutoring help -- you can do
+recommended procedure for receiving remote tutoring help.  You can do
 this in the customizable "Message to Students", and through other
 communication and lecture materials.  For example, students might be
 required to provide a phone number, email address, or remote meeting
 URL.
 
+![](/images/queue/queue_enable_completed.png)
 
 ### Creating a New Office Hours Queue
 
-All users with limited access grader priviledges or higher may access,
+All users with limited access grader privileges or higher may access,
 create, and manage office hours queues for this course.
 
 To create and open a new queue you need click "Toggle Filter Settings"
 button.  Then, enter a unique name for the new queue.  If your course
 has multiple recitation or laboratory sections, you may want to make a
 separate queue for each section/room.  You may also want to make
-different queues for the type of assistance needed, as appropriate for
-your topic and course structure.
+different queues for the type of assistance needed (e.g., help,
+checkoff, code debugging, lecture material, etc.), as appropriate for
+your topic and course structure.  *Note: A student may only join one
+office hours queue at a time!*
 
 ![](/images/queue/queue_new_queue.png)
 
 Often it is helpful to *require* that students be present in the
 tutoring room prior to joining the queue.  To enforce this policy,
-each queue has a security "code".  You can post this code at the front
-of the room, so only students in the room know the code and can enter
+each queue has an access "code".  You can post this access code at the front
+of the room, so only students in the room know the access code and can enter
 the queue.  Then select "Open New Queue".
 
-The security code of an existing queue can be changed or re-randomized
-at any time by selecting the refresh icon to the right of the code or
-you may set your own code, as desired.  Then press "Change Queue
+The access code of an existing queue can be changed or re-randomized
+at any time by selecting the refresh icon to the right of the access code or
+you may set your own access code, as desired.  Then press "Change Queue
 Code".
 
-![](/images/queue/queue_change_code.png)
-
-
-### Managing an Existing Queue
+### Managing an Existing Office Hours Queue
 
 When the designated office hours or tutoring session is complete, the
 TA/instructor should close the queue to prevent additional students
-from joining the queue.  Closing the queue does not delete it; rather,
-the uniquely named queue is available to be re-opened and re-used
-tomorrow or next week!
+from joining the queue.  Click "Toggle Filter Settings" and then
+"Close Queue" on the desired queue.  Closing the queue does not delete
+it; rather, the uniquely named queue is available to be re-opened and
+re-used tomorrow or next week!
 
 All students who entered the queue before it was closed will remain in
 the queue and can be helped.  Alternatively, the TA/instructor may
-remove all students from the queue by pressing "Empty Queue".
+remove all students from the queue by pressing "Empty Queue" or press
+"Delete Queue" to remove students from the queue *and* delete the
+queue.
 
 
-### Filtering Queues
+### Filtering Office Hours Queues
 
 In a large course with multiple active/open queues and multiple
 TAs/instructors helping students, it is typical to assign some
 TAs/instructors to focus on specific queues.  Each TA/instructor can
-filter the queue of all students by clicking "Toggle Filter Settings",
-and then selecting/filtering the list to one or more queues.  Then
-press "Toggle Filter Settings" to close the queue names.  
+filter the queue of all students waiting for help by clicking "Toggle
+Filter Settings", and then selecting/filtering the list to one or more
+queues.  Then press "Toggle Filter Settings" to close the queue names.
 
 ![](/images/queue/queue_filter.png)
 
@@ -117,11 +120,11 @@ displayed.
 
 
 
-### Helping Students in the Queue
+### Helping Students in the Office Hours Queue
 
-The queue is sorted chronologically by timestamp of the entry into the
+The queue is sorted chronologically by timestamp of student entry into the
 queue.  Typically, the instructional staff will prioritize the queue
-chronologically, always helping the student at the top of the list.
+chronologically, helping the student at the top of the list.
 To start helping a specific student in the queue, press the "Help"
 button for that student.
 
@@ -134,15 +137,15 @@ helped today (at least not through the Section4 queue), but Ben has
 already been helped at least once today.  To fairly distribute
 tutoring resources, the instructional staff may adopt a policy whereby
 *starred* students are prioritized, even if they are not the student
-in the queue the longest.
+who has been in the queue the longest.
 
 Once you have started helping a student, the status button for that
 student will switch to a green "Finish Helping" button.  Also the
 "Time" column will switch from the wall clock time when the student
 entered the queue, to a minutes and seconds timer (m:ss) indicating
-the length of time you have been helping that student.  This
+the length of time that you have been helping that student.  This
 information will be helpful in busy office hours with limited
-instructional staff.  The TAs/instructors may want to implement a
+instructional staff.  The TAs/instructors may set a policy with a
 maximum time limit for help/tutoring per student.
 
 ![](/images/queue/queue_finish_blue.png)
@@ -152,7 +155,7 @@ hours queue, your display will show a blue "Finish Helping" button
 for students being helped by other TAs/instructors.
 
 When you have finished helping a student, press the "Finish Helping"
-button.  Note: If you forget to click this button to remove the
+button.  If you forget to click this button to remove the
 student from the queue, they can exit the queue from their own
 interface.
 
@@ -162,15 +165,15 @@ interface.
 ### Note about Student Privacy
 
 When students join the queue, they may specify an alternate name --
-different from both their legal/registration name or their
+different from both their legal/registration name and their
 [preferred name](../student/#how-can-i-change-my-preferred-name).
-This is the name that the TA/instructor will call out aloud
+The queue name is the name that the TA/instructor will call out aloud
 in the room, if they do not know
-the each students by name/face.  The TA/Instructor has access to view the
-students preferred name by clicking the eye icon.
+the each students by name/face.  The TA/Instructor also has access to view the
+student's user id by clicking the eye icon.
 
 
-### Queue History
+### Office Hours Queue History
 
 The bottom of the page shows the most recent events in the queue from
 the current day.  As desired, you can click to view all queue events
@@ -178,3 +181,8 @@ from the current day.  The history displays who was helped, how long
 they waited before help arrive, the length of time they were being
 helped, and who helped them.  The history includes an option to the
 student to the queue if they were accidently removed.
+
+
+### Office Hours Queue Statistics
+
+*NOTE: Office Hours Queue Statistics coming soon!*

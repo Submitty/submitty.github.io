@@ -3,54 +3,95 @@ title: Getting Help through the Office Hours Queue
 category: Student
 ---
 
-### Overview of the Queue
-A new way to organize, assist, and empower students to get the help they need.
 
-### What is the Queue
-![](/images/queue/queue_main_view.png)
 
-The queue available on submitty allows each class to maintain
-multiple queues per class. This makes it easier for students
-to get help from a member of the teaching staff without having
-to move to the board and write your name on a central board or 
-draw attention to yourself.
+### What is the Office Hours Queue?
 
-### Who does the Queue help
-The queue is meant to be used by anyone. However, this feature
-is particularly helpful for physically handicapped students who
-may find moving to write their name on the board a difficult task.
-In addition students with social anxieties may be less likely to 
-want to draw attention to themself but the queue allows them to get
-help without the extra attention that comes from raising your hand.
+The Office Hours Queue organizes, assists, and empowers students to
+get the help they need.  The names of students who are waiting for
+assistance are ordered by initial request time.  This web-based queue
+is an alternative to raising your hand or writing your name on a
+common physical whiteboard at the front of the classroom.
 
-### Joining the Queue
+Your instructor will enable the office hours queue and then open one
+or more queues per class.  Follow instructions about which queue to
+join, the necessary access 'code', and (in the case of remote/online
+assistance) what contact information you should provide.
+
+![](/images/queue/queue_menu.png)
+
+Once enabled, you will see the "Office Hours Queue" on the left
+sidebar of all course pages.  *Note: The door icon opens or closes
+when there is an open queue in your course.*
+
+
+
+### How do I join the Office Hours Queue?
+
+You can join the office hours queue by clicking on "Office Hours
+Queue" from the left sidebar, and then entering your name, selecting
+an available queue from the drop down list, and then entering the
+access code for that queue.
+
 ![](/images/queue/queue_join.png)
 
-Students can join the queue by going to the queue section from the left side
-and entering their name, selecting a queue name from the drop down list, and
-entering the code for that queue. If you are unsure which queue you want to join
-or the code for that queue ask your instructor running that queue.
+Note that your instructor and TAs may have created
+multiple queues for your course to organize student questions and
+manage staff.  Be sure to follow the specific instructions for your
+course about queue usage.  For example, the queue access code may only
+be available to students who are physically present in the tutoring
+room.
 
-### Waiting in the Queue
+
+### Specifying Your Contact Information
+
+If the teaching staff is available for remote office hours or remote
+tutoring assistance, please follow their instructions for providing
+your contact information when you join the office hours queue.  Here
+is an example of what you might be asked for:
+
+![](/images/queue/queue_remote_access_code.png)
+
+
+### Waiting in the Office Hours Queue
+
+Once you have successfully joined the queue, you will be able to see
+how many people are ahead of you in the queue.
+
 ![](/images/queue/queue_waiting.png)
 
-Once in the queue, you will be able to see how many people are ahead of you in 
-line as well as which queue you are currently waiting in. In order to get the most
-benifit out of the features of the queue including queue history and instructor tools
-be sure to give the instructor a chance to remove you from the queue properly. However,
-if they forget you can use the red button to remove yourself from the queue.
+If you solve your bug or answer your own question while waiting, press
+the "Leave Queue" button.  Once you have been helped, the
+TA/instructor should remove you from the queue.  But if you were
+helped and they they forgot to remove you, you may see this message:
 
 ![](/images/queue/queue_helping.png)
 
-### Protecting Privacy with the Queue
-When students join the queue they may not be comfortable using their real name
-and have the option of entering something different. However, if students abuse this
-privilage instructors have the ability to view the students username used for login.
+You can click "Finish Being Helped" to remove yourself in this case.
+(And then you can rejoin this queue or another queue in the future.)
 
-### Queue History
-The queue history shows that the backlog of each student when they were helped that day. 
-By default the history only shows the most recent activity but the enitre backlog is available 
-to view. The history keeps track of when the student was helped, how long they waited and
-which instructor helped them.
+
+### Protecting Your Privacy in the Office Hours Queue
+
+The names (and contact information) of students in the queue are
+visible only to the instructor and TAs who are answering questions and
+tutoring.
+By default, your Submitty [preferred name](../student/#how-can-i-change-my-preferred-name) will be
+inserted into the "Your Name" field of the Office Hours Queue.
+When office
+hours is held in a common physical name, the TA/instructor may call
+this name aloud (if they don't yet know the names/faces of all
+students in the course).
+If desired, you
+may specify an alternate name when you join the office hours queue.
+The instructor/TA also has access to your
+Submitty user id if needed.
+
+### Office Hours Queue History
+
+At the bottom of this page you can view a log of your interactions with the queue today.
+
+
+### Administering the Office Hours Queue
 
 Instructors and graders, please also read [Managing the Office Hours Queue](../grader/queue)
