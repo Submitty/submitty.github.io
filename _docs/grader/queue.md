@@ -140,14 +140,16 @@ button for that student.
 
 ![](/images/queue/queue_finish_green.png)
 
-*NOTE*: Students who have not been helped yet today *through this
-specific queue* will appear with a *star* next to the blue "Help"
-button.  In the example above, Hazel and Alyssa have not yet been
-helped today (at least not through the Section4 queue), but Ben has
-already been helped at least once today.  To fairly distribute
+*NOTE*: Students who have not been helped yet this week (the last 5
+days) *through this specific queue* will appear with a *star* next to
+the blue "Help" button.  If a student has not been helped yet today,
+but has been helped in the last 5 days a *half star* will be
+displayed.  In the example above, Hazel and Alyssa have not yet been
+helped this week (at least not through the Section4 queue), but Ben
+has already been helped at least once today.  To fairly distribute
 tutoring resources, the instructional staff may adopt a policy whereby
-*starred* students are prioritized, even if they are not the student
-who has been in the queue the longest.
+*starred* and/or *half starred* students are prioritized, even if they are
+not the student who has been in the queue the longest.
 
 Once you have started helping a student, the status button for that
 student will switch to a green "Finish Helping" button.  Also the
