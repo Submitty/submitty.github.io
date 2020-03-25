@@ -63,8 +63,10 @@ operating system.
    **NOTE:** The Ubuntu repository does not contain the latest version of Vagrant or VirtualBox and using
    them may not work nor are they supported. We recommend that you either download the necessary binaries
    from their respective steps or follow the steps outlined below for each:
-   VirtualBox: https://www.virtualbox.org/wiki/Linux_Downloads
-   Vagrant: https://vagrant-deb.linestarve.com/
+   <br />
+   VirtualBox: <https://www.virtualbox.org/wiki/Linux_Downloads>
+   <br />
+   Vagrant: <https://vagrant-deb.linestarve.com/>
 
 4. Install [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest).
 
