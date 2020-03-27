@@ -20,7 +20,7 @@ launched by the
 *  Advanced grading tools: static analysis, JUnit, code coverage, memory debuggers, networked and distributed assignments, screenshots/gifs of graphics assignments, and database assignments
 *  Instructors have full access to logs for debugging, launch batch regrading, custom containers (Docker)
 *  Student upload by drag-and-drop, zip upload, or version control
-*  Correct mistakes through multiple submissions, flexible ``late day'' policy
+*  Correct mistakes through multiple submissions, flexible "late day" policy
 *  Interface for complementary instructor/TA manual grading, anonymized peer grading
 *  Instructor bulk upload of scanned .pdf exams, QR code name matching, pdf annotation
 *  Supports course material hosting, team assignments, overall grades spreadsheet, plagiarism detection
