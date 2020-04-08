@@ -152,15 +152,15 @@ Any API endpoint must either return a `JsonResponse` or a `RedirectResponse`
 
 Here are some frequently asked questions regarding the router.
 
-#### What is the `Response` object? Is it required?
+#### What is the `ResponseInterface` object? Is it required?
 
-It is not required to return a `Response` object.
+It is not required to return a concrete `ResponseInterface` (e.g. `JsonResponse`) object.
 
-The `Response` object is used for handling both web responses and JSON responses. When building an API for Submitty, we envision that some functions can be reused and return different types of data depending on if it is an API call.
+The `ResponseInterface` object is used for handling the various types of responses, be it a web response showing a page, JSON response, a redirect, or some combination of all three. When building an API for Submitty, we envision that some functions can be reused and return different types of data depending on if it is an API call.
 
-There are three optional parts of `Response`s: `WebResponse`, `JsonResponse`, and `RedirectResponse`. In an ideal world, we would like all controller methods to always return a `Response`, and render it depending on the context. If there exists only one component, say there is only `JsonResponse`, then render it. If there are multiple components, say `JsonResponse` and `WebResponse`, then render `JsonResponse` for API calls and `WebResponse` for browser access.
+If you wish to have a Response that can be some combination of other base Response types, use the `MultiResponse` object, which can have three optional parts of `Response`s: `WebResponse`, `JsonResponse`, and `RedirectResponse`. When a method returns the `MultiResponse` object, it will render the appropriate part depending on the context. If there exists only one component, say there is only `JsonResponse`, then render it. If there are multiple components, say `JsonResponse` and `WebResponse`, then render `JsonResponse` for API calls and `WebResponse` for browser access.
 
-As API is still a work in progress, more detailed documentation on `Response` will be written as it matures. For now, considering the efforts needed to refactor all the code and the limited benefits it brings for most methods, it is **optional** to return a `Response` object. Backward compatibility is ensured.
+As API is still a work in progress, more detailed documentation on Responses will be written as it matures. For now, considering the efforts needed to refactor all the code and the limited benefits it brings for most methods, it is **optional** to return a `Response` object. Backward compatibility is ensured.
 
 #### Are there any naming conventions for URLs?
 
