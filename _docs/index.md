@@ -15,19 +15,39 @@ launched by the
 
 #### Key Features
 
-*  Secure testing of many languages: Python, C/C++, Java, Scheme, Prolog, SQL, SPIM, and anything available on GNU / Linux!
-*  Customizable automated grading with immediate feedback to students, and optional "hidden" tests
-*  Advanced grading tools: static analysis, JUnit, code coverage, memory debuggers, networked and distributed assignments, screenshots/gifs of graphics assignments, and database assignments
-*  Instructors have full access to logs for debugging, launch batch regrading, custom containers (Docker)
-*  Student upload by drag-and-drop, zip upload, or version control
-*  Correct mistakes through multiple submissions, flexible "late day" policy
-*  Interface for complementary instructor/TA manual grading, anonymized peer grading
-*  Instructor bulk upload of scanned .pdf exams, QR code name matching, pdf annotation
-*  Supports course material hosting, team assignments, overall grades spreadsheet, plagiarism detection
-*  Integrated discussion forum, notifications, and email announcements
-*  Scales to multiple courses, thousands of students, multiple instructors and TAs per course
-*  Open-source, free to use, install on your own hardware, or VPS
-
+* Secure automated testing of student software in a variety of
+  programming languages: Python, C/C++, Java, Scheme, Prolog, SQL,
+  SPIM, and anything that can be installed in a customizable GNU /
+  Linux Docker container.
+* Customizable automated grading with immediate feedback to students,
+  and optional "hidden" tests.
+* Advanced automated grading tools: static analysis, JUnit, code
+  coverage, memory debuggers, networked & distributed assignments,
+  screenshots & animated gifs of graphics assignments, and database
+  assignments.
+* Instructors have full access to automated testing & automated
+  grading logs for debugging and can launch batch regrading.
+* "Notebook" gradeables with markdown formatting for multiple-choice,
+  short answer, and syntax-highlighted code for instructional
+  tutorials or online quizzes & exams.
+* Student upload by drag-and-drop, zip upload, version control (e.g.,
+  git).
+* Supports team assignments.
+* Students can correct mistakes through multiple submissions and a
+  flexible "late day" policy.
+* Integrated discussion forum, with notifications.
+* Office Hours Help Queue.
+* Customizable interface and rubric for complementary instructor/TA
+  manual grading, access control for different types of teaching
+  staff, and facilitate grade inquiries from students.
+* Anonymized peer grading through the manual grading interface.
+* Instructor bulk upload of scanned .pdf exams, QR code name matching,
+  and integrated pdf annotation.
+* Instructors manage the overall "Rainbow Grades" spreadsheet and post
+  course materials, send email announcements, view student photos.
+* Plagiarism Detection.
+* Scales to multiple courses, thousands of students, multiple instructors and TAs per course
+* Open-source, free to use, install on your own hardware, or VPS
 
 Please use the links on the sidebar to further explore Submitty.
 
