@@ -3,9 +3,54 @@ title: Notebook
 category: Instructor -- Autograding Configuration
 ---
 
-Instructors may create gradeable submissions called notebooks.  Notebooks are different from standard file
-submissions in that a notebook may contain several different types of inputs or outputs.  The available types of input 
-and outputs are defined by setting the ``type`` and are as follows:
+Submitty supports construction of mixed instructional and webform
+gradeables called *Notebooks*.  Notebooks can be used to create
+tutorial teaching material interspersed with exercises or web-based
+exams.  Notebooks support basic markdown text formatting and collect
+student input through multiple choice (radio button or multiple
+selection checkboxes), single or multi-line short answers, and syntax
+highlighted code boxes.  
+
+Submitty Notebooks also support url links and the display of images,
+which is useful for display of complex exam question formatting (e.g.,
+examination questions prepared in LaTeX, Word, or another document
+formatting software).
+
+![](/images/notebook_multiple_choice.png)
+
+![](/images/notebook_code.png)
+
+---
+# Complete Notebook Examples
+
+Please refer to these complete sample notebook configurations:
+
+* [Notebook Basic Example](https://github.com/Submitty/Submitty/tree/master/more_autograding_examples/notebook_basic/config)  
+   This example demonstrates markdown formatting, multiple choice
+   (radio button and 'select all' checkbox), short answer, embedded
+   images and url links, syntax highlighting for programming
+   languages, automated grading of multiple choice answers, and
+   automated grading of simple programming exercises.
+
+
+* [Notebook with Time Limit](https://github.com/Submitty/Submitty/tree/master/more_autograding_examples/notebook_time_limit/config)  
+   This example demonstrates enforcement of an exam time limit.
+   The initial access time for the gradeable is recorded.
+   The time difference between initial access and the current submission is monitored.
+   If the instructor-specified time limit is exceeded an autograding point penalty
+   is applied.  
+   *TODO: The time limit example will likely be updated with a built-in
+   autograding validation option in the near future.*
+
+
+
+---
+# Notebook Configuration
+
+Notebooks are different from standard file submissions in that a
+notebook may contain several different types of inputs or outputs.
+The available types of input and outputs are defined by setting the
+``type`` and are as follows:
 
   | Label | Value |
   | ----- | ----- |
@@ -133,6 +178,8 @@ and outputs are defined by setting the ``type`` and are as follows:
   | value | A markdown string to be displayed. |
   
 ### Images
+
+![](/images/notebook_image.png)
 
   | Image |
   | ----- |
