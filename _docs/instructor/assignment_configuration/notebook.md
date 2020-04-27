@@ -45,12 +45,12 @@ Please refer to these complete sample notebook configurations:
 
 
 ---
-# Configuration Details
+# Notebook Configuration
 
-
-Notebooks are different from standard file
-submissions in that a notebook may contain several different types of inputs or outputs.  The available types of input 
-and outputs are defined by setting the ``type`` and are as follows:
+Notebooks are different from standard file submissions in that a
+notebook may contain several different types of inputs or outputs.
+The available types of input and outputs are defined by setting the
+``type`` and are as follows:
 
   | Label | Value |
   | ----- | ----- |
