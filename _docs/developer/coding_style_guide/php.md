@@ -20,14 +20,14 @@ which handles installing the dependencies and setting up the
 To run `phpcs`, you can use the following command:
 
 ```bash
-vendor/bin/phpcs --standard=tests/ruleset.xml [path/to/file/or/directory]
+php vendor/bin/phpcs --standard=tests/ruleset.xml [path/to/file/or/directory]
 ```
 
 where if you leave off the path, it will analyze all files and directories for Submitty.
 Additionally, you can apply the automatic fixer to your code by running:
 
 ```bash
-vendor/bin/phpcbf --standard=tests/ruleset.xml [path/to/file/or/directory]
+php vendor/bin/phpcbf --standard=tests/ruleset.xml [path/to/file/or/directory]
 ```
 
 ### Classes, Methods

@@ -1,9 +1,58 @@
 ---
-title: Writing Unit Tests
-category: Developer
-order: 2
+title: PHP Unit Tests
 ---
-Documentation for PHPUnit can be found [here](https://phpunit.readthedocs.io/en/latest/).
+
+## Running the Tests
+
+To validate the unit behavior of the site code, we utilize 
+[phpunit](https://phpunit.readthedocs.io/en/latest). 
+
+From there, to run the unit test suite, you can run from `Submitty/site`:
+
+```
+php vendor/bin/phpunit --configuration tests/phpunit.xml
+```
+
+To run just an individual class or test, you can use the `--filter` flag on PHPUnit.
+For example, to run the function `testInvalidProperty` would be
+`php vendor/bin/phpunit -c tests/phpunit.xml --filter testInvalidProperty` and running all
+of `AccessControlTester` would be
+`php vendor/bin/phpunit -c tests/phpunit.xml --filter AccessControlTester`. Be aware, filter
+can match against partial strings, so if you have two tests `testFoo` and `testFooBar`,
+running `--filter testFoo` will run them both. Alternatively, you can also directly run
+`phpunit` against a specific class by passing the path to the test class directly to
+`phpunit`, for example
+`php vendor/bin/phpunit tests/app/authentication/DatabaseAuthenticationTester.php` will run
+only the test methods in `DatabaseAuthenticationTester.php`.
+
+The two concepts above can be combined to run a specific test function in a specific
+class by doing:
+
+```bash
+vendor/bin/phpunit -c tests/phpunit.xml --filter testFunction tests/app/path/to/TestClass.php
+```
+
+You can pass in the `--debug` flag when using PHPUnit to see PHP output, this can be
+useful when writing new tests.
+
+## Code Coverage
+
+_Note, to view code coverage information, you will need either
+[xdebug](https://xdebug.org/) or [pcov](https://github.com/krakjoe/pcov). If not using
+the debugger in xdebug, it is recommended to use pcov as it is orders of magnitude
+faster (~ 1 min vs ~15 min).
+
+Assuming you have one of the two above installed, after running the test suite, or some
+part of it, a report is generated showing the code coverage of tests in
+`Submitty/site/tests/report`. While the concept of increasing code coverage is good,
+please make sure you are writing tests to properly validate behavior, show edge
+cases, etc. and not just for the sake of increasing the code coverage number.
+
+*Note code coverage will only be generated for the tests you run, and will overwrite
+previously generated code coverage reports.*
+
+
+## Writing Tests
 
 PHP unit tests are located at `Submitty/site/app/tests`. The test structure should
 mirror the actual source code  structure, except that every class in the tests
@@ -35,11 +84,11 @@ Here are some example Unit tests:
 - [AbstractDatabaseTester](https://github.com/Submitty/Submitty/blob/master/site/tests/app/libraries/database/AbstractDatabaseTester.php)
 - [CourseTester.php](https://github.com/Submitty/Submitty/blob/master/site/tests/app/models/CourseTester.php)
 
-## Parameterized Testing
+### Parameterized Tests
 
 Sometimes, while writing tests, you may find yourself wanting to test the same piece of
 code, but just needing to change one variable. To handle this, you ca use the concept
-of _Paramterized Tests_. To do this, you will add a _Data Provider_ to your test
+of _Parametrized Tests_. To do this, you will add a _Data Provider_ to your test
 function. The data provider is a function that returns an array or generator that is
 then passed to your test function. The test function is linked to the data provider, by
 adding a `@dataProvider` annotation. The data provider function should return an array of
@@ -87,7 +136,7 @@ public function testAddition($num_1, $num_2, $expected) {
 
 For more details, see [PHPUnit Data Providers](https://phpunit.readthedocs.io/en/latest/writing-tests-for-phpunit.html#data-providers).
 
-## Test Setup/Teardown
+### Test Setup/Teardown
 
 When running tests, it's often times useful to be able to define a common state
 to be used within a group of tests. This is known state is called a _fixture_
@@ -128,7 +177,7 @@ public static function tearDownAfterClass(): void {
 
 For more information, see [PHPUnit Fixtures](https://phpunit.readthedocs.io/en/latest/fixtures.html).
 
-## Mocking
+### Mocking
 
 Often times while writing and running the tests, it is useful to create _Test Doubles_
 or _mocks_, allowing you to abstract away a test from requiring difficult to setup
@@ -149,14 +198,14 @@ $mock
 
 Due to the dynamic nature of how method calls work for models, mocking for them is
 slightly more cumbersome. If you wish to mock a model, it is easiest to just use the
-`createMockModel` function in `BaseUnitTest`. Similarily, to avoid some amount of the
+`createMockModel` function in `BaseUnitTest`. Similarly, to avoid some amount of the
 boilerplate of setting up all necessary pieces of using a mock of `Core` (such as
 having query interface, mock user, etc.), you can use `createMockCore`.
 
 For more information on mocks, and the things you can do with them, see
 [PHPUnit Test Doubles](https://phpunit.readthedocs.io/en/latest/test-doubles.html).
 
-For mocking PHP builtin functions like `header`, `setcookie`, `die`, etc, we use the
+For mocking PHP built-in functions like `header`, `setcookie`, `die`, etc., we use the
 [php-mock-phpunit](https://github.com/php-mock/php-mock-phpunit) library that adds an
 extension to PHPUnit. Usage of this relies on how
 [PHP Namespaces work](https://www.php.net/manual/en/language.namespaces.rules.php). For
@@ -172,7 +221,7 @@ die("test");
 
 Running this, `die` will first attempt to execute a function at `app\die()` and if that
 does not exist, run the global definition. `php-mock-phpunit` uses this concept, and
-allows us to define the builtins relative to the namespace of a class being tested.
+allows us to define the built-ins relative to the namespace of a class being tested.
 For the following example, we will assume the class you are trying to test has the
 namespace of `app\libraries`. Creating a function mock is then similar to creating
 a class mock:
@@ -188,7 +237,7 @@ This only works if you leave the function
 call unqualified, and so do not qualify them by adding a leading slash, so for the
 above example, do not do `\die()`, use `die()`. Additionally, due to a bug/quirk
 of the PHP engine, you will want to add the `@runInSeparateProcess` annotation above
-any test that mocks builtins:
+any test that mocks built-ins:
 
 ```php
 /**
@@ -203,46 +252,3 @@ public function testBuiltin() {
 _Note: While mocking is useful and powerful, you should attempt to use a real concrete
 definition as much as possible as mocks will not necessarily capture behavior changes
 in the mocked class that can yield subtle bugs._
-
-## Running Tests
-
-From `Submitty/site` you can run the command
-`vendor/bin/phpunit --configuration tests/phpunit.xml` to start the testing suite.
-
-To run just an individual class or test, you can use the `--filter` flag on PHPUnit.
-For example, to run the function `testInvalidProperty` would be
-`vendor/bin/phpunit -c tests/phpunit.xml --filter testInvalidProperty` and running all
-of `AccessControlTester` would be
-`vendor/bin/phpunit -c tests/phpunit.xml --filter AccessControlTester`. Be aware, filter
-can match aaginst partial strings, so if you have two tests `testFoo` and `testFooBar`,
-running `--filter testFoo` will run them both. Alternatively, you can also directly run
-`phpunit` against a specific class by passing the path to the test class directly to
-`phpunit`, for example
-`vendor/bin/phpunit tests/app/authentication/DatabaseAuthenticationTester.php` will run
-only the test methods in `DatabaseAuthenticationTester.php`.
-
-The two concepts above can be combined to run a specific test function in a specific
-class by doing:
-
-```bash
-vendor/bin/phpunit -c tests/phpunit.xml --filter testFunction tests/app/path/to/TestClass.php
-```
-
-You can pass in the `--debug` flag when using PHPUnit to see PHP output, this can be
-useful when writing new tests.
-
-## Code Coverage
-
-_Note, to view code coverage information, you will need either
-[xdebug](https://xdebug.org/) or [pcov](https://github.com/krakjoe/pcov). If not using
-the debugger in xdebug, it is recommended to use pcov as it is orders of magnitude
-faster (~ 1 min vs ~15 min).
-
-Assuming you have one of the two above installed, after running the test suite, or some
-part of it, a report is generated showing the code coverage of tests in
-`Submitty/site/tests/report`. While the concept of increasing code coverage is good,
-please make sure you are writing tests to properly validate behavior, show edge
-cases, etc. and not just for the sake of increasing the code coverage number.
-
-*Note code coverage will only be generated for the tests you run, and will overwrite
-previously generated code coverage reports.*
