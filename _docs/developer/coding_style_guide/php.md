@@ -87,3 +87,26 @@ do {
 * Functions should use `camelCase`
 * Constants should be `UPPERCASE`
 * Variables and properties should use `snake_case`
+
+### Type Declarations
+
+Wherever possible, you should use [type declarations](https://www.php.net/manual/en/functions.arguments.php#functions.arguments.type-declaration)
+in your code. This helps our static analysis tool function more accurately, and alleviate a class of
+bugs from entering our codebase. Whenever possible, you should declare the type inline with the code:
+
+```php
+function foo(string $bar, ?int $baz): string;
+```
+
+In some cases, such as for arrays of a type or mixed values, this is not possible. In these cases,
+you should write the type out in the docstring using [phpDocumentator](https://docs.phpdoc.org/latest/guides/types.html)
+conventions. However, if possible, still attempt to put a type (such as `array`) inline in the code. An example using
+array of one type of object and union types:
+
+```php
+/**
+ * @param string[] $bar
+ * @param A|B $baz
+ */
+function foo(array $bar, $baz): void;
+```
