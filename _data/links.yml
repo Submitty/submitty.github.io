@@ -3,6 +3,7 @@
   children:
     - name: Overview
       link: ../index
+    - name: Features
     - name: Tutorial
     - name: Publications
     - name: Contact Us
