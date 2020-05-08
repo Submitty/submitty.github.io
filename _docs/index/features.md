@@ -31,17 +31,17 @@ title: Key Features
   * [grade override](/instructor/grade_override) (makeup exams & other special cases)
 
 * **[Notebooks -- Online tutorial/quiz/exams](/instructor/assignment_configuration/notebook)**
-  * markdown formatting and/or images  <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv15");' href="#">&darr;</button>
+  * markdown formatting and/or images <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv15");' href="#">&darr;</button>
     <div markdown="0" id="mydiv15" style="display: none; background-color:#e6f1f7; color:#666666;">For figures, tables, math equations, or complex text formatting: take screenshots of your exam problems typeset with Word, LaTeX, Google Docs, etc.</div>
   * multiple choice or short answer
   * timed (first page access & last submission timestamps) <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv2");' href="#">&darr;</button>
     <div markdown="0" id="mydiv2" style="display: none; background-color:#e6f1f7; color:#666666;"><em>Remote Learning:</em> Accommodate students in different timezones</div>
   * option to randomize order of multiple choice answers
-  * random selection of problems from pool  <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv3");' href="#">&darr;</button>
+  * random selection of problems from pool <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv3");' href="#">&darr;</button>
     <div markdown="0" id="mydiv3" style="display: none; background-color:#e6f1f7; color:#666666;"><em>Remote Learning:</em> Defeat cheating / disallowed collaboration</div>
   * automatic and/or manual grading
 
-* **[Integrated discussion forum](/student/discussion_forum)**<button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv12");' href="#">&darr;</button>
+* **[Integrated discussion forum](/student/discussion_forum)** <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv12");' href="#">&darr;</button>
     <div markdown="0" id="mydiv12" style="display: none; background-color:#e6f1f7; color:#666666;">
     <ul>
     <li><em>Remote Learning Suggestions:</em></li>
@@ -51,21 +51,22 @@ title: Key Features
     </ul>
     </ul>
     </div>
-  * student questions labeled as *unresolved* or *resolved*
+  * student question threads labeled as *unresolved* or *resolved*
     * students can post anonymously to their peers  
       (*TAs and instructors can click to view the author's name & id*)
-    * students can answer each others questions
+    * students can answer each other's questions
     * all posts by instructional staff are highlighted with a yellow border
-  * Instructor email announcements
   * customizable email/notification alerts
+    * Instructor email announcements
+  * all threads tagged with one or more course-specific categories
   * threads can be globally *pinned* by the instructor/TA
   * students can *bookmark* threads for later refererence
 
 * **[Post course materials](/instructor/course_materials)**
-  * E.g., syllabus, lecture slides, assignment problems/sample solutions, test review material  <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv6");' href="#">&darr;</button>
+  * E.g., syllabus, lecture slides, assignment problems/sample solutions, test review material <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv6");' href="#">&darr;</button>
     <div markdown="0" id="mydiv6" style="display: none; background-color:#e6f1f7; color:#666666;"><em>Remote Learning:</em> coming soon - links to large files hosted on other sites (e.g., lecture videos)</div>
   * specify release date/time
-  * restrict access to select registration sections<button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv13");' href="#">&darr;</button>
+  * restrict access to select registration sections <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv13");' href="#">&darr;</button>
     <div markdown="0" id="mydiv13" style="display: none; background-color:#e6f1f7; color:#666666;"><em>Remote Learning:</em>Different versions of the materials released at the start time for each recitation or laboratory section.</div>
 
 
@@ -73,33 +74,38 @@ title: Key Features
   * for large courses with busy TA office hours <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv14");' href="#">&darr;</button>
     <div markdown="0" id="mydiv14" style="display: none; background-color:#e6f1f7; color:#666666;"><em>Remote Learning:</em> Students post their WebEx (or other) contact information, and a member of the instructional staff contacts the student when they are available.  <em>Students should not attempt to directly contact TAs or mentors outside of scheduled office hours.</em></div>
   * [prioritize students asking for help for the first time today/this week](/grader/queue#helping-students-in-the-office-hours-queue)
-  * *Coming soon* daily usage statistics  <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv4");' href="#">&darr;</button>
+  * *coming soon*: daily usage statistics <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv4");' href="#">&darr;</button>
     <div markdown="0" id="mydiv4" style="display: none; background-color:#e6f1f7; color:#666666;"><em>Remote Learning:</em> Re-distribute TA/mentor office hour time slots and coverage based on demand</div>
-  * *Coming soon* per student usage statistics  <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv7");' href="#">&darr;</button>
+  * *coming soon*: per student usage statistics <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv7");' href="#">&darr;</button>
     <div markdown="0" id="mydiv7" style="display: none; background-color:#e6f1f7; color:#666666;"><em>Remote Learning:</em> Identify struggling students who are not seeking help</div>
 
-* **Anonymous peer grading (BETA TESTING)**
-  * presentation feedback  <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv5");' href="#">&darr;</button>
+* **Peer grading (BETA TESTING)**
+  * uses [rubric grading interface](/grader/rubric_grading)
+  * instructor uploads matrix of peer-to-peer grading assignments
+  * *coming soon*: double-blind peer grading
+* presentation feedback <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv5");' href="#">&darr;</button>
     <div markdown="0" id="mydiv5" style="display: none; background-color:#e6f1f7; color:#666666;"><em>Remote Learning:</em> Collect written feedback from classmates during presentations</div>
 
 * **Plagiarism detection (BETA TESTING)**
   * extract text from PDF documents
   * search for matching phrases / paragraphs used by a subset of students
+  * programming language-specific tokenization
 
-* [Semester Grade Summary -- *Rainbow Grades*](/instructor/rainbow_grades/index)
+* **[Semester grade summary -- *Rainbow Grades*](/instructor/rainbow_grades/index)**
   * implement grade formulas from the syllabus
     * options: curve, extra credit, drop lowest quiz, etc.
   * student can compare themself to hypothetical *average* student, *lowest A-* student, *lowest B-* student, etc.
   * view incremental progress towards end-of-term overall grade
   * instructor can visually identify trends and outlier scores for further inspection
 
-* **Accounts / Course Registration**
+* **Accounts / course registration**
   * University username & password (RPI RCS)
   * Daily synchronization with registration data (SIS)
-  * [Student photo page](/instructor/student_photos)
+  * [Student photo page](/instructor/student_photos) <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv16");' href="#">&darr;</button>
+    <div markdown="0" id="mydiv16" style="display: none; background-color:#e6f1f7; color:#666666;">Helpful in large courses with lecture and recitation or lab, allowing instructors and TAs to identify students who may be struggling, but rarely ask for help.</div>
     * [ID photos downloaded from SIS](/instructor/student_photos#photo-scraper)
   * [Multiple levels of access](/sysadmin/user_access_level#user-group-or-role)
-    * instructors  <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv8");' href="#">&darr;</button>
+    * instructors <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv8");' href="#">&darr;</button>
       <div markdown="0" id="mydiv8" style="display: none; background-color:#e6f1f7; color:#666666;"><em>Note:</em> Supports multiple instructors, and can designate a <em>head TA</em> with instructor access</div>
     * full access graders (graduate TAs)
     * limited access graders (mentors)
