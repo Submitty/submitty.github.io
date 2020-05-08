@@ -113,7 +113,7 @@ each of those students (or teams).
 
 ### Overall Comment and PDF Annotations
 
-In addition to the someone generic system of common marks and points,
+In addition to the somewhat general-purpose system of common marks and points,
 graders can leave more personalized type-written notes in the *Overall
 Comment* box at the bottom of the grading rubric panel.
 
