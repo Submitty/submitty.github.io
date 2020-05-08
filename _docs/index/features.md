@@ -79,12 +79,19 @@ title: Key Features
   * *coming soon*: per student usage statistics <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv7");' href="#">&darr;</button>
     <div markdown="0" id="mydiv7" style="display: none; background-color:#e6f1f7; color:#666666;"><em>Remote Learning:</em> Identify struggling students who are not seeking help</div>
 
-* **Peer grading (BETA TESTING)**
+* **[Peer grading](/instructor/peer_grading) (BETA TESTING)** <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv5");' href="#">&darr;</button>
+    <div markdown="0" id="mydiv5" style="display: none; background-color:#e6f1f7; color:#666666;">
+    <ul>
+    <li><em>Remote Learning:</em></li>
+    <ul>
+    <li>Collect written feedback from classmates during synchronous video presentations</li>
+    </ul>
+    </ul>
+    </div>
   * uses [rubric grading interface](/grader/rubric_grading)
   * instructor uploads matrix of peer-to-peer grading assignments
   * *coming soon*: double-blind peer grading
-* presentation feedback <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv5");' href="#">&darr;</button>
-    <div markdown="0" id="mydiv5" style="display: none; background-color:#e6f1f7; color:#666666;"><em>Remote Learning:</em> Collect written feedback from classmates during presentations</div>
+
 
 * **Plagiarism detection (BETA TESTING)**
   * extract text from PDF documents
