@@ -28,12 +28,12 @@ new marks!*
 
 ### Preparation of the Peer Grading Assignment Matrix
 
-Next the instructor must prepare the assignemnts of peers for grading.
+Next the instructor must prepare the assignments of peers for grading.
 Currently this is done by creating the explicit mapping/matrix between
 peer graders and students, and uploading the data as a .csv (comma
 separated values) file.  *NOTE: In the future we plan to provide
 easy-to-use web user interface to generate standard peer grading
-assigment matrices.*
+assignment matrices.*
 
 In the example below, each of the five students is assigned to grade
 three other students.  And each student will receive feedback from
@@ -43,7 +43,7 @@ three of their peers.
 
 This file is uploaded from the "Edit Gradeable" page, under the
 "Grader Assignment" tab.  *NOTE: If you have added Peer Components to
-your rubric, but don't see option to select and upload the peer
+your rubric, but don't see the option to select and upload the peer
 assignment matrix, you need to explicitly reload this page in your
 browser.*
 
