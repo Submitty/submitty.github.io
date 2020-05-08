@@ -18,11 +18,12 @@ title: Key Features
   * simple grading: [checkpoint grading](/grader/checkpoint_grading) and [numeric / text grading](/grader/numeric_text_grading)
   * [detailed rubric grading](/grader/rubric_grading) of submitted materials
   * web interface for file access or bulk download
-  * assign sections of grading to different TAs
-  * digital PDF annotation
-  * grading progress indicator and grade statistics & histogram
-  * retroactive rubric and point adjustment
-  * grade inquiries (clarifications/corrections of manual grading)
+  * [assign sections of grading to different TAs](/instructor/create_edit_gradeable#grader-assignment-method)
+  * [digital PDF annotation](/grader/rubric_grading#overall-comment-and-pdf-annotations)
+  * grading progress indicator and [grade statistics & histogram](/grader/rubric_grading_statistics)
+  * [retroactive rubric and point adjustment](/grader/rubric_grading#rubric-common-mark-editing)
+  * [grade inquiries](/grader/grade_inquiry_grader) (clarifications/corrections of manual grading)
+  * [grade override](/instructor/grade_override) (makeup exams & other special cases)
 
 * **[Notebooks -- Online tutorial/quiz/exams](/instructor/assignment_configuration/notebook)**
   * markdown formatting and/or screenshot images
