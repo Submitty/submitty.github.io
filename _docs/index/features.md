@@ -7,7 +7,7 @@ title: Key Features
   * [drag & drop](/student/submission), zip file, or version control (GIT)
   * [resubmission](/student/managing_versions): optional penalty for excessive submissions
   * due date & time <button onclick='return toggle_display("mydiv9");' href="#">&darr;</button>
-    <div markdown="0" id="mydiv9" style="display: none; background-color:#e6f1f7; color:#666666;">In large courses, it is important to have a consistent and firm assignment submission policy.  But it is also important to adapt this policy for verified student personal emergencies.  Submitty provides an organized and transparent system for tracking deadlines and exceptions.</div>
+    <div markdown="0" id="mydiv9" style="display: none; background-color:#e6f1f7; color:#666666;">In large courses, it is important to have a consistent and firm assignment submission policy.  But it is also important to adapt this policy for verified student personal emergencies.  And to have an organized system and transparent for tracking deadlines and exceptions.</div>
     * [customizable late day policy](/student/late_days)
     * [excused absense extensions](/student/late_days#excused-absense-extensions)
   * [bulk upload of scanned-to-pdf paper exams](/instructor/bulk_pdf_upload)
@@ -31,8 +31,8 @@ title: Key Features
   * [grade override](/instructor/grade_override) (makeup exams & other special cases)
 
 * **[Notebooks -- Online tutorial/quiz/exams](/instructor/assignment_configuration/notebook)**
-  * markdown formatting and/or images  <button onclick='return toggle_display("mydiv8");' href="#">&darr;</button>
-    <div markdown="0" id="mydiv8" style="display: none; background-color:#e6f1f7; color:#666666;">For figures, tables, math equations, or complex text formatting: take screenshots of your exam problems typeset with Word, LaTeX, Google Docs, etc.</div>
+  * markdown formatting and/or images  <button onclick='return toggle_display("mydiv15");' href="#">&darr;</button>
+    <div markdown="0" id="mydiv15" style="display: none; background-color:#e6f1f7; color:#666666;">For figures, tables, math equations, or complex text formatting: take screenshots of your exam problems typeset with Word, LaTeX, Google Docs, etc.</div>
   * multiple choice or short answer
   * timed (first page access & last submission timestamps) <button onclick='return toggle_display("mydiv2");' href="#">&darr;</button>
     <div markdown="0" id="mydiv2" style="display: none; background-color:#e6f1f7; color:#666666;"><em>Remote Learning:</em> Accommodate students in different timezones</div>
@@ -42,10 +42,20 @@ title: Key Features
   * automatic and/or manual grading
 
 * **[Integrated discussion forum](/student/discussion_forum)**<button onclick='return toggle_display("mydiv12");' href="#">&darr;</button>
-    <div markdown="0" id="mydiv12" style="display: none; background-color:#e6f1f7; color:#666666;"><em>Remote Learning Suggestion:</em> Required post discussion thread - for example: "Write a 100-200 word response to the assigned reading, asking a question, or commenting on a classmate's post."</div>
+    <div markdown="0" id="mydiv12" style="display: none; background-color:#e6f1f7; color:#666666;">
+    <ul>
+    <li><em>Remote Learning Suggestions:</em></li>
+    <ul>
+    <li>Discuss assigned reading: "Write a 100-200 word response to the assigned reading, asking a question, or commenting on a classmate's post."</li>
+    <li>Project status report: "Post a screenshot of your collected data, describe one challenge you have overcome, and describe one problem you have not yet resolved."</li>
+    </ul>
+    </ul>
+    </div>
   * student questions labeled as *unresolved* or *resolved*
     * students can post anonymously to their peers  
       (*TAs and instructors can click to view the author's name & id*)
+    * students can answer each others questions
+    * all posts by instructional staff are highlighted with a yellow border
   * Instructor email announcements
   * customizable email/notification alerts
   * threads can be globally *pinned* by the instructor/TA
@@ -60,7 +70,8 @@ title: Key Features
 
 
 * **[Office hours queue](/grader/queue)**
-  * for large courses with busy TA office hours
+  * for large courses with busy TA office hours <button onclick='return toggle_display("mydiv14");' href="#">&darr;</button>
+    <div markdown="0" id="mydiv14" style="display: none; background-color:#e6f1f7; color:#666666;"><em>Remote Learning:</em> Students post their WebEx (or other) contact information, and a member of the instructional staff contacts the student when they are available.  <em>Students should not attempt to directly contact TAs or mentors outside of scheduled office hours.</em></div>
   * [prioritize students asking for help for the first time today/this week](/grader/queue#helping-students-in-the-office-hours-queue)
   * *Coming soon* daily usage statistics  <button onclick='return toggle_display("mydiv4");' href="#">&darr;</button>
     <div markdown="0" id="mydiv4" style="display: none; background-color:#e6f1f7; color:#666666;"><em>Remote Learning:</em> Re-distribute TA/mentor office hour time slots and coverage based on demand</div>
@@ -77,16 +88,16 @@ title: Key Features
 
 * [Semester Grade Summary -- *Rainbow Grades*](/instructor/rainbow_grades/index)
   * implement grade formulas from the syllabus
-    * options: curves, extra credit, drop lowest quiz, etc.
+    * options: curve, extra credit, drop lowest quiz, etc.
   * student can compare themself to hypothetical *average* student, *lowest A-* student, *lowest B-* student, etc.
   * view incremental progress towards end-of-term overall grade
   * instructor can visually identify trends and outlier scores for further inspection
 
 * **Accounts / Course Registration**
   * University username & password (RPI RCS)
-  * Daily synchronization with SIS registration data
+  * Daily synchronization with registration data (SIS)
   * [Student photo page](/instructor/student_photos)
-    * ID photos downloaded from SIS
+    * [ID photos downloaded from SIS](/instructor/student_photos#photo-scraper)
   * [Multiple levels of access](/sysadmin/user_access_level#user-group-or-role)
     * instructors  <button onclick='return toggle_display("mydiv8");' href="#">&darr;</button>
       <div markdown="0" id="mydiv8" style="display: none; background-color:#e6f1f7; color:#666666;"><em>Note:</em> Supports multiple instructors, and can designate a <em>head TA</em> with instructor access</div>
@@ -95,7 +106,7 @@ title: Key Features
     * students
 
 * **Automated testing & grading of student software**
-  * available languages: Python, C/C++, Java, Scheme, Prolog, SQL, etc.
+  * available languages: Python, C/C++, Java, Scheme, Prolog, Haskell, SQL, MATLAB, OpenGL, etc.
   * docker containerization for security & customization
   * hidden test cases (defeat *hard-coding*)
   * static analysis, JUnit, code coverage, memory debuggers
