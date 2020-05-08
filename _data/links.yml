@@ -78,6 +78,7 @@
           link: notebook
     - name: Course Materials
       link: course_materials
+    - name: Peer Grading
     - name: Facilitating Submission via GIT
       link: managing_git
     - name: Static Analysis
