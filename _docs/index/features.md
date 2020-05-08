@@ -44,10 +44,11 @@ title: Key Features
 * **[Integrated discussion forum](/student/discussion_forum)** <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv12");' href="#">&darr;</button>
     <div markdown="0" id="mydiv12" style="display: none; background-color:#e6f1f7; color:#666666;">
     <ul>
-    <li><em>Remote Learning Suggestions:</em></li>
+    <li><em>General and Remote Learning Suggestions:</em></li>
     <ul>
     <li>Discuss assigned reading: "Write a 100-200 word response to the assigned reading, asking a question, or commenting on a classmate's post."</li>
     <li>Project status report: "Post a screenshot of your collected data, describe one challenge you have overcome, and describe one problem you have not yet resolved."</li>
+    <li>Forum participation can be graded by the checkpoint or numeric/text gradable interfaces, or made available as a panel within the  interface for a rubric gradeable.</li>
     </ul>
     </ul>
     </div>
@@ -90,7 +91,7 @@ title: Key Features
   * *coming soon*: double-blind peer grading
 
 * **[Semester grade summary -- *Rainbow Grades*](/instructor/rainbow_grades/index)** <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv17");' href="#">&darr;</button>
-    <div markdown="0" id="mydiv17" style="display: none; background-color:#e6f1f7; color:#666666;">In large courses, it is important to have a centralized database of grades and allow students to inspect the contents of their grades, and facilitate corrections in the case of data entry errors.  Frequent updates to the database and transparency about the grade calculation process can significantly reduce student confusion and reduce or eliminate student-TA-instructor communications in verifying and/or correcting term grades.</div>
+    <div markdown="0" id="mydiv17" style="display: none; background-color:#e6f1f7; color:#666666;">In large courses, it is important to have a centralized database of grades and allow students to inspect their current grades, and facilitate corrections in the case of data entry errors.  Frequent updates to the database and transparency about the grade calculation process can significantly reduce student confusion and reduce or eliminate student-TA-instructor communications in verifying and/or correcting term grades.</div>
   * implement grade formulas from the syllabus
     * options: curve, extra credit, drop lowest quiz, etc.
   * student can compare themself to hypothetical *average* student, *lowest A-* student, *lowest B-* student, etc.
@@ -102,7 +103,7 @@ title: Key Features
     <div markdown="0" id="mydiv6" style="display: none; background-color:#e6f1f7; color:#666666;"><em>Remote Learning:</em> coming soon - links to large files hosted on other sites (e.g., lecture videos)</div>
   * specify release date/time
   * restrict access to selected registration sections <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv13");' href="#">&darr;</button>
-    <div markdown="0" id="mydiv13" style="display: none; background-color:#e6f1f7; color:#666666;"><em>Remote Learning:</em>Different versions of the materials released at the start time for each recitation or laboratory section.</div>
+    <div markdown="0" id="mydiv13" style="display: none; background-color:#e6f1f7; color:#666666;"><em>Remote Learning:</em> Different versions of the materials released at the start time for each recitation or laboratory section.</div>
 
 * **Accounts / course registration**
   * University username & password (RPI RCS)
