@@ -37,10 +37,15 @@
   children:
     - name: Overview
       link: ../grader
+    - name: Checkpoint Grading
+    - name: Numeric / Text Grading
+      link: numeric_text_grading
+    - name: Rubric Grading
+    - name: Rubric Grading Statistics
     - name: Sorting and Navigation
     - name: Resolving a Grade Inquiry
       link: grade_inquiry_grader
-    - name: Managing the Office Hours Queue
+    - name: Managing Office Hours
       link: queue
       
 - name: Instructor

@@ -1,6 +1,6 @@
 ---
 category: Grader
-title: Sorting and Navigation
+title: Rubric Grading - Sorting and Navigation
 ---
 
 ### Sorting Options

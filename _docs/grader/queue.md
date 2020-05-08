@@ -1,5 +1,5 @@
 ---
-title: Managing the Office Hours Queue
+title: Managing Office Hours
 category: Grader
 order: 4
 ---

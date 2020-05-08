@@ -15,20 +15,23 @@ title: Key Features
     * custom student crib sheets
 
 * **Manual grading interface**
+  * simple grading: [checkpoint grading](/grader/checkpoint_grading) and [numeric / text grading](/grader/numeric_text_grading)
+  * [detailed rubric grading](/grader/rubric_grading) of submitted materials
   * web interface for file access or bulk download
-  * assign sections of grading to different TAs
-  * digital PDF annotation
-  * grading progress indicator and grade statistics & histogram
-  * retroactive rubric and point adjustment
-  * grade inquiries (clarifications/corrections of manual grading)
+  * [assign sections of grading to different TAs](/instructor/create_edit_gradeable#grader-assignment-method)
+  * [digital PDF annotation](/grader/rubric_grading#overall-comment-and-pdf-annotations)
+  * grading progress indicator and [grade statistics & histogram](/grader/rubric_grading_statistics)
+  * [retroactive rubric and point adjustment](/grader/rubric_grading#rubric-common-mark-editing)
+  * [grade inquiries](/grader/grade_inquiry_grader) (clarifications/corrections of manual grading)
+  * [grade override](/instructor/grade_override) (makeup exams & other special cases)
 
 * **[Notebooks -- Online tutorial/quiz/exams](/instructor/assignment_configuration/notebook)**
   * markdown formatting and/or screenshot images
   * multiple choice or short answer
-  * timed <a onclick='return toggle_display("mydiv2");' href="#">(note)</a>
+  * timed <button onclick='return toggle_display("mydiv2");' href="#">&darr;</button>
     <div markdown="0" id="mydiv2" style="display: none; background-color:#e6f1f7; color:#666666;">&nbsp;<em>Remote Learning:</em> Accommodate students in different timezones</div>
   * randomize order of multiple choice answers
-  * random selection of problems from pool <a onclick='return toggle_display("mydiv3");' href="#">(note)</a>
+  * random selection of problems from pool <button onclick='return toggle_display("mydiv3");' href="#">&darr;</button>
     <div markdown="0" id="mydiv3" style="display: none; background-color:#e6f1f7; color:#666666;">&nbsp;<em>Remote Learning:</em> Defeat cheating / disallowed collaboration</div>
   * automatic and/or manual grading
 
@@ -40,7 +43,7 @@ title: Key Features
   * students can *bookmark* threads for later refererence
 
 * **[Post course materials](/instructor/course_materials)**
-  * E.g., syllabus, lecture slides, assignment problems/sample solutions, test review material <a onclick='return toggle_display("mydiv6");' href="#">(note)</a>
+  * E.g., syllabus, lecture slides, assignment problems/sample solutions, test review material <button onclick='return toggle_display("mydiv6");' href="#">&darr;</button>
     <div markdown="0" id="mydiv6" style="display: none; background-color:#e6f1f7; color:#666666;">&nbsp;<em>Remote Learning:</em> coming soon - links to lecture videos (hosted on other sites)</div>
   * specify release date/time
   * restrict access to select registration sections
@@ -49,13 +52,13 @@ title: Key Features
 * **[Office hours queue](/grader/queue)**
   * for large courses with busy TA office hours
   * [prioritize students asking for help for the first time today/this week](/grader/queue#helping-students-in-the-office-hours-queue)
-  * *Coming soon* daily usage statistics <a onclick='return toggle_display("mydiv4");' href="#">(note)</a>
+  * *Coming soon* daily usage statistics <button onclick='return toggle_display("mydiv4");' href="#">&darr;</button>
     <div markdown="0" id="mydiv4" style="display: none; background-color:#e6f1f7; color:#666666;">&nbsp;<em>Remote Learning:</em> Re-distribute TA/mentor office hour assignments based on demand</div>
-  * *Coming soon* per student usage statistics <a onclick='return toggle_display("mydiv7");' href="#">(note)</a>
+  * *Coming soon* per student usage statistics <button onclick='return toggle_display("mydiv7");' href="#">&darr;</button>
     <div markdown="0" id="mydiv7" style="display: none; background-color:#e6f1f7; color:#666666;">&nbsp;<em>Remote Learning:</em> Identify struggling students who are not seeking help</div>
 
 * **Anonymous peer grading (BETA TESTING)**
-  * presentation feedback <a onclick='return toggle_display("mydiv5");' href="#">(note)</a>
+  * presentation feedback <button onclick='return toggle_display("mydiv5");' href="#">&darr;</button>
     <div markdown="0" id="mydiv5" style="display: none; background-color:#e6f1f7; color:#666666;">&nbsp;<em>Remote Learning:</em> Collect written feedback from classmates during presentations</div>
 
 * **Plagiarism detection (BETA TESTING)**
@@ -75,7 +78,7 @@ title: Key Features
   * [Student photo page](/instructor/student_photos)
     * ID photos downloaded from SIS
   * [Multiple levels of access](/sysadmin/user_access_level#user-group-or-role)
-    * instructors <a onclick='return toggle_display("mydiv8");' href="#">(note)</a>
+    * instructors <button onclick='return toggle_display("mydiv8");' href="#">&darr;</button>
       <div markdown="0" id="mydiv8" style="display: none; background-color:#e6f1f7; color:#666666;">&nbsp;<em>Note:</em> Supports multiple instructors, and can designate a <em>head TA</em> with instructor access</div>
     * full access graders (graduate TAs)
     * limited access graders (mentors)
