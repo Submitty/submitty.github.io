@@ -1,10 +1,11 @@
+---
 title: PGAdmin Setup Instructions
 category: Developer
 order: 20
 
 Download at: https://www.pgadmin.org/download/
 
-------
+---
 
 If you do not already have the app, please download it as the link above. When the pgAdmin app loads, open `Add New Server` >> `Create - Server`. The name of the server can be whatever you would like, it will not affect your connection.
 
