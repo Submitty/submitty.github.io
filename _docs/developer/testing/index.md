@@ -81,7 +81,7 @@ composer install
 ```
 
 __Note:__, while it is usually able to run stuff under composer by just executing
-` vendor/bin/foo` directly (e.g. `vendor/bin/phpunit`), because of how the Submitty
+`vendor/bin/foo` directly (e.g. `vendor/bin/phpunit`), because of how the Submitty
 installer and Vagrant work, things under the vendor directory will lose their execution
 bit, and so you will need to specify `php` before the thing you are attempting to execute
 (e.g. `php vendor/bin/phpunit`).
