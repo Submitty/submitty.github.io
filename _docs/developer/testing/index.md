@@ -44,19 +44,22 @@ and Linux distros using its package manager. We will give the instructions for U
 users of other distros should be able to adapt it to their needs.
 
 For macOS:
-```
+
+```bash
 brew install python php composer
 pecl install xdebug
 ```
 
 For Ubuntu:
-```
+
+```bash
 sudo apt-get install php-cli php-mbstring php-xml php-xdebug php-curl php-zip php-sqlite
 sudo apt-get install python3 python3-pip
 ```
 
 Now, to install dependencies for Python on either OS:
-```
+
+```bash
 pip3 install PyYAML
 pip3 install python-dateutil
 pip3 install tzlocal
@@ -71,7 +74,8 @@ pip3 install --pre selenium
 ```
 
 To install the PHP dependencies:
-```
+
+```bash
 cd site
 composer install
 ```
