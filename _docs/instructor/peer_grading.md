@@ -30,12 +30,12 @@ new marks!*
 
 ### Preparation of the Peer Grading Assignment Matrix
 
-Next, from the Peer Matrix tab, the instructor must prepare the
-assignments of peers for grading. Currently this is done by creating
-the explicit mapping/matrix between peer graders and students, and
-uploading the data as a .csv (comma separated values) file.  *NOTE:
-In the future we plan to provide easy-to-use web user interface to
-generate standard peer grading assignment matrices.*
+Next the instructor must prepare the assignments of peers for grading.
+Currently this is done by creating the explicit mapping/matrix between
+peer graders and students, and uploading the data as a .csv (comma
+separated values) file.  *NOTE: In the future we plan to provide
+easy-to-use web user interface to generate standard peer grading
+assignment matrices.*
 
 In the example below, each of the five students is assigned to grade
 three other students.  And each student will receive feedback from
