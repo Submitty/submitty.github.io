@@ -43,14 +43,8 @@ three of their peers.
 
 ![](/images/peer_grading/peer_grading_matrix_csv.png){:width="200px"}
 
-This file is uploaded from the "Edit Gradeable" page, under the
-"Grader Assignment" tab.  *NOTE: If you have added Peer Components to
-your rubric, but don't see the option to select and upload the peer
-assignment matrix, you need to explicitly reload this page in your
-browser.*
-
-After uploading the file, you will see the peer grading assignments
-for each student:
+This file is uploaded from the "Peer Matrix" tab. After uploading the
+file, you will see the peer grading assignments for each student:
 
 ![](/images/peer_grading/peer_grading_matrix_uploaded.png)
 
