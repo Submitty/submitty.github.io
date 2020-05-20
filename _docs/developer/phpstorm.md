@@ -18,20 +18,23 @@ Configuring a SFTP connection to your vagrant virtual machine allows PhpStorm to
 interpreter and deploy file changes automatically.
 This step should be done first as this connection will be used in many of the later steps.
 
-Open `Tools` > `Deployment...` > `Configuration`. Press the `+` and add a server of type `SFTP`.
+Open `Tools` > `Deployment...` > `Configuration`.
+Press the `+` and add a server of type `SFTP`.
+Give the server a name, like _Submitty Vagrant_.
 Set the following parameters under the `Connection` tab:
 
-- `SFTP Host`: `127.0.0.1`
-- `Port`: `2222`
+- `SSH Connection`: create a new connection using `...` and then clicking on the `+`
+  - `Host`: `127.0.0.1`
+  - `Port`: `2222`
+  - `User Name`: `root`
+  - `Authentication Type`: `Key pair (OpenSSH or PuTTY)`
+  - `Private Key File`: `<submitty repository root>/.vagrant/machines/ubuntu-18.04/virtualbox/private_key`
+  - `Key Passphrase`: leave empty
 - `Root Path`: `/usr/local/submitty`
-- `User Name`: `root`
-- `Auth Type`: `Key pair (OpenSSH or PuTTY)`
-- `Private Key File`: `<submitty repository root>/.vagrant/machines/ubuntu/virtualbox/private_key`
-- `Key Passphrase`: leave empty
+- `Web server URL`: `http://192.168.56.111/`
 
 Under the `Mappings` tab, set the following:
 
-- Press `Use this server as default`
 - Press `Add Another Mapping`
 - In the first mapping, set:
   - `Local Path`: `<submitty repository root>`
@@ -47,7 +50,9 @@ Under the `Mappings` tab, set the following:
 This step will configure PhpStorm to use the PHP CLI that is configured inside your vagrant machine.
 It is important to use this PHP installation as opposed to some other one as it ensures environment consistency among developers and production servers.
 
-Under PhpStorm settings, open `Languages & Frameworks` > `PHP`. Press the `...` button next to `CLI Interpreter` and, on the left list of the interpreters window, press the `+` and select `From Docker, Vagrant, VM, Remote...`. Select `Deployment configuration` from the list of radio buttons. Then press `OK` to add the interpreter and `OK` to save the list of interpreters.  
+Under PhpStorm settings, open `Languages & Frameworks` > `PHP`. Press the `...` button next to `CLI Interpreter` and, on the left list of the interpreters window, press the `+` and select `From Docker, Vagrant, VM, Remote...`.
+Select `Vagrant` from the list of radio buttons.
+Then press `OK` to add the interpreter and `OK` to save the list of interpreters.  
 
 ## Deploying updates automatically to vagrant
 
