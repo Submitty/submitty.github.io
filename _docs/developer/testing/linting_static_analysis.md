@@ -17,7 +17,7 @@ The Python code of Submitty is linted using [flake8](https://flake8.pycqa.org/en
 Submitty to test all Python files by just doing:
 
 ```bash
-flake8
+python3 -m flake8
 ```
 
 Optionally, you can pass in a specific file or directory if you want to check just that file or
