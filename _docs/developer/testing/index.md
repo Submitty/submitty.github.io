@@ -4,14 +4,14 @@ title: Testing
 
 To verify expected behavior of Submitty, we use
 various test suites, broken up per component. Currently, much of the testing is quite
-sparse, and we encourage people to add tests if possible with their PRs. Much as Submitty
+sparse, and we encourage all developers to add relevant tests with their PRs. Much as Submitty
 is made up of many composite pieces, each piece has a different test suite. However,
 these tests can be roughly broken down into the following high-level types:
 
-* Static Analysis / Linting,
+* Static Analysis / Linting
 * Python Unit Tests
 * PHP Unit Tests
-* Site End-to-End tests
+* Site End-to-End (E2E) tests
 * Autograding Integration Tests
 * Rainbow Grades Functional Tests
 
@@ -22,24 +22,27 @@ To illustrate the difference between unit testing, integration testing, and end-
 * <https://www.softwaretestinghelp.com/the-difference-between-unit-integration-and-functional-testing/>
 * <https://codeutopia.net/blog/2015/04/11/what-are-unit-testing-integration-testing-and-functional-testing/>
 
-Developers are encouraged to run these tests locally.  These tests are run as part of
-a _Continuous Integration_ process on [Travis-CI](https://travis-ci.com/github/Submitty/Submitty). Each of the
-tests run there are exactly the same as running them on your local computer, and so failures there should be reflected
-locally, and vice versa. Please see the [page](/developer/testing/travis_ci) on it for more discussion on how it functions.
+These tests are run as part of a _Continuous Integration_ process on
+[Travis-CI](https://travis-ci.com/github/Submitty/Submitty).  Each of
+the tests can also be run on your local computer -- developers are
+encouraged to run and debug the relevant tests on their own computer.
+Please see the [page](/developer/testing/travis_ci) on it for more
+discussion on how it functions.
 
-## Getting Set Up
+## Initial Set Up
 
-We encourage people to try and run things as much as possible on their local machine, not
-within the Vagrant VM. This is especially true of the E2E tests which require a web browser,
-and for debugging purposes, is useful to run it not headless. To set it up, it requires
-installing a handful of dependencies:
+We encourage people to run most of the tests using their local
+machine, not within the Vagrant VM. This is especially true of the E2E
+tests which require a web browser, and for debugging purposes, is
+useful to not run it *headless*. To set it up, it requires installing a
+handful of dependencies:
 
 * Python3
 * Pip
 * PHP (and some extensions)
 * Composer
 
-Installing these should be straight forward for people on macOS (using [homebrew](https://brew.sh))
+Installing these should be straight forward for people on macOS (using [Homebrew](https://brew.sh))
 and Linux distros using its package manager. We will give the instructions for Ubuntu, and we expect
 users of other distros should be able to adapt it to their needs.
 
