@@ -2,11 +2,11 @@
 title: Testing
 ---
 
-To help verify behavior of Submitty, and hopefully prevent regressions, Submitty utilizes
+To verify expected behavior of Submitty, we use
 various test suites, broken up per component. Currently, much of the testing is quite
 sparse, and we encourage people to add tests if possible with their PRs. Much as Submitty
-is made up of many composite pieces, each piece has a different test suite for it. However,
-these tests can be roughly broken down into a couple high-level types: 
+is made up of many composite pieces, each piece has a different test suite. However,
+these tests can be roughly broken down into the following high-level types:
 
 * Static Analysis / Linting,
 * Python Unit Tests
@@ -15,14 +15,14 @@ these tests can be roughly broken down into a couple high-level types:
 * Autograding Integration Tests
 * Rainbow Grades Functional Tests
 
-To help illustrate the difference between unit testing, integration testing, and end-to-end tests
-(also often called functional tests) and what they are for, we recommend checking out the following articles:
+To illustrate the difference between unit testing, integration testing, and end-to-end tests
+(also often called functional tests) and what they are for, we recommend the following articles:
 
 * <https://codeahoy.com/2016/07/05/unit-integration-and-end-to-end-tests-finding-the-right-balance/>
 * <https://www.softwaretestinghelp.com/the-difference-between-unit-integration-and-functional-testing/>
 * <https://codeutopia.net/blog/2015/04/11/what-are-unit-testing-integration-testing-and-functional-testing/>
 
-After the tests are written, while we do encourage everyone to run them locally, each of them are run as part of
+Developers are encouraged to run these tests locally.  These tests are run as part of
 a _Continuous Integration_ process on [Travis-CI](https://travis-ci.com/github/Submitty/Submitty). Each of the
 tests run there are exactly the same as running them on your local computer, and so failures there should be reflected
 locally, and vice versa. Please see the [page](/developer/testing/travis_ci) on it for more discussion on how it functions.
