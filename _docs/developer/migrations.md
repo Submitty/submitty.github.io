@@ -175,8 +175,10 @@ directory or file structure:
     your `up` function should not crash on adding the column if the column
     already exists.
 
-3.  After you have written your migration and are satisfied that it works,
-    you will have to then modify the base .sql files Submitty uses on. To
+3.  After you have written your migration to update an existing system 
+    and are satisfied that it works,
+    you must also update the base .sql files used to create a new 
+    Submitty system.  To
     accomplish this, run the following two commands from within Vagrant:
     
     ```bash
