@@ -20,14 +20,14 @@ which handles installing the dependencies and setting up the
 To run `phpcs`, you can use the following command:
 
 ```bash
-vendor/bin/phpcs --standard=tests/ruleset.xml [path/to/file/or/directory]
+php vendor/bin/phpcs --standard=tests/ruleset.xml [path/to/file/or/directory]
 ```
 
 where if you leave off the path, it will analyze all files and directories for Submitty.
 Additionally, you can apply the automatic fixer to your code by running:
 
 ```bash
-vendor/bin/phpcbf --standard=tests/ruleset.xml [path/to/file/or/directory]
+php vendor/bin/phpcbf --standard=tests/ruleset.xml [path/to/file/or/directory]
 ```
 
 ### Classes, Methods
@@ -87,3 +87,26 @@ do {
 * Functions should use `camelCase`
 * Constants should be `UPPERCASE`
 * Variables and properties should use `snake_case`
+
+### Type Declarations
+
+Wherever possible, you should use [type declarations](https://www.php.net/manual/en/functions.arguments.php#functions.arguments.type-declaration)
+in your code. This helps our static analysis tool function more accurately, and alleviate a class of
+bugs from entering our codebase. Whenever possible, you should declare the type inline with the code:
+
+```php
+function foo(string $bar, ?int $baz): string;
+```
+
+In some cases, such as for arrays of a type or mixed values, this is not possible. In these cases,
+you should write the type out in the docstring using [phpDocumentator](https://docs.phpdoc.org/latest/guides/types.html)
+conventions. However, if possible, still attempt to put a type (such as `array`) inline in the code. An example using
+array of one type of object and union types:
+
+```php
+/**
+ * @param string[] $bar
+ * @param A|B $baz
+ */
+function foo(array $bar, $baz): void;
+```

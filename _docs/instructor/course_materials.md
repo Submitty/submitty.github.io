@@ -1,7 +1,6 @@
 ---
 title: Course Materials
 category: Instructor
-order: 9
 ---
 
 Instructors have the option to post/host files on the Submitty server.

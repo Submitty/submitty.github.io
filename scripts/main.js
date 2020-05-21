@@ -47,3 +47,13 @@ window.addEventListener('load', function() {
     document.body.classList.toggle('nav-open');
   });
 });
+
+
+function toggle_display(id) {
+    if (document.getElementById(id).style.display == "none") {
+        document.getElementById(id).style.display= "block";
+    } else {
+        document.getElementById(id).style.display= "none";
+    }
+    return false;
+}

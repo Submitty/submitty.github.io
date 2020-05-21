@@ -10,7 +10,7 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
 * Contributors from outside the Submitty GitHub organization should
   clone the repo on their own GitHub page, and create a branch with
   the modifications to be included with this PR.  _Note: Please
-  grant write access to the submitty organization
+  grant write access to the Submitty organization
   administrators so we can more conveniently make small edits (e.g.,
   UI text wording changes).  This can speed up the
   approval and merging of your contributions._
@@ -25,6 +25,10 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
 
 * Each pull request (PR) should be addressing/closing an open issue.
   *Usually*.
+
+* Before submitting a PR or updating an existing PR, you should make
+  sure your code follows our [Style Guide](/developer/coding_style_guide)
+  and passes the relevant [tests](/developer/testing).
 
 * The PR title should be useful and descriptive.
 
@@ -47,10 +51,11 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
       * `Testing` (includes sample data),  
       * `Documentation`,  
       * `VPAT`,  
-      * `UI/UX/API` (includes mobile, css), or  
+      * `UI/UX` (includes mobile, css), or
       * `Dependency`.
 
       And `<MODULE>` is one of the following:  
+
       * `Submission` (includes bulk uploads, teams, late days, notebook gradeables, and other student features),
       * `Autograding` (includes router, container/docker),
       * `Forum`,   
@@ -58,8 +63,9 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
       * `TAGrading` (includes PDF annotation, peer grading),  
       * `InstructorUI` (includes course and gradeable configuration, course materials, office hours queue, plagiarism detection),  
       * `RainbowGrades`,  
-      * `System` (includes installation, migrations, vagrant), or
-      * `Developer`.
+      * `System` (includes installation, migrations, vagrant),
+      * `Developer`, or
+      * `API`
 
       And `<SUBJECT>` adds more specific details.
 

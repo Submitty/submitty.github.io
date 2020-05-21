@@ -3,6 +3,7 @@
   children:
     - name: Overview
       link: ../index
+    - name: Features
     - name: Tutorial
     - name: Publications
     - name: Contact Us
@@ -36,12 +37,17 @@
   children:
     - name: Overview
       link: ../grader
+    - name: Checkpoint Grading
+    - name: Numeric / Text Grading
+      link: numeric_text_grading
+    - name: Rubric Grading
+    - name: Rubric Grading Statistics
     - name: Sorting and Navigation
     - name: Resolving a Grade Inquiry
       link: grade_inquiry_grader
-    - name: Managing the Office Hours Queue
+    - name: Managing Office Hours
       link: queue
-      
+
 - name: Instructor
   children:
     - name: Overview
@@ -72,6 +78,7 @@
           link: notebook
     - name: Course Materials
       link: course_materials
+    - name: Peer Grading
     - name: Facilitating Submission via GIT
       link: managing_git
     - name: Static Analysis
@@ -145,6 +152,8 @@
   children:
     - name: Overview
       link: ../developer
+    - name: Project Ideas
+    - name: How to Contribute
     - name: VM Install using Vagrant
     - name: Development Instructions
       children:
@@ -168,6 +177,18 @@
         - name: PHP
         - name: JavaScript
         - name: CSS
+    - name: Testing
+      children:
+        - name: Linting / Static Analysis
+          link: linting_static_analysis
+        - name: Python Unit Tests
+        - name: PHP Unit Tests
+        - name: Site End-to-End Tests
+          link: site_end_to_end_tests
+        - name: Autograding Integration Tests
+        - name: Rainbow Grades Tests
+        - name: Travis-CI
+          link: travis_ci
     - name: Interface Design
       link: interface_design_style_guide
       children:
@@ -178,16 +199,7 @@
         - name: Models
         - name: Views
         - name: Feature Flags
-    - name: Project Ideas
-    - name: How to Contribute
-    - name: Autograding Tests
-    - name: PHP Unit Tests
-      children:
-        - name: Writing Unit Tests
-    - name: End to End Tests
     - name: Updating Dependencies
-    - name: Travis CI
-    - name: Rainbow Grades Tests
     - name: Configuring Tie In Programs
     - name: Router
     - name: API
