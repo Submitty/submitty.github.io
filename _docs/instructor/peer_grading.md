@@ -18,8 +18,10 @@ augmented with peer grading.
 To get started, the instructor should first add one or more "Peer
 Grading" Components to the rubric.  From the "Edit Gradeable" page,
 under the "Rubric" tab, click the purple "Add New Peer Component
-Button".  Configure the component points, and add all necessary marks
-with appropriate points and message text.
+Button". Configure the component points, and add all necessary marks
+with appropriate points and message text. Once at least one "Peer
+Grading" Component is added to the rubric, a "Peer Matrix" tab will
+appear in the navigation bar.
 
 *IMPORTANT NOTE: Student peer graders cannot edit the rubric or add
 new marks!*
@@ -41,14 +43,8 @@ three of their peers.
 
 ![](/images/peer_grading/peer_grading_matrix_csv.png){:width="200px"}
 
-This file is uploaded from the "Edit Gradeable" page, under the
-"Grader Assignment" tab.  *NOTE: If you have added Peer Components to
-your rubric, but don't see the option to select and upload the peer
-assignment matrix, you need to explicitly reload this page in your
-browser.*
-
-After uploading the file, you will see the peer grading assignments
-for each student:
+This file is uploaded from the "Peer Matrix" tab. After uploading the
+file, you will see the peer grading assignments for each student:
 
 ![](/images/peer_grading/peer_grading_matrix_uploaded.png)
 
