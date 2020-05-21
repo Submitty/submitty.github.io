@@ -175,3 +175,13 @@ directory or file structure:
     your `up` function should not crash on adding the column if the column
     already exists.
 
+3.  After you have written your migration to update an existing system 
+    and are satisfied that it works,
+    you must also update the base .sql files used to create a new 
+    Submitty system.  To
+    accomplish this, run the following two commands from within Vagrant:
+    
+    ```bash
+    su - postgres -c "pg_dump -d submitty --schema-only --no-privileges --no-owner --file /usr/local/submitty/GIT_CHECKOUT/Submitty/migration/migrator/data/submitty_db.sql"
+    su - postgres -c "pg_dump -d submitty_s20_sample --schema-only --no-privileges --no-owner --file /usr/local/submitty/GIT_CHECKOUT/Submitty/migration/migrator/data/course_tables.sql"
+    ```
