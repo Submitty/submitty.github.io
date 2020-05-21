@@ -51,18 +51,18 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
       * `Testing` (includes sample data),  
       * `Documentation`,  
       * `VPAT`,  
-      * `UI/UX` (includes mobile, css), or  
+      * `UI/UX` (includes mobile, css), or
       * `Dependency`.
 
-      And `<MODULE>` is one of the following:
-      
+      And `<MODULE>` is one of the following:  
+
       * `Submission` (includes bulk uploads, teams, late days, notebook gradeables, and other student features),
       * `Autograding` (includes router, container/docker),
-      * `Forum`,
-      * `Notifications` (includes email and grade inquiries),
-      * `TAGrading` (includes PDF annotation, peer grading),
-      * `InstructorUI` (includes course and gradeable configuration, course materials, office hours queue, plagiarism detection),
-      * `RainbowGrades`,
+      * `Forum`,   
+      * `Notifications` (includes email and grade inquiries),  
+      * `TAGrading` (includes PDF annotation, peer grading),  
+      * `InstructorUI` (includes course and gradeable configuration, course materials, office hours queue, plagiarism detection),  
+      * `RainbowGrades`,  
       * `System` (includes installation, migrations, vagrant),
       * `Developer`, or
       * `API`
