@@ -1,7 +1,5 @@
 ---
-title: End-to-End Tests
-category: Developer
-order: 9
+title: Site End-to-End Tests
 ---
 
 The _End-to-End Testing_ (e2e) suite is written in Python and tests
@@ -11,8 +9,9 @@ directly, but rather focuses on user navigation through the website.
 It utilizes [selenium](https://www.seleniumhq.org/) and Chrome to
 complete these tests.
 
-The python depedencies can be installed by doing:
-```
+The python dependencies can be installed by doing:
+
+```bash
 pip3 install selenium
 ```
 
@@ -75,26 +74,30 @@ edit `tests/e2e/base_testcase.py` and change the constant `TEST_URL`
 to reflect your installation's IP address.
   
 To run an individual file or testcase, run:
-```
+
+```bash
 python3 -m unittest e2e.<module_name>.<ClassName>
 python3 -m unittest e2e.<module_name>.<ClassName>.<function_name>
 ```
 
 An example of running the login tests:
-```
+
+```bash
 python3 -m unittest e2e.test_login.TestLogin
 python3 -m unittest e2e.test_login.TestLogin.test_login
 ```
 
 To disable headless mode and view the browser while running a test, 
 edit `tests/e2e/base_testcase.py` and comment out the line:
-```
+
+```python
 self.options.add_argument('--headless')
 ```
 
 To slow down the tests for debugging, you can pause execution until 
 you press Enter in the terminal. To do this, add the following line into your test:
-```
+
+```python
 self.wait_user_input()
 ```
 
@@ -104,9 +107,18 @@ useful for both debugging and writing tests. For example, the following snippet
 waits until an `h1` element containing "My Heading" appears and fails after 
 10 secs if nothing shows up.
 
+```python
+wait = WebDriverWait(self.browser, 10)
+wait.until(
+    EC.presence_of_element_located(
+        (By.XPATH, "//h1[contains(text(),'My Heading')]")
+    )
+)
 ```
- wait = WebDriverWait(self.browser, 10)
-        wait.until(
-            EC.presence_of_element_located(
-                (By.XPATH, "//h1[contains(text(),'My Heading')]")))
+
+Finally, to help debug a failing test, it may be useful to print out the
+page source right before a failed assertion. You can do this by doing:
+
+```python
+print(self.driver.page_source)
 ```
