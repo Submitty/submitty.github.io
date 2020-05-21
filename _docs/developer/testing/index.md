@@ -95,4 +95,4 @@ lose their execution bit, so you will need to specify `php` before the
 thing you are attempting to execute (e.g. `php vendor/bin/phpunit`).
 
 
-Use the sidebar for more detailed documentation for each type of test.
+Please use the sidebar menu for additional documentation for each type of test.

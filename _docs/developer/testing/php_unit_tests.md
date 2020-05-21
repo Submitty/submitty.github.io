@@ -2,12 +2,13 @@
 title: PHP Unit Tests
 ---
 
-## Running the Tests
-
 To validate the unit behavior of the site code, we utilize 
 [phpunit](https://phpunit.readthedocs.io/en/latest). 
 
-From there, to run the unit test suite, you can run from `Submitty/site`:
+
+### Running PHP Unit Tests
+
+To run the PHP unit test suite locally, `cd` to the `Submitty/site` directory and type:
 
 ```
 php vendor/bin/phpunit --configuration tests/phpunit.xml
@@ -35,7 +36,7 @@ vendor/bin/phpunit -c tests/phpunit.xml --filter testFunction tests/app/path/to/
 You can pass in the `--debug` flag when using PHPUnit to see PHP output, this can be
 useful when writing new tests.
 
-## Code Coverage
+### PHP Unit Test Code Coverage
 
 _Note, to view code coverage information, you will need either
 [xdebug](https://xdebug.org/) or [pcov](https://github.com/krakjoe/pcov). If not using
@@ -52,7 +53,7 @@ cases, etc. and not just for the sake of increasing the code coverage number.
 previously generated code coverage reports.*
 
 
-## Writing Tests
+### Writing PHP Unit Tests
 
 PHP unit tests are located at `Submitty/site/app/tests`. The test structure should
 mirror the actual source code  structure, except that every class in the tests
@@ -84,7 +85,7 @@ Here are some example Unit tests:
 - [AbstractDatabaseTester](https://github.com/Submitty/Submitty/blob/master/site/tests/app/libraries/database/AbstractDatabaseTester.php)
 - [CourseTester.php](https://github.com/Submitty/Submitty/blob/master/site/tests/app/models/CourseTester.php)
 
-### Parameterized Tests
+### Parameterized PHP Unit Tests
 
 Sometimes, while writing tests, you may find yourself wanting to test the same piece of
 code, but just needing to change one variable. To handle this, you ca use the concept
@@ -136,7 +137,7 @@ public function testAddition($num_1, $num_2, $expected) {
 
 For more details, see [PHPUnit Data Providers](https://phpunit.readthedocs.io/en/latest/writing-tests-for-phpunit.html#data-providers).
 
-### Test Setup/Teardown
+### PHP Unit Test Setup/Teardown
 
 When running tests, it's often times useful to be able to define a common state
 to be used within a group of tests. This is known state is called a _fixture_
@@ -177,7 +178,7 @@ public static function tearDownAfterClass(): void {
 
 For more information, see [PHPUnit Fixtures](https://phpunit.readthedocs.io/en/latest/fixtures.html).
 
-### Mocking
+### PHP Unit Test Mocking
 
 Often times while writing and running the tests, it is useful to create _Test Doubles_
 or _mocks_, allowing you to abstract away a test from requiring difficult to setup

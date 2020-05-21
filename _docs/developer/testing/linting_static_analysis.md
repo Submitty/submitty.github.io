@@ -2,35 +2,34 @@
 title: Linting / Static Analysis
 ---
 
-To help ensure the [Coding Standards](/developer/coding_style_guide) of Submitty, we use a mixture
-of linting and static analysis. A linter is per [wikipedia](https://en.wikipedia.org/wiki/Lint_(software))
-is "tool that analyzes source code to flag programming errors, bugs, stylistic errors, and suspicious constructs."
-Through the linter, we ensure a consistent coding style as you go from one file to the next within a given language,
-regardless of portion of the code. Static Analysis, similar to a linter, analyzes the source code, but in this
-case constructs abstract syntax trees to validate behavior of the code such as using the right number of types
-of parameters, functions return what they say they do, etc.
+To ensure the [Coding Standards](/developer/coding_style_guide) of Submitty, we use a mixture
+of linting and static analysis for each specific programming language.
+A linter is per [Wikipedia](https://en.wikipedia.org/wiki/Lint_(software))
+is a "tool that analyzes source code to flag programming errors, bugs, stylistic errors, and suspicious constructs."
+Static analysis constructs an abstract syntax tree of the program and is able to validate
+specific details such as the right number of types of parameters, functions return what they say they do, etc.
 
 ## Python Linting
 
 The Python code of Submitty is linted using [flake8](https://flake8.pycqa.org/en/latest/) and 
-[flake8-bugbear](https://github.com/PyCQA/flake8-bugbear). You can run it at the root level of
-Submitty to test all Python files by just doing:
+[flake8-bugbear](https://github.com/PyCQA/flake8-bugbear). You can run the Python linter locally by running the following command from the root level of
+Submitty source tree:
 
 ```bash
 python3 -m flake8
 ```
 
-Optionally, you can pass in a specific file or directory if you want to check just that file or
-directory instead of checking all files. Currently, there is a number of files that are not
-currently linted due to legacy age, though there is effort to bring more and more of them under
-flake8. You can see the full list of ignored files [here](https://github.com/Submitty/Submitty/blob/master/.flake8).
+Optionally, you can pass in a specific file or directory to only lint that file or directory.
+Currently, we [exclude a number of legacy source code files](https://github.com/Submitty/Submitty/blob/master/.flake8).
+from Python linting, 
+though there is effort to bring more and more of them under flake8.
 
-You can view more details about the Python Style Guide [here](/developer/coding_style_guide/python).
+See also: [Python Style Guide](/developer/coding_style_guide/python)
+
 
 ## PHP Linting
 
-The PHP code of Submitty is  linted using [phpcs](https://github.com/squizlabs/PHP_CodeSniffer). This
-can be run by doing:
+The PHP code of Submitty is  linted using [phpcs](https://github.com/squizlabs/PHP_CodeSniffer). You can run the PHP Linter locally:
 
 ```bash
 # at root level of repository
@@ -40,15 +39,15 @@ php site/vendor/bin/phpcs --standard=site/tests/ruleset.xml
 php vendor/bin/phpcs --standard=tests/ruleset.xml
 ```
 
-Similar to flake8, you can pass a specific file or directory to the command to run phpcs over just that
-file or directory.
+Similarly, you can pass a specific file or directory to `phpcs`.
 
-You can view more details about the PHP Style Guide [here](/developer/coding_style_guide/php).
+See also: [PHP Style Guide](/developer/coding_style_guide/php)
+
 
 ## PHP Static Analysis
 
 The PHP code of Submitty is statically analyzed by [phpstan](https://phpstan.org/user-guide/getting-started).
-To run it, you can do the following:
+To run it locally, you can do the following:
 
 ```bash
 # at root level of repository

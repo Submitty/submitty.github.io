@@ -2,28 +2,29 @@
 title: Python Unit Tests
 ---
 
-Submitty is made up of a number of Python modules that are unit tested:
+The following Python modules of Submitty are unit tested:
 
 * Migrator (under `migrations/` folder)
 * Autograding (under `autograding/` folder)
 * python_submitty_utils (under `python_submitty_utils/` folder)
 
-To test them, you need to `cd` into their directory and then use the
+### Running Python Unit Tests
+
+To locally run the Python unit tets, you need to `cd` into their directory and then use the
 [unittest](https://docs.python.org/3/library/unittest.html) module to
-run them. The command to run all the tests for a particular module:
+run them.  To run all the tests for a particular module:
 
 ```bash
 python3 -m unittest discover
 ```
 
-If you wish to also gather coverage, you will want to run (assuming you have
-already pip installed `coverage`):
+To gather code coverage of the unit tests, run:
 
 ```bash
 coverage -m unittest discover
 ```
 
-For example to test Migrator, I would do:
+For example, to test the Migrator module:
 
 ```bash
 cd migrator
@@ -32,7 +33,7 @@ python3 -m unittest discover
 coverage -m unittest discover
 ```
 
-If you wish to test just one part of it, you would pass in the module name (filename), class name, and then
+To test a portion of a module, pass in the module name (filename), class name, and then
 function name depending on how specific you wish to go. For example, for the migrator:
 
 ```bash
@@ -42,11 +43,10 @@ python3 -m unittest tests.test_cli
 python3 -m unittest tests.test_cli.TestCli.test_no_args 
 ```
 
-### Writing Unit Tests
+### Writing Python Unit Tests
 
-The above link provides good examples for how to utilize the `unittest` module for writing tests, though
-we will provide some details here to get started. We encourage people to read through the above though for
-a richer experience.
+The [unittest](https://docs.python.org/3/library/unittest.html) documentation 
+includes good examples and general information for writing tests.
 
 Getting started, the structure of the unit tests is such that the python module lives under a source directory,
 and the tests are under the `tests/` directory. There should be a one-to-one correspondence between test file
@@ -79,7 +79,7 @@ Here, we see that to create a `unittest` module, we import it, create a class th
 method under that class is prefixed with `test_`. With each function, there is a series of 
 [assert methods](https://docs.python.org/3/library/unittest.html#assert-methods) that can be used to verify behavior.
 
-### Test Fixtures
+### Python Unit Test Fixtures
 
 While most unit tests can be largely stateless, there may be times you wish to have common initialization for a particular
 test module. This is called a "test fixture", which involve some preparation for running a test, and then the cleanup afterwards.
@@ -103,7 +103,7 @@ class TestModule(unittest.TestCase):
 For more details, see the section on [Organizing Tests](https://docs.python.org/3/library/unittest.html#organizing-tests) from
 the `unittest` documentation.
 
-### Other Useful Topics:
+### Other Useful Python Unit Test Topics:
 
 * [Sub-tests](https://docs.python.org/3/library/unittest.html#distinguishing-test-iterations-using-subtests)
 * [Skipping tests](https://docs.python.org/3/library/unittest.html#skipping-tests-and-expected-failures)
