@@ -47,7 +47,7 @@
       link: grade_inquiry_grader
     - name: Managing Office Hours
       link: queue
-      
+
 - name: Instructor
   children:
     - name: Overview
@@ -152,6 +152,8 @@
   children:
     - name: Overview
       link: ../developer
+    - name: Project Ideas
+    - name: How to Contribute
     - name: VM Install using Vagrant
     - name: Development Instructions
       children:
@@ -173,6 +175,18 @@
         - name: PHP
         - name: JavaScript
         - name: CSS
+    - name: Testing
+      children:
+        - name: Linting / Static Analysis
+          link: linting_static_analysis
+        - name: Python Unit Tests
+        - name: PHP Unit Tests
+        - name: Site End-to-End Tests
+          link: site_end_to_end_tests
+        - name: Autograding Integration Tests
+        - name: Rainbow Grades Tests
+        - name: Travis-CI
+          link: travis_ci
     - name: Interface Design
       link: interface_design_style_guide
       children:
@@ -183,16 +197,7 @@
         - name: Models
         - name: Views
         - name: Feature Flags
-    - name: Project Ideas
-    - name: How to Contribute
-    - name: Autograding Tests
-    - name: PHP Unit Tests
-      children:
-        - name: Writing Unit Tests
-    - name: End to End Tests
     - name: Updating Dependencies
-    - name: Travis CI
-    - name: Rainbow Grades Tests
     - name: Configuring Tie In Programs
     - name: Router
     - name: API

@@ -4,10 +4,11 @@ category: Developer
 order: 7
 ---
 
-Before pushing your changes to GitHub, make sure your code passes the
+_NOTE: Currently, these tests can only be run from within Vagrant._
+
+Before pushing your  changes to GitHub, make sure your code passes the
 local test suite.  You must fix or document (in your pull request
 message) any test suite failures.
-
 
 ### Clean Installation and Run Full Test Suite
 
@@ -18,8 +19,6 @@ the `INSTALL_SUBMITTY.sh` script:
 ``` 
 sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh clean test 
 ```
-
-
 
 ### Run Only Select Test Suite Modules
 
@@ -41,9 +40,7 @@ to test suite. Capitalization doesn't matter for matching on the test name.
 sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh test test_1.test_name 
 ```
 
-
 ### Test Suite Directory Structure
-
 
 The testing framework for the C++ codebase is located within the
 `tests/integrationTests` directory.  Each test module is stored within
@@ -68,10 +65,7 @@ README files, the `data` directory should contain `README.txt`.
 The `validation` directory contains test module author-provided files
 to be checked against the results of running grading code.
 
-
-
 ### Test Suite Installation Process
-
 
 The modules of the autograding test suite are located in the repository:
 
