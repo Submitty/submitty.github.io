@@ -122,8 +122,22 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
      * Comments explaining the code should be *in* the code, rather than in
        the PR message or comments.
 
-     * Including screenshots in the issue or PR message is helpful for UI
-       changes.
+     * Developers are encouraged to test all user interface modifications with
+       [all available Submitty Themes](../student/#how-can-i-change-submittys-theme):
+       e.g., light mode, dark mode, black mode, to ensure compliance/improvement
+       of [Web Accessibility](interface_design_style_guide/web_accessibility).
+
+     * Including screenshots/videos in the issue or PR message is
+       helpful for UI changes -- both to solicit quick feedback from
+       reviewers and also to server as documentation for the future
+       release notes.
+
+       *NOTE: Please use light mode by default for all
+       screenshots/videos (this is our default theme).  If your PR
+       includes a modification/bugfix related to the available
+       Submitty Themes (light mode vs. dark mode vs. black mode),
+       please also include comparison screenshots/videos for all
+       available themes.*
 
      * The comments should explain a bit about the
        purpose/history/overview -- don't assume the reader knows it
