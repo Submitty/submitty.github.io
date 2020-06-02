@@ -129,8 +129,8 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
 
      * Including screenshots/videos in the issue or PR message is
        helpful for UI changes -- both to solicit quick feedback from
-       reviewers and also to server as documentation for the future
-       release notes.
+       reviewers and also to serve as documentation for the future
+       [release notes](https://github.com/Submitty/Submitty/releases).
 
        *NOTE: Please use light mode by default for all
        screenshots/videos (this is our default theme).  If your PR
