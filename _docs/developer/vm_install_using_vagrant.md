@@ -13,6 +13,11 @@ Unix/Linux).  The installation process will create a new Virtual
 Machine (VM) on your computer and the VM will use the Ubuntu GNU/Linux
 operating system.
 
+__Note:__ We only officially support developing with VirtualBox. While
+VMWare should work, we offer no guarantees at this time. Please try
+and make sure that you only have one installed / running at a time though
+as trying to have both running can cause issues.
+
 1. To develop with a Virtual Machine (VM), your computer should have
    at least 8GB of RAM and a 64-bit host OS.  AMD-V or Intel VT-x are
    also required (most computers have these).  Submitty is RAM and I/O
