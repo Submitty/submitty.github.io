@@ -26,7 +26,7 @@ the VMWare services, or uninstalling VMWare.
    also required (most computers have these).  Submitty is RAM and I/O
    intensive, so more RAM and a fast disk are better.
 
-2. Enabling [Virtualization](http://tinyurl.com/enable-virtualization)
+2. Enabling Virtualization
 
    **Mac Instructions**  
    1. Virtualization is generally enabled by default.
@@ -44,13 +44,11 @@ the VMWare services, or uninstalling VMWare.
 
    6. Click **UEFI Firmware Settings** and restart as suggested.
 
-   7. Enter your **BIOS** (generally by pressing Del, F12, or other keys while booting).
+   7. Enter your **BIOS** (generally by pressing Del, F12, or other keys while booting). If you are not able to find the key combo needed to enter your BIOS, refer to [this guide](https://www.tomshardware.com/reviews/bios-keys-to-access-your-firmware,5732.html).
 
-   8. Navigate the **BIOS Settings**.
+   8. Locate **Virtualization**, and enable it. (Note: If you cannot find the option to enable virtualization, [search Google](http://tinyurl.com/enable-virtualization) for a tutorial on enabling it with your motherboard.)
 
-   9. Locate **Virtualization**, and enable it. (Note: If you cannot find the option to enable virtualization, [search Google](http://tinyurl.com/enable-virtualization) for a tutorial on enabling it with your motherboard.)
-
-   10. Reboot your computer.
+   9. Reboot your computer.
 
    **Ubuntu Instructions**  
    1. Enter your **BIOS** (generally by pressing Del, F12, or other keys while booting).
