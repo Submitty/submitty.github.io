@@ -50,8 +50,11 @@ the VMWare services, or uninstalling VMWare.
    the boot menu/BIOS or follow [these steps](https://era86.github.io/2018/01/24/vagrant-virtualbox-secureboot-in-ubuntu-1604.html)
    to self-sign the necessary packages to run vagrant and VirtualBox.
 
+3. Download and install the latest version of [Ruby](https://www.ruby-lang.org/en/downloads).
 
-3. Download and install [VirtualBox](https://www.virtualbox.org/), [Vagrant](https://www.vagrantup.com).
+4. Download and install the latest version of [Git](https://git-scm.com/downloads).
+
+5. Download and install [VirtualBox](https://www.virtualbox.org/), [Vagrant](https://www.vagrantup.com).
 
    Below are quick steps to get everything installed and running.
 
@@ -76,7 +79,7 @@ the VMWare services, or uninstalling VMWare.
    <br />
    Vagrant: <https://vagrant-deb.linestarve.com/>
 
-4. Install [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest).
+6. Install [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest).
 
    Open your terminal/cmd.exe and run:
    ```
@@ -84,7 +87,7 @@ the VMWare services, or uninstalling VMWare.
    ```
    Note: You will want to run `vagrant plugin update` every once in a while to keep the plugin up-to-date.
 
-5. Clone [the Submitty repository](https://github.com/Submitty/Submitty) to a location on
+7. Clone [the Submitty repository](https://github.com/Submitty/Submitty) to a location on
    your computer (the "host").
 
    ```
@@ -114,7 +117,7 @@ the VMWare services, or uninstalling VMWare.
     _This host directory structure will be shared / synced between
     your host operating system and the Submitty virtual machine._
 
-6. Navigate into the Submitty repository on your computer in a
+8. Navigate into the Submitty repository on your computer in a
    shell/terminal and type:
 
    _Windows should run CMD or powershell on administrator mode_
@@ -146,7 +149,7 @@ the VMWare services, or uninstalling VMWare.
    This will delete all virtual machine settings. Then install
    the latest version of Virtual Box and vagrant from the links given in step 3 (using Ubuntu Software).
 
-7. To stop and restart the VM:
+9. To stop and restart the VM:
 
    * When you are finished working, you can suspend the virtual
      machine (save state, a little faster to restart):
@@ -184,7 +187,7 @@ the VMWare services, or uninstalling VMWare.
      times, `default: Warning: Remote connection disconnect. Retrying..  .` 
      These warnings are not harmful and can be ignored.
 
-8. To completely delete the virtual machine (such as to start over from
+10. To completely delete the virtual machine (such as to start over from
    scratch with a fresh VM), type:
 
    ```
@@ -198,7 +201,7 @@ the VMWare services, or uninstalling VMWare.
    ```
 
 
-9. When the VM is "up", you can go visit the homework submission
+11. When the VM is "up", you can go visit the homework submission
    website.
 
    * From a web browser (Chrome, Firefox, IE, etc.) on your host
@@ -225,7 +228,7 @@ the VMWare services, or uninstalling VMWare.
      For the "sample" course:  
      <https://github.com/Submitty/Submitty/tree/master/more_autograding_examples>
 
-10. When the VM is "up", you can connect from your host computer to the
+12. When the VM is "up", you can connect from your host computer to the
     virtual machine via ssh.  Windows users will need to install SSH
     software (e.g.,
     [Cygwin](https://www.cygwin.com/) or
@@ -259,7 +262,7 @@ the VMWare services, or uninstalling VMWare.
 
     to login as the root user. You should then see you are logged in as root@vagrant.
 
-11. The following users exist on the VM:
+13. The following users exist on the VM:
 
     | user | password | role |
     |------|----------|-------|
@@ -273,7 +276,7 @@ the VMWare services, or uninstalling VMWare.
     | ta | ta | Submitty user |
     | student | student | Submitty user |
 
-12. The VM has the following four courses by default and they are all part of the current semester:
+14. The VM has the following four courses by default and they are all part of the current semester:
 
     * tutorial
     * sample
