@@ -162,6 +162,8 @@
         - name: Troubleshooting
         - name: Email Configuration
           link: vagrant_email_configuration
+        - name: Router Response
+          link: router-response
         - name: Miscellaneous
     - name: PhpStorm Setup Instructions
       link: phpstorm
