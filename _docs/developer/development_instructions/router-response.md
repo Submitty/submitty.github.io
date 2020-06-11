@@ -1,6 +1,7 @@
-
-
-#Routes and the Response Object
+---
+title: Routes & Response Object
+category: Developer
+---
 
 This page is a more in depth look at the Router and the Response PHP object, it also covers common use cases and uses more examples. You can go to this [page](https://submitty.org/developer/router) for reference 
 on the router only.
