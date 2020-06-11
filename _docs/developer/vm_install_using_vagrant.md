@@ -26,24 +26,38 @@ the VMWare services, or uninstalling VMWare.
    also required (most computers have these).  Submitty is RAM and I/O
    intensive, so more RAM and a fast disk are better.
 
-2. Enable [Virtualization](http://tinyurl.com/enable-virtualization)
+2. Enabling Virtualization
 
    **Mac Instructions**  
-   Virtualization is generally enabled by default
+   1. Virtualization is generally enabled by default.
 
    **Windows 10 Instructions**  
-   Open Settings, navigate to _Advanced Startup_ and select _Restart Now_.
-   ![Relevant Screenshot](https://github.com/jaredsexton/submitty.github.io/blob/master/images/Virtualization_Instructions_1.png?raw=true)
+   1. Open the **Settings** app by searching for it in the windows bar or clicking it in the Windows menu.
 
-   Navigate to _Troubleshoot -> Advanced Options -> UEFI Firmware Settings_ and restart as suggested.
+   2. Navigate to **Update and Security**, then select **Recovery** from the side menu.
 
-   Navigate to _BIOS Settings_ from your PC's startup menu, locate _Virtualization Technology_ and enable it.
+   3. Under **Advanced Startup**, click **Restart Now**.
+
+   4. Once your PC has rebooted, click the **Troubleshoot** option.
+
+   5. Click **Advanced Options**.
+
+   6. Click **UEFI Firmware Settings** and restart as suggested.
+
+   7. Enter your **BIOS** (generally by pressing Del, F12, or other keys while booting). If you are not able to find the key combo needed to enter your BIOS, refer to [this guide](https://www.tomshardware.com/reviews/bios-keys-to-access-your-firmware,5732.html).
+
+   8. Locate **Virtualization**, and enable it. (Note: If you cannot find the option to enable virtualization, [search Google](http://tinyurl.com/enable-virtualization) for a tutorial on enabling it with your motherboard.)
+
+   9. Reboot your computer.
 
    **Ubuntu Instructions**  
-   Enter BIOS (generally by pressing Del or F12 while booting) and navigate the _BIOS Settings_,
-   locate _Virtualization_, and enable it.
+   1. Enter your **BIOS** (generally by pressing Del, F12, or other keys while booting).
 
-   Be sure to choose _Hardware Virtualization_ in the _System -> Acceleration_ settings of the virtual machine you are using.
+   2. Navigate the **BIOS Settings**.
+
+   3. Locate **Virtualization** and enable it.
+
+   4. Be sure to choose **Hardware Virtualization** in the **System -> Acceleration** settings of the virtual machine you are using.
 
    **NOTE** 
    If using secure boot, vagrant may fail to work with VirtualBox. You will then either need to disable secure boot from
@@ -56,10 +70,10 @@ the VMWare services, or uninstalling VMWare.
    Below are quick steps to get everything installed and running.
 
    **Windows Installation**  
-   You can just go to the respective sites and download the necessary binaries.
+   * You can just go to the respective sites and download the necessary binaries.
 
    **Mac Installation**
-   You can either go to respective sites and download the necessary binaries or install [homebrew](http://brew.sh/) 
+   * You can either go to respective sites and download the necessary binaries or install [homebrew](http://brew.sh/) 
    if you don't have it and then run:
    ```
    brew cask install virtualbox
