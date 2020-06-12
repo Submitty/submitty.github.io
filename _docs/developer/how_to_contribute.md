@@ -73,12 +73,13 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
       automatically by GitHub when the PR is merged with "squash &
       merge".  Do not include this when you open a new pull request._
 
-    * Prepend `[WIP]` to the start of the PR title if you would like
-      feedback / detailed review on work in progress.  This indicates
-      to the reviewers and project managers that this feature is not
-      ready to be merged into the master branch.  When it is ready to
-      merge, edit the title to remove the `[WIP]`.  Note that WIP branches
-      skip some phases of continuous integration (CI) testing.
+    * If your PR is *Work In Progress*, please make a
+      [Draft Pull Request](https://github.blog/2019-02-14-introducing-draft-pull-requests/) on GitHub.
+      This indicates to other developers and reviewers
+      that you'd like detailed feedback on your work, but it is incomplete.
+      When a PR is in the draft state it cannot be merged into the master branch.
+      Note that draft pull requests will run the ["Travis CI - Branch" test suite](/developer/testing/travis_ci),
+      but will skip the more extensive "Travis CI - Pull Request" test suite.
 
     * **IMPORTANT:** If this PR requires system administrator action
       before/after installation, the PR title should be prepended with
