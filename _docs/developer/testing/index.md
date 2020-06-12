@@ -44,11 +44,12 @@ handful of dependencies:
 
 Installing these should be straight forward on macOS (using
 [Homebrew](https://brew.sh)) and Linux distros using its package
-manager. We will give the instructions for Ubuntu, and we expect users
-of other distros should be able to adapt it to their needs.  Windows
-users are encourated to install
-[Windows Subsystem for Linux (WSL)](https://ubuntu.com/wsl)
-and then follow the Ubuntu instructions.
+manager.  We provide the instructions for Ubuntu, and we expect users
+of other distros should be able to adapt it to their needs.
+
+Windows users are encouraged to install [Windows Subsystem for Linux
+(WSL)](https://ubuntu.com/wsl) and then follow the Ubuntu
+instructions.
 
 For macOS:
 
@@ -79,6 +80,7 @@ pip3 install paramiko
 pip3 install psycopg2-binary
 pip3 install coverage
 pip3 install --pre selenium
+pip3 install flake8
 ```
 
 To install the PHP dependencies:
