@@ -29,7 +29,7 @@ instructions.
 
 2. Make sure you have at least 20GB of hard disk available for
    installation.  We do not recommend installing the Submitty
-   Developer VM DropBox, OneDrive, GoogleDrive, or other cloud
+   Developer VM on DropBox, OneDrive, GoogleDrive, or other cloud
    storage.
 
 3. Some developers have had problems running both VirtualBox and
@@ -196,16 +196,9 @@ instructions.
    website.
 
    * From a web browser (Chrome, Firefox, IE, etc.) on your host
-     computer,
+     computer, go to:
 
-     If you have the Ubuntu 18.04 VM, go to:
      <http://localhost:1501/index.php>
-
-     If you have the Ubuntu 16.04 VM, go to:
-     <http://192.168.56.101/index.php>  
-
-     If you have the Debian 8 VM, go to:
-     <http://192.168.56.201/index.php>
 
      (see the VM login & password info below)
 
@@ -222,7 +215,8 @@ instructions.
 2. When the VM is "up", you can connect from your host computer to the
     virtual machine via ssh.  Windows users will need to install SSH
     software (e.g.,
-    [Cygwin](https://www.cygwin.com/) or
+    [WSL](https://ubuntu.com/wsl), or
+    [Cygwin](https://www.cygwin.com/), or
     [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) ).
     From a terminal in the repository directory type:
 
@@ -310,7 +304,7 @@ instructions.
    `default: Warning: Remote connection disconnect. Retrying..  .`
    These warnings are not harmful and can be ignored.
 
-3. If you just want to restart the VM (same as halt/up), type:
+3. If you just want to restart the VM (same as `halt` then `up`), type:
 
    ```
    vagrant reload
