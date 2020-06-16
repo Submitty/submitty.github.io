@@ -86,8 +86,11 @@ instructions.
    the boot menu/BIOS or follow [these steps](https://era86.github.io/2018/01/24/vagrant-virtualbox-secureboot-in-ubuntu-1604.html)
    to self-sign the necessary packages to run vagrant and VirtualBox.
 
+2. Download and install the latest version of [Ruby](https://www.ruby-lang.org/en/downloads).
 
-2. Download and install [VirtualBox](https://www.virtualbox.org/) and [Vagrant](https://www.vagrantup.com)
+3. Download and install the latest version of [Git](https://git-scm.com/downloads).
+
+4. Download and install [VirtualBox](https://www.virtualbox.org/) and [Vagrant](https://www.vagrantup.com)
 
    Below are quick steps to get everything installed and running.
 
@@ -115,7 +118,7 @@ instructions.
 
      Vagrant: <https://vagrant-deb.linestarve.com/>
 
-3. Install [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest).
+5. Install [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest).
 
    Open your terminal/cmd.exe and run:
    ```
@@ -123,7 +126,7 @@ instructions.
    ```
    Note: You will want to run `vagrant plugin update` every once in a while to keep the plugin up-to-date.
 
-4. Clone [the Submitty repository](https://github.com/Submitty/Submitty) to a location on
+6. Clone [the Submitty repository](https://github.com/Submitty/Submitty) to a location on
    your computer (the "host").
 
    ```
@@ -153,7 +156,7 @@ instructions.
     _This host directory structure will be shared / synced between
     your host operating system and the Submitty virtual machine._
 
-5. Navigate into the Submitty repository on your computer in a
+7. Navigate into the Submitty repository on your computer in a
    shell/terminal and type:
 
    _Windows should run CMD or powershell on administrator mode_
@@ -166,9 +169,7 @@ instructions.
    few hours depending on your Internet connection speed.  When this
    command finishes, your VM is ready to use.
 
-
-
-6. When the `vagrant up` command completes successfully, you will be
+8. When the `vagrant up` command completes successfully, you will be
    able to access the Submitty website (instructions follow in the
    next section).
 
