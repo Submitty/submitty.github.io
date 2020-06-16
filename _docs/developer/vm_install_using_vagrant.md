@@ -115,7 +115,7 @@ instructions.
 
      Vagrant: <https://vagrant-deb.linestarve.com/>
 
-4. Install [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest).
+3. Install [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest).
 
    Open your terminal/cmd.exe and run:
    ```
@@ -123,7 +123,7 @@ instructions.
    ```
    Note: You will want to run `vagrant plugin update` every once in a while to keep the plugin up-to-date.
 
-5. Clone [the Submitty repository](https://github.com/Submitty/Submitty) to a location on
+4. Clone [the Submitty repository](https://github.com/Submitty/Submitty) to a location on
    your computer (the "host").
 
    ```
@@ -153,7 +153,7 @@ instructions.
     _This host directory structure will be shared / synced between
     your host operating system and the Submitty virtual machine._
 
-6. Navigate into the Submitty repository on your computer in a
+5. Navigate into the Submitty repository on your computer in a
    shell/terminal and type:
 
    _Windows should run CMD or powershell on administrator mode_
@@ -166,6 +166,26 @@ instructions.
    few hours depending on your Internet connection speed.  When this
    command finishes, your VM is ready to use.
 
+
+
+6. When the `vagrant up` command completes successfully, you will be
+   able to access the Submitty website (instructions follow in the
+   next section).
+
+   The VM will continue to run jobs in the background and consume a
+   nontrivial amount of CPU resources, while completing a backlog of
+   autograding for a dozen or more sample submissions for each of the
+   more than 100 users in the sample courses.
+
+   If your development work *will not require sample assignment
+   submissions or autograding results*, you may prepend
+   `NO_SUBMISSIONS=1` to the previous command, which will skip the
+   creation of these sample submissions and their autograding and
+   decrease the time to complete installation.
+
+   ```
+   NO_SUBMISSIONS=1 vagrant up
+   ```
 
 ---
 
