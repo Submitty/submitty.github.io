@@ -58,6 +58,7 @@ The available types of input and outputs are defined by setting the
   | Multiple choice input | multiple_choice |
   | Markdown | markdown |
   | Image | image |
+  | File Submission Area | file_submission |
   
 ### Notebook config.json example
 *Some of the config fields have been truncated for brevity and not all possible options are shown*
@@ -259,3 +260,24 @@ feedback message displayed:
 }
         
 {% endhighlight %}
+
+
+### File Submission areas
+
+Notebook gradeables, by default, do not have a file submission area like normal gradeables, however, they can be placed within a notebook through the *file_submission* cell type.
+
+| Directory Name | 
+| ----- |
+| field | directory |
+| required | true |
+| type | string |
+| value | The name of the directory associated with this submission area |
+| notes | When students submit a file to this submission area, the files will be uploaded to this directory
+
+ | Label | 
+| ----- |
+| field | label |
+| required | false |
+| type | string |
+| value | An optional label to display within a submission area |
+| notes | Submission areas will have the label "Drag and drop your *label* file(s) here or click to open file browser"
