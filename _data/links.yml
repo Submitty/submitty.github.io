@@ -167,9 +167,9 @@
         - name: Miscellaneous
     - name: PhpStorm Setup Instructions
       link: phpstorm
+    - name: Database Design
     - name: PGAdmin Setup Instructions
       link: pgadmin
-    - name: Database Design
     - name: Migrations
     - name: Automated Grading
     - name: JSON Configuration Files
