@@ -5,7 +5,7 @@ permalink: /developer
 
 As a developer, you'll need to set up the full system on your own
 computer.  The easiest method is to 
-[run the system within a virtual machine (VM)](developer/vm_install_using_vagrant).
+[run the system within a virtual machine (VM)](/developer/vm_install_using_vagrant).
 Alternately, you can install the system natively on a dedicated
 computer and allow outside access (which requires more steps to set up
 networking, SSL/https, etc.) by following the

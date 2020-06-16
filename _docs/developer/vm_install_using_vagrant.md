@@ -16,22 +16,44 @@ operating system.
 __Note:__ We only officially support and test development using VirtualBox. 
 The instructions below are for VirtualBox.  While alternatively using 
 VMWare should work, we have not tested this, and do not provide these 
-instructions.  Note that some developers have had problems if they have 
-both VirtualBox and VMWare installed on their machine.  If you have 
-problems, we suggest shutting down the VMWare VMs, or stopping 
-the VMWare services, or uninstalling VMWare.  
+instructions.
+
+---
+
+## Pre-Installation Checklist
 
 1. To develop with a Virtual Machine (VM), your computer should have
    at least 8GB of RAM and a 64-bit host OS.  AMD-V or Intel VT-x are
    also required (most computers have these).  Submitty is RAM and I/O
    intensive, so more RAM and a fast disk are better.
 
-2. Enabling Virtualization
+2. Make sure you have at least 20GB of hard disk available for
+   installation.  We do not recommend installing the Submitty
+   Developer VM on DropBox, OneDrive, GoogleDrive, or other cloud
+   storage.
 
-   **Mac Instructions**  
+3. Some developers have had problems running both VirtualBox and
+   VMWare on the same computer.  If you have problems, we suggest
+   shutting down the VMWare VMs, or stopping the VMWare services, or
+   uninstalling VMWare.
+
+4. The complete installation process could take an hour or more.  Make
+   sure your internet connection is strong and consistent.  You'll
+   probably want to plug in your laptop power cord.  Check your
+   computer settings and make sure the machine does not hibernate or
+   go to sleep during installation.
+
+
+---
+
+## Submitty Developer VM Installation
+
+1. Enable Virtualization
+
+   **MacOS**
    1. Virtualization is generally enabled by default.
 
-   **Windows 10 Instructions**  
+   **Windows 10**
    1. Open the **Settings** app by searching for it in the windows bar or clicking it in the Windows menu.
 
    2. Navigate to **Update and Security**, then select **Recovery** from the side menu.
@@ -50,7 +72,7 @@ the VMWare services, or uninstalling VMWare.
 
    9. Reboot your computer.
 
-   **Ubuntu Instructions**  
+   **Ubuntu**
    1. Enter your **BIOS** (generally by pressing Del, F12, or other keys while booting).
 
    2. Navigate the **BIOS Settings**.
@@ -65,32 +87,35 @@ the VMWare services, or uninstalling VMWare.
    to self-sign the necessary packages to run vagrant and VirtualBox.
 
 
-3. Download and install [VirtualBox](https://www.virtualbox.org/), [Vagrant](https://www.vagrantup.com).
+2. Download and install [VirtualBox](https://www.virtualbox.org/) and [Vagrant](https://www.vagrantup.com)
 
    Below are quick steps to get everything installed and running.
 
-   **Windows Installation**  
+   **Windows 10**
+
    * You can just go to the respective sites and download the necessary binaries.
 
-   **Mac Installation**
-   * You can either go to respective sites and download the necessary binaries or install [homebrew](http://brew.sh/) 
-   if you don't have it and then run:
-   ```
-   brew cask install virtualbox
-   brew cask install vagrant
-   ```
+   **MacOS**
 
-   **Ubuntu/Debian Installation**
+   * You can either go to respective sites and download the necessary binaries or
+     install [homebrew](http://brew.sh/)    if you don't have it and then run:
 
-   **NOTE:** The Ubuntu repository does not contain the latest version of Vagrant or VirtualBox and using
-   them may not work nor are they supported. We recommend that you either download the necessary binaries
-   from their respective steps or follow the steps outlined below for each:
-   <br />
-   VirtualBox: <https://www.virtualbox.org/wiki/Linux_Downloads>
-   <br />
-   Vagrant: <https://vagrant-deb.linestarve.com/>
+     ```
+     brew cask install virtualbox
+     brew cask install vagrant
+     ```
 
-4. Install [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest).
+   **Ubuntu/Debian**
+
+   * The Ubuntu repository does not contain the latest version of Vagrant or VirtualBox and using
+     them may not work nor are they supported. We recommend that you either download the necessary binaries
+     from their respective steps or follow the steps outlined below for each:
+
+     VirtualBox: <https://www.virtualbox.org/wiki/Linux_Downloads>
+
+     Vagrant: <https://vagrant-deb.linestarve.com/>
+
+3. Install [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest).
 
    Open your terminal/cmd.exe and run:
    ```
@@ -98,7 +123,7 @@ the VMWare services, or uninstalling VMWare.
    ```
    Note: You will want to run `vagrant plugin update` every once in a while to keep the plugin up-to-date.
 
-5. Clone [the Submitty repository](https://github.com/Submitty/Submitty) to a location on
+4. Clone [the Submitty repository](https://github.com/Submitty/Submitty) to a location on
    your computer (the "host").
 
    ```
@@ -128,7 +153,7 @@ the VMWare services, or uninstalling VMWare.
     _This host directory structure will be shared / synced between
     your host operating system and the Submitty virtual machine._
 
-6. Navigate into the Submitty repository on your computer in a
+5. Navigate into the Submitty repository on your computer in a
    shell/terminal and type:
 
    _Windows should run CMD or powershell on administrator mode_
@@ -141,91 +166,39 @@ the VMWare services, or uninstalling VMWare.
    few hours depending on your Internet connection speed.  When this
    command finishes, your VM is ready to use.
 
-   If an error is thrown after running this command, you may try uninstalling Virtual Box and all
-   virtual machines by typing the following commands:
-   
-   _(Note: This should only be done if you do not have any other virtual machines.)_
-   
-   To remove Virtual Box type:
-   
-   ```
-   sudo apt-get remove --purge virtualbox
-   ```
-   To remove all virtual machines and configuration files type:
-   
-   ```
-   sudo rm ~/"VirtualBox VMs" -Rf
-   sudo rm ~/.config/VirtualBox/ -Rf
-   ```
-   This will delete all virtual machine settings. Then install
-   the latest version of Virtual Box and vagrant from the links given in step 3 (using Ubuntu Software).
 
-7. To stop and restart the VM:
 
-   * When you are finished working, you can suspend the virtual
-     machine (save state, a little faster to restart):
+6. When the `vagrant up` command completes successfully, you will be
+   able to access the Submitty website (instructions follow in the
+   next section).
 
-     ```
-     vagrant suspend
-     ```
+   The VM will continue to run jobs in the background and consume a
+   nontrivial amount of CPU resources, while completing a backlog of
+   autograding for a dozen or more sample submissions for each of the
+   more than 100 users in the sample courses.
 
-     or halt the virtual machine (complete VM shutdown, a little
-     slower to restart):
-
-     ```
-     vagrant halt
-     ```
-
-   * To resume work on a VM that is suspended or halted:
-
-     ```
-     vagrant up
-     ```
-
-   * If you just want to restart the VM (same as halt/up), type:
-     ```
-     vagrant reload
-     ```
-
-     If you haven't made any drastic changes to the build script,
-     you should be able to just re-provision the VM. You can do this by
-     using the `--provision` flag with either `up` or  `reload`. This is
-     will be faster than doing a full `destroy`/`up`, however depending on
-     the changes you've done to the VM, could leave it potentially unstable.
-     If the VM breaks, simply `destroy`/`up` as normal.
-
-     NOTE: when resuming work, you may see this warning several
-     times, `default: Warning: Remote connection disconnect. Retrying..  .` 
-     These warnings are not harmful and can be ignored.
-
-8. To completely delete the virtual machine (such as to start over from
-   scratch with a fresh VM), type:
+   If your development work *will not require sample assignment
+   submissions or autograding results*, you may prepend
+   `NO_SUBMISSIONS=1` to the previous command, which will skip the
+   creation of these sample submissions and their autograding and
+   decrease the time to complete installation.
 
    ```
-   vagrant destroy
+   NO_SUBMISSIONS=1 vagrant up
    ```
 
-   And if desired:
+---
 
-   ```
-   vagrant up
-   ```
+## Using your Submitty Developer VM
 
 
-9. When the VM is "up", you can go visit the homework submission
+1. When the VM is "up", you can go visit the homework submission
    website.
 
    * From a web browser (Chrome, Firefox, IE, etc.) on your host
-     computer,
+     computer, go to:
 
-     If you have the Ubuntu 18.04 VM, go to:
      <http://localhost:1501/index.php>
-
-     If you have the Ubuntu 16.04 VM, go to:
-     <http://192.168.56.101/index.php>  
-
-     If you have the Debian 8 VM, go to:
-     <http://192.168.56.201/index.php>
 
      (see the VM login & password info below)
 
@@ -239,10 +212,11 @@ the VMWare services, or uninstalling VMWare.
      For the "sample" course:  
      <https://github.com/Submitty/Submitty/tree/master/more_autograding_examples>
 
-10. When the VM is "up", you can connect from your host computer to the
+2. When the VM is "up", you can connect from your host computer to the
     virtual machine via ssh.  Windows users will need to install SSH
     software (e.g.,
-    [Cygwin](https://www.cygwin.com/) or
+    [WSL](https://ubuntu.com/wsl), or
+    [Cygwin](https://www.cygwin.com/), or
     [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) ).
     From a terminal in the repository directory type:
 
@@ -273,7 +247,7 @@ the VMWare services, or uninstalling VMWare.
 
     to login as the root user. You should then see you are logged in as root@vagrant.
 
-11. The following users exist on the VM:
+3. The following users exist on the VM:
 
     | user | password | role |
     |------|----------|-------|
@@ -287,7 +261,7 @@ the VMWare services, or uninstalling VMWare.
     | ta | ta | Submitty user |
     | student | student | Submitty user |
 
-12. The VM has the following four courses by default and they are all part of the current semester:
+4. The VM has the following four courses by default and they are all part of the current semester:
 
     * tutorial
     * sample
@@ -299,23 +273,97 @@ the VMWare services, or uninstalling VMWare.
     2017 would be `f17`.*
 
 
+---
 
-### Troubleshooting
-
-##### Vagrant up fails
+## Starting and Stopping the Submitty VM
 
 
-If it has been a while since your last `vagrant destroy` and `vagrant up` you may need to 
-update/upgrade/reinstall the virtual box, vagrant, vagrant vb-guest, and the installed 
-boxes on your system:
+1. When you take a break from Submitty development work, you can
+   suspend the Submitty VM to to save resources (CPU and battery) on
+   your host machine.
 
-For example, on Mac:
+   ```
+   vagrant suspend
+   ```
 
-```
-brew cask reinstall virtualbox
-brew cask reinstall vagrant
-vagrant plugin update
-vagrant box update
-```
+   Alternatively, you can halt the virtual machine.  This is a more
+   complete shutdown and will take slightly longer to restart when you
+   resume development work.
 
-Similar instructions for other OS.
+   ```
+   vagrant halt
+   ```
+
+2. To resume work on a VM that is suspended or halted:
+
+   ```
+   vagrant up
+   ```
+
+   NOTE: when resuming work, you may see this warning several times,
+   `default: Warning: Remote connection disconnect. Retrying..  .`
+   These warnings are not harmful and can be ignored.
+
+3. If you just want to restart the VM (same as `halt` then `up`), type:
+
+   ```
+   vagrant reload
+   ```
+
+4. Read the [Development Instructions](development_instructions/) page
+   for instructions on updating an existing installation with recent
+   code changes.
+
+5. To completely delete the virtual machine, type:
+
+   ```
+   vagrant destroy
+   ```
+
+   And if desired (to start over from scratch with a fresh VM):
+
+   ```
+   vagrant up
+   ```
+
+---
+
+## Installation Troubleshooting
+
+* If an error is thrown during `vagrant up`, you may need to
+   uninstall Virtual Box and all virtual machines by typing the
+   following commands:
+
+   _CAUTION: This should only be done if you do not have any other virtual machines._
+
+   To remove Virtual Box type:
+
+   ```
+   sudo apt-get remove --purge virtualbox
+   ```
+   To remove all virtual machines and configuration files type:
+
+   ```
+   sudo rm ~/"VirtualBox VMs" -Rf
+   sudo rm ~/.config/VirtualBox/ -Rf
+   ```
+   This will delete all virtual machine settings. Then install
+   the latest version of Virtual Box and vagrant from the links given in step 3 (using Ubuntu Software).
+
+* If it has been a while since your last `vagrant destroy` and
+    `vagrant up` you may need to update/upgrade/reinstall the virtual
+    box, vagrant, vagrant vb-guest, and the installed boxes on your
+    system:
+
+    For example, on Mac:
+
+    ```
+    brew cask reinstall virtualbox
+    brew cask reinstall vagrant
+    vagrant plugin update
+    vagrant box update
+    ```
+
+    Similar instructions for other OS.
+
+* See also [Development Instructions Troubleshooting](/developer/development_instructions/troubleshooting)
