@@ -73,12 +73,13 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
       automatically by GitHub when the PR is merged with "squash &
       merge".  Do not include this when you open a new pull request._
 
-    * Prepend `[WIP]` to the start of the PR title if you would like
-      feedback / detailed review on work in progress.  This indicates
-      to the reviewers and project managers that this feature is not
-      ready to be merged into the master branch.  When it is ready to
-      merge, edit the title to remove the `[WIP]`.  Note that WIP branches
-      skip some phases of continuous integration (CI) testing.
+    * If your PR is *Work In Progress*, please make a
+      [Draft Pull Request](https://github.blog/2019-02-14-introducing-draft-pull-requests/) on GitHub.
+      This indicates to other developers and reviewers
+      that you'd like detailed feedback on your work, but it is incomplete.
+      When a PR is in the draft state it cannot be merged into the master branch.
+      Note that draft pull requests will run the ["Travis CI - Branch" test suite](/developer/testing/travis_ci),
+      but will skip the more extensive "Travis CI - Pull Request" test suite.
 
     * **IMPORTANT:** If this PR requires system administrator action
       before/after installation, the PR title should be prepended with
@@ -122,8 +123,22 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
      * Comments explaining the code should be *in* the code, rather than in
        the PR message or comments.
 
-     * Including screenshots in the issue or PR message is helpful for UI
-       changes.
+     * Developers are encouraged to test all user interface modifications with
+       [all available Submitty Themes](../student/#how-can-i-change-submittys-theme):
+       e.g., light mode, dark mode, black mode, to ensure compliance/improvement
+       of [Web Accessibility](interface_design_style_guide/web_accessibility).
+
+     * Including screenshots/videos in the issue or PR message is
+       helpful for UI changes -- both to solicit quick feedback from
+       reviewers and also to serve as documentation for the future
+       [release notes](https://github.com/Submitty/Submitty/releases).
+
+       *NOTE: Please use light mode by default for all
+       screenshots/videos (this is our default theme).  If your PR
+       includes a modification/bugfix related to the available
+       Submitty Themes (light mode vs. dark mode vs. black mode),
+       please also include comparison screenshots/videos for all
+       available themes.*
 
      * The comments should explain a bit about the
        purpose/history/overview -- don't assume the reader knows it

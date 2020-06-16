@@ -6,6 +6,7 @@
     - name: Features
     - name: Tutorial
     - name: Publications
+    - name: People
     - name: Contact Us
       link: ../contact
 
@@ -129,6 +130,7 @@
     - name: Installation Version Notes
       link: version_notes
       children:
+        - name: v20.06.00
         - name: v19.08.03
         - name: v19.06.02
         - name: v.19.06.01
@@ -160,6 +162,8 @@
         - name: Troubleshooting
         - name: Email Configuration
           link: vagrant_email_configuration
+        - name: Router Response
+          link: router-response
         - name: Miscellaneous
     - name: PhpStorm Setup Instructions
       link: phpstorm
