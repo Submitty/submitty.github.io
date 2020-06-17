@@ -36,11 +36,11 @@ public function showHomepage() {...}
 
 #### Route with Course Information
 
-A majority of links in Submitty require course information to return correct contents. Therefore, it is necessary for the router to know which `(semester, course)` tuple is requested. It is needed to prepend the route with `/{_semester}/{_course}`. The course information will be loaded automatically before calling the function.
+A majority of links in Submitty require course information to return correct contents. Therefore, it is necessary for the router to know which `(semester, course)` tuple is requested. It is needed to prepend the route with `/courses/{_semester}/{_course}`. The course information will be loaded automatically before calling the function.
 
 ```php
 /**
- * @Route("/{_semester}/{_course}/reports")
+ * @Route("/courses/{_semester}/{_course}/reports")
  */
 public function showReportPage() {...}
 ```
@@ -53,7 +53,7 @@ Sometimes we may want to pass parameters to functions. Wrapping the parameter na
 
 ```php
 /**
- * @Route("/{_semester}/{_course}/student/{gradeable_id}")
+ * @Route("/courses/{_semester}/{_course}/student/{gradeable_id}")
  */
 public function showHomeworkPage($gradeable_id){...}
 ```
@@ -77,14 +77,14 @@ In some cases, you may want routes to match number-only parameters, or those not
 
 ```php
 /**
- * @Route("/{_semester}/{_course}/notifications/{nid}", requirements={"nid": "[1-9]\d*"})
+ * @Route("/courses/{_semester}/{_course}/notifications/{nid}", requirements={"nid": "[1-9]\d*"})
  */
 public function openNotification($nid) {...}
 ```
 
 ```php
 /**
- * @Route("/{_semester}/{_course}", requirements={"_semester": "^(?!api)[^\/]+", "_course": "[^\/]+"})
+ * @Route("/courses/{_semester}/{_course}", requirements={"_semester": "^(?!api)[^\/]+", "_course": "[^\/]+"})
  */
 public function navigationPage() {...}
 ```
@@ -110,7 +110,7 @@ For example, the following route will only allow instructor access.
 
 ```php
 /**
- * @Route("/{_semester}/{_course}/course_materials/modify_permission")
+ * @Route("/courses/{_semester}/{_course}/course_materials/modify_permission")
  * @AccessControl(role="INSTRUCTOR")
  */
 public function modifyCourseMaterialsFilePermission($filename, $checked)
@@ -139,8 +139,8 @@ And an API route for a method within a course:
 
 ```php
 /**
- * @Route("/{_semester}/{_course}/users", methods={"GET"})
- * @Route("/api/{_semester}/{_course}/users", methods={"GET"})
+ * @Route("/courses/{_semester}/{_course}/users", methods={"GET"})
+ * @Route("/api/courses/{_semester}/{_course}/users", methods={"GET"})
  */
 public function getStudents()
 ```

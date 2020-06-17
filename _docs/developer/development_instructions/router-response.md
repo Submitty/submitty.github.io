@@ -14,7 +14,7 @@ like docstrings. You can think of PHP functions as endpoints which get mapped to
 
 ```php
 /**
-* @Route("/{_semester}/{_course}/gradeable/{gradeable_id}/team/new")
+* @Route("/courses/{_semester}/{_course}/gradeable/{gradeable_id}/team/new")
 */
 public function createNewTeam($gradeable_id){
 ```
@@ -37,7 +37,7 @@ Functions can have multiple parameters sent to them through a URL.
 
 ```php
 /**
-* @Route("/{_semester}/{_course}/example_route/{var1}/{var2}/{var3}")
+* @Route("/courses/{_semester}/{_course}/example_route/{var1}/{var2}/{var3}")
 */
  public function example($var1, $var2, $var3){
 ```
@@ -55,7 +55,7 @@ This is most often done with POST requests which carry additional data in the re
 
 ```php
 /**
- * @Route("/{_semester}/{_course}/course_materials/upload", methods={"POST"})
+ * @Route("/courses/{_semester}/{_course}/course_materials/upload", methods={"POST"})
  */
 public function ajaxUploadCourseMaterialsFiles() {
 ```
@@ -76,8 +76,8 @@ typically done for optional parameters and the API.
 
 ```php
  /**
- * @Route("/{_semester}/{_course}/gradeable/{gradeable_id}")
- * @Route("/{_semester}/{_course}/gradeable/{gradeable_id}/{gradeable_version}")
+ * @Route("/courses/{_semester}/{_course}/gradeable/{gradeable_id}")
+ * @Route("/courses/{_semester}/{_course}/gradeable/{gradeable_id}/{gradeable_version}")
  */
  public function showHomeworkPage($gradeable_id, $gradeable_version = null){
 ```
@@ -96,7 +96,7 @@ in this annotation:
 
 ```php
 /**
- * @Route("/{_semester}/{_course}/course_materials/edit", methods={"POST"})
+ * @Route("/courses/{_semester}/{_course}/course_materials/edit", methods={"POST"})
  * @AccessControl(role="INSTRUCTOR")
  */
 public function ajaxEditCourseMaterialsFiles() {
@@ -155,7 +155,7 @@ API routes always start with `/api/`. The following are examples of valid API ro
 
 ```php
 /**
-* @Route("/api/{_semester}/{_course}/users", methods={"GET"})
+* @Route("/api/courses/{_semester}/{_course}/users", methods={"GET"})
 * @Route("/api/courses", methods={"POST"})
 */
 ```

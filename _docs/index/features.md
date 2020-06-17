@@ -2,7 +2,6 @@
 title: Features
 ---
 
-
 _Note: Click on the <u>links</u> and <i class="fas fa-info-circle" style="font-size:25px;color:#316498;"></i> for more information._
 
 &nbsp;
