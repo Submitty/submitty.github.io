@@ -19,9 +19,13 @@ Submitty.
 
 Please [Contact Us](/contact) if you have questions, bug reports, or feature requests.
 
-
-![](/images/RPI_seal_padding.png){:width="150px"}![](/images/RCOS_padding.png){:width="300px"}![](/images/GSoC_padding.png){:width="150px"}
-
+<center>
+<img src="/images/RPI_seal_padding.png" width="150px">
+&nbsp;&nbsp;&nbsp;
+<img src="/images/RCOS_padding.png" width="300px">
+&nbsp;&nbsp;&nbsp;
+<img src="/images/GSoC_padding.png" width="150px">
+</center>
 
 
 
