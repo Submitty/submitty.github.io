@@ -140,9 +140,7 @@ header {
 	}
 
 	.open-nav {
-		background-image: url(/img/menu.svg);
-		background-color: transparent;
-		background-repeat: no-repeat;
+	        background-color: transparent;
 		background-size: 100%;
 		width: $emblem-size;
 		height: $emblem-size;
@@ -293,7 +291,7 @@ nav > ul {
 	}
 
 	&.top-level > a {
-		line-height: 1.5;
+		line-height: 2.0;
 		font-weight: 600;
 		//padding-left: $space;
 	}
