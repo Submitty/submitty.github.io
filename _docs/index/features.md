@@ -57,6 +57,9 @@ _Note: Click on the <u>links</u> and <i class="fas fa-info-circle" style="font-s
     {% include feature_text.html
     text="<em>Remote Learning:</em> It is impossible to prevent communication and collaboration during remote examinations.  If feasible, the creation of multiple problems or variants of problems to assess each skill can allow construction of a personalized exam for each student." %}
   * automatic and/or manual grading
+  * *coming soon:* auto save & (optional) submit
+    {% include feature_text.html
+       text="Instructor specifies auto-submit interval (e.g., every 10 minutes).<br>Prevent accidental data loss and missed submission deadlines." %}
 
 &nbsp;
 
@@ -141,7 +144,7 @@ _Note: Click on the <u>links</u> and <i class="fas fa-info-circle" style="font-s
   * daily synchronization with registration data (SIS)
   * [student photo page](/instructor/student_photos) {% include feature_text.html text="A yearbook style layout of student faces is helpful to both TAs and instructors of large courses with lecture and recitation or lab, allowing instructors and TAs to identify students who may be struggling, but rarely ask for help." %}
     * [ID photos downloaded from SIS](/instructor/student_photos#photo-scraper)
-    * <em>coming soon</em>: Students can upload their own passport-style photo.
+      {% include feature_text.html text="Coming soon: Students can upload their own passport-style photo." %}
   * [multiple levels of access](/sysadmin/user_access_level#user-group-or-role)
     * instructors {% include feature_text.html text="<em>Note:</em> Supports multiple instructors, and can designate a <em>head TA</em> with instructor access." %}
     * full access graders (graduate TAs)
@@ -151,9 +154,10 @@ _Note: Click on the <u>links</u> and <i class="fas fa-info-circle" style="font-s
 &nbsp;
 
 
-* **Plagiarism detection (BETA TESTING)**
+* **Plagiarism detection (Work in Progress)**
   * extract text from PDF documents
   * search for matching phrases / paragraphs used by a subset of students
+  * uses history of each student's multiple submissions
   * programming language-specific tokenization
 
 &nbsp;
