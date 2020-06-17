@@ -48,18 +48,23 @@ _Note: Click on the <u>links</u> and <i class="fas fa-info-circle" style="font-s
 * **[Notebooks -- Online tutorial/quiz/exams](/instructor/assignment_configuration/notebook)**
     {% include feature_text.html
         text="Student answers will be collected electronically. <br> 
-              Typed answers eliminates grader struggle to read poor handwriting." %}
+              Typed answers eliminate grader struggles to read poor handwriting." %}
   * markdown formatting and/or images {% include feature_text.html text="For figures, tables, math equations, or complex text formatting: take screenshots of your exam problems typeset with Word, LaTeX, Google Docs, etc." %}
   * multiple choice or short answer
-  * timed (first page access & last submission timestamps) {% include feature_text.html text="<em>Remote Learning:</em> Accommodate students in different timezones" %}
+  * timed (first page access & last submission timestamps) {% include feature_text.html text="<em>Remote Learning:</em> Accommodate students in different timezones." %}
   * option to randomize order of multiple choice answers
-  * random selection of problems from pool {% include feature_text.html text="<em>Remote Learning:</em> Defeat cheating / disallowed collaboration" %}
+  * random selection of problems from pool
+    {% include feature_text.html
+    text="<em>Remote Learning:</em> It is impossible to prevent communication and collaboration during remote examinations.  If feasible, the creation of multiple problems or variants of problems to assess each skill can allow construction of a personalized exam for each student." %}
   * automatic and/or manual grading
 
 &nbsp;
 
 
-* **[Integrated discussion forum](/student/discussion_forum)** <button style="background-color:#ffffff;border:none;outline:none;" onclick='return toggle_display("myforumtag");' href="#"><i class="fas fa-info-circle" style="font-size:25px;color:#316498;"></i></button>
+* **[Integrated discussion forum](/student/discussion_forum)**
+    {% include feature_text.html
+        text="Students prefer a single website and login for all course activities." %}
+  * Supports a variety of course learning activities <button style="background-color:#ffffff;border:none;outline:none;" onclick='return toggle_display("myforumtag");' href="#"><i class="fas fa-info-circle" style="font-size:25px;color:#316498;"></i></button>
     <div markdown="0" id="myforumtag" style="display: none; background-color:#e6f1f7; color:#666666;">
     <ul>
     <li><em>General and Remote Learning Suggestions:</em></li>
@@ -70,9 +75,10 @@ _Note: Click on the <u>links</u> and <i class="fas fa-info-circle" style="font-s
     </ul>
     </ul>
     </div>
+  * students can post anonymously to their peers
+    {% include feature_text.html
+       text="TAs and instructors can click to view the author's name & email." %}
   * student question threads labeled as *unresolved* or *resolved*
-    * students can post anonymously to their peers  
-      (*TAs and instructors can click to view the author's name & id*)
     * students can answer each other's questions
     * all posts by instructional staff are highlighted with a yellow border
   * customizable email/notification alerts
@@ -87,8 +93,8 @@ _Note: Click on the <u>links</u> and <i class="fas fa-info-circle" style="font-s
 * **[Office hours queue](/grader/queue)**
   * for large courses with busy TA office hours {% include feature_text.html text="<em>Remote Learning:</em> Students post their WebEx (or other) contact information, and a member of the instructional staff contacts the student when they are available.  <em>Students should not attempt to directly contact TAs or mentors outside of scheduled office hours.</em>" %}
   * [prioritize students asking for help for the first time today/this week](/grader/queue#helping-students-in-the-office-hours-queue)
-  * *coming soon*: daily usage statistics {% include feature_text.html text="<em>Remote Learning:</em> Re-distribute TA/mentor office hour time slots and coverage based on demand" %}
-  * *coming soon*: per student usage statistics {% include feature_text.html text="<em>Remote Learning:</em> Identify struggling students who are not seeking help" %}
+  * *coming soon*: daily usage statistics {% include feature_text.html text="<em>Remote Learning:</em> Re-distribute TA/mentor office hour time slots and coverage based on demand." %}
+  * *coming soon*: per student usage statistics {% include feature_text.html text="<em>Remote Learning:</em> Identify struggling students who are not seeking help." %}
 
 &nbsp;
 
@@ -112,7 +118,7 @@ _Note: Click on the <u>links</u> and <i class="fas fa-info-circle" style="font-s
 &nbsp;
 
 
-* **[Semester grade summary -- *Rainbow Grades*](/instructor/rainbow_grades/index)** {% include feature_text.html text="In large courses, it is important to have a centralized database of grades and allow students to inspect their current grades, and facilitate corrections in the case of data entry errors.  Frequent updates to the database and transparency about the grade calculation process can significantly reduce student confusion and reduce or eliminate student-TA-instructor communications in verifying and/or correcting term grades." %}
+* **[Semester grade summary -- *Rainbow Grades*](/instructor/rainbow_grades/index)** {% include feature_text.html text="In large courses, it is important to have a centralized database of grades and allow students to inspect their current grades, and facilitate corrections in the case of data entry errors.  <br>Frequent updates to the database and transparency about the grade calculation process can significantly reduce student confusion and reduce or eliminate student-TA-instructor communications in verifying and/or correcting term grades." %}
   * implement grade formulas from the syllabus
     * options: curve, extra credit, drop lowest quiz, etc.
   * student can compare themself to hypothetical *average* student, *lowest A-* student, *lowest B-* student, etc.
@@ -123,7 +129,7 @@ _Note: Click on the <u>links</u> and <i class="fas fa-info-circle" style="font-s
 
 
 * **[Distribute course materials](/instructor/course_materials)**
-  * e.g., syllabus, lecture slides, assignment problems/sample solutions, test review material {% include feature_text.html text="<em>Remote Learning:</em> coming soon - links to large files hosted on other sites (e.g., lecture videos)" %}
+  * e.g., syllabus, lecture slides, assignment problems/sample solutions, test review material {% include feature_text.html text="<em>Remote Learning:</em> links to large files hosted on other sites (e.g., lecture videos on WebEx, Mediasite, YouTube)." %}
   * specify release date/time
   * restrict access to selected registration sections {% include feature_text.html text="<em>Remote Learning:</em> Different versions of the materials released at the start time for each recitation or laboratory section." %}
 
@@ -135,6 +141,7 @@ _Note: Click on the <u>links</u> and <i class="fas fa-info-circle" style="font-s
   * daily synchronization with registration data (SIS)
   * [student photo page](/instructor/student_photos) {% include feature_text.html text="A yearbook style layout of student faces is helpful to both TAs and instructors of large courses with lecture and recitation or lab, allowing instructors and TAs to identify students who may be struggling, but rarely ask for help." %}
     * [ID photos downloaded from SIS](/instructor/student_photos#photo-scraper)
+    * <em>coming soon</em>: Students can upload their own passport-style photo.
   * [multiple levels of access](/sysadmin/user_access_level#user-group-or-role)
     * instructors {% include feature_text.html text="<em>Note:</em> Supports multiple instructors, and can designate a <em>head TA</em> with instructor access." %}
     * full access graders (graduate TAs)

@@ -9,14 +9,10 @@ facilitating randomized assigned seating, QR codes, and notes/crib sheets:
 
 
 * (Optional) Collect student left or right handedness.  
-  Provided Submitty
-
   [Gradeable for left or right handedness](https://github.com/Submitty/Submitty/blob/master/more_autograding_examples/left_right_exam_seating/config/)
 
-* (Optional) Collect student-prepared notes (crib sheet).
-
-  [Gradeable for 2 pages of notes](https://github.com/Submitty/Submitty/tree/master/more_autograding_examples/test_notes_upload/config)
-
+* (Optional) Collect student-prepared notes (crib sheet).  
+  [Gradeable for 2 pages of notes](https://github.com/Submitty/Submitty/tree/master/more_autograding_examples/test_notes_upload/config)  
   [Gradeable for 3 pages of notes](https://github.com/Submitty/Submitty/tree/master/more_autograding_examples/test_notes_upload_3page/config/)
 
 
