@@ -1,7 +1,6 @@
 ---
 title: Bulk PDF Upload
 category: Instructor
-order: 11
 ---
 
 Submitty supports instructor upload of bulk PDF files to then be divided into individual assignment PDFs and assigned to students.
@@ -231,9 +230,5 @@ match the expected page count will be highlighted in red.
 ![](/images/bulkupload_labeling.png){:width="600px"}
 
 
-### Preparing PDFs with Custom QR Codes per Student
 
-Check out our instructor tool for preparing customized exams with QR
-codes:
-
-[QR TestMaker](https://github.com/Submitty/InstructorTools/tree/master/QR_TestMaker)
+See also: [Personalized Exams](/instructor/personalized_exams)

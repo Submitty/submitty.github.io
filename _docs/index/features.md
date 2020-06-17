@@ -1,6 +1,11 @@
 ---
-title: Key Features
+title: Features
 ---
+
+
+_Note: Click on the <u>links</u> and <i class="fas fa-info-circle" style="font-size:25px;color:#316498;"></i> for more information._
+
+&nbsp;
 
 {% assign feature_counter = 0 %}
 
@@ -8,12 +13,20 @@ title: Key Features
   * individual or [team](/student/team_assignments)
   * [drag & drop](/student/submission), zip file, or [version control (GIT)](/student/git_submission)
   * [resubmission](/student/managing_versions) w/ optional penalty for excessive submissions
-  * due date & time {% include feature_text.html text="A consistent and firm assignment deadline policy is crucial in large courses." %}
+  * due date & time 
     * [customizable late day policy](/student/late_days)
-    * [excused absense extensions](/student/late_days#excused-absense-extensions) {% include feature_text.html text="Submitty provides an organized and transparent system for tracking deadlines and verified student emergencies." %}
+        {% include feature_text.html
+           text="A consistent and firm assignment deadline policy is crucial in large courses.  
+                 Allow students to make limited adjustments to deadlines." %}
+    * [excused absense extensions](/student/late_days#excused-absense-extensions)
+        {% include feature_text.html
+           text="Organized and transparent system for tracking deadlines 
+                 and verified student emergencies." %}
   * [bulk upload of scanned-to-pdf paper worksheets/exams](/instructor/bulk_pdf_upload)
-    * assigned seating for exams {% include feature_text.html text="Randomized, assigned seating to combat cheating during written examinations." %}
-    * [personalized exams with QR codes](https://github.com/Submitty/InstructorTools/tree/master/QR_TestMaker) to automate upload process
+    * [assigned seating for exams](/instructor/rainbow_grades/room_templates)
+        {% include feature_text.html
+           text="Randomized, assigned seating to combat cheating during written examinations." %}
+    * [personalized exams with QR codes](/instructor/personalized_exams) to automate upload process
     * custom student crib sheets
 
 &nbsp;
@@ -33,7 +46,10 @@ title: Key Features
 &nbsp;
 
 
-* **[Notebooks -- Online tutorial/quiz/exams](/instructor/assignment_configuration/notebook)** {% include feature_text.html text="Student answers will be typed.  Eliminates grader's struggle to read poor handwriting." %}
+* **[Notebooks -- Online tutorial/quiz/exams](/instructor/assignment_configuration/notebook)**
+    {% include feature_text.html
+        text="Student answers will be collected electronically. <br> 
+              Typed answers eliminates grader struggle to read poor handwriting." %}
   * markdown formatting and/or images {% include feature_text.html text="For figures, tables, math equations, or complex text formatting: take screenshots of your exam problems typeset with Word, LaTeX, Google Docs, etc." %}
   * multiple choice or short answer
   * timed (first page access & last submission timestamps) {% include feature_text.html text="<em>Remote Learning:</em> Accommodate students in different timezones" %}
