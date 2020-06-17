@@ -13,6 +13,12 @@
         <link rel="icon" type="image/png" href="{{ site.baseurl }}/touch-icon.png" sizes="192x192">
         <!--<link rel="icon" type="image/png" href="{{ site.baseurl }}/img/favicon.png">-->
 
+        <!-- reference your copy Font Awesome here (from our CDN or by hosting yourself) -->
+        <link href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" rel="stylesheet">
+        <link href="https://use.fontawesome.com/releases/v5.6.3/css/brands.css" rel="stylesheet">
+        <link href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" rel="stylesheet">
+        <link href="https://use.fontawesome.com/releases/v5.6.3/css/regular.css" rel="stylesheet">
+
         {% feed_meta %}
         {% seo %}
 
@@ -36,7 +42,9 @@
             <h1>
                 <a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/submitty_logo.png" alt="{{ site.title }} logo"></a>
                 <!--{{ site.title }}-->
-                <button type="button" class="open-nav" id="open-nav"><small style="visibility: hidden;">a</small></button>
+                <button type="button" class="open-nav" id="open-nav">
+                  <i class="fas fa-bars" style="color: #bbbbbb; font-size: 5.5em;"></i>
+                </button>
             </h1>
             <form action="{{ site.baseurl }}/search/" method="get">
                 <input type="text" name="q" id="search-input" placeholder="Search" title="q">

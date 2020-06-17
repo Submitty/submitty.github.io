@@ -12,14 +12,21 @@ grading system from the [Rensselaer Center for Open Source Software (RCOS)](http
 [The Submitty project is hosted on GitHub](https://github.com/Submitty/). 
 
 
-The [Key Features](/index/features) of Submitty are outlined on the
-next page with suggestions and example usage in classroom and
-remote/online teaching.
+We have outlined the [Key Features](/index/features) of Submitty with
+suggestions and example usage in classroom and remote/online teaching.
+Use the search bar and links on the left sidebar to further explore
+Submitty.
 
-Please use the search bar and links on the left sidebar to further
-explore Submitty.
+Please [Contact Us](/contact) if you have questions, bug reports, or feature requests.
 
-[Contact Us](/contact)
+<center>
+<img src="/images/RPI_seal_padding.png" width="150px">
+&nbsp;&nbsp;&nbsp;
+<img src="/images/RCOS_padding.png" width="300px">
+&nbsp;&nbsp;&nbsp;
+<img src="/images/GSoC_padding.png" width="150px">
+</center>
+
 
 
 
