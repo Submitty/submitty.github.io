@@ -1,0 +1,2 @@
+{% assign feature_counter = feature_counter | plus : 1 %} <button style="background-color:#e6f1f7;border:none" onclick='return toggle_display("mytag{{feature_counter}}");' href="#"><i class="fas fa-info-circle"></i></button>
+<span markdown="0" id="mytag{{feature_counter}}" style="display: none; background-color:#e6f1f7; color:#666666;">{{ include.text }}</span>
