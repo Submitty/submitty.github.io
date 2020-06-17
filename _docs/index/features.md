@@ -2,16 +2,18 @@
 title: Key Features
 ---
 
+
+
 * **Assignment collection**   
   * individual or [team](/student/team_assignments)
   * [drag & drop](/student/submission), zip file, or [version control (GIT)](/student/git_submission)
   * [resubmission](/student/managing_versions) w/ optional penalty for excessive submissions
-  * due date & time <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv9");' href="#">&darr;</button>
+  * due date & time <button style="background-color:#e6f1f7;border:none" onclick='return toggle_display("mydiv9");' href="#"><i class="fas fa-info-circle"></i></button>
     <div markdown="0" id="mydiv9" style="display: none; background-color:#e6f1f7; color:#666666;">In large courses, it is important to have a consistent and firm assignment submission policy.  But it is also important to adapt this policy for verified student personal emergencies.  And to have an organized system and transparent for tracking deadlines and exceptions.</div>
     * [customizable late day policy](/student/late_days)
     * [excused absense extensions](/student/late_days#excused-absense-extensions)
   * [bulk upload of scanned-to-pdf paper worksheets/exams](/instructor/bulk_pdf_upload)
-    * assigned seating for exams <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv10");' href="#">&darr;</button>
+    * assigned seating for exams <button style="background-color:#e6f1f7;border:none" onclick='return toggle_display("mydiv10");' href="#"><i class="fas fa-info-circle"></i></button>
       <div markdown="0" id="mydiv10" style="display: none; background-color:#e6f1f7; color:#666666;">Randomized, assigned seating to combat cheating during written examinations.</div>
     * [personalized exams with QR codes](https://github.com/Submitty/InstructorTools/tree/master/QR_TestMaker) to automate upload process
     * custom student crib sheets
@@ -19,7 +21,7 @@ title: Key Features
 
 
 * **Manual grading interface**
-  * simple grading: [checkpoint grading](/grader/checkpoint_grading) and [numeric / text grading](/grader/numeric_text_grading) <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv11");' href="#">&darr;</button>
+  * simple grading: [checkpoint grading](/grader/checkpoint_grading) and [numeric / text grading](/grader/numeric_text_grading) <button style="background-color:#e6f1f7;border:none" onclick='return toggle_display("mydiv11");' href="#"><i class="fas fa-info-circle"></i></button>
     <div markdown="0" id="mydiv11" style="display: none; background-color:#e6f1f7; color:#666666;"><em>Remote Learning:</em> Can be used to score participation during synchronous video lectures and/or discussion forums.</div>
   * [detailed rubric grading](/grader/rubric_grading) of submitted materials
   * web interface for file access or bulk download
@@ -31,17 +33,17 @@ title: Key Features
   * [grade override](/instructor/grade_override) (makeup exams & other special cases)
 
 * **[Notebooks -- Online tutorial/quiz/exams](/instructor/assignment_configuration/notebook)**
-  * markdown formatting and/or images <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv15");' href="#">&darr;</button>
+  * markdown formatting and/or images <button style="background-color:#e6f1f7;border:none" onclick='return toggle_display("mydiv15");' href="#"><i class="fas fa-info-circle"></i></button>
     <div markdown="0" id="mydiv15" style="display: none; background-color:#e6f1f7; color:#666666;">For figures, tables, math equations, or complex text formatting: take screenshots of your exam problems typeset with Word, LaTeX, Google Docs, etc.</div>
   * multiple choice or short answer
-  * timed (first page access & last submission timestamps) <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv2");' href="#">&darr;</button>
+  * timed (first page access & last submission timestamps) <button style="background-color:#e6f1f7;border:none" onclick='return toggle_display("mydiv2");' href="#"><i class="fas fa-info-circle"></i></button>
     <div markdown="0" id="mydiv2" style="display: none; background-color:#e6f1f7; color:#666666;"><em>Remote Learning:</em> Accommodate students in different timezones</div>
   * option to randomize order of multiple choice answers
-  * random selection of problems from pool (JUST RELEASED!) <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv3");' href="#">&darr;</button>
+  * random selection of problems from pool (JUST RELEASED!) <button style="background-color:#e6f1f7;border:none" onclick='return toggle_display("mydiv3");' href="#"><i class="fas fa-info-circle"></i></button>
     <div markdown="0" id="mydiv3" style="display: none; background-color:#e6f1f7; color:#666666;"><em>Remote Learning:</em> Defeat cheating / disallowed collaboration</div>
   * automatic and/or manual grading
 
-* **[Integrated discussion forum](/student/discussion_forum)** <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv12");' href="#">&darr;</button>
+* **[Integrated discussion forum](/student/discussion_forum)** <button style="background-color:#e6f1f7;border:none" onclick='return toggle_display("mydiv12");' href="#"><i class="fas fa-info-circle"></i></button>
     <div markdown="0" id="mydiv12" style="display: none; background-color:#e6f1f7; color:#666666;">
     <ul>
     <li><em>General and Remote Learning Suggestions:</em></li>
@@ -64,15 +66,15 @@ title: Key Features
   * students can *bookmark* threads for later refererence
 
 * **[Office hours queue](/grader/queue)**
-  * for large courses with busy TA office hours <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv14");' href="#">&darr;</button>
+  * for large courses with busy TA office hours <button style="background-color:#e6f1f7;border:none" onclick='return toggle_display("mydiv14");' href="#"><i class="fas fa-info-circle"></i></button>
     <div markdown="0" id="mydiv14" style="display: none; background-color:#e6f1f7; color:#666666;"><em>Remote Learning:</em> Students post their WebEx (or other) contact information, and a member of the instructional staff contacts the student when they are available.  <em>Students should not attempt to directly contact TAs or mentors outside of scheduled office hours.</em></div>
   * [prioritize students asking for help for the first time today/this week](/grader/queue#helping-students-in-the-office-hours-queue)
-  * *coming soon*: daily usage statistics <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv4");' href="#">&darr;</button>
+  * *coming soon*: daily usage statistics <button style="background-color:#e6f1f7;border:none" onclick='return toggle_display("mydiv4");' href="#"><i class="fas fa-info-circle"></i></button>
     <div markdown="0" id="mydiv4" style="display: none; background-color:#e6f1f7; color:#666666;"><em>Remote Learning:</em> Re-distribute TA/mentor office hour time slots and coverage based on demand</div>
-  * *coming soon*: per student usage statistics <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv7");' href="#">&darr;</button>
+  * *coming soon*: per student usage statistics <button style="background-color:#e6f1f7;border:none" onclick='return toggle_display("mydiv7");' href="#"><i class="fas fa-info-circle"></i></button>
     <div markdown="0" id="mydiv7" style="display: none; background-color:#e6f1f7; color:#666666;"><em>Remote Learning:</em> Identify struggling students who are not seeking help</div>
 
-* **[Peer grading](/instructor/peer_grading) (JUST RELEASED!)** <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv5");' href="#">&darr;</button>
+* **[Peer grading](/instructor/peer_grading) (JUST RELEASED!)** <button style="background-color:#e6f1f7;border:none" onclick='return toggle_display("mydiv5");' href="#"><i class="fas fa-info-circle"></i></button>
     <div markdown="0" id="mydiv5" style="display: none; background-color:#e6f1f7; color:#666666;">
     <ul>
     <li><em>General and Remote Learning Suggestions:</em></li>
@@ -90,7 +92,7 @@ title: Key Features
   * instructor uploads matrix of peer-to-peer grading assignments
   * *coming soon*: double-blind peer grading
 
-* **[Semester grade summary -- *Rainbow Grades*](/instructor/rainbow_grades/index)** <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv17");' href="#">&darr;</button>
+* **[Semester grade summary -- *Rainbow Grades*](/instructor/rainbow_grades/index)** <button style="background-color:#e6f1f7;border:none" onclick='return toggle_display("mydiv17");' href="#"><i class="fas fa-info-circle"></i></button>
     <div markdown="0" id="mydiv17" style="display: none; background-color:#e6f1f7; color:#666666;">In large courses, it is important to have a centralized database of grades and allow students to inspect their current grades, and facilitate corrections in the case of data entry errors.  Frequent updates to the database and transparency about the grade calculation process can significantly reduce student confusion and reduce or eliminate student-TA-instructor communications in verifying and/or correcting term grades.</div>
   * implement grade formulas from the syllabus
     * options: curve, extra credit, drop lowest quiz, etc.
@@ -99,20 +101,20 @@ title: Key Features
   * instructor can visually identify trends and outlier scores for further inspection
 
 * **[Distribute course materials](/instructor/course_materials)**
-  * E.g., syllabus, lecture slides, assignment problems/sample solutions, test review material <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv6");' href="#">&darr;</button>
+  * E.g., syllabus, lecture slides, assignment problems/sample solutions, test review material <button style="background-color:#e6f1f7;border:none" onclick='return toggle_display("mydiv6");' href="#"><i class="fas fa-info-circle"></i></button>
     <div markdown="0" id="mydiv6" style="display: none; background-color:#e6f1f7; color:#666666;"><em>Remote Learning:</em> coming soon - links to large files hosted on other sites (e.g., lecture videos)</div>
   * specify release date/time
-  * restrict access to selected registration sections <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv13");' href="#">&darr;</button>
+  * restrict access to selected registration sections <button style="background-color:#e6f1f7;border:none" onclick='return toggle_display("mydiv13");' href="#"><i class="fas fa-info-circle"></i></button>
     <div markdown="0" id="mydiv13" style="display: none; background-color:#e6f1f7; color:#666666;"><em>Remote Learning:</em> Different versions of the materials released at the start time for each recitation or laboratory section.</div>
 
 * **Accounts / course registration**
   * University username & password (RPI RCS)
   * Daily synchronization with registration data (SIS)
-  * [Student photo page](/instructor/student_photos) <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv16");' href="#">&darr;</button>
+  * [Student photo page](/instructor/student_photos) <button style="background-color:#e6f1f7;border:none" onclick='return toggle_display("mydiv16");' href="#"><i class="fas fa-info-circle"></i></button>
     <div markdown="0" id="mydiv16" style="display: none; background-color:#e6f1f7; color:#666666;">A yearbook style layout of student faces is helpful to both TAs and instructors of large courses with lecture and recitation or lab, allowing instructors and TAs to identify students who may be struggling, but rarely ask for help.</div>
     * [ID photos downloaded from SIS](/instructor/student_photos#photo-scraper)
   * [Multiple levels of access](/sysadmin/user_access_level#user-group-or-role)
-    * instructors <button style="background-color:#e6f1f7;" onclick='return toggle_display("mydiv8");' href="#">&darr;</button>
+    * instructors <button style="background-color:#e6f1f7;border:none" onclick='return toggle_display("mydiv8");' href="#"><i class="fas fa-info-circle"></i></button>
       <div markdown="0" id="mydiv8" style="display: none; background-color:#e6f1f7; color:#666666;"><em>Note:</em> Supports multiple instructors, and can designate a <em>head TA</em> with instructor access.</div>
     * full access graders (graduate TAs)
     * limited access graders (mentors)
