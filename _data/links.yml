@@ -107,6 +107,8 @@
       link: plagiarism
     - name: Bulk PDF Upload
       link: bulk_pdf_upload
+    - name: Personalized Exam
+      link: personalized_exams
     - name: Photo Scraper
       link: student_photos
     - name: Silent Grade Editing

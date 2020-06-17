@@ -4,8 +4,6 @@ category: Instructor
 ---
 
 
-_NOTE: This is a work-in-progress._
-
 Room Templates works in coordination with the Rainbow Grades
 [Exam Seating](/instructor/rainbow_grades/exam_customization).
 
