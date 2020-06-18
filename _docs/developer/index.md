@@ -51,7 +51,7 @@ Join our Community Discussion:
      locate relevant files.
 
 * Add & delete things to the code, re-install that portion of the
-  system and see what happens.  See also [Development Instructions](/developer/development_instructions/).
+  system and see what happens.  See also [Development Instructions](/developer/development_instructions).
 
 * Use inspector, browser debugger, javascript console, etc.
 
