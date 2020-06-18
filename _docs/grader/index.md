@@ -15,6 +15,6 @@ each assignment.
 
 
 See also
-[Checkpoint Grading](checkpoint_grading),
-[Numeric / Text Grading](numeric_text_grading), and
-[Rubric Grading](rubric_grading).
+[Checkpoint Grading](/grader/checkpoint_grading),
+[Numeric / Text Grading](/grader/numeric_text_grading), and
+[Rubric Grading](/grader/rubric_grading).

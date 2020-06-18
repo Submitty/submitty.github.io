@@ -80,7 +80,7 @@ specifications for Submitty's JSON responses can be found [here](../json_respons
 
 Here are some example Unit tests:
 
-- [SubmissionControllerTester.php](https://github.com/Submitty/Submitty/blob/master/site/tests/app/controllers/submission/SubmissionControllerTester.php)
+- [SubmissionControllerTester.php](https://github.com/Submitty/Submitty/blob/master/site/tests/app/controllers/student/SubmissionControllerTester.php)
 - [AuthenticationControllerTester.php](https://github.com/Submitty/Submitty/blob/master/site/tests/app/controllers/AuthenticationControllerTester.php)
 - [AbstractDatabaseTester](https://github.com/Submitty/Submitty/blob/master/site/tests/app/libraries/database/AbstractDatabaseTester.php)
 - [CourseTester.php](https://github.com/Submitty/Submitty/blob/master/site/tests/app/models/CourseTester.php)

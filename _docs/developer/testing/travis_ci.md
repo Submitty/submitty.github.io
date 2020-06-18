@@ -7,7 +7,7 @@ on all commits and pull requests against the GitHub repository. As part of this 
 that the code passes the [linters / static analysis](/developer/testing/linting_static_analysis),
 the [python](/developer/testing/python_unit_tests) and [PHP](/developer/testing/php_unit_tests)
 unit tests, the [Autograding Integration Tests](/developer/testing/autograding_integration_tests),
-and the [Site End-to-End Tests](/developer/testing/site_end_to_end). 
+and the [Site End-to-End Tests](/developer/testing/site_end_to_end_tests).
 
 To help keep things organized, we utilize a concept of [build stages](https://docs.travis-ci.com/user/build-stages/),
 which we use to logically group test suites, and structure the stages roughly from fastest to slowest.

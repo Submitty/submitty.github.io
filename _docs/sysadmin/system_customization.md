@@ -64,7 +64,7 @@ longer and enable compression so that the logs don’t take up as
 much space.  Edit `/etc/logrotate.conf` and change the `log rotation`,
 `retention`, and `compression` settings to suit your situation.  The
 comments in the file will tell you what each setting is for, or see
-[logrotate(8)](http://www.linuxcommand.org/man_pages/logrotate8.html) for more
+[logrotate(8)](https://linux.die.net/man/8/logrotate) for more
 details.
 
 <small>[Back To Table of Contents](#table-of-contents)</small>
