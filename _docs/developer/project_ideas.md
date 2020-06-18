@@ -272,8 +272,8 @@ See also:
 
 * [Submitty GitHub Issue Tracker](https://github.com/Submitty/Submitty/issues)
 
-* [Developer](index) index page
+* [Developer](/developer) pages
 
-* [How to Contribute](how_to_contribute) page
+* [How to Contribute](/developer/how_to_contribute) page
 
 

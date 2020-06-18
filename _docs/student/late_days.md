@@ -43,7 +43,7 @@ The late day policy is subject to a few rules:
   will be recorded as a zero.  You will not be
   charged late days for this assignment.
 
-* For [team assignments](team_assignments.md), if the team chooses to submit the assignment
+* For [team assignments](/student/team_assignments), if the team chooses to submit the assignment
   _n_ days late, each member of the team will be charged _n_ late
   days.  If one or more students on the team do not have sufficient
   late days available, those students will receive a zero for this

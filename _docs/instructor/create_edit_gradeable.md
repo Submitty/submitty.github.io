@@ -206,7 +206,7 @@ you must re-run the BUILD_XXXX.sh script.
 
 1. To manually test your course and assignment configurations, follow
    the 
-   [student submission instructions](/student/index)
+   [student submission instructions](/student/submission)
 
 
 2. You can confirm that the files were received by checking this

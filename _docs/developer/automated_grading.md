@@ -58,7 +58,7 @@ number:
    ```
 
    _NOTE: If you delete the `autograding_workers.json` file and re-run
-   `CONFIGURE_SUBMITTY.sh`, the file will be re-created with the
+   `CONFIGURE_SUBMITTY.py`, the file will be re-created with the
    default settings._
 
 ---
