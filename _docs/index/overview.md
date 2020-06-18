@@ -1,6 +1,9 @@
 ---
 title: Welcome
-permalink: /index
+category: Submitty
+redirect_from:
+   - /index
+   - /welcome
 ---
 
 [Submitty](http://submitty.org) 
@@ -20,11 +23,11 @@ Submitty.
 Please [Contact Us](/contact) if you have questions, bug reports, or feature requests.
 
 <center>
-<img src="/images/RPI_seal_padding.png" width="150px">
+<a href="https://rpi.edu"><img src="/images/RPI_seal_padding.png" width="150px"></a>
 &nbsp;&nbsp;&nbsp;
-<img src="/images/RCOS_padding.png" width="300px">
+<a href="https://rcos.io"><img src="/images/RCOS_padding.png" width="300px"></a>
 &nbsp;&nbsp;&nbsp;
-<img src="/images/GSoC_padding.png" width="150px">
+<a href="https://summerofcode.withgoogle.com/"><img src="/images/GSoC_padding.png" width="150px"></a>
 </center>
 
 
