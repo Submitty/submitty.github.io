@@ -20,7 +20,7 @@ nightly cron job to automatically add students to the relevant
 Submitty course databases and create login accounts to the submission
 server.  This greatly simplifies instructor maintenance of current
 course enrollement.  See also [System Administrator / Student Auto
-Feed](../sysadmin/student_auto_feed).
+Feed](/sysadmin/student_auto_feed).
 
 Below are the instructions to manually add students who are not
 traditionally registered, to immediately add a student who registered

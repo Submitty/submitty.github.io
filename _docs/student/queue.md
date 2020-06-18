@@ -94,4 +94,4 @@ At the bottom of this page you can view a log of your interactions with the queu
 
 ### Administering the Office Hours Queue
 
-Instructors and graders, please also read [Managing the Office Hours Queue](../grader/queue)
+Instructors and graders, please also read [Managing the Office Hours Queue](/grader/queue)

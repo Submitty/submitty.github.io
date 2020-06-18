@@ -8,7 +8,7 @@
     - name: Publications
     - name: People
     - name: Contact Us
-      link: ../contact
+      link: contact
 
 - name: Student
   children:

@@ -35,8 +35,8 @@ graders and individual students to have a discussion on their work.
    be able to continue the conversation only for any unresolved grade
    inquiries.
 
-See also [Opening a Grade Inquiry](../student/grade_inquiry_student) and
-[Resolving a Grade Inquiry](../grader/grade_inquiry_grader).
+See also [Opening a Grade Inquiry](/student/grade_inquiry_student) and
+[Resolving a Grade Inquiry](/grader/grade_inquiry_grader).
 
 ### Grade Inquiry Per Component
 

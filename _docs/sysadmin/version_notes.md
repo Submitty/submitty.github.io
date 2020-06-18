@@ -24,8 +24,8 @@ grading configurations.
    
 
 See also
-[Developer: How to Contribute](../../developer/how_to_contribute) and
-[Developer: Migrations](../../developer/migrations).
+[Developer: How to Contribute](/developer/how_to_contribute) and
+[Developer: Migrations](/developer/migrations).
 
 
 

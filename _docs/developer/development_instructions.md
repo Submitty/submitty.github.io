@@ -18,7 +18,7 @@ to changes you have made within your local Submitty checkout
 (including pulling new code from GitHub or switching to another
 branch).
 
-Please also see [Installation Version Notes](../../sysadmin/version_notes)
+Please also see [Installation Version Notes](/sysadmin/version_notes)
 
 
 ---
@@ -159,7 +159,7 @@ Please also see [Installation Version Notes](../../sysadmin/version_notes)
 
     * [Rebuild Gradeables](/instructor/create_edit_gradeable#builddebug-all-grading-configurations) using those configurations, and also
 
-    * [Batch Regrade Homeworks](../instructor/batch_regrade_submissions) already submitted to those gradeables.
+    * [Batch Regrade Homeworks](/instructor/batch_regrade_submissions) already submitted to those gradeables.
 
 
 * If the VM has a clock skew (incorrect time)

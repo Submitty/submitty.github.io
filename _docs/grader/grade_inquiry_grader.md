@@ -3,8 +3,8 @@ category: Grader
 title: Resolving a Grade Inquiry
 ---
 
-See also [Opening a Grade Inquiry](../student/grade_inquiry_student)
-and [Enabling Grade Inquiries](../instructor/grade_inquiry_instructor).
+See also [Opening a Grade Inquiry](/student/grade_inquiry_student)
+and [Enabling Grade Inquiries](/instructor/grade_inquiry_instructor).
 
 * Once one or more students have opened a grade inquiry for a specific
   assignment, the grader/instructor will be notified (including via

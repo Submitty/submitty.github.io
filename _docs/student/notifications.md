@@ -10,7 +10,7 @@ the upcoming assignment, and the status of any grad inquiries you may
 have submitted for past assignments?
 
 Submitty will notify users of actions both via on-site messages and
-also by email, if [configured on the server](../sysadmin/email_configuration).
+also by email, if [configured on the server](/sysadmin/email_configuration).
 
 
 
@@ -39,9 +39,8 @@ right corner.
 
 On this page you will see settings for both notifications that are
 shown on the Submitty website, and notifications that are delivered by
-email.  In order to use email notification, the [system administrator
-must be enabled email for your
-server](../sysadmin/email_configuration).
+email.  In order to use email notification, the
+[system administrator must be enabled email for your server](/sysadmin/email_configuration).
 
 The types of notifications are organized into categories by feature.
 

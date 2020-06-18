@@ -4,7 +4,7 @@ category: Grader
 order: 4
 ---
 
-Students, please read [Getting Help through the Office Hours Queue](../student/queue).
+Students, please read [Getting Help through the Office Hours Queue](/student/queue).
 
 
 ### What is the Office Hours Queue?
@@ -40,7 +40,7 @@ appropriately.  *NOTE: Office Hours Queue Statistics coming soon!*
 
 To use the queue, an instructor level user for the course must first
 enable this feature from the [Course Settings
-page](../instructor/course_settings).
+page](/instructor/course_settings).
 
 ![](/images/queue/queue_enable.png)
 

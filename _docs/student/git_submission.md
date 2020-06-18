@@ -233,6 +233,6 @@ branches and handling merge conflicts._
 ---
 
 
-See also:  [Instructor: Facilitating Student Submissions via GIT](../instructor/managing_git)
+See also:  [Instructor: Facilitating Student Submissions via GIT](/instructor/managing_git)
 
-See also:  [System Administrator: Setting Up Internal Git](../sysadmin/git)
+See also:  [System Administrator: Setting Up Internal Git](/sysadmin/git)

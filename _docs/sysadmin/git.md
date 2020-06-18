@@ -133,6 +133,6 @@ point at the internal url for VCS, which is your Submitty URL with `{$vcs_type}/
 
 ---
 
-See also:  [Student: Assignment Submission via GIT](../student/git_submission)
+See also:  [Student: Assignment Submission via GIT](/student/git_submission)
 
-See also:  [Instructor: Facilitating Student Submissions via GIT](../instructor/managing_git)
+See also:  [Instructor: Facilitating Student Submissions via GIT](/instructor/managing_git)
