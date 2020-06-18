@@ -311,7 +311,7 @@ instructions.
    vagrant reload
    ```
 
-4. Read the [Development Instructions](/developer/development_instructions/) page
+4. Read the [Development Instructions](/developer/development_instructions) page
    for instructions on updating an existing installation with recent
    code changes.
 

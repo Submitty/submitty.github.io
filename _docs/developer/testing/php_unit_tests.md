@@ -76,7 +76,7 @@ find a list of all PHPUnit assertions
 [here](https://phpunit.readthedocs.io/en/latest/assertions.html).
 
 Most tests for controllers in Submitty assert against the JSON response sent back, the
-specifications for Submitty's JSON responses can be found [here](../json_responses).
+specifications for Submitty's JSON responses can be found [here](/developer/json_responses).
 
 Here are some example Unit tests:
 

@@ -98,7 +98,7 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
       configuration should not be performed automatically via a
       migration because these files commonly have customizations that
       make automation difficult or problematic.    
-      See also: [Installation Version Notes](../sysadmin/version_notes)
+      See also: [Installation Version Notes](/sysadmin/version_notes)
 
 
 
@@ -124,7 +124,7 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
        the PR message or comments.
 
      * Developers are encouraged to test all user interface modifications with
-       [all available Submitty Themes](../student#how-can-i-change-submittys-theme):
+       [all available Submitty Themes](/student#how-can-i-change-submittys-theme):
        e.g., light mode, dark mode, black mode, to ensure compliance/improvement
        of [Web Accessibility](interface_design_style_guide/web_accessibility).
 

@@ -9,7 +9,7 @@ information about how your work was graded.  You may want to ask for a
 correction if an error was made in scoring your work.  The grade
 inquiry feature allows you to have a discussion with the grader.
 
-Note: If [system email notifications](../sysadmin/email_configuration)
+Note: If [system email notifications](/sysadmin/email_configuration)
 are enabled, the student, all team members, and all relevant graders
 will receive an email for each post in the grade inquiry system.
 
@@ -21,7 +21,7 @@ and the current date is in the window for submitting an inquiry, you
 will see the "Open Grade Inquiry" button at the bottom of the page
 beneath the TA/Instructor grade.
 
-_Note: See also [Enabling Grade Inquiries](../instructor/grade_inquiry_instructor)_
+_Note: See also [Enabling Grade Inquiries](/instructor/grade_inquiry_instructor)_
 
 ![](/images/grade_inquiry/student_submit_grade_inquiry.PNG)
 
@@ -47,7 +47,7 @@ resolved, they will change the status of your inquiry to *resolved*.
 ![](/images/grade_inquiry/feedback_grade_inquiry.PNG)
 
 
-See also [Resolving a Grade Inquiry](../grader/grade_inquiry_grader)
+See also [Resolving a Grade Inquiry](/grader/grade_inquiry_grader)
 
 
 ### Cancelling a Grade Inquiry

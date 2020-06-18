@@ -15,5 +15,5 @@ authentication method from `PamAuthentication` to
 `DatabaseAuthentication`.
 
 When using DatabaseAuthentication, Submitty allows users to
-[change their password](../../student/#how-can-i-change-my-password) from the home screen.
+[change their password](/student#how-can-i-change-my-password) from the home screen.
 

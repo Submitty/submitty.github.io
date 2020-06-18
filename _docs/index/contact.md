@@ -1,9 +1,9 @@
 ---
 title: Contact Us
 category: Submitty
-permalink: /contact
+redirect_from:
+  - /contact
 ---
-
 
 Are you interested in joining the Submitty Development Team?  Please read:  
 [Suggestions for New Developers](/developer)  and  [How to Contribute](/developer/how_to_contribute).

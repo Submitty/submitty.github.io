@@ -7,7 +7,7 @@ category: System Administrator
 Submitty can be configured to send email notifications in addition to
 on-site notications of actions such as instructor announcements, new
 messages on the discussion forum, responses to grade inquiries,
-etc.  See also [notifications & email](../student/notifications).
+etc.  See also [notifications & email](/student/notifications).
 
 First, the Submitty server must be configured to send email:
 
@@ -111,4 +111,4 @@ it's not working:
 
 
 
-Developers, please see also [Vagrant Email Configuration](../developer/development_instructions/vagrant_email_configuration).
+Developers, please see also [Vagrant Email Configuration](/developer/development_instructions/vagrant_email_configuration).

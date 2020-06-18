@@ -86,4 +86,4 @@ date.
 ![](/images/team_manage_3.png)
 
 
-See also the [Instructor Team Assignments](../instructor/team_assignments) documentation.
+See also the [Instructor Team Assignments](/instructor/team_assignments) documentation.
