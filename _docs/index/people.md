@@ -1,6 +1,8 @@
 ---
 title: People
-category: Developer
+category: Submitty
+redirect_from:
+  - /people
 ---
 
 

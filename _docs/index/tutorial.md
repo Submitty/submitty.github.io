@@ -1,5 +1,8 @@
 ---
 title: Tutorial
+category: Submitty
+redirect_from:
+  - /tutorial
 ---
 
 #### Demo Submitty
