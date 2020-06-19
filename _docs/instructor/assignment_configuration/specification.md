@@ -18,12 +18,20 @@ executables.
 * **field:** ``"notebook"``  
   **type:** _array of notebook objects_ ([notebook docs](notebook))
 
-
 * **field:** ``"assignment_message"``  
   **type:** _string_  
   **default value:** ``""``
 
-
+* **field:** ``"hide_submitted_files"``  
+  **type:** _boolean_  
+  **default value:** ``false``  
+  If set to ``true``, will not display the submitted files box on the submission page.
+  
+* **field:** ``"hide_version_and_test_details"``  
+  **type:** _boolean_  
+  **default value:** ``false``  
+  If set to ``true``, will not display the version dropdown or the results of individual testcases on the submission page. Total score will still be displayed.
+  
 * **field:** ``"grading_parameters"``  
   **type:** _associative array / mapping from string to integer_
 
@@ -39,7 +47,7 @@ executables.
 
 
 * **field:** ``"part_names"``  
-  **type:** _array of strings_
+  **type:** _array of strings_  
   **default value:** empty array
 
 
