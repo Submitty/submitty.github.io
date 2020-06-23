@@ -286,7 +286,7 @@ The RedirectResponse object only expects a URL, you should never hardcode a URL 
 The `buildUrl` function takes a list of strings and glues them together into a full URL.
 
 If the domain name was submitty.cs.rpi.edu and you called the function
-```
+```php
 $this->core->buildUrl(['home','gradeables','foo', 'bar']))
 ```
 you would receive the URL : 
