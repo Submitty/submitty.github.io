@@ -188,7 +188,7 @@ public function foo(){
     return new MultiResponse(
         JsonResponse::getSuccessResponse("It worked!"),
         new WebResponse(
-            ['Navigation'],
+            'NavigationView::class',
             'showGradeables',
             $var1, $var2
         ),
@@ -225,9 +225,6 @@ getErrorResponse($message, $data = null, $code = null)
 *It is recommended that you use these functions instead of calling the JsonResponse constructor yourself as these conform to our response spec already*
 
 
-Endpoints that are only called through API routes or only get called through AJAX calls usually send JSON exclusively. The static function `JsonOnlyResponse` is defined for this purpose under MultiResponse.php.
-
-
 Example usage:
 
 ```php
@@ -255,7 +252,7 @@ A WebResponse works by calling a specific function inside of a PHP view file und
 
 ```php
 return new WebResponse(
-    ['admin', 'Docker'],
+    admin\DockerView::class,
     'displayDockerPage',
     $json, 
     $var2, 
