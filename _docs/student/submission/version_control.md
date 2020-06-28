@@ -1,6 +1,8 @@
 ---
-title: Assignment Submission via GIT (Version Control)
-category: Student
+title: Version Control / GIT
+category: Student -- Submission
+redirect_from:
+  - /student/git_submission
 ---
 
 

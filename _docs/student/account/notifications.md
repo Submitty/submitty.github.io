@@ -1,6 +1,8 @@
 ---
 title: Notifications & Email
-category: Student
+category: Student -- Account
+redirect_from:
+  - /student/notifications
 ---
 
 Submitty can be a busy place mid-semester, especially for students

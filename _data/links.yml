@@ -10,13 +10,24 @@
 
 - name: Student
   children:
-    - name: Login to Submitty
-      link: ../student
-    - name: Course Navigation
-      link: navigation
+    - name: Account
+      children:
+        - name: Access & Customization
+          link: index
+        - name: Course Navigation
+          link: navigation
+        - name: Preferred Name
+        - name: Password
+        - name: Local Timezone
+        - name: Theme
+        - name: Notifications & Email
+          link: notifications
     - name: Submission
-    - name: Submission via GIT
-      link: git_submission
+      children:
+        - name: Overview
+          link: index
+        - name: Version Control / GIT
+          link: version_control
     - name: Automated Testing
     - name: Late Days & Extensions
       link: late_days
@@ -26,8 +37,6 @@
       link: grade_inquiry_student
     - name: Team Assignments
     - name: Discussion Forum
-    - name: Notifications & Email
-      link: notifications
     - name: Getting Help through the Office Hours Queue
       link: queue
 

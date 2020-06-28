@@ -76,7 +76,7 @@ You can click "Finish Being Helped" to remove yourself in this case.
 The names (and contact information) of students in the queue are
 visible only to the instructor and TAs who are answering questions and
 tutoring.  By default, your Submitty
-[preferred name](/student#how-can-i-change-my-preferred-name) will be
+[preferred name](/student/account/preferred_name) will be
 inserted into the "Your Name" field of the Office Hours Queue.
 When office
 hours is held in a common physical name, the TA/instructor may call

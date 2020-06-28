@@ -1,6 +1,6 @@
 ---
 category: Student
-title: Uploading a New Submission
+title: Submission
 ---
 
 After selecting the appropriate assignment, you should prepare their
