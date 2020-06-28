@@ -1,6 +1,8 @@
 ---
-category: Student
+category: Student -- Submission
 title: Team Assignments
+redirect_from:
+  - /student/team_assignments
 ---
 
 ### What are Team Assignments?

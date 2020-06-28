@@ -1,10 +1,12 @@
 ---
-category: Student
+category: Student -- Communication
 title: Discussion Forum
+redirect_from:
+  - /student/communication
+  - /student/forum
+  - /student/discussion_forum
+  - /student/communication/discussion_forum
 ---
-
-
-## What is the Discussion Forum
 
 The discussion forum on submitty is an open area for students and members of the teaching staff to start discussions and answer questions. The discussion forum allows anyone to ask questions and provide answers.
 
@@ -20,7 +22,7 @@ _Warning: Be sure to confirm with your instructor what kind of content is allowe
 
 **Attachments** Submitty allows for posts to contain attached files.
 
-### Features
+## Features
 
 The discussion forum comes with many features that enables effective
 communication between students and the teaching staff.
@@ -57,7 +59,7 @@ communication between students and the teaching staff.
    **_Anonymous Posting (to classmates)_** enables users to appear as anonymous when creating a post/thread.
    Members of the teaching staff have the ability to view the user of an anonymous post if needed. 
 
-### At A Glance
+## At A Glance
    
    **_New/Unseen Posts_** When a post has not been viewed, the background appears as a light blue. When the post has been seen it turns white. If a thread is new or has new posts within the thread the thread level follows the same color scheme
 
@@ -76,29 +78,3 @@ communication between students and the teaching staff.
    **_Metadata_** The posts also contain details about the author, date and time a post was created, as well as the ability to edit and delete a post
 
 
-## Formatting a Post using Markdown
-
-Markdown has become a common standard for formatting online text.
-Click on the markdown symbol to enable formatting of your post using markdown.
-
-   **_Links_** "\[display text\]\(url\)" will add a hyperlink to a URL with "display text" displayed.
-
-   **_Code_** Adding ```` ``` ```` above and below text will turn it into a code block.
-
-   **_Bold_** Adding \_\_ before and after text (two underscores) will make that text bold.
-
-   **_Italics_** Adding \_ before and after text (one underscore) will italicize that text.
-
-   **_Bullets_** Adding \* or numbers (ex. 3., 1., 3.) before text and with a space will put text into a bulleted list (with \* or the number as the bullet point).
-
-   For example:
-   ``` 
-   * Item 1
-   * Item 2
-   
-   3. Item 1
-   1. Item 2
-   3. Item 3
-   ```
-
-We provide quick link buttons to insert some markdown formatting characters for these features into your post.

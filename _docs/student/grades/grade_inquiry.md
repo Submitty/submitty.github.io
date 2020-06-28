@@ -1,6 +1,8 @@
 ---
-category: Student
+category: Student -- Grades
 title: Opening a Grade Inquiry
+redirect_from:
+  - /student/grade_inquiry_student
 ---
 
 
@@ -14,7 +16,7 @@ are enabled, the student, all team members, and all relevant graders
 will receive an email for each post in the grade inquiry system.
 
 
-### Submitting an Initial Grade Inquiry
+## Submitting an Initial Grade Inquiry
 
 If your instructor has enabled grade inquiries for this assignment,
 and the current date is in the window for submitting an inquiry, you
@@ -39,7 +41,7 @@ requests additional information.
 ![](/images/grade_inquiry/student_pending_grade_inquiry.PNG)
 
 
-### Feedback on your Grade Inquiry
+## Feedback on your Grade Inquiry
 
 Once the TA has reviewed your inquiry and believes the situation is
 resolved, they will change the status of your inquiry to *resolved*.
@@ -50,14 +52,14 @@ resolved, they will change the status of your inquiry to *resolved*.
 See also [Resolving a Grade Inquiry](/grader/grade_inquiry_grader)
 
 
-### Cancelling a Grade Inquiry
+## Cancelling a Grade Inquiry
 
 The student can cancel an unresolved grade inquiry by pressing the
 white 'Cancel Grade Inquiry'.  The student and grader posts remain in
 the system, but the status of the inquiry is set to *resolved*.
 
 
-### Reopening a Grade Inquiry
+## Reopening a Grade Inquiry
 
 The student can reopen the grade inquiry that is in the *resolved*
 state. This is useful if either the grader closed the inquiry or the student cancelled the grade inquiry and the student wants to continue the inquiry.
@@ -66,7 +68,7 @@ state. This is useful if either the grader closed the inquiry or the student can
 
 To reopen the grade inquiry the student must type write a response and click the blue 'Reopen Grade Inquiry'. The student must write a response.
 
-### Grade Inquiry Per Component
+## Grade Inquiry Per Component
 
 If an instructor enables grade inquiry per component for a gradeable, the student can make a grade inquiry that references a specific question. For example, assume there is a component of the gradeable named Read Me and a component named Documentation. A student can make two separate grade inquiries for each of these components. The grader(s) who graded that component will get notified if they are a grader that can be shown.
 

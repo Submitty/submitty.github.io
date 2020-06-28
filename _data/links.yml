@@ -10,9 +10,10 @@
 
 - name: Student
   children:
-    - name: Account
+    - name: Account & Customization
+      link: account
       children:
-        - name: Access & Customization
+        - name: Overview
           link: index
         - name: Course Navigation
           link: navigation
@@ -28,17 +29,28 @@
           link: index
         - name: Version Control / GIT
           link: version_control
-    - name: Automated Testing
-    - name: Late Days & Extensions
-      link: late_days
-    - name: Managing Versions
-    - name: Reviewing TA Grades
-    - name: Opening a Grade Inquiry
-      link: grade_inquiry_student
-    - name: Team Assignments
-    - name: Discussion Forum
-    - name: Getting Help through the Office Hours Queue
-      link: queue
+        - name: Automated Testing
+        - name: Late Days & Extensions
+          link: late_days
+        - name: Managing Versions
+        - name: Team Assignments
+    - name: Grades
+      link: grades
+      children:
+        - name: Overview
+          link: index
+        - name: Opening a Grade Inquiry
+          link: grade_inquiry
+        - name: Rainbow Grades
+    - name: Communication
+      link: communication
+      children:
+        - name: Discussion Forum
+          link: forum
+        - name: Office Hours Queue
+          link: office_hours_queue
+        - name: Writing Markdown
+          link: markdown
 
 - name: TA or Grader
   link: grader

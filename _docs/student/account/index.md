@@ -1,6 +1,6 @@
 ---
-category: Student -- Account
-title: Access & Customization
+category: Student
+title: Account
 redirect_from:
   - /student
 ---

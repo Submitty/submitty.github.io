@@ -1,11 +1,9 @@
 ---
+category: Student -- Communication
 title: Getting Help through the Office Hours Queue
-category: Student
+redirect_from:
+  - /student/queue
 ---
-
-
-
-### What is the Office Hours Queue?
 
 The Office Hours Queue organizes, assists, and empowers students to
 get the help they need.  The names of students who are waiting for
@@ -25,8 +23,7 @@ sidebar of all course pages.  *Note: The door icon opens or closes
 when there is an open queue in your course.*
 
 
-
-### How do I join the Office Hours Queue?
+## How do I Join the Office Hours Queue?
 
 You can join the office hours queue by clicking on "Office Hours
 Queue" from the left sidebar, and then entering your name, selecting
@@ -43,7 +40,7 @@ be available to students who are physically present in the tutoring
 room.
 
 
-### Specifying Your Contact Information
+## Specifying Your Contact Information
 
 If the teaching staff is available for remote office hours or remote
 tutoring assistance, please follow their instructions for providing
@@ -53,7 +50,7 @@ is an example of what you might be asked for:
 ![](/images/queue/queue_remote_access_code.png)
 
 
-### Waiting in the Office Hours Queue
+## Waiting in the Office Hours Queue
 
 Once you have successfully joined the queue, you will be able to see
 how many people are ahead of you in the queue.
@@ -71,7 +68,7 @@ You can click "Finish Being Helped" to remove yourself in this case.
 (And then you can rejoin this queue or another queue in the future.)
 
 
-### Protecting Your Privacy in the Office Hours Queue
+## Protecting Your Privacy in the Office Hours Queue
 
 The names (and contact information) of students in the queue are
 visible only to the instructor and TAs who are answering questions and
@@ -87,11 +84,11 @@ may specify an alternate name when you join the office hours queue.
 The instructor/TA also has access to your
 Submitty user id if needed.
 
-### Office Hours Queue History
+## Office Hours Queue History
 
 At the bottom of this page you can view a log of your interactions with the queue today.
 
 
-### Administering the Office Hours Queue
+---
 
 Instructors and graders, please also read [Managing the Office Hours Queue](/grader/queue)
