@@ -3,8 +3,7 @@ title: Autograding Configuration Structure
 category: Instructor -- Autograding Configuration
 ---
 
-You can study the [Tutorial](/index/tutorial) sample assignment configurations here:  
-[Tutorial Example Configurations](https://github.com/Submitty/Tutorial/tree/master/examples)
+You can study the [Tutorial Example Assignment Configurations](https://github.com/Submitty/Tutorial/tree/master/examples)
 
 And [additional configuration examples](https://github.com/Submitty/Submitty/tree/master/more_autograding_examples) are available.
 

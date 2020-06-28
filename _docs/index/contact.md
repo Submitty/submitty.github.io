@@ -3,13 +3,20 @@ title: Contact Us
 category: Submitty
 redirect_from:
   - /contact
+  - /tutorial
 ---
 
 Are you interested in joining the Submitty Development Team?  Please read:  
 [Suggestions for New Developers](/developer)  and  [How to Contribute](/developer/how_to_contribute).
 
 
+#### Demo Submitty
 
+To try out Submitty, follow the developer instructions to create a
+[Submitty instance on your local machine](http://submitty.org/developer/vm_install_using_vagrant)
+using virtual machine using Vagrant and Virtual Box.
+
+[Autograding Tutorial Configurations & Example Submissions](https://github.com/Submitty/Tutorial/archive/master.zip)
 
 
 ## Online Community Discussion
