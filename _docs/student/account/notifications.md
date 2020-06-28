@@ -1,6 +1,8 @@
 ---
 title: Notifications & Email
-category: Student
+category: Student -- Account
+redirect_from:
+  - /student/notifications
 ---
 
 Submitty can be a busy place mid-semester, especially for students
@@ -14,7 +16,7 @@ also by email, if [configured on the server](/sysadmin/email_configuration).
 
 
 
-### View On-Site Notications
+### View On-Site Notifications
 
 If you have unviewed notifications you'll see a red box with a number
 next to the "Notifications" option in the left toolbar.

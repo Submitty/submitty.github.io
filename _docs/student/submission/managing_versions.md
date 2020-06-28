@@ -1,10 +1,12 @@
 ---
-category: Student
+category: Student -- Submission
 title: Managing Submission Versions
+redirect_from:
+  - /student/managing_versions
 ---
 
 
-### Reviewing Previous Submissions
+## Reviewing Previous Submissions
 
 The server stores all uploaded files and all automated grading results
 for each of your submissions.
@@ -17,7 +19,7 @@ submission or any prior submission by choosing that version from the
 ![](/images/student_ui_progression.png)
 
 
-### Reverting to an Earlier Submission
+## Reverting to an Earlier Submission
 
 By default, the server marks as "active" your most recent submission
 (with the highest version number).  Your "active" submission is the
@@ -34,6 +36,9 @@ Version" button.
 
 ![](/images/Rollback2.png)
 
+
+## Cancelling Your Submission
+
 Similarly, you may click the "Do Not Grade This Assignment" button if
 you would like to retract all of your submissions to this assignment.
 The system does not delete your uploaded materials, but the assignment
@@ -41,6 +46,4 @@ will not be graded by the TAs and you will receive a '0' for this
 assignment.
 
 Note:  You may not change the "active" version after TA grading has begun.
-
-
 

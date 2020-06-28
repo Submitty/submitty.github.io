@@ -1,6 +1,8 @@
 ---
-category: Student
-title: Examining the Results of Automated Testing
+category: Student -- Submission
+title: Automated Testing & Grading
+redirect_from:
+  - /student/automated_testing
 ---
 
 The webpage displays a summary of the results on the test cases

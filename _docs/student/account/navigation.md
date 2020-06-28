@@ -1,6 +1,8 @@
 ---
-category: Student
+category: Student -- Account
 title: Course Navigation
+redirect_from:
+  - /student/navigation
 ---
 
 The initial navigation page displays all available assignments

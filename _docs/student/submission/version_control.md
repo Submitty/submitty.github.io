@@ -1,8 +1,9 @@
 ---
-title: Assignment Submission via GIT (Version Control)
-category: Student
+category: Student -- Submission
+title: Version Control / GIT
+redirect_from:
+  - /student/git_submission
 ---
-
 
 
 ### Submitty Server Version Control Repositories
