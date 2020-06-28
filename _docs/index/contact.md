@@ -10,15 +10,6 @@ Are you interested in joining the Submitty Development Team?  Please read:
 [Suggestions for New Developers](/developer)  and  [How to Contribute](/developer/how_to_contribute).
 
 
-#### Demo Submitty
-
-To try out Submitty, follow the developer instructions to create a
-[Submitty instance on your local machine](http://submitty.org/developer/vm_install_using_vagrant)
-using virtual machine using Vagrant and Virtual Box.
-
-[Autograding Tutorial Configurations & Example Submissions](https://github.com/Submitty/Tutorial/archive/master.zip)
-
-
 ## Online Community Discussion
 
 We have a public [Slack server for Submitty Developers](https://join.slack.com/t/submitty/shared_invite/enQtMzE1NzgyMzUzNzI5LWZhOGM4NWU4M2U3ZmM2ZmM5NTYwNjk3NTc5Yjg1ZGRlYzU1MjcwYWNkNGYxZjk2YTk3ZmEyODY3MjEyOTc0M2E).
@@ -42,6 +33,14 @@ or are experiencing the same bug.  So we'd like to answer those questions
 on the public forum.  And you'll probably get a faster reply when you
 ask the larger community.  Thank you!_
 
+
+## Demo Submitty
+
+To try out Submitty, follow the developer instructions to create a
+[Submitty instance on your local machine](http://submitty.org/developer/vm_install_using_vagrant)
+using virtual machine using Vagrant and Virtual Box.
+
+Download the [Autograding Tutorial Configurations & Example Submissions](https://github.com/Submitty/Tutorial/archive/master.zip).
 
 
 
