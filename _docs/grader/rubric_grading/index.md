@@ -10,7 +10,7 @@ grading by the TA or instructor.  After selecting an assignment, the
 TA is presented with an overview of their assigned grading for this
 gradeable.  The initial landing page presents an overview of the
 grading statistics for this gradeable.  More examples on the
-[Rubric Grading Statistics](rubric_grading_statistics) page.
+[Rubric Grading Statistics](/grader/rubric_grading/statistics) page.
 To start grading, press the blue "Grading Index" button.
 
 ![](/images/ta_grading/rubric_grading_overview.png)
