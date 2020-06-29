@@ -2,7 +2,7 @@
 category: Grader -- Rubric Grading
 title: Statistics
 redirect_from:
-  - grader/rubric_grading.md
+  - grader/rubric_grading_statistics
 ---
 
 ![](/images/ta_grading/rubric_grading_data.png)

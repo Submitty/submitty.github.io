@@ -12,15 +12,15 @@ _Note: Click on the <u>links</u> and <i class="fas fa-info-circle" style="font-s
 {% assign feature_counter = 0 %}
 
 * **Assignment collection**   
-  * individual or [team](/student/team_assignments)
-  * [drag & drop](/student/submission), zip file, or [version control (GIT)](/student/git_submission)
-  * [resubmission](/student/managing_versions) w/ optional penalty for excessive submissions
+  * individual or [team](/student/submission/team_assignments)
+  * [drag & drop](/student/submission), zip file, or [version control (GIT)](/student/submission/version_control)
+  * [resubmission](/student/submission/managing_versions) w/ optional penalty for excessive submissions
   * due date & time 
-    * [customizable late day policy](/student/late_days)
+    * [customizable late day policy](/student/submission/late_days)
         {% include feature_text.html
            text="A consistent and firm assignment deadline policy is crucial in large courses.  
                  Allow students to make limited adjustments to deadlines." %}
-    * [excused absense extensions](/student/late_days#excused-absense-extensions)
+    * [excused absense extensions](/student/submission/late_days#excused-absense-extensions)
         {% include feature_text.html
            text="Organized and transparent system for tracking deadlines 
                  and verified student emergencies." %}
@@ -39,10 +39,10 @@ _Note: Click on the <u>links</u> and <i class="fas fa-info-circle" style="font-s
   * [detailed rubric grading](/grader/rubric_grading) of submitted materials
   * web interface for file access or bulk download
   * [assign sections of grading to different TAs](/instructor/create_edit_gradeable#grader-assignment-method)
-  * [digital PDF annotation](/grader/rubric_grading#overall-comment-and-pdf-annotations)
-  * grading progress indicator and [grade statistics & histogram](/grader/rubric_grading_statistics)
-  * [retroactive rubric and point adjustment](/grader/rubric_grading#rubric-common-mark-editing)
-  * [grade inquiries](/student/grade_inquiry_student) (clarifications/corrections of manual grading)
+  * [digital PDF annotation](/grader/rubric_grading/pdf_annotations)
+  * grading progress indicator and [grade statistics & histogram](/grader/rubric_grading/statistics)
+  * [retroactive rubric and point adjustment](/grader/rubric_grading/common_marks)
+  * [grade inquiries](/student/grades/grade_inquiry) (clarifications/corrections of manual grading)
   * [grade override](/instructor/grade_override) (makeup exams & other special cases)
 
 &nbsp;
@@ -67,7 +67,7 @@ _Note: Click on the <u>links</u> and <i class="fas fa-info-circle" style="font-s
 &nbsp;
 
 
-* **[Integrated discussion forum](/student/discussion_forum)**
+* **[Integrated discussion forum](/student/communication/forum)**
     {% include feature_text.html
         text="Students prefer a single website and login for all course activities." %}
   * Supports a variety of course learning activities <button style="background-color:#ffffff;border:none;outline:none;" onclick='return toggle_display("myforumtag");' href="#"><i class="fas fa-info-circle" style="font-size:25px;color:#316498;"></i></button>
