@@ -56,15 +56,21 @@
   link: grader
   children:
     - name: Overview
-      link: ../grader
+      link: index
     - name: Checkpoint Grading
     - name: Numeric / Text Grading
       link: numeric_text_grading
     - name: Rubric Grading
-    - name: Rubric Grading Statistics
-    - name: Sorting and Navigation
-    - name: Resolving a Grade Inquiry
-      link: grade_inquiry_grader
+      link: rubric_grading
+      children:
+        - name: Overview
+          link: index
+        - name: Common Marks        
+        - name: PDF Annotation
+        - name: Sorting and Navigation
+        - name: Resolving a Grade Inquiry
+          link: grade_inquiry
+        - name: Statistics
     - name: Managing Office Hours
       link: queue
 

@@ -1,9 +1,9 @@
 ---
-category: Grader
-title: Rubric Grading Statistics
+category: Grader -- Rubric Grading
+title: Statistics
+redirect_from:
+  - grader/rubric_grading.md
 ---
-
-See also: [Rubric Grading](rubric_grading)
 
 ![](/images/ta_grading/rubric_grading_data.png)
 ![](/images/ta_grading/rubric_grading_autograding_histogram.png)

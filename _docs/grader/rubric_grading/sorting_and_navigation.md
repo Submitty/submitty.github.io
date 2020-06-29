@@ -1,9 +1,11 @@
 ---
-category: Grader
-title: Rubric Grading - Sorting and Navigation
+category: Grader -- Rubric Grading
+title: Sorting and Navigation
+redirect_from:
+  - /grader/sorting_and_navigation
 ---
 
-### Sorting Options
+## Sorting Options
 
 ![](/images/sorting_and_navigation/index.png)
 
@@ -19,7 +21,7 @@ in ascending or descending order.  Select the option once for ascending order, p
 **Random:** Sort students in a pseudo-randomized order.  The random order is different for each gradeable.  The purpose
 of this sorting order is to help distribute bias that comes along with always being graded first or last for each assignment.
 
-### Prev / Next Student Buttons
+## Prev / Next Student Buttons
 
 ![](/images/sorting_and_navigation/prev_next_buttons.png)
 
@@ -29,7 +31,7 @@ These buttons allow the grader to move to the next submission.
 
 **Full access graders:** These buttons can be used to browse submissions from all sections.
 
-### Prev / Next Assigned Ungraded Student Buttons
+## Prev / Next Assigned Ungraded Student Buttons
 
 These buttons allow the grader to move to the previous or next ungraded submission.
 It is worth noting that these buttons will only move to ungraded submissions within a grader's assigned sections.
