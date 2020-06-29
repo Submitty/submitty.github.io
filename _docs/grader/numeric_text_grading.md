@@ -14,7 +14,7 @@ credit column.  The form also supports columns for text that can be
 useful for recording simple explanatory grading notes that are visible
 to students via [Rainbow Grades](/instructor/rainbow_grades).
 
-The numerica data can also be uploaded to Submitty via a CSV (Comma
+The numerical data can also be uploaded to Submitty via a CSV (Comma
 separated value) file upload.
 
 See also [Checkpoint Grading](checkpoint_grading) and 

@@ -1,7 +1,6 @@
 ---
-category: Grader
-title: TA Navigation Page
-permalink: /grader
+category: Grader 
+title: Overview
 ---
 
 When a TA or Grader user logs into the course, they have access to the
