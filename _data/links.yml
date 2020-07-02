@@ -230,6 +230,7 @@
         - name: Models
         - name: Views
         - name: Feature Flags
+        - name: WebSocket
     - name: Updating Dependencies
     - name: Configuring Tie In Programs
     - name: Router
