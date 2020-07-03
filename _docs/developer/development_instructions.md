@@ -147,6 +147,9 @@ Please also see [Installation Version Notes](/sysadmin/version_notes)
   ```
   sudo bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/bin/recreate_sample_courses.sh
   ```
+  
+  You can append the `--no_submissions` flag to the above command to 
+  skip creation of any sample submission data in the sample courses.
 
 * If there are changes to the auxiliary Tutorial or AnalysisTools
   repos, you may also need to explicitly pull those changes:
