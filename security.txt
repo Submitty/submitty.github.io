@@ -3,5 +3,7 @@ layout: none
 permalink: .well-known/security.txt
 ---
 Contact: submitty-admin@googlegroups.com
+Acknowledgments: https://github.com/Submitty/Submitty/blob/master/AUTHORS.md
 Preferred-Languages: en
+Canonical: https://submitty.org/.well-known/security.txt
 Policy: https://github.com/Submitty/Submitty/security/policy
