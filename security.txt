@@ -1,0 +1,7 @@
+---
+layout: none
+permalink: .well-known/security.txt
+---
+Contact: submitty-admin@googlegroups.com
+Preferred-Languages: en
+Policy: https://github.com/Submitty/Submitty/security/policy
