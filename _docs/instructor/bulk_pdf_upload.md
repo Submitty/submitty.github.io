@@ -231,6 +231,8 @@ match the expected page count will be highlighted in red.
 
 ### Automatic Student ID Number Detection (*Work in progress!*)
 
+*Note: This feature is currently [feature flagged](/developer/developing_the_php_site/feature_flags) the "submitty_ocr" flag must be set to true in your course config.json*
+
 Instead of associating student IDs with QR codes you can provide 
 a space for students to write their student ID number in. This 
 will require placing a QR code to detect the region to scan.
