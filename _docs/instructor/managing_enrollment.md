@@ -20,7 +20,7 @@ nightly cron job to automatically add students to the relevant
 Submitty course databases and create login accounts to the submission
 server.  This greatly simplifies instructor maintenance of current
 course enrollement.  See also [System Administrator / Student Auto
-Feed](../sysadmin/student_auto_feed).
+Feed](/sysadmin/student_auto_feed).
 
 Below are the instructions to manually add students who are not
 traditionally registered, to immediately add a student who registered
@@ -65,7 +65,9 @@ late, or if the feed is not available for your course.
 
     _TODO: FILL IN INFORMATION ON HOW TO SPECIFY INITIAL STUDENT PASSWORD_
 
-    _TODO: FILL IN INFORMATION ON HOW STUDENTS CAN OR CANNOT CHANGE THEIR PASSWORD_
+    You will need to ssh into submitty and navigate to /usr/local/submitty/config/database.json,
+    Then edit this file by replacing the value "PamAuthentication" with "DatabaseAuthentication".
+    Finally be sure to save the file, if this file is read only be sure to enable write access.
 
 
 ### Add students by bulk file (.csv) upload

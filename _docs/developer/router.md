@@ -36,11 +36,11 @@ public function showHomepage() {...}
 
 #### Route with Course Information
 
-A majority of links in Submitty require course information to return correct contents. Therefore, it is necessary for the router to know which `(semester, course)` tuple is requested. It is needed to prepend the route with `/{_semester}/{_course}`. The course information will be loaded automatically before calling the function.
+A majority of links in Submitty require course information to return correct contents. Therefore, it is necessary for the router to know which `(semester, course)` tuple is requested. It is needed to prepend the route with `/courses/{_semester}/{_course}`. The course information will be loaded automatically before calling the function.
 
 ```php
 /**
- * @Route("/{_semester}/{_course}/reports")
+ * @Route("/courses/{_semester}/{_course}/reports")
  */
 public function showReportPage() {...}
 ```
@@ -53,7 +53,7 @@ Sometimes we may want to pass parameters to functions. Wrapping the parameter na
 
 ```php
 /**
- * @Route("/{_semester}/{_course}/student/{gradeable_id}")
+ * @Route("/courses/{_semester}/{_course}/student/{gradeable_id}")
  */
 public function showHomeworkPage($gradeable_id){...}
 ```
@@ -77,14 +77,14 @@ In some cases, you may want routes to match number-only parameters, or those not
 
 ```php
 /**
- * @Route("/{_semester}/{_course}/notifications/{nid}", requirements={"nid": "[1-9]\d*"})
+ * @Route("/courses/{_semester}/{_course}/notifications/{nid}", requirements={"nid": "[1-9]\d*"})
  */
 public function openNotification($nid) {...}
 ```
 
 ```php
 /**
- * @Route("/{_semester}/{_course}", requirements={"_semester": "^(?!api)[^\/]+", "_course": "[^\/]+"})
+ * @Route("/courses/{_semester}/{_course}", requirements={"_semester": "^(?!api)[^\/]+", "_course": "[^\/]+"})
  */
 public function navigationPage() {...}
 ```
@@ -110,7 +110,7 @@ For example, the following route will only allow instructor access.
 
 ```php
 /**
- * @Route("/{_semester}/{_course}/course_materials/modify_permission")
+ * @Route("/courses/{_semester}/{_course}/course_materials/modify_permission")
  * @AccessControl(role="INSTRUCTOR")
  */
 public function modifyCourseMaterialsFilePermission($filename, $checked)
@@ -118,19 +118,49 @@ public function modifyCourseMaterialsFilePermission($filename, $checked)
 
 For more examples about `@AccessControl`, please read [the documentation in the code](https://github.com/Submitty/Submitty/blob/master/site/app/libraries/routers/AccessControl.php).
 
+#### Route for API
+
+To create a route for the [Submitty API](https://api.submitty.org), the only difference from above is prepending `/api` to
+the route definition. You can define several routes for the same method, generally having one API route and one Web route.
+Any route that uses the `/api` goes through a slightly different authentication mechanism involving
+[JSON Web Tokens](https://api.submitty.org/#authentication).
+
+For example, the following route is the API for list of courses:
+
+```php
+/**
+ * @Route("/home/courses/new", methods={"POST"})
+ * @Route("/api/courses", methods={"POST"})
+ */
+public function createCourse()
+```
+
+And an API route for a method within a course:
+
+```php
+/**
+ * @Route("/courses/{_semester}/{_course}/users", methods={"GET"})
+ * @Route("/api/courses/{_semester}/{_course}/users", methods={"GET"})
+ */
+public function getStudents()
+```
+
+Any API endpoint must either return a `JsonResponse` or a `RedirectResponse`
+(see [below](/developer/router#what-is-the-response-object-is-it-required) for more information).
+
 ### FAQ
 
 Here are some frequently asked questions regarding the router.
 
-#### What is the `Response` object? Is it required?
+#### What is the `ResponseInterface` object? Is it required?
 
-It is not required to return a `Response` object.
+It is not required to return a concrete `ResponseInterface` (e.g. `JsonResponse`) object.
 
-The `Response` object is used for handling both web responses and JSON responses. When building an API for Submitty, we envision that some functions can be reused and return different types of data depending on if it is an API call.
+The `ResponseInterface` object is used for handling the various types of responses, be it a web response showing a page, JSON response, a redirect, or some combination of all three. When building an API for Submitty, we envision that some functions can be reused and return different types of data depending on if it is an API call.
 
-There are three optional parts of `Response`s: `WebResponse`, `JsonResponse`, and `RedirectResponse`. In an ideal world, we would like all controller methods to always return a `Response`, and render it depending on the context. If there exists only one component, say there is only `JsonResponse`, then render it. If there are multiple components, say `JsonResponse` and `WebResponse`, then render `JsonResponse` for API calls and `WebResponse` for browser access.
+If you wish to have a Response that can be some combination of other base Response types, use the `MultiResponse` object, which can have three optional parts of `Response`s: `WebResponse`, `JsonResponse`, and `RedirectResponse`. When a method returns the `MultiResponse` object, it will render the appropriate part depending on the context. If there exists only one component, say there is only `JsonResponse`, then render it. If there are multiple components, say `JsonResponse` and `WebResponse`, then render `JsonResponse` for API calls and `WebResponse` for browser access.
 
-As API is still a work in progress, more detailed documentation on `Response` will be written as it matures. For now, considering the efforts needed to refactor all the code and the limited benefits it brings for most methods, it is **optional** to return a `Response` object. Backward compatibility is ensured.
+As API is still a work in progress, more detailed documentation on Responses will be written as it matures. For now, considering the efforts needed to refactor all the code and the limited benefits it brings for most methods, it is **optional** to return a `Response` object. Backward compatibility is ensured.
 
 #### Are there any naming conventions for URLs?
 
@@ -138,14 +168,8 @@ It is recommended to use `snake_case` for URLs consisting of multiple words.
 
 #### How to construct URLs?
 
-For PHP, use `Core::buildNewUrl` or `Core::buildNewCourseUrl`.
+For PHP, use `Core::buildUrl` or `Core::buildCourseUrl`.
 
-For JavaScript, use `buildNewUrl` or `buildNewCourseUrl`.
+For JavaScript, use `buildUrl` or `buildCourseUrl`.
 
-`Core::buildNewCourseUrl` in PHP and `buildNewCourseUrl` in Javascript will prepend course information to the URL (e.g. `/f19/sample`).
-
-#### Is `run()` needed?
-
-No. It needs to be nullified, but not removed.
-
-The router calls individual functions directly. There are no centralized `run()`s. However, as the old router has not been completely removed yet, it is necessary to keep it there as it is required by the abstract controller. That being said, it is **required** to remove the content of `run()`, replacing it with `return null` or other code that does nothing, or it will be possible for users to circumvent validity check that is implemented in the new router.
+`Core::buildCourseUrl` in PHP and `buildCourseUrl` in Javascript will prepend course information to the URL (e.g. `/f19/sample`).

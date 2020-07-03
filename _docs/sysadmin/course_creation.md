@@ -99,7 +99,7 @@ order: 5
    created first.  For more information: [Database Overview](database_overview)
 
 
-2. Run the [create_course.sh script](https://github.com/Submitty/Submitty/blob/master/bin/create_course.sh)
+2. Run the [create_course.sh script](https://github.com/Submitty/Submitty/blob/master/sbin/create_course.sh)
    to create each new course.  For example:
 
    ```
@@ -147,14 +147,11 @@ order: 5
    For more information: [Database Overview](database_overview)
 
 
-3. Add the instructor(s) to both the top level and course database:
+3. Add existing instructor(s) to the course database:
 
    ```
-   sudo /usr/local/submitty/sbin/adduser.py --course <SEMESTER> <COURSE> null <USERNAME>
+   sudo /usr/local/submitty/sbin/adduser_course.py <USERNAME> <SEMESTER> <COURSE> null
    ```
-
-   This script will ask for more information about the user interactively.
-
 
 
 4. Create registration section(s):

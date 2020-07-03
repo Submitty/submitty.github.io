@@ -11,7 +11,7 @@ For Python, we use [flake8](http://flake8.pycqa.org/en/latest/) to check Python 
 linted as part of our automated Travis-CI testsuite to ensure compliance. To locally lint the code, you will need to
 install three modules:
 
-    pip3 install flake8 flake8-bugbear flake8-docstrings
+    pip3 install flake8 flake8-bugbear
 
 and then you can just run `flake8` at the root to check all files or pass it an individual file to check just that.
 To see all files that are currently checked as part of Travis-CI, please look at the `.flake8` config file.

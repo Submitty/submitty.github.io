@@ -2,37 +2,77 @@
   link: index
   children:
     - name: Overview
-      link: ../index
-    - name: Tutorial
+    - name: Features
     - name: Publications
+    - name: People
+    - name: Contact Us
+      link: contact
 
 - name: Student
   children:
-    - name: Login to Submitty
-      link: ../student
-    - name: Course Navigation
-      link: navigation
+    - name: Account & Customization
+      link: account
+      children:
+        - name: Overview
+          link: index
+        - name: Course Navigation
+          link: navigation
+        - name: Preferred Name
+        - name: Password
+        - name: Local Timezone
+        - name: Theme
+        - name: Notifications & Email
+          link: notifications
     - name: Submission
-    - name: Submission via GIT
-      link: git_submission
-    - name: Automated Testing
-    - name: Late Days & Extensions
-      link: late_days
-    - name: Managing Versions
-    - name: Reviewing TA Grades
-    - name: Opening a Grade Inquiry
-      link: grade_inquiry_student
-    - name: Team Assignments
-    - name: Discussion Forum
-    - name: Notification Settings
+      children:
+        - name: Overview
+          link: index
+        - name: Version Control / GIT
+          link: version_control
+        - name: Automated Testing
+        - name: Late Days & Extensions
+          link: late_days
+        - name: Managing Versions
+        - name: Team Assignments
+    - name: Grades
+      link: grades
+      children:
+        - name: Overview
+          link: index
+        - name: Opening a Grade Inquiry
+          link: grade_inquiry
+        - name: Rainbow Grades
+    - name: Communication
+      link: communication
+      children:
+        - name: Discussion Forum
+          link: forum
+        - name: Office Hours Queue
+          link: office_hours_queue
+        - name: Writing Markdown
+          link: markdown
 
 - name: TA or Grader
   link: grader
   children:
     - name: Overview
-      link: ../grader
-    - name: Resolving a Grade Inquiry
-      link: grade_inquiry_grader
+      link: index
+    - name: Checkpoint Grading
+    - name: Numeric / Text Grading
+      link: numeric_text_grading
+    - name: Rubric Grading
+      link: rubric_grading
+      children:
+        - name: Overview
+          link: index
+        - name: Common Marks        
+        - name: PDF Annotation
+        - name: Sorting and Navigation
+        - name: Resolving a Grade Inquiry
+          link: grade_inquiry
+        - name: Statistics
+    - name: Managing Office Hours
+      link: queue
 
 - name: Instructor
   children:
@@ -64,6 +104,7 @@
           link: notebook
     - name: Course Materials
       link: course_materials
+    - name: Peer Grading
     - name: Facilitating Submission via GIT
       link: managing_git
     - name: Static Analysis
@@ -80,6 +121,7 @@
           link: gradeables
         - name: Exam Seating
           link: exam_customization
+        - name: Room Templates
         - name: iClicker Instructions
         - name: RPI VPN on WSL Instructions
           link: wsl_vpn
@@ -90,6 +132,8 @@
       link: plagiarism
     - name: Bulk PDF Upload
       link: bulk_pdf_upload
+    - name: Personalized Exam
+      link: personalized_exams
     - name: Photo Scraper
       link: student_photos
     - name: Silent Grade Editing
@@ -113,9 +157,12 @@
     - name: Installation Version Notes
       link: version_notes
       children:
+        - name: v20.06.00
+        - name: v19.08.03
         - name: v19.06.02
         - name: v.19.06.01
     - name: Database Overview
+    - name: User Access Level
     - name: Course Creation
     - name: Setting up Internal Git
       link: git
@@ -128,20 +175,28 @@
     - name: Student Auto Feed
     - name: Course Archiving
       link: course_archiving
+    - name: Rainbow Grades
 
 - name: Developer
   children:
     - name: Overview
       link: ../developer
+    - name: Project Ideas
+    - name: How to Contribute
     - name: VM Install using Vagrant
     - name: Development Instructions
       children:
         - name: Troubleshooting
         - name: Email Configuration
           link: vagrant_email_configuration
+        - name: Router Response
+          link: router-response
+        - name: Miscellaneous
     - name: PhpStorm Setup Instructions
       link: phpstorm
     - name: Database Design
+    - name: PGAdmin Setup Instructions
+      link: pgadmin
     - name: Migrations
     - name: Automated Grading
     - name: JSON Configuration Files
@@ -153,27 +208,45 @@
         - name: PHP
         - name: JavaScript
         - name: CSS
+    - name: Testing
+      children:
+        - name: Linting / Static Analysis
+          link: linting_static_analysis
+        - name: Python Unit Tests
+        - name: PHP Unit Tests
+        - name: Site End-to-End Tests
+          link: site_end_to_end_tests
+        - name: Autograding Integration Tests
+        - name: Rainbow Grades Tests
+        - name: Travis-CI
+          link: travis_ci
     - name: Interface Design
       link: interface_design_style_guide
       children:
         - name: Web Accessibility
-    - name: Project Ideas
-    - name: How to Contribute
-    - name: Autograding Tests
-    - name: PHP Unit Tests
+    - name: Developing the PHP Site
       children:
-        - name: Writing Unit Tests
-    - name: End to End Tests
+        - name: Controllers
+        - name: Models
+        - name: Views
+        - name: Feature Flags
     - name: Updating Dependencies
-    - name: Travis CI
-    - name: Rainbow Grades Tests
     - name: Configuring Tie In Programs
     - name: Router
     - name: API
+      link: https://api.submitty.org
+      extern: true
+    - name: Google Summer of Code
       children:
-        - name: Authentication
-        - name: Courses
-    - name: GSOC2018_TusharGurjar
-      link: GSOC2018_TusharGurjar
-    - name: GSOC2018_GaganKumar
-      link: GSOC2018_GaganKumar
+        - name: 2019 Fon Noel
+          link: 2019_FonNoel
+        - name: 2019 Drumil Patel
+          link: 2019_DrumilPatel
+        - name: 2019 Anubhav Singh
+          link: 2019_AnubhavSingh
+        - name: 2019 Xiao Han
+          link: 2019_XiaoHan
+        - name: 2018 Tushar Gurjar
+          link: 2018_TusharGurjar
+        - name: 2018 Gagan Kumar
+          link: 2018_GaganKumar

@@ -86,7 +86,7 @@ chmod ugo-w /var/local/submitty/courses/<SEMESTER>/<COURSE>
 ```
 
 Note that both of these changes can be nontrivial to revert (since the
-permissions and group ownership are nonuniform within the course
+permissions and group ownership are non-uniform within the course
 directory.
 
 _TODO: Add more instructions and notes as the procedure is developed._

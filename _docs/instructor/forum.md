@@ -53,3 +53,21 @@ communication between students and the teaching staff.
 
    **_Anonymous Posting (to classmates)_** enables users to appear as anonymous when creating a post/thread.
    Members of the teaching staff have the ability to view the user of an anonymous post if needed. 
+
+### At A Glance
+   
+   **_New/Unseen Posts_** When a post has not been viewed, the background appears as a light blue. When the post has been seen it turns white. If a thread is new or has new posts within the thread the thread level follows the same color scheme
+
+   **_Borders_** Posts with a yellow border were from a member of the teaching staff
+
+   **_Yellow question mark_** ![](/images/discussion_forum_icons/df_question.png) Question in the thread has not been answered
+
+   **_Green check_** ![](/images/discussion_forum_icons/df_check.png) Question answered
+
+   **_Yellow star_** ![](/images/discussion_forum_icons/df_star.png) Announcment from a member of the teaching staff
+
+   **_lock_** ![](/images/discussion_forum_icons/df_lock.png) post cannot be editted or replied 
+
+   **_Borders_** Posts with a yellow border were from a member of the teaching staff
+
+   **_Metadata_** The posts also contain details about the author, date and time a post was created, as well as the ability to edit and delete a post

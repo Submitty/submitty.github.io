@@ -8,16 +8,24 @@ installation a new versions of Submitty.  These include editing of
 Apache configuration, or re-compilation/re-building of automated
 grading configurations.
 
-Please click the sidebar links for detailed release notes.
+
+* Please click the sidebar links for detailed release notes.
 
 
-_Note: GitHub pull requests (PRs) will be tagged with
-`[SYSADMIN ACTION]` to alert developers and system administrators to check these
-notes._
+* The title of GitHub pull requests (PRs) will be prefixed with
+   `[SYSADMIN ACTION]` to alert developers and system administrators
+   to check these notes.
+
+
+* The GitHub release notes for numbered tags that include one or more
+   PRs prefixed with `[SYSADMIN ACTION]` will includes a bulleted item
+   in the _BREAKING_ or _SECURITY_ sections, as appropriate.  These
+   notes will include a link to this documentation.
+   
 
 See also
-[Developer: How to Contribute](../../developer/how_to_contribute) and
-[Developer: Migrations](../../developer/migrations).
+[Developer: How to Contribute](/developer/how_to_contribute) and
+[Developer: Migrations](/developer/migrations).
 
 
 

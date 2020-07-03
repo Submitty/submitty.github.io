@@ -29,10 +29,10 @@ before dropping support, but may drop support at anytime.
 
 ### Partitioning the disk
 
-Assuming this is a standalone machine with no other information on the
-disk, we recommend to manually partition the machine in such a way so
-as to not allow submissions (which is the largest amount of data that
-Submitty uses) from filling up the root partition.
+Assuming this is a standalone machine with no other information on 
+the disk, we recommend manually partitioning the machine to prevent 
+submissions (in /var/local/submitty/courses) or docker images (in 
+/var/lib/docker) from filling up the root partition.
 
 
 ```

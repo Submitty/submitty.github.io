@@ -23,7 +23,7 @@ References and useful links: [https://gist.github.com/pjdietz/5768124](https://g
 
 ---
 
-During the install of the various packages referenced on [Vm Install Using Vagrant](vm_install_using_vagrant),
+During the install of the various packages referenced on [Vm Install Using Vagrant](/developer/vm_install_using_vagrant),
 you might have ran into a few errors along the way. Below are a few common errors, and what you can do to solve them.
 
 **Ubuntu Installation**

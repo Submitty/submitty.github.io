@@ -6,17 +6,28 @@ order: 6
 
 __Minimum Version__: 7.2
 
-For PHP, we use a foundation of [PSR-1](https://www.php-fig.org/psr/psr-1/)
-and [PSR-2](https://www.php-fig.org/psr/psr-2/) and then customize from
-there. These customizations are highlighted below:
+For PHP, we use a foundation of [PSR-1](https://www.php-fig.org/psr/psr-1/) and
+[PSR-12](https://www.php-fig.org/psr/psr-12/), with some slight modifications on
+code structure and naming conventions. These customizations are shown below.
 
 ### Linting Code
 
 We use a custom standard for the [phpcs](https://github.com/squizlabs/PHP_CodeSniffer) tool,
 available at [Submitty/submitty-php-codesniffer](https://github.com/Submitty/submitty-php-codesniffer).
-You can run this against your code by running it (assuming in the `site/` directory):
+To set up the tool to use it, all you need to do is run `composer install` from within the `site/` directory,
+which handles installing the dependencies and setting up the
+[phpcs install paths](https://github.com/squizlabs/PHP_CodeSniffer/wiki/Configuration-Options#setting-the-installed-standard-paths).
+To run `phpcs`, you can use the following command:
+
+```bash
+php vendor/bin/phpcs --standard=tests/ruleset.xml [path/to/file/or/directory]
 ```
-vendor/bin/phpcs --standard=Submitty path/to/dir/or/file.php
+
+where if you leave off the path, it will analyze all files and directories for Submitty.
+Additionally, you can apply the automatic fixer to your code by running:
+
+```bash
+php vendor/bin/phpcbf --standard=tests/ruleset.xml [path/to/file/or/directory]
 ```
 
 ### Classes, Methods
@@ -26,7 +37,7 @@ vendor/bin/phpcs --standard=Submitty path/to/dir/or/file.php
 * The opening brace for a method MUST have one space between it and the closing parenthesis.
 * The closing brace for a method MUST go on the next line following the body.
 
-```
+```php
 class Test {
     public function foo() {
         // code
@@ -52,7 +63,7 @@ class Test {
 * The closing brace MUST be on the next line after the body
 * There MUST be one newline between closing brace and the next control structure keyword except for do-while
 
-```
+```php
 if ($foo) {
     // code
 }
@@ -64,12 +75,11 @@ else {
 }
 ```
 
-```
+```php
 do {
     // code
 } while ($foo);
 ```
-
 
 ### Naming Conventions
 
@@ -77,3 +87,26 @@ do {
 * Functions should use `camelCase`
 * Constants should be `UPPERCASE`
 * Variables and properties should use `snake_case`
+
+### Type Declarations
+
+Wherever possible, you should use [type declarations](https://www.php.net/manual/en/functions.arguments.php#functions.arguments.type-declaration)
+in your code. This helps our static analysis tool function more accurately, and alleviate a class of
+bugs from entering our codebase. Whenever possible, you should declare the type inline with the code:
+
+```php
+function foo(string $bar, ?int $baz): string;
+```
+
+In some cases, such as for arrays of a type or mixed values, this is not possible. In these cases,
+you should write the type out in the docstring using [phpDocumentator](https://docs.phpdoc.org/latest/guides/types.html)
+conventions. However, if possible, still attempt to put a type (such as `array`) inline in the code. An example using
+array of one type of object and union types:
+
+```php
+/**
+ * @param string[] $bar
+ * @param A|B $baz
+ */
+function foo(array $bar, $baz): void;
+```

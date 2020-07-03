@@ -2,6 +2,8 @@
 
 This is the documentation website for [Submitty](http://submitty.org) the RPI Homework Submission Server.
 
+To report issues for this repository, please file them under the [Submitty/Submitty](https://github.com/Submitty/Submitty) repository.
+
 ![Submitty screenshot](images/Submission_Result_Buggy.png)
 
 ## Developers

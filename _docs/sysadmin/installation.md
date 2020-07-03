@@ -23,7 +23,7 @@ will be able to read/execute it.
 _Note: These instructions should be run under root/sudo._
 
 
-1. [Install Ubuntu 18.04 server edition (or other supported distro)](server_os)
+1. [Install Ubuntu 18.04 server edition (or other supported distro)](/sysadmin)
 
    Note: If you are duplicating an existing Submitty installation onto a new server, you should
    synchronize `/etc/passwd`, `/etc/shadow`, `/etc/group`, and `/etc/gshadow` before installing
@@ -210,4 +210,4 @@ _Note: These instructions should be run under root/sudo._
 - **Installation Fails During NTP Setup**
   1.  This is indicative that you installed the Ubuntu 18.04 "Live" server.
       "Live" server is unsupported.  Please install the traditional server.
-      Please see the [Server OS](server_os) page for more details.
+      Please see the [Server OS](/sysadmin) page for more details.

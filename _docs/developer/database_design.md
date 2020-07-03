@@ -19,9 +19,25 @@ order: 3
    options ranging from simplest to most powerful.
 
    1. [psql](http://postgresguide.com/utilities/psql.html) (CLI for connecting to PostgreSQL)
+
    2. [pgAdmin](https://www.pgadmin.org/) (GUI for connecting to PostgreSQL) 
+
    3. [navicat](https://www.navicat.com/en/products/navicat-for-postgresql) (GUI for managing PostgreSQL)
+
    4. [DataGrip](https://www.jetbrains.com/datagrip/) ("Database IDE", can connect to most DB types)
+
+
+Note: When adding a new server to pgAdmin, change the following parameters in the
+server's `Connection` settings:
+
+* `Host name/address`: `192.168.56.111`
+* `Username`: `submitty_dbuser`
+* `Password`: `submitty_dbuser`
+
+You do not need to change the port or the maintenance database - the port should say `5432`
+and the maintenance database should say `postgres` by default.
+
+
 
 ## Entity-Relation Diagrams
 

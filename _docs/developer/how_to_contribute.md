@@ -10,7 +10,7 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
 * Contributors from outside the Submitty GitHub organization should
   clone the repo on their own GitHub page, and create a branch with
   the modifications to be included with this PR.  _Note: Please
-  grant write access to the submitty organization
+  grant write access to the Submitty organization
   administrators so we can more conveniently make small edits (e.g.,
   UI text wording changes).  This can speed up the
   approval and merging of your contributions._
@@ -26,28 +26,63 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
 * Each pull request (PR) should be addressing/closing an open issue.
   *Usually*.
 
-* The PR title should be useful and descriptive (not just the issue#).
+* Before submitting a PR or updating an existing PR, you should make
+  sure your code follows our [Style Guide](/developer/coding_style_guide)
+  and passes the relevant [tests](/developer/testing).
+
+* The PR title should be useful and descriptive.
 
     * Titles of PR, Issues, and commits should be <= 50 characters.  *Usually*.
 
-    * Suggested format of the PR Title:
+    * The PR title should not include the issue #.  
+
+    * To help developers, system administrators, and users who are
+      reading the release notes, please categorize your contribution
+      by formatting your PR title as follows:
 
       ```
       [<TYPE>:<MODULE>] <SUBJECT>
       ```
 
       Where `<TYPE>` is one of the following:  
-      `Bugfix`, `Documentation`, `Refactor`, `Dependency`, `Testing`, `Feature`, `UI/UX`, `VPAT`, etc.
+      * `Bugfix`,   
+      * `Feature`,   
+      * `Refactor`,   
+      * `Testing` (includes sample data),  
+      * `Documentation`,  
+      * `VPAT`,  
+      * `UI/UX` (includes mobile, css), or
+      * `Dependency`.
 
       And `<MODULE>` is one of the following:  
-      `Submission`, `Forum`, `TAGrading`, `Autograding`, `RainbowGrades`, etc.
 
-      _Note that `(#<PR NUMBER>)` is appended to the title
+      * `Submission` (includes bulk uploads, teams, late days, notebook gradeables, and other student features),
+      * `Autograding` (includes router, container/docker),
+      * `Forum`,   
+      * `Notifications` (includes email and grade inquiries),  
+      * `TAGrading` (includes PDF annotation, peer grading),  
+      * `InstructorUI` (includes course and gradeable configuration, course materials, office hours queue, plagiarism detection),  
+      * `RainbowGrades`,  
+      * `System` (includes installation, migrations, vagrant),
+      * `Developer`, or
+      * `API`
+
+      And `<SUBJECT>` adds more specific details.
+
+      _Note that `#<PR NUMBER>` is appended to the title
       automatically by GitHub when the PR is merged with "squash &
       merge".  Do not include this when you open a new pull request._
 
-      **IMPORTANT:** If this PR requires system administrator action
-      before/after installation, the PR title should be prefixed by
+    * If your PR is *Work In Progress*, please make a
+      [Draft Pull Request](https://github.blog/2019-02-14-introducing-draft-pull-requests/) on GitHub.
+      This indicates to other developers and reviewers
+      that you'd like detailed feedback on your work, but it is incomplete.
+      When a PR is in the draft state it cannot be merged into the master branch.
+      Note that draft pull requests will run the ["Travis CI - Branch" test suite](/developer/testing/travis_ci),
+      but will skip the more extensive "Travis CI - Pull Request" test suite.
+
+    * **IMPORTANT:** If this PR requires system administrator action
+      before/after installation, the PR title should be prepended with
       `[SYSADMIN ACTION]` and the commit message should describe the
       specific actions required and include links to additional
       documentation as appropriate.  For example:
@@ -63,36 +98,55 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
       configuration should not be performed automatically via a
       migration because these files commonly have customizations that
       make automation difficult or problematic.    
-      See also: [Installation Version Notes](../sysadmin/version_notes)
+      See also: [Installation Version Notes](/sysadmin/version_notes)
 
-* Include the string `Closes #1234` or `Fixes #1234` within the top
-  comment of the PR so that GitHub issue will be automatically closed
-  when the pull request is merged.
 
-* The commit message should talk about *WHAT* changed, and *WHY*. Not
-  *HOW*.  How is the diff, and you don't need to repeat it.
 
-* Comments explaining the code should be *in* the code, rather than in
-  the PR message or comments.
+* The body of the PR should describe the purpose of the PR.
 
-* Including screenshots in the issue or PR message is helpful for UI
-  changes.
+     * When merged, this PR body will be part of the documentation for
+       the next Submitty release.  Thus, the contents should be
+       understandable to an average Submitty instructor user or system
+       administrator.  The description can include links to related
+       issues or PRs, but this description should not require the user
+       to follow links to have a general understanding of the PR
+       purpose.
 
-* The comments should explain a bit about the purpose/history/overview
-  -- don't assume the reader knows it (or link to the issue that
-  explains everything).
+     * Include the string `Closes #1234` or `Fixes #1234` within the
+       top comment of the PR so that GitHub issue will be
+       automatically closed when the pull request is merged.
 
-* Be explicit about what you want feedback on, or why you are asking
-  for specific reviewers.
+     * The commit message should talk about *WHAT* changed, and
+        *WHY*. Not *HOW*.  How is the diff, and you don't need to repeat
+       it.
 
-* Prepend '[Bugfix]' to the start of the PR title if the contribution
-  is primarily fixing an error with an existing Submitty feature.
+     * Comments explaining the code should be *in* the code, rather than in
+       the PR message or comments.
 
-* Prepend '[WIP]' to the start of the PR title if you would like
-  feedback / detailed review on work in progress.  This indicates to
-  the reviewers and project managers that this feature is not ready to
-  be merged into the master branch.  When it is ready to merge, edit
-  the title to remove the '[WIP]'.
+     * Developers are encouraged to test all user interface modifications with
+       [all available Submitty Themes](/student/account/theme):
+       e.g., light mode, dark mode, black mode, to ensure compliance/improvement
+       of [Web Accessibility](interface_design_style_guide/web_accessibility).
+
+     * Including screenshots/videos in the issue or PR message is
+       helpful for UI changes -- both to solicit quick feedback from
+       reviewers and also to serve as documentation for the future
+       [release notes](https://github.com/Submitty/Submitty/releases).
+
+       *NOTE: Please use light mode by default for all
+       screenshots/videos (this is our default theme).  If your PR
+       includes a modification/bugfix related to the available
+       Submitty Themes (light mode vs. dark mode vs. black mode),
+       please also include comparison screenshots/videos for all
+       available themes.*
+
+     * The comments should explain a bit about the
+       purpose/history/overview -- don't assume the reader knows it
+       (or link to the issue that explains everything).
+
+     * Be explicit about what you want feedback on, or why you are asking
+       for specific reviewers.
+
 
 
 
@@ -134,6 +188,23 @@ you need to do?
   instructions (on page or on submitty.org) clear?  As appropriate
   leave comments for the PR author with specific suggestions for
   improvement.
+    * If the PR is a branch of the main Submitty repository, you can
+      check it out with
+      ```
+      git checkout BRANCH_NAME
+      ```
+    * If the PR is from a fork of the main Submitty repository, first
+      create a new branch based of the pull request ID (PR_ID). The new branch
+      will be called BRANCH_NAME in this example
+      ```
+      git fetch origin pull/PR_ID/head:BRANCH_NAME
+      ```
+      Then, checkout the new branch.
+      ```
+      git checkout BRANCH_NAME
+      ```
+      Now you have a version of the code in a new branch on the main repo.
+      Review the PR normally and delete the temporary branch when you are done
 
   Test the system with extreme use cases or corner cases.  Try to
   break the overall system or new feature.  If you find an error,
