@@ -20,6 +20,29 @@ and is set to true (e.g. `flag: true`).
 
 Otherwise, the flag is considered off.
 
+E.g: To enable a feature flag in a course named *sample* edit
+the file:
+```bash
+/var/local/submitty/courses/f20/sample/config/config.json
+```
+
+To include a top level JSON object named feature flags, each feature flag
+is a string that can either be true or false. Set a flag to true to enable it for that course.
+
+Example partial config:
+
+```json
+{
+	"feature_flags" : {
+		"submitty_ocr" : true,
+		"foo" : false
+	},
+	/* Rest of config below */
+
+
+```
+
+
 To utilize checking a flag, the following methods are available:
 
 1. Twig Template
