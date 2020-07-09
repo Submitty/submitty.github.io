@@ -46,12 +46,13 @@ The user should only be used for submitty related activities.
    sudo bash /usr/local/submitty/.setup/distro_setup/ubuntu/rpi.sh
    ```
 
-6. Add the submitty user to the ```submitty_daemon``` and ```submitty_daemonphp```
+6. Add the submitty user to the ```submitty_daemon```, ```submitty_daemonphp```, and ```docker```
    groups.
 
    ```
    sudo usermod -a -G submitty_daemon YOUR_SUBMITTY_USER
    sudo usermod -a -G submitty_daemonphp YOUR_SUBMITTY_USER
+   sudo usermod -a -G docker YOUR_SUBMITTY_USER
    ```
 
 7. Next, we must set up an ssh key so that submitty_daemon user on the primary
