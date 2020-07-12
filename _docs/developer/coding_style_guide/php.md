@@ -91,8 +91,9 @@ do {
 ### Type Declarations
 
 Wherever possible, you should use [type declarations](https://www.php.net/manual/en/functions.arguments.php#functions.arguments.type-declaration)
-in your code. This helps our static analysis tool function more accurately, and alleviate a class of
-bugs from entering our codebase. Whenever possible, you should declare the type inline with the code:
+in your code. This helps our static analysis tool function more accurately, as well as potentially allow PHP to catch when functions are called
+with the wrong types of parameters. This hepls us alleviate potentially trickier to catch runtime errors on invalid types for arguments.
+Whenever possible, you should declare the type inline with the code:
 
 ```php
 function foo(string $bar, ?int $baz): string;
@@ -109,4 +110,15 @@ array of one type of object and union types:
  * @param A|B $baz
  */
 function foo(array $bar, $baz): void;
+```
+
+For new classes, or classes that are well tested, they should also have a
+[strict typing](https://www.php.net/manual/en/functions.arguments.php#functions.arguments.type-declaration.strict) declaration at the top. This prevents
+PHP from attempting to silently coerce parameters of the wrong type to the right type (e.g. coercing an integer to a string for example), but instead throw
+an error instead. To do this, place at the top of the file:
+
+```php
+<?php
+
+declare(script_types=1);
 ```
