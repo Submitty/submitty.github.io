@@ -101,8 +101,9 @@ function foo(string $bar, ?int $baz): string;
 
 In some cases, such as for arrays of a type or mixed values, this is not possible. In these cases,
 you should write the type out in the docstring using [phpDocumentator](https://docs.phpdoc.org/latest/guides/types.html)
-conventions. However, if possible, still attempt to put a type (such as `array`) inline in the code. An example using
-array of one type of object and union types:
+conventions. However, if possible, still attempt to put a type (such as `array`) inline in the code. However, this should only be done as absolutely
+necessary, with a preference to inline type hinting so that it can take advantage of PHP's builtin type checking as well during runtime (especially
+in files using strict typing (see below). An example using array of one type of object and union types:
 
 ```php
 /**
@@ -121,4 +122,4 @@ an error instead. To do this, place at the top of the file:
 <?php
 
 declare(script_types=1);
-```
+``
