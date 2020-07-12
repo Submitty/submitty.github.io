@@ -182,6 +182,9 @@ directory or file structure:
     accomplish this, run the following two commands from within Vagrant:
     
     ```bash
-    su - postgres -c "pg_dump -d submitty --schema-only --no-privileges --no-owner --file /usr/local/submitty/GIT_CHECKOUT/Submitty/migration/migrator/data/submitty_db.sql"
-    su - postgres -c "pg_dump -d submitty_s20_sample --schema-only --no-privileges --no-owner --file /usr/local/submitty/GIT_CHECKOUT/Submitty/migration/migrator/data/course_tables.sql"
+    sudo python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/migration/run_migrator.py -e master -e course dump
     ```
+    
+    This will update `migration/migrator/data/submitty_db.sql` and `migration/migrator/data/course_tables.sql`.
+    If you only wish to update one of them, you can use just `-e master` for `submitty_db.sql` and `-e course`
+    and `course_tables.sql`.
