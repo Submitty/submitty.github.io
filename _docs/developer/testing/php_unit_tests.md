@@ -38,7 +38,7 @@ useful when writing new tests.
 
 ### PHP Unit Test Code Coverage
 
-_Note, to view code coverage information, you will need either
+__Note__: to view code coverage information, you will need either
 [xdebug](https://xdebug.org/) or [pcov](https://github.com/krakjoe/pcov). If not using
 the debugger in xdebug, it is recommended to use pcov as it is orders of magnitude
 faster (~ 1 min vs ~15 min).
@@ -49,8 +49,8 @@ part of it, a report is generated showing the code coverage of tests in
 please make sure you are writing tests to properly validate behavior, show edge
 cases, etc. and not just for the sake of increasing the code coverage number.
 
-*Note code coverage will only be generated for the tests you run, and will overwrite
-previously generated code coverage reports.*
+_Note: code coverage will only be generated for the tests you run, and will overwrite
+previously generated code coverage reports._
 
 
 ### Writing PHP Unit Tests
