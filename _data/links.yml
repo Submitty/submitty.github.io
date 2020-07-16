@@ -191,6 +191,8 @@
           link: vagrant_email_configuration
         - name: Router Response
           link: router-response
+        - name: Resolving Merge Conflicts
+          link: merge_conflicts
         - name: Miscellaneous
     - name: PhpStorm Setup Instructions
       link: phpstorm
