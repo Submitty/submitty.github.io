@@ -1,8 +1,11 @@
 # Submitty.org
 
-This is the documentation website for [Submitty](http://submitty.org) the RPI Homework Submission Server.
+This is the documentation website for [Submitty](http://submitty.org),
+an open source course management, assignment submission, exam, and grading system.
 
-To report issues for this repository, please file them under the [Submitty/Submitty](https://github.com/Submitty/Submitty) repository.
+
+To report issues for this repository, please file them under the
+[Submitty/Submitty](https://github.com/Submitty/Submitty) repository.
 
 ![Submitty screenshot](images/Submission_Result_Buggy.png)
 
@@ -15,12 +18,14 @@ To develop the site locally, you will need to get the following dependencies:
 * [Ruby](https://www.ruby-lang.org/en/)
 * [Bundler](https://bundler.io/) (`gem install bundler`)
 
-For Bundler, depending on your system, you may need to also install the Ruby development headers (e.g. `ruby-dev`). On Ubuntu/Debian,
+For Bundler, depending on your system, you may need to also install the
+Ruby development headers (e.g. `ruby-dev`). On Ubuntu/Debian,
 for example, this would be accomplished by doing `sudo apt-get install ruby-dev`.
 
 ### Setup
 
-After cloning the repository to your local machine, you will need to use Bundler to install the dependencies. This can be accomplished
+After cloning the repository to your local machine, you will need to use
+Bundler to install the dependencies. This can be accomplished
 by running:
 
 ```bash
@@ -29,7 +34,8 @@ bundle install
 
 ### Running the Site
 
-To view the site locally, and the results of any changes you make, you will want to use the `jekyll` commands through Bundler, namely
+To view the site locally, and the results of any changes you make,
+you will want to use the `jekyll` commands through Bundler, namely
 the `serve` sub-command, as shown below:
 
 ```bash
@@ -46,9 +52,12 @@ which will leave the results in a `_site` directory.
 
 ## Editing Content
 
-The site's content is defined with markdown files under the [`docs/`](https://github.com/Submitty/submitty.github.io/blob/master/_docs) folder, where
-then it's separated by a couple of high-level sections (student, instructor, sysadmin, developer). For any new page, a new entry must be added to the
-navigation manually (see below). The rendered markdown uses a varient of [Github Flavored Markdown](https://github.github.com/gfm/). For every page,
+The site's content is defined with markdown files under the
+[`docs/`](https://github.com/Submitty/submitty.github.io/blob/master/_docs) folder, where
+then it's separated by a couple of high-level sections (student, instructor,
+sysadmin, developer).  For any new page, a new entry must be added to the
+navigation manually (see below). The rendered markdown uses a varient of
+[Github Flavored Markdown](https://github.github.com/gfm/). For every page,
 it should have a front-matter block at the top of the file that has minimally:
 
 ```
@@ -57,19 +66,22 @@ title: Page Title
 ---
 ```
 
-where this is used as the main header title on the page, as well as for the title of the page in the browser. You should then not include a `# Page Title`
+where this is used as the main header title on the page, as well as for the title
+of the page in the browser. You should then not include a `# Page Title`
 in the file, rather just start your content immediately after the front-matter block.
 
 ### Navigation
 
-Editing the links on the navigation is done by editing [`_data/links.yml`](https://github.com/Submitty/submitty.github.io/blob/master/_data/links.yml).
+Editing the links on the navigation is done by editing
+[`_data/links.yml`](https://github.com/Submitty/submitty.github.io/blob/master/_data/links.yml).
 The structure of the file is that each level is a list of objects, where the object can have the following parts:
 
 * name __(required)__
 * link
 * children
 
-Where if link is omitted, then name will be used where it will be lowercased and spaced replaced with `_`. Children is then a list of objects of the
+Where if link is omitted, then name will be used where it will be lowercased
+and spaced replaced with `_`. Children is then a list of objects of the
 above structure. Currently, the site only supports three levels of nesting (sub-sub-children).
 
 ### Search
