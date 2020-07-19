@@ -184,6 +184,8 @@
     - name: Project Ideas
     - name: How to Contribute
     - name: VM Install using Vagrant
+    - name: Virtual Box Worker
+      link: worker_vm
     - name: Development Instructions
       children:
         - name: Troubleshooting
