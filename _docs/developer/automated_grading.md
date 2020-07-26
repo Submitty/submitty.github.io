@@ -5,9 +5,9 @@ category: Developer
 
 Starting with Submitty version `v.1.1.0`, automated grading is
 controlled by two daemons,
-[`submitty_autograding_shipper.py`](https://github.com/Submitty/Submitty/blob/master/sbin/submitty_autograding_shipper.py)
+[`submitty_autograding_shipper.py`](https://github.com/Submitty/Submitty/blob/master/autograder/submitty_autograding_shipper.py)
 and
-[`submitty_autograding_worker.py`](https://github.com/Submitty/Submitty/blob/master/sbin/submitty_autograding_worker.py).
+[`submitty_autograding_worker.py`](https://github.com/Submitty/Submitty/blob/master/autograder/submitty_autograding_worker.py).
 
 _NOTE: Versions of Submitty prior to `v.1.1.0` use a
 submitty_grading_scheduler -- see instructions at the bottom of this page._
@@ -58,7 +58,7 @@ number:
    ```
 
    _NOTE: If you delete the `autograding_workers.json` file and re-run
-   `CONFIGURE_SUBMITTY.sh`, the file will be re-created with the
+   `CONFIGURE_SUBMITTY.py`, the file will be re-created with the
    default settings._
 
 ---
@@ -150,7 +150,7 @@ To do this:
    shipper manager and watch the output.
 
    ```
-   sudo su -c '/usr/local/submitty/sbin/submitty_autograding_shipper.py' submitty_daemon
+   sudo su -c '/usr/local/submitty/autograder/submitty_autograding_shipper.py' submitty_daemon
    ```
 
    And similarly from each machine that will be autograding (including
@@ -158,7 +158,7 @@ To do this:
    watch the output:
 
    ```
-   sudo su -c '/usr/local/submitty/sbin/submitty_autograding_worker.py' submitty_daemon
+   sudo su -c '/usr/local/submitty/autograder/submitty_autograding_worker.py' submitty_daemon
    ```
 
 

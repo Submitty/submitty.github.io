@@ -130,7 +130,7 @@ category: Instructor -- Autograding Configuration
 
 
 
-  * Static Analysis Tools (See also:  [Documentation of submitty_count, etc.](static_analysis) )
+  * Static Analysis Tools (See also:  [Documentation of submitty_count, etc.](/instructor/static_analysis) )
 
      Example assignment configuration command line:  
      ```

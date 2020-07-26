@@ -42,7 +42,7 @@ Please also see [Installation Version Notes](version_notes)
     installation.  The necessary system and database _migrations_ will
     automatically be applied.
 
-    See also: [Developer / Migrations](../developer/migrations)
+    See also: [Developer / Migrations](/developer/migrations)
 
     Typically this re-installation will take less than a minute.  It
     will pause and restart from scratch any autograding that is
@@ -55,7 +55,7 @@ Please also see [Installation Version Notes](version_notes)
     assignments.
 
     See more information in:
-    [Developer / Development Instructions](../developer/development_instructions)
+    [Developer / Development Instructions](/developer/development_instructions)
 
 
 

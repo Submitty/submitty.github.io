@@ -1,8 +1,14 @@
 ---
 title: Publications
-order: 1
+category: Submitty
+redirect_from:
+  - /publications
 ---
 
+* ["Student-Built Program Supports Thousands During Remote Learning Experience"](https://news.rpi.edu/content/2020/05/27/student-built-program-supports-thousands-during-remote-learning-experience)  
+  Mary L. Martialay,  
+  Rensselaer News,  
+  May 27, 2020.
 
 
 * ["Autograding Interactive Computer Graphics Applications"](https://github.com/Submitty/publications/raw/master/2020_SIGCSE_Grading_Computer_Graphics/2020_SIGCSE_Grading_Computer_Graphics.pdf)  

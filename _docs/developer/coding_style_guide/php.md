@@ -20,14 +20,14 @@ which handles installing the dependencies and setting up the
 To run `phpcs`, you can use the following command:
 
 ```bash
-vendor/bin/phpcs --standard=tests/ruleset.xml [path/to/file/or/directory]
+php vendor/bin/phpcs --standard=tests/ruleset.xml [path/to/file/or/directory]
 ```
 
 where if you leave off the path, it will analyze all files and directories for Submitty.
 Additionally, you can apply the automatic fixer to your code by running:
 
 ```bash
-vendor/bin/phpcbf --standard=tests/ruleset.xml [path/to/file/or/directory]
+php vendor/bin/phpcbf --standard=tests/ruleset.xml [path/to/file/or/directory]
 ```
 
 ### Classes, Methods
@@ -91,8 +91,9 @@ do {
 ### Type Declarations
 
 Wherever possible, you should use [type declarations](https://www.php.net/manual/en/functions.arguments.php#functions.arguments.type-declaration)
-in your code. This helps our static analysis tool function more accurately, and alleviate a class of
-bugs from entering our codebase. Whenever possible, you should declare the type inline with the code:
+in your code. This helps our static analysis tool function more accurately, as well as potentially allow PHP to catch when functions are called
+with the wrong types of parameters. This hepls us alleviate potentially trickier to catch runtime errors on invalid types for arguments.
+Whenever possible, you should declare the type inline with the code:
 
 ```php
 function foo(string $bar, ?int $baz): string;
@@ -100,8 +101,9 @@ function foo(string $bar, ?int $baz): string;
 
 In some cases, such as for arrays of a type or mixed values, this is not possible. In these cases,
 you should write the type out in the docstring using [phpDocumentator](https://docs.phpdoc.org/latest/guides/types.html)
-conventions. However, if possible, still attempt to put a type (such as `array`) inline in the code. An example using
-array of one type of object and union types:
+conventions. However, if possible, still attempt to put a type (such as `array`) inline in the code. However, this should only be done as absolutely
+necessary, with a preference to inline type hinting so that it can take advantage of PHP's builtin type checking as well during runtime (especially
+in files using strict typing (see below). An example using array of one type of object and union types:
 
 ```php
 /**
@@ -110,3 +112,14 @@ array of one type of object and union types:
  */
 function foo(array $bar, $baz): void;
 ```
+
+For new classes, or classes that are well tested, they should also have a
+[strict typing](https://www.php.net/manual/en/functions.arguments.php#functions.arguments.type-declaration.strict) declaration at the top. This prevents
+PHP from attempting to silently coerce parameters of the wrong type to the right type (e.g. coercing an integer to a string for example), but instead throw
+an error instead. To do this, place at the top of the file:
+
+```php
+<?php
+
+declare(script_types=1);
+``

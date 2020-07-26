@@ -5,7 +5,7 @@ permalink: /developer
 
 As a developer, you'll need to set up the full system on your own
 computer.  The easiest method is to 
-[run the system within a virtual machine (VM)](developer/vm_install_using_vagrant).
+[run the system within a virtual machine (VM)](/developer/vm_install_using_vagrant).
 Alternately, you can install the system natively on a dedicated
 computer and allow outside access (which requires more steps to set up
 networking, SSL/https, etc.) by following the
@@ -51,7 +51,7 @@ Join our Community Discussion:
      locate relevant files.
 
 * Add & delete things to the code, re-install that portion of the
-  system and see what happens.  See also [Development Instructions](developer/development_instructions).
+  system and see what happens.  See also [Development Instructions](/developer/development_instructions).
 
 * Use inspector, browser debugger, javascript console, etc.
 
@@ -73,9 +73,7 @@ Join our Community Discussion:
 * Get familiar with vagrant.
 
 * Run the relevant portions of test suite locally:  
-  [Autograding Test Suite](/developer/autograding_tests)  
-  [PHP Unit Tests](/developer/php_unit_tests)  
-  [End-to-End Tests](/developer/end_to_end_tests)  
+  [Submitty Testing Instructions](/developer/testing/)
 
 * Submit a [Pull Request (PR)](/developer/how_to_contribute#how-to-make-a-pull-request-to-our-submitty-github) with your contributions.
 

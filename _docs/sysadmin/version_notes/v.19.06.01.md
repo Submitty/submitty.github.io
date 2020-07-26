@@ -31,7 +31,7 @@ shouldn't have to change anything manually.
 
 If your installation is a bit older, in order to use the shortened
 URLs you must edit your Apache configuration.  This is not something
-we want to tackle with a automatic [migration](../developer/migrations).
+we want to tackle with a automatic [migration](/developer/migrations).
 
 
 ##### Updating a Production Installation

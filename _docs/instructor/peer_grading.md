@@ -30,16 +30,15 @@ new marks!*
 
 ### Preparation of the Peer Grading Assignment Matrix
 
-Next the instructor must prepare the assignments of peers for grading.
-Currently this is done by creating the explicit mapping/matrix between
-peer graders and students, and uploading the data as a .csv (comma
-separated values) file.  *NOTE: In the future we plan to provide
-easy-to-use web user interface to generate standard peer grading
-assignment matrices.*
+The instructor can use the Submitty GUI interface to prepare a random
+assignment where each student grades *n* random students (and also
+receives feedback from *n* random students).
 
-In the example below, each of the five students is assigned to grade
-three other students.  And each student will receive feedback from
-three of their peers.
+Alternatively, the instructor may explicitly prepare the matrix of
+assignments of peers for grading.  The instructor uploading this data
+as a .csv (comma separated values) file.  In the example below, each
+of the five students is assigned to grade three other students.  And
+each student will receive feedback from three of their peers.
 
 ![](/images/peer_grading/peer_grading_matrix_csv.png){:width="200px"}
 
@@ -49,7 +48,7 @@ file, you will see the peer grading assignments for each student:
 ![](/images/peer_grading/peer_grading_matrix_uploaded.png)
 
 
-### Peer Grading from the Student 
+### Student View of Peer Grading Interface
 
 Students who are assigned peer grading will then have access to the
 [Rubric Grading](/grader/rubric_grading) interface for their assigned

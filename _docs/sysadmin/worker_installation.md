@@ -17,7 +17,7 @@ for your needs (as the script installs all of the dependencies that Submitty dep
 _Note: These instructions should be run under root/sudo._
 
 
-1. [Install Ubuntu 16.04 or 18.04 server edition](server_os)
+1. [Install Ubuntu 16.04 or 18.04 server edition](/sysadmin)
 
 2. Create a ```submitty``` user on the machine. The user's name is not important.
 The user should only be used for submitty related activities.
@@ -37,7 +37,7 @@ The user should only be used for submitty related activities.
    ```
 
    You will be asked to provide the name of your submitty user by the
-   [CONFIGURE_SUBMITTY.sh script](https://github.com/Submitty/Submitty/blob/master/.setup/CONFIGURE_SUBMITTY.sh).
+   [CONFIGURE_SUBMITTY.py script](https://github.com/Submitty/Submitty/blob/master/.setup/CONFIGURE_SUBMITTY.py).
 
 5. Run installations specific to your university.  
    For example:  [RPI Computer Science specific installations](https://github.com/Submitty/Submitty/blob/master/.setup/distro_setup/ubuntu/rpi.sh)
@@ -46,12 +46,13 @@ The user should only be used for submitty related activities.
    sudo bash /usr/local/submitty/.setup/distro_setup/ubuntu/rpi.sh
    ```
 
-6. Add the submitty user to the ```submitty_daemon``` and ```submitty_daemonphp```
+6. Add the submitty user to the ```submitty_daemon```, ```submitty_daemonphp```, and ```docker```
    groups.
 
    ```
    sudo usermod -a -G submitty_daemon YOUR_SUBMITTY_USER
    sudo usermod -a -G submitty_daemonphp YOUR_SUBMITTY_USER
+   sudo usermod -a -G docker YOUR_SUBMITTY_USER
    ```
 
 7. Next, we must set up an ssh key so that submitty_daemon user on the primary

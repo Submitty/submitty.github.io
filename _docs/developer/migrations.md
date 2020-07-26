@@ -30,7 +30,7 @@ courses' DB, config files, etc.
 For all commands, it is required that you pass in the environment you wish
 to operate on to migrator.
 
-See also: [System Administration / Update Submitty](../sysadmin/update)
+See also: [System Administration / Update Submitty](/sysadmin/update)
 
 NOTE: Some mandatory installation updates _should not be implemented_
 via the migration system if automatic updates may be problematic due
@@ -175,3 +175,17 @@ directory or file structure:
     your `up` function should not crash on adding the column if the column
     already exists.
 
+3.  After you have written your migration to update an existing system 
+    and are satisfied with it, you must also update the base .sql
+    files used to create a new Submitty system.  To
+    accomplish this, first apply the migration that you wrote in the previous
+    step, placing the DB into the desired end state, and then run the following
+    command from within the Vagrant VM:
+    
+    ```bash
+    sudo python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/migration/run_migrator.py -e master -e course dump
+    ```
+
+    This will update `migration/migrator/data/submitty_db.sql` and `migration/migrator/data/course_tables.sql`.
+    If you only wish to update one of them, you can use just `-e master` for `submitty_db.sql` and `-e course`
+    and `course_tables.sql`.

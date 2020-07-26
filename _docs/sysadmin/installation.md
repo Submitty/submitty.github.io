@@ -23,7 +23,7 @@ will be able to read/execute it.
 _Note: These instructions should be run under root/sudo._
 
 
-1. [Install Ubuntu 18.04 server edition (or other supported distro)](server_os)
+1. [Install Ubuntu 18.04 server edition (or other supported distro)](/sysadmin)
 
    Note: If you are duplicating an existing Submitty installation onto a new server, you should
    synchronize `/etc/passwd`, `/etc/shadow`, `/etc/group`, and `/etc/gshadow` before installing
@@ -46,7 +46,7 @@ _Note: These instructions should be run under root/sudo._
    Note: During installation, you will be asked several questions by the
    [CONFIGURE_SUBMITTY.py](https://github.com/Submitty/Submitty/blob/master/.setup/CONFIGURE_SUBMITTY.py)
    script. Pressing enter will select the default option. These questions are:
-   1. Database Host
+   1. Database Host / Port
    2. Submitty Database User/Role
    3. Submitty Database User/Role Password
    4. Timezone
@@ -56,7 +56,9 @@ _Note: These instructions should be run under root/sudo._
    8. Authentication Method (PAM or Database)
 
    If you already have your database server installed and set up, you
-   will most likely just specify `localhost` for the Database Host.
+   will most likely just specify `localhost` for the Database Host and
+   `5432` for the Database Port, or just `/var/run/postgresql` for
+   Database Host.
    Note: The database user is not a Linux user, just a user/role
    within the database server.  If you don't already have a role for
    the submitty database user/role, the script will create that for
@@ -145,19 +147,19 @@ _Note: These instructions should be run under root/sudo._
    through a browser.
 
 6. We recommend that you should leave the PostgreSQL setup unless you know what
-   you're doing.  However, for the version of PostgreSQL that comes with Ubuntu
-   Server, you _may_ use UNIX sockets and disable the ability to connect to the
-   DB via TCP. The socket improves query responses minorly while disabling TCP
-   can better secure your DB if you don't plan to connect to it via localhost,
-   IP, etc. The socket by default is run at `/var/run/postgresql`. To disable
-   TCP, you will need to edit `/etc/postgresql/9.5/main/pg_hba.conf` and
-   disable all the lines that start with `host` and `hostssl`. You will also
-   have to modify `/usr/local/submitty/.setup/INSTALL_SUBMITTY.sh` and change
-   `DATABASE_HOST` to point to the socket, and then re-run the script.
+   you're doing. If you are running PostgreSQL on the same server as Submitty,
+   we recommend using the UNIX socket, and to disable TCP if unused. By default,
+   the socket is found at `/var/run/postgresql`, and disabling TCP is done through
+   editing the [`pg_hba.conf`](https://www.postgresql.org/docs/10/auth-pg-hba-conf.html)
+   file for PostgreSQL. Using the socket improves query responses as it will not
+   need to go through the TCP stack. Disabling TCP if not used will improve security
+   as it prevents anyone from attempting to get into the DB from the outside
+   world. To disable TCP, you would comment out all the lines that start with `host`
+   and `hostssl` in the `pg_hba.conf` file. Setting the socket to be used for
+   Submitty is done by running `.setup/CONFIGURE_SUBMITTY.py` and setting the
+   database host to the socket (e.g. `/var/run/postgresql`).
 
    NOTES:
-   - When using Ubuntu 18.04, the configuration file path to disable TCP is
-     `/etc/postgresql/10/main/pg_hba.conf`.
    - If you intend to run the [Student Auto Feed](student_auto_feed), do not
      disable TCP.
 

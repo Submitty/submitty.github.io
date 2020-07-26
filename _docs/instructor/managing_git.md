@@ -131,6 +131,6 @@ _TODO:_
 ---
 
 
-See also:  [Student: Assignment Submission via GIT](../student/git_submission)
+See also:  [Student: Assignment Submission via GIT](/student/git_submission)
 
-See also:  [System Administrator: Setting up Internal Git](../sysadmin/git)
+See also:  [System Administrator: Setting up Internal Git](/sysadmin/git)

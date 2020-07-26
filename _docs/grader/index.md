@@ -1,7 +1,6 @@
 ---
-category: Grader
-title: TA Navigation Page
-permalink: /grader
+category: Grader 
+title: Overview
 ---
 
 When a TA or Grader user logs into the course, they have access to the
@@ -15,6 +14,6 @@ each assignment.
 
 
 See also
-[Checkpoint Grading](checkpoint_grading),
-[Numeric / Text Grading](numeric_text_grading), and
-[Rubric Grading](rubric_grading).
+[Checkpoint Grading](/grader/checkpoint_grading),
+[Numeric / Text Grading](/grader/numeric_text_grading), and
+[Rubric Grading](/grader/rubric_grading).

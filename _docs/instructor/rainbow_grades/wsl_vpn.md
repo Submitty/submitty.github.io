@@ -9,7 +9,7 @@ This page is presented as-is and may not be updated to reflect future changes. I
 you are unsure of how to do this, consult the Helpdesk website.
 
 1. **Rainbow Grades Software/Configuration**  
-   Follow the instructions to [obtain the Rainbow Grades software](/instructor/rainbow_grades/overview) first. Once you have completed step 4 on that page ("Edit the Makefile") you can continue with these directions.
+   Follow the instructions to [obtain the Rainbow Grades software](/instructor/rainbow_grades/manual_setup) first. Once you have completed step 4 on that page ("Edit the Makefile") you can continue with these directions.
 
 2. **Obtaining vendor libraries**  
    If this is your first time running Rainbow Grades, make sure you are not connected to the VPN. Inside your directory (assumed to be `grades_summary`), simply run `make`. This will not succeed, but you should see a download happen for a vendor library. A partial output example is:

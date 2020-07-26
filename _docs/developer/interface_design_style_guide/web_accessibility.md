@@ -109,6 +109,7 @@ hyperlinks anchored on a font icon.
 * Do _carefully_ adhere to HTML 5 standards.  This helps ensure your user interface
 is not accidentally misrepresented by assistive technologies.
     * w3.org provides an online [HTML validator](https://validator.w3.org/#validate_by_input).
+    You can run it by clicking the "Validate HTML" button in the footer of any page.
     Validating HTML 5 is marked "experimental", but it is still be a useful tool
     to provide feedback on potential problems and errors.
 * Do use CSS for styling.

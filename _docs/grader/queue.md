@@ -4,7 +4,7 @@ category: Grader
 order: 4
 ---
 
-Students, please read [Getting Help through the Office Hours Queue](../student/queue).
+Students, please read [Getting Help through the Office Hours Queue](/student/queue).
 
 
 ### What is the Office Hours Queue?
@@ -40,7 +40,7 @@ appropriately.  *NOTE: Office Hours Queue Statistics coming soon!*
 
 To use the queue, an instructor level user for the course must first
 enable this feature from the [Course Settings
-page](../instructor/course_settings).
+page](/instructor/course_settings).
 
 ![](/images/queue/queue_enable.png)
 
@@ -178,7 +178,7 @@ interface.
 
 When students join the queue, they may specify an alternate name --
 different from both their legal/registration name and their
-[preferred name](../student/#how-can-i-change-my-preferred-name).
+[preferred name](/student/account/preferred_name).
 The queue name is the name that the TA/instructor will call out aloud
 in the room, if they do not know
 the each students by name/face.  The TA/Instructor also has access to view the
