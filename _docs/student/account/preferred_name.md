@@ -4,8 +4,8 @@ title: Preferred Name
 ---
 
 If you would like to use a different first and/or last name than what
-is listed on the registration roster, click the pencil next to your
-name in the "About You" panel on the right of the screen.  Enter your
+is listed on the registration roster, click the pencil saying "Edit Preferred Names"
+under the Basic Information section on "My Profile" page. Enter your
 information and press "Submit".
 
 ![](/images/PreferredNameForm.png)

@@ -16,5 +16,6 @@ based on the user's specified local timezone.
 Select the closest, most appropriate location from the
 [List of Available Timezones](https://www.w3schools.com/php/php_ref_timezones.asp).
 
-![](/images/student/specify_timezone.png)
+![](/images/student/specify_timezone_field.png)
+![](/images/student/timezone_dropdown.png)
 
