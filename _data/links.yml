@@ -15,10 +15,12 @@
       children:
         - name: Overview
           link: index
+        - name: My Profile
         - name: Course Navigation
           link: navigation
         - name: Preferred Name
         - name: Password
+        - name: Profile Photo
         - name: Local Timezone
         - name: Theme
         - name: Notifications & Email

@@ -33,12 +33,5 @@ or teaching staff for the course or system administrator for your
 school or department.
 
 
-You can also review the email address associated
-with your account and change your
-[preferred name](/student/account/preferred_name),
-[password](/student/account/password),
-[local timezone](/student/account/local_timezone), and
-[theme](/student/account/theme).
-
 
 
