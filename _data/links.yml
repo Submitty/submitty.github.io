@@ -10,15 +10,15 @@
 
 - name: Student
   children:
-    - name: Account & Customization
+    - name: Courses & Profile
       link: account
       children:
         - name: Overview
           link: index
         - name: Course Navigation
-          link: navigation
         - name: Preferred Name
         - name: Password
+        - name: Photo
         - name: Local Timezone
         - name: Theme
         - name: Notifications & Email
