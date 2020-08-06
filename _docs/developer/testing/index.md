@@ -41,6 +41,7 @@ handful of dependencies:
 * Pip
 * PHP (and some extensions)
 * Composer
+* NodeJS
 
 Installing these should be straight forward on macOS (using
 [Homebrew](https://brew.sh)) and Linux distros using its package
@@ -65,7 +66,6 @@ sudo apt-get install php-cli php-mbstring php-xml php-xdebug php-curl php-zip ph
 sudo apt-get install python3 python3-pip
 ```
 
-
 Now, to install dependencies for Python on either OS:
 
 ```bash
@@ -83,18 +83,18 @@ pip3 install --pre selenium
 pip3 install flake8
 ```
 
-To install the PHP dependencies:
+To install the PHP and JS developer dependencies:
 
 ```bash
 cd site
 composer install
+npm install
 ```
 
-__Note:__ Normally one can run Composer by direct execution,
+__Note:__ Normally one can run Composer installed packages by direct execution,
 e.g. `vendor/bin/phpunit`.  However, due to the integration of
 Submitty installer and Vagrant, packages in the vendor directory will
 lose their execution bit, so you will need to specify `php` before the
 thing you are attempting to execute (e.g. `php vendor/bin/phpunit`).
-
 
 Please use the sidebar menu for additional documentation for each type of test.

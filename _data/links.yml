@@ -10,15 +10,15 @@
 
 - name: Student
   children:
-    - name: Account & Customization
+    - name: Courses & Profile
       link: account
       children:
         - name: Overview
           link: index
         - name: Course Navigation
-          link: navigation
         - name: Preferred Name
         - name: Password
+        - name: Photo
         - name: Local Timezone
         - name: Theme
         - name: Notifications & Email
@@ -185,6 +185,8 @@
     - name: Project Ideas
     - name: How to Contribute
     - name: VM Install using Vagrant
+    - name: Virtual Box Worker
+      link: worker_vm
     - name: Development Instructions
       children:
         - name: Troubleshooting
@@ -192,6 +194,8 @@
           link: vagrant_email_configuration
         - name: Router Response
           link: router-response
+        - name: Resolving Merge Conflicts
+          link: merge_conflicts
         - name: Miscellaneous
     - name: PhpStorm Setup Instructions
       link: phpstorm
