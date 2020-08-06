@@ -15,6 +15,7 @@
       children:
         - name: Overview
           link: index
+        - name: My Profile
         - name: Course Navigation
         - name: Preferred Name
         - name: Password
