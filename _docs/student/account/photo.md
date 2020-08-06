@@ -1,6 +1,8 @@
 ---
-category: Student -- Account
-title: Profile photo
+category: Student -- Courses & Profile
+title: Photo
+redirect_from:
+  - /student/account/profile_photo
 ---
 
 You may upload a passport-style photograph of yourself for display to course teaching staff.

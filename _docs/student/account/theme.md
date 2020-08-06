@@ -1,5 +1,5 @@
 ---
-category: Student -- Acccount
+category: Student -- Courses & Profile
 title: Theme
 ---
 

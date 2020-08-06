@@ -1,5 +1,5 @@
 ---
-category: Student -- Account
+category: Student -- Courses & Profile
 title: Password
 ---
 
