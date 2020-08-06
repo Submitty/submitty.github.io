@@ -100,3 +100,16 @@ from both the TA / Instructor grading, and also the peer grading.
 ![](/images/peer_grading/peer_grading_student_view.png)
 
 Note that the peer grading is anonymized.
+
+### Giving Peer Graders Feedback
+
+While viewing their grade on a gradeable, students can give feedback to the peer graders who graded that gradeable, letting the peer graders know how they were helpful. First the student must click the "Switch to Feedback Mode button: 
+![](/images/peer_grading/peer_feedback_button.png)
+
+This will switch to the following view, allowing a student to view grades one peer at a time:
+![](/images/peer_grading/peer_feedback_student_view.png)
+
+Clicking on a certain feedback message will save the student's feedback for the selected peer and current gradeable to that message. Peers can freely change their feedback by clicking on other messages.
+
+Peer graders can view feedback on the TA Grading page rubric:
+![](/images/peer_grading/peer_feedback_grader_view.png)
