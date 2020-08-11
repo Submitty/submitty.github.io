@@ -162,6 +162,7 @@
         - name: v19.08.03
         - name: v19.06.02
         - name: v.19.06.01
+    - name: System Debugging
     - name: Database Overview
     - name: User Access Level
     - name: Course Creation

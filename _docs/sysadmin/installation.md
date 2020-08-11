@@ -1,7 +1,6 @@
 ---
 title: Installation
 category: System Administrator
-order: 2
 ---
 
 These instructions will help guide you to installing Submitty onto a
