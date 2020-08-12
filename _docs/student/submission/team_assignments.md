@@ -60,7 +60,7 @@ invite you to join their team.
 
 ![](/images/team_seeking.png)
 
-If the instructor has a team/partner seeking messages enabled, you will
+If the instructor has a team/partner seeking message enabled, you will
 be able to add a message that is visible to other students/teams. 
 If no message is currently set, click on the ```Set Message``` 
 button to enter a message. If a message exists, click ```Edit Message```
