@@ -206,3 +206,5 @@ Please also see [Installation Version Notes](/sysadmin/version_notes)
    "Network" tab under "Cached Web Content" click "Clear Now"
 
    **For Microsoft Edge:** Choose the Hub icon then the History icon, then "Clear all history"
+
+* If the Twig files which are being cached by the browser or/and there are errors then you may again need to clear your browser's cache or/and cookies. [To make sure your actions don't affect other site, you can clear cache from the past hour].
