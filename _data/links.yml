@@ -245,6 +245,12 @@
       extern: true
     - name: Google Summer of Code
       children:
+        - name: 2020 Mukul Kumar Jha
+          link: 2020_Mukul_Kumar_Jha
+        - name: 2020 Marwan_Atef
+          link: 2020_Marwan_Atef
+        - name: 2020 Harsh Joshi
+          link: 2020_Harsh_Joshi
         - name: 2019 Fon Noel
           link: 2019_FonNoel
         - name: 2019 Drumil Patel
