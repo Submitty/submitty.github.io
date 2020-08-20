@@ -115,3 +115,4 @@ directive. This includes functions and classes as well as regular variables.
 - [semi](https://eslint.org/docs/rules/semi) (always have semi-colons)
 - [semi-style](https://eslint.org/docs/rules/semi-style) (semi-colons are at end of lines)
 - [template-curly-spacing](https://eslint.org/docs/rules/template-curly-spacing) (enforces no spaces between curly braces and variable in template literals)
+- [curly](https://eslint.org/docs/rules/curly) (enforces curly braces for "if", "if-else", "while", and "for" blocks)
