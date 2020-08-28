@@ -48,6 +48,24 @@ file, you will see the peer grading assignments for each student:
 ![](/images/peer_grading/peer_grading_matrix_uploaded.png)
 
 
+### Options for Peer Matrix
+
+Options for peer matrix include restricting the assignments to each registration section, downloading peer matrix as csv, clearing the peer matrix and adding new grader to the exisiting peer matrix and more.
+These options are accessible on the instructor web interface
+
+![](/images/peer_grading/peer_matrix_options.png)
+* **All Grade All** option sets the peer matrix to enable students grading all other students in a class.
+
+* **Restrict to Registration** restricts the peer grading assignments to each registration section which means only students in a registration section will be grading each other.
+
+* **Submit before grading** enables the instructor to allow grading to only those students who have submitted their own assignments. Note that this options should only be used when sufficient submissions have been made, usually after the submissions are closed. 
+
+* **Download Peer CSV**  exports the current peer matrix to csv which can be reuploaded for future/other peer assigments.
+
+* **Clear Peer Matrix**  resets the current peer matrix. Note that this option should be used carefully when randomized peer assignments are used as it can't be undone.
+
+* **Add Grader to the Matrix** adds a new grader to the current peer matrix. It is accessible on the instructor interface right below the peer matrix.
+
 ### Student View of Peer Grading Interface
 
 Students who are assigned peer grading will then have access to the
