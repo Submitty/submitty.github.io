@@ -58,7 +58,7 @@ These options are accessible on the instructor web interface.
 
 * **Restrict to Registration** restricts the peer grading assignments to each registration section which means only students in a registration section will be grading each other.
 
-* **Submit before grading** enables the instructor to allow grading to only those students who have submitted their own assignments. Note that this options should only be used when sufficient submissions have been made, usually after the submissions are closed. 
+* **Submit before grading** enables the instructor to allow grading to only those students who have submitted their own assignments. Note that this option should only be used when sufficient submissions have been made, usually after the submissions are closed. 
 
 * **Download Peer CSV**  exports the current peer matrix to csv which can be reuploaded for future/other peer assigments.
 
