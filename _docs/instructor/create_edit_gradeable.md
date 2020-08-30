@@ -95,6 +95,8 @@ From the create/edit a gradeable page you can specify (or change):
 
 * the date/time that the TA/mentor grades will be released to
   students.
+  
+* the date/time the student can start making grade inquiries, if grade inquiry is enabled for the gradeable.
    
 
 
