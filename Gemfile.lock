@@ -250,7 +250,6 @@ GEM
       unf_ext
     unf_ext (0.0.7.7)
     unicode-display_width (1.7.0)
-    wdm (0.1.1)
     zeitwerk (2.3.1)
 
 PLATFORMS
@@ -259,7 +258,6 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages (= 207)
-  wdm (>= 0.1.1)
 
 BUNDLED WITH
    2.1.4
