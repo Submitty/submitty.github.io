@@ -61,7 +61,7 @@ Wrote documentation at submitty.org for
 * Using options for peer matrix
 
 ## Review
-Reviewed pull request of fellow developers which included PRs on.
+Reviewed pull request of fellow developers which included PRs on
 * Late submission sheck
 * Adding new grader to the peer matrix
 * Editing peer matrix
@@ -78,5 +78,5 @@ Twig files have a lot of javascript written in them in grading which makes it ve
 
 
 # My Experience of GSOC with Submitty
-Submitty is a live project and being able to work on a project that is being actively used by hundreds of students and teachers has been fascinating. To work with developers across regions, careers and skillset was equally motivating. Working with developers and mentors at Submitty brought in new perspectives and gave me insights on being a better developer. While I worked at Submitty, I got to experience open source culture from close quarters, work around developing real solutions, introspect my own work and skills, contribute to open source and be a better at work. I enjoyed every bit of it. To put my work right to meet the expectations of the community was challenging and rewarding. Thorough code reviews with more than one pair of eyes looking gave me valuable insights and feedback. 
+Submitty is a live project and being able to work on a project that is being actively used by hundreds of students and teachers has been fascinating. To work with developers across regions, careers and skillset was equally motivating. Working with developers and mentors at Submitty brought in new perspectives and gave me insights on being a better developer. While I worked at Submitty, I got to experience open source culture from close quarters, work around developing real solutions, introspect my own work and skills, contribute to open source and be a better at work. I enjoyed every bit of it. To put my work right to meet the expectations of the community was challenging and rewarding. Thorough code reviews with more than one pair of eyes looking gave me valuable insights and feedback.
 Whenever I had slow progress the mentors were extremely helpful and empathetic. From 1v1 meetings to discussions on slack, emails and PR threads, I am grateful for the additional help and support.
