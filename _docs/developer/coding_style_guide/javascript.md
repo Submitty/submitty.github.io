@@ -42,6 +42,7 @@ directive. This includes functions and classes as well as regular variables.
 
 - [arrow-spacing](https://eslint.org/docs/rules/arrow-spacing)
 - [block-spacing](https://eslint.org/docs/rules/block-spacing)
+- [curly](https://eslint.org/docs/rules/curly) (enforces curly braces for "if", "if-else", "while", and "for" blocks)
 - [for-direction](https://eslint.org/docs/rules/for-direction)
 - [getter-return](https://eslint.org/docs/rules/getter-return)
 - [no-async-promise-executor](https://eslint.org/docs/rules/no-async-promise-executor)
