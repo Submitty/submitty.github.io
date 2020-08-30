@@ -76,7 +76,7 @@ tutoring.  By default, your Submitty
 [preferred name](/student/account/preferred_name) will be
 inserted into the "Your Name" field of the Office Hours Queue.
 When office
-hours is held in a common physical name, the TA/instructor may call
+hours is held in a common physical location, the TA/instructor may call
 this name aloud (if they don't yet know the names/faces of all
 students in the course).
 If desired, you
