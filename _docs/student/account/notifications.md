@@ -69,7 +69,7 @@ the grading with the staff through a private message system.
 Notifications will be sent to the grader(s) who graded the specific
 student and/or problem.  But all graders with access to view that
 students submission will be able to view the grade inquiry discussion
-and repond to the inquiry.
+and respond to the inquiry.
 
 ![](/images/notifications/grade_inquiry_notification_settings.PNG)
 
