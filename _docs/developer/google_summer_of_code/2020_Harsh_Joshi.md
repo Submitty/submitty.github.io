@@ -31,7 +31,6 @@ The grading stats on the status page show relevant grading figures including num
 ## Options for peer matrix
 Peer matrix options allow to configure the peer grading assignments. My work on options for peer matrix included restricting the assignments to each registration section, downloading peer matrix as csv, clearing the peer matrix, and writing feature to enable every student grading every other student.
 
-![](/images/peer_grading/peer_matrix_options.png)
 * **All Grade All** option sets the peer matrix such that each student grades every other student in a class.
 
 * **Restrict to Registration** restricts the peer grading assignments to each registration section which means only students in a registration section will be grading each other.
