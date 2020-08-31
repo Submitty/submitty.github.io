@@ -8,7 +8,7 @@ category: Developer - Google Summer of Code 2020
 ### Mobile-Friendly Website and Progressive Web App (PWA)
 
 
-This project was foccused on making submitty mobile friendly and a progressive web-app with adding push notification feature but during the summer I worked equally on number of other features which involved adding and updating database, writing SQL queries and adding corresponding migrations file. I also added unit tests for different Models and used Selenium (with python) to write end-to-end tests.
+This project was focused on making submitty mobile friendly and a progressive web-app with adding push notification feature but during the summer I worked equally on number of other features which involved adding and updating database, writing SQL queries and adding corresponding migrations file. I also added unit tests for different Models and used Selenium (with python) to write end-to-end tests.
 
 
 To sum things up, this was a great full-stack project and I enjoyed working on all the major parts of Submitty! 
