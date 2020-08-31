@@ -16,9 +16,9 @@ To sum things up, this was a great full-stack project and I enjoyed working on a
 1. Designs, created designs for new TA grading interface and some other mobile-focussed components and iterated over it based on awesome feedback from the entire Submitty team :).
 Tool Used: Figma  
 2. Views (Frontend), improved existing User interface, made pages compatible with different screen sizes and added some new interfaces also. 
-Tech Used: Figma, HTML, Twig, CSS, Bootstrap, JS, JQuery
+Tech Used: Figma, HTML, Twig, CSS, Bootstrap, JS, JQuery, Service-Workers
 3. Models and Controllers (Backend), worked on different models and played a lot with database while adding new pages, views and implementing new feature requests.
-Tech Used: PHP, PostgreSQL, SQLAlchemy, Vagrant     
+Tech Used: PHP, PostgreSQL, Datagrip, SQLAlchemy, Vagrant     
 4. Testing, during the summer I added unit-tests for the Models which were not covered by tests and also added end-to-end tests.
 Tech Used: Selenium, Python, PHPUnit, TravisCI
 
@@ -117,7 +117,7 @@ Following listed Pull Requests were created during the GSoC timeline under this 
     * Make Submitty installable on all the major platform as an app (PWA)
     * Enable Push notification (in addition to all the onsite-notification which have currently) to keep students and instructors informed with latest development across all the courses.
 
-- [[Refactor] Remove the old TA graidng interface and set the new interface as default](https://github.com/Submitty/Submitty/pull/5857)
+- [[Refactor: InstructorUI] Remove support for old TA-grading interface](https://github.com/Submitty/Submitty/pull/5859)
     * Remove the legacy interface from Submitty and update route to use the new Interface as default one.
     * Refactor and code cleanups in response to the above change.
 
@@ -150,7 +150,7 @@ Here are some of [my PRs](https://github.com/Submitty/submitty.github.io/pulls/m
 
 #### Overall Experience
 
-I got introduced to Submitty last year and from the beginning I loved the Submitty's objective and friendly environment, thanks to [Matthew Peveler](https://github.com/MasterOdin) for helping me with the onboarding and valueable feedbacks through your reviews.
+I got introduced to Submitty last year and from the very beginning, I loved the Submitty's objective and friendly environment, thanks to [Matthew Peveler](https://github.com/MasterOdin) for helping me with the onboarding and valueable feedbacks through your reviews.
 I am very thankful to [Barbara Cutler](https://github.com/bmcutler), Submitty, RPI, and the GSoC team for giving me this chance and for bringing in this amazing experience full of learning and fun.
 Complete project involved a lot of learning and challenges. I loved collaborating with RPI faculty and students and enjoyed working on the project used by not only RPI but a number of other universities across the globe.
 During the whole summer, all of my project mentors were super awesome and super supportive and I learned a lot from them. Special thanks to [Barbara Cutler](https://github.com/bmcutler), [Eli Schiff](https://github.com/elihschiff), [Shail Patel](https://github.com/shailpatels), [Evan Maicus](https://github.com/emaicus), [Matthew Peveler](https://github.com/MasterOdin). They helped me with designing the new interface and gave me interesting developer tips during the whole project, I also enjoyed reviewing other developers code. 
