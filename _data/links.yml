@@ -217,6 +217,8 @@
         - name: CSS
     - name: Testing
       children:
+        - name: Installing PHP
+          link: install_php
         - name: Linting / Static Analysis
           link: linting_static_analysis
         - name: Python Unit Tests
