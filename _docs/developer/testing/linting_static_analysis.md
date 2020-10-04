@@ -42,6 +42,7 @@ See also: [Python Style Guide](/developer/coding_style_guide/python)
 The PHP code of Submitty is linted using [phpcs](https://github.com/squizlabs/PHP_CodeSniffer).
 
 You can run the PHP Linter locally (from your host operating system):
+If you are running on WSL and are seeing errors, remove "`php`" from the following commands.
 
 ```bash
 # from root level of Submitty repository
