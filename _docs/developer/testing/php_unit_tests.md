@@ -8,7 +8,11 @@ To validate the unit behavior of the site code, we utilize
 
 ### Running PHP Unit Tests
 
+*You will need PHP installed on your host system first, see [Installing PHP](/developer/testing/install_php)*
+
 To run the PHP unit test suite locally, `cd` to the `Submitty/site` directory and type:
+
+If you are running on WSL and are seeing errors, remove "`php`" from the following commands.
 
 ```
 php vendor/bin/phpunit --configuration tests/phpunit.xml
