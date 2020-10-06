@@ -5,25 +5,11 @@ order: 6
 ---
 
 
-_The optional instructions below are suggestions for the system
-administrators of a live Submitty installation._
-
-## Table of Contents
-* [Schedule backups of production server data](#schedule-backups-of-production-server-data)
-* [Capture cron error messages](#capture-cron-error-messages)
-* [Configure log rotation](#configure-log-rotation)
-* [Set password policy](#set-password-policy)
-* [Secure SSH](#secure-ssh)
-* [Block some brute-force ssh connections](#block-some-brute-force-ssh-connections-by-typing-the-following-at-a-command-prompt)
-* [Disable PHP Functions](#disable-php-functions)
-* [Increasing the max number of files that can be uploaded at once](#increasing-the-max-number-of-files-that-can-be-uploaded-at-once
-)
-* [Allowing Large Student File Upload Submissions](#allowing-large-student-file-upload-submissions)
-* [Show system message to all users](#show-system-message-to-all-users)
-* [Adding Additional Links To The Footer](#adding-additional-links-to-the-footer)
+The optional instructions below are suggestions for the system
+administrators of a live Submitty installation.
 
 
-### Schedule backups of production server data
+## Schedule backups of production server data
 
 Specifically, the configuration, submission, and results data for all courses:
 
@@ -43,7 +29,7 @@ You may want to back up more of `/var/local/submitty` to save configurations and
 <small>[Back To Table of Contents](#table-of-contents)</small>
 
 
-### Capture cron error messages
+## Capture cron error messages
 
 The `submitty_daemon` user runs the [sbin/send_email.py](https://github.com/Submitty/Submitty/blob/master/sbin/send_email.py)
 script.  Console output from this script can be emailed to a sysadmin to help ensure that errors can be reported and addressed.
@@ -57,7 +43,7 @@ MAILTO=sysadmins@lists.myuniversity.edu
 <small>[Back To Table of Contents](#table-of-contents)</small>
 
 
-### Configure log rotation
+## Configure log rotation
 
 The defaults will work, but you may want to keep records around for
 longer and enable compression so that the logs don’t take up as
@@ -70,7 +56,7 @@ details.
 <small>[Back To Table of Contents](#table-of-contents)</small>
 
 
-### Set password policy
+## Set password policy
 
 It is a good idea to enforce strong passwords and password aging
 Edit `/etc/login.defs` to set default password and account expiration
@@ -116,7 +102,7 @@ authentication, make sure the `submitty_cgi` user is in the shadow group.__
 <small>[Back To Table of Contents](#table-of-contents)</small>
 
 
-### Secure SSH
+## Secure SSH
 
 __IMPORTANT: This applies to Ubuntu 16.04 only.  Do not do this on Ubuntu 18.04.__
 
@@ -131,7 +117,7 @@ Ciphers aes256-ctr,aes192-ctr,aes128-ctr,arcfour256,arcfour128
 <small>[Back To Table of Contents](#table-of-contents)</small>
 
 
-### Block some brute-force ssh connections by typing the following at a command prompt:
+## Block some brute-force ssh connections by typing the following at a command prompt:
 
 ```
 sudo bash
@@ -156,7 +142,7 @@ allowed to connect more frequently.
 <small>[Back To Table of Contents](#table-of-contents)</small>
 
 
-### Disable PHP Functions
+## Disable PHP Functions
 
 To improve the security of the system, it might be useful to disable various unused PHP functions. This can be done by modifying the [disabled_functions](https://secure.php.net/manual/en/ini.core.php#ini.disable-functions) directive. Provided below is the setting used within our Vagrant and live setup:
 
@@ -168,7 +154,7 @@ However, this should be only applied to the `php.ini` running the web server and
 
 <small>[Back To Table of Contents](#table-of-contents)</small>
 
-### Increasing the max number of files that can be uploaded at once
+## Increasing the max number of files that can be uploaded at once
 
 By default, PHP only allows 20 files to be uploaded at a time. To change this limit, edit:
 
@@ -187,7 +173,7 @@ Then restart PHP
 systemctl reload php7.2-fpm
 ```
 
-### Allowing Large Student File Upload Submissions
+## Allowing Large Student File Upload Submissions
 
 By default, Apache / Ubuntu limits the size of file upload by POST to
 10MB.  To increase this edit:
@@ -243,7 +229,44 @@ students are using the system at once.
 <small>[Back To Table of Contents](#table-of-contents)</small>
 
 
-### Show system message to all users
+
+## Tune the performance of the website to handle a large number of users
+
+
+Adjust the following settings in `/etc/php/7.2/fpm/pool.d/submitty.conf`.
+
+We have found that the following settings work well for a production
+server with approximately 2000 students.  The commented out line is
+the default value.  Please read the documentation to determine values
+that are appropriate for your own system.
+
+
+```
+; pm.start_servers = 4
+pm.start_servers = 20
+
+; pm.min_spare_servers = 2
+pm.min_spare_servers = 10
+
+; pm.max_spare_servers = 6
+pm.max_spare_servers = 30
+
+; pm.max_children = 20
+pm.max_children = 100
+```
+
+
+After editing these values, be sure to restart apache and php-fpm:
+
+
+```
+sudo systemctl restart apache2.service
+sudo systemctl restart php7.2-fpm.service
+```
+
+
+
+## Show system message to all users
 
 Submitty allows showing a message to all users on all pages. This is useful for advertising
 events that affect all users, such as system maintainence windows where it would be unavailable.
@@ -255,7 +278,7 @@ key/value for `system_message`. If the key exists, but is empty, no message will
 <small>[Back To Table of Contents](#table-of-contents)</small>
 
 
-### Adding Additional Links To The Footer
+## Adding Additional Links To The Footer
 
 You may add additional links to be shown in the footer.  i.e. you may link to pages related to your institution or public policy notices.
 Additional links will appear to the right of the copyright notice and credit links to Github and RCOS.
