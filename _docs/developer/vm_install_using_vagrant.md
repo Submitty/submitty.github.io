@@ -41,7 +41,9 @@ instructions.
    Leaving it enabled will force VirtualBox to use the Hyper-V
    backend, which will be slower and can cause instability in the
    VM.
-   Note: This may stop programs like Docker Desktop and WSL 2 from
+   
+   **Note:**
+   This may stop programs like Docker Desktop and WSL 2 from
    working. If these programs are essential to your workflow, consider
    looking up how to add a separate boot entry with "hypervisorlaunchtype"
    set to "off" for use with VirtualBox.
