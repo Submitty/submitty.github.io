@@ -255,3 +255,7 @@
           link: 2018_TusharGurjar
         - name: 2018 Gagan Kumar
           link: 2018_GaganKumar
+    - name: Poster Session
+      children:
+        - name: 2020 John Hulton
+        - link: 2020_JohnHulton
