@@ -50,7 +50,9 @@ of other distros should be able to adapt it to their needs.
 
 Windows users are encouraged to install [Windows Subsystem for Linux
 (WSL)](https://ubuntu.com/wsl) and then follow the Ubuntu
-instructions.
+instructions. However, for E2E tests it is better to run them directly
+on Windows. Make sure that you have [Python installed](https://www.python.org/downloads/)
+to be able to install dependencies using pip.
 
 For macOS:
 
@@ -81,6 +83,8 @@ pip3 install psycopg2-binary
 pip3 install coverage
 pip3 install --pre selenium
 pip3 install flake8
+pip3 install websocket
+pip3 install websocket-client
 ```
 
 To install the PHP and JS developer dependencies:
