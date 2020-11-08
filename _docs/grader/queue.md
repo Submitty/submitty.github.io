@@ -86,7 +86,7 @@ your topic and course structure.  *Note: A student may only join one
 office hours queue at a time!*
 
 ![](/images/queue/queue_settings_button.png)
-![](/images/queue/open_modify_queue.png)
+![](/images/queue/queue_open_modify.png)
 
 
 Often it is helpful to *require* that students be present in the
