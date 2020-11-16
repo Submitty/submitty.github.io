@@ -241,9 +241,7 @@ GEM
     simpleidn (0.1.1)
       unf (~> 0.1.4)
     terminal-table (1.8.0)
-      unicode-display_width (~> 1.1, >= 1.1.1)]
-    wdm (0.1.1)
-    zeitwerk (2.3.1)
+      unicode-display_width (~> 1.1, >= 1.1.1)
     thread_safe (0.3.6)
     typhoeus (1.4.0)
       ethon (>= 0.9.0)
@@ -254,6 +252,7 @@ GEM
     unf_ext (0.0.7.7)
     unf_ext (0.0.7.7-x64-mingw32)
     unicode-display_width (1.7.0)
+    zeitwerk (2.4.0)
 
 PLATFORMS
   ruby
@@ -261,6 +260,6 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages (= 209)
-wdm (>= 0.1.1)
+
 BUNDLED WITH
    2.1.4
