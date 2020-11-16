@@ -1,8 +1,9 @@
 ---
-category: Student -- Account
+category: Student -- Courses & Profile
 title: Course Navigation
 redirect_from:
   - /student/navigation
+  - /student/account/navigation
 ---
 
 The initial navigation page displays all available assignments

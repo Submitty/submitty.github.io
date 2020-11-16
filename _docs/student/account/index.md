@@ -1,6 +1,6 @@
 ---
 category: Student
-title: Account
+title: Courses & Profile
 redirect_from:
   - /student
 ---
@@ -17,11 +17,14 @@ authenticating/accessing the page, double check the URL and your
 username and password, and contact the instructor, TA, or system
 administrator as appropriate.
 
-![](/images/Homepage.png)
+
+## My Courses
 
 Welcome to Submitty!  From this gateway page, you can access your
 current courses and past courses (until they are archived and removed
 from student view).
+
+![](/images/Homepage.png)
 
 Find the course from the choices and click the button to
 [enter the course and access](/student/account/navigation)
@@ -33,12 +36,18 @@ or teaching staff for the course or system administrator for your
 school or department.
 
 
-You can also review the email address associated
-with your account and change your
-[preferred name](/student/account/preferred_name),
-[password](/student/account/password),
-[local timezone](/student/account/local_timezone), and
-[theme](/student/account/theme).
+
+## My Profile
+
+This page shows all your profile specific information. On this page,
+you can edit your [preferred names](/student/account/preferred_name),
+your [time-zone](/student/account/local_timezone),
+your [password](/student/account/password) (if enabled on your system),
+[theme](/student/account/theme) to use submitty,
+and your [profile photo](/student/account/photo).
+
+
+![](/images/student/user_profile.png)  
 
 
 

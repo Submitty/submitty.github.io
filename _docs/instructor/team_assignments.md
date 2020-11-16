@@ -32,6 +32,16 @@ create new teams or invite new members to existing teams.
 
 ![](/images/team_assignment_creation_2.png)
 
+### Team Seeking
+
+Instructors have the option of enabling a team seeking message for
+students looking for a team or a partner. If enabled, the student can
+add a message that will be shown to other students viewing under
+```Users Seeking Team/Partner```. Instructors can also set the
+instructions for the message.
+
+![](/images/instructor_team_message.png)
+
 ### Creating And Editing Teams
 
 Instructors also have the option of forming and managing teams for the students.

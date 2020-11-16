@@ -10,15 +10,15 @@
 
 - name: Student
   children:
-    - name: Account & Customization
+    - name: Courses & Profile
       link: account
       children:
         - name: Overview
           link: index
         - name: Course Navigation
-          link: navigation
         - name: Preferred Name
         - name: Password
+        - name: Photo
         - name: Local Timezone
         - name: Theme
         - name: Notifications & Email
@@ -157,10 +157,13 @@
     - name: Installation Version Notes
       link: version_notes
       children:
+        - name: v20.09.00
+        - name: v20.08.00
         - name: v20.06.00
         - name: v19.08.03
         - name: v19.06.02
         - name: v.19.06.01
+    - name: System Debugging
     - name: Database Overview
     - name: User Access Level
     - name: Course Creation
@@ -214,6 +217,8 @@
         - name: CSS
     - name: Testing
       children:
+        - name: Installing PHP
+          link: install_php
         - name: Linting / Static Analysis
           link: linting_static_analysis
         - name: Python Unit Tests
@@ -243,6 +248,12 @@
       extern: true
     - name: Google Summer of Code
       children:
+        - name: 2020 Mukul Kumar Jha
+          link: 2020_Mukul_Kumar_Jha
+        - name: 2020 Marwan_Atef
+          link: 2020_Marwan_Atef
+        - name: 2020 Harsh Joshi
+          link: 2020_Harsh_Joshi
         - name: 2019 Fon Noel
           link: 2019_FonNoel
         - name: 2019 Drumil Patel

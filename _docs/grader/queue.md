@@ -76,7 +76,7 @@ appear beneath each student's entry in the office hours queue.
 All users with limited access grader privileges or higher may access,
 create, and manage office hours queues for this course.
 
-To create and open a new queue you need click "Toggle Filter Settings"
+To create and open a new queue you need click "Queue Settings"
 button.  Then, enter a unique name for the new queue.  If your course
 has multiple recitation or laboratory sections, you may want to make a
 separate queue for each section/room.  You may also want to make
@@ -85,7 +85,9 @@ checkoff, code debugging, lecture material, etc.), as appropriate for
 your topic and course structure.  *Note: A student may only join one
 office hours queue at a time!*
 
-![](/images/queue/queue_new_queue.png)
+![](/images/queue/queue_settings_button.png)
+![](/images/queue/queue_open_modify.png)
+
 
 Often it is helpful to *require* that students be present in the
 tutoring room prior to joining the queue.  To enforce this policy,
@@ -95,17 +97,17 @@ the queue.  Then select "Open New Queue".
 
 The access code of an existing queue can be changed or re-randomized
 at any time by selecting the refresh icon to the right of the access code or
-you may set your own access code, as desired.  Then press "Change Queue
+you may set your own access code, as desired.  Then press "Change Queue Access
 Code".
 
 ### Managing an Existing Office Hours Queue
 
 When the designated office hours or tutoring session is complete, the
 TA/instructor should close the queue to prevent additional students
-from joining the queue.  Click "Toggle Filter Settings" and then
-"Close Queue" on the desired queue.  Closing the queue does not delete
-it; rather, the uniquely named queue is available to be re-opened and
-re-used tomorrow or next week!
+from joining the queue.  Click "Queue Settings" and then uncheck the 
+desired queue.  Closing the queue does not delete it; rather, the 
+uniquely named queue is available to be re-opened and re-used tomorrow 
+or next week!
 
 All students who entered the queue before it was closed will remain in
 the queue and can be helped.  Alternatively, the TA/instructor may
@@ -113,15 +115,21 @@ remove all students from the queue by pressing "Empty Queue" or press
 "Delete Queue" to remove students from the queue *and* delete the
 queue.
 
+![](/images/queue/queue_settings.png)
+
+In the example above, *Section1*, *Section2*, and *Office Hours* are
+open and *Section3* and *Section4* are closed.
 
 ### Filtering Office Hours Queues
 
 In a large course with multiple active/open queues and multiple
 TAs/instructors helping students, it is typical to assign some
-TAs/instructors to focus on specific queues.  Each TA/instructor can
-filter the queue of all students waiting for help by clicking "Toggle
-Filter Settings", and then selecting/filtering the list to one or more
-queues.  Then press "Toggle Filter Settings" to close the queue names.
+TAs/instructors to focus on specific queues. Each TA/instructor can
+filter the queue of all students waiting for help by clicking the
+queue button in the row of queues. A filled in queue button means that
+the students in that queue will be shown in the list of all students,
+and a colorless queue button means that the students in that queue will
+be hidden in the list of all students.
 
 ![](/images/queue/queue_filter.png)
 

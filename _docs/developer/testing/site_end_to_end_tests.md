@@ -9,6 +9,10 @@ directly, but rather focuses on user navigation through the website.
 It utilizes [selenium](https://www.seleniumhq.org/) and Chrome to
 complete these tests.
 
+If you are using Windows
+[here](https://selenium-python.readthedocs.io/installation.html#detailed-instructions-for-windows-users)
+are more detailed instructions for selenium on Windows.
+
 The python dependencies can be installed by doing:
 
 ```bash
@@ -43,7 +47,7 @@ sudo chown root:root /usr/local/bin/chromedriver && \
 sudo chmod +x /usr/local/bin/chromedriver
 ```
 
-For Windows, download the appropriate version and place it on your 
+For Windows, download the appropriate version and place it on your
 [PATH](https://helpdeskgeek.com/windows-10/add-windows-path-environment-variable/).
 
 _NOTE_: You will need to make sure to keep chromedriver up-to-date as Chrome auto-updates itself.
@@ -72,7 +76,7 @@ python3 -m unittest
 **Note:** If you are using a non-standard installation of Submitty, you must
 edit `tests/e2e/base_testcase.py` and change the constant `TEST_URL`
 to reflect your installation's IP address.
-  
+
 To run an individual file or testcase, run:
 
 ```bash
@@ -87,24 +91,24 @@ python3 -m unittest e2e.test_login.TestLogin
 python3 -m unittest e2e.test_login.TestLogin.test_login
 ```
 
-To disable headless mode and view the browser while running a test, 
+To disable headless mode and view the browser while running a test,
 edit `tests/e2e/base_testcase.py` and comment out the line:
 
 ```python
 self.options.add_argument('--headless')
 ```
 
-To slow down the tests for debugging, you can pause execution until 
+To slow down the tests for debugging, you can pause execution until
 you press Enter in the terminal. To do this, add the following line into your test:
 
 ```python
 self.wait_user_input()
 ```
 
-Furthermore, Selenium's `wait.until` is another way to slow down tests. 
-It waits until an element loads or times out after a maximum time. This is 
-useful for both debugging and writing tests. For example, the following snippet 
-waits until an `h1` element containing "My Heading" appears and fails after 
+Furthermore, Selenium's `wait.until` is another way to slow down tests.
+It waits until an element loads or times out after a maximum time. This is
+useful for both debugging and writing tests. For example, the following snippet
+waits until an `h1` element containing "My Heading" appears and fails after
 10 secs if nothing shows up.
 
 ```python

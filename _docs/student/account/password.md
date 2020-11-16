@@ -1,17 +1,17 @@
 ---
-category: Student -- Account
+category: Student -- Courses & Profile
 title: Password
 ---
 
 If your school's installation of Submitty is configured with database
-passwords, you'll see the "Change Password" text and a pencil icon at
-the bottom of the "About You" panel, and you can change this password
-through the web interface.  Click this pencil and enter a new
-password.
+passwords, you'll see "Change Password" text and a pencil icon under the "Basic
+Information" on "My Profile" page, you can change this password
+through the web interface by clicking on this pencil icon. Enter your new
+password and again type your password to confirm and press "Submit".
 
-![](/images/HomepagePassword.png)
+![](/images/student/ChangePasswordField.png)
 
-![](/images/ChangePasswordForm.png)
+![](/images/student/ChangePasswordForm.png)
 
 If you don't see see this option on your account, it is likely this
 password is served through a shared central password system used by

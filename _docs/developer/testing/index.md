@@ -41,6 +41,7 @@ handful of dependencies:
 * Pip
 * PHP (and some extensions)
 * Composer
+* NodeJS
 
 Installing these should be straight forward on macOS (using
 [Homebrew](https://brew.sh)) and Linux distros using its package
@@ -49,7 +50,9 @@ of other distros should be able to adapt it to their needs.
 
 Windows users are encouraged to install [Windows Subsystem for Linux
 (WSL)](https://ubuntu.com/wsl) and then follow the Ubuntu
-instructions.
+instructions. However, for E2E tests it is better to run them directly
+on Windows. Make sure that you have [Python installed](https://www.python.org/downloads/)
+to be able to install dependencies using pip.
 
 For macOS:
 
@@ -64,7 +67,6 @@ For Ubuntu:
 sudo apt-get install php-cli php-mbstring php-xml php-xdebug php-curl php-zip php-sqlite3 composer
 sudo apt-get install python3 python3-pip
 ```
-
 
 Now, to install dependencies for Python on either OS:
 
@@ -81,20 +83,22 @@ pip3 install psycopg2-binary
 pip3 install coverage
 pip3 install --pre selenium
 pip3 install flake8
+pip3 install websocket
+pip3 install websocket-client
 ```
 
-To install the PHP dependencies:
+To install the PHP and JS developer dependencies:
 
 ```bash
 cd site
 composer install
+npm install
 ```
 
-__Note:__ Normally one can run Composer by direct execution,
+__Note:__ Normally one can run Composer installed packages by direct execution,
 e.g. `vendor/bin/phpunit`.  However, due to the integration of
 Submitty installer and Vagrant, packages in the vendor directory will
 lose their execution bit, so you will need to specify `php` before the
 thing you are attempting to execute (e.g. `php vendor/bin/phpunit`).
-
 
 Please use the sidebar menu for additional documentation for each type of test.
