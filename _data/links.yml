@@ -246,6 +246,11 @@
     - name: API
       link: https://api.submitty.org
       extern: true
+    - name: MS/PhD Students
+      link: ms_phd_students
+      children:
+        - name: John Hulton MS 2020
+          link: MS_2020_John_Hulton
     - name: Google Summer of Code
       children:
         - name: 2020 Mukul Kumar Jha
@@ -266,3 +271,4 @@
           link: 2018_TusharGurjar
         - name: 2018 Gagan Kumar
           link: 2018_GaganKumar
+
