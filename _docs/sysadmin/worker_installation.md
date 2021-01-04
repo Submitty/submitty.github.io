@@ -22,14 +22,20 @@ _Note: These instructions should be run under root/sudo._
 2. Create a ```submitty``` user on the machine. The user's name is not important.
 The user should only be used for submitty related activities.
 
-3. After installing the operating system, clone the git repository:
+3. Install git
+
+   ```
+   sudo apt install git
+   ```
+
+4. After installing the operating system, clone the git repository:
 
    ```
    mkdir -p /usr/local/submitty/GIT_CHECKOUT
    git clone https://github.com/Submitty/Submitty.git /usr/local/submitty/GIT_CHECKOUT/Submitty
    ```
 
-4. Run the automated portion of the install, using the ```--worker``` option.
+5. Run the automated portion of the install, using the ```--worker``` option.
 
    ```
    cd /usr/local/submitty/GIT_CHECKOUT/Submitty
@@ -39,14 +45,14 @@ The user should only be used for submitty related activities.
    You will be asked to provide the name of your submitty user by the
    [CONFIGURE_SUBMITTY.py script](https://github.com/Submitty/Submitty/blob/master/.setup/CONFIGURE_SUBMITTY.py).
 
-5. Run installations specific to your university.  
+6. Run installations specific to your university.
    For example:  [RPI Computer Science specific installations](https://github.com/Submitty/Submitty/blob/master/.setup/distro_setup/ubuntu/rpi.sh)
 
    ```
-   sudo bash /usr/local/submitty/.setup/distro_setup/ubuntu/rpi.sh
+   sudo bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/distro_setup/ubuntu/rpi.sh
    ```
 
-6. Add the submitty user to the ```submitty_daemon```, ```submitty_daemonphp```, and ```docker```
+7. Add the submitty user to the ```submitty_daemon```, ```submitty_daemonphp```, and ```docker```
    groups.
 
    ```
@@ -55,40 +61,41 @@ The user should only be used for submitty related activities.
    sudo usermod -a -G docker YOUR_SUBMITTY_USER
    ```
 
-7. Next, we must set up an ssh key so that submitty_daemon user on the primary
-  machine can copy files to our worker machine.
+8. Next, we must set up an ssh key so that submitty_daemon user on the primary
+   machine can copy files to our worker machine.
 
-  On primary submitty:  
-  ___NOTE: ssh-keygen asks for the name of your submitty user.___  
-  ___NOTE: The ssh-copy-id line requires a replacement___
-  ```
-  su submitty_daemon
-  cd ~/.ssh
-  ssh-keygen
-  ssh-copy-id -i ~/.ssh/id_rsa.pub SUBMITTY_USER@HOSTNAME
-  ```
+   On primary submitty:  
+   ___NOTE: ssh-keygen asks for the name of your submitty user.___  
+   ___NOTE: The ssh-copy-id line requires a replacement___
+   ```
+   su submitty_daemon
+   cd ~/.ssh
+   ssh-keygen
+   ssh-copy-id -i ~/.ssh/id_rsa.pub SUBMITTY_USER@HOSTNAME
+   ```
 
-8. Finally, we must add the machine to the list of workers available to our
-  primary machine. To do this:  
-  *  Log on to the primary Submitty machine.
-  *  Open ```/usr/local/submitty/config/autograding_workers.json``` with your favorite text editor.
-  *  Add a new entry with a unique key.
-  *  add at least one capability to the capabilities list. This capability will determine
+9. Finally, we must add the machine to the list of workers available to our
+   primary machine. To do this:  
+   *  Log on to the primary Submitty machine.
+   *  Open ```/usr/local/submitty/config/autograding_workers.json``` with your favorite text editor.
+   *  Add a new entry with a unique key.
+   *  add at least one capability to the capabilities list. This capability will determine
       which jobs should be shipped to this machine.
-  *  Add the 'address' of the machine to the address field (e.g. ```my_department.my_university.edu```).
-  *  Add the number of autograding workers (simultaneously processed jobs) for the machine.
-  *  Add the name of the submitty user on the machine as the username.
-  *  Set the machine to be enabled.
+   *  Add the 'address' of the machine to the address field (e.g. ```my_department.my_university.edu```).
+   *  Add the number of autograding workers (simultaneously processed jobs) for the machine.
+   *  Add the name of the submitty user on the machine as the username.
+   *  Set the machine to be enabled.
 
 9. Run ```/usr/local/submitty/.setup/INSTALL_SUBMITTY.sh``` so that the changes take effect.
 
 10. Inside of your assignment configurations, you may now add the line  
-  ```
+    ```
     required_capabilities : 'CAPABILITY'
-  ```
-  to ship your jobs to a worker with the capability CAPABILITY.
+    ```
+    to ship your jobs to a worker with the capability CAPABILITY.
 
 11. Note that if you are filtering or blocking ssh traffic, you will want to whitelist connections from the main submitty server into any workers you set up.
+
 
 # Additional Instructions for Graphics Application Workers
 
