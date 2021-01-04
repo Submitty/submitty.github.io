@@ -30,11 +30,11 @@ Please also see [Installation Version Notes](version_notes)
     sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh
     ```
 
-    If you provide the optional `restart_web` option, the script will
-    also restart Apache and PHP-FPM:
+    If you provide the optional `skip_web_restart` option, the script won't
+    restart Apache, nginx and PHP-FPM:
 
     ```
-    sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh restart_web
+    sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh skip_web_restart
     ```
 
     One of the early steps of this script checks your system
