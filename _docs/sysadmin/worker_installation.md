@@ -85,7 +85,7 @@ _Note: These instructions should be run under root/sudo._
    *  add at least one capability to the capabilities list. This capability will determine
       which jobs should be shipped to this machine.  See also
       [Automated Grading - Multiple Physical Servers](/developer/automated_grading#multiple-physical-servers)
-   *  Add the 'address' of the machine to the address field (e.g. ```worker1.my_university.edu```).
+   *  Add the 'address' of the machine to the address field (e.g. ```worker1.myuniversity.edu```).
    *  Add the number of autograding workers (simultaneously processed jobs) for the machine.
    *  Add the name of the submitty user on the machine as the username.
    *  Set the machine to be enabled.
@@ -171,7 +171,7 @@ _Note: These instructions should be run under root/sudo._
 
 # SSH Access via ProxyJump
 
-If a worker machine must be access through an intermediary (e.g., it
+If a worker machine must be accessed through an intermediary (e.g., it
 does not have a its own public facing IP address), you can configure
 indirect access to the worker machine as follows:
 
@@ -186,9 +186,13 @@ indirect access to the worker machine as follows:
     ProxyJump submitty@worker1.myuniversity.edu
     ```
 
+    In this example, worker2 does not have its own public-facing IP
+    address, but can be reached by going through worker1 as
+    intermediary.
+
 
 2.  Set up an ssh key (see instructions above) from the `submitty`
-    user or `worker1.myuniversity.edu` to the `submitty` user on the
+    user on `worker1.myuniversity.edu` to the `submitty` user on the
     `worker2.myuniversity.edu` machine.
 
 
@@ -198,17 +202,17 @@ indirect access to the worker machine as follows:
     (as the `submitty` user).
 
 
-4.  You will also need to enable this connection for the root
-    user with the `submitty_daemon` user ssh keys by adding the
+4.  You will also need to enable this connection for the root user
+    (using the `submitty_daemon` user ssh keys) by adding the
     following lines to the `/root/.ssh/config` file:
 
     ```
-    Host worker1.cs.rpi.edu
+    Host worker1.myuniversity.edu
     IdentityFile /home/submitty_daemon/.ssh/id_rsa
 
-    Host worker2.cs.rpi.edu
+    Host worker2.myuniversity.edu
     User submitty
-    ProxyJump submitty@worker1.cs.rpi.edu
+    ProxyJump submitty@worker1.myuniversity.edu
     IdentityFile /home/submitty_daemon/.ssh/id_rsa
     ```
 
@@ -314,7 +318,7 @@ indirect access to the worker machine as follows:
         "username": "submitty",
         "num_autograding_workers": 1,
         "enabled": true,
-	"display_environment_variable" : ":0"
+        "display_environment_variable" : ":0"
     }
     ```
 
