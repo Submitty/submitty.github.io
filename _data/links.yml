@@ -157,6 +157,7 @@
     - name: Installation Version Notes
       link: version_notes
       children:
+        - name: v21.01.01
         - name: v20.09.00
         - name: v20.08.00
         - name: v20.06.00
