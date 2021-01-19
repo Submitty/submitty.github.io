@@ -135,7 +135,7 @@ _Note: These instructions should be run under root/sudo._
     ```
 
 
-2.  If the machine name is in the DNS server, you may add a line to
+2.  If the machine name is not in the DNS server, you may add a line to
     the `/etc/hosts` file on the primary machine linking a name of
     your choice to the IP address of the worker machine:
 
