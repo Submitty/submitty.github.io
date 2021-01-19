@@ -3,10 +3,12 @@ title: Worker Installation
 category: System Administrator
 ---
 
-A Submitty instance is capable of leveraging additional machines to distribute
-autograding load. This capability can be used to ship jobs which require
-specialized hardware to appropriate machines. This guide details the steps
-to install Submitty in worker mode, and to configure the resulting worker machine
+A Submitty instance is capable of leveraging additional machines to
+[distribute autograding load](/developer/automated_grading).
+This capability can be used to ship jobs which require
+additional resources or specialized hardware to appropriate machines.
+This guide details the steps to install Submitty in worker mode,
+and to configure the resulting worker machine
 for use by a "Primary" Submitty instance.
 
 Note: We assume that you're installing Submitty on a dedicated machine. If this machine is
@@ -19,8 +21,8 @@ _Note: These instructions should be run under root/sudo._
 
 1. [Install Ubuntu 16.04 or 18.04 server edition](/sysadmin)
 
-2. Create a ```submitty``` user on the machine. The user's name is not important.
-The user should only be used for submitty related activities.
+2. Create a ```submitty``` user on the machine.  You may choose a different user name,
+   but the user should only be used for submitty autograding.
 
 3. Install git
 
@@ -45,7 +47,8 @@ The user should only be used for submitty related activities.
    You will be asked to provide the name of your submitty user by the
    [CONFIGURE_SUBMITTY.py script](https://github.com/Submitty/Submitty/blob/master/.setup/CONFIGURE_SUBMITTY.py).
 
-6. Run installations specific to your university.
+6. Run installations specific to your university, installing any necessary languages,
+   library, or software for your autograding tasks.
    For example:  [RPI Computer Science specific installations](https://github.com/Submitty/Submitty/blob/master/.setup/distro_setup/ubuntu/rpi.sh)
 
    ```
@@ -80,8 +83,9 @@ The user should only be used for submitty related activities.
    *  Open ```/usr/local/submitty/config/autograding_workers.json``` with your favorite text editor.
    *  Add a new entry with a unique key.
    *  add at least one capability to the capabilities list. This capability will determine
-      which jobs should be shipped to this machine.
-   *  Add the 'address' of the machine to the address field (e.g. ```my_department.my_university.edu```).
+      which jobs should be shipped to this machine.  See also
+      [Automated Grading - Multiple Physical Servers](/developer/automated_grading#multiple-physical-servers)
+   *  Add the 'address' of the machine to the address field (e.g. ```worker1.my_university.edu```).
    *  Add the number of autograding workers (simultaneously processed jobs) for the machine.
    *  Add the name of the submitty user on the machine as the username.
    *  Set the machine to be enabled.
@@ -94,17 +98,230 @@ The user should only be used for submitty related activities.
     ```
     to ship your jobs to a worker with the capability CAPABILITY.
 
-11. Note that if you are filtering or blocking ssh traffic, you will want to whitelist connections from the main submitty server into any workers you set up.
 
 
-# Additional Instructions for Graphics Application Workers
+# Configuring SSH Access
 
-1. Make sure the display will not go to sleep
+1.  If your worker machine is directly accessible from the primary
+    machine via an IP address in the public DNS servers, you may
+    specify that machine by IP address or by name in the
+    `/usr/local/submitty/config/autograding_workers.json` file.  E.g.:
 
-   __FIXME: add instructions__
+    ```
+    "worker1": {
+        "capabilities": [
+            "worker","worker1","default"
+        ],
+        "address": "1.2.3.4",
+        "username": "submitty",
+        "num_autograding_workers": 5,
+        "enabled": true
+    }
+    ```
 
-2. Give the untrusted user access to the Xserver
+    or
+
+
+    ```
+    "worker1": {
+        "capabilities": [
+            "worker","worker1","default"
+        ],
+        "address": "worker1.myuniversity.edu",
+        "username": "submitty",
+        "num_autograding_workers": 5,
+        "enabled": true
+    }
+    ```
+
+
+2.  If the machine name is in the DNS server, you may add a line to
+    the `/etc/hosts` file on the primary machine linking a name of
+    your choice to the IP address of the worker machine:
+
+    ```
+    1.2.3.4    worker1.myuniversity.edu
+    ```
+
+    And then you can use the machine name in the `autograding_workers.json` file.
+
+
+3.  For security, you will probably want to restrict unwanted
+    connections to the worker machine.  You can do this by first adding the
+    following line to the `/etc/hosts.deny` file on the worker
+    machine:
+
+    ```
+    sshd : ALL
+    ```
+
+    And then allow connections from the primary machine, by adding the
+    following line to the `/etc/hosts.allow` file on the worker machine:
+
+    ```
+    # primarysubmitty.myuniversity.edu
+    sshd : 5.6.7.8
+    ```
+
+4.  Test and confirm that the ssh key (previous instructions) is working
+    and that the `submitty_daemon` user on the primary machine can
+    connect via passwordless ssh to the worker machine using the
+    `submitty` user.
+
+
+# SSH Access via ProxyJump
+
+If a worker machine must be access through an intermediary (e.g., it
+does not have a its own public facing IP address), you can configure
+indirect access to the worker machine as follows:
+
+
+1.  Specify this indirect connection for the `submitty_daemon` user on
+    the primary machine by adding the following lines to the
+    `/home/submitty_daemon/.ssh/config` file:
+
+    ```
+    Host worker2.myuniversity.edu
+    User submitty
+    ProxyJump submitty@worker1.myuniversity.edu
+    ```
+
+
+2.  Set up an ssh key (see instructions above) from the `submitty`
+    user or `worker1.myuniversity.edu` to the `submitty` user on the
+    `worker2.myuniversity.edu` machine.
+
+
+3.  Test and confirm that the `submitty_daemon` user on the primary
+    machine can connect via passwordless ssh to both the
+    `worker1.myuniversity.edu` and `worker2.myuniversity.edu` machines
+    (as the `submitty` user).
+
+
+4.  You will also need to enable this connection for the root
+    user with the `submitty_daemon` user ssh keys by adding the
+    following lines to the `/root/.ssh/config` file:
+
+    ```
+    Host worker1.cs.rpi.edu
+    IdentityFile /home/submitty_daemon/.ssh/id_rsa
+
+    Host worker2.cs.rpi.edu
+    User submitty
+    ProxyJump submitty@worker1.cs.rpi.edu
+    IdentityFile /home/submitty_daemon/.ssh/id_rsa
+    ```
+
+
+5.  Test and confirm that the root user on the primary machine can
+    connect via passwordless ssh to both the
+    `worker1.myuniversity.edu` and `worker2.myuniversity.edu` machines
+    (as the `submitty` user).
+
+
+6.  Test the autograding of a submission that is targeted to a
+    capability provided (only) by this worker machine.
+
+
+# Graphics Application Worker Machines
+
+
+1. Install these additional packages on worker machines that will be
+   autograding graphical applications.  These packages will allow
+   window and mouse control, screenshots, and image processing.
+
+   ```
+   sudo apt-get install wmctrl
+   sudo apt-get install xdotool
+   sudo apt-get install scrot
+   sudo apt-get install imagemagick
+   ```
+
+2. To launch and screen capture graphics programs, it is necessary
+   that a user (any user) be logged in to the machine.  Note that
+   while autograding is in progress, the mouse and keyboard will be
+   captured and controlled by the remote submitty process, so
+   interactive usage of the machine will be disrupted.  For security,
+   we suggest that this be the `submitty` user or other user with no
+   access to sensitive data external to Submitty.
+
+
+3. Configure that user's account so that the machine does not
+   go to sleep, the screensaver is disabled, and the screen does not
+   lock (requiring a password to unlock).
+
+   __FIXME: add instructions for Ubuntu__
+
+
+4. The `untrusted` user for autograding needs access to the X Server /
+   X Window System.  You can do this for the current user and current
+   session by typing:
 
    ```
    xhost +SI:localuser:untrusted00
    ```
+
+   Note: It is necessary that this command be run every time the
+   computer is rebooted, for whichever user is logged in.  It might be
+   easiest to automate this by editing the `/etc/profile` file (as
+   root) and adding these lines at the bottom:
+
+   ```
+   # FOR SUBMITTY AUTOGRADING OF GRAPHICAL PROGRAMS
+   if [ "$DISPLAY" != "" ]
+   then
+     xhost +SI:localuser:untrusted00
+   fi
+   ```
+
+5. Determine the value of the DISPLAY environment variable on the
+   graphics worker machine.  From a interactive terminal on that
+   machine (not a remote login), type:
+
+   ```
+   echo $DISPLAY
+   ```
+
+   which should print `:0` or `:1` for example.  Note: The value will
+   depend on the number of graphics cards and outputs of those cards
+   and it *may* change if the system hardware or drivers or physical
+   connections are modified.
+
+
+6. Test that you can remotely launch a graphical program on the worker
+   machine from another computer.  From a terminal on another
+   computer, connect via ssh to the worker machine.   Type:
+
+   ```
+   export DISPLAY=:0
+   ```
+
+   _Replacing `:0` with the value found in the previous step as necessary._
+
+   Then run a command in the remote terminal that will open a
+   graphical window on the worker machine.
+
+
+7. Now enter the value of the DISPLAY environment variable in the
+   `autograding_workers.json` file on the primary Submitty machine:
+
+   ```
+    "graphicsworker": {
+        "capabilities": [
+            "graphics", "default"
+        ],
+        "address": "graphicsworker.myuniversity.edu",
+        "username": "submitty",
+        "num_autograding_workers": 1,
+        "enabled": true,
+	"display_environment_variable" : ":0"
+    }
+    ```
+
+   _Again, replacing `:0` with the value found in the earlier step._
+
+
+8. Finally, test the autograding of a graphical program.  It is
+   useful for debugging to watch the monitor and confirm that the
+   graphical program window is successfully opened, and the mouse and
+   key actions are performed as scripted.
