@@ -5,11 +5,11 @@ title: Submini Polling
 
 ### Overview 
 
-Submitty has a lecture polling system that can be enabled to gather quick information or quiz students on lecture material. Submitty stores the questions and student responses and allows you to use the data how you see fit.
+Submitty has a lecture polling system for instructors that can be enabled to gather quick information or quiz students on lecture material. Submitty stores the questions and student responses and allows you to use the data how you see fit.
 
 ### Enabling Submini Polls
 
-By default, the polling system is disabled. To enable it, navigate to Course Settings and scroll down you see the "Online Polling" header. Check the box to enable polls. Refreshing the page should show a tab labelled "Polls" in the sidebar.
+By default, the polling system is disabled. To enable it, the instructor user navigates to Course Settings and scroll down you see the "Online Polling" header. Check the box to enable polls. Refreshing the page should show a tab labelled "Polls" in the sidebar.
 
 
 ### Creating a Poll
@@ -18,12 +18,14 @@ To create a poll, navigate to the polls page via the sidebar and click the "New 
 
 ### Opening and Closing Polls
 
-Back on the main poll page, you should see your new poll in one of the three sections depending on release date. For each poll there are two settings that can be used to set the state of the poll. First is "Visible", which indicates whether students are able to see that the poll exists as well as it's content. Second is "Accepting Responses", which indicates whether students are able to submit new responses to the poll. Simply check or uncheck these boxes to change the state of the poll.
+Back on the main poll page, you should see your new poll in one of the three sections depending on release date.  Note: Students can always see the existence and title of all polls in the "Today" and "Old" categories.  
+
+Instructors control two additional settings for each poll. First is "Visible", which indicates whether students are able to see the contents (questions and answer choices).  Second is "Accepting Responses", which indicates whether students are able to submit new responses to the poll. Simply check or uncheck these boxes to change the state of the poll.
 
 ### Viewing the Results and Data
 
-To view the results for a specific poll, go to the main poll page and click the "View Results" button to see a graph of response frequency. Keep in mind that if you might need to refresh to view new results if students are still responding while you are on the page. To view the individual data, first go the "Grade Reports" page in the sidebar and click "Generate Grade Summaries". This will update Rainbow Grades to have a summary of all polls that are visible to students, as well as generate two JSON files in the `reports/polls` directory in your course. `poll_questions.json` contains all the data for each poll, including its ID, name, question, responses, and a list of which responses are correct. `poll_responses.json` contains all the response data for each poll. Each element contains a poll ID as well as an associative array that maps student IDs to the response ID they selected for that poll.
+To view the results for a specific poll, go to the main poll page and click the "View Results" button to see a histogram of the responses. Keep in mind that if you might need to refresh to view new results if students are still responding while you are on the page. To view the individual data, first go the "Grade Reports" page in the sidebar and click "Generate Grade Summaries". This will update Rainbow Grades to have a summary of all polls that are visible to students, as well as generate two JSON files in the `/var/local/submitty/courses/<SEMESTER>/<COURSE>/reports/polls` directory in your course. `poll_questions.json` contains all the data for each poll, including its ID, name, question, responses, and a list of which responses are correct. `poll_responses.json` contains all the response data for each poll. Each element contains a poll ID as well as an associative array that maps student IDs to the response ID they selected for that poll.
 
 ### Exporting and Importing Polls
 
-If you run a course multiple times and want to migrate your created polls to a new semester, simply visit the main polls page and click the "Export" button. This will download the `poll_questions.json` file mentioned earlier. Then, in your new course click "Import" and upload the file. This will create all the polls in the file. Keep in mind that this NOT override existing polls, so you might need to delete duplicate polls if you already created some. Additionally, if migrating to a new semester, all the release dates are likely to be wrong, so you might need to edit those either manually or edit the JSON file with a script.
+If you run a course multiple times and want to migrate your created polls to a new semester, simply visit the main polls page and click the "Export" button. This will download the `poll_questions.json` file mentioned earlier. Then, in your new course click "Import" and upload the file. This will create a new poll in your current course for each poll in the file. Keep in mind that this NOT edit or override existing polls, so you might need to delete duplicate polls if you previously created some. Additionally, when migrating to a new semester, all the release dates are likely to be wrong, so you will need to edit the dates by either editing the JSON file before upload, or by editing the polls one-by-one through the web interface after upload.
