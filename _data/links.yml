@@ -145,6 +145,8 @@
     - name: Grade Override
       link: grade_override
     - name: Premade Assignments
+    - name: Submini Polling
+      link: submini_polls
 
 - name: System Administrator
   link: sysadmin
