@@ -100,6 +100,10 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
       make automation difficult or problematic.    
       See also: [Installation Version Notes](/sysadmin/version_notes)
 
+    * To help ensure a title follows our standards, we utilize a
+    [GitHub workflow](https://github.com/Submitty/Submitty/blob/master/.github/workflows/pr_title.yml)
+    for validation. Updating your PR title will immediately re-run the workflow, allowing you to edit 
+    it till it does pass validation.
 
 
 * The body of the PR should describe the purpose of the PR.
