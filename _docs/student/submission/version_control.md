@@ -30,9 +30,16 @@ redirect_from:
 
 
 3. Your initial repository may be empty (no branches and no files).
-   If this is the case you should start by default in the `master`
-   branch.  Create/copy files/directory structure into the repository
-   directory following the assignment instructions.
+   If this is the case you should do your work in the `main` branch.
+   This may happen by default, or you may need to first type:
+
+   ```
+   git checkout -b main
+   ```
+
+   to create and checkout the initial `main` branch.  Create/copy
+   files/directory structure into the repository directory following
+   the assignment instructions.
 
    _Note: Please also read the section below on Instructor Provided Code._
 
@@ -60,7 +67,7 @@ _TODO:_
    git status
    ```
 
-   Make sure you're on the `master` branch.  You'll see messages about
+   Make sure you're on the `main` branch.  You'll see messages about
    any files you have "modified", files you may have "deleted", files
    that are "new" (you've already indicated they should be added to
    the repository), and files that are "untracked" (and will be
@@ -115,8 +122,8 @@ Currently your work is only on your local machine.
    git push
    ```
 
-   If you are on the `master` branch on your local machine, this will
-   push your local master branch to the master branch of `origin`,
+   If you are on the `main` branch on your local machine, this will
+   push your local main branch to the main branch of `origin`,
    which is the machine from which you originally cloned the
    repository.
 
@@ -171,7 +178,7 @@ will look like this:
    git status
    ```
 
-   Make sure you are on the `master` branch, and all of your changes
+   Make sure you are on the `main` branch, and all of your changes
    have been committed.  _NOTE: Please refer to GIT documentation as
    needed._
 
@@ -202,7 +209,7 @@ will look like this:
 
 
 4. You can review the differences between your current branch
-   (`master`) and the `provided` branch:
+   (`main`) and the `provided` branch:
 
    ```
    git diff remotes/origin/provided
