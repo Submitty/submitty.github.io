@@ -101,11 +101,9 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
       See also: [Installation Version Notes](/sysadmin/version_notes)
 
     * To help ensure a title follows our standards, we utilize a
-    [GitHub workflow](https://github.com/Submitty/Submitty/blob/master/.github/workflows/pr_title.yml),
-    which will fail any PR title that does not. To help self-validate your PR title, you can use this
-    [regex test site](https://regex101.com/r/QL2045), modifying the contents of the "Test String". If it
-    passes validation, you should see the string be highlighted in color, and if not, then it will be plain,
-    and the right bar will display "Your regular expression does not match the subject string".
+    [GitHub workflow](https://github.com/Submitty/Submitty/blob/master/.github/workflows/pr_title.yml)
+    for validation. Updating your PR title will immediately re-run the workflow, allowing you to edit 
+    it till it does pass validation.
 
 
 * The body of the PR should describe the purpose of the PR.
