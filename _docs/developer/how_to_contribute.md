@@ -61,7 +61,11 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
       * `Forum`,   
       * `Notifications` (includes email and grade inquiries),  
       * `TAGrading` (includes PDF annotation, peer grading),  
-      * `InstructorUI` (includes course and gradeable configuration, course materials, office hours queue, plagiarism detection),  
+      * `InstructorUI` (includes course and gradeable configuration),  
+      * `SubminiPolls`,  
+      * `HelpQueue`,  
+      * `CourseMaterials`,  
+      * `Plagiarism`,  
       * `RainbowGrades`,  
       * `System` (includes installation, migrations, vagrant),
       * `Developer`, or
