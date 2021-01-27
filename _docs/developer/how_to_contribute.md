@@ -62,7 +62,7 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
       * `Notifications` (includes email and grade inquiries),  
       * `TAGrading` (includes PDF annotation, peer grading),  
       * `InstructorUI` (includes course and gradeable configuration),  
-      * `Submini/Polls`,  
+      * `SubminiPolls`,  
       * `HelpQueue`,  
       * `CourseMaterials`,  
       * `Plagiarism`,  
