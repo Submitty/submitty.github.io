@@ -250,11 +250,40 @@ indirect access to the worker machine as follows:
    access to sensitive data external to Submitty.
 
 
-3. Configure that user's account so that the machine does not
-   go to sleep, the screensaver is disabled, and the screen does not
-   lock (requiring a password to unlock).
+3. Configure that user's account so that the machine does not go to
+   sleep, the screensaver is disabled, the screen does not lock
+   (requiring a password to unlock), the screen does not go black, and
+   the monitor does not go into power saving mode.
 
-   __FIXME: add instructions for Ubuntu__
+   Here are some of the settings to try:
+
+
+   * `Settings -> Power -> Power Saving -> Blank Screen = Never`
+
+   * `Settings -> Power -> Suspend & Power Button -> Automatic suspend = Off`
+
+   * `Settings -> Provacy -> Screen Lock = Off`
+
+
+   If the above settings do not work on your system, you may also need
+   to install and run
+   [Caffeine](http://manpages.ubuntu.com/manpages/bionic/man1/caffeine.1.html):
+
+   ```
+   sudo apt update
+   sudo apt install caffeine
+   ```
+
+   Note: It is necessary that Caffeine be running whenever autograding
+   might be needed, by whatever user is currently logged in.  Thus, it
+   is probably easiest to automate this by editing the `/etc/profile`
+   file (as root) and adding these lines at the bottom:
+
+   ```
+   # SUBMITTY AUTOGRADING OF GRAPHICAL PROGRAMS
+   # PREVENT SCREEN IDLE / SCREEN POWER SAVE
+   caffeine &
+   ```
 
 
 4. The `untrusted` user for autograding needs access to the X Server /
@@ -271,7 +300,8 @@ indirect access to the worker machine as follows:
    root) and adding these lines at the bottom:
 
    ```
-   # FOR SUBMITTY AUTOGRADING OF GRAPHICAL PROGRAMS
+   # SUBMITTY AUTOGRADING OF GRAPHICAL PROGRAMS
+   # ALLOW REMOTE LAUNCH OF X WINDOWS
    if [ "$DISPLAY" != "" ]
    then
      xhost +SI:localuser:untrusted00
