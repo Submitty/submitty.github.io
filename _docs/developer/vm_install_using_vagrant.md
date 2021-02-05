@@ -219,7 +219,7 @@ instructions.
      repository, located in one of these these directories:
 
      For the "tutorial" course:  
-     <https://github.com/Submitty/Tutorial/tree/master/examples> 
+     <https://github.com/Submitty/Tutorial/tree/main/examples>
 
      For the "sample" course:  
      <https://github.com/Submitty/Submitty/tree/master/more_autograding_examples>

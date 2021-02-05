@@ -28,7 +28,7 @@ category: Instructor
    before posting), clone both the 
    [Submitty/Submitty repository](https://github.com/Submitty/Submitty/tree/master/)
    and the
-   [Submitty/RainbowGrades repository](https://github.com/Submitty/RainbowGrades/tree/master/).
+   [Submitty/RainbowGrades repository](https://github.com/Submitty/RainbowGrades/tree/main/).
    We recommend you put this in a convenient top-level directory,
    separate from the materials for a specific course.  These directories should be in neighboring folders, e.g.:
 
@@ -108,7 +108,7 @@ category: Instructor
    make
    ```
 
-   This will produce 1 master spreadsheet-like view for the instructor:
+   This will produce an overall spreadsheet-like view for the instructor:
 
    ```
    grades_summary/output.html
@@ -176,5 +176,5 @@ category: Instructor
 
     etc.
 
-[SAMPLE_Makefile]: https://github.com/Submitty/RainbowGrades/blob/master/SAMPLE_Makefile
-[SAMPLE_customization.json]: https://github.com/Submitty/RainbowGrades/blob/master/SAMPLE_customization.json
+[SAMPLE_Makefile]: https://github.com/Submitty/RainbowGrades/blob/main/SAMPLE_Makefile
+[SAMPLE_customization.json]: https://github.com/Submitty/RainbowGrades/blob/main/SAMPLE_customization.json
