@@ -21,7 +21,13 @@ grading configurations.
    PRs prefixed with `[SYSADMIN ACTION]` will includes a bulleted item
    in the _BREAKING_ or _SECURITY_ sections, as appropriate.  These
    notes will include a link to this documentation.
-   
+
+
+Every release includes a summary message that groups all recent code
+changes (PRs) into major categories for review: Features, Bugfixes,
+Refactors, Dependencies, etc.  
+[Submitty GitHub Release Notes](https://github.com/Submitty/Submitty/releases)
+
 
 See also
 [Developer: How to Contribute](/developer/how_to_contribute) and
