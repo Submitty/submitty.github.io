@@ -12,6 +12,21 @@ page.**
 
 Please also see [Installation Version Notes](version_notes)
 
+### Announce Upcoming System Outage
+
+1. In advance of system updates or system maintenance, you may wish to
+   announce the outage to your users.  To do this, edit the
+   `/usr/local/submitty/config/submitty.json` file adding/editing the
+   `"system_message"` field:
+
+    ```
+    "system_message" : "We will have brief maintenance outage on Tuesday at 8am."
+    ```
+
+    ![](/images/system_outage_message.png)
+
+
+
 ### Update Submitty
 
 1.  To update the Submitty source code repository, get the specific
