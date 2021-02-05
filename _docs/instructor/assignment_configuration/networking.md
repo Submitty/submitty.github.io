@@ -20,7 +20,7 @@ category: Instructor -- Autograding Configuration
   **USE:** Used to refer to a container when specifying a network. Student output
   per testcase is stored in the container_name/ subdirectory.    
   **RESERVED VALUES:** The name _"router"_ specifies a docker node through which
-  all messages flow. See the router provided in [Submitty Tutorial 16](https://github.com/Submitty/Tutorial/tree/master/examples/16_docker_network_python)
+  all messages flow. See the router provided in [Submitty Tutorial 16](https://github.com/Submitty/Tutorial/tree/main/examples/16_docker_network_python)
    as an example.
 
 

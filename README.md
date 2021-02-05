@@ -53,7 +53,7 @@ which will leave the results in a `_site` directory.
 ## Editing Content
 
 The site's content is defined with markdown files under the
-[`docs/`](https://github.com/Submitty/submitty.github.io/blob/master/_docs) folder, where
+[`docs/`](https://github.com/Submitty/submitty.github.io/blob/main/_docs) folder, where
 then it's separated by a couple of high-level sections (student, instructor,
 sysadmin, developer).  For any new page, a new entry must be added to the
 navigation manually (see below). The rendered markdown uses a varient of
@@ -73,7 +73,7 @@ in the file, rather just start your content immediately after the front-matter b
 ### Navigation
 
 Editing the links on the navigation is done by editing
-[`_data/links.yml`](https://github.com/Submitty/submitty.github.io/blob/master/_data/links.yml).
+[`_data/links.yml`](https://github.com/Submitty/submitty.github.io/blob/main/_data/links.yml).
 The structure of the file is that each level is a list of objects, where the object can have the following parts:
 
 * name __(required)__
