@@ -272,18 +272,21 @@ indirect access to the worker machine as follows:
    ```
    sudo apt update
    sudo apt install caffeine
+   sudo apt install caffeinate
+   sudo apt install caffeine-indicator
    ```
 
-   Note: It is necessary that Caffeine be running whenever autograding
-   might be needed, by whatever user is currently logged in.  Thus, it
-   is probably easiest to automate this by editing the `/etc/profile`
-   file (as root) and adding these lines at the bottom:
+   Then, make sure that Caffeine is activated:  Click on the coffee cup
+   icon in the top Ubuntu bar and make sure it is *activated*.  Each
+   time you restart the computer or switch users, make sure that you
+   still have Caffeine activated.
 
-   ```
-   # SUBMITTY AUTOGRADING OF GRAPHICAL PROGRAMS
-   # PREVENT SCREEN IDLE / SCREEN POWER SAVE
-   caffeine &
-   ```
+    ![](/images/system_caffeine.png)
+
+   *NOTE: Once you're sure that the machine blank or put the display to
+   sleep, you can probably shut off the monitor using its physical
+   switch when you aren't using it.*
+
 
 
 4. The `untrusted` user for autograding needs access to the X Server /
