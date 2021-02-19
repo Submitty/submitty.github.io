@@ -20,7 +20,7 @@ order: 3
 
    1. [psql](http://postgresguide.com/utilities/psql.html) (CLI for connecting to PostgreSQL)
 
-   2. [pgAdmin](https://www.pgadmin.org/) (GUI for connecting to PostgreSQL) 
+   2. [pgAdmin](https://www.pgadmin.org/) (GUI for connecting to PostgreSQL)
 
    3. [navicat](https://www.navicat.com/en/products/navicat-for-postgresql) (GUI for managing PostgreSQL)
 
@@ -30,7 +30,8 @@ order: 3
 Note: When adding a new server to pgAdmin, change the following parameters in the
 server's `Connection` settings:
 
-* `Host name/address`: `192.168.56.111`
+* `Host name/address`: `localhost`
+* `Port`: `16432`
 * `Username`: `submitty_dbuser`
 * `Password`: `submitty_dbuser`
 
