@@ -49,13 +49,12 @@ _Note: These instructions should be run under root/sudo._
    will most likely just specify `localhost` for the Database Host and
    `5432` for the Database Port, or just `/var/run/postgresql` for
    Database Host.
-   2. **Submitty Database User/Role**.
-   3. **Submitty Database User/Role Password**. This is *not* a Linux user, just a user/role within the database server. If you don't already have a role for the submitty database user/role, the script will create that for you with the specified name & password.
-   4. **Timezone**. Pick from the list of [PHP timezones](https://www.php.net/manual/en/timezones.php).
-   5. **Main Site URL**.
-   6. **Version Control System (VCS) URL**. This is used mostly to allow students to submit their homework through private repositories hosted on the submitty server. See [Facilitating Student Submissions via GIT](/instructor/managing_git).
-   7. **Institution Name**.
-   8. **Authentication Method (PAM or Database)**. PAM authentication requires the sysadmin to make accounts ahead of time for students and give them a password. Database authentication lets students create their own passwords. 
+   2. **Submitty Database User/Role and Password**. This is *not* a Linux user, just a user/role within the database server. If you don't already have a role for the submitty database user/role, the script will create that for you with the specified name & password.
+   3. **Timezone**. Pick from the list of [PHP timezones](https://www.php.net/manual/en/timezones.php).
+   4. **Main Site URL**.
+   5. **Version Control System (VCS) URL**. This is used mostly to allow students to submit their homework through private repositories hosted on the submitty server. See [Facilitating Student Submissions via GIT](/instructor/managing_git).
+   6. **Institution Name**.
+   7. **Authentication Method (PAM or Database)**. PAM authentication requires the sysadmin to make accounts ahead of time for students and give them a password. Database authentication lets students create their own passwords. 
 
 
    
