@@ -31,7 +31,7 @@ Set the following parameters under the `Connection` tab:
   - `Private Key File`: `<submitty repository root>/.vagrant/machines/ubuntu-18.04/virtualbox/private_key`
   - `Key Passphrase`: leave empty
 - `Root Path`: `/usr/local/submitty`
-- `Web server URL`: `http://192.168.56.111/`
+- `Web server URL`: `http://localhost:1501/`
 
 Under the `Mappings` tab, set the following:
 
@@ -52,11 +52,11 @@ It is important to use this PHP installation as opposed to some other one as it 
 
 Under PhpStorm settings, open `Languages & Frameworks` > `PHP`. Press the `...` button next to `CLI Interpreter` and, on the left list of the interpreters window, press the `+` and select `From Docker, Vagrant, VM, Remote...`.
 Select `Vagrant` from the list of radio buttons.
-Then press `OK` to add the interpreter and `OK` to save the list of interpreters.  
+Then press `OK` to add the interpreter and `OK` to save the list of interpreters.
 
 ## Deploying updates automatically to vagrant
 
-Open `Tools` > `Deployment...` > `Options`. Set `Upload changed files automatically to the default server` to `Always`. Press `OK` to save this.  
+Open `Tools` > `Deployment...` > `Options`. Set `Upload changed files automatically to the default server` to `Always`. Press `OK` to save this.
 
 ## Enable PHP debugging using xdebug
 
@@ -69,7 +69,7 @@ Press the `Validate` button to make sure the setup works.
 
 At this point you may see an error message that says ```Specified URL is not reachable, caused by: 'Request failed with status code 404'```.  You may safely disregard this message.
 
-Follow instructions 2 - 4 on [this website](https://confluence.jetbrains.com/display/PhpStorm/Zero-configuration+Web+Application+Debugging+with+Xdebug+and+PhpStorm) to prepare PhpStorm for debugging and add bookmarklets to enable xdebug from your browser.  
+Follow instructions 2 - 4 on [this website](https://confluence.jetbrains.com/display/PhpStorm/Zero-configuration+Web+Application+Debugging+with+Xdebug+and+PhpStorm) to prepare PhpStorm for debugging and add bookmarklets to enable xdebug from your browser.
 
 ## Connecting to the PostgreSQL database
 
@@ -86,7 +86,7 @@ Press `Test Connection` to verify that it works. Press `OK` to confirm adding th
 
 Next to the database name in the panel, there should be a label that says `1 of 6`. This is actually a button. Click it to see the other databases and turn on the check next to `submitty_s18_sample` to show that database in the list. Press the refresh arrows and some schemas should appear under `submitty_s18_sample`. Click the check next to the `public` schema to show it in the list.
 
-Now you can browse the tables in the database window by expanding the tabs next to the `public` schema. Double click on any table to see and edit its contents.  
+Now you can browse the tables in the database window by expanding the tabs next to the `public` schema. Double click on any table to see and edit its contents.
 
 ## Running PHPUnit tests
 
@@ -104,7 +104,7 @@ Then you need to add a run configuration for PHPUnit. Open `Run` > `Edit Configu
 - `Test Scope`: `Defined in the configuration file`
 - `Use alternative configuration file`: Unchecked
 
-Press `OK` to save the test run configuration. You should be able to run it as normal (or even with coverage!) from the `Run` menu.  
+Press `OK` to save the test run configuration. You should be able to run it as normal (or even with coverage!) from the `Run` menu.
 
 ## Debugging JavaScript in PhpStorm
 
@@ -113,19 +113,19 @@ Also, you need to use Google Chrome for this.
 
 You'll need to install [the JetBrains IDE Support](https://chrome.google.com/webstore/detail/jetbrains-ide-support/hmhgeddbohgjknpmjagkdomcpobmllji) plugin for Chrome. Then, after navigating to the page with the JavaScript you want to debug, right click the extension and press `Inspect in PhpStorm`. If it decides to work, you'll see a banner in Chrome that says `"JetBrains IDE Support" is debugging this browser`. Note that closing the banner will disconnect the debugger so you'll have to leave it up.
 
-Then, you should be able to set breakpoints in your JavaScript files in PhpStorm and debug them.  
+Then, you should be able to set breakpoints in your JavaScript files in PhpStorm and debug them.
 
 #### If that doesn't work
 
 Alternatively, you can debug in Chrome by using a custom run configuration. Open `Run` > `Edit Configurations`. Press the `+` button and add a `JavaScript Debug` configuration. Set:
 
-- `URL`: `http://192.168.56.111`
+- `URL`: `http:/localhost:1501`
 - `Browser`: `Chrome` (only option currently)
 - `Ensure breakpoints are detected when loading scripts`: Leave unchecked unless you're debugging some code that runs on page load
 
-In the `Remote URLs of local files (optional)` section, find `site/public` and give it a `Remote URL` of `http://192.168.56.111`.
+In the `Remote URLs of local files (optional)` section, find `site/public` and give it a `Remote URL` of `http://localhost:1501`.
 
-Press `OK` to save the run configuration. If you then `Debug` the configuration, it should open a new Chrome process and automatically start debugging, note that this Chrome will not have any of your user data / configuration / extensions. Note that if you `Run` the configuration you will not be able to debug JavaScript.  
+Press `OK` to save the run configuration. If you then `Debug` the configuration, it should open a new Chrome process and automatically start debugging, note that this Chrome will not have any of your user data / configuration / extensions. Note that if you `Run` the configuration you will not be able to debug JavaScript.
 
 ## Making debugging less annoying
 

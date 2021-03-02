@@ -23,15 +23,10 @@ category: Developer
 * Once you have opened Navigate to the `Connection`sub-section.
   The following parameters should be changed:
 
-    * `Host name/address`: `192.168.56.111`.
+    * `Host name/address`: `localhost`.
+
+    * `Port`: `16432`
 
     * `Username`: `submitty_dbuser`
 
     * `Password`: `submitty_dbuser`
-
-    * Note: You do not need to change the port or the maintenance
-      database - the port should say `5432` and the maintenance
-      database should say `postgres` by default.
-
-
-

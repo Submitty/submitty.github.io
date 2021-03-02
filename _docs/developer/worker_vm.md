@@ -10,34 +10,34 @@ machines* in addition to your primary vagrant virtual machine.
 
 1. Open the Virtual Box application.
 
-2. Click `New` to create a new machine.  
-   Give it a useful name: e.g., `worker_machine_a`  
-   Specify the type: `Linux`  
+2. Click `New` to create a new machine.
+   Give it a useful name: e.g., `worker_machine_a`
+   Specify the type: `Linux`
    And the version: `Ubuntu 64`
 
 3. Specify the amount of memory: 2048 = 2GB should be sufficient.
 
-4. Create the disk as a `new virtual disk`.  
-   Specify RAM memory: 2048 (2GB)  
-   Create new virtual disk.  
-   Choose `VDI`  
-   Choose `Dynamically allocated`  
+4. Create the disk as a `new virtual disk`.
+   Specify RAM memory: 2048 (2GB)
+   Create new virtual disk.
+   Choose `VDI`
+   Choose `Dynamically allocated`
    Specify size: e.g., 20GB
 
-5. Download the Ubuntu 18.04 installer 64 bit .iso.  
+5. Download the Ubuntu 18.04 installer 64 bit .iso.
    Save this somewhere on your host computer.
 
-6. Click on `Start` to power on.  
-   Browse your files to find the Ubuntu installer .iso we downloaded earlier.  
+6. Click on `Start` to power on.
+   Browse your files to find the Ubuntu installer .iso we downloaded earlier.
    Press `Start`.
 
 7. Follow the Ubuntu installation menu...
-   Click `Install Ubuntu`.  
-   Select `English` keyboard.  
-   Select `normal` installation.  
-   Agree to `Erase disk & Install Ubuntu`.  
+   Click `Install Ubuntu`.
+   Select `English` keyboard.
+   Select `normal` installation.
+   Agree to `Erase disk & Install Ubuntu`.
    Specify your timezone.
-   Then specify your username, computer name, password.  
+   Then specify your username, computer name, password.
    Then click through various menus, and wait a while installing system.
    Then restart the VM to finish installation.
 
@@ -50,7 +50,7 @@ machines* in addition to your primary vagrant virtual machine.
    Attached to: `Bridged Adapter`
 
 10. From the VM, open a terminal and install a bunch of additional packages:
- 
+
     ```
     sudo apt update
     sudo apt install net-tools
@@ -80,11 +80,11 @@ machines* in addition to your primary vagrant virtual machine.
     ifconfig
     ```
 
-13. Prevent worker VM from going to sleep (so you can send autograding jobs to it at any time).  
-    `Settings` -> `privacy` -> `screen lock` -> `turn off screen lock`  
-    `Settings` -> `power` -> `suspend & power button` -> `automatic suspend` == off  
+13. Prevent worker VM from going to sleep (so you can send autograding jobs to it at any time).
+    `Settings` -> `privacy` -> `screen lock` -> `turn off screen lock`
+    `Settings` -> `power` -> `suspend & power button` -> `automatic suspend` == off
     `Settings` -> `power` -> `blank screen` == `never`
 
-14. Follow the worker installation instructions:  
+14. Follow the worker installation instructions:
     [https://submitty.org/sysadmin/worker_installation](https://submitty.org/sysadmin/worker_installation)
 
