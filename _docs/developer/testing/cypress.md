@@ -12,7 +12,7 @@ Make sure you have `node.js` version 10 or higher installed locally. You can che
 
 ```bash
 # from the site directory
-npm install --include=dev
+npm install
 ```
 
 If you are on Linux, view [this page](https://docs.cypress.io/guides/getting-started/installing-cypress.html#Linux) to see what dependencies you may need to install additionally for Cypress.
@@ -72,6 +72,7 @@ Test files are written under the `site/cypress/integration` and should follow th
 create folders as needed to organize groups of tests together.
 
 **Cypress test suite structure:**
+Here is a quick overview of the file structure on Submitty, for a more details see the Cypress docs [here](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Folder-Structure)
 
 ```
 cypress.json
@@ -107,7 +108,9 @@ The top level `cypress.json` is the global configuration used.
 
 Cypress has adopted [Mocha's behavior-driven development (BDD) syntax](https://docs.cypress.io/guides/references/bundled-tools.html#Mocha) to organize tests.
 
-You will typically use `describes`, `context`, and `it` to organize tests. `describes` and `context` organize tests into groups, either or can be used they both act the same. Here is an example:
+You will typically use `describes` or `context` to organize tests. These blocks organize tests into groups, either or can be used they both act the same. `it` denotes an actual test case and contains your test logic.
+To test assertions, you will use the integrated [Chai tool](https://docs.cypress.io/guides/references/bundled-tools.html#Chai) to write your assertions. Here, you will use the `expect()` function wrapped around an object, and use a series of [assertions](https://docs.cypress.io/guides/references/assertions.html#BDD-Assertions) about it.
+Here is an example:
 
 ```js
 describe('foo', () => {
@@ -132,8 +135,8 @@ A test will typically:
 
 1. Navigate to a page
 2. Find an element
-3. *(Optionally) Interact with it*
-4. *(Optionally) Make an assertion*
+3. Interact with it
+4. Make an assertion
 
 This translates to cypress functions in the form of:
 
