@@ -15,10 +15,7 @@ Make sure you have `node.js` version 10 or higher installed locally. You can che
 npm install --include=dev
 ```
 
-If you are on Linux you may need the following dependencies if they are not already installed:
-```bash
-apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
-```
+If you are on Linux, view [this page](https://docs.cypress.io/guides/getting-started/installing-cypress.html#Linux) to see what dependencies you may need to install additionally for Cypress.
 
 ## Cypress Test Runner
 
@@ -182,5 +179,4 @@ When a test is finished running you can see every step and visit a dom-snapshot 
 The Cypress test suite will also be running your tests on GitHub actions. There are some differences between the vagrant instance and the GitHub actions instance. Most notably, only the sample course is built (without submissions). It is also a fresh instance so any state you might of created on your local instance may not necessarily exist, you should always design your tests to work against a fresh instance.
 
 If your test fails, GitHub will upload the Cypress recording and screenshot(s) of what failed under the "artifacts" section of the GitHub actions results.
-
 
