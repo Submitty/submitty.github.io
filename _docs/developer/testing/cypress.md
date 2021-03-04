@@ -154,7 +154,7 @@ and let Cypress generate a selector for you. *Note:* for deeply nested HTML elem
 
 You can then use the `cy.get()` function to attempt to find an element on the page. If your test only requires an element to exist on the page, using a `cy.get()` is a strong enough check. 
 
-If an element is not immediately ready Cypress will automatically retry for 4000ms by default, this can be useful for elements that dynamically render or preventing flaky-ness.
+If an element is not immediately ready Cypress will automatically retry for 4000ms by default, this can be useful for elements that dynamically render or preventing flakiness.
 
 **NOTE**
 
