@@ -19,7 +19,7 @@ If you are on Linux, view [this page](https://docs.cypress.io/guides/getting-sta
 
 ## Cypress Test Runner
 
-You can open the test runner using the command:
+You can open the test runner by navigating into `site/` and using the command:
 
 ```bash
 # from the site directory
