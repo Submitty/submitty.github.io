@@ -226,8 +226,10 @@
           link: linting_static_analysis
         - name: Python Unit Tests
         - name: PHP Unit Tests
-        - name: Site End-to-End Tests
+        - name: Selenium End-to-End Tests
           link: site_end_to_end_tests
+        - name: Cypress End-to-End Tests
+          link: cypress
         - name: Autograding Integration Tests
         - name: Rainbow Grades Tests
         - name: Travis-CI

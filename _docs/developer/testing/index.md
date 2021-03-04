@@ -11,7 +11,9 @@ these tests can be roughly broken down into the following high-level types:
 * [Static Analysis / Linting](linting_static_analysis)
 * [Python Unit Tests](python_unit_tests)
 * [PHP Unit Tests](php_unit_tests)
-* [Site End-to-End (E2E) tests](site_end_to_end_tests)
+*  Site End-to-End (E2E) tests
+	- [Selenium test suite](site_end_to_end_tests)
+	- [Cypress test suite](cypress)
 * [Autograding Integration Tests](autograding_integration_tests)
 * [Rainbow Grades Functional Tests](rainbow_grades_tests)
 

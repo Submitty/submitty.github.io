@@ -1,5 +1,5 @@
 ---
-title: Site End-to-End Tests
+title: Selenium End-to-End Tests
 ---
 
 The _End-to-End Testing_ (e2e) suite is written in Python and tests
