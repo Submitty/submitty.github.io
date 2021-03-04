@@ -108,7 +108,7 @@ The top level `cypress.json` is the global configuration used.
 
 ### Test Structure
 
-Cypress borrow's Mocha's Behavior-driven development (BDD) [test interface](https://mochajs.org/#bdd) to organize tests. 
+Cypress has adopted [Mocha's behavior-driven development (BDD) syntax](https://docs.cypress.io/guides/references/bundled-tools.html#Mocha) to organize tests.
 
 You will typically use `describes`, `context`, and `it` to organize tests. `describes` and `context` organize tests into groups, either or can be used they both act the same. Here is an example:
 
@@ -182,6 +182,5 @@ When a test is finished running you can see every step and visit a dom-snapshot 
 The Cypress test suite will also be running your tests on GitHub actions. There are some differences between the vagrant instance and the GitHub actions instance. Most notably, only the sample course is built (without submissions). It is also a fresh instance so any state you might of created on your local instance may not necessarily exist, you should always design your tests to work against a fresh instance.
 
 If your test fails, GitHub will upload the Cypress recording and screenshot(s) of what failed under the "artifacts" section of the GitHub actions results.
-
 
 
