@@ -76,7 +76,7 @@ Now, to install dependencies for Python on either OS:
 pip3 install PyYAML
 pip3 install python-dateutil
 pip3 install tzlocal
-pip3 install sqlalchemy
+pip3 install "sqlalchemy<1.4.0"
 pip3 install jsonschema
 pip3 install jsonref
 pip3 install docker
