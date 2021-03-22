@@ -26,6 +26,6 @@ effort maybe needed to convert them to your associated distro/OS.
 * sshpass
 * Java
 * JUnit
-* Emma
+* JaCoCo
 * DrMemory
 * 
