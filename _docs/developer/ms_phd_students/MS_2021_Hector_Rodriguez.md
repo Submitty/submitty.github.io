@@ -62,12 +62,12 @@ any small change could introduce a very subtle bug that wouldn’t be caught by
 the site integration tests. Thus, my Master’s Project aimed at tackling this
 issue. My contributions to Submitty can be summarized like so:
 
-1. [Logging](#logging)
-    1. [Logging Centralization](#logging-centralization)
-    2. [Student Logs (W.I.P.)](#student-logs-wip)
-2. [Scheduling](#scheduling)
+1. [Scheduling](#scheduling)
     1. [Centralized Scheduling](#centralized-scheduling)
     2. [Short-Circuiting Non-Autograding Submissions](#short-circuiting-non-autograding-submissions)
+2. [Logging](#logging)
+    1. [Logging Centralization](#logging-centralization)
+    2. [Student Logs (W.I.P.)](#student-logs-wip)
 3. [Student Features](#student-features)
     1. [Autosaving in Notebook Gradeables](#autosaving-in-notebook-gradeables)
     2. [Grading Worker Display](#grading-worker-display)
@@ -75,40 +75,6 @@ issue. My contributions to Submitty can be summarized like so:
     1. [File Copy Refactor](#file-copy-refactor)
     2. [Vagrant Sample Courses Capabilities](#vagrant-sample-courses-capabilities)
     3. [Autograding Scheduler Unit Tests](#autograding-scheduler-unit-tests)
-
-## Logging
-
-### Logging Centralization
-
-The Submitty autograder writes two different types of logs: regular logs, and
-stack trace logs. Regular logs simply provide transparency into how the
-autograder is currently running, whereas stack trace logs report major errors
-that occur. The Submitty primary machine and each of the worker machines keep
-their own independent copies of both logs. This means that inspecting the logs
-when autograding failures occur can become a bit of a hassle, as it may be
-necessary to log into one or more worker machines to find out what went wrong.
-
-[PR #6062](https://github.com/Submitty/Submitty/pull/6062) revamps the
-autograding logger interface so that stack trace logs are replicated in a
-central location (the Submitty primary machine) when possible. The worker
-keeps track of all calls to the “log stack trace” function, and stores this
-record in its results file. When the corresponding shipper receives the results
-file and discovers that the “log stack trace” function was called on the 
-worker’s end, it reproduces those entries in the primary machine’s stack trace
-log.
-
-### Student Logs (W.I.P.)
-
-Currently, if a submission suffers from some kind of autograding-related
-error, the student receives a message stating “Something went wrong with this
-submission.” This is admittedly not a very helpful error message, and figuring
-out the source of the error usually involves an administrator looking through
-the autograding logs to figure this information out. The goal of the
-tentatively-named “Student Logs” feature is to provide extra feedback to the
-user on autograding failure so that narrowing down the source of the issue
-is a more streamlined process. For instance, if autograding fails due to a
-Docker misconfiguration in the gradeable, this information can be propagated
-to the instructor much more quickly.
 
 ## Scheduling
 
@@ -137,7 +103,11 @@ behavior so that scheduling decisions happen on the same thread that monitors
 the shippers. Each shipper now queries its own private directory, so filesystem
 locking is no longer necessary. Furthermore, scheduling happening on a
 centralized process adjacent to the shippers means that it is easier to modify
-the scheduling behavior.
+the scheduling behavior. The image below showcases the autograder’s structure
+after the changes made by this PR. Note the new “scheduler” node and how it
+pushes jobs to each shipper node.
+
+![Submitty Autograder with the new scheduler](/images/hector_rodriguez_ms/submitty_autograder_with_scheduler.png)
 
 ### Short-Circuiting Non-Autograding Submissions
 
@@ -149,6 +119,44 @@ that is trivially gradeable, it performs the lateness check itself, docks
 points if necessary, and records the submission’s results. Because this skips
 the worker portion of the autograding process, such submissions are now graded
 much more quickly than before.
+
+## Logging
+
+### Logging Centralization
+
+The Submitty autograder writes two different types of logs: regular logs, and
+stack trace logs. Regular logs simply provide transparency into how the
+autograder is currently running, whereas stack trace logs report major errors
+that occur. The Submitty primary machine and each of the worker machines keep
+their own independent copies of both logs. This means that inspecting the logs
+when autograding failures occur can become a bit of a hassle, as it may be
+necessary to log into one or more worker machines to find out what went wrong.
+
+[PR #6062](https://github.com/Submitty/Submitty/pull/6062) revamps the
+autograding logger interface so that stack trace logs are replicated in a
+central location (the Submitty primary machine) when possible. The worker
+keeps track of all calls to the “log stack trace” function, and stores this
+record in its results file. When the corresponding shipper receives the results
+file and discovers that the “log stack trace” function was called on the 
+worker’s end, it reproduces those entries in the primary machine’s stack trace
+log. The image below showcases the state of the autograder after pushing
+this change. Note how the primary machine now also includes logs from the
+worker machine, respecting the order with respect to the worker machine.
+
+![Submitty Autograder with centralized logging](/images/hector_rodriguez_ms/submitty_autograder_scheduler_logs.png)
+
+### Student Logs (W.I.P.)
+
+Currently, if a submission suffers from some kind of autograding-related
+error, the student receives a message stating “Something went wrong with this
+submission.” This is admittedly not a very helpful error message, and figuring
+out the source of the error usually involves an administrator looking through
+the autograding logs to figure this information out. The goal of the
+tentatively-named “Student Logs” feature is to provide extra feedback to the
+user on autograding failure so that narrowing down the source of the issue
+is a more streamlined process. For instance, if autograding fails due to a
+Docker misconfiguration in the gradeable, this information can be propagated
+to the instructor much more quickly.
 
 ## Student Features
 
