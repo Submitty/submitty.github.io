@@ -225,10 +225,14 @@ operating system’s regular local file management functions (for managing files
 on workers running on the primary machine) or via SSH (for managing files on
 remote workers). This helps make the surrounding code easier to understand,
 as the functions where these file management operations occur are shorter as
-a result and easier to understand.
+a result and easier to understand. The table below shows the line counts of
+the refactored functions before and after the refactor.
 
-(TODO: Drop numbers here showing the functions affected and their lengths
-before & after).
+| Function             | Line Count (Before) | Line Count (After) |
+| -------------------- | ------------------- | ------------------ |
+| `update_worker_json` | 105                 | 54                 |
+| `prepare_job`        | 119                 | 92                 |
+| `unpack_job`         | 224                 | 186                |
 
 ### Vagrant Sample Courses Capabilities
 
