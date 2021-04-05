@@ -32,7 +32,35 @@ solutions. The autograder has three components to it:
 
 ### The Life of a Submission
 
-[TODO]
+A submission begins its life when a student clicks the “Submit” button on a
+gradeable. From there, the submission’s files are uploaded onto the primary
+machine, and a queue file is placed in the autograding queue folder. This
+queue file identifies which submission should be graded as well as when it
+was placed in the queue.
+
+The scheduler periodically polls the queue folder for new jobs. When the
+scheduler finds jobs in the queue folder, it takes the oldest jobs and
+moves them into the shipper directories of workers which are currently
+idle (not grading any submissions). Once there, each queue file waits to
+be sent to the worker by the shipper.
+
+Just like the scheduler, the shipper periodically scans its own directory
+for jobs. When it detects a job placed in its directory, it opens the queue
+file, packages the corresponding submission files into a zip file, and sends
+the zip file to a place where the worker can see it. In the case that the
+worker is a local worker, then it moves the zip file to the directory the
+worker monitors. In the case that the worker is a remote worker, then the
+zip file is sent over SCP to the remote worker.
+
+Once the worker picks up the queue file, it goes through the entire grading
+process. This process can vary significantly depending on the gradeable’s
+configuration. Once grading finishes, the worker creates a results zip file
+containing the results of the autograding. On the shipper side, the shipper
+queries the worker’s directory (either via local file management operations
+or via SSH) periodically for the results zip file. Once the results zip file
+is generated, the shipper pulls the results zip from the worker and extracts
+it into the primary machine’s results folder, at which point the student is
+able to see their submission’s results. Then, the cycle begins once again.
 
 ## Motivation and Goals
 
