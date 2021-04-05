@@ -256,6 +256,8 @@
       children:
         - name: John Hulton MS 2020
           link: MS_2020_John_Hulton
+        - name: Héctor Rodríguez Figueroa MS 2021
+          link: MS_2021_Hector_Rodriguez
     - name: Google Summer of Code
       children:
         - name: 2020 Mukul Kumar Jha
