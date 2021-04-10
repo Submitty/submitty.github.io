@@ -65,7 +65,7 @@
       children:
         - name: Overview
           link: index
-        - name: Common Marks        
+        - name: Common Marks
         - name: PDF Annotation
         - name: Sorting and Navigation
         - name: Resolving a Grade Inquiry
@@ -147,6 +147,7 @@
     - name: Premade Assignments
     - name: Submini Polling
       link: submini_polls
+    - name: SQL Toolbox
 
 - name: System Administrator
   link: sysadmin
