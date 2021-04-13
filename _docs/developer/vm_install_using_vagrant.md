@@ -379,3 +379,42 @@ instructions.
     Similar instructions for other OS.
 
 * See also [Development Instructions Troubleshooting](/developer/development_instructions/troubleshooting)
+
+---
+
+## Testing with a remote device
+
+1. Make sure that the VM is stopped.
+
+    ```
+    vagrant halt
+    ```
+
+2. In the `Vagrantfile`, add a new port under `config.vm.define` for the primary box below the other forwarded ports (site, websockets, database).
+
+   ```
+   ubuntu.vm.network 'forwarded_port', guest: 22, host: <port>, id: "ssh", host_ip: "0.0.0.0"
+   ```
+
+   Replace `<port>` with the port you want to expose externally on the machine that is running the VM, and expose the specified port on the machine if necessary.
+
+3. Start the vagrant machine with `vagrant up ssh`.
+
+4. Retrieve the private key for the vagrant machine, located at `<SUBMITTY GIT REPO>/.vagrant/machines/<VM>/VM BACKEND>/private_key`.
+
+   At the time of writing, `<VM>` is `ubuntu-18.04`, and `<VM BACKEND>` is `virtualbox`.
+
+5. Use SSH to connect from the remote device to the machine that is running the VM, and use SSH port forwarding to forward the necessary ports.
+
+   For most things, you will only need to forward the `site` port and the `websockets` port (1501, 8443), which can be done like so:
+
+   ```
+   ssh -L 1501:localhost:1501 -L 8443:localhost:8443 root@$SUBMITTY_HOST
+   ```
+
+   where `$SUBMITTY_HOST` is the address of the machine that is running the VM.
+
+   **NOTE**
+   Especially for mobile operating systems, make sure that your SSH client supports SSH port forwarding. On iOS, you will also have to enable location tracking for the client to keep the connection alive in the background.
+
+6. Navigate to `localhost:1501` on the remote device.
