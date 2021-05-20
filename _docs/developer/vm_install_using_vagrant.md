@@ -417,3 +417,4 @@ instructions.
    **NOTE**
    Especially for mobile operating systems, make sure that your SSH client supports SSH port forwarding. On iOS, you will also have to enable location tracking for the client to keep the connection alive in the background.
 
+6. Navigate to `localhost:1501` on the remote device.
