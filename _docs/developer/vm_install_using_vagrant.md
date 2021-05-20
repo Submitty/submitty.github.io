@@ -115,8 +115,8 @@ instructions.
      install [homebrew](http://brew.sh/)    if you don't have it and then run:
 
      ```
-     brew cask install virtualbox
-     brew cask install vagrant
+     brew install virtualbox
+     brew install vagrant
      ```
 
    **Ubuntu/Debian**
@@ -370,8 +370,8 @@ instructions.
     For example, on Mac:
 
     ```
-    brew cask reinstall virtualbox
-    brew cask reinstall vagrant
+    brew reinstall virtualbox
+    brew reinstall vagrant
     vagrant plugin update
     vagrant box update
     ```
@@ -417,4 +417,3 @@ instructions.
    **NOTE**
    Especially for mobile operating systems, make sure that your SSH client supports SSH port forwarding. On iOS, you will also have to enable location tracking for the client to keep the connection alive in the background.
 
-6. Navigate to `localhost:1501` on the remote device.
