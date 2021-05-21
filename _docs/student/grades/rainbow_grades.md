@@ -10,4 +10,4 @@ Students' intermediary "OVERALL score" will reflect their performance on graded 
 
 Here is an example of what a grade summary might look like mid-semester:
 
-![](/images/student/id_semester_rainbow_grades.PNG)
+![](/images/student/mid_semester_rainbow_grades.png)
