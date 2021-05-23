@@ -35,7 +35,7 @@ page from the above link.
 
 For Mac, using homebrew:
 ```
-brew install chromedriver
+brew install --cask chromedriver
 ```
 
 For Linux, use:
