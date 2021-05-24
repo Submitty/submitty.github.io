@@ -115,8 +115,8 @@ instructions.
      install [homebrew](http://brew.sh/)    if you don't have it and then run:
 
      ```
-     brew cask install virtualbox
-     brew cask install vagrant
+     brew install --cask virtualbox
+     brew install --cask vagrant
      ```
 
    **Ubuntu/Debian**
@@ -370,8 +370,8 @@ instructions.
     For example, on Mac:
 
     ```
-    brew cask reinstall virtualbox
-    brew cask reinstall vagrant
+    brew reinstall --cask virtualbox
+    brew reinstall --cask vagrant
     vagrant plugin update
     vagrant box update
     ```
