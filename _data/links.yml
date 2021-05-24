@@ -65,7 +65,7 @@
       children:
         - name: Overview
           link: index
-        - name: Common Marks        
+        - name: Common Marks
         - name: PDF Annotation
         - name: Sorting and Navigation
         - name: Resolving a Grade Inquiry
@@ -147,6 +147,7 @@
     - name: Premade Assignments
     - name: Submini Polling
       link: submini_polls
+    - name: SQL Toolbox
 
 - name: System Administrator
   link: sysadmin
@@ -226,8 +227,10 @@
           link: linting_static_analysis
         - name: Python Unit Tests
         - name: PHP Unit Tests
-        - name: Site End-to-End Tests
+        - name: Selenium End-to-End Tests
           link: site_end_to_end_tests
+        - name: Cypress End-to-End Tests
+          link: cypress
         - name: Autograding Integration Tests
         - name: Rainbow Grades Tests
         - name: Travis-CI
@@ -238,9 +241,9 @@
         - name: Web Accessibility
     - name: Developing the PHP Site
       children:
-        - name: Controllers
-        - name: Models
-        - name: Views
+        - name: Model
+        - name: View
+        - name: Controller
         - name: Feature Flags
         - name: WebSocket
     - name: Updating Dependencies
@@ -254,6 +257,8 @@
       children:
         - name: John Hulton MS 2020
           link: MS_2020_John_Hulton
+        - name: Héctor Rodríguez Figueroa MS 2021
+          link: MS_2021_Hector_Rodriguez
     - name: Google Summer of Code
       children:
         - name: 2020 Mukul Kumar Jha

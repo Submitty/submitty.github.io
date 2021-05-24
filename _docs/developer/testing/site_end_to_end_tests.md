@@ -1,5 +1,5 @@
 ---
-title: Site End-to-End Tests
+title: Selenium End-to-End Tests
 ---
 
 The _End-to-End Testing_ (e2e) suite is written in Python and tests
@@ -35,7 +35,7 @@ page from the above link.
 
 For Mac, using homebrew:
 ```
-brew cask install chromedriver
+brew install --cask chromedriver
 ```
 
 For Linux, use:

@@ -18,11 +18,26 @@ to changes you have made within your local Submitty checkout
 (including pulling new code from GitHub or switching to another
 branch).
 
+The commands below should all be typed into the Vagrant VM terminal.
+That is, after you have completed
+the [vagrant setup instructions](/developer/vm_install_using_vagrant)
+and entered typed `vagrant ssh`.
+
 Please also see [Installation Version Notes](/sysadmin/version_notes)
 
 
 ---
 
+## Submitty Quick Help
+
+* To see the available command aliases, from the Vagrant VM
+  terminal you can type:
+
+  ```
+  submitty_help
+  ```
+
+---
 
 ## System or Installation Script Updates
 

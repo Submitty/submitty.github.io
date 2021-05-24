@@ -47,7 +47,6 @@ analysis and test runners for some languages. These are:
 
 1. [DrMemory](https://drmemory.org/)
 1. [Junit 4](https://junit.org/junit4/)
-1. [Emma](https://github.com/Submitty/emma)
 1. [JaCoCo](https://www.eclemma.org/jacoco/)
 
 The versions that we install of these is defined in `.setup/bin/versions.sh`. These are only

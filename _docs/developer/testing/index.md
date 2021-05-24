@@ -11,7 +11,9 @@ these tests can be roughly broken down into the following high-level types:
 * [Static Analysis / Linting](linting_static_analysis)
 * [Python Unit Tests](python_unit_tests)
 * [PHP Unit Tests](php_unit_tests)
-* [Site End-to-End (E2E) tests](site_end_to_end_tests)
+*  Site End-to-End (E2E) tests
+	- [Selenium test suite](site_end_to_end_tests)
+	- [Cypress test suite](cypress)
 * [Autograding Integration Tests](autograding_integration_tests)
 * [Rainbow Grades Functional Tests](rainbow_grades_tests)
 
@@ -74,7 +76,7 @@ Now, to install dependencies for Python on either OS:
 pip3 install PyYAML
 pip3 install python-dateutil
 pip3 install tzlocal
-pip3 install sqlalchemy
+pip3 install "sqlalchemy<1.4.0"
 pip3 install jsonschema
 pip3 install jsonref
 pip3 install docker

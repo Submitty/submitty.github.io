@@ -1,11 +1,15 @@
 ---
-title: Models
+title: Model
 category: Developer
 ---
 
-The model handles containing the data for the application, performing data validation, and
-the rules / logic of the application. It receives the raw data from the controller, and
-then maps that into a class. A model is then made up of a number of properties, with
+The Model is part of the [Model-View-Controller](index) software
+design pattern.
+
+The model handles containing the data for the application, performing
+data validation, and the rules / logic of the application. It receives
+the raw data from the [controller](controller), and then maps that
+into a class. A model is then made up of a number of properties, with
 getters and setters, and other various functions.
 
 Each model in Submitty is derived off the `AbstractModel` class which provides

@@ -9,7 +9,7 @@ category: Developer
 
 ### Masters Theses / Projects
 
-* Hector Rodriguez - MS - *Expected May 2021*
+* [Hector Rodriguez - MS - *Expected May 2021*](MS_2021_Hector_Rodriguez)
 
 * [John (Jack) Hulton - MS - December 2020](MS_2020_John_Hulton)
 

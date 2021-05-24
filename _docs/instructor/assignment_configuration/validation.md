@@ -111,9 +111,6 @@ category: Instructor -- Autograding Configuration
 
 
   * These methods are for Java programs, and require only an ``"actual_file"``:
-     * ``"EmmaCoverageReportGrader"`` - This uses the additional field
-       ```coverage_threshold``` to compare against for test success
-     * ``"EmmaInstrumentationGrader"``
      * ``"JUnitTestGrader"`` - This is for when running a test file directly
        through JUnit. The ```num_tests``` field should be defined as the
        expected number of JUnit tests to be run.
