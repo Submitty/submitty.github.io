@@ -3,12 +3,12 @@ title: Migrations
 category: Developer
 ---
 
-We use [database migrations](https://en.wikipedia.org/wiki/Schema_migration) 
-to handle updating Submitty's databases, both in development and production, 
+We use [database migrations](https://en.wikipedia.org/wiki/Schema_migration)
+to handle updating Submitty's databases, both in development and production,
 in such a way that it is repeatable, easy to see the status of a given database,
 and that we are not left with partial DB upgrades due to a broken script.
 
-To do this, we utilize a custom migration tool written for Submitty, 
+To do this, we utilize a custom migration tool written for Submitty,
 [migrator](https://github.com/Submitty/Submitty/tree/master/migration). This tool
 can be used manually, as well as being baked into the
 installation/upgarde procedure of Submitty. For instance, running
@@ -109,11 +109,6 @@ directory or file structure:
     `GIT_CHECKOUT/Submitty/.setup/install_system.sh`, or the files in
     `GIT_CHECKOUT/Submitty/.setup/distro_setup/`
 
-    Or make changes to the complete database schema(s):
-
-    `GIT_CHECKOUT/Submitty/migration/data/submitty_db.sql`
-    `GIT_CHECKOUT/Submitty/migration/data/course_tables.sql` 
-
 
 2.  And you should also prepare a migration file of the appropriate
     type (`system`, `master`, or `course`) to update an existing system and
@@ -148,11 +143,11 @@ directory or file structure:
     session, and then for course migration, the semester and course
     being affected. For interacting with the DB, you'll mainly just
     want to use:
-    
+
     ```
     database.execute("SQL QUERY TO RUN")
     ```
-    
+
     which will run the query automatically within a transaction that's
     started before running the migration file.
 
@@ -161,7 +156,7 @@ directory or file structure:
 
     NOTE: The `up` and `down` functions are optional to be defined and
     you can omit the function if you do not need it for your migration.
-  
+
     NOTE: In general, your `down` migration should only undo the
     necessary changes to make earlier versions of the Submitty
     software work.  For example, if your migration is adding a column
@@ -171,17 +166,18 @@ directory or file structure:
     in the future. Your `down` function may be empty.
 
     Thus, it is important to ensure that the `up` migration can be
-    re-run after the corresponding `down` migration is run.  For example, 
+    re-run after the corresponding `down` migration is run.  For example,
     your `up` function should not crash on adding the column if the column
     already exists.
 
-3.  After you have written your migration to update an existing system 
+
+3.  After you have written your migration to update an existing system
     and are satisfied with it, you must also update the base .sql
     files used to create a new Submitty system.  To
     accomplish this, first apply the migration that you wrote in the previous
     step, placing the DB into the desired end state, and then run the following
     command from within the Vagrant VM:
-    
+
     ```bash
     sudo python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/migration/run_migrator.py -e master -e course dump
     ```
@@ -189,3 +185,11 @@ directory or file structure:
     This will update `migration/migrator/data/submitty_db.sql` and `migration/migrator/data/course_tables.sql`.
     If you only wish to update one of them, you can use just `-e master` for `submitty_db.sql` and `-e course`
     and `course_tables.sql`.
+
+
+4.  Lastly, you should verify that the edits made to the database schema(s) match what you intended to edit in the following file(s):
+
+    `GIT_CHECKOUT/Submitty/migration/data/submitty_db.sql`
+    `GIT_CHECKOUT/Submitty/migration/data/course_tables.sql`
+
+    If the edits are not inline with what you intended, you may have to modify your new migration in order to achieve the desired result.
