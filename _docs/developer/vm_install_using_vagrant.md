@@ -398,7 +398,7 @@ instructions.
 
    Replace `<port>` with the port you want to expose externally on the machine that is running the VM, and expose the specified port on the machine if necessary.
 
-3. Start the vagrant machine with the SSH argument:
+3. Start the vagrant machine with the SSH argument set:
 
    **Windows**
    ```
@@ -428,7 +428,7 @@ instructions.
    ```
 
    where `$SUBMITTY_HOST` is the address of the machine that is running the VM.
-   
+
    **NOTE**
    Especially for mobile operating systems, make sure that your SSH client supports SSH port forwarding. On iOS, you will also have to enable location tracking for the client to keep the connection alive in the background.
 
