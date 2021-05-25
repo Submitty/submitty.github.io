@@ -398,36 +398,25 @@ instructions.
 
    Replace `<port>` with the port you want to expose externally on the machine that is running the VM, and expose the specified port on the machine if necessary.
 
-3. Start the vagrant machine with the SSH argument set:
-
-   **Windows**
-   ```
-   set SSH=y
-   vagrant up
-   ```
-
-   **macOS/Linux**
-   ```
-   SSH=y vagrant up
-   ```
+3. Start the vagrant machine with `vagrant up`.
 
 4. Retrieve the private key for the vagrant machine, located at `<SUBMITTY GIT REPO>/.vagrant/machines/<VM>/<VM BACKEND>/private_key`.
 
    At the time of writing, `<VM>` is `ubuntu-18.04`, and `<VM BACKEND>` is `virtualbox`.
 
-5. Use SSH to connect from the remote device to the machine that is running the VM, and use SSH port forwarding to forward the necessary ports.
+5. Use SSH to connect from the remote device to the machine that is running the VM, and use SSH port forwarding (local forwarding) to forward the necessary ports.
 
    The username to sign in is `root` and the authentication method is with private key (using the private key specified in part 4). If you encounter authentication issues, try adding `vagrant` as the password in addition to the private key.
 
    For most things, you will only need to forward the `site` port and the `websockets` port (1501, 8443).
 
-   The configuration to set up the connection will differ based on your client; below is an example for if you're using an SSH binary to connect, assuming that the SSH configuration file has the private key and port info stored.
+   The configuration to set up the connection will differ based on your client; below is an example for if you're using an SSH binary to connect, assuming that the SSH configuration file has the username, private key (identity file), IP address (host name), and port stored.
 
    ```
-   ssh -L 1501:localhost:1501 -L 8443:localhost:8443 root@$SUBMITTY_HOST
+   ssh -L 1501:localhost:1501 -L 8443:localhost:8443 $SUBMITTY_HOST
    ```
 
-   where `$SUBMITTY_HOST` is the address of the machine that is running the VM.
+   where `$SUBMITTY_HOST` is a reference to the `Host` from the SSH config file.
 
    **NOTE**
    Especially for mobile operating systems, make sure that your SSH client supports SSH port forwarding. On iOS, you will also have to enable location tracking for the client to keep the connection alive in the background.
