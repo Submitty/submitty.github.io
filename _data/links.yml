@@ -233,8 +233,8 @@
           link: cypress
         - name: Autograding Integration Tests
         - name: Rainbow Grades Tests
-        - name: Travis-CI
-          link: travis_ci
+        - name: GitHub Actions
+          link: github_actions
     - name: Interface Design
       link: interface_design_style_guide
       children:

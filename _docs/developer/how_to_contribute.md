@@ -82,8 +82,6 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
       This indicates to other developers and reviewers
       that you'd like detailed feedback on your work, but it is incomplete.
       When a PR is in the draft state it cannot be merged into the master branch.
-      Note that draft pull requests will run the ["Travis CI - Branch" test suite](/developer/testing/travis_ci),
-      but will skip the more extensive "Travis CI - Pull Request" test suite.
 
     * **IMPORTANT:** If this PR requires system administrator action
       before/after installation, the PR title should be prepended with
