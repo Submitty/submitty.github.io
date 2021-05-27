@@ -6,19 +6,19 @@ category: Developer
 The Controller is part of the [Model-View-Controller](index) software
 design pattern.
 
-The Controller act as the gateway for taking in a user's request,
+The Controller acts as the gateway for taking in a user's request,
 collecting the data from a [Model](model), and passing it along to the
 appropriate [View](view).
 
 ## Example: User Controller
 
-So a request to view the `UserDetails` page would first hit the
+A request to view the `UserDetails` page would first hit the
 `UserController`, which might look something like this:
 
 ```PHP
 /**
 * Route to view the userDetailsPage.
-* @Route("/{semester}/{course}/show_user_details", methods={"GET"})
+* @Route("/{_semester}/{_course}/show_user_details", methods={"GET"})
 * @AccessControl(role="INSTRUCTOR")
 **/
 
