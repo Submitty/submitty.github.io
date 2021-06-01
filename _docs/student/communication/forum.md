@@ -59,7 +59,7 @@ discussing and sharing with your classmates on the Discussion Forum.*
    and the background will switch to white.
 
    In [Dark or Black Theme](/student/account/theme) new/unread posts
-   will be FIXME and viewed posts will be FIXME.
+   will be dark gray and viewed posts will gray or black respectively.
 
 * **Teaching Staff Posts**  
    Posts by a member of the teaching staff (instructor or grader)
