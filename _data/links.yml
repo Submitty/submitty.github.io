@@ -17,6 +17,8 @@
           link: index
         - name: Course Navigation
         - name: Preferred Name
+        - name: Email Address(es)
+          link: email_addresses
         - name: Password
         - name: Photo
         - name: Local Timezone

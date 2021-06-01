@@ -1,37 +1,49 @@
 ---
 title: Discussion Forum
 category: Instructor
-order: 17
 ---
 
-![](/images/main_view_forum.png)
-
-### Discussion Forum
-
-To enable the discussion forum for a course, instructor users should
-click the "Course Settings" and select "Discussion Forum". To enter the 
-discussion forum simply click the corresponding button in the top right 
-corner, under the Submitty logo.
-
-_IMPORTANT NOTE: The discussion forum can be enabled/disabled at any time. 
-Even after posts have been created._
+See also [Student -- Communication -- Discussion Forum](/student/communication/forum).
 
 
-### Features
+## Enabling the Discussion Forum
+
+To enable the Discussion Forum for a course, an instructor user must
+should select the "Course Settings" page from the left sidebar, and
+then click the checkbox next to "Enable Discussion Forum".  This will
+add the "Discussion Forum" page to the left sidebar for both students
+and teaching staff.
+
+
+## Additional Features
 
 The discussion forum comes with many features that enables effective
 communication between students and the teaching staff.
 
-   **_User Post Statistics_** displays all discussion forum usage.
+* **Announcements**  
+   Members of the Teaching Staff may specify that a new thread
+   is an *announcement* that will be *pinned* to the top of the
+   Discussion Forum thread list.  Announcements will be marked with a
+   thumbtack to indicate their importance.
 
-   **_Announcements_** Instructors/Full Access Graders have the ability to create announcements on the forum.
-   These threads will display at the top of the thread list with a gold star to resemble importance. 
+   Instructors can also choose to send the announcement as a Submitty
+   system email to all members of the course, if [ ]() 
 
-   **_Post Edit History_** users have the ability to edit their post. Members of the teaching staff
-   have the ability to view each edit. 
+also by email, if [configured on the server](/sysadmin/email_configuration).
 
-   **_Search_** users have the ability to search through threads/posts to easily find 
-   information.
+* **Post Edit History** users have the ability to edit their
+   post. Members of the teaching staff have the ability to view each
+   edit.
+
+* **Statistics**  
+   Members of the teaching staff can view forum posting history
+   for each student in the course, with links to every post.  This feature
+   is useful to award bonus points to students who engage on the forum and
+   make impactful contributions to the course discussions.
+
+
+
+
 
    **_Thread Categories_** color coded categories for threads.
    Instructors have the ability to create/remove categories. When creating
@@ -54,20 +66,3 @@ communication between students and the teaching staff.
    **_Anonymous Posting (to classmates)_** enables users to appear as anonymous when creating a post/thread.
    Members of the teaching staff have the ability to view the user of an anonymous post if needed. 
 
-### At A Glance
-   
-   **_New/Unseen Posts_** When a post has not been viewed, the background appears as a light blue. When the post has been seen it turns white. If a thread is new or has new posts within the thread the thread level follows the same color scheme
-
-   **_Borders_** Posts with a yellow border were from a member of the teaching staff
-
-   **_Yellow question mark_** ![](/images/discussion_forum_icons/df_question.png) Question in the thread has not been answered
-
-   **_Green check_** ![](/images/discussion_forum_icons/df_check.png) Question answered
-
-   **_Yellow star_** ![](/images/discussion_forum_icons/df_star.png) Announcment from a member of the teaching staff
-
-   **_lock_** ![](/images/discussion_forum_icons/df_lock.png) post cannot be editted or replied 
-
-   **_Borders_** Posts with a yellow border were from a member of the teaching staff
-
-   **_Metadata_** The posts also contain details about the author, date and time a post was created, as well as the ability to edit and delete a post
