@@ -17,6 +17,8 @@
           link: index
         - name: Course Navigation
         - name: Preferred Name
+        - name: Email Address(es)
+          link: email_addresses
         - name: Password
         - name: Photo
         - name: Local Timezone
@@ -233,17 +235,17 @@
           link: cypress
         - name: Autograding Integration Tests
         - name: Rainbow Grades Tests
-        - name: Travis-CI
-          link: travis_ci
+        - name: GitHub Actions
+          link: github_actions
     - name: Interface Design
       link: interface_design_style_guide
       children:
         - name: Web Accessibility
     - name: Developing the PHP Site
       children:
-        - name: Controllers
-        - name: Models
-        - name: Views
+        - name: Model
+        - name: View
+        - name: Controller
         - name: Feature Flags
         - name: WebSocket
     - name: Updating Dependencies

@@ -25,10 +25,10 @@ To illustrate the difference between unit testing, integration testing, and end-
 * <https://codeutopia.net/blog/2015/04/11/what-are-unit-testing-integration-testing-and-functional-testing/>
 
 These tests are run as part of a _Continuous Integration_ process on
-[Travis-CI](https://travis-ci.com/github/Submitty/Submitty).  Each of
+[GitHub actions](https://github.com/Submitty/Submitty/actions). Each of
 the tests can also be run on your local computer -- developers are
 encouraged to run and debug the relevant tests on their own computer.
-Please see the [page](/developer/testing/travis_ci) on it for more
+Please see the [page](/developer/testing/github_actions) on it for more
 discussion on how it functions.
 
 ## Initial Set Up
