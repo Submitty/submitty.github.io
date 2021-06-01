@@ -65,7 +65,7 @@ discussing and sharing with your classmates on the Discussion Forum.*
    Posts by a member of the teaching staff (instructor or grader)
    will be rendered with a bright yellow border.
 
-* **Unresolved Thread / Unanswered Question** ![](/images/discussion_forum_icons/df_question_mark.png)  
+* **Unresolved Thread / Unanswered Question** ![](/images/discussion_forum_icons/df_question_mark.png){:width="40px"}  
    Threads labeled with a large yellow question mark contain a question
    from a student and it has not yet been *resolved*.  All members of
    the course (students *and* teaching staff) are encouraged to read the
@@ -73,22 +73,22 @@ discussing and sharing with your classmates on the Discussion Forum.*
    (unresolved/resolved) can be edited by either the original poster or a
    member of the teaching staff.
 
-* **Resolved Thread / Answered Question** ![](/images/discussion_forum_icons/df_checkmark.png)  
+* **Resolved Thread / Answered Question** ![](/images/discussion_forum_icons/df_checkmark.png){:width="40px"}  
    Threads labeled with a large green check mark contain a question from
    a student that has been resolved.
 
-* **Pinned Announcements** FIXME   ![](/images/discussion_forum_icons/df_thumbtack.png)  
+* **Pinned Announcements** FIXME   ![](/images/discussion_forum_icons/df_thumbtack.png){:width="40px"}  
    Announcement posts/threads from a member of the teaching staff will be labeled
    with a large yellow thumbtack.  These threads will appear at the top of the
    sorted ordering for *all* users.
 
-* **Personal Bookmarks** FIXME  ![](/images/discussion_forum_icons/df_bookmark.png)  
+* **Personal Bookmarks** FIXME  ![](/images/discussion_forum_icons/df_bookmark.png){:width="40px"}  
    Each user can label specific threads with personal bookmarks so they
    are easy to find in the future.  Similar to global pinning of
    announcements, these threads will be sorted to the top of the
    thread list (just below pinned annoumcements).
 
-* **Locked Conversations** ![](/images/discussion_forum_icons/df_lock.png)  
+* **Locked Conversations** ![](/images/discussion_forum_icons/df_lock.png){:width="40px"}  
    The lock symbol will appear when a thread has been *locked* by a member of the
    teaching staff.  Students cannot add additional posts and existing posts
    within the thread may not be edited.
@@ -103,32 +103,37 @@ The discussion forum comes with many features that enables effective
 communication between students and the teaching staff.
 
 
-
-
-
-   **_Search_** users have the ability to search through threads/posts to easily find 
+*  **Search**  
+   Users have the ability to search through threads/posts to easily find 
    information.
 
-   **_Thread Categories_** color coded categories for threads.
+*  **Thread Categories**  
+   Color coded categories for threads.
    Instructors have the ability to create/remove categories. When creating
    a thread it is required to select a category. Categories can be filtered
    on to display pertinent threads.
 
-   **_Thread Status_** threads can be updated based on a status of
+*  **Thread Status**  
+   Threads can be updated based on a status of
    being Question or a Comment.  A question can be
    resolved/unresolved.
 
-   **_Merging Threads_** Often times students will ask the same question. Members of the teaching staff
+*  **Merging Threads**  
+   Often times students will ask the same question. Members of the teaching staff
    have the ability to merge similar threads. When merging a thread t1 into another thread t2,
    it is only possible to merge t1 into t2 if t2s last post occurred before t1 was created.
 
-   **_Image Attachments_** users can upload up to 5 images per post.
+*  **Image Attachments**  
+   Users can upload up to 5 images per post.
 
-   **_Code blocks and links_** users can post code blocks and links using [code]print('hello world')[/code] and [url=https://submitty.org]Submitty[/url]
+*  **Code blocks and links**  
+    Users can post code blocks and links using Markdown.   
 
-   **_Post View Sorting_** display posts in chronological, alphabetical, or reply hierarchy style.
+*  **Post View Sorting**  
+   display posts in chronological, alphabetical, or reply hierarchy style.
 
-   **_Anonymous Posting (to classmates)_** enables users to appear as anonymous when creating a post/thread.
+*  **Anonymous Posting (to classmates)**  
+   Enables users to appear as anonymous when creating a post/thread.
    Members of the teaching staff have the ability to view the user of an anonymous post if needed. 
 
 
