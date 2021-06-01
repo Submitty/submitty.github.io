@@ -44,8 +44,8 @@ GEM
     ffi (1.15.1-x64-mingw32)
     forwardable-extended (2.6.0)
     gemoji (3.0.1)
-    github-pages (214)
-      github-pages-health-check (= 1.17.0)
+    github-pages (215)
+      github-pages-health-check (= 1.17.2)
       jekyll (= 3.9.0)
       jekyll-avatar (= 0.7.0)
       jekyll-coffeescript (= 1.1.1)
@@ -88,7 +88,7 @@ GEM
       nokogiri (>= 1.10.4, < 2.0)
       rouge (= 3.26.0)
       terminal-table (~> 1.4)
-    github-pages-health-check (1.17.0)
+    github-pages-health-check (1.17.2)
       addressable (~> 2.3)
       dnsruby (~> 1.60)
       octokit (~> 4.0)
@@ -264,6 +264,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.7)
+    unf_ext (0.0.7.7-x64-mingw32)
     unicode-display_width (1.7.0)
     webrick (1.7.0)
     zeitwerk (2.4.2)
@@ -273,7 +274,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  github-pages (= 214)
+  github-pages (= 215)
   webrick (~> 1.7)
 
 BUNDLED WITH
