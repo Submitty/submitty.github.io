@@ -113,28 +113,19 @@ communication between students and the teaching staff.
    a thread it is required to select a category. Categories can be filtered
    on to display pertinent threads.
 
-*  **Thread Status**  
-   Threads can be updated based on a status of
-   being Question or a Comment.  A question can be
-   resolved/unresolved.
-
-*  **Merging Threads**  
-   Often times students will ask the same question. Members of the teaching staff
-   have the ability to merge similar threads. When merging a thread t1 into another thread t2,
-   it is only possible to merge t1 into t2 if t2s last post occurred before t1 was created.
-
 *  **Image Attachments**  
    Users can upload up to 5 images per post.
 
 *  **Code blocks and links**  
-    Users can post code blocks and links using Markdown.   
+    Users can post code blocks and links using [Markdown](markdown).   
 
 *  **Post View Sorting**  
-   display posts in chronological, alphabetical, or reply hierarchy style.
+   Display posts in chronological or reply-hierarchy style.
 
 *  **Anonymous Posting (to classmates)**  
    Enables users to appear as anonymous when creating a post/thread.
-   Members of the teaching staff have the ability to view the user of an anonymous post if needed. 
+   _Note: Members of the teaching staff have the ability to view the
+   user of an anonymous post if needed._ 
 
 
 See also [Instructor - Discussion Forum](/instructor/forum).

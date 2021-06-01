@@ -41,28 +41,14 @@ also by email, if [configured on the server](/sysadmin/email_configuration).
    is useful to award bonus points to students who engage on the forum and
    make impactful contributions to the course discussions.
 
-
-
-
-
-   **_Thread Categories_** color coded categories for threads.
-   Instructors have the ability to create/remove categories. When creating
-   a thread it is required to select a category. Categories can be filtered
-   on to display pertinent threads.
-
-   **_Thread Status_** threads can be updated based on a status of being Question or a Comment. 
-   A question can be resolved/unresolved.
-
-   **_Merging Threads_** Often times students will ask the same question. Members of the teaching staff
+*  **Merging Threads**  
+   Often times students will ask the same question. Members of the teaching staff
    have the ability to merge similar threads. When merging a thread t1 into another thread t2,
    it is only possible to merge t1 into t2 if t2s last post occurred before t1 was created.
 
-   **_Image Attachments_** users can upload up to 5 images per post.
+* **Alphabetic Post View Sorting**
+   Members of the teaching staff may sort the posts alphabetically by
+   student name to aid in grading.
 
-   **_Code blocks and links_** users can post code blocks and links using [code]print('hello world')[/code] and [url=https://submitty.org]Submitty[/url]
 
-   **_Post View Sorting_** display posts in chronological, alphabetical, or reply hierarchy style.
-
-   **_Anonymous Posting (to classmates)_** enables users to appear as anonymous when creating a post/thread.
-   Members of the teaching staff have the ability to view the user of an anonymous post if needed. 
 
