@@ -205,4 +205,10 @@ student to the queue if they were accidently removed.
 
 ### Office Hours Queue Statistics
 
-*NOTE: Office Hours Queue Statistics coming soon!*
+Students, graders, and  instructors can view data on the office hours queue by clicking the "View Queue Stats" button in the Office Hours Queue page.
+
+![](/images/queue/queue_stats_button.png)
+
+The statistics page displays summaries of the daily, weekly, and total interactions in the different queues a course has.
+
+![](/images/queue/queue_stats_example.png)
