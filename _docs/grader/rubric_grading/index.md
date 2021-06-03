@@ -32,33 +32,47 @@ Clicking on a "Grade" or cummulative score buttons brings up the
 multi panel TA grading interface.
 
 
-## Draggable Grading Panels
+## Customizable Grading Panels
 
 ![](/images/ta_grading/TA_grading_panes.png)
 
-The Rubric Grading Interface has a customizable layout with four core
-panes:
+The Rubric Grading Interface has a customizable layout with a number
+of essential and helpful panels.  Depending on the assignment configuration
+and manual grading tasks, the grader can customize the display, arrangement,
+and dimensions of these panels.
 
-* File and Directory Browser (blue border) - displays the tree
-  hierachy of files and directories.  The grader can view each of the
-  submission files (the *submissions* directory) and various output and
-  logging files produced during autograding (the *results* directory).
-  If this gradeable is submitted via GIT or other VCS, the submission
-  files will be in the *checkout* subdirectory.  
+*  **File and Directory Browser** (blue border)  
+   Displays the tree
+   hierachy of files and directories.  The grader can view each of the
+   submission files (the *submissions* directory) and various output and
+   logging files produced during autograding (the *results* directory).
+   If this gradeable is submitted via GIT or other VCS, the submission
+   files will be in the *checkout* subdirectory.  
 
-* Automated Test Case Results (red border) - displays the results for
-  each automated grading test cases (which students can see),
-  including the *hidden tests* (which students cannot see).
+*  **Automated Test Case Results** (red border)  
+   Displays the results for each automated grading test cases (which students can see),
+   including the *hidden tests* (which students cannot see).
 
-* Grading Rubric (green border) - divided into one or more components specified
+*  **Grading Rubric** (green border)  
+   The instructor prepares a *manual grading rubric* that is divided into
+   one or more *components* as desired.
 
-* Student Information (black border) - includes date/time information
-  for the one or more submission files and the students late day
-  history.  If necessary, the grader can change which version is
-  considered "active".
+*  **Student/Team Information** (black border)  
+   This panel includes date/time information for the one or more submission
+   files and the student's late day history.  If necessary, the grader can
+   change which version is considered "active".
 
-Depending on the specific gradeable, the required manual grading
-tasks, and grader preference, these panels can be moved, resized,
-and/or hidden for efficient grading.
+*  **Grade Inquiry** (orange border)  
+   If grade inquiries are enabled for this gradeable, the discussion thread
+   between the student and grader(s) will be displayed in this panel.
+ 
+*  **Peer Grading** (purple border)  
+   If peer grading is enabled for this gradeable, summary information for the
+   scores awarded by other students will be displayed in this panel.
+
+*  **Discussion Forum Posts** (cyan border)  
+   If this gradeable has been associated with one or more discussion forum
+   threads (e.g., discussion and/or progress posts that will be graded), each
+   student's posts within those threads will be displayed in this panel.
 
 

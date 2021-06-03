@@ -15,7 +15,7 @@ add the "Discussion Forum" page to the left sidebar for both students
 and teaching staff.
 
 
-## Additional Features
+## Features Available to Teaching Staff
 
 The discussion forum comes with many features that enables effective
 communication between students and the teaching staff.

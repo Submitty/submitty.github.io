@@ -97,33 +97,33 @@ discussing and sharing with your classmates on the Discussion Forum.*
    Each post contain details about the author, date and time of creation.
 
 
-## Features
+## Other Key Features
 
 The discussion forum comes with many features that enables effective
 communication between students and the teaching staff.
 
 
 *  **Search**  
-   Users have the ability to search through threads/posts to easily find 
-   information.
+   Users can use simple text search over the thread titles and post
+   bodies to find information.
 
 *  **Thread Categories**  
-   Color coded categories for threads.
-   Instructors have the ability to create/remove categories. When creating
-   a thread it is required to select a category. Categories can be filtered
-   on to display pertinent threads.
+   Every thread must be labeled with one or more *categories*.
+   Course instructors may customize the categories for your course.  You may
+   filter the display of threads by category.
 
 *  **Image Attachments**  
-   Users can upload up to 5 images per post.
+   You may upload up to five images per post.
 
 *  **Code blocks and links**  
     Users can post code blocks and links using [Markdown](markdown).   
 
 *  **Post View Sorting**  
-   Display posts in chronological or reply-hierarchy style.
+   You may sort the display of posts within a thread in chronological or
+   reply-hierarchy order.
 
 *  **Anonymous Posting (to classmates)**  
-   Enables users to appear as anonymous when creating a post/thread.
+   You may specify that your thread/post is anonymous to other students in the course.
    _Note: Members of the teaching staff have the ability to view the
    user of an anonymous post if needed._ 
 
