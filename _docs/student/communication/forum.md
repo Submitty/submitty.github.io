@@ -65,7 +65,7 @@ discussing and sharing with your classmates on the Discussion Forum.*
    Posts by a member of the teaching staff (instructor or grader)
    will be rendered with a bright yellow border.
 
-* **Unresolved Thread / Unanswered Question** ![](/images/discussion_forum_icons/df_question_mark.png){:width="40px"}  
+* **Unresolved Thread / Unanswered Question**  ![](/images/discussion_forum_icons/df_question_mark.png){:width="40px"}  
    Threads labeled with a large yellow question mark contain a question
    from a student and it has not yet been *resolved*.  All members of
    the course (students *and* teaching staff) are encouraged to read the
@@ -73,22 +73,22 @@ discussing and sharing with your classmates on the Discussion Forum.*
    (unresolved/resolved) can be edited by either the original poster or a
    member of the teaching staff.
 
-* **Resolved Thread / Answered Question** ![](/images/discussion_forum_icons/df_checkmark.png){:width="40px"}  
+* **Resolved Thread / Answered Question**  ![](/images/discussion_forum_icons/df_checkmark.png){:width="40px"}  
    Threads labeled with a large green check mark contain a question from
    a student that has been resolved.
 
-* **Pinned Announcements** FIXME   ![](/images/discussion_forum_icons/df_thumbtack.png){:width="40px"}  
+* **Pinned Announcements**  ![](/images/discussion_forum_icons/df_thumbtack.png){:width="40px"}  
    Announcement posts/threads from a member of the teaching staff will be labeled
    with a large yellow thumbtack.  These threads will appear at the top of the
    sorted ordering for *all* users.
 
-* **Personal Bookmarks** FIXME  ![](/images/discussion_forum_icons/df_bookmark.png){:width="40px"}  
+* **Personal Bookmarks**  ![](/images/discussion_forum_icons/df_bookmark.png){:width="40px"}  
    Each user can label specific threads with personal bookmarks so they
    are easy to find in the future.  Similar to global pinning of
    announcements, these threads will be sorted to the top of the
    thread list (just below pinned annoumcements).
 
-* **Locked Conversations** ![](/images/discussion_forum_icons/df_lock.png){:width="40px"}  
+* **Locked Conversations**  ![](/images/discussion_forum_icons/df_lock.png){:width="40px"}  
    The lock symbol will appear when a thread has been *locked* by a member of the
    teaching staff.  Students cannot add additional posts and existing posts
    within the thread may not be edited.
@@ -97,33 +97,33 @@ discussing and sharing with your classmates on the Discussion Forum.*
    Each post contain details about the author, date and time of creation.
 
 
-## Features
+## Other Key Features
 
 The discussion forum comes with many features that enables effective
 communication between students and the teaching staff.
 
 
 *  **Search**  
-   Users have the ability to search through threads/posts to easily find 
-   information.
+   Users can use simple text search over the thread titles and post
+   bodies to find information.
 
 *  **Thread Categories**  
-   Color coded categories for threads.
-   Instructors have the ability to create/remove categories. When creating
-   a thread it is required to select a category. Categories can be filtered
-   on to display pertinent threads.
+   Every thread must be labeled with one or more *categories*.
+   Course instructors may customize the categories for your course.  You may
+   filter the display of threads by category.
 
 *  **Image Attachments**  
-   Users can upload up to 5 images per post.
+   You may upload up to five images per post.
 
 *  **Code blocks and links**  
     Users can post code blocks and links using [Markdown](markdown).   
 
 *  **Post View Sorting**  
-   Display posts in chronological or reply-hierarchy style.
+   You may sort the display of posts within a thread in chronological or
+   reply-hierarchy order.
 
 *  **Anonymous Posting (to classmates)**  
-   Enables users to appear as anonymous when creating a post/thread.
+   You may specify that your thread/post is anonymous to other students in the course.
    _Note: Members of the teaching staff have the ability to view the
    user of an anonymous post if needed._ 
 
