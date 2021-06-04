@@ -59,8 +59,8 @@ discussing and sharing with your classmates on the Discussion Forum.*
    and the background will switch to white.
 
    In [Dark or Black Theme](/student/account/theme) new/unread posts
-   will be light gray (stand out from the background color) and viewed posts
-   will gray or black respectively (match the background color).
+   will be medium gray and viewed posts
+   will dark gray or black respectively (matching the theme background color).
 
 * **Teaching Staff Posts**  
    Posts by a member of the teaching staff (instructor or grader)
