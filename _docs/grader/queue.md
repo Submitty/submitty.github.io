@@ -1,10 +1,10 @@
 ---
 title: Managing Office Hours
 category: Grader
-order: 4
 ---
 
-Students, please read [Getting Help through the Office Hours Queue](/student/queue).
+Students, please read [Getting Help through the Office Hours Queue](/student/queue) and
+Instructors, please [Enable and Configure the Office Hours Queue](/instructor/queue).
 
 
 ### What is the Office Hours Queue?
@@ -34,41 +34,6 @@ helped as well as the students currently being helped.  We store all
 relevant timestamps for each entry in the queue.  Usage statistics can
 be tracked, analyzed, and instructional resources balanced
 appropriately.  *NOTE: Office Hours Queue Statistics coming soon!*
-
-
-### Enabling the Office Hours Queue
-
-To use the queue, an instructor level user for the course must first
-enable this feature from the [Course Settings
-page](/instructor/course_settings).
-
-![](/images/queue/queue_enable.png)
-
-Once enabled, all students and TAs will see the "Office Hours Queue"
-on the left sidebar of all course pages.
-
-![](/images/queue/queue_menu.png)
-
-
-### Student Contact Information for Remote Assistance
-
-If students will be connecting to the queue for remote office hours or
-remote tutoring, the instructor user should also check the box to require
-that students provide contact information.  The format of this contact
-information is flexible.  You should inform your students of the
-recommended procedure for receiving remote tutoring help.  You can do
-this in the customizable "Welcome Message", and through other
-communication and lecture materials.  For example, students might be
-required to provide a phone number, email address, or remote meeting
-URL.
-
-![](/images/queue/queue_enable_completed.png)
-
-If you have requested that students provide contact information to
-allow remote office hours and remote tutoring, that information will
-appear beneath each student's entry in the office hours queue.
-
-![](/images/queue/queue_contact_information.png)
 
 
 ### Creating a New Office Hours Queue
@@ -193,7 +158,7 @@ the each students by name/face.  The TA/Instructor also has access to view the
 student's user id by clicking the eye icon.
 
 
-### Office Hours Queue History
+### Office Hours Queue History and Statistics
 
 The bottom of the page shows the most recent events in the queue from
 the current day.  As desired, you can click to view all queue events
@@ -202,13 +167,13 @@ they waited before help arrive, the length of time they were being
 helped, and who helped them.  The history includes an option to the
 student to the queue if they were accidently removed.
 
-
-### Office Hours Queue Statistics
-
-Students, graders, and  instructors can view data on the office hours queue by clicking the "View Queue Stats" button in the Office Hours Queue page.
+Students, graders, and instructors can view data on the office hours
+queue by clicking the "View Queue Stats" button in the Office Hours
+Queue page.
 
 ![](/images/queue/queue_stats_button.png)
 
-The statistics page displays summaries of the daily, weekly, and total interactions in the different queues a course has.
+The statistics page displays summaries of the daily, weekly, and total
+interactions in the different queues a course has.
 
 ![](/images/queue/queue_stats_example.png)
