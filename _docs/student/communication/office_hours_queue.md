@@ -84,11 +84,8 @@ may specify an alternate name when you join the office hours queue.
 The instructor/TA also has access to your
 Submitty user id if needed.
 
-## Office Hours Queue History
-
-At the bottom of this page you can view a log of your interactions with the queue today.
-
 
 ---
 
-Instructors and graders, please also read [Managing the Office Hours Queue](/grader/queue)
+TAs and Graders, please also read [Managing the Office Hours Queue](/grader/queue).
+Instructors, please [Enable and Configure the Office Hours Queue](/instructor/queue).

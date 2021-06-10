@@ -106,6 +106,8 @@
           link: notebook
     - name: Course Materials
       link: course_materials
+    - name: Enable and Configure Office Hours Queue
+      link: queue
     - name: Peer Grading
     - name: Facilitating Submission via GIT
       link: managing_git
