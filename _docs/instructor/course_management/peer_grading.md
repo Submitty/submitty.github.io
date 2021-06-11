@@ -1,6 +1,8 @@
 ---
 title: Peer Grading
-category: Instructor
+category: Instructor -- Course Management
+redirect_from:
+  - /instructor/peer_grading
 ---
 
 Peer assessment or peer grading is beneficial to students in two ways.

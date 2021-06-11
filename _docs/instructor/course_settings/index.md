@@ -1,7 +1,8 @@
 ---
 title: Course Settings
 category: Instructor
-order: 2
+redirect_from:
+  - /instructor/course_settings
 ---
 
 ### Course Settings

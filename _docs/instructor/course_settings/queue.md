@@ -1,6 +1,8 @@
 ---
 title: Enabling Office Hours Queue
 category: Instructor
+redirect_from:
+  - /instructor/queue
 ---
 
 See also [Getting Help through the Office Hours Queue](/student/queue) and

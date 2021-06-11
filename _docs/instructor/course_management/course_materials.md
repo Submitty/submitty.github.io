@@ -1,6 +1,8 @@
 ---
 title: Course Materials
-category: Instructor
+category: Instructor -- Course Management
+redirect_from:
+  - /instructor/course_materials
 ---
 
 Instructors have the option to post/host files on the Submitty server.

@@ -1,6 +1,9 @@
 ---
 title: Facilitating Student Submissions via GIT
-category: Instructor
+category: Instructor -- Assignment Preparation
+redirect_from:
+  - /instructor/managing_git
+  - /instructor/git
 ---
 
 

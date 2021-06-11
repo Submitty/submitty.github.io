@@ -1,6 +1,9 @@
 ---
 title: Notebook
-category: Instructor -- Autograding Configuration
+category: Instructor -- Assignment Preparation
+redirect_from:
+  - /instructor/notebook
+  - /instructor/assignment_configuration/notebook
 ---
 
 Submitty supports construction of mixed instructional and webform

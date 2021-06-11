@@ -1,7 +1,8 @@
 ---
 title: Create or Edit a Gradeable
-category: Instructor
-order: 3
+category: Instructor -- Assignment Preparation
+redirect_from:
+  - /instructor/create_edit_gradeable
 ---
 
 ![](/images/new_gradeable_form.png)

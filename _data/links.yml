@@ -68,6 +68,7 @@
         - name: Overview
           link: index
         - name: Common Marks
+        - name: Silent Editing
         - name: PDF Annotation
         - name: Sorting and Navigation
         - name: Resolving a Grade Inquiry
@@ -79,57 +80,75 @@
 - name: Instructor
   children:
     - name: Overview
-      link: ../instructor
+      link: ../instructor      
     - name: Course Settings
-    - name: Managing Enrollment
-    - name: Create or Edit a Gradeable
-      link: create_edit_gradeable
-    - name: Directory Structure
-    - name: Assignment Configuration
-      link: assignment_configuration
       children:
-        - name: Configuration Path
-          link: configuration_path
-        - name: Autograding Configuration Structure
-          link: structure
-        - name: Phases of Autograding
-          link: phases
-        - name: Autograding Specification
-          link: specification
-        - name: Distributed / Networked Applications
-          link: networking
-        - name: Graphics Applications
-          link: graphics
-        - name: Validation
-          link: validation
-        - name: Notebook
-          link: notebook
-    - name: Course Materials
-      link: course_materials
-    - name: Enable and Configure Office Hours Queue
-      link: queue
-    - name: Peer Grading
-    - name: Facilitating Submission via GIT
-      link: managing_git
+        - name: Overview
+          link: index
+        - name: Grade Summaries - Rainbow Grades
+          link: rainbow_grades
+          children:
+            - name: Automatic Setup
+            - name: Manual Setup
+            - name: Customization Basics
+            - name: Gradeables Customization
+              link: gradeables
+            - name: Exam Seating
+              link: exam_customization
+            - name: Room Templates
+            - name: iClicker Instructions
+            - name: RPI VPN on WSL Instructions
+              link: wsl_vpn
+        - name: Enable and Configure Office Hours Queue
+          link: queue
+
+    - name: Course Management
+      children:
+        - name: Managing Enrollment
+        - name: Course Materials
+          link: course_materials
+        - name: Late Days
+        - name: Grade Override
+          link: grade_override
+        - name: Peer Grading
+
+    - name: Assignment Preparation
+      children:
+        - name: Create or Edit a Gradeable
+          link: create_edit_gradeable
+
+        - name: Assignment Configuration
+          link: assignment_configuration
+          children:
+            - name: Configuration Path
+              link: configuration_path
+            - name: Autograding Configuration Structure
+              link: structure
+            - name: Phases of Autograding
+              link: phases
+            - name: Autograding Specification
+              link: specification
+            - name: Distributed / Networked Applications
+              link: networking
+            - name: Graphics Applications
+              link: graphics
+            - name: Validation
+              link: validation
+            - name: Notebook
+              link: notebook
+            - name: Facilitating Submission via GIT
+              link: managing_git
+      
+    - name: Directory Structure
+
+
+
     - name: Static Analysis
     - name: Tree Tool
     - name: Log Files
     - name: Batch Regrade Submissions
-    - name: Rainbow Grades
-      link: rainbow_grades
-      children:
-        - name: Automatic Setup
-        - name: Manual Setup
-        - name: Customization Basics
-        - name: Gradeables Customization
-          link: gradeables
-        - name: Exam Seating
-          link: exam_customization
-        - name: Room Templates
-        - name: iClicker Instructions
-        - name: RPI VPN on WSL Instructions
-          link: wsl_vpn
-    - name: Late Days
+
+
     - name: Team Assignments
     - name: Website Customization
     - name: Plagiarism Detection
@@ -140,14 +159,11 @@
       link: personalized_exams
     - name: Photo Scraper
       link: student_photos
-    - name: Silent Grade Editing
-      link: silent_editing
     - name: Enabling Grade Inquiries
       link: grade_inquiry_instructor
     - name: Discussion Forum
       link: forum
-    - name: Grade Override
-      link: grade_override
+
     - name: Premade Assignments
     - name: Submini Polling
       link: submini_polls

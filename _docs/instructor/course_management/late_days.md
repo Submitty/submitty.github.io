@@ -1,6 +1,8 @@
 ---
 title: Late Days
-category: Instructor
+category: Instructor -- Course Management
+redirect_from:
+  - /instructor/late_days
 ---
 
 ### Late Day Usage Table

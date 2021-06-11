@@ -1,6 +1,8 @@
 ---
 title: Grade Override
-category: Instructor
+category: Instructor -- Course Management
+redirect_from:
+  - /instructor/grade_override
 ---
 
 ### Purpose and Sample Use Cases
