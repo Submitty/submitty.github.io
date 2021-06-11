@@ -1,7 +1,8 @@
 ---
 title: Tree Tool
 category: Instructor
-order: 9
+redirect_from:
+  - /instructor/tree_tool
 ---
 
 make_tree.js and make_tree_interactive.py are tools to visualize the json output from [commonAST](/instructor/commonAST) and [static analysis](/instructor/static_analysis) as trees.

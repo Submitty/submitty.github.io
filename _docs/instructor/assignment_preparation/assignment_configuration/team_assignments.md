@@ -1,6 +1,8 @@
 ---
 category: Instructor
 title: Team Assignments
+redirect_from:
+  - /instructor/team_assignments
 ---
 
 See also the [Student Team Assignment](/student/team_assignments) documentation.

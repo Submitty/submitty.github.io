@@ -1,7 +1,8 @@
 ---
 title: Premade Java Assignments
 category: Instructor
-order: 18
+redirect_from:
+  - /instructor/premade_assignments
 ---
 
 ### Premade Java Assignments

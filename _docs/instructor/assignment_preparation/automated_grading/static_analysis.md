@@ -1,7 +1,8 @@
 ---
 title: Static Analysis
 category: Instructor
-order: 9
+redirect_from:
+  - /instructor/static_analysis
 ---
 
 

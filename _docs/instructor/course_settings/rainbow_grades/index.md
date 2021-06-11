@@ -10,3 +10,13 @@ redirect_from:
 
 Click the links on the left side bar to explore the configuration and
 customization options for Rainbow Grades.
+
+
+
+
+### Grades Summaries
+
+Use "Grade Summaries" option to export data for use with
+[Rainbow Grades](rainbow_grades).
+
+Or export to CSV using the "CSV Report" option.

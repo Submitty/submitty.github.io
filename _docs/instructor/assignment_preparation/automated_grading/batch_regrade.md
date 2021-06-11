@@ -1,7 +1,8 @@
 ---
 title: Batch Regrade Homework
 category: Instructor
-order: 6
+redirect_from:
+  - /instructor/batch_regrade_submissions
 ---
 
 If you have made changes to the configuration for an assignment and

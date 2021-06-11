@@ -1,7 +1,8 @@
 ---
 title: Plagiarism Detection
 category: Instructor
-order: 10
+redirect_from:
+  - /instructor/plagiarism
 ---
 
 Submitty has its own system for plagiarism detection, similar in function to

@@ -2,7 +2,7 @@
 title: Gradeables Customization
 category: Instructor
 redirect_from:
-  - /instructor/rainbow_grades/gradeables
+  - /instructor/gradeables
 ---
 
 Gradeables are complex enough to warrant their own ``"gradeables"`` array.

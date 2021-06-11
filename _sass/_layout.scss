@@ -85,6 +85,13 @@ body {
 	}
 }
 
+div#nav-tree {
+    display: none;
+	@media (min-width: $mobile-break) {
+	    display: block;
+	}
+}
+
 header {
 	$emblem-size: 90px;
 	//$emblem-vertical-padding: ($nav-header-height - $emblem-size) / 2;

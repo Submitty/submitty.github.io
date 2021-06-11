@@ -1,6 +1,8 @@
 ---
 title: Bulk PDF Upload
 category: Instructor
+redirect_from:
+  - /instructor/bulk_pdf_upload
 ---
 
 Submitty supports instructor upload of bulk PDF files to then be divided into individual assignment PDFs and assigned to students.

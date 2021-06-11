@@ -5,6 +5,20 @@ redirect_from:
   - /instructor/late_days
 ---
 
+
+### Late Days Management
+
+Use the "Late Days Allowed" option to change the number of late days
+allowed per student.  These new late days may be used for any future
+homeworks.  This is useful if you want to award late days as an
+incentive.
+
+Use the "Excused Absense Extensions" to grant an extension of a
+specific number of days for a specific assignment.  This is useful
+when the student has an excused absense.  These late days cannot be
+used on other assignments.
+
+
 ### Late Day Usage Table
 
 Late day usage for a particular student for a particular gradeable can

@@ -1,6 +1,8 @@
 ---
 title: Personalized Exams
 category: Instructor
+redirect_from:
+  - /instructor/personalized_exams
 ---
 
 

@@ -6,6 +6,16 @@ redirect_from:
   - /instructor/managing_enrollment
 ---
 
+### Manage Users
+
+Use the "Students" and "Users" options to view the lists of people
+with access to your course.  Use the "Manage Users" option to add/edit
+access for your TAs and mentors.  
+
+Use the "Setup Rotating Sections" option to distribute your student
+list into equal sections for grading assignments other than
+registration section.  See also:  [Registration Section vs. Rotating Section](create_edit_gradeable#grading-by-registration-section-or-rotating-section)
+
 
 ### Automated Course Enrollment Management
 
