@@ -1,6 +1,8 @@
 ---
 title: Manual Setup
 category: Instructor
+redirect_from:
+  - /instructor/rainbow_grades/manual_setup
 ---
 
 1. **Export the 'Grade Summaries' (complete data for each student)**

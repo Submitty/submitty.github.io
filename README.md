@@ -73,7 +73,7 @@ in the file, rather just start your content immediately after the front-matter b
 ### Navigation
 
 Editing the links on the navigation is done by editing
-[`_data/links.yml`](https://github.com/Submitty/submitty.github.io/blob/main/_data/links.yml).
+[`navtreedata.js`](https://github.com/Submitty/submitty.github.io/blob/main/navtreedata.js).
 The structure of the file is that each level is a list of objects, where the object can have the following parts:
 
 * name __(required)__

@@ -1,7 +1,8 @@
 ---
 title: Exam Seating
 category: Instructor
-order: 14
+redirect_from:
+  - /instructor/rainbow_grades/exam_customization
 ---
 
 

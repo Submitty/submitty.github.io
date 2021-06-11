@@ -1,7 +1,8 @@
 ---
 title: Customize Website Theme
 category: Instructor
-order: 8
+redirect_from:
+  - /instructor/website_customization
 ---
 
 From the "Course Settings" link on the left sidebar, you can access

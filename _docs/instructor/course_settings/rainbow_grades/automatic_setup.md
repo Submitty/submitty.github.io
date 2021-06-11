@@ -1,6 +1,8 @@
 ---
 title: Automatic Setup
 category: Instructor
+redirect_from:
+  - /instructor/rainbow_grades/automatic_setup
 ---
 
 _NOTE:  This is a work-in-progress._

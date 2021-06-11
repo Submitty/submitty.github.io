@@ -1,7 +1,8 @@
 ---
 title: WSL and VPN
 category: Instructor
-order: 7
+redirect_from:
+  - /instructor/rainbow_grades/wsl_vpn
 ---
 
 These instructions are for RPI users who may want to use features such as Rainbow Grades while off campus using the Windows Subsystem for Linux (WSL). 

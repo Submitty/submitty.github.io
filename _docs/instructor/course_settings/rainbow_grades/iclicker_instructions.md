@@ -1,7 +1,8 @@
 ---
 title: iClicker Configuration
 category: Instructor
-order: 12
+redirect_from:
+  - /instructor/rainbow_grades/iclicker_instructions
 ---
 
 

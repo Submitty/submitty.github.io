@@ -1,6 +1,8 @@
 ---
 category: Instructor
 title: Enabling Grade Inquiries
+redirect_from:
+  - /instructor/grade_inquiry_instructor
 ---
 
 It is important for students to have the ability to understand why

@@ -1,7 +1,8 @@
 ---
 title: Log Files
-category: Instructor
-order: 4
+category: System Administrator
+redirect_from:
+  - /instructor/log_files
 ---
 
 Submitty writes out logs for a variety of things, which can help instructors

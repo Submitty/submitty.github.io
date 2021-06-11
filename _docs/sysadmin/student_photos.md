@@ -1,7 +1,8 @@
 ---
 title: Student Photos
-category: Instructor
-order: 9
+category: System Administrator
+redirect_from:
+  - /instructor/student_photos
 ---
 
 In a large class, it can be difficult for instructors, full-access graders, and

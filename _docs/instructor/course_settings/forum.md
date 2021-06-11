@@ -1,6 +1,8 @@
 ---
 title: Discussion Forum
 category: Instructor
+redirect_from:
+  - /instructor/forum
 ---
 
 See also [Student -- Communication -- Discussion Forum](/student/communication/forum).

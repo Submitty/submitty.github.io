@@ -1,6 +1,8 @@
 ---
 title: Room Templates
 category: Instructor
+redirect_from:
+  - /instructor/rainbow_grades/room_templates
 ---
 
 

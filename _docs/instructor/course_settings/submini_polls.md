@@ -1,6 +1,8 @@
 ---
 category: Instructor
 title: Submini Polling
+redirect_from:
+  - /instructor/submini_polls
 ---
 
 ### Overview 
