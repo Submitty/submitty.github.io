@@ -13,6 +13,11 @@
         <link rel="icon" type="image/png" href="{{ site.baseurl }}/touch-icon.png" sizes="192x192">
         <!--<link rel="icon" type="image/png" href="{{ site.baseurl }}/img/favicon.png">-->
 
+        <script type="text/javascript" src="/jquery.js"></script>
+        <link href="/navtree.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="/navtreedata.js"></script>
+        <script type="text/javascript" src="/navtree.js"></script>
+        
         <!-- reference your copy Font Awesome here (from our CDN or by hosting yourself) -->
         <link href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" rel="stylesheet">
         <link href="https://use.fontawesome.com/releases/v5.6.3/css/brands.css" rel="stylesheet">
@@ -39,6 +44,11 @@
     <body>
         <a href="https://github.com/Submitty" class="github-corner" aria-label="View Submitty on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#0a6496; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z" class="octo-background"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
         <header class='main-nav'>
+
+
+
+
+          
             <h1>
               <button type="button" class="open-nav" id="open-nav">
                   <i class="fas fa-bars" style="color: #bbbbbb; font-size: 5.5em;"></i>
@@ -46,113 +56,22 @@
                 <a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/submitty_logo.png" alt="{{ site.title }} logo"></a>
                 <!--{{ site.title }}-->
             </h1>
+
             <form action="{{ site.baseurl }}/search/" method="get">
                 <input type="text" name="q" id="search-input" placeholder="Search" aria-label="Search content on submitty.org">
                 <input type="submit" value="Search" style="display: none;">
             </form>
-            <ul>
-                {% for entry in site.data.links %}
-                {% assign top_link = entry.name | replace: ' ', '_' | downcase %}
-                {% assign extra_class = "" %}
-                
-                {% if entry.link %}
-                    {% assign top_link = entry.link %}
-                {% endif %}
-                {% assign top_link = "/" | append: top_link %}
-                {% assign top_link_length = top_link | size %}
-                {% assign page_url_slice = page.url | slice: 0, top_link_length %}
-                {% if page_url_slice == top_link %}
-                    {% assign extra_class = extra_class | append: ' open' %}
-                {% endif %}
-                {% if entry.children %}
-                    {% assign extra_class = extra_class | append: ' has-children' %}
-                {% else %}
-                    {% assign extra_class = extra_class | append: ' no-children' %}
-                {% endif %}
-                <li class="nav-item top-level {{ extra_class }}">
-                    <i class="nav-arrow nav-click"></i>
-                    {% if entry.link != false %}
-                    <a href="{{ top_link }}">
-                    {% endif %}
-                    {{ entry.name }}
-                    {% if entry.link != false %}
-                    </a>
-                    {% endif %}
-                    {% if entry.children %}
-                    <ul class="inner-nav">
-                        {% for child in entry.children %}
-                            {% assign child_link = child.name | replace: ' ', '_' | downcase %}
-                            {% if child.link %}
-                                {% assign child_link = child.link %}
-                            {% endif %}
 
-                            {% if child.extern != true %}
-                                {% assign full_child_link = top_link | append: '/' | append: child_link %}
-                            {% else %}
-                                {% assign full_child_link = child.link %}
-                            {% endif %}
-
-                            {% assign child_link_length = full_child_link | size %}
-                            {% assign child_url_slice = page.url | slice: 0, child_link_length %}
-
-                            {% assign inner_extra = '' %}
-
-                            {% if child_url_slice == full_child_link %}
-                                {% assign inner_extra = inner_extra | append: ' open' %}
-                            {% endif %}
-                            {% if full_child_link == page.url %}
-                                {% assign inner_extra = inner_extra | append: ' current' %}
-                            {% endif %}
-                            {% if child.children %}
-                                {% assign inner_extra = inner_extra | append: ' has-children' %}
-                            {% else %}
-                                {% assign inner_extra = inner_extra | append: ' no-children' %}
-                            {% endif %}
-                        <li class="nav-item {{ inner_extra }}">
-                            <i class="inner-nav-arrow nav-click"></i>
-                            {% if child.link != false %}
-                            <a href="{{ full_child_link }}">
-                            {% else %}
-                            <span>
-                            {% endif %}
-                            {{ child.name }}
-                            {% if child.link != false %}
-                            </a>
-                            {% else %}
-                            </span>
-                            {% endif %}
-                            {% if child.children %}
-                            <ul>
-                                {% for subchild in child.children %}
-                                {% assign subchild_link = subchild.name | replace: ' ', '_' | downcase %}
-                                {% if subchild.link %}
-                                    {% assign subchild_link = subchild.link %}
-                                {% endif %}
-                                {% assign full_subchild_link = full_child_link | append: '/' | append: subchild_link %}
-                                {% assign subchild_extra = '' %}
-                                {% if full_subchild_link == page.url %}
-                                    {% assign subchild_extra = subchild_extra | append: ' current' %}
-                                {% endif %}
-                                <li class="nav-item inner {{ subchild_extra }}">
-                                    {% assign subchild_link = subchild.name | replace: ' ', '_' | downcase %}
-                                    {% if subchild.link != false %}
-                                    <a href="{{ full_subchild_link }}">
-                                    {% endif %}
-                                    {{ subchild.name }}
-                                    {% if subchild.link != false %}
-                                    </a>
-                                    {% endif %}
-                                </li>
-                                {% endfor %}
-                            </ul>
-                            {% endif %}
-                        </li>
-                        {% endfor %}
-                    </ul>
-                    {% endif %}
-                </li>
-                {% endfor %}
-            </ul>
+            <div id="nav-tree" class="menus medbg noxscroll mobile-invisible mobile-toggle">
+              <div id="nav-tree-contents" class="medbg noxscroll mobile-invisible mobile-toggle">
+              </div>
+            </div>
+    <script type="text/javascript">
+    /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+    $(document).ready(function(){initNavTree('{{page.url}}',''); });
+    /* @license-end */
+    </script>
+      
         </header>
 
 
