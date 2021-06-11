@@ -1,7 +1,6 @@
 ---
 title: graph comparison
 category: Instructor
-order: 9
 ---
 
 Graph Comparison is a set of tools used to visualize differences between two ASTs. It is intended to be used to visualize differences in the commonAST of a file and the full AST of the same file. 

@@ -1,7 +1,6 @@
 ---
 title: PhpStorm Setup Instructions
 category: Developer
-order: 19
 ---
 
 Download at [https://www.jetbrains.com/phpstorm/](https://www.jetbrains.com/phpstorm/)

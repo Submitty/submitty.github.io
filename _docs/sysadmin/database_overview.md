@@ -1,7 +1,6 @@
 ---
 title: Database Overview
 category: System Administrator
-order: 5
 ---
 
 Submitty is setup such that it uses one "master" Database and then each course 

@@ -1,7 +1,6 @@
 ---
 title: JSON Responses
 category: Developer
-order: 5
 ---
 
 We use a modified version of the [JSend](https://labs.omniti.com/labs/jsend) specification for any JSON object that is

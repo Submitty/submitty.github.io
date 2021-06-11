@@ -1,7 +1,6 @@
 ---
 title: Autograding Tests
 category: Developer
-order: 7
 ---
 
 _NOTE: Currently, these tests can only be run from within Vagrant._

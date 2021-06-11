@@ -1,6 +1,8 @@
 ---
 title: Graphics Applications
 category: Instructor -- Autograding Configuration
+redirect_from:
+  - /instructor/assignment_configuration/graphics
 ---
 
 

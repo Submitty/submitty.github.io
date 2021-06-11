@@ -1,7 +1,6 @@
 ---
 title: Rainbow Grades Tests
 category: Developer
-order: 11
 ---
 
 Before pushing your changes to GitHub, make sure your code passes the

@@ -1,7 +1,6 @@
 ---
 title: PHP
 category: Developer
-order: 6
 ---
 
 __Minimum Version__: 7.2

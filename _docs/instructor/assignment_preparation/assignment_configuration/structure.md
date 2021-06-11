@@ -1,6 +1,8 @@
 ---
 title: Autograding Configuration Structure
 category: Instructor -- Autograding Configuration
+redirect_from:
+  - /instructor/assignment_configuration/structure
 ---
 
 You can study the [Tutorial Example Assignment Configurations](https://github.com/Submitty/Tutorial/tree/main/examples)

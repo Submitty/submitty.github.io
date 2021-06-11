@@ -1,7 +1,6 @@
 ---
 title: C++
 category: Developer
-order: 6
 ---
 
 To do this we've modified certain important aspects of the [Google Style Guide](https://google.github.io/styleguide/cppguide.html). This is a living document and will likely change as new issues arise.

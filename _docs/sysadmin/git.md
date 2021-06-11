@@ -1,7 +1,6 @@
 ---
 title: Setting Up Internal Git  
 category: System Administrator  
-order: 5  
 ---
 
 ### Internal Git

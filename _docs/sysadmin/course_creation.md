@@ -1,7 +1,6 @@
 ---
 title: Course Creation
 category: System Administrator
-order: 5
 ---
 
 

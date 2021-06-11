@@ -2,6 +2,8 @@
 title: Assignment Configuration
 category: Instructor
 permalink: /instructor/assignment_configuration
+redirect_from:
+  - /instructor/assignment_configuration/overview
 ---
 
 We will present a range of “case study” autograding assignment configurations,

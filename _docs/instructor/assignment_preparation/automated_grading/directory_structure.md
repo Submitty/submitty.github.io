@@ -1,7 +1,8 @@
 ---
 title: Directory Structure
 category: Instructor
-order: 4
+redirect_from:
+  - /instructor/directory_structure
 ---
 
 1. Login to the homework server.  _NOTE: If you are a developer/admin,

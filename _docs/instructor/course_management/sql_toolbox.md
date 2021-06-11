@@ -1,6 +1,8 @@
 ---
 title: SQL Toolbox
 category: Instructor
+redirect_from:
+  - /instructor/sql_toolbox
 ---
 
 While Submitty provides mechanisms of getting information about a course, or grades, an

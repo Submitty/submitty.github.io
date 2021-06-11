@@ -1,7 +1,6 @@
 ---
 title: Python
 category: Developer
-order: 6
 ---
 
 __Minimum Version__: 3.6

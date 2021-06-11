@@ -1,7 +1,6 @@
 ---
 title: System Customization
 category: System Administrator
-order: 6
 ---
 
 

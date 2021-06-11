@@ -1,7 +1,6 @@
 ---
 title: Troubleshooting
 category: Developer
-order: 2
 ---
 
 If you are having trouble being able to view the Submitty webpage after a ```vagrant up``` you might need to 

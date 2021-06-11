@@ -1,7 +1,6 @@
 ---
 title: CSS
 category: Developer
-order: 6
 ---
 
 ## Styling
