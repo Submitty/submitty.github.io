@@ -437,20 +437,9 @@ function navTo(o,root,hash,relpath)
     hash=''; // strip line number anchors
   }
   var url=root;
-  if (url.substring(0,1)=='/') {
-    // The menu entries do not have leading slashes.
-
-      // DIFFERENT FROM DYNAMORIO USAGE
-      //url = url.substring(1);
-
-  }
   if (hash != '#') {
     url = url + hash;
   }
-
-    // DEBUGGING
-    //console.log('looking for url='+url+' for root='+root);
-
 
   // Rather than trying to re-generate doxygen's alphabetized skip lists of
   // menu indices, we dynamically do a DFS walk of the menu to find the indices
@@ -467,7 +456,7 @@ function navTo(o,root,hash,relpath)
       if (arrays[arrays.length-1][indices[indices.length-1]][1] == url ||
           arrays[arrays.length-1][indices[indices.length-1]][1] == url+'index.html') {
         answer = [...indices];
-        //break;
+        // find LAST sidebar item with this url
       }
       if (arrays[arrays.length-1][indices[indices.length-1]][2]) {
         arrays.push(arrays[arrays.length-1][indices[indices.length-1]][2]);
@@ -498,7 +487,6 @@ function navTo(o,root,hash,relpath)
       break;
     }
   }
-  //o.breadcrumbs = indices;
   o.breadcrumbs = answer;
   gotoNode(o,root,hash,relpath);
 }
