@@ -13,10 +13,3 @@ release or due dates need to be changed, etc.  More info is available on the
 
 ![](/images/navigation_instructor.png)
 
-### Course Management Menu Bar
-
-Importantly, instructors also have a row of course configuration and
-management options in the navigation bar to the left.  These are discussed more on the 
-[Course Settings](/instructor/course_settings) page.
-
-

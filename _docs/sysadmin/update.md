@@ -1,7 +1,6 @@
 ---
 title: Update Submitty
 category: System Administrator
-order: 2
 ---
 
 

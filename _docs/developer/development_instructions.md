@@ -1,7 +1,6 @@
 ---
 title: Development Instructions
 category: Developer
-order: 3
 ---
 
 We recommend that you do all file edits within your checkout of the

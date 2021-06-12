@@ -1,7 +1,6 @@
 ---
 title: Database Design
 category: Developer
-order: 3
 ---
 
 ## Connecting to Vagrant DB Locally

@@ -22,7 +22,7 @@ Kevin McKinney, Alexa Orosz, Jacob McKnight, Maya Tung, Saketh Dargula, Shail Pa
 
 ![](/images/people/2019_may_quarterzips.jpeg)
 
-Andrew Aikens, Glenn Smith, Shail Patel, Buster Holzbauer, and Evan Maicus
+Andrew Aikens, Glenn Smith, Shail Patel, Jasmine Plum, and Evan Maicus
 
 ![](/images/people/2019_september_thomas_shail.jpeg)
 
@@ -85,7 +85,7 @@ Sam Breese and Evan Maicus
 
 ![](/images/people/2017_summer.jpg)
 
-Andrew Ma, Evan Maicus, Jessica Wang, Sam Breese, James Anderson, Buster Holzbauer, Marisa Lee, and Barb Cutler
+Andrew Ma, Evan Maicus, Jessica Wang, Sam Breese, James Anderson, Jasmine Plum, Marisa Lee, and Barb Cutler
 
 ---
 

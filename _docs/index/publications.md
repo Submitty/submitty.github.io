@@ -55,7 +55,7 @@ Poster at ACM Technical Symposium on Computing Science Education (SIGCSE), Febru
 
 
 * ["Supporting Team Submission and Peer Grading within Submitty"](https://github.com/Submitty/publications/raw/master/2018_SIGCSE_demo_peveler_et_al/SIGCSE%202018%20Submitty%20Demo%20Presentation.pdf)  
-  Matthew Peveler, Samuel Breese, Evan Maicus, Andrew Aikens, Timothy Cyrus, Elizabeth Dinella, James Anderson, Joshua Barthelmess, Marisa Lee, Leon Montealegre, Jessica Wang, Buster Holzbauer, Barbara Cutler, and Ana Milanova   
+  Matthew Peveler, Samuel Breese, Evan Maicus, Andrew Aikens, Timothy Cyrus, Elizabeth Dinella, James Anderson, Joshua Barthelmess, Marisa Lee, Leon Montealegre, Jessica Wang, Jasmine Plum, Barbara Cutler, and Ana Milanova   
   Demo Presentation at ACM Technical Symposium on Computing Science Education (SIGCSE), February 2018.  
 
 
@@ -65,12 +65,12 @@ Poster at ACM Technical Symposium on Computing Science Education (SIGCSE), Febru
 
 
 * ["Program Analysis Tools in Automated Grading"](https://github.com/Submitty/publications/raw/master/2018_SIGCSE_poster_dinella_et_al/Poster.pdf)  
-  Elizabeth Dinella, Samuel Breese, Evan Maicus, Barbara Cutler, Buster Holzbauer, and Ana Milanova   
+  Elizabeth Dinella, Samuel Breese, Evan Maicus, Barbara Cutler, Jasmine Plum, and Ana Milanova   
   Poster at ACM Technical Symposium on Computing Science Education (SIGCSE), February 2018.   
 
 
 * ["Analysis of Container Based vs. Jailed Sandbox Autograding Systems"](https://github.com/Submitty/publications/raw/master/2018_SIGCSE_poster_peveler_et_al/Poster.pdf)   
-  Matthew Peveler, Evan Maicus, Buster Holzbauer, and Barbara Cutler   
+  Matthew Peveler, Evan Maicus, Jasmine Plum, and Barbara Cutler   
   Poster at ACM Technical Symposium on Computing Science Education (SIGCSE), February 2018.   
 
 

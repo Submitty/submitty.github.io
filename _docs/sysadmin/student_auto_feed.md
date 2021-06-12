@@ -1,7 +1,6 @@
 ---
 title: Submitty Student Auto Feed
 category: System Administrator
-order: 7
 ---
 
 _Submitty Student Auto Feed is an optional command-line PHP script that can automatically

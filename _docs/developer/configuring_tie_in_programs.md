@@ -1,7 +1,6 @@
 ---
 title: Configuring Tie In Programs
 category: Developer
-order: 12
 ---
 
 It is possible to configure Submitty to use various third party programs to run student code. This page details any special configuration steps necessary to set up such programs.

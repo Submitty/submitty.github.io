@@ -1,7 +1,6 @@
 ---
 title: Dependencies
 category: System Administrator
-order: 3
 ---
 
 This page lists all the dependencies that Submitty relies on, as well as ones that are recommended and ones that are

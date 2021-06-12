@@ -1,7 +1,6 @@
 ---
 title: JSON Configuration Files
 category: Developer
-order: 5
 ---
 
 The system configuration and state are stored in several different

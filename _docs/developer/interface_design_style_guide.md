@@ -1,7 +1,6 @@
 ---
 title: Interface Design Style Guide
 category: Developer
-order: 6
 ---
 
 ## Preliminary Design Notes
