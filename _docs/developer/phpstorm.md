@@ -27,10 +27,10 @@ Set the following parameters under the `Connection` tab:
   - `Port`: `2222`
   - `User Name`: `root`
   - `Authentication Type`: `Key pair (OpenSSH or PuTTY)`
-  - `Private Key File`: `<submitty repository root>/.vagrant/machines/ubuntu-18.04/virtualbox/private_key`
+  - `Private Key File`: `<submitty repository root>/.vagrant/machines/ubuntu-20.04/virtualbox/private_key`
   - `Key Passphrase`: leave empty
 - `Root Path`: `/usr/local/submitty`
-- `Web server URL`: `http://localhost:1501/`
+- `Web server URL`: `http://localhost:1511/`
 
 Under the `Mappings` tab, set the following:
 
@@ -75,7 +75,7 @@ Follow instructions 2 - 4 on [this website](https://confluence.jetbrains.com/dis
 Open a database window by going to `View` > `Tool Windows` > `Database`. Press the `+` button and under `Data Source` choose to add a `PostgreSQL` database. Then set the following:
 
 - `Host`: `127.0.0.1`
-- `Port`: `16432`
+- `Port`: `16442`
 - `Database`: `submitty`
 - `User`: `vagrant`
 - `Password`: `vagrant`
@@ -118,11 +118,11 @@ Then, you should be able to set breakpoints in your JavaScript files in PhpStorm
 
 Alternatively, you can debug in Chrome by using a custom run configuration. Open `Run` > `Edit Configurations`. Press the `+` button and add a `JavaScript Debug` configuration. Set:
 
-- `URL`: `http:/localhost:1501`
+- `URL`: `http:/localhost:1511`
 - `Browser`: `Chrome` (only option currently)
 - `Ensure breakpoints are detected when loading scripts`: Leave unchecked unless you're debugging some code that runs on page load
 
-In the `Remote URLs of local files (optional)` section, find `site/public` and give it a `Remote URL` of `http://localhost:1501`.
+In the `Remote URLs of local files (optional)` section, find `site/public` and give it a `Remote URL` of `http://localhost:1511`.
 
 Press `OK` to save the run configuration. If you then `Debug` the configuration, it should open a new Chrome process and automatically start debugging, note that this Chrome will not have any of your user data / configuration / extensions. Note that if you `Run` the configuration you will not be able to debug JavaScript.
 

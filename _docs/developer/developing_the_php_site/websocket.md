@@ -16,7 +16,7 @@ While WebSockets can only transmit strings, there is an expectation that JSON is
 encoding, and that anything sent can be safely run through `JSON.decode` / `json_decode`.
 
 Submitty surfaces its WebSocket server on the localhost using `ws://localhost:41983` and then through
-apache / externally through `ws://<submitty_url>/ws` (e.g. `ws://localhost:1501/ws` on Vagrant).
+apache / externally through `ws://<submitty_url>/ws` (e.g. `ws://localhost:1511/ws` on Vagrant).
 
 __Note__: Ideally, a page should still be usable without WebSockets being available / active, to ensure
 accessibility to all users.
@@ -84,7 +84,7 @@ To help validate that the WebSocket server is up and running, you can send a bas
 message and get back a `pong` message. For example, using JavaScript:
 
 ```js
-const ws = new WebSocket('ws://localhost:1501/ws');
+const ws = new WebSocket('ws://localhost:1511/ws');
 ws.onmessage = (data) => console.log(data);
 ws.send('ping');
 ```
