@@ -19,7 +19,7 @@ for your needs (as the script installs all of the dependencies that Submitty dep
 _Note: These instructions should be run under root/sudo._
 
 
-1. [Install Ubuntu 16.04 or 18.04 server edition](/sysadmin)
+1. [Install Ubuntu 20.04 server edition](/sysadmin)
 
 2. Create a ```submitty``` user on the machine.  You may choose a different user name,
    but the user should only be used for submitty autograding.

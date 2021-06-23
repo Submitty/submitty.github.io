@@ -26,7 +26,7 @@ You can open the test runner by navigating into `site/` and using the command:
 npx cypress open
 ```
 
-*Note:* On startup Cypress will try and check if the site is running on the `http://localhost:1501` address, make sure you have a local instance of Submitty that is running while testing with Cypress. 
+*Note:* On startup Cypress will try and check if the site is running on the `http://localhost:1511` address, make sure you have a local instance of Submitty that is running while testing with Cypress. 
 
 ### Running Tests
 
@@ -41,14 +41,14 @@ Once the tests have been run you can interact with the site on the right hand si
 HEAD / - - ms - -
 HEAD / - - ms - -
 HEAD / - - ms - -
-POST /authentication/check_login?old=http%253A%252F%252Flocalhost%253A1501%252Fhome 302 287.491 ms - 96
+POST /authentication/check_login?old=http%253A%252F%252Flocalhost%253A1511%252Fhome 302 287.491 ms - 96
 GET /home 200 287.217 ms - -
 GET /authentication/login 200 2.297 ms - -
-POST /authentication/check_login?old=http%253A%252F%252Flocalhost%253A1501%252Fhome 302 2772.070 ms - 96
+POST /authentication/check_login?old=http%253A%252F%252Flocalhost%253A1511%252Fhome 302 2772.070 ms - 96
 GET /home 302 210.507 ms - 210
-GET /authentication/login?old=http%3A%2F%2Flocalhost%3A1501%2Fhome 200 264.544 ms - -
+GET /authentication/login?old=http%3A%2F%2Flocalhost%3A1511%2Fhome 200 264.544 ms - -
 GET /authentication/login 200 1.629 ms - -
-POST /authentication/check_login?old=http%253A%252F%252Flocalhost%253A1501%252Fhome 302 205.710 ms - 96
+POST /authentication/check_login?old=http%253A%252F%252Flocalhost%253A1511%252Fhome 302 205.710 ms - 96
 ```
 
 A complete overview can be found [here](https://docs.cypress.io/guides/core-concepts/test-runner.html#Overview)

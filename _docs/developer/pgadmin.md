@@ -25,7 +25,7 @@ category: Developer
 
     * `Host name/address`: `localhost`.
 
-    * `Port`: `16432`
+    * `Port`: `16442`
 
     * `Username`: `submitty_dbuser`
 

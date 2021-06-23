@@ -158,7 +158,7 @@ However, this should be only applied to the `php.ini` running the web server and
 By default, PHP only allows 20 files to be uploaded at a time. To change this limit, edit:
 
 ```
-/etc/php/7.2/fpm/php.ini
+/etc/php/7.4/fpm/php.ini
 ```
 
 and modify the variable:
@@ -169,7 +169,7 @@ upload_max_filesize
 
 Then restart PHP
 ```
-systemctl reload php7.2-fpm
+systemctl reload php7.4-fpm
 ```
 
 ## Allowing Large Student File Upload Submissions
@@ -178,10 +178,10 @@ By default, Apache / Ubuntu limits the size of file upload by POST to
 10MB.  To increase this edit:
 
 ```
-/etc/php/7.2/fpm/php.ini
+/etc/php/7.4/fpm/php.ini
 ```
 
-_Note: Ubuntu 18.04 is using 7.2, but older versions might be using `php7.0-fpm`._
+_Note: Ubuntu 20.04 is using 7.4, but older versions might be using `php7.0-fpm`._
 
 Change these variables as appropriate:
 
@@ -194,17 +194,17 @@ And restart apache:
 
 ```
 sudo systemctl restart apache2.service
-sudo systemctl restart php7.2-fpm.service
+sudo systemctl restart php7.4-fpm.service
 ```
 
 and/or
 
 ```
 sudo service apache2 restart
-sudo service php7.2-fpm restart
+sudo service php7.4-fpm restart
 ```
 
-_Note: Ubuntu 18.04 is using 7.2, but older versions might be using `php7.0-fpm`._
+_Note: Ubuntu 20.04 is using 7.4, but older versions might be using `php7.0-fpm`._
 
 By default, a Submitty electronic gradeable allows students to upload
 files totaling 100KB.  Instructors can adjust this limit per gradeable
@@ -216,7 +216,7 @@ in the `config.json`, for example:
 ```
 
 If you are having difficulty with student upload size, you can modify the
-following in `/etc/php/7.2/fpm/php.ini`:
+following in `/etc/php/7.4/fpm/php.ini`:
 
 ```
 memory_limit
@@ -232,7 +232,7 @@ students are using the system at once.
 ## Tune the performance of the website to handle a large number of users
 
 
-Adjust the following settings in `/etc/php/7.2/fpm/pool.d/submitty.conf`.
+Adjust the following settings in `/etc/php/7.4/fpm/pool.d/submitty.conf`.
 
 We have found that the following settings work well for a production
 server with approximately 2000 students.  The commented out line is
@@ -260,7 +260,7 @@ After editing these values, be sure to restart apache and php-fpm:
 
 ```
 sudo systemctl restart apache2.service
-sudo systemctl restart php7.2-fpm.service
+sudo systemctl restart php7.4-fpm.service
 ```
 
 

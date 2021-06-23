@@ -45,7 +45,7 @@ A majority of links in Submitty require course information to return correct con
 public function showReportPage() {...}
 ```
 
-To visit the page defined above, simply go to `{base_url}/f19/sample/reports`. If you are using Ubuntu 18.04 VM, going to `http://localhost:1501/s21/sample/reports` should take you to the right page.
+To visit the page defined above, simply go to `{base_url}/f19/sample/reports`. If you are using Ubuntu 20.04 VM, going to `http://localhost:1511/s21/sample/reports` should take you to the right page.
 
 #### Route with Parameters
 

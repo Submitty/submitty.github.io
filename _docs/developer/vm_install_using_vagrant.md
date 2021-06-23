@@ -209,7 +209,7 @@ instructions.
    * From a web browser (Chrome, Firefox, IE, etc.) on your host
      computer, go to:
 
-     <http://localhost:1501/index.php>
+     <http://localhost:1511/index.php>
 
      (see the VM login & password info below)
 
@@ -401,18 +401,18 @@ instructions.
 
 4. Retrieve the private key for the vagrant machine, located at `<SUBMITTY GIT REPO>/.vagrant/machines/<VM>/<VM BACKEND>/private_key`.
 
-   At the time of writing, `<VM>` is `ubuntu-18.04`, and `<VM BACKEND>` is `virtualbox`.
+   At the time of writing, `<VM>` is `ubuntu-20.04`, and `<VM BACKEND>` is `virtualbox`.
 
 5. Use SSH to connect from the remote device to the machine that is running the VM, and use SSH port forwarding (local forwarding) to forward the necessary ports.
 
    The username to sign in is `root` and the authentication method is with private key (using the private key specified in part 4). If you encounter authentication issues, try adding `vagrant` as the password in addition to the private key.
 
-   For most things, you will only need to forward the `site` port and the `websockets` port (1501, 8443).
+   For most things, you will only need to forward the `site` port and the `websockets` port (1511, 8443).
 
    The configuration to set up the connection will differ based on your client; below is an example for if you're using an SSH binary to connect, assuming that the SSH configuration file has the username, private key (identity file), IP address (host name), and port stored.
 
    ```
-   ssh -L 1501:localhost:1501 -L 8443:localhost:8443 $SUBMITTY_HOST
+   ssh -L 1511:localhost:1511 -L 8443:localhost:8443 $SUBMITTY_HOST
    ```
 
    where `$SUBMITTY_HOST` is a reference to the `Host` from the SSH config file.
@@ -422,4 +422,4 @@ instructions.
 
    This has been tested with Blink for iOS and Termius for iOS (also available on Android, untested).
 
-6. Navigate to `localhost:1501` on the remote device.
+6. Navigate to `localhost:1511` on the remote device.
