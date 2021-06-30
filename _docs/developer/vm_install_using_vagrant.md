@@ -128,15 +128,7 @@ instructions.
 
      Vagrant: <https://vagrant-deb.linestarve.com/>
 
-5. Install [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest).
-
-   Open your terminal/cmd.exe and run:
-   ```
-   vagrant plugin install vagrant-vbguest
-   ```
-   Note: You will want to run `vagrant plugin update` every once in a while to keep the plugin up-to-date.
-
-6. Clone [the Submitty repository](https://github.com/Submitty/Submitty) to a location on
+5. Clone [the Submitty repository](https://github.com/Submitty/Submitty) to a location on
    your computer (the "host").
 
    ```
@@ -166,7 +158,7 @@ instructions.
     _This host directory structure will be shared / synced between
     your host operating system and the Submitty virtual machine._
 
-7. Navigate into the Submitty repository on your computer in a
+6. Navigate into the Submitty repository on your computer in a
    shell/terminal and type:
 
    _Windows should run CMD or powershell on administrator mode_
@@ -179,7 +171,7 @@ instructions.
    few hours depending on your Internet connection speed.  When this
    command finishes, your VM is ready to use.
 
-8. When the `vagrant up` command completes successfully, you will be
+7. When the `vagrant up` command completes successfully, you will be
    able to access the Submitty website (instructions follow in the
    next section).
 
@@ -363,7 +355,7 @@ instructions.
 
 * If it has been a while since your last `vagrant destroy` and
     `vagrant up` you may need to update/upgrade/reinstall the virtual
-    box, vagrant, vagrant vb-guest, and the installed boxes on your
+    box, vagrant, and the installed boxes on your
     system:
 
     For example, on Mac:
