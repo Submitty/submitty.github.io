@@ -26,4 +26,8 @@ made available to your instructors.  Furthermore, you can specify that
 email notifications are sent to your secondary email address in
 addition to your primary address.
 
-_TODO: Add screenshot of the secondary email address UI._
+![](/images/student/my_profile.png)
+
+---
+
+![](/images/student/secondary_email.png)
