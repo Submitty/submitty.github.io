@@ -1,6 +1,8 @@
 ---
 title: Plagiarism Detection
 category: Instructor
+redirect_from:
+  - /instructor/plagiarism
 order: 10
 ---
 
