@@ -3,7 +3,6 @@ title: Plagiarism Detection
 category: Instructor
 redirect_from:
   - /instructor/plagiarism
-order: 10
 ---
 
 Submitty has its own system for plagiarism detection called Lichen, similar in function to Stanford's MOSS system that was used in the past.
@@ -75,7 +74,7 @@ This can be useful for example in courses where the instructors, TAs, or other g
 Instructors also have the option to list specific student names whose submissions are to be ignored, if they wish so.
 
 ### Viewing the Results of a Run
-_TODO_
+To view the results of a gradeable configuration's run, click the name of the gradeable in the main plagiarism page table.
 
 When you are done filling out the form, click the "Save Configuration" button. The new configuration will be created, and will be automatically placed in the `daemon_job_queue` queue. You will be redirected to the main page, where you should see your newly created configuration under the status "_Running_".
 
