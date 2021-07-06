@@ -73,10 +73,18 @@ This section of the configuration form allows the instructor to specify users wh
 This can be useful for example in courses where the instructors, TAs, or other graders submit files to gradeables in order to test the automated grading before the assignment is released to students, and where finding matches across the course staff's test submissions is undesirable.
 Instructors also have the option to list specific student names whose submissions are to be ignored, if they wish so.
 
+When you are done filling out the form, click the "Save Configuration" button. The new configuration will be created, and will be automatically placed in the `daemon_job_queue` queue. You will be redirected to the main page, where you should see your newly created configuration under the status "_Running_".
+
 ### Viewing the Results of a Run
 To view the results of a gradeable configuration's run, click the name of the gradeable in the main plagiarism page table.
 
-When you are done filling out the form, click the "Save Configuration" button. The new configuration will be created, and will be automatically placed in the `daemon_job_queue` queue. You will be redirected to the main page, where you should see your newly created configuration under the status "_Running_".
+![](/images/instructor/lichen/result_page.png)
+
+![](/images/instructor/lichen/switch_version.png)
+
+![](/images/instructor/lichen/switch_user.png)
+
+![](/images/instructor/lichen/others.png)
 
 ## Running Lichen Manually
 
