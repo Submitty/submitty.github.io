@@ -78,11 +78,27 @@ When you are done filling out the form, click the "Save Configuration" button. T
 ### Viewing the Results of a Run
 To view the results of a gradeable configuration's run, click the name of the gradeable in the main plagiarism page table.
 
+The top of the result page displays the gradeable name, as well as the configuration ID.
+The page layout is split into two panels, each that contains a dropdown menu of student submissions and a code block.
+
 ![](/images/instructor/lichen/result_page.png)
 
-![](/images/instructor/lichen/switch_version.png)
+This design enables you to pick a user and a version on the left panel, and compare it to another student submission on the left.
 
 ![](/images/instructor/lichen/switch_user.png)
+![](/images/instructor/lichen/switch_version.png)
+
+The code block will display that concatenated files submitted by the student, and will highlight the matching regions.
+To see details about the meaning of the colors of the highlighted regions, click the "View Key" button on the top right corner of the page.
+
+The panel on the left may highlight regions of code that are considered common code, match the instructor provided code, match other users than the user selected for the right panel, and matching code regions that the two selected users share.
+The right panel will only highlight the regions of code that matching between the two selected students, but if you wish to see the other types of matching regionsf or the user on the right, you can click the "Swap Students" button in the upper right corner of the page.
+
+Clicking an orange-colored region of code in the left panel will turn it red, to indicate the selection of that region, and will scroll to and highlight red the corresponding matching region(s) over in the right panel as well.
+This can make the comparison easier when plagiarized sections of code don't appear in the same location in the two files.
+
+Clicking yellow-colored regions of code will prompt a popup of a clickable list of the other users who share the same matching region.
+To compare the same user who is selected on the left panel to one of the users in the popup, simply click the desired username, and the right panel will automatically update to show the submission that belongs to the new username.
 
 ![](/images/instructor/lichen/others.png)
 
