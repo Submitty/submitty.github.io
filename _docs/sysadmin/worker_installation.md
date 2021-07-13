@@ -72,7 +72,7 @@ _Note: These instructions should be run under root/sudo._
    ___NOTE: The ssh-copy-id line requires a replacement___
    ```
    su submitty_daemon
-   cd ~/.ssh
+   cd ~/
    ssh-keygen
    ssh-copy-id -i ~/.ssh/id_rsa.pub SUBMITTY_USER@HOSTNAME
    ```
