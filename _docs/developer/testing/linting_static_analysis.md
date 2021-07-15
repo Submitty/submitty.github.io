@@ -84,13 +84,13 @@ You can run eslint on your host system or on vagrant by navigating into the `sit
 directory and running:
 
 ```bash
-npm run lint
+npm run eslint
 ```
 
 To have eslint attempt to automatically fix any detected problems:
 
 ```bash
-npm run lint:fix
+npm run eslint:fix
 ```
 
 If you wish to lint or fix a specific file, you will need to run the eslint executable directly,
@@ -98,6 +98,25 @@ by doing:
 
 ```bash
 node_modules/.bin/eslint [--fix] <file>
+```
+
+See also: [JavaScript Style Guide](/developer/coding_style_guide/javascript)
+
+## CSS Linting
+
+CSS is linted using [stylelint](https://stylelint.io/) in Submitty to enforce a consistent code style.
+
+You can run stylelint on your host system or on vagrant by navigating into the `site/`
+directory and running:
+
+```bash
+npm run css-stylelint
+```
+
+Stylelint can fix many CSS problems automatically by running:
+
+```bash
+npm run css-stylelint:fix
 ```
 
 See also: [JavaScript Style Guide](/developer/coding_style_guide/javascript)
