@@ -119,4 +119,4 @@ Stylelint can fix many CSS problems automatically by running:
 npm run css-stylelint:fix
 ```
 
-See also: [JavaScript Style Guide](/developer/coding_style_guide/javascript)
+See also: [CSS Style Guide](/developer/coding_style_guide/css)
