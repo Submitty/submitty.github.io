@@ -100,7 +100,7 @@ var NAVTREE =
                 [ "Late Days", "/instructor/course_management/late_days", null ],
                 [ "Grade Override", "/instructor/course_management/grade_override", null ],
                 [ "Peer Grading", "/instructor/course_management/peer_grading", null ],
-                [ "Plagiarism Detection", "/instructor/course_management/plagiarism", null ],
+                [ "Lichen Plagiarism Detection", "/instructor/course_management/plagiarism", null ],
                 [ "SQL Toolbox", "/instructor/course_management/sql_toolbox", null ]
             ] ],
             [ "Assignment Preparation", "/instructor/assignment_preparation/create_edit_gradeable/index", [
