@@ -179,6 +179,7 @@ var NAVTREE =
             [ "Automated Grading", "/developer/automated_grading", null ],
             [ "JSON Configuration Files", "/developer/json_configuration_files", null ],
             [ "JSON Responses", "/developer/json_responses", null ],
+            [ "Lichen Plagiarism Detection", "/developer/plagiarism", null ],
             [ "Coding Style Guide", "/developer/coding_style_guide", [
                 [ "Python", "/developer/coding_style_guide/python", null ],
                 [ "C++", "/developer/coding_style_guide/c++", null ],
