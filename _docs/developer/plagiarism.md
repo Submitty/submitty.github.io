@@ -3,7 +3,7 @@ title: Lichen Plagiarism Detection
 category: Developer
 ---
 
-See also [Instructor UI for Lichen Plagiarism Detection](/instructor/plagiarism).
+See also [Instructor UI for Lichen Plagiarism Detection](/developer/testing).
 
 
 ### Lichen Configuration File
