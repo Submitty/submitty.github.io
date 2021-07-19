@@ -123,8 +123,8 @@ bash /usr/local/submitty/Lichen/bin/process_all.sh /var/local/submitty/courses/f
 
 Some parts of Lichen have automated tests which are run by GitHub Actions.
 It is also possible to run the tests locally by navigating to `/usr/local/submitty/GIT_CHECKOUT/Lichen/tests`
-and running `python3 -m unittest discover`.
-
+inside your Vagrant virtual machine and running `python3 -m unittest discover`.
+See more about automated testing on Submitty [here](https://submitty.org/developer/testing/).
 
 ### Provided Code Files
 
