@@ -233,7 +233,15 @@ of development and regression test gradeables and submissions.  Note:
 Currently the LichenTestData repository is a private GitHub repository
 for members of the Submitty GitHub organization.
 
-Most commonly, when developing and debugging Lichen repository files, you want to update your system with all the recent software changes. To do this, run `install_lichen` or `bash /usr/local/submitty/GIT_CHECKOUT/Lichen/install_lichen.sh` from anywhere inside your vagrant terminal.
+Most commonly, when developing and debugging Lichen repository files, you want to update your system with all the recent software changes. To do this, run:
+```bash
+install_lichen
+```
+or:
+```bash
+bash /usr/local/submitty/GIT_CHECKOUT/Lichen/install_lichen.sh
+```
+from anywhere inside your vagrant terminal.
 
 This command is similar to the `install_submitty` command which updates all Submitty software and dependencies, but it is only for installing or updating the parts relevant to Lichen.
 
