@@ -28,7 +28,13 @@ is found in the directory
     "language": "plaintext",
     "threshold": 20,
     "sequence_length": 5,
-    "prev_term_gradeables": [],
+    "prior_term_gradeables": [
+        {
+           "prior_semester": "f16",
+           "prior_course": "sample",
+           "prior_gradeable": "example_gradeable"
+        }
+    ],
     "ignore_submissions": [
     	"grader",
     	"ta1",
@@ -78,7 +84,15 @@ The expected values for the configuration parameters are:
 
 * **"sequence_length"** - an integer, must be greater than or equal to 2
 
-* **"prev_term_gradeables"** - [optional], _TODO: future feature_
+* **"prior_term_gradeables"** - an array of objects that
+    represent gradeables whose submissions are to be included in
+    the matching algorithm, where each object contains:
+    * `prior_semester` - the semester ID of the other gradeable
+    * `prior_course` - the course ID of the other gradeable
+    * `prior_gradeable` - the gradeable ID of the other gradeable
+
+  If you wish to include no other gradeables, set to an empty array: `[]`
+
 
 * **"ignore_submissions"** - an array of strings, where every string
     is a user ID whose submissions are to be ignored in the plagiarism
@@ -102,7 +116,7 @@ the `config.json` configuration file for this gradeable, e.g.,
 `.../<semester>/<course_id>/lichen/<gradeable_id>/<config_id>/`.
 
 `<data_path>` should be a path to a directory containing the
-semesters and the courses with their data, e.g., 
+semesters and the courses with their data, e.g.,
 `/var/local/submitty/courses`.  This path is used to get
 the submissions of the course users to be used in the plagiarism
 detection algorithm, and, if configured so, to get submissions from
@@ -236,4 +250,3 @@ Checkout the companion LichenTestData repository before running
 of development and regression test gradeables and submissions.  Note:
 Currently the LichenTestData repository is a private GitHub repository
 for members of the Submitty GitHub organization.
-
