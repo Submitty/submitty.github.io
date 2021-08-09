@@ -27,4 +27,8 @@ jobs:
     - name: Install dependencies
       run: bundle install
 
-    - run: bundle exec jekyll build
+    - name: Build Site
+      run: bundle exec jekyll build
+
+    - name: Check Links
+     run: htmlproofer ./_site --assume-extension --empty-alt-ignore --url_ignore "github.com,localhost"
