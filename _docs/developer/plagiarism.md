@@ -28,7 +28,13 @@ is found in the directory
     "language": "plaintext",
     "threshold": 20,
     "sequence_length": 5,
-    "prev_term_gradeables": [],
+    "prior_term_gradeables": [
+        {
+           "prior_semester": "f16",
+           "prior_course": "sample",
+           "prior_gradeable": "example_gradeable"
+        }
+    ],
     "ignore_submissions": [
     	"grader",
     	"ta1",
@@ -78,7 +84,15 @@ The expected values for the configuration parameters are:
 
 * **"sequence_length"** - an integer, must be greater than or equal to 2
 
-* **"prev_term_gradeables"** - [optional], _TODO: future feature_
+* **"prior_term_gradeables"** - an array of objects that
+    represent gradeables whose submissions are to be included in
+    the matching algorithm, where each object contains:
+    * `prior_semester` - the semester ID of the other gradeable
+    * `prior_course` - the course ID of the other gradeable
+    * `prior_gradeable` - the gradeable ID of the other gradeable
+
+  If you wish to include no other gradeables, set to an empty array: `[]`
+
 
 * **"ignore_submissions"** - an array of strings, where every string
     is a user ID whose submissions are to be ignored in the plagiarism

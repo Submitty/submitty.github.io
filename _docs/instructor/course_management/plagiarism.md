@@ -133,7 +133,12 @@ length for optimal results, which is why for every supported language
 we have default recommended values for the sequence length.
 
 #### Prior Term Gradeables
-_TODO: future feature_
+Instructors have the ability to include submissions from other prior
+or existing gradeables from their courses to be included in the matching
+algorithm. Only students in the current course will be brought up if
+plagiarism has been detected, but the result page will indicate if any
+of the plagiarized content matched the submissions of students from the
+other gradeables.
 
 #### Users to be Ignored
 
@@ -181,7 +186,7 @@ other users than the user selected for the right panel, and matching
 code regions that the two selected users share.  The right panel will
 only highlight the regions of code that matching between the two
 selected students, but if you wish to see the other types of matching
-regionsf or the user on the right, you can click the "Swap Students"
+regions for the user on the right, you can click the "Swap Students"
 button in the upper right corner of the page.
 
 Clicking an orange-colored region of code in the left panel will turn
