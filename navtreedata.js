@@ -79,7 +79,7 @@ var NAVTREE =
             [ "Overview", "/instructor", null ],
             [ "Course Settings", "/instructor/course_settings", [
                 [ "Overview", "/instructor/course_settings", null ],
-                [ "Rainbow Grades", "/instructor/course_settings/rainbow_grades", [
+                [ "Rainbow Grades", "/instructor/course_settings/rainbow_grades/", [
                     [ "Automatic Setup", "/instructor/course_settings/rainbow_grades/automatic_setup", null ],
                     [ "Manual Setup", "/instructor/course_settings/rainbow_grades/manual_setup", null ],
                     [ "Customization Basics", "/instructor/course_settings/rainbow_grades/customization_basics", null ],
