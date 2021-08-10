@@ -28,7 +28,13 @@ is found in the directory
     "language": "plaintext",
     "threshold": 20,
     "sequence_length": 5,
-    "prev_term_gradeables": [],
+    "prior_term_gradeables": [
+        {
+           "prior_semester": "f16",
+           "prior_course": "sample",
+           "prior_gradeable": "example_gradeable"
+        }
+    ],
     "ignore_submissions": [
     	"grader",
     	"ta1",
@@ -78,14 +84,27 @@ The expected values for the configuration parameters are:
 
 * **"sequence_length"** - an integer, must be greater than or equal to 2
 
-* **"prev_term_gradeables"** - [optional], _TODO: future feature_
+* **"prior_term_gradeables"** - an array of objects that
+    represent gradeables whose submissions are to be included in
+    the matching algorithm, where each object contains:
+    * `prior_semester` - the semester ID of the other gradeable
+    * `prior_course` - the course ID of the other gradeable
+    * `prior_gradeable` - the gradeable ID of the other gradeable
+
+  If you wish to include no other gradeables, set to an empty array: `[]`
+
 
 * **"ignore_submissions"** - an array of strings, where every string
     is a user ID whose submissions are to be ignored in the plagiarism
     detection algorithm. If you wish to ignore no one, leave it blank
     (set to an empty array: `[]`)
 
+### Running the Lichen Test Suite
 
+Some parts of Lichen have automated tests which are run by GitHub Actions.
+It is also possible to run the tests locally by navigating to `/usr/local/submitty/GIT_CHECKOUT/Lichen/tests`
+inside your Vagrant virtual machine and running `python3 -m unittest discover`.
+See more about automated testing on Submitty [here](/developer/testing).
 
 
 ### Running Lichen Manually
@@ -102,7 +121,7 @@ the `config.json` configuration file for this gradeable, e.g.,
 `.../<semester>/<course_id>/lichen/<gradeable_id>/<config_id>/`.
 
 `<data_path>` should be a path to a directory containing the
-semesters and the courses with their data, e.g., 
+semesters and the courses with their data, e.g.,
 `/var/local/submitty/courses`.  This path is used to get
 the submissions of the course users to be used in the plagiarism
 detection algorithm, and, if configured so, to get submissions from
@@ -117,16 +136,7 @@ run the script with this configuration file, we would run:
 bash /usr/local/submitty/Lichen/bin/process_all.sh /var/local/submitty/courses/f17/test_course/lichen/example_gradeable/1 /var/local/submitty/courses
 ```
 
-
-
-### Running the Lichen Test Suite
-
-Some parts of Lichen have automated tests which are run by GitHub Actions.
-It is also possible to run the tests locally by navigating to `/usr/local/submitty/GIT_CHECKOUT/Lichen/tests`
-inside your Vagrant virtual machine and running `python3 -m unittest discover`.
-See more about automated testing on Submitty [here](/developer/testing).
-
-### Provided Code Files
+#### Provided Code Files
 
 If you wish to include files to be used in the matching algorithm as
 "instructor provided code", make sure to create the directory
@@ -136,7 +146,7 @@ matching algorithm will run without trying to compare student
 submissions to "instructor provided code" files.
 
 
-### Editing and Re-running
+#### Editing and Re-running
 
 If you wish to edit the configuration settings, you can edit the
 `config.json` file, and re-run the bash script with the same paths as
@@ -237,3 +247,16 @@ of development and regression test gradeables and submissions.  Note:
 Currently the LichenTestData repository is a private GitHub repository
 for members of the Submitty GitHub organization.
 
+Most commonly, when developing and debugging Lichen repository files, you want to update your system with all the recent software changes. To do this, run:
+```bash
+install_lichen
+```
+or:
+```bash
+bash /usr/local/submitty/GIT_CHECKOUT/Lichen/install_lichen.sh
+```
+from anywhere inside your vagrant terminal.
+
+This command is similar to the `install_submitty` command which updates all Submitty software and dependencies, but it is only for installing or updating the parts relevant to Lichen.
+
+_See also: [Updating Dependencies](https://submitty.org/developer/updating_dependencies) and [Development Instructions](https://submitty.org/developer/development_instructions)_
