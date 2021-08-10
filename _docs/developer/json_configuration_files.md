@@ -15,7 +15,7 @@ Each line is preceded by a comment in the structure of ```//
 [type|default] comment```
 
 
-**config/form/form_\<gradeable_id\>.json**: The last set of data exported from the "Gradeable" form when a gradeable is created/updated. These files may be imported in bulk from the "Import From JSON" option. [{config}/form/form_\<gradeble_id\>.json] 
+**config/form/form_\<gradeable_id\>.json**: The last set of data exported from the "Gradeable" form when a gradeable is created/updated. These files may be imported in bulk from the "Import From JSON" option. [{config}/form/form_\<gradeble_id\>.json]
 
 **config/build/build_\<gradeable_id\>.json**: Details on specific automated tests for this assignment
 
@@ -37,10 +37,10 @@ The \* would be equivalent to the ```assignment_id``` field in ```class.json``` 
     "id": "hw01",
     // [String|""] message to show to the user above any of their submission results
     "assignment_message": "Be sure to upload the assignment to the right bucket to get full credit",
-    // [int|20] max number of submissions allowed by the server for an assignment before user 
+    // [int|20] max number of submissions allowed by the server for an assignment before user
     // would lose credit for each additional submission attempt
     "max_submissions": 20,
-    // [Numeric] max size of the submission of all files added together. for zips, we open the zip 
+    // [Numeric] max size of the submission of all files added together. for zips, we open the zip
     //and add up the size of all contained files
     "max_submission_size": 100000,
     "auto_pts": 8,
@@ -62,12 +62,14 @@ The \* would be equivalent to the ```assignment_id``` field in ```class.json``` 
         {
             // [String|""] Name of the test case to be displayed to the user
             "title": "Test 1 README",
-            // [String|""] Additional details about the test such as command used to run the test case 
+            // [String|""] Additional details about the test such as command used to run the test case
             "details": "",
             // [Numeric|0] How many points is this test case worth
             "points": 2,
             // [Boolean|false] Is the results (including score) hidden from the user
             "hidden": false,
+            // [Boolean|false] Do the hidden details turn visible when grades are released
+            "release_hidden_details": false,
             // [Boolean|false] Is this test case worth extra credit or regular credit
             "extracredit": false,
             // [Boolean|true] Doesn't do anything?
