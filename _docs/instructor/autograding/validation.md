@@ -1,6 +1,6 @@
 ---
-title: Autograding Validation
-category: Instructor -- Autograding Configuration
+category: Instructor > Autograding
+title: Validation
 redirect_from:
   - /instructor/assignment_configuration/validation
 ---

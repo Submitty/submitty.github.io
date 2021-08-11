@@ -1,5 +1,5 @@
 ---
-category: Instructor > Assignment Preparation > Create/Edit Gradeable
+category: Instructor > Assignment Preparation
 title: Team Assignments
 redirect_from:
   - /instructor/team_assignments

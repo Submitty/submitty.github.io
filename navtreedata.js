@@ -79,6 +79,10 @@ var NAVTREE =
             [ "Overview", "/instructor", null ],
             [ "Course Settings", "/instructor/course_settings", [
                 [ "Overview", "/instructor/course_settings", null ],
+                [ "Discussion Forum", "/instructor/course_settings/forum", null ],
+                [ "Submini Polling", "/instructor/course_settings/submini_polls", null ],
+                [ "Office Hours Queue", "/instructor/course_settings/queue", null ],
+                [ "Grade Inquiries", "/instructor/course_settings/grade_inquiries", null ],
                 [ "Rainbow Grades", "/instructor/course_settings/rainbow_grades", [
                     [ "Overview", "/instructor/course_settings/rainbow_grades", null ],
                     [ "Automatic Setup", "/instructor/course_settings/rainbow_grades/automatic_setup", null ],
@@ -88,10 +92,6 @@ var NAVTREE =
                     [ "Room Templates", "/instructor/course_settings/rainbow_grades/room_templates", null ],
                     [ "RPI VPN on WSL Instructions", "/instructor/course_settings/rainbow_grades/wsl_vpn", null ]
                 ] ],
-                [ "Office Hours Queue", "/instructor/course_settings/queue", null ],
-                [ "Discussion Forum", "/instructor/course_settings/forum", null ],
-                [ "Submini Polling", "/instructor/course_settings/submini_polls", null ],
-                [ "Grade Inquiries", "/instructor/course_settings/grade_inquiries", null ],
                 [ "Website Customization", "/instructor/course_settings/website_customization", null ]
             ] ],
             [ "Course Management", "/instructor/course_management/managing_enrollment", [
@@ -111,23 +111,23 @@ var NAVTREE =
                 [ "Bulk PDF Upload", "/instructor/assignment_preparation/bulk_pdf_upload", null ],
                 [ "Personalized Exam", "/instructor/assignment_preparation/personalized_exams", null ],
             ] ],
-            [ "Automated Grading", "/instructor/automated_grading/directory_structure", [
+            [ "Autograding", "/instructor/autograding/directory_structure", [
                 [ "Configuration Path", "/instructor/assignment_configuration/configuration_path", null ],
-                [ "Directory Structure", "/instructor/automated_grading/directory_structure", null ],
-                [ "Autograding Configuration Structure", "/instructor/automated_grading/structure", null ],
-                [ "Phases of Autograding", "/instructor/automated_grading/phases", null ],
-                [ "Autograding Specification", "/instructor/automated_grading/specification", null ],
-                [ "Distributed / Networked Applications", "/instructor/automated_grading/networking", null ],
-                [ "Graphics Applications", "/instructor/automated_grading/graphics", null ],
-                [ "Validation", "/instructor/automated_grading/validation", null ],
-                [ "Batch Regrade Submissions", "/instructor/automated_grading/batch_regrade", null ],
-                [ "Sample Assignments", "/instructor/automated_grading/sample_assignments", null ],
-                [ "Static Analysis", "/instructor/automated_grading/static_analysis", [
-                    [ "Overview", "/instructor/automated_grading/static_analysis", null ],
-                    [ "Tree Tool", "/instructor/automated_grading/static_analysis/tree_tool", null ],
-                    [ "Common AST", "/instructor/automated_grading/static_analysis/commonAST", null ],
-                    [ "CPP Union Tool", "/instructor/automated_grading/static_analysis/cppUnionTool", null ],
-                    [ "Graph Comparison", "/instructor/automated_grading/static_analysis/graphComparison", null ],
+                [ "Directory Structure", "/instructor/autograding/directory_structure", null ],
+                [ "Autograding Configuration Structure", "/instructor/autograding/structure", null ],
+                [ "Phases of Autograding", "/instructor/autograding/phases", null ],
+                [ "Autograding Specification", "/instructor/autograding/specification", null ],
+                [ "Distributed / Networked Applications", "/instructor/autograding/networking", null ],
+                [ "Graphics Applications", "/instructor/autograding/graphics", null ],
+                [ "Validation", "/instructor/autograding/validation", null ],
+                [ "Batch Regrade Submissions", "/instructor/autograding/batch_regrade", null ],
+                [ "Sample Assignments", "/instructor/autograding/sample_assignments", null ],
+                [ "Static Analysis", "/instructor/autograding/static_analysis", [
+                    [ "Overview", "/instructor/autograding/static_analysis", null ],
+                    [ "Tree Tool", "/instructor/autograding/static_analysis/tree_tool", null ],
+                    [ "Common AST", "/instructor/autograding/static_analysis/commonAST", null ],
+                    [ "CPP Union Tool", "/instructor/autograding/static_analysis/cppUnionTool", null ],
+                    [ "Graph Comparison", "/instructor/autograding/static_analysis/graphComparison", null ],
                 ] ],
             ] ],
         ] ],

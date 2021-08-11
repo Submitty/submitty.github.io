@@ -1,5 +1,5 @@
 ---
-category: Instructor > Assignment Preparation > Automated Grading
+category: Instructor > Automated Grading
 title: Batch Regrade Homework
 redirect_from:
   - /instructor/batch_regrade_submissions

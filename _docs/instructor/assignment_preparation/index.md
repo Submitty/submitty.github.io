@@ -1,5 +1,5 @@
 ---
-category: Instructor > Assignment Preparation > Create/Edit Gradeable
+category: Instructor > Assignment Preparation
 title: Overview
 redirect_from:
   - /instructor/create_edit_gradeable

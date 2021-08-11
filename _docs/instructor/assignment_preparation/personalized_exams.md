@@ -1,5 +1,5 @@
 ---
-category: Instructor > Assignment Preparation > Create/Edit Gradeable
+category: Instructor > Assignment Preparation
 title: Personalized Exams
 redirect_from:
   - /instructor/personalized_exams

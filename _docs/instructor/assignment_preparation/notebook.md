@@ -1,5 +1,5 @@
 ---
-category: Instructor > Assignment Preparation > Assignment Configuration
+category: Instructor > Assignment Preparation
 title: Notebook
 redirect_from:
   - /instructor/notebook

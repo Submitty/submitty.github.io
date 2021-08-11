@@ -1,5 +1,5 @@
 ---
-category: Instructor > Assignment Preparation > Create/Edit Gradeable
+category: Instructor > Assignment Preparation
 title: Submissions via Version Control
 redirect_from:
   - /instructor/assignment_preparation/create_edit_gradeable/managing_git

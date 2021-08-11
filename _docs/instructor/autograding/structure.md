@@ -1,6 +1,6 @@
 ---
-title: Autograding Configuration Structure
-category: Instructor -- Autograding Configuration
+category: Instructor > Autograding
+title: Configuration Structure
 redirect_from:
   - /instructor/assignment_configuration/structure
 ---

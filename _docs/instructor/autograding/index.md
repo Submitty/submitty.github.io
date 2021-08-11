@@ -1,6 +1,6 @@
 ---
+category: Instructor > Autograding
 title: Overview
-category: Instructor > Assignment Configuration
 ---
 
 We will present a range of “case study” autograding assignment configurations,
