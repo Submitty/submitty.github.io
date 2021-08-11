@@ -1,6 +1,6 @@
 ---
+category: Instructor > Course Management
 title: Peer Grading
-category: Instructor -- Course Management
 redirect_from:
   - /instructor/peer_grading
 ---

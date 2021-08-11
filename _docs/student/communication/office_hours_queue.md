@@ -1,5 +1,5 @@
 ---
-category: Student -- Communication
+category: Student > Communication
 title: Getting Help through the Office Hours Queue
 redirect_from:
   - /student/queue

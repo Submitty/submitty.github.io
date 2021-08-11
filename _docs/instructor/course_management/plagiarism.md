@@ -1,6 +1,6 @@
 ---
+category: Instructor > Course Management
 title: Lichen Plagiarism Detection
-category: Instructor
 redirect_from:
   - /instructor/plagiarism
 ---

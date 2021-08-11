@@ -1,6 +1,6 @@
 ---
+category: Instructor > Course Settings
 title: Customize Website Theme
-category: Instructor
 redirect_from:
   - /instructor/website_customization
 ---

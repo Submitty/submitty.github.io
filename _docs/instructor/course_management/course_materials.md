@@ -1,6 +1,6 @@
 ---
+category: Instructor > Course Management
 title: Course Materials
-category: Instructor -- Course Management
 redirect_from:
   - /instructor/course_materials
 ---

@@ -1,5 +1,5 @@
 ---
-category: Student -- Submission
+category: Student > Submission
 title: Managing Submission Versions
 redirect_from:
   - /student/managing_versions

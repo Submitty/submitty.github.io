@@ -1,5 +1,5 @@
 ---
-category: Student -- Communication
+category: Student > Communication
 title: Writing Markdown
 ---
 

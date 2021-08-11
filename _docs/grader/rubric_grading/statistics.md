@@ -1,5 +1,5 @@
 ---
-category: Grader -- Rubric Grading
+category: Grader > Rubric Grading
 title: Statistics
 redirect_from:
   - grader/rubric_grading_statistics

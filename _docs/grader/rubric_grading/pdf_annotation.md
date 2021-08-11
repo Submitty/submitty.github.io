@@ -1,5 +1,5 @@
 ---
-category: Grader -- Rubric Grading
+category: Grader > Rubric Grading
 title: PDF Annotation
 ---
 

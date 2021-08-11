@@ -1,6 +1,6 @@
 ---
+category: Instructor > Course Management
 title: Managing Enrollment
-category: Instructor -- Course Management
 redirect_from:
   - /instructor/course_management
   - /instructor/managing_enrollment

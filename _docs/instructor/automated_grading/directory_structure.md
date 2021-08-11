@@ -1,6 +1,6 @@
 ---
+category: Instructor > Assignment Preparation > Automated Grading
 title: Directory Structure
-category: Instructor
 redirect_from:
   - /instructor/directory_structure
 ---

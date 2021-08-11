@@ -1,7 +1,8 @@
 ---
-title: Facilitating Student Submissions via GIT
-category: Instructor -- Assignment Preparation
+category: Instructor > Assignment Preparation > Create/Edit Gradeable
+title: Submission via Version Control
 redirect_from:
+  - /instructor/assignment_preparation/create_edit_gradeable/managing_git
   - /instructor/managing_git
   - /instructor/git
 ---

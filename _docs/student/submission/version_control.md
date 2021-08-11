@@ -1,5 +1,5 @@
 ---
-category: Student -- Submission
+category: Student > Submission
 title: Version Control / GIT
 redirect_from:
   - /student/git_submission

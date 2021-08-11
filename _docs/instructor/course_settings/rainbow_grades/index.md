@@ -1,6 +1,6 @@
 ---
-title: Grade Summaries -- Rainbow Grades
-category: Instructor -- Course Settings
+category: Instructor > Course Settings > Rainbow Grades
+title: Overview
 redirect_from:
   - /instructor/rainbow_grades
   - /instructor/course_settings/rainbow_grades

@@ -1,5 +1,5 @@
 ---
-category: Grader -- Rubric Grading
+category: Grader > Rubric Grading
 title: Sorting and Navigation
 redirect_from:
   - /grader/sorting_and_navigation

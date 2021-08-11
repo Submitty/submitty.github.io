@@ -1,8 +1,9 @@
 ---
+category: Instructor > Course Settings > Rainbow Grades
 title: Exam Seating
-category: Instructor
 redirect_from:
   - /instructor/rainbow_grades/exam_customization
+  - /instructor/course_settings/rainbow_grades/exam_customization
 ---
 
 

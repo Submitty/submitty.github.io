@@ -1,6 +1,6 @@
 ---
-category: Student
-title: Courses & Profile
+category: Student > Courses & Profile
+title: Overview
 redirect_from:
   - /student
 ---

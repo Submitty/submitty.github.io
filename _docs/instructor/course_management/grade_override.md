@@ -1,6 +1,6 @@
 ---
+category: Instructor > Course Management
 title: Grade Override
-category: Instructor -- Course Management
 redirect_from:
   - /instructor/grade_override
 ---

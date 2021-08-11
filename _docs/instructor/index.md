@@ -1,9 +1,8 @@
 ---
-title: Instructor
+category: Instructor
+title: Overview
 permalink: /instructor
 ---
-
-### Instructor Navigation Page
 
 The instructor navigation page is similar to the TA navigation page
 (instructors can review or edit TA grades as needed).  However

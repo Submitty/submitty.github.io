@@ -1,6 +1,6 @@
 ---
+category: Instructor > Assignment Preparation > Create/Edit Gradeable
 title: Bulk PDF Upload
-category: Instructor
 redirect_from:
   - /instructor/bulk_pdf_upload
 ---

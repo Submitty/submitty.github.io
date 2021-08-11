@@ -1,5 +1,5 @@
 ---
-category: Student -- Submission
+category: Student > Submission
 title: Automated Testing & Grading
 redirect_from:
   - /student/automated_testing

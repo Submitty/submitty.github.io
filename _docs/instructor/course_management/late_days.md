@@ -1,6 +1,6 @@
 ---
+category: Instructor > Course Management
 title: Late Days
-category: Instructor -- Course Management
 redirect_from:
   - /instructor/late_days
 ---

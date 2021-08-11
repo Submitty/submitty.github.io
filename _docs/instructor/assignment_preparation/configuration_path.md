@@ -1,6 +1,6 @@
 ---
+category: Instructor > Assignment Preparation > Assignment Configuration
 title: Configuration Path
-category: Instructor -- Autograding Configuration
 redirect_from:
   - /instructor/assignment_configuration/configuration_path
 ---

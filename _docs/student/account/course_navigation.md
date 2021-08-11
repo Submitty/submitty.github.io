@@ -1,5 +1,5 @@
 ---
-category: Student -- Courses & Profile
+category: Student > Courses & Profile
 title: Course Navigation
 redirect_from:
   - /student/navigation

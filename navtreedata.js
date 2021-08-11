@@ -66,7 +66,7 @@ var NAVTREE =
             [ "Numeric / Text Grading", "/grader/numeric_text_grading", null ],
             [ "Rubric Grading", "/grader/rubric_grading/index", [
                 [ "Overview", "/grader/rubric_grading/index", null ],
-                [ "Common Marks", "/grader/rubric_grading/common_marks", null ],
+                [ "Rubric Components and Marks", "/grader/rubric_grading/rubric_components_and_marks", null ],
                 [ "Silent Editing", "/grader/rubric_grading/silent_editing", null ],
                 [ "PDF Annotation", "/grader/rubric_grading/pdf_annotation", null ],
                 [ "Sorting and Navigation", "/grader/rubric_grading/sorting_and_navigation", null ],
@@ -79,13 +79,13 @@ var NAVTREE =
             [ "Overview", "/instructor", null ],
             [ "Course Settings", "/instructor/course_settings", [
                 [ "Overview", "/instructor/course_settings", null ],
-                [ "Rainbow Grades", "/instructor/course_settings/rainbow_grades/", [
+                [ "Rainbow Grades", "/instructor/course_settings/rainbow_grades", [
+                    [ "Overview", "/instructor/course_settings/rainbow_grades", null ],
                     [ "Automatic Setup", "/instructor/course_settings/rainbow_grades/automatic_setup", null ],
                     [ "Manual Setup", "/instructor/course_settings/rainbow_grades/manual_setup", null ],
                     [ "Customization Basics", "/instructor/course_settings/rainbow_grades/customization_basics", null ],
-                    [ "Exam Seating", "/instructor/course_settings/rainbow_grades/exam_customization", null ],
+                    [ "Exam Seating", "/instructor/course_settings/rainbow_grades/exam_seating", null ],
                     [ "Room Templates", "/instructor/course_settings/rainbow_grades/room_templates", null ],
-                    [ "iClicker Instructions", "/instructor/course_settings/rainbow_grades/iclicker_instructions", null ],
                     [ "RPI VPN on WSL Instructions", "/instructor/course_settings/rainbow_grades/wsl_vpn", null ]
                 ] ],
                 [ "Office Hours Queue", "/instructor/course_settings/queue", null ],
@@ -103,35 +103,33 @@ var NAVTREE =
                 [ "Lichen Plagiarism Detection", "/instructor/course_management/plagiarism", null ],
                 [ "SQL Toolbox", "/instructor/course_management/sql_toolbox", null ]
             ] ],
-            [ "Assignment Preparation", "/instructor/assignment_preparation/create_edit_gradeable/index", [
-                [ "Create or Edit a Gradeable", "/instructor/assignment_preparation/create_edit_gradeable/index", [
-                    [ "Overview", "/instructor/assignment_preparation/create_edit_gradeable/index", null ],
-                    [ "Facilitating Submission via GIT", "/instructor/assignment_preparation/create_edit_gradeable/managing_git", null ],
-                    [ "Team Assignments", "/instructor/assignment_preparation/create_edit_gradeable/team_assignments", null ],
-                    [ "Bulk PDF Upload", "/instructor/assignment_preparation/create_edit_gradeable/bulk_pdf_upload", null ],
-                    [ "Personalized Exam", "/instructor/assignment_preparation/create_edit_gradeable/personalized_exams", null ],
-                ] ],
-                [ "Assignment Configuration", "/instructor/assignment_preparation/assignment_configuration", [
-                    [ "Notebook", "/instructor/assignment_preparation/assignment_configuration/notebook", null ],
-                    [ "Configuration Path", "/instructor/assignment_preparation/assignment_configuration/configuration_path", null ],
-                    [ "Sample Assignments", "/instructor/assignment_preparation/assignment_configuration/sample_assignments", null ],
-                ] ],
-                [ "Automated Grading", "/instructor/assignment_preparation/automated_grading/directory_structure", [
-                    [ "Directory Structure", "/instructor/assignment_preparation/automated_grading/directory_structure", null ],
-                    [ "Autograding Configuration Structure", "/instructor/assignment_preparation/automated_grading/structure", null ],
-                    [ "Gradeables Customization", "/instructor/course_settings/rainbow_grades/gradeables", null ],
-                    [ "Phases of Autograding", "/instructor/assignment_preparation/automated_grading/phases", null ],
-                    [ "Autograding Specification", "/instructor/assignment_preparation/automated_grading/specification", null ],
-                    [ "Distributed / Networked Applications", "/instructor/assignment_preparation/automated_grading/networking", null ],
-                    [ "Graphics Applications", "/instructor/assignment_preparation/automated_grading/graphics", null ],
-                    [ "Validation", "/instructor/assignment_preparation/automated_grading/validation", null ],
-                    [ "Static Analysis", "/instructor/static_analysis", null ],
-                    [ "Tree Tool", "/instructor/assignment_preparation/automated_grading/tree_tool", null ],
-                    [ "Batch Regrade Submissions", "/instructor/assignment_preparation/automated_grading/batch_regrade", null ],
+            [ "Assignment Preparation", "/instructor/assignment_preparation/index", [
+                [ "Overview", "/instructor/assignment_preparation/index", null ],
+                [ "Notebook", "/instructor/assignment_preparation/notebook", null ],
+                [ "Facilitating Submission via GIT", "/instructor/assignment_preparation/submission_version_control", null ],
+                [ "Team Assignments", "/instructor/assignment_preparation/team_assignments", null ],
+                [ "Bulk PDF Upload", "/instructor/assignment_preparation/bulk_pdf_upload", null ],
+                [ "Personalized Exam", "/instructor/assignment_preparation/personalized_exams", null ],
+            ] ],
+            [ "Automated Grading", "/instructor/automated_grading/directory_structure", [
+                [ "Configuration Path", "/instructor/assignment_configuration/configuration_path", null ],
+                [ "Directory Structure", "/instructor/automated_grading/directory_structure", null ],
+                [ "Autograding Configuration Structure", "/instructor/automated_grading/structure", null ],
+                [ "Phases of Autograding", "/instructor/automated_grading/phases", null ],
+                [ "Autograding Specification", "/instructor/automated_grading/specification", null ],
+                [ "Distributed / Networked Applications", "/instructor/automated_grading/networking", null ],
+                [ "Graphics Applications", "/instructor/automated_grading/graphics", null ],
+                [ "Validation", "/instructor/automated_grading/validation", null ],
+                [ "Batch Regrade Submissions", "/instructor/automated_grading/batch_regrade", null ],
+                [ "Sample Assignments", "/instructor/automated_grading/sample_assignments", null ],
+                [ "Static Analysis", "/instructor/automated_grading/static_analysis", [
+                    [ "Overview", "/instructor/automated_grading/static_analysis", null ],
+                    [ "Tree Tool", "/instructor/automated_grading/static_analysis/tree_tool", null ],
+                    [ "Common AST", "/instructor/automated_grading/static_analysis/commonAST", null ],
+                    [ "CPP Union Tool", "/instructor/automated_grading/static_analysis/cppUnionTool", null ],
+                    [ "Graph Comparison", "/instructor/automated_grading/static_analysis/graphComparison", null ],
                 ] ],
             ] ],
-
-
         ] ],
         [ "System Administrator", "/sysadmin", [
             [ "Server OS", "/sysadmin", null ],

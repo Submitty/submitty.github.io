@@ -1,6 +1,6 @@
 ---
+category: Instructor > Assignment Preparation > Automated Grading
 title: Gradeables Customization
-category: Instructor
 redirect_from:
   - /instructor/gradeables
 ---
