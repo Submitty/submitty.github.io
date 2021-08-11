@@ -1,6 +1,6 @@
 ---
+category: Instructor > Course Settings > Rainbow Grades
 title: WSL and VPN
-category: Instructor
 redirect_from:
   - /instructor/rainbow_grades/wsl_vpn
 ---

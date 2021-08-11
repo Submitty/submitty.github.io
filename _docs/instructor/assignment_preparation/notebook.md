@@ -1,6 +1,6 @@
 ---
+category: Instructor > Assignment Preparation
 title: Notebook
-category: Instructor -- Assignment Preparation
 redirect_from:
   - /instructor/notebook
   - /instructor/assignment_configuration/notebook

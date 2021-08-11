@@ -1,6 +1,6 @@
 ---
+category: Grader > Rubric Grading
 title: Silent Editing
-category: Grader -- Rubric Grading
 redirect_from:
   - /instructor/silent_editing
 ---

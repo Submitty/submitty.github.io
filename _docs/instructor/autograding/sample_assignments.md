@@ -1,6 +1,6 @@
 ---
-title: Premade Java Assignments
-category: Instructor
+category: Instructor > Assignment Preparation > Assignment Configuration
+title: Sample Assignments
 redirect_from:
   - /instructor/premade_assignments
 ---

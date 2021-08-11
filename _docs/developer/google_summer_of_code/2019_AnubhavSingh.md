@@ -96,7 +96,7 @@ I believe my work on the WebSocket opens up new avenues for not just the Discuss
 - History of Post Attachments on Forum
 - Sem-wide Push Notifications (currently Course-wide)
 - Reflect updates to Forum Posts/Threads via WebSockets
-- A Lite interface for Submitty using the [API](https://api.submitty.org/) built by [Han](https://submitty.org/developer/google_summer_of_code/2019_XiaoHan)
+- A Lite interface for Submitty using the [API](https://api.submitty.org/) built by [Han](/developer/google_summer_of_code/2019_XiaoHan)
 
 ## Acknowledgments
 

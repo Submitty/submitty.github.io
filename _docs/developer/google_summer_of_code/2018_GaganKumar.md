@@ -22,7 +22,7 @@ This project helped to inculcate a spirit of teamwork in me and instilled the co
 
 I also absorbed the importance of code reviews/feedbacks by others as they might have a completely different angle to view the problem.
 
-#### [Discussion Forum](http://submitty.org/instructor/forum)
+#### [Discussion Forum](/instructor/forum)
 
 Submitty has a student-faculty portal named **Discussion Forum**. It can be used for asking queries, announcements, notes sharing, etc.
 

@@ -1,6 +1,8 @@
 ---
-category: Grader -- Rubric Grading
-title: Rubric Components and Common Marks
+category: Grader > Rubric Grading
+title: Rubric Components and Marks
+redirect_from:
+  - /grader/rubric_grading/common_marks
 ---
 
 ![](/images/ta_grading/rubric_grading_panels_1.png)

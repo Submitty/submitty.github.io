@@ -25,7 +25,7 @@ The routing mechanism of Submitty was simple. It makes use of the query string a
 
 During the summer, a new router is used and all URLs of Submitty are replaced with new ones. The task is fairly demanding considering the sometimes heterogeneous coding style across Submitty, the extensive nature of critical methods (which entails painful merge conflicts and urgent bug fixes) as well as the constant need to refactor the router as unanticipated problems arise.
 
-The continuous improvements and extension of the router being many, it would be trivial to include a list of pull requests in the report. Please refer to the [router documentation](https://submitty.org/developer/router) for more information.
+The continuous improvements and extension of the router being many, it would be trivial to include a list of pull requests in the report. Please refer to the [router documentation](/developer/router) for more information.
 
 #### b. API Implementation
 
@@ -37,7 +37,7 @@ It is also worth to mention that the API is proved useful for making [a working-
 
 An API opens a world of possibilities. Here is a list for future developers. Feel free to come up with new ideas yourself. 
 
-- Help implement more API endpoints to enrich Submitty API. After carefully reading [suggestions for new developers](https://submitty.org/developer#suggestions-for-new-developers), you can start writing new endpoints hosted at Submitty that can direct your robot to wash the dishes and fold the laundry.
+- Help implement more API endpoints to enrich Submitty API. After carefully reading [suggestions for new developers](/developer#suggestions-for-new-developers), you can start writing new endpoints hosted at Submitty that can direct your robot to wash the dishes and fold the laundry.
 - Develop plugins for text editors so that you can autograde your work without switching between windows.
 - Build *your* Submitty application. While sharing data with Submitty, you can rebrand it with your name (like Shailmitty), repaint and reshape everything with your genius aesthetic tastes without fighting with picky people, and even, develop an Android or iOS application that makes everyone forget the web version and keeps Barb on vacation every day.
 

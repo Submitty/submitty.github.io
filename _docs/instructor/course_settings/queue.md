@@ -1,6 +1,6 @@
 ---
+category: Instructor > Course Settings
 title: Enabling Office Hours Queue
-category: Instructor
 redirect_from:
   - /instructor/queue
 ---

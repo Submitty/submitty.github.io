@@ -1,6 +1,6 @@
 ---
+category: Instructor > Assignment Preparation
 title: Bulk PDF Upload
-category: Instructor
 redirect_from:
   - /instructor/bulk_pdf_upload
 ---

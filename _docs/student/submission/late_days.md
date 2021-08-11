@@ -1,5 +1,5 @@
 ---
-category: Student -- Submission
+category: Student > Submission
 title: Late Days & Extensions
 redirect_from:
   - /student/late_days

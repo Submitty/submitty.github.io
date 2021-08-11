@@ -1,5 +1,5 @@
 ---
-category: Instructor
+category: Instructor > Course Settings
 title: Enabling Grade Inquiries
 redirect_from:
   - /instructor/grade_inquiry_instructor

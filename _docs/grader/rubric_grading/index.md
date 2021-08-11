@@ -1,6 +1,6 @@
 ---
-category: Grader
-title: Rubric Grading
+category: Grader > Rubric Grading
+title: Overview
 redirect_from:
   - grader/rubric_grading.md
 ---

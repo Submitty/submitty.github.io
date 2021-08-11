@@ -1,5 +1,5 @@
 ---
-category: Instructor
+category: Instructor > Course Settings
 title: Submini Polling
 redirect_from:
   - /instructor/submini_polls
