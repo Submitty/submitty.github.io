@@ -87,6 +87,7 @@ function deleteLink()
 
 function cachedLink()
 {
+    return '';
   if (localStorageSupported()) {
     return window.localStorage.getItem('navpath');
   } else {
@@ -424,13 +425,6 @@ function gotoNode(o,root,hash,relpath)
 
 function navTo(o,root,hash,relpath)
 {
-  var link = cachedLink();
-  if (link) {
-    var parts = link.split('#');
-    root = parts[0];
-    if (parts.length>1) hash = '#'+parts[1].replace(/[^\w\-]/g,'');
-    else hash='';
-  }
   if (hash.match(/^#l\d+$/)) {
     var anchor=$('a[name='+hash.substring(1)+']');
     glowEffect(anchor.parent(),1000); // line number
@@ -453,7 +447,8 @@ function navTo(o,root,hash,relpath)
   var answer = [0];
   while (true) {
     if (indices[indices.length-1] < arrays[arrays.length-1].length) {
-      if (arrays[arrays.length-1][indices[indices.length-1]][1] == url ||
+        //console.log(' cmp to |'+arrays[arrays.length-1][indices[indices.length-1]][1]+'|');
+        if (arrays[arrays.length-1][indices[indices.length-1]][1] == url ||
           arrays[arrays.length-1][indices[indices.length-1]][1] == url+'index.html') {
         answer = [...indices];
         // find LAST sidebar item with this url
@@ -470,16 +465,18 @@ function navTo(o,root,hash,relpath)
       arrays.pop();
       indices.pop();
       ++indices[indices.length-1];
-      if (arrays.length == 0) {
-        if (hash != '') {
-          // At least get the right page for anchors that don't have their
-          // own menu entries.
-          navTo(o, root, '', relpath);
-          return;
+        if (arrays.length == 0) {
+            if (answer.length == 0) {
+                if (hash != '') {
+                    // At least get the right page for anchors that don't have their
+                    // own menu entries.
+                    navTo(o, root, '', relpath);
+                    return;
+                }
+                indices = [0]; // fallback: show home
+            }
+            break;
         }
-        indices = [0]; // fallback: show home
-        break;
-      }
     }
     if (++iters > 50000) { // Guard against a bug where we loop.
       console.log('loop iter max reached: failed to find '+url);
