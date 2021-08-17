@@ -7,6 +7,42 @@ If you are are developing or testing the distributed system for
 automated grading, you may want to set up one or more *worker
 machines* in addition to your primary vagrant virtual machine.
 
+## Automated Virtualbox Worker Installation
+
+These steps will create a worker machine alongside the normal Submitty machine.
+1. Destroy `ubuntu-20.04` and `submitty-worker` vagrant machines (if they exist) with 
+```
+vagrant destroy
+```
+
+2. Create the Submitty VM and the worker VM with 
+   ```
+   WORKER_PAIR=1 vagrant up
+   ```
+   On Windows you will have to first set the environment variable to 1 which lasts for the session of that console, then call vagrant up.
+   ```
+   SET WORKER_PAIR=1
+   vagrant up
+   ```
+   If you want to unset the variable, you can do
+   ```
+   SET WORKER_PAIR=
+   ```
+
+   **NOTE**
+   If you encounter error messages relating to IP addresses, you may need to change the IP for the `submitty-worker` machine in the `Vagrantfile` to avoid collisions.
+
+   When not using the Worker VM, it is recommended to set `enabled: false` under the `submitty-worker` machine in `/usr/local/submitty/config/autograding_workers.json` to avoid prolonged wait times when running `INSTALL_SUBMITTY.sh`.
+
+3. To boot up both VMs after they have been halted, simply run 
+   ```
+   WORKER_PAIR=1 vagrant up
+   ```
+   using the same method as in step 2.
+
+---
+
+## Manual Virtualbox Worker Installation
 
 1. Open the Virtual Box application.
 
