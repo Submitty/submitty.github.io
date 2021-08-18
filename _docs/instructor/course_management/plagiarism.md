@@ -83,7 +83,14 @@ file names, to be compared against in the algorithm.  For example, if
 we specify the file names "*.cpp, plaintext.txt" and the directories
 "submissions" and "results", then only files with the name
 `plaintext.txt` or with the extension `.cpp` in those two directories
-will be taken.
+will be taken.  The `!` operator may also be prepended to a given pattern to
+remove files which match the pattern from the selected files.  For example,
+given the files `submission_a.cpp`, `submission_b.cpp`, and `submission_c.cpp`: the
+pattern `*, !*a.cpp` would select the files `submission_b.cpp` and `submission_c.cpp`
+while the pattern `!*a.cpp` would not select any files because there are no matching
+files to remove from the files list.  To select all files except for ones of a
+certain type, you must first select everything (`*`) and then remove files of
+the desired type (`!filename`).
 
 This field is particularly useful for when only certain files are of
 interest to an instructor to run plagiarism detection on, like when
