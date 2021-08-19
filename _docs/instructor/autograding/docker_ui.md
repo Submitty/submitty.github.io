@@ -1,15 +1,16 @@
 ---
-title: Docker UI page
+title: Docker UI
 category: Instructor > Autograding
-redirect_from:
-  - /instructor/autograding/docker_ui
 ---
-### Overview
-Depending on your assignment, you may need to install new docker
-images on the system to perform autograding. You can do this via 
-the Docker UI page available only to instructors and superusers.
 
-Inside the Docker UI page, you can see what capabilities are
+Depending on your assignment, you may need to install new docker
+images on the system to perform autograding. You can do this via the
+Docker UI page available to instructors with the role `Faculty`.  To
+check if you have access, click on "My Profile" from the left sidebar.
+If you don't see "Access Level: Faculty", as your sysadmin to give you
+this access.
+
+From the Docker UI page, you can see what capabilities are
 available to each machine. You can also see what images
 each capability contains. The list of images also allows for
 filtering based on capability. If the machine row is red within
@@ -19,16 +20,17 @@ said machine. In the case of an error, there will be an area with
 the error within the System Wide Information section.
 
 ### Adding Image
-To add an image to a capability, you must first select the 
+
+To add an image to a capability, you must first select the
 capability to add to. Next you must provide a valid Docker
 tag that is associated with your desired docker image.
 The tag must follow the format of ``organization/repository:tag``
 
-To see more on what is allowed in each part, visit 
+To see more on what is allowed in each part, visit
 [Docker Tag](https://docs.docker.com/engine/reference/commandline/tag/).
 
-Once the submit button is hit, the server will check if there is a 
-docker image associated with the provided image field and add it to 
+Once the submit button is hit, the server will check if there is a
+docker image associated with the provided image field and add it to
 the specified capability if so. Note that installation of the image
 might take a while, and the page might not reflect the changes
 immediately. Note this will automatically update the system as well.
