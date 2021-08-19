@@ -42,6 +42,14 @@ the `serve` sub-command, as shown below:
 bundle exec jekyll serve
 ```
 
+If you have an error running on the default port (4000), you can specify an
+alternate port, e.g.
+
+```bash
+bundle exec jekyll serve --port 4001
+```
+
+
 If you wish to build the site locally instead of running it, you can do:
 
 ```bash
