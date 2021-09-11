@@ -1,6 +1,6 @@
 ---
+category: Instructor > Course Settings > Rainbow Grades
 title: Automatic Setup
-category: Instructor
 redirect_from:
   - /instructor/rainbow_grades/automatic_setup
 ---

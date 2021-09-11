@@ -1,6 +1,6 @@
 ---
-title: Managing Office Hours
 category: Grader
+title: Managing Office Hours
 ---
 
 Students, please read [Getting Help through the Office Hours Queue](/student/queue) and

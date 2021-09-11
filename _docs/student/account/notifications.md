@@ -1,6 +1,6 @@
 ---
+category: Student > Courses & Profile
 title: Notifications & Email
-category: Student -- Courses & Profile
 redirect_from:
   - /student/notifications
 ---

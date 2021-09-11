@@ -1,6 +1,6 @@
 ---
-title: Course Settings
-category: Instructor
+category: Instructor > Course Settings
+title: Overview
 redirect_from:
   - /instructor/course_settings
 ---

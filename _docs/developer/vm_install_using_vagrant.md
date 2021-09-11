@@ -180,7 +180,7 @@ instructions.
    autograding for a dozen or more sample submissions for each of the
    more than 100 users in the sample courses.
 
-   If your development work *will not require sample assignment
+   On MacOS and linux, if your development work *will not require sample assignment
    submissions or autograding results*, you may prepend
    `NO_SUBMISSIONS=1` to the previous command, which will skip the
    creation of these sample submissions and their autograding and
@@ -188,6 +188,24 @@ instructions.
 
    ```
    NO_SUBMISSIONS=1 vagrant up
+   ```
+
+   On Windows, you will have to first set the environment variable `NO_SUBMISSIONS` to 1
+   which lasts for the session of that console, then call vagrant up.
+   
+   ```
+   SET NO_SUBMISSIONS=1
+   vagrant up
+   ```
+
+   If you want to unset the variable later, you can do
+   ```
+   SET NO_SUBMISSIONS=
+   ```
+
+   Similarly, you can check that the variable is set by doing
+   ```
+   SET NO_SUBMISSIONS
    ```
 
 ---

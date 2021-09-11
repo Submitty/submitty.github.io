@@ -16,7 +16,7 @@ on many of these projects, but we are looking for new team members to
 join these projects.  Submit questions or comments on specific issues
 through our [Submitty GitHub Issue
 Tracker](https://github.com/Submitty/Submitty/issues) or [Contact
-Us](http://submitty.org/contact).
+Us](/contact).
 
 
 1. **Peer Grading**   
@@ -128,7 +128,7 @@ Us](http://submitty.org/contact).
    manage and limit system resources (time, CPU, processes, memory,
    files, system calls, sockets, etc.)
 
-   [Publications](https://submitty.org/index/publications)
+   [Publications](/index/publications)
 
    We provide container images appropriate for the most common
    programming languages (Python, C/C++, Java) used in introductory
@@ -168,7 +168,7 @@ Us](http://submitty.org/contact).
    instructors, relevant for use in
    non-computer-science/non-programming courses.
    
-   [Assignment Configuration Instructions](http://submitty.org/instructor/assignment_configuration)
+   [Assignment Configuration Instructions](/instructor/assignment_configuration)
 
    We have preliminary support for automated creation of expected
    output files (from and instructor solution -- currently limited to
@@ -244,7 +244,7 @@ Us](http://submitty.org/contact).
    checks we are working on producing and analyzing an abstract syntax
    tree of the submitted code.
 
-   [Publications](https://submitty.org/index/publications)
+   [Publications](/index/publications)
 
    [Open Issues related to Static Program Analysis](https://github.com/Submitty/Submitty/issues?q=is%3Aissue+is%3Aopen+static+analysis+label%3A%22static+program+analysis%22)
 

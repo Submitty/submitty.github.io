@@ -1,5 +1,5 @@
 ---
-category: Student -- Courses & Profile
+category: Student > Courses & Profile
 title: Photo
 redirect_from:
   - /student/account/profile_photo

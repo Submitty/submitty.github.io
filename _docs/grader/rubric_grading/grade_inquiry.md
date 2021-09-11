@@ -1,5 +1,5 @@
 ---
-category: Grader -- Rubric Grading
+category: Grader > Rubric Grading
 title: Resolving a Grade Inquiry
 redirect_from:
   - grader/grade_inquiry_grader

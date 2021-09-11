@@ -1,6 +1,6 @@
 ---
+category: Instructor > Course Management
 title: Lichen Plagiarism Detection
-category: Instructor
 redirect_from:
   - /instructor/plagiarism
 ---
@@ -83,7 +83,14 @@ file names, to be compared against in the algorithm.  For example, if
 we specify the file names "*.cpp, plaintext.txt" and the directories
 "submissions" and "results", then only files with the name
 `plaintext.txt` or with the extension `.cpp` in those two directories
-will be taken.
+will be taken.  The `!` operator may also be prepended to a given pattern to
+remove files which match the pattern from the selected files.  For example,
+given the files `submission_a.cpp`, `submission_b.cpp`, and `submission_c.cpp`: the
+pattern `*, !*a.cpp` would select the files `submission_b.cpp` and `submission_c.cpp`
+while the pattern `!*a.cpp` would not select any files because there are no matching
+files to remove from the files list.  To select all files except for ones of a
+certain type, you must first select everything (`*`) and then remove files of
+the desired type (`!filename`).
 
 This field is particularly useful for when only certain files are of
 interest to an instructor to run plagiarism detection on, like when
@@ -133,7 +140,12 @@ length for optimal results, which is why for every supported language
 we have default recommended values for the sequence length.
 
 #### Prior Term Gradeables
-_TODO: future feature_
+Instructors have the ability to include submissions from other prior
+or existing gradeables from their courses to be included in the matching
+algorithm. Only students in the current course will be brought up if
+plagiarism has been detected, but the result page will indicate if any
+of the plagiarized content matched the submissions of students from the
+other gradeables.
 
 #### Users to be Ignored
 
@@ -181,7 +193,7 @@ other users than the user selected for the right panel, and matching
 code regions that the two selected users share.  The right panel will
 only highlight the regions of code that matching between the two
 selected students, but if you wish to see the other types of matching
-regionsf or the user on the right, you can click the "Swap Students"
+regions for the user on the right, you can click the "Swap Students"
 button in the upper right corner of the page.
 
 Clicking an orange-colored region of code in the left panel will turn

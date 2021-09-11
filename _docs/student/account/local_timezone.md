@@ -1,5 +1,5 @@
 ---
-category: Student -- Account
+category: Student > Account
 title: Local Timezone
 ---
 

@@ -67,6 +67,7 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
       * `CourseMaterials`,  
       * `Plagiarism`,  
       * `RainbowGrades`,  
+      * `Calendar`,  
       * `System` (includes installation, migrations, vagrant),
       * `Developer`, or
       * `API`

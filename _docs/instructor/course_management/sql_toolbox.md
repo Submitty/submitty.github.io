@@ -1,6 +1,6 @@
 ---
+category: Instructor > Course Management
 title: SQL Toolbox
-category: Instructor
 redirect_from:
   - /instructor/sql_toolbox
 ---

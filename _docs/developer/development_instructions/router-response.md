@@ -3,14 +3,17 @@ title: Routes & Response Object
 category: Developer
 ---
 
-This page is a more in-depth look at the Router and the Response PHP object, it also covers common use cases and uses more examples. You can go to this [page](https://submitty.org/developer/router) for reference 
-on the router only.
+This page is a more in-depth look at the Router and the Response PHP
+object, it also covers common use cases and uses more examples. You
+can go to this [page](/developer/router) for reference on the router
+only.
 
 ## Routes
 
-In order to call PHP functions serverside in the controller files, 
-a route is required. Routes are defined as PHP annotations which look
-like docstrings. You can think of PHP functions as endpoints that get mapped to different routes via the router.
+In order to call PHP functions serverside in the controller files, a
+route is required. Routes are defined as PHP annotations which look
+like docstrings. You can think of PHP functions as endpoints that get
+mapped to different routes via the router.
 
 ```php
 /**
@@ -19,17 +22,25 @@ like docstrings. You can think of PHP functions as endpoints that get mapped to 
 public function createNewTeam($gradeable_id){
 ```
 
-Above is an example route that points to a function in the `TeamController.php` The parts of the router within curly brackets can 
+Above is an example route that points to a function in the
+`TeamController.php` The parts of the router within curly brackets can
 change. For example, the following URL would match the above route
+
 ```
-https://submitty.cs.rpi.edu/s20/csci1234/gradeable/my_gradeable/team/new
+https://submitty.myuniversity.edu/s20/csci1234/gradeable/my_gradeable/team/new
 ```
 
 Whenever the above URL is sent in an HTTP request, the `createNewTeam` 
 function will also be called.
 
-The "s20" in the URL matches `_semester` and "csci1234" for `course`. "my_gradeable" takes the place of `gradeable_id`. The value of `gradeable_id` is also being used as the parameter in the `createNewTeam` function in this case when the function is called, the PHP variable `$gradeable_id` will have the same value as whatever was part of the URL, in this example, it will be "my_gradeable".
-Notice the domain name does not matter since it will not change, only the URL after the base-name matters.
+The "s20" in the URL matches `_semester` and "csci1234" for
+`course`. "my_gradeable" takes the place of `gradeable_id`. The value
+of `gradeable_id` is also being used as the parameter in the
+`createNewTeam` function in this case when the function is called, the
+PHP variable `$gradeable_id` will have the same value as whatever was
+part of the URL, in this example, it will be "my_gradeable".  Notice
+the domain name does not matter since it will not change, only the URL
+after the base-name matters.
 
 #### Multiple Variables
 
@@ -43,15 +54,20 @@ Functions can have multiple parameters sent to them through a URL.
 ```
 
 #### Pattern Matching Route Variables
-Functions may expect their variables to be numeric or alphabetical only,
-you can use the router to pattern match specific variables to prevent
-bad data from getting sent to your functions. Here are some [examples](https://submitty.org/developer/router#route-that-uses-post)
+
+Functions may expect their variables to be numeric or alphabetical
+only, you can use the router to pattern match specific variables to
+prevent bad data from getting sent to your functions. Here are some
+[examples](/router#route-that-uses-post)
 
 
 #### Specifying request types
 
-Certain functions should only be called through a specific type of HTTP [request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods).
-This is most often done with POST requests which carry additional data in the request body. By adding `methods={""}` after the URL in a route annotation you can make sure the router matches certain types of requests only.
+Certain functions should only be called through a specific type of
+HTTP [request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods).
+This is most often done with POST requests which carry additional data in the
+request body. By adding `methods={""}` after the URL in a route annotation you
+can make sure the router matches certain types of requests only.
 
 ```php
 /**
@@ -82,7 +98,8 @@ typically done for optional parameters and the API.
  public function showHomeworkPage($gradeable_id, $gradeable_version = null){
 ```
 
-The above example allows users to optionally include a gradeable_version in the URL while still calling the same function.
+The above example allows users to optionally include a
+gradeable_version in the URL while still calling the same function.
 
 #### Access Control
 
@@ -210,7 +227,7 @@ Here is a brief overview of the different types of responses
 
 A JSON Response will send a content type of JSON. This is useful for API responses which can easily parse JSON compared to HTML. This type of response is also useful for communicating between the front-end and back-end. For example, JavaScript can send a request by either changing pages or by sending an AJAX request. This would be a scenario where using the API internally would make sense.
 
-Submitty has a standard specification for how our JSON response should look like, you can see the spec [here](https://submitty.org/developer/json_responses). A JSON response can either be a success, failure, or error. 
+Submitty has a standard specification for how our JSON response should look like, you can see the spec [here](/developer/json_responses). A JSON response can either be a success, failure, or error.
 
 The first example uses a static function to create a JSON response object to be used in the first parameter of the MultiResponse constructor. 
 
@@ -282,13 +299,13 @@ return new RedirectResponse($this->core->buildUrl(['home']));
 The RedirectResponse object only expects a URL, you should never hardcode a URL but instead use the `buildUrl` function as shown above.
 The `buildUrl` function takes a list of strings and glues them together into a full URL.
 
-If the domain name was submitty.cs.rpi.edu and you called the function
+If the domain name was submitty.myuniversity.edu and you called the function
 ```php
 $this->core->buildUrl(['home','gradeables','foo', 'bar']))
 ```
 you would receive the URL : 
 ```
-https://submitty.cs.rpi.edu/home/gradeables/foo/bar
+https://submitty.myuniversity.edu/home/gradeables/foo/bar
 ```
 
 ### Using the MultiResponse Object

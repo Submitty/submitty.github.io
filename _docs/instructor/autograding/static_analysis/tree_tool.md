@@ -1,6 +1,6 @@
 ---
+category: Instructor > Assignment Preparation > Automated Grading
 title: Tree Tool
-category: Instructor
 redirect_from:
   - /instructor/tree_tool
 ---

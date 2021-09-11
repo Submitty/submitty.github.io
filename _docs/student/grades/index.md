@@ -1,6 +1,6 @@
 ---
-category: Student
-title: Accessing Your Grades
+category: Student > Grades
+title: Overview
 redirect_from:
   - /student/reviewing_ta_grades
 ---

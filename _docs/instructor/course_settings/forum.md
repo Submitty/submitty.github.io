@@ -1,6 +1,6 @@
 ---
+category: Instructor > Course Settings
 title: Discussion Forum
-category: Instructor
 redirect_from:
   - /instructor/forum
 ---

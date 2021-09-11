@@ -1,5 +1,5 @@
 ---
-category: Student -- Grades
+category: Student > Grades
 title: Rainbow Grades
 ---
 

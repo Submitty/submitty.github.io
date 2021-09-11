@@ -1,5 +1,5 @@
 ---
-category: Student -- Grades
+category: Student > Grades
 title: Opening a Grade Inquiry
 redirect_from:
   - /student/grade_inquiry_student
