@@ -65,7 +65,7 @@ GitHub Actions checks each pull request for broken links using the
 package.  If you wish to run `htmlproofer` locally, `cd` into the `submitty.github.io`
 repository and run the command:
 ```
-htmlproofer ./_site --assume-extension --empty-alt-ignore --url_ignore "github.com,localhost"
+htmlproofer ./_site --assume-extension --empty-alt-ignore --disable_external
 ```
 
 ## Editing Content

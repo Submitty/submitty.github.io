@@ -31,4 +31,4 @@ jobs:
       run: bundle exec jekyll build
 
     - name: Check Links
-      run: bundle exec htmlproofer ./_site --assume-extension --empty-alt-ignore --url_ignore "github.com,localhost"
+      run: bundle exec htmlproofer ./_site --assume-extension --empty-alt-ignore --disable_external
