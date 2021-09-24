@@ -130,16 +130,16 @@ submissions match.  Unique regions of match, where the number of
 students that share them is lower than the threshold, will still be
 identified and marked as plagiarized.
 
-#### Sequence Length
+#### Hash Size
 
-The sequence length defines the amount of tokens in a section, or the
+The hash size defines the amount of tokens in a section, or the
 window size, of code segments across student submissions that are to
-be compared.  Different settings for the "Language" field will (see
-above) will probably require different settings for the sequence
-length for optimal results, which is why for every supported language
-we have default recommended values for the sequence length.
+be hashed and compared.  Different settings for the "Language" field will (see
+above) will probably require different settings for the hash size for
+optimal results, which is why for every supported language
+we have default recommended values for the hash size.
 
-#### Prior Term Gradeables
+#### Other Gradeables
 Instructors have the ability to include submissions from other prior
 or existing gradeables from their courses to be included in the matching
 algorithm. Only students in the current course will be brought up if
@@ -212,5 +212,12 @@ belongs to the new username.
 
 ![](/images/instructor/lichen/others.png)
 
+Instructors are also able to toggle "Anonymous Mode" by clicking the
+button on the top right, which would hide student names and ID's and
+would replace them by random hashes to allow sharing screenshots and
+showing students accused of cheating the evidence against them with
+fewer confidentiality concerns.
+
+![](/images/instructor/lichen/anon_mode.png)
 
 See also [Developer Notes for Lichen Plagiarism Detection](/developer/plagiarism).
