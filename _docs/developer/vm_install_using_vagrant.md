@@ -388,7 +388,7 @@ instructions.
     If you continue to have errors on Mac with `vagrant up` after
     reinstalling virtualbox and vagrant, check "System Preferences" ->
     "Security & Privacy".  You may need to approve/reapprove
-    "Allow apps download from" and then reinstall.
+    "Allow apps download from".  You may also need to restart your computer.
 
     Similar instructions for other OS.
 
