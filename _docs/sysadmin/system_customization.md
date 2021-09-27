@@ -39,7 +39,6 @@ MAILTO=sysadmins@lists.myuniversity.edu
 * * * * * python3 /usr/local/submitty/sbin/send_email.py
 ```
 
-<small>[Back To Table of Contents](#table-of-contents)</small>
 
 
 ## Configure log rotation
@@ -52,7 +51,7 @@ comments in the file will tell you what each setting is for, or see
 [logrotate(8)](https://linux.die.net/man/8/logrotate) for more
 details.
 
-<small>[Back To Table of Contents](#table-of-contents)</small>
+
 
 
 ## Set password policy
@@ -98,22 +97,14 @@ if they contain: a single character class, 2 classes, a passphrase,
 __Note: If you would like to allow local machine passwords for pam
 authentication, make sure the `submitty_cgi` user is in the shadow group.__
 
-<small>[Back To Table of Contents](#table-of-contents)</small>
 
 
-## Secure SSH
 
-__IMPORTANT: This applies to Ubuntu 16.04 only.  Do not do this on Ubuntu 18.04.__
+## Configure NTP to Synchronize your Clock
 
-We encourage you to edit `/etc/ssh/sshd_config` to use only stronger encryption sets along the lines of:
-
-```
-Protocol 2
-MACs hmac-sha1,umac-64@openssh.com,hmac-ripemd160
-Ciphers aes256-ctr,aes192-ctr,aes128-ctr,arcfour256,arcfour128
-```
-
-<small>[Back To Table of Contents](#table-of-contents)</small>
+Install and configure the `ntp daemon`.  Customize your configuration
+to point at local NTP servers, e.g., available at your university.
+Use `ntpq -p` to check when the NTP servers were last checked.
 
 
 ## Block some brute-force ssh connections by typing the following at a command prompt:
@@ -138,7 +129,6 @@ if you normally expect a lot of ssh connections from a given host.
 You may also opt to whitelist addresses or networks that are
 allowed to connect more frequently.
 
-<small>[Back To Table of Contents](#table-of-contents)</small>
 
 
 ## Disable PHP Functions
@@ -151,7 +141,7 @@ disable_functions = popen,pclose,proc_open,chmod,php_real_logo_guid,php_egg_logo
 
 However, this should be only applied to the `php.ini` running the web server and not applied to the `cgi/php.ini` which does require some of these functions to function properly.
 
-<small>[Back To Table of Contents](#table-of-contents)</small>
+
 
 ## Increasing the max number of files that can be uploaded at once
 
@@ -225,7 +215,7 @@ memory_limit
 Just be aware that modifying this number can have repercussions when multiple
 students are using the system at once.
 
-<small>[Back To Table of Contents](#table-of-contents)</small>
+
 
 
 
@@ -274,7 +264,7 @@ This message is shown in a yellow bar displayed underneath the header.
 To add or remove this message, edit `/usr/local/submitty/config/submitty.json` and add/remove the
 key/value for `system_message`. If the key exists, but is empty, no message will be shown.
 
-<small>[Back To Table of Contents](#table-of-contents)</small>
+
 
 
 ## Adding Additional Links To The Footer
@@ -304,6 +294,6 @@ Additional links will appear to the right of the copyright notice and credit lin
 ```
 5. If any links do not display, they probably have failed validation.  Validation can be particular, so please carefully proofread `footer_links.json` with instructions 1—4.
 
-<small>[Back To Table of Contents](#table-of-contents)</small>
+
 
 
