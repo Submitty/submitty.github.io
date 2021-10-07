@@ -161,6 +161,10 @@ _Note: These instructions should be run under root/sudo._
    If everything looks ok, restart apache with:  `service apache2 restart'
 
 
+8. We suggest reviewing [Additional System Customizations](/sysadmin/system_customization)
+    that might be appropriate for your installation.
+
+
 ### Troubleshooting
 - **I cannot connect to PAM!**
   1. Submitty authenticates PAM through the python module
