@@ -1,5 +1,5 @@
 ---
-title: System Debugging
+title: Websockets / System & Debugging
 category: System Administrator
 ---
 
