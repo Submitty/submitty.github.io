@@ -32,7 +32,7 @@ _Note: These instructions should be run under root/sudo._
    ```
    bash -c "$(curl -s https://raw.githubusercontent.com/Submitty/Submitty/master/.setup/bootstrap.sh)"
    ```
-   
+
    or clone the git repository and run the installer (requires git and lsb-release to be installed):
 
    ```
@@ -54,11 +54,11 @@ _Note: These instructions should be run under root/sudo._
    4. **Main Site URL**.
    5. **Version Control System (VCS) URL**. This is used mostly to allow students to submit their homework through private repositories hosted on the submitty server. See [Facilitating Student Submissions via GIT](/instructor/managing_git).
    6. **Institution Name**.
-   7. **Authentication Method (PAM or Database)**. PAM authentication requires the sysadmin to make accounts ahead of time for students and give them a password. Database authentication lets students create their own passwords. 
+   7. **Authentication Method**. PAM and LDAP authentication requires the sysadmin to make accounts ahead of time for students and give them a password. Database authentication lets students create their own passwords.
 
 
-   
-3. Run installations specific to your university.  
+
+3. Run installations specific to your university.
    For example:  [RPI Computer Science specific installations](https://github.com/Submitty/Submitty/blob/master/.setup/distro_setup/ubuntu/rpi.sh)
 
    ```
