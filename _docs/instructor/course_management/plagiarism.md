@@ -213,8 +213,8 @@ belongs to the new username.
 ![](/images/instructor/lichen/others.png)
 
 Instructors are also able to toggle "Anonymous Mode" by clicking the
-button on the top right, which would hide student names and ID's and
-would replace them by random hashes to allow sharing screenshots and
+button on the top right, which hides student names and ID's and
+replaces them with random hashes to allow sharing screenshots and
 showing students accused of cheating the evidence against them with
 fewer confidentiality concerns.
 
