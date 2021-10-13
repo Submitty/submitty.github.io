@@ -165,7 +165,11 @@ systemctl reload php7.4-fpm
 ## Allowing Large Student File Upload Submissions
 
 By default, Apache / Ubuntu limits the size of file upload by POST to
-10MB.  To increase this edit:
+2MB.  A from-scratch Submitty installation will be configured with a
+10mb limit (prior to v21.10.00) or a 200mb limit (v21.10.00 or later).
+To check the current limit configured on your system, or modify the
+value, view/edit this file:
+
 
 ```
 /etc/php/7.4/fpm/php.ini
