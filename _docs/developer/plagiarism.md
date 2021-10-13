@@ -27,12 +27,12 @@ is found in the directory
     ],
     "language": "plaintext",
     "threshold": 20,
-    "sequence_length": 5,
-    "prior_term_gradeables": [
+    "hash_size": 5,
+    "other_gradeables": [
         {
-           "prior_semester": "f16",
-           "prior_course": "sample",
-           "prior_gradeable": "example_gradeable"
+           "other_semester": "f16",
+           "other_course": "sample",
+           "other_gradeable": "example_gradeable"
         }
     ],
     "ignore_submissions": [
@@ -82,14 +82,14 @@ The expected values for the configuration parameters are:
 
 * **"threshold"** - an integer, must be greater than or equal to 1
 
-* **"sequence_length"** - an integer, must be greater than or equal to 2
+* **"hash_size"** - an integer, must be greater than or equal to 2
 
-* **"prior_term_gradeables"** - an array of objects that
+* **"other_gradeables"** - an array of objects that
     represent gradeables whose submissions are to be included in
     the matching algorithm, where each object contains:
-    * `prior_semester` - the semester ID of the other gradeable
-    * `prior_course` - the course ID of the other gradeable
-    * `prior_gradeable` - the gradeable ID of the other gradeable
+    * `other_semester` - the semester ID of the other gradeable
+    * `other_course` - the course ID of the other gradeable
+    * `other_gradeable` - the gradeable ID of the other gradeable
 
   If you wish to include no other gradeables, set to an empty array: `[]`
 
@@ -125,7 +125,7 @@ semesters and the courses with their data, e.g.,
 `/var/local/submitty/courses`.  This path is used to get
 the submissions of the course users to be used in the plagiarism
 detection algorithm, and, if configured so, to get submissions from
-courses in prior terms.
+other courses in prior terms.
 
 
 If the sample configuration file from the previous section is located in
