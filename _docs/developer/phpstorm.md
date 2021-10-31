@@ -94,7 +94,7 @@ Under PhpStorm settings, open `Languages & Frameworks` > `PHP` > `Test Framework
 - `PHPUnit Library`: `Use Composer autoloader`
 - `Path to script`: `/usr/local/submitty/GIT_CHECKOUT/Submitty/site/vendor/autoloader.php`
 - Hit the arrows button to confirm that it can find PHPUnit
-- `Default Configuration File`: `/usr/local/submitty/GIT_CHECKOUT/Submitty/site/tests/phpunit.xml`
+- `Default Configuration File`: `/usr/local/submitty/GIT_CHECKOUT/Submitty/site/phpunit.xml`
 
 Press `OK` to save the test configuration.
 
