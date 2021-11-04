@@ -204,7 +204,8 @@ var NAVTREE =
                 [ "View", "/developer/developing_the_php_site/view", null ],
                 [ "Controller", "/developer/developing_the_php_site/controller", null ],
                 [ "Feature Flags", "/developer/developing_the_php_site/feature_flags", null ],
-                [ "WebSocket", "/developer/developing_the_php_site/websocket", null ]
+                [ "WebSocket", "/developer/developing_the_php_site/websocket", null ],
+                [ "ES6 Modules & TypeScript", "/developer/developing_the_php_site/modules", null]
             ] ],
             [ "Updating Dependencies", "/developer/updating_dependencies", null ],
             [ "Configuring Tie In Programs", "/developer/configuring_tie_in_programs", null ],
