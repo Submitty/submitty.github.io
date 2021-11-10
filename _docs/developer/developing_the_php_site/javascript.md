@@ -1,6 +1,10 @@
 ---
-title: ES6 Modules and Typescript
+title: Frontend JavaScript
 ---
+
+On the frontend, Submitty uses JavaScript to allow for interactivity with the site. Historically, the JS code was written
+and imported globally and that lives in the `site/public/js` folder. However, embracing modern standards, we are increasingly
+looking to write all new frontend code as ES6 modules.
 
 [ES6 Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) allow JavaScript code to be split up
 into "modules" that can allow other modules to import functions and variables. Modules in Submitty are loaded the 
