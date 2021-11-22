@@ -46,17 +46,17 @@ If you are running on WSL and are seeing errors, remove "`php`" from the followi
 
 ```bash
 # from root level of Submitty repository
-php site/vendor/bin/phpcs --standard=site/tests/ruleset.xml
+php site/vendor/bin/phpcs
 
 # or if in the site/ directory of the Submitty
-php vendor/bin/phpcs --standard=tests/ruleset.xml
+php vendor/bin/phpcs
 ```
 
 Similarly, you can pass a specific file or directory to `phpcs`, e.g:
 
 ```bash
 # from root level of Submitty repository...  run phpcs against all files in this subdirectory
-php site/vendor/bin/phpcs --standard=site/tests/ruleset.xml site/app/controllers/student/
+php site/vendor/bin/phpcs site/app/controllers/student/
 ```
 
 See also: [PHP Style Guide](/developer/coding_style_guide/php)
