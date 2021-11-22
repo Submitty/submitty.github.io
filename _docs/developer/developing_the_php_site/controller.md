@@ -75,3 +75,26 @@ WebResponse.
 See more information in the [View](view) documentation.
 
 
+## Disabling a Controller
+
+There are certain circumstances where a controller should be disabled
+completely depending on if a feature is enabled or not within the Config.
+To do this, you can utilize the
+[`Enabled`](https://github.com/Submitty/Submitty/blob/master/site/app/libraries/routers/Enabled.php)
+annotation in the docstring for the controller class, like so:
+
+```php
+use app\libraries\routers\Enabled;
+
+/**
+ * @Enabled("forum")
+ */
+class ForumController {}
+```
+
+With this annotation in-place, the router will take the string value passed to
+the annotation, run [`ucfirst`](https://www.php.net/manual/en/function.ucfirst.php) for it,
+and then use that to call the `is{$Feature}Enabled()` function in the Config modal. For the
+above example, it would be calling `isForumEnabled()` method. If that method returns false, we
+show an access denied error screen to the user, directing them to contact their instructor
+if they think it is an error, and then provide a link back to the course home page.
