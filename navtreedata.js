@@ -137,8 +137,8 @@ var NAVTREE =
             [ "Installation", "/sysadmin/installation", null ],
             [ "Update Submitty", "/sysadmin/update", null ],
             [ "Installation Version Notes", "/sysadmin/version_notes", [
-                [ "v21.06.04", "/sysadmin/version_notes/v21.06.04", null ],
                 [ "v21.11.01", "/sysadmin/version_notes/v21.11.01", null ],
+                [ "v21.06.04", "/sysadmin/version_notes/v21.06.04", null ],
                 [ "v21.01.01", "/sysadmin/version_notes/v21.01.01", null ],
                 [ "v20.09.00", "/sysadmin/version_notes/v20.09.00", null ],
                 [ "v20.08.00", "/sysadmin/version_notes/v20.08.00", null ],
