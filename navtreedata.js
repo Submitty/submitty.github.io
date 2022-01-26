@@ -173,6 +173,7 @@ var NAVTREE =
                 [ "Miscellaneous", "/developer/development_instructions/miscellaneous", null ]
             ]],
             [ "PhpStorm Setup Instructions", "/developer/phpstorm", null ],
+            [ "Xdebug Setup Instructions", "/developer/xdebug", null ],
             [ "Database Design", "/developer/database_design", null ],
             [ "PGAdmin Setup Instructions", "/developer/pgadmin", null ],
             [ "Migrations", "/developer/migrations", null ],
