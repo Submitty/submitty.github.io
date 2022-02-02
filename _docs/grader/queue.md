@@ -33,7 +33,7 @@ TAs/instructors. The queue helps manage the students waiting to be
 helped as well as the students currently being helped.  We store all
 relevant timestamps for each entry in the queue.  Usage statistics can
 be tracked, analyzed, and instructional resources balanced
-appropriately.  *NOTE: Office Hours Queue Statistics coming soon!*
+appropriately.
 
 
 ### Creating a New Office Hours Queue
@@ -69,9 +69,9 @@ Code".
 
 When the designated office hours or tutoring session is complete, the
 TA/instructor should close the queue to prevent additional students
-from joining the queue.  Click "Queue Settings" and then uncheck the 
-desired queue.  Closing the queue does not delete it; rather, the 
-uniquely named queue is available to be re-opened and re-used tomorrow 
+from joining the queue.  Click "Queue Settings" and then uncheck the
+desired queue.  Closing the queue does not delete it; rather, the
+uniquely named queue is available to be re-opened and re-used tomorrow
 or next week!
 
 All students who entered the queue before it was closed will remain in
