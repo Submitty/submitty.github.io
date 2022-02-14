@@ -86,19 +86,19 @@ late, or if the feed is not available for your course.
 ### Add students by bulk file (.csv) upload
 
 1.  Instructors can add students in bulk to their course from the
-    "Students" tab at the top black bar of their course page.
+    "Manage Students" tab from the navigation bar of their course page.
 
-2.  Prepare a comma separated values file with 6 columns:
+2.  Prepare a comma separated values file with 5-7 columns and no header row:
 
-    '''
-    username, first name, last name, email, registration section, preferred first name
-    '''
+    ```
+    username, first name, last name, email, registration section, preferred first name (optional), preferred last name (optional)
+    ```
 
-    Preferred first name is optional.
-    Registration section can be null.
-    Do not use a header row.
+    * Registration section can be custom, for example NULL or STAFF.
 
-    _TODO: IF USING DATABASE AUTHENTICATION, HOW DO WE SPECIFY THE PASSWORD?_
+    You can also supply just the user_id and rest of the fields will be auto-fill with the existing user data.
+
+    <span style="color:grey">_TODO: IF USING DATABASE AUTHENTICATION, HOW DO WE SPECIFY THE PASSWORD?_</span>
 
 3.  Click on the "Upload Classlist" button in the upper right.  Select
     your prepared .csv file and press "Submit"
@@ -106,7 +106,25 @@ late, or if the feed is not available for your course.
 
 4.  If your Submitty installation uses PAM authentication...
 
-    _TODO: FILL IN INFORMATION ON HOW TO CREATE THE ACCOUNT_
+    <span style="color:grey">_TODO: FILL IN INFORMATION ON HOW TO CREATE THE ACCOUNT_</span>
 
+
+### Add graders by bulk file (.csv) upload
+
+1.  Instructors can add graders in bulk to their course from the
+    "Manage Graders" tab from the navigation bar of their course page.
+
+2.  Prepare a comma separated values file with 5-8 columns and no header row:
+
+    ```
+    username, first name, last name, email, grader group, preferred first name (optional), preferred last name (optional), registration section (optional)
+    ```
+
+    * Registration section can be custom, for example NULL or STAFF.
+    * Grader group can be a number 1-4. For more information: see [User Group or Role](https://submitty.org/sysadmin/user_access_level#user-group-or-role) documentation
+
+    You can also supply just the username column, and rest of the fields will be auto-filled with the existing user data and a default value for grader-group as 'Limited Access Grader' (3) will be used.
+
+3.  Click on the "Upload Graderlist" button in the upper right. Select your prepared .csv file and press "Submit"
 
 
