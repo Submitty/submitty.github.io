@@ -3,7 +3,7 @@ title: Xdebug Setup Instructions
 category: Developer
 ---
 
-Xdebug is a PHP extension automatically enabled in the Vagrant VM that allows for step-by-step code debugging, code profiling, and code tracing. For more information about the features of Xdebug, see [2.xdebug.org](https://2.xdebug.org/).
+Xdebug is a PHP extension automatically enabled in the Vagrant VM that allows for step-by-step code debugging, code profiling, and code tracing. For more information about the features of Xdebug, see [xdebug.org](https://xdebug.org/).
 
 For the default configuration, it is recommended to use an extension to enable one of the Xdebug modes; see [https://www.jetbrains.com/help/phpstorm/browser-debugging-extensions.html](https://www.jetbrains.com/help/phpstorm/browser-debugging-extensions.html) for a list of extensions that can be used with Xdebug. When using one of the `Xdebug Helper` extensions, the specified mode should be selected while on a page (Debug/Profile/Trace) from your local Submitty installation to use it.
 
