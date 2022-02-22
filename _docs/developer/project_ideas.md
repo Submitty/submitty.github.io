@@ -3,20 +3,18 @@ title: Project Ideas
 category: Developer
 ---
 
-Submitty is excited and proud to be selected for participation
-in [Google Summer of Code (GSoC)](https://summerofcode.withgoogle.com/) in Summer 2020.
-Please read the "[How to work with us](https://summerofcode.withgoogle.com/organizations/5545536448364544/)" section at the bottom of our GSoC page.
-[GSoC Project Reports](google_summer_of_code) written by the fantastic students
-we supported and mentored through GSOC in 2018 and 2019.
+Submitty was selected for participation with 
+[Google Summer of Code (GSoC)](https://summerofcode.withgoogle.com/) in Summer 2018, 2019, and 2020.
+See [GSoC Project Reports](google_summer_of_code).
+We have applied and hope to be selected for Google Summer of Code (GSoC) 2022!
 
 
 The project ideas listed below target a variety of different topics and
 require different levels of prior experience.  Work has already begun
 on many of these projects, but we are looking for new team members to
 join these projects.  Submit questions or comments on specific issues
-through our [Submitty GitHub Issue
-Tracker](https://github.com/Submitty/Submitty/issues) or [Contact
-Us](/contact).
+through our [Submitty GitHub Issue Tracker](https://github.com/Submitty/Submitty/issues)
+or [Contact Us](/contact).
 
 
 1. **Peer Grading**   
@@ -81,7 +79,7 @@ Us](/contact).
    _GSOC Proposal Tag:_ `web accessibility`
 
 
-3. **Mobile-Friendly Website and Progressive Web App (PWA)**
+3. **Progressive Web App (PWA)**
 
    Submitty's primary platform target are web browsers on standard
    laptop and desktop computers, where students will do their
