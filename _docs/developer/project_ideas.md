@@ -9,43 +9,44 @@ See [GSoC Project Reports](google_summer_of_code).
 We have applied and hope to be selected for Google Summer of Code (GSoC) 2022!
 
 
-The project ideas listed below target a variety of different topics and
-require different levels of prior experience.  Work has already begun
-on many of these projects, but we are looking for new team members to
-join these projects.  Submit questions or comments on specific issues
-through our [Submitty GitHub Issue Tracker](https://github.com/Submitty/Submitty/issues)
-or [Contact Us](/contact).
+
+The project ideas listed below target a variety of different topics
+and require different levels of prior experience.  The scope of these
+projects varies, and may require different overall time commitments
+(varying from 1 month to 3 months).  Submit questions or comments on
+specific issues through our
+[Submitty GitHub Issue Tracker](https://github.com/Submitty/Submitty/issues)
 
 
-1. **Peer Grading**   
 
-   Currently we facilitate detailed rubric manual grading of student
-   assignments by the instructor or TA.  We have extended this design
-   to include peer assessment, which can aid timeliness, quantity, and
-   quality of feedback for students in large courses, especially those
-   with limited instructional resources.  Furthermore, research has
-   shown that peer grading and feedback also provides important
-   benefits to the peer graders!
 
-   When peer grading is enabled students will be assigned to review
-   and critique a small number of their classmates' work.  The design
-   and core implementation of peer grading is in progress, but
-   incomplete.
+1. **Streamline instructor configuration of automated grading**
 
-   [Open Issues related to Peer Grading](https://github.com/Submitty/Submitty/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+peer)
+   Currently, instructors must write a configuration as a config.json
+   (and any necessary additional files) and upload or store these
+   files on the local file system.  We would like to provide an
+   alternate web GUI interface for creating basic on moderately
+   complex autograding configurations.  The goal would be to
+   streamline the assignment configuration process for non-technical
+   instructors, relevant for use in
+   non-computer-science/non-programming courses.
+   
+   [Assignment Configuration Instructions](/instructor/assignment_configuration)
 
-   Advanced features related to peer grading:
+   We have preliminary support for automated creation of expected
+   output files (from and instructor solution -- currently limited to
+   Python) and randomized test case input.  This project will include
+   documentation, examples, and extending output generation to
+   instructor solutions in compiled languages.
 
-   * Evaluating the quality of peer grading ("grading the grader") by
-     comparing peer grades.
-
-   * Security (ensuring students only see the submission material of
-     peers they have been assigned to grade).
-
-   * Privacy/Anonymity (providing an option to redact student names
-     from material seen by peers).
+   [Open Issues related to Autograding](https://github.com/Submitty/Submitty/labels/Autograding)
 
    _Experience Required: Some programming experience, willingness to
+<<<<<<< HEAD
+   learn web and database development.  Having served as a teaching
+   assistant or instructor with experience in programming assignment
+   design will be beneficial._
+=======
    learn web and database development._
 
    _GSOC Proposal Tag:_ `peer grading`
@@ -110,10 +111,11 @@ or [Contact Us](/contact).
    will be beneficial._
 
    _GSOC Proposal Tag:_ `mobile-friendly website`
+>>>>>>> d91dfe8eccadc96c9860026a01ef4a4a38d5d677
 
 
 
-4. **Containers for Automated Grading**
+2. **Containers for Automated Grading**
 
    Automated testing of student submitted software carries system and
    security risks from malicious code but also simply buggy or inefficient
@@ -126,16 +128,14 @@ or [Contact Us](/contact).
    manage and limit system resources (time, CPU, processes, memory,
    files, system calls, sockets, etc.)
 
-   [Publications](/index/publications)
-
    We provide container images appropriate for the most common
    programming languages (Python, C/C++, Java) used in introductory
    programming courses.
 
    [https://hub.docker.com/u/submitty](https://hub.docker.com/u/submitty)
 
-   The next step is to facilitate the creation and server installation
-   of instructor-customized container images (with specific languages,
+   The next step is to facilitate the creation of instructor-customized
+   container images (with specific languages,
    packages, databases, etc.).  Care must be taken to ensure small
    container size and efficient performance.
 
@@ -151,61 +151,72 @@ or [Contact Us](/contact).
    systems and/or networking programming.  Experience with virtual
    machines and Docker containerization is beneficial._
 
-   _GSOC Proposal Tag:_ `docker/containers` and `autograding`
-
-
-
-5. **Streamline instructor configuration of automated grading**
-
-   Currently, instructors must write a configuration as a config.json
-   (and any necessary additional files) and upload or store these
-   files on the local file system.  We would like to provide an
-   alternate web GUI interface for creating basic on moderately
-   complex autograding configurations.  The goal would be to
-   streamline the assignment configuration process for non-technical
-   instructors, relevant for use in
-   non-computer-science/non-programming courses.
-   
-   [Assignment Configuration Instructions](/instructor/assignment_configuration)
-
-   We have preliminary support for automated creation of expected
-   output files (from and instructor solution -- currently limited to
-   Python) and randomized test case input.  This project will include
-   documentation, examples, and extending output generation to
-   instructor solutions in compiled languages.
-
-   _Experience Required: Some programming experience, willingness to
-   learn web and database development.  Having served as a teaching
-   assistant or instructor with experience in programming assignment
-   design will be beneficial._
-
-   _GSOC Proposal Tag:_ `autograding`
 
  
+3. **Static Program Analysis**
 
-6. **Web Sockets for Live Page Updates**
+   We currently using simple lexical (token-based) static analysis
+   in our intro programming courses to verify students are using (or
+   not using) specific language features.  In order to expand these
+   checks we are working on producing and analyzing an abstract syntax
+   tree of the submitted code.
 
-   Several modules of the Submitty website would benefit from
-   automatic updates with new data from the server.  For example, we
-   have begun implementation to dynamically load new threads and posts
-   in the discussion forum (without requiring the user to manually
-   refresh the page).  Other pages that will benefit from live updates
-   include:
-   
-   * Office Hours Queue
+   [Open Issues related to Static Program Analysis](https://github.com/Submitty/Submitty/issues?q=is%3Aissue+is%3Aopen+static+analysis+label%3A%22static+program+analysis%22)
 
-   * Checkpoint Grading
+   [Open Issues related to Lichen Plagiarism Detection](https://github.com/Submitty/Submitty/issues?q=is%3Aopen+is%3Aissue+label%3A%22Lichen+Plagiarism+Detection%22)
 
-   * TA Grading
-
-   _Experience Required: Prior experience with web development and
-   asynchronous programming (php, javascript, and APIs)._
-
-   _GSOC Proposal Tag:_ `web sockets`
+   _Experience Required: Upper level coursework in programming
+   languages, compilers, and/or program analysis._
 
 
+4. **Progressive Web App (PWA)**
 
-7. **Website Security and Penetration Testing**
+   Submitty's initial platform target was web browsers on standard
+   laptop and desktop computers, where students will do their
+   software development and instructors/TAs will view or download and grade
+   complex assignments.
+
+   As Submitty expanded to include elements from learning
+   management platforms such as a discussion forum, office hours queue,
+   lecture polling, semester grades data, simple grading spreadsheets for attendance, and presentation of
+   student photos and information, our users requested additional
+   mobile-friendly access and features.
+   Most of these Submitty pages successfully target a variety of display
+   resolutions.
+
+   We would also like to explore the implementation and maintenance of
+   a progressive web app, which would leverage this website
+   re-targeting and allow push notifications.
+
+   [Open Issues related to API](https://github.com/Submitty/Submitty/labels/API)
+
+   _Experience Required: Critical eye for visual design, some
+   programming experience with html, css, javascript, reactive designs
+   (e.g., bootstrap), and willingness to learn additional web, database, and
+   mobile computing development technologies.  Personal access to
+   variety of different operating systems, and phone/tablet hardware
+   will be beneficial._
+
+
+
+5. **Continuous Integration Testing**
+
+    Each commit and pull request to github launches continuous
+    integration testing of a portion of the Submitty code base.  We
+    would like to expand the code coverage of our unit and integration
+    tests.  Furthermore, some of our more complex end-to-end test case
+    are not currently run automatically with each GitHub pull request,
+    because the system setup is too time consuming and lengthy or
+    unpredictable running times affect test stability.  We would like to
+    optimize our use of GitHub Actions and caching so we can run
+    all of these test cases.
+
+   [Open Issues related to Continuous Integration](https://github.com/Submitty/Submitty/issues?q=is%3Aopen+is%3Aissue+label%3A%22Testing+%2F+Continuous+Integration+%28CI%29%22)
+
+    _Experience Required: Advanced programming experience, experience
+    with the relevant programming languages, tuning system performance, etc._
+
+6. **Website Security and Penetration Testing**
 
    Submitty is responsible for securing confidential information.  It
    is important that we regularly assess the security of this data.
@@ -215,10 +226,8 @@ or [Contact Us](/contact).
    _Experience Required: Computer security coursework and/or practical
    experience searching for system vulnerabilities._
 
-   _GSOC Proposal Tag:_ `security/testing`  
 
-
-8. **Instructional Materials and Documentation**
+7. **Instructional Materials and Documentation**
 
    We would like to reduce the learning curve for new instructors and
    provide more starter material for instructors teaching introductory
@@ -230,39 +239,7 @@ or [Contact Us](/contact).
    assistant or instructor with experience in programming assignment
    design will be beneficial._
 
-   _GSOC Proposal Tags:_ `documentation`
 
-
-
-9. **Static Program Analysis**
-
-   We currently using simple lexical (token-based) static analysis
-   in our intro programming courses to verify students are using (or
-   not using) specific language features.  In order to expand these
-   checks we are working on producing and analyzing an abstract syntax
-   tree of the submitted code.
-
-   [Publications](/index/publications)
-
-   [Open Issues related to Static Program Analysis](https://github.com/Submitty/Submitty/issues?q=is%3Aissue+is%3Aopen+static+analysis+label%3A%22static+program+analysis%22)
-
-   _Experience Required: Upper level coursework in programming
-   languages, compilers, and/or program analysis._
-
-   _GSOC Proposal Tag:_ `autograding`
-
-
-10. **Continuous Integration Testing**
-
-    Each commit and pull request to github launches continuous
-    integration testing of a portion of the Submitty code base.  We
-    would like to expand the code coverage of our unit and integration
-    tests.
-
-    _Experience Required: Advanced programming experience, experience
-    with the relevant programming languages, tuning system performance, etc._
-
-    _GSOC Proposal Tag:_ `security/testing`  
 
 
 
