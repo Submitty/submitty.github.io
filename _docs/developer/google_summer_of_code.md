@@ -8,7 +8,7 @@ Submitty is proud to have been selected for participation in
 [Google Summer of Code](https://summerofcode.withgoogle.com/)
 and to work with talented students from several different countries.
 We have applied and hope to be selected for Google Summer of Code (GSoC) 2022!
-Please read the student's project
+Please read the student project
 reports from previous summers linked below:
 
 
