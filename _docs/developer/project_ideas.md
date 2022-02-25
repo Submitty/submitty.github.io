@@ -100,9 +100,9 @@ Tracker](https://github.com/Submitty/Submitty/issues)
 
    _Possible Mentors_: Barb Cutler, Jasmine Plum, Matthew Peveler
 
-   _GSoC Project Size_: 175 hours
+   _GSoC Project Size_: 175 or 350 hours
 
-   _Difficulty Level_: medium
+   _Difficulty Level_: medium or hard
    
  
 3. **Static Program Analysis for Autograding**
@@ -252,7 +252,7 @@ Tracker](https://github.com/Submitty/Submitty/issues)
 
    _Possible Mentors_: Barb Cutler, Jasmine Plum
 
-   _GSoC Project Size_: 175 or 350 hours
+   _GSoC Project Size_: 175 hours
 
    _Difficulty Level_: easy or medium
 
