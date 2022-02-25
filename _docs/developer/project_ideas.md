@@ -24,28 +24,30 @@ Tracker](https://github.com/Submitty/Submitty/issues)
 
 1. **Streamline instructor configuration of automated grading**
 
-   Currently, instructors must write a configuration as a config.json
+   Currently, instructors must write a configuration as a `config.json`
    (and any necessary additional files) and upload or store these
    files on the local file system.  We would like to provide an
-   alternate web GUI interface for creating basic on moderately
-   complex autograding configurations.  The goal would be to
-   streamline the assignment configuration process for non-technical
-   instructors, relevant for use in
-   non-computer-science/non-programming courses.
-   
+   alternate web GUI interface for creating basic or moderately
+   complex autograding configurations.
+
    [Assignment Configuration Instructions](/instructor/autograding/specification)
 
    We have preliminary support for automated creation of expected
    output files (from and instructor solution -- currently limited to
-   Python) and randomized test case input.  This project will include
-   documentation, examples, and extending output generation to
+   Python) and randomized test case input.  This project will involve multiple modules of
+   Submitty including
+   web UI development, integration, documentation, additional tutorial examples, and
+   extending output generation to
    instructor solutions in compiled languages.
 
    [Open Issues related to Autograding](https://github.com/Submitty/Submitty/labels/Autograding)
 
-   _Expected Outcomes_: 
-
-   _Experience Required_: Some programming experience, willingness to
+   _Expected Outcomes_: The goal would be to
+   streamline the assignment configuration process for non-technical
+   instructors, relevant for use in
+   non-computer-science/non-programming courses.
+   
+   _Skills & Experience Required_: Some programming experience, willingness to
    learn web and database development.  Having served as a teaching
    assistant or instructor with experience in programming assignment
    design will be beneficial.
@@ -88,9 +90,13 @@ Tracker](https://github.com/Submitty/Submitty/issues)
 
    [Open Issues related to Container Autograding](https://github.com/Submitty/Submitty/labels/Docker%2FDockerImages)
 
-   _Skills & Experience Required: Upper level coursework experience in operating
+   _Expected Outcomes_: Increased usage of containerized autograding in all levels
+   of courses.  Reduced size and improved performance of containerized autograding
+   for our autograding tutorial examples and selected real-world use cases of autograding.
+
+   _Skills & Experience Required_: Upper level coursework experience in operating
    systems and/or networking programming.  Experience with virtual
-   machines and Docker containerization is beneficial._
+   machines and Docker containerization is beneficial.
 
    _Possible Mentors_: Barb Cutler, Jasmine Plum, Matthew Peveler
 
@@ -99,20 +105,33 @@ Tracker](https://github.com/Submitty/Submitty/issues)
    _Difficulty Level_: medium
    
  
-3. **Static Program Analysis**
+3. **Static Program Analysis for Autograding**
 
    We currently using simple lexical (token-based) static analysis
    in our intro programming courses to verify students are using (or
    not using) specific language features.  In order to expand these
    checks we are working on producing and analyzing an abstract syntax
-   tree of the submitted code.
+   tree of the submitted code.  This project may by synergistic
+   and integrate with the use of
+   programming language tokenization and parsing used for our Lichen
+   Plagiarism Detection module.
 
    [Open Issues related to Static Program Analysis](https://github.com/Submitty/Submitty/issues?q=is%3Aissue+is%3Aopen+static+analysis+label%3A%22static+program+analysis%22)
 
+
+   [Submitty Autograding Tutorial Examples](https://github.com/Submitty/Tutorial)
+
+   [Additional Autograding Examples](https://github.com/Submitty/Submitty/tree/master/more_autograding_examples)
+
    [Open Issues related to Lichen Plagiarism Detection](https://github.com/Submitty/Submitty/issues?q=is%3Aopen+is%3Aissue+label%3A%22Lichen+Plagiarism+Detection%22)
 
-   _Skills & Experience Required: Upper level coursework in programming
-   languages, compilers, and/or program analysis._
+
+   _Expected Outcomes_: Implementation and integration of new static analysis tools
+   into the Submitty autograding pipeline.  Creation of additional autograding
+   tutorial examples and corresponding continuous integration regression testing.
+
+   _Skills & Experience Required_: Upper level coursework in programming
+   languages, compilers, and/or program analysis.
 
    _Possible Mentors_: Barb Cutler, Matthew Peveler, and other active developers
 
@@ -121,7 +140,7 @@ Tracker](https://github.com/Submitty/Submitty/issues)
    _Difficulty Level_: medium
 
 
-4. **Progressive Web App (PWA)**
+4. **Submitty Progressive Web App (PWA)**
 
    Submitty's initial platform target was web browsers on standard
    laptop and desktop computers, where students will do their
@@ -142,12 +161,17 @@ Tracker](https://github.com/Submitty/Submitty/issues)
 
    [Open Issues related to API](https://github.com/Submitty/Submitty/labels/API)
 
-   _Skills & Experience Required: Critical eye for visual design, some
+   _Expected Outcomes_: Investigation, selection, and integration of an appropriate
+   PWA platform.  Creation of necessary system administrator documentation
+   for installation.  Updating and improving the display of existing Submitty pages
+   to better target typical phone screen resolutions, as necessary.
+   
+   _Skills & Experience Required_: Critical eye for visual design, some
    programming experience with html, css, javascript, reactive designs
    (e.g., bootstrap), and willingness to learn additional web, database, and
    mobile computing development technologies.  Personal access to
    variety of different operating systems, and phone/tablet hardware
-   will be beneficial._
+   will be beneficial.
 
    _Possible Mentors_: Shail Patel, Matthew Peveler, and other active developers
 
@@ -169,8 +193,12 @@ Tracker](https://github.com/Submitty/Submitty/issues)
 
    [Open Issues related to Continuous Integration](https://github.com/Submitty/Submitty/issues?q=is%3Aopen+is%3Aissue+label%3A%22Testing+%2F+Continuous+Integration+%28CI%29%22)
 
-    _Skills & Experience Required: Advanced programming experience, experience
-    with the relevant programming languages, tuning system performance, etc._
+    _Expected Outcomes_: Increased code coverage and stability of the Submitty CI test suite,
+    increased automation of CI testing, increased performance (decreased running time)
+    for CI testing through GitHub Actions.
+
+    _Skills & Experience Required_: Advanced programming experience, experience
+    with the relevant programming languages, tuning system performance, etc.
 
    _Possible Mentors_: Matthew Peveler, Shail Patel, and other active developers
 
@@ -186,8 +214,12 @@ Tracker](https://github.com/Submitty/Submitty/issues)
    Once a potential vulnerability is found, the system must be
    promptly patched and documented to prevent future problems.
 
-   _Skills & Experience Required: Computer security coursework and/or practical
-   experience searching for system vulnerabilities._
+   _Expected Outcomes_: Security risk assessment, indentification and repair
+   of specific security vulnerabilities, expansion and creation of continuous
+   integration tools to prevent introduction of new vulnerabilities.
+
+   _Skills & Experience Required_: Computer security coursework and/or practical
+   experience searching for system vulnerabilities.
 
    _Possible Mentors_: Jasmine Plum, Matthew Peveler, and other active developers
 
@@ -203,10 +235,20 @@ Tracker](https://github.com/Submitty/Submitty/issues)
    programming courses in middle and high schools, including AP
    Computer Science.
 
-   _Skills & Experience Required: Some programming experience, willingness to
+   [Submitty Autograding Tutorial Examples](https://github.com/Submitty/Tutorial)
+
+   [Additional Autograding Examples](https://github.com/Submitty/Submitty/tree/master/more_autograding_examples)
+
+   [Sample Java Assignments](http://localhost:4000/instructor/autograding/sample_assignments)
+
+   _Expected Outcomes_: Organization of existing sample and tutorial assignments and autograding
+   and current documentation.  Review and curation of any publicly-available sample assignments
+   and creation of new sample assignments and autograding.
+  
+   _Skills & Experience Required_: Some programming experience, willingness to
    learn web and database development.  Having served as a teaching
    assistant or instructor with experience in programming assignment
-   design will be beneficial._
+   design will be beneficial.
 
    _Possible Mentors_: Barb Cutler, Jasmine Plum
 
