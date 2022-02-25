@@ -13,9 +13,11 @@ We have applied and hope to be selected for Google Summer of Code (GSoC) 2022!
 The project ideas listed below target a variety of different topics
 and require different levels of prior experience.  The scope of these
 projects varies, and may require different overall time commitments
-(varying from 1 month to 3 months).  Submit questions or comments on
-specific issues through our
-[Submitty GitHub Issue Tracker](https://github.com/Submitty/Submitty/issues)
+(varying full-time-work-equivalent from 1 month to 3 months).  We are
+also interested in project proposals based on other topics from our
+list of open bugs and feature requests.  Submit questions or comments
+on specific issues through our [Submitty GitHub Issue
+Tracker](https://github.com/Submitty/Submitty/issues)
 
 
 
@@ -31,7 +33,7 @@ specific issues through our
    instructors, relevant for use in
    non-computer-science/non-programming courses.
    
-   [Assignment Configuration Instructions](/instructor/assignment_configuration)
+   [Assignment Configuration Instructions](/instructor/autograding/specification)
 
    We have preliminary support for automated creation of expected
    output files (from and instructor solution -- currently limited to
@@ -41,80 +43,19 @@ specific issues through our
 
    [Open Issues related to Autograding](https://github.com/Submitty/Submitty/labels/Autograding)
 
-   _Experience Required: Some programming experience, willingness to
-<<<<<<< HEAD
+   _Expected Outcomes_: 
+
+   _Experience Required_: Some programming experience, willingness to
    learn web and database development.  Having served as a teaching
    assistant or instructor with experience in programming assignment
-   design will be beneficial._
-=======
-   learn web and database development._
+   design will be beneficial.
 
-   _GSOC Proposal Tag:_ `peer grading`
+   _Possible Mentors_: Barb Cutler, Jasmine Plum
 
+   _GSoC Project Size_: 350 hours
 
-2. **Web Accessibility**
-
-   We strive to ensure that all Submitty users can efficiently access
-   information and interact with their peers and instructors through
-   the website.  In this project we will continue to refactor the html
-   and css syntax to follow [W3C web
-   standards](https://www.w3.org/standards/) and redesign and improve
-   the appearance and useability of our website.
-
-   Please read this page on [Web Accessibility Guidelines](interface_design_style_guide/web_accessibility).
-
-   [Open Issues related to Web Accessibility/VPAT](https://github.com/Submitty/Submitty/issues?q=is%3Aopen+is%3Aissue+label%3A%22VPAT+%2F+Accessibility+%2F+Screen+reader%22)
-
-   Advanced features related to web accessibility:
-
-   * Creation of automated integration tests to ensure sustained
-     accessibility.
-
-   * Refactor css style sheets into modules to facilitate future
-     development.
-
-   _Experience Required: Prior experience with web development (e.g.,
-   html, css, templating, javascript, and php), and design aesthetic
-   experience is beneficial._
-
-   _GSOC Proposal Tag:_ `web accessibility`
-
-
-3. **Progressive Web App (PWA)**
-
-   Submitty's primary platform target are web browsers on standard
-   laptop and desktop computers, where students will do their
-   software development and instructors/TAs will view or download and grade
-   complex assignments.
-
-   However, as Submitty has expanded to include elements from learning
-   management platforms such as a discussion forum, instructor
-   announcements and notifications, student photos and information,
-   small grading tasks such as taking attendance, and presentation of
-   semester grades, our users have requested additional
-   mobile-friendly access and features.
-
-   We have made good progress on revising the css for many of the
-   Submitty pages/features to successfully target a variety of display
-   resolutions.  Some of the complex pages still need to be
-   "mobile-ified": e.g., Discussion Forum, TA grading.
-
-   We would also like to explore the implementation and maintenance of
-   a progressive web app, which would leverage this website
-   re-targeting and allow push notifications.
-
-   _Experience Required: Critical eye for visual design, some
-   programming experience with html, css, javascript, reactive designs
-   (e.g., bootstrap), and willingness to learn additional web, database, and
-   mobile computing development technologies.  Personal access to
-   variety of different operating systems, and phone/tablet hardware
-   will be beneficial._
-
-   _GSOC Proposal Tag:_ `mobile-friendly website`
->>>>>>> d91dfe8eccadc96c9860026a01ef4a4a38d5d677
-
-
-
+   _Difficulty Level_: medium or hard
+   
 2. **Containers for Automated Grading**
 
    Automated testing of student submitted software carries system and
@@ -147,11 +88,16 @@ specific issues through our
 
    [Open Issues related to Container Autograding](https://github.com/Submitty/Submitty/labels/Docker%2FDockerImages)
 
-   _Experience Required: Upper level coursework experience in operating
+   _Skills & Experience Required: Upper level coursework experience in operating
    systems and/or networking programming.  Experience with virtual
    machines and Docker containerization is beneficial._
 
+   _Possible Mentors_: Barb Cutler, Jasmine Plum, Matthew Peveler
 
+   _GSoC Project Size_: 175 hours
+
+   _Difficulty Level_: medium
+   
  
 3. **Static Program Analysis**
 
@@ -165,8 +111,14 @@ specific issues through our
 
    [Open Issues related to Lichen Plagiarism Detection](https://github.com/Submitty/Submitty/issues?q=is%3Aopen+is%3Aissue+label%3A%22Lichen+Plagiarism+Detection%22)
 
-   _Experience Required: Upper level coursework in programming
+   _Skills & Experience Required: Upper level coursework in programming
    languages, compilers, and/or program analysis._
+
+   _Possible Mentors_: Barb Cutler, Matthew Peveler, and other active developers
+
+   _GSoC Project Size_: 175 hours
+
+   _Difficulty Level_: medium
 
 
 4. **Progressive Web App (PWA)**
@@ -190,14 +142,18 @@ specific issues through our
 
    [Open Issues related to API](https://github.com/Submitty/Submitty/labels/API)
 
-   _Experience Required: Critical eye for visual design, some
+   _Skills & Experience Required: Critical eye for visual design, some
    programming experience with html, css, javascript, reactive designs
    (e.g., bootstrap), and willingness to learn additional web, database, and
    mobile computing development technologies.  Personal access to
    variety of different operating systems, and phone/tablet hardware
    will be beneficial._
 
+   _Possible Mentors_: Shail Patel, Matthew Peveler, and other active developers
 
+   _GSoC Project Size_: 175 hours
+
+   _Difficulty Level_: easy or medium
 
 5. **Continuous Integration Testing**
 
@@ -213,8 +169,15 @@ specific issues through our
 
    [Open Issues related to Continuous Integration](https://github.com/Submitty/Submitty/issues?q=is%3Aopen+is%3Aissue+label%3A%22Testing+%2F+Continuous+Integration+%28CI%29%22)
 
-    _Experience Required: Advanced programming experience, experience
+    _Skills & Experience Required: Advanced programming experience, experience
     with the relevant programming languages, tuning system performance, etc._
+
+   _Possible Mentors_: Matthew Peveler, Shail Patel, and other active developers
+
+   _GSoC Project Size_: 175 or 350 hours
+
+   _Difficulty Level_: medium or hard
+
 
 6. **Website Security and Penetration Testing**
 
@@ -223,9 +186,15 @@ specific issues through our
    Once a potential vulnerability is found, the system must be
    promptly patched and documented to prevent future problems.
 
-   _Experience Required: Computer security coursework and/or practical
+   _Skills & Experience Required: Computer security coursework and/or practical
    experience searching for system vulnerabilities._
 
+   _Possible Mentors_: Jasmine Plum, Matthew Peveler, and other active developers
+
+   _GSoC Project Size_: 175 or 350 hours
+
+   _Difficulty Level_: medium or hard
+   
 
 7. **Instructional Materials and Documentation**
 
@@ -234,14 +203,16 @@ specific issues through our
    programming courses in middle and high schools, including AP
    Computer Science.
 
-   _Experience Required: Some programming experience, willingness to
+   _Skills & Experience Required: Some programming experience, willingness to
    learn web and database development.  Having served as a teaching
    assistant or instructor with experience in programming assignment
    design will be beneficial._
 
+   _Possible Mentors_: Barb Cutler, Jasmine Plum
 
+   _GSoC Project Size_: 175 or 350 hours
 
-
+   _Difficulty Level_: easy or medium
 
 See also:
 
