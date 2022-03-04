@@ -77,14 +77,14 @@ var NAVTREE =
         ] ],
         [ "Instructor", "/instructor", [
             [ "Overview", "/instructor", null ],
-            [ "Course Settings", "/instructor/course_settings", [
-                [ "Overview", "/instructor/course_settings", null ],
+            [ "Course Settings", "/instructor/course_settings/index", [
+                [ "Overview", "/instructor/course_settings/index", null ],
                 [ "Discussion Forum", "/instructor/course_settings/forum", null ],
                 [ "Submini Polling", "/instructor/course_settings/submini_polls", null ],
                 [ "Office Hours Queue", "/instructor/course_settings/queue", null ],
                 [ "Grade Inquiries", "/instructor/course_settings/grade_inquiries", null ],
-                [ "Rainbow Grades", "/instructor/course_settings/rainbow_grades", [
-                    [ "Overview", "/instructor/course_settings/rainbow_grades", null ],
+                [ "Rainbow Grades", "/instructor/course_settings/rainbow_grades/index", [
+                    [ "Overview", "/instructor/course_settings/rainbow_grades/index", null ],
                     [ "Automatic Setup", "/instructor/course_settings/rainbow_grades/automatic_setup", null ],
                     [ "Manual Setup", "/instructor/course_settings/rainbow_grades/manual_setup", null ],
                     [ "Customization Basics", "/instructor/course_settings/rainbow_grades/customization_basics", null ],
@@ -105,14 +105,16 @@ var NAVTREE =
             ] ],
             [ "Assignment Preparation", "/instructor/assignment_preparation/index", [
                 [ "Overview", "/instructor/assignment_preparation/index", null ],
-                [ "Notebook", "/instructor/assignment_preparation/notebook", null ],
                 [ "Facilitating Submission via GIT", "/instructor/assignment_preparation/submission_version_control", null ],
                 [ "Team Assignments", "/instructor/assignment_preparation/team_assignments", null ],
                 [ "Bulk PDF Upload", "/instructor/assignment_preparation/bulk_pdf_upload", null ],
                 [ "Personalized Exam", "/instructor/assignment_preparation/personalized_exams", null ],
             ] ],
+            [ "Assignment Configuration", "/instructor/assignment_configuration/configuration_path", [
+                [ "Configuration Path","/instructor/assignment_configuration/configuration_path", null],
+                [ "Notebook", "/instructor/assignment_configuration/notebook", null ]
+            ] ],
             [ "Autograding", "/instructor/autograding/directory_structure", [
-                [ "Configuration Path", "/instructor/assignment_configuration/configuration_path", null ],
                 [ "Directory Structure", "/instructor/autograding/directory_structure", null ],
                 [ "Autograding Configuration Structure", "/instructor/autograding/structure", null ],
                 [ "Phases of Autograding", "/instructor/autograding/phases", null ],
