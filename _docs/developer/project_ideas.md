@@ -17,7 +17,7 @@ projects varies, and may require different overall time commitments
 also interested in project proposals based on other topics from our
 list of open bugs and feature requests.  Submit questions or comments
 on specific issues through our [Submitty GitHub Issue
-Tracker](https://github.com/Submitty/Submitty/issues)
+Tracker](https://github.com/Submitty/Submitty/issues).
 
 
 
@@ -85,7 +85,7 @@ Tracker](https://github.com/Submitty/Submitty/issues)
    Advanced project idea: We would like to use Submitty to
    automatically test and grade homework assignments that require
    modifications to the operating system kernel.  Before doing so on a
-   production machine, we must need to do testing to ensure the right
+   production machine, we need to do testing to ensure the right
    controls are in place.
 
    [Open Issues related to Container Autograding](https://github.com/Submitty/Submitty/labels/Docker%2FDockerImages)
@@ -239,7 +239,7 @@ Tracker](https://github.com/Submitty/Submitty/issues)
 
    [Additional Autograding Examples](https://github.com/Submitty/Submitty/tree/master/more_autograding_examples)
 
-   [Sample Java Assignments](http://localhost:4000/instructor/autograding/sample_assignments)
+   [Sample Java Assignments](/instructor/autograding/sample_assignments)
 
    _Expected Outcomes_: Organization of existing sample and tutorial assignments and autograding
    and current documentation.  Review and curation of any publicly-available sample assignments
