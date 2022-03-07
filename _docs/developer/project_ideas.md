@@ -3,10 +3,11 @@ title: Project Ideas
 category: Developer
 ---
 
-Submitty was selected for participation with 
-[Google Summer of Code (GSoC)](https://summerofcode.withgoogle.com/) in Summer 2018, 2019, and 2020.
-See [GSoC Project Reports](google_summer_of_code).
-We have applied and hope to be selected for Google Summer of Code (GSoC) 2022!
+Submitty has been selected for participation in
+[Google Summer of Code (GSoC) 2022](https://summerofcode.withgoogle.com/).  
+See [GSoC Application & Reports](google_summer_of_code) for more information about
+the application process and to read reports from Submitty GSoC contributers
+from Summers 2018, 2019, and 2020.
 
 
 
