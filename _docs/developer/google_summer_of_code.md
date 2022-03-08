@@ -63,6 +63,8 @@ student project reports from previous summers linked below.
 &nbsp;  
   
 
+
+
 ## Google Summer of Code 2020
 
 * [Mobile Friendly Website by Mukul Kumar Jha](/developer/google_summer_of_code/2020_Mukul_Kumar_Jha)
