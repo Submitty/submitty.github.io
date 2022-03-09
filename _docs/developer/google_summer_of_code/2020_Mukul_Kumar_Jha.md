@@ -1,6 +1,6 @@
 ---
 title: Mukul Kumar Jha
-category: Developer - Google Summer of Code 2020
+category: Developer > Google Summer of Code 2020
 ---
 
 ![GSoC image](/images/GSoC.png){: .center-image }
