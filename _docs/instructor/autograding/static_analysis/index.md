@@ -1,6 +1,6 @@
 ---
-category: Instructor > Assignment Preparation > Automated Grading
-title: Static Analysis
+category: Instructor > Autograding > Static Analysis
+title: Overview
 redirect_from:
   - /instructor/static_analysis
 ---

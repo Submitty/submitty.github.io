@@ -1,6 +1,6 @@
 ---
-title: cppUnionTool
-category: Instructor
+title: CPP Union Tool
+category: Instructor > Autograding > Static Analysis
 ---
 
 UnionTool is a static analysis tool to count different programming language constructs in c++
