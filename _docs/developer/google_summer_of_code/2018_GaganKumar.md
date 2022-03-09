@@ -1,6 +1,9 @@
 ---
 title: Gagan Kumar
-category: Developer - Google Summer of Code 2018
+category: Developer > Google Summer of Code 2018
+redirect_from:
+  - /developer/GSOC2018_GaganKumar
+  - /developer/2018_GaganKumar
 ---
 
 # Discussion Forum Enhancements

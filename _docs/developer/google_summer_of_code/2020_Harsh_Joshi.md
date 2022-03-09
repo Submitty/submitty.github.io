@@ -1,6 +1,6 @@
 ---
 title: Harsh Joshi
-category: Developer - Google Summer of Code 2020
+category: Developer > Google Summer of Code 2020
 ---
 # Peer Grading 
 Peer grading feature at Submitty establishes the concept of students grading other students which was aimed to increase the quantity and diversity of detailed feedback on student assignments and presentations along with facilitating students to see other ways of approaching a problem, and asking important questions about the effectiveness of those alternate methods. 

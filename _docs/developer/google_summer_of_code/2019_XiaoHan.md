@@ -1,6 +1,6 @@
 ---
 title: Xiao Han
-category: Developer - Google Summer of Code 2019
+category: Developer > Google Summer of Code 2019
 ---
 
 # REST API for Submitty

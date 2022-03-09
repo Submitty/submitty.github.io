@@ -1,6 +1,8 @@
 ---
 title: How To Contribute
-category: Developer
+category: Developer > Getting Started
+redirect_from:
+  - /developer/how_to_contribute
 ---
 
 Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-new-developers).

@@ -1,6 +1,6 @@
 ---
 title: Eddie Krystowski
-category: Developer - Rensselaer Center for Open Source (RCOS)
+category: Developer > Rensselaer Center for Open Source (RCOS) > Summer 2021
 redirect_from:
   - /developer/rpi_summer_rcos/2021_Eddie_Krystowski.md
 ---

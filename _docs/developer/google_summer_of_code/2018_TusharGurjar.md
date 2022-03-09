@@ -1,6 +1,9 @@
 ---
 title: Tushar Gurjar
-category: Developer - Google Summer of Code 2018
+category: Developer > Google Summer of Code 2018
+redirect_from:
+  - /developer/GSOC2018_TusharGurjar
+  - /developer/2018_TusharGurjar
 ---
 
 # Instructor Interface for Plagiarism Detection

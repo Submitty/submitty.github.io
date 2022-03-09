@@ -1,6 +1,8 @@
 ---
 title: Virtual Box Worker Installation
-category: Developer
+category: Developer > Getting Started > Advanced Setup
+redirect_from:
+  - /developer/worker_vm
 ---
 
 If you are are developing or testing the distributed system for

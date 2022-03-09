@@ -1,6 +1,6 @@
 ---
 title: Fon Noel
-category: Developer - Google Summer of Code 2019
+category: Developer > Google Summer of Code 2019
 ---
 
 # GSOC 2019 REPORT: Continuous Integration Testing (Automation) for Submitty

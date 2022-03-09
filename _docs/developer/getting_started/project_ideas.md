@@ -1,6 +1,8 @@
 ---
 title: Project Ideas
-category: Developer
+category: Developer > Getting Started
+redirect_from:
+  - /developer/project_ideas
 ---
 
 Submitty has been selected for participation in

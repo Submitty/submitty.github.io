@@ -1,6 +1,8 @@
 ---
 title: Xdebug Setup Instructions
-category: Developer
+category: Developer > Getting Started > Advanced Setup
+redirect_from:
+  - /developer/xdebug
 ---
 
 Xdebug is a PHP extension automatically enabled in the Vagrant VM that allows for step-by-step code debugging, code profiling, and code tracing. For more information about the features of Xdebug, see [xdebug.org](https://xdebug.org/).

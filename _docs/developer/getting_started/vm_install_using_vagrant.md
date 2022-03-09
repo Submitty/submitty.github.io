@@ -1,6 +1,8 @@
 ---
 title: VM Install using Vagrant
-category: Developer
+category: Developer > Getting Started
+redirect_from:
+  - /developer/vm_install_using_vagrant
 ---
 
 The instructions below will setup an instance of Submitty on your own

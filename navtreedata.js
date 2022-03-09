@@ -170,65 +170,73 @@ var NAVTREE =
                 [ "System Debugging", "/sysadmin/troubleshooting/system_debugging", null ],
             ] ],
         ] ],
-        [ "Developer", "/developer", [
-            [ "Overview", "/developer", null ],
-            [ "Project Ideas", "/developer/project_ideas", null ],
-            [ "How to Contribute", "/developer/how_to_contribute", null ],
-            [ "VM Install using Vagrant", "/developer/vm_install_using_vagrant", null ],
-            [ "Virtual Box Worker", "/developer/worker_vm", null ],
-            [ "Development Instructions", "/developer/development_instructions", [
+        [ "Developer", "/developer/getting_started/index", [
+            [ "Getting Started", "/developer/getting_started/index", [
+                [ "Overview", "/developer/getting_started/index", null ],
+                [ "Project Ideas", "/developer/getting_started/project_ideas", null ],
+                [ "How to Contribute", "/developer/getting_started/how_to_contribute", null ],
+                [ "VM Install using Vagrant", "/developer/getting_started/vm_install_using_vagrant", null ],
+                [ "Advanced Setup", "/developer/getting_started/phpstorm", [
+                    [ "PhpStorm Setup Instructions", "/developer/getting_started/phpstorm", null ],
+                    [ "Xdebug Setup Instructions", "/developer/getting_started/xdebug", null ],
+                    [ "PGAdmin Setup Instructions", "/developer/getting_started/pgadmin", null ],
+                    [ "Virtual Box Worker", "/developer/getting_started/worker_vm", null ],
+                ] ],
+            ] ],
+            [ "Development Instructions", "/developer/development_instructions/troubleshooting", [
                 [ "Troubleshooting", "/developer/development_instructions/troubleshooting", null ],
+                [ "Migrations", "/developer/migrations", null ],
                 [ "Email Configuration", "/developer/development_instructions/vagrant_email_configuration", null ],
                 [ "Router Response", "/developer/development_instructions/router-response", null ],
                 [ "Resolving Merge Conflicts", "/developer/development_instructions/merge_conflicts", null ],
-                [ "Miscellaneous", "/developer/development_instructions/miscellaneous", null ]
-            ]],
-            [ "PhpStorm Setup Instructions", "/developer/phpstorm", null ],
-            [ "Xdebug Setup Instructions", "/developer/xdebug", null ],
-            [ "Database Design", "/developer/database_design", null ],
-            [ "PGAdmin Setup Instructions", "/developer/pgadmin", null ],
-            [ "Migrations", "/developer/migrations", null ],
-            [ "Automated Grading", "/developer/automated_grading", null ],
-            [ "JSON Configuration Files", "/developer/json_configuration_files", null ],
-            [ "JSON Responses", "/developer/json_responses", null ],
-            [ "Lichen Plagiarism Detection", "/developer/plagiarism", null ],
-            [ "Coding Style Guide", "/developer/coding_style_guide", [
-                [ "Python", "/developer/coding_style_guide/python", null ],
-                [ "C++", "/developer/coding_style_guide/c++", null ],
-                [ "PHP", "/developer/coding_style_guide/php", null ],
-                [ "JavaScript", "/developer/coding_style_guide/javascript", null ],
-                [ "CSS", "/developer/coding_style_guide/css", null ]
+                [ "Miscellaneous", "/developer/development_instructions/miscellaneous", null ],
+                [ "Continuous Integration Testing", "/developer/testing", [
+                    [ "Installing PHP", "/developer/testing/install_php", null ],
+                    [ "Linting / Static Analysis", "/developer/testing/linting_static_analysis", null ],
+                    [ "Python Unit Tests", "/developer/testing/python_unit_tests", null ],
+                    [ "PHP Unit Tests", "/developer/testing/php_unit_tests", null ],
+                    [ "Selenium End-to-End Tests", "/developer/testing/site_end_to_end_tests", null ],
+                    [ "Cypress End-to-End Tests", "/developer/testing/cypress", null ],
+                    [ "Autograding Integration Tests", "/developer/testing/autograding_integration_tests", null ],
+                    [ "GitHub Actions", "/developer/testing/github_actions", null ]
+                ] ],
+                [ "Additional Development Process", "/developer", [
+                    [ "Automated Grading", "/developer/automated_grading", null ],
+                    [ "Lichen Plagiarism Detection", "/developer/plagiarism", null ],
+                    [ "Updating Dependencies", "/developer/updating_dependencies", null ],
+                    [ "Configuring Tie In Programs", "/developer/configuring_tie_in_programs", null ],
+                ] ],
+                [ "Developing the PHP Site", "/developer/developing_the_php_site", [
+                    [ "Model", "/developer/developing_the_php_site/model", null ],
+                    [ "View", "/developer/developing_the_php_site/view", null ],
+                    [ "Controller", "/developer/developing_the_php_site/controller", null ],
+                    [ "Feature Flags", "/developer/developing_the_php_site/feature_flags", null ],
+                    [ "WebSocket", "/developer/developing_the_php_site/websocket", null ],
+                    [ "Frontend JavaScript", "/developer/developing_the_php_site/javascript", null]
+                ] ],
             ] ],
-            [ "Testing", "/developer/testing", [
-                [ "Installing PHP", "/developer/testing/install_php", null ],
-                [ "Linting / Static Analysis", "/developer/testing/linting_static_analysis", null ],
-                [ "Python Unit Tests", "/developer/testing/python_unit_tests", null ],
-                [ "PHP Unit Tests", "/developer/testing/php_unit_tests", null ],
-                [ "Selenium End-to-End Tests", "/developer/testing/site_end_to_end_tests", null ],
-                [ "Cypress End-to-End Tests", "/developer/testing/cypress", null ],
-                [ "Autograding Integration Tests", "/developer/testing/autograding_integration_tests", null ],
-                [ "GitHub Actions", "/developer/testing/github_actions", null ]
+            [ "Software and System Design", "/developer", [
+                [ "Database Design", "/developer/database_design", null ],
+                [ "JSON Configuration Files", "/developer/json_configuration_files", null ],
+                [ "JSON Responses", "/developer/json_responses", null ],
+                [ "Interface Design", "/developer/interface_design_style_guide", null ],
+                [ "Web Accessibility", "/developer/interface_design_style_guide/web_accessibility", null ],
+                [ "Router", "/developer/router", null ],
+                [ "API", "https://api.submitty.org", null ],
+                [ "Coding Style Guide", "/developer/coding_style_guide", [
+                    [ "Python", "/developer/coding_style_guide/python", null ],
+                    [ "C++", "/developer/coding_style_guide/c++", null ],
+                    [ "PHP", "/developer/coding_style_guide/php", null ],
+                    [ "JavaScript", "/developer/coding_style_guide/javascript", null ],
+                    [ "CSS", "/developer/coding_style_guide/css", null ]
+                ] ],
             ] ],
-            [ "Interface Design", "/developer/interface_design_style_guide", [
-                [ "Web Accessibility", "/developer/interface_design_style_guide/web_accessibility", null ]
-            ] ],
-            [ "Developing the PHP Site", "/developer/developing_the_php_site", [
-                [ "Model", "/developer/developing_the_php_site/model", null ],
-                [ "View", "/developer/developing_the_php_site/view", null ],
-                [ "Controller", "/developer/developing_the_php_site/controller", null ],
-                [ "Feature Flags", "/developer/developing_the_php_site/feature_flags", null ],
-                [ "WebSocket", "/developer/developing_the_php_site/websocket", null ],
-                [ "Frontend JavaScript", "/developer/developing_the_php_site/javascript", null]
-            ] ],
-            [ "Updating Dependencies", "/developer/updating_dependencies", null ],
-            [ "Configuring Tie In Programs", "/developer/configuring_tie_in_programs", null ],
-            [ "Router", "/developer/router", null ],
-            [ "API", "https://api.submitty.org", null ],
-            [ "MS/PhD Students", "/developer/ms_phd_students", [
+            [ "MS/PhD Students", "/developer/ms_phd_students/index", [
+                [ "Overview", "/developer/ms_phd_students/index", null],
                 [ "John Hulton MS 2020", "/developer/ms_phd_students/MS_2020_John_Hulton", null ],
                 [ "Héctor Rodríguez Figueroa MS 2021", "/developer/ms_phd_students/MS_2021_Hector_Rodriguez", null ],
             ] ],
-            [ "Rensselaer Center for Open Source (RCOS)", "/developer/rensselaer_center_for_open_source/moorthy", [
+            [ "Rensselaer Center for Open Source", "/developer/rensselaer_center_for_open_source/moorthy", [
                 [ "Moorthy", "/developer/rensselaer_center_for_open_source/moorthy", null ],
                 [ "2021 William Allen",    "/developer/rensselaer_center_for_open_source/2021_William_Allen", null ],
                 [ "2021 Shelly Belsky",    "/developer/rensselaer_center_for_open_source/2021_Shelly_Belsky", null ],

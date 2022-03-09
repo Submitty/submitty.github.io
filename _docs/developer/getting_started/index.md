@@ -1,6 +1,11 @@
 ---
-title: Developer
-permalink: /developer
+title: Overview
+category: Developer > Getting Started
+redirect_from:
+  - /developer
+  - /developer/index
+  - /developer/getting_started/
+  - /developer/getting_started/index
 ---
 
 As a developer, you'll need to set up the full system on your own

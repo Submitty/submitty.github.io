@@ -1,6 +1,8 @@
 ---
 title: PGAdmin Setup Instructions
-category: Developer
+category: Developer > Getting Started > Advanced Setup
+redirect_from:
+  -/developer/pgadmin
 ---
 
 
