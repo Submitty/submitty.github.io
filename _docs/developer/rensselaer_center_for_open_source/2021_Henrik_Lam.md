@@ -1,6 +1,8 @@
 ---
 title: Henrik Lam
-category: Developer - RPI Summer RCOS 2021
+category: Developer - Rensselaer Center for Open Source (RCOS)
+redirect_from:
+  - /developer/rpi_summer_rcos/2021_Henrik_Lam.md
 ---
 
 In the summer of 2021, I mostly worked on creating new pages for instructors, sysadmins, and faculties.

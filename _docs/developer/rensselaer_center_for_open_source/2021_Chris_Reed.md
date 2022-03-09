@@ -1,6 +1,8 @@
 ---
 title: Chris Reed
-category: Developer - RPI Summer RCOS 2021
+category: Developer - Rensselaer Center for Open Source (RCOS)
+redirect_from:
+  - /developer/rpi_summer_rcos/2021_Chris_Reed.md
 ---
 
 Throughout the summer, I worked on various new features, bug fixes, and refactors for Submitty. All of my work can be seen

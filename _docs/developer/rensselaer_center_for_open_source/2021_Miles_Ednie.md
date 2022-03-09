@@ -1,6 +1,8 @@
 ---
 title: Miles Ednie
-category: Developer - RPI Summer RCOS 2021
+category: Developer - Rensselaer Center for Open Source (RCOS)
+redirect_from:
+  - /developer/rpi_summer_rcos/2021_Miles_Ednie.md
 ---
 
 This summer, I spent the majority of my time working on the backend of

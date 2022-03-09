@@ -1,6 +1,8 @@
 ---
 title: Google Summer of Code
 category: Developer
+redirect_from:
+  - /developer/google_summer_of_code
 ---
 
 
@@ -16,7 +18,7 @@ student project reports from previous summers linked below.
 
 ## How to Apply to Submitty for Google Summer of Code 2022
 
-1. Read the informations for contributors to confirm your eligibility:  
+1. Read the information for contributors to confirm your eligibility:  
    [https://summerofcode.withgoogle.com/](https://summerofcode.withgoogle.com/)  
    [https://opensource.googleblog.com/2021/11/expanding-google-summer-of-code-in-2022.html](https://opensource.googleblog.com/2021/11/expanding-google-summer-of-code-in-2022.html)  
 

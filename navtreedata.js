@@ -221,17 +221,17 @@ var NAVTREE =
                 [ "John Hulton MS 2020", "/developer/ms_phd_students/MS_2020_John_Hulton", null ],
                 [ "Héctor Rodríguez Figueroa MS 2021", "/developer/ms_phd_students/MS_2021_Hector_Rodriguez", null ],
             ] ],
-            [ "RPI Summer RCOS", "/developer/rpi_summer_rcos/index", [
-                [ "Overview", "/developer/rpi_summer_rcos/index", null ],
-                [ "2021 William Allen",    "/developer/rpi_summer_rcos/2021_William_Allen", null ],
-                [ "2021 Shelly Belsky",    "/developer/rpi_summer_rcos/2021_Shelly_Belsky", null ],
-                [ "2021 Miles Ednie",      "/developer/rpi_summer_rcos/2021_Miles_Ednie", null ],
-                [ "2021 Eddie Krystowski", "/developer/rpi_summer_rcos/2021_Eddie_Krystowski", null ],
-                [ "2021 Henrik Lam",       "/developer/rpi_summer_rcos/2021_Henrik_Lam", null ],
-                [ "2021 Chris Reed",       "/developer/rpi_summer_rcos/2021_Chris_Reed", null ]
+            [ "Rensselaer Center for Open Source (RCOS)", "/developer/rensselaer_center_for_open_source/moorthy", [
+                [ "Moorthy", "/developer/rensselaer_center_for_open_source/moorthy", null ],
+                [ "2021 William Allen",    "/developer/rensselaer_center_for_open_source/2021_William_Allen", null ],
+                [ "2021 Shelly Belsky",    "/developer/rensselaer_center_for_open_source/2021_Shelly_Belsky", null ],
+                [ "2021 Miles Ednie",      "/developer/rensselaer_center_for_open_source/2021_Miles_Ednie", null ],
+                [ "2021 Eddie Krystowski", "/developer/rensselaer_center_for_open_source/2021_Eddie_Krystowski", null ],
+                [ "2021 Henrik Lam",       "/developer/rensselaer_center_for_open_source/2021_Henrik_Lam", null ],
+                [ "2021 Chris Reed",       "/developer/rensselaer_center_for_open_source/2021_Chris_Reed", null ]
             ] ],
-            [ "Google Summer of Code", "/developer/google_summer_of_code", [
-                [ "Overview","/developer/google_summer_of_code", null ],
+            [ "Google Summer of Code", "/developer/google_summer_of_code/index", [
+                [ "Overview","/developer/google_summer_of_code/index", null ],
                 [ "2020 Mukul Kumar Jha", "/developer/google_summer_of_code/2020_Mukul_Kumar_Jha", null ],
                 [ "2020 Marwan Atef", "/developer/google_summer_of_code/2020_Marwan_Atef", null ],
                 [ "2020 Harsh Joshi", "/developer/google_summer_of_code/2020_Harsh_Joshi", null ],

@@ -1,6 +1,8 @@
 ---
 title: Shelly Belsky
-category: Developer - RPI Summer RCOS 2021
+category: Developer - Rensselaer Center for Open Source (RCOS)
+redirect_from:
+  - /developer/rpi_summer_rcos/2021_Shelly_Belsky.md
 ---
 
 
