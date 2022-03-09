@@ -1,6 +1,8 @@
 ---
-title: Installation Version Notes
-category: System Administrator
+title: Version Notes
+category: System Administrator > Installation
+redirect_from:
+  - /system_administrator/version_notes
 ---
 
 The release notes below document additional manual steps required with

@@ -1,6 +1,8 @@
 ---
 title: Course Archiving
-category: System Administrator
+category: System Administrator > Configuration & Administration
+redirect_from:
+  - /sysadmin/course_archiving
 ---
 
 After the term is completed you can archive the course.  This is done

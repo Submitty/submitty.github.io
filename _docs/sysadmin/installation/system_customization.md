@@ -1,6 +1,6 @@
 ---
 title: System Customization
-category: System Administrator
+category: System Administrator > Installation
 ---
 
 

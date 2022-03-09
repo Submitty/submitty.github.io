@@ -1,6 +1,6 @@
 ---
 title: Distributed / Networked Applications
-category: Instructor -- Autograding Configuration
+category: Instructor > Autograding
 redirect_from:
   - /instructor/assignment_configuration/networking
 ---

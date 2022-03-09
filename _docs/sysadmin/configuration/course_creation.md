@@ -1,6 +1,8 @@
 ---
 title: Course Creation
-category: System Administrator
+category: System Administrator > Configuration & Administration
+redirect_from:
+  - /sysadmin/course_creation
 ---
 
 

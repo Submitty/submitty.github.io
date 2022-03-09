@@ -1,7 +1,8 @@
 ---
 title: Server OS
-category: System Administrator
-permalink: /sysadmin
+category: System Administrator > Installation
+redirect_from:
+  - /sysadmin/server_os
 ---
 
 ### Supported Distros

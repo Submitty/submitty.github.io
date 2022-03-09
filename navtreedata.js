@@ -92,7 +92,7 @@ var NAVTREE =
                     [ "Room Templates", "/instructor/course_settings/rainbow_grades/room_templates", null ],
                     [ "RPI VPN on WSL Instructions", "/instructor/course_settings/rainbow_grades/wsl_vpn", null ]
                 ] ],
-                [ "Website Customization", "/instructor/course_settings/website_customization", null ]
+                [ "Customize Website Theme", "/instructor/course_settings/website_customization", null ]
             ] ],
             [ "Course Management", "/instructor/course_management/managing_enrollment", [
                 [ "Managing Enrollment", "/instructor/course_management/managing_enrollment", null ],
@@ -105,7 +105,7 @@ var NAVTREE =
             ] ],
             [ "Assignment Preparation", "/instructor/assignment_preparation/index", [
                 [ "Overview", "/instructor/assignment_preparation/index", null ],
-                [ "Facilitating Submission via GIT", "/instructor/assignment_preparation/submission_version_control", null ],
+                [ "Submissions via Version Control", "/instructor/assignment_preparation/submission_version_control", null ],
                 [ "Team Assignments", "/instructor/assignment_preparation/team_assignments", null ],
                 [ "Bulk PDF Upload", "/instructor/assignment_preparation/bulk_pdf_upload", null ],
                 [ "Personalized Exam", "/instructor/assignment_preparation/personalized_exams", null ],
@@ -125,8 +125,8 @@ var NAVTREE =
                 [ "Batch Regrade Submissions", "/instructor/autograding/batch_regrade", null ],
                 [ "Sample Assignments", "/instructor/autograding/sample_assignments", null ],
                 [ "Docker UI", "/instructor/autograding/docker_ui", null ],
-                [ "Static Analysis", "/instructor/autograding/static_analysis", [
-                    [ "Overview", "/instructor/autograding/static_analysis", null ],
+                [ "Static Analysis", "/instructor/autograding/static_analysis/index", [
+                    [ "Overview", "/instructor/autograding/static_analysis/index", null ],
                     [ "Tree Tool", "/instructor/autograding/static_analysis/tree_tool", null ],
                     [ "Common AST", "/instructor/autograding/static_analysis/commonAST", null ],
                     [ "CPP Union Tool", "/instructor/autograding/static_analysis/cppUnionTool", null ],
@@ -134,34 +134,41 @@ var NAVTREE =
                 ] ],
             ] ],
         ] ],
-        [ "System Administrator", "/sysadmin", [
-            [ "Server OS", "/sysadmin", null ],
-            [ "Installation", "/sysadmin/installation", null ],
-            [ "Update Submitty", "/sysadmin/update", null ],
-            [ "Installation Version Notes", "/sysadmin/version_notes", [
-                [ "Overview", "/sysadmin/version_notes", null],
-                [ "v22.03.00", "/sysadmin/version_notes/v22.03.00", null ],
-                [ "v21.11.01", "/sysadmin/version_notes/v21.11.01", null ],
-                [ "v21.06.04", "/sysadmin/version_notes/v21.06.04", null ],
-                [ "v21.01.01", "/sysadmin/version_notes/v21.01.01", null ],
-                [ "v20.09.00", "/sysadmin/version_notes/v20.09.00", null ],
-                [ "v20.08.00", "/sysadmin/version_notes/v20.08.00", null ],
-                [ "v19.08.03", "/sysadmin/version_notes/v19.08.03", null ],
-                [ "v19.06.02", "/sysadmin/version_notes/v19.06.02", null ],
-                [ "v.19.06.01", "/sysadmin/version_notes/v.19.06.01", null ]
+        [ "System Administrator", "/sysadmin/installation/index", [
+            [ "Installation", "/sysadmin/installation/index", [
+                [ "Overview", "/sysadmin/installation/index", null ],
+                [ "Server OS", "/sysadmin/installation/server_os", null ],
+                [ "Update Submitty", "/sysadmin/installation/update", null ],
+                [ "Version Notes", "/sysadmin/installation/version_notes/index", [
+                    [ "Overview", "/sysadmin/installation/version_notes/index", null],
+                    [ "v22.03.00", "/sysadmin/installation/version_notes/v22.03.00", null ],
+                    [ "v21.11.01", "/sysadmin/installation/version_notes/v21.11.01", null ],
+                    [ "v21.06.04", "/sysadmin/installation/version_notes/v21.06.04", null ],
+                    [ "v21.01.01", "/sysadmin/installation/version_notes/v21.01.01", null ],
+                    [ "v20.09.00", "/sysadmin/installation/version_notes/v20.09.00", null ],
+                    [ "v20.08.00", "/sysadmin/installation/version_notes/v20.08.00", null ],
+                    [ "v19.08.03", "/sysadmin/installation/version_notes/v19.08.03", null ],
+                    [ "v19.06.02", "/sysadmin/installation/version_notes/v19.06.02", null ],
+                    [ "v.19.06.01", "/sysadmin/installation/version_notes/v.19.06.01", null ]
+                ] ],
+                [ "Worker Installation", "/sysadmin/installation/worker_installation", null ],
+                [ "System Customization", "/sysadmin/installation/system_customization", null ],
             ] ],
-            [ "System Debugging", "/sysadmin/system_debugging", null ],
-            [ "Database Overview", "/sysadmin/database_overview", null ],
-            [ "User Access Level", "/sysadmin/user_access_level", null ],
-            [ "Course Creation", "/sysadmin/course_creation", null ],
-            [ "Setting up Internal Git", "/sysadmin/git", null ],
-            [ "Worker Installation", "/sysadmin/worker_installation", null ],
-            [ "System Customization Checklist", "/sysadmin/system_customization", null ],
-            [ "Email Configuration", "/sysadmin/email_configuration", null ],
-            [ "Course Archiving", "/sysadmin/course_archiving", null ],
-            [ "Rainbow Grades", "/sysadmin/rainbow_grades", null ],
-            [ "Log Files", "/instructor/log_files", null ],
-            [ "Photo Scraper", "/instructor/student_photos", null ]
+            [ "Configuration & Administration", "/sysadmin/configuration/course_creation", [
+                [ "Course Creation", "/sysadmin/configuration/course_creation", null ],
+                [ "Setting up Version Control", "/sysadmin/configuration/version_control", null ],
+                [ "Email Configuration", "/sysadmin/configuration/email_configuration", null ],
+                [ "Registration Feed", "/sysadmin/configuration/registration_feed", null ],
+                [ "Course Archiving", "/sysadmin/configuration/course_archiving", null ],
+                [ "Rainbow Grades", "/sysadmin/configuration/rainbow_grades", null ],
+                [ "Student Photos", "/sysadmin/configuration/student_photos", null ]
+            ] ],
+            [ "Troubleshooting & Other Information", "/sysadmin/troubleshooting/database_overview", [
+                [ "Database Overview", "/sysadmin/troubleshooting/database_overview", null ],
+                [ "User Access Level", "/sysadmin/troubleshooting/user_access_level", null ],
+                [ "Log Files", "/sysadmin/troubleshooting/log_files", null ],
+                [ "System Debugging", "/sysadmin/troubleshooting/system_debugging", null ],
+            ] ],
         ] ],
         [ "Developer", "/developer", [
             [ "Overview", "/developer", null ],

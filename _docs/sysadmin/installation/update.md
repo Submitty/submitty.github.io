@@ -1,6 +1,8 @@
 ---
 title: Update Submitty
-category: System Administrator
+category: System Administrator > Installation
+redirect_from:
+  - /developer/update
 ---
 
 

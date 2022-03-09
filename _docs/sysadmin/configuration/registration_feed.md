@@ -1,6 +1,8 @@
 ---
-title: Submitty Student Auto Feed
-category: System Administrator
+title: Registration Feed
+category: System Administrator > Configuration & Management
+redirect_from:
+  - /sysadmin/student_auto_feed
 ---
 
 _Submitty Student Auto Feed is an optional command-line PHP script that can automatically

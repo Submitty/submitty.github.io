@@ -1,6 +1,8 @@
 ---
-title: Installation
-category: System Administrator
+title: Overview
+category: System Administrator > Installation
+redirect_from:
+  - /developer/installation
 ---
 
 These instructions will help guide you to installing Submitty onto a

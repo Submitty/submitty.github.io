@@ -1,5 +1,5 @@
 ---
-category: Instructor > Automated Grading
+category: Instructor > Autograding
 title: Directory Structure
 redirect_from:
   - /instructor/directory_structure

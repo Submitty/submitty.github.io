@@ -1,9 +1,11 @@
 ---
-title: Setting Up Internal Git  
-category: System Administrator  
+title: Setting Up Version Control
+category: System Administrator > Configuration & Administration
+redirect_from:
+  - /sysadmin/git
 ---
 
-### Internal Git
+### Internal Git Version Control
 
 Submitty is setup to allow submissions from a Git repository instead
 of through the drag-and-drop interface.  While some people may use

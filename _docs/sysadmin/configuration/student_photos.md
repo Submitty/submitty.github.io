@@ -1,8 +1,9 @@
 ---
 title: Student Photos
-category: System Administrator
+category: System Administrator > Configuration & Administration
 redirect_from:
   - /instructor/student_photos
+  - /sysadmin/student_photos
 ---
 
 In a large class, it can be difficult for instructors, full-access graders, and

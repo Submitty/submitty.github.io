@@ -1,8 +1,9 @@
 ---
 title: Log Files
-category: System Administrator
+category: System Administrator > Troubleshooting & Other Information
 redirect_from:
   - /instructor/log_files
+  - /sysadmin/log_files
 ---
 
 Submitty writes out logs for a variety of things, which can help instructors

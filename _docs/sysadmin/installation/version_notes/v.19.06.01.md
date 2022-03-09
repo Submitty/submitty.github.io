@@ -1,6 +1,6 @@
 ---
-title:  v.19.06.01 -- URL Rewrite Rules
-category: System Administrator
+title:  v.19.06.01 > URL Rewrite Rules
+category: System Administrator > Installation Version Notes
 ---
 
 Beginning with version `v.19.06.01` of the main Submitty repository we

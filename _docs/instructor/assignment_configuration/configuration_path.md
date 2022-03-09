@@ -1,5 +1,5 @@
 ---
-category: Instructor > Assignment Preparation
+category: Instructor > Assignment Configuration
 title: Configuration Path
 redirect_from:
   - /instructor/assignment_configuration/configuration_path

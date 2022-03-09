@@ -1,6 +1,8 @@
 ---
 title: Worker Installation
-category: System Administrator
+category: System Administrator > Installation
+redirect_from:
+  - /sysadmin/worker_installation
 ---
 
 A Submitty instance is capable of leveraging additional machines to

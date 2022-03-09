@@ -1,6 +1,8 @@
 ---
 title: Websockets / System & Debugging
-category: System Administrator
+category: System Administrator > Troubleshooting & Other Information
+redirect_from:
+  - /sysadmin/system_debugging
 ---
 
 

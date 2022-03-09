@@ -1,6 +1,8 @@
 ---
 title: Rainbow Grades
-category: System Administrator
+category: System Administrator > Configuration & Administration
+redirect_from:
+  - /sysadmin/rainbow_grades
 ---
 
 ### Configuration

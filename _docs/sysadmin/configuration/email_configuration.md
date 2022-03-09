@@ -1,6 +1,8 @@
 ---
 title: Email Configuration
-category: System Administrator
+category: System Administrator > Configuration & Administration
+redirect_from:
+  - /sysadmin/email_configuration
 ---
 
 
