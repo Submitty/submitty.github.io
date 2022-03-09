@@ -1,6 +1,8 @@
 ---
 title: JSON Responses
-category: Developer
+category: Developer > Software and System Design
+redirect_from:
+  - /developer/json_responses
 ---
 
 We use a modified version of the [JSend](https://labs.omniti.com/labs/jsend) specification for any JSON object that is

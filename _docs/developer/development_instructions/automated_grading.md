@@ -1,6 +1,8 @@
 ---
 title: Automated Grading
-category: Developer
+category: Developer > Development Instructions > Advanced Development
+redirect_from:
+  - /developer/automated_grading
 ---
 
 Starting with Submitty version `v.1.1.0`, automated grading is

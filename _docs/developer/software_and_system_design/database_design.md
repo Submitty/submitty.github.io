@@ -1,6 +1,8 @@
 ---
 title: Database Design
-category: Developer
+category: Developer > Software and System Design
+redirect_from:
+  - /developer/database_design
 ---
 
 ## Connecting to Vagrant DB Locally

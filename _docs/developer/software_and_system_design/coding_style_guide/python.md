@@ -1,6 +1,8 @@
 ---
 title: Python
-category: Developer
+category: Developer > Software and System Design > Coding Style Guide
+redirect_from:
+  - /developer/coding_style_guide/python
 ---
 
 __Minimum Version__: 3.6

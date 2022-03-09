@@ -1,6 +1,8 @@
 ---
 title: Updating Dependencies
-category: Developer
+category: Developer > Development Instructions > Advanced Development
+redirect_from:
+  - /developer/updating_dependencies
 ---
 
 Within Submitty, we have a number of third-party dependencies to help augment the system. These

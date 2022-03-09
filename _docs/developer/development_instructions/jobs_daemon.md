@@ -1,6 +1,8 @@
 ---
 title: Jobs Daemon & Debugging
-category: Developer
+category: Developer > Development Instructions > Advanced Development
+redirect_from:
+  - /developer/jobs_daemon
 ---
 
 

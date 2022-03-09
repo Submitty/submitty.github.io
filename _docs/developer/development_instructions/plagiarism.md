@@ -1,6 +1,8 @@
 ---
 title: Lichen Plagiarism Detection
-category: Developer
+category: Developer > Development Instructions > Advanced Development
+redirect_from:
+  - /developer/plagiarism
 ---
 
 See also [Instructor UI for Lichen Plagiarism Detection](/instructor/plagiarism).

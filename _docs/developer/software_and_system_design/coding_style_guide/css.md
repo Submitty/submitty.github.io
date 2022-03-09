@@ -1,6 +1,9 @@
 ---
 title: CSS
 category: Developer
+category: Developer > Software and System Design > Coding Style Guide
+redirect_from:
+  - /developer/coding_style_guide/css
 ---
 
 ## Styling

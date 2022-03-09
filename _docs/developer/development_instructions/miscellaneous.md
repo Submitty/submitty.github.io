@@ -1,6 +1,6 @@
 ---
 title: Miscellaneous
-category: Developer
+category: Developer > Development Instructions
 ---
 
 

@@ -183,14 +183,12 @@ var NAVTREE =
                     [ "Virtual Box Worker", "/developer/getting_started/worker_vm", null ],
                 ] ],
             ] ],
-            [ "Development Instructions", "/developer/development_instructions/troubleshooting", [
-                [ "Troubleshooting", "/developer/development_instructions/troubleshooting", null ],
-                [ "Migrations", "/developer/migrations", null ],
-                [ "Email Configuration", "/developer/development_instructions/vagrant_email_configuration", null ],
-                [ "Router Response", "/developer/development_instructions/router-response", null ],
+            [ "Development Instructions", "/developer/development_instructions/index", [
+                [ "Overview", "/developer/development_instructions/index", null ],
+                [ "Migrations", "/developer/development_instructions/migrations", null ],
                 [ "Resolving Merge Conflicts", "/developer/development_instructions/merge_conflicts", null ],
-                [ "Miscellaneous", "/developer/development_instructions/miscellaneous", null ],
-                [ "Continuous Integration Testing", "/developer/testing", [
+                [ "Continuous Integration Testing", "/developer/testing/index", [
+                    [ "Overview", "/developer/testing/index", null ],
                     [ "Installing PHP", "/developer/testing/install_php", null ],
                     [ "Linting / Static Analysis", "/developer/testing/linting_static_analysis", null ],
                     [ "Python Unit Tests", "/developer/testing/python_unit_tests", null ],
@@ -200,11 +198,15 @@ var NAVTREE =
                     [ "Autograding Integration Tests", "/developer/testing/autograding_integration_tests", null ],
                     [ "GitHub Actions", "/developer/testing/github_actions", null ]
                 ] ],
-                [ "Additional Development Process", "/developer", [
-                    [ "Automated Grading", "/developer/automated_grading", null ],
-                    [ "Lichen Plagiarism Detection", "/developer/plagiarism", null ],
-                    [ "Updating Dependencies", "/developer/updating_dependencies", null ],
-                    [ "Configuring Tie In Programs", "/developer/configuring_tie_in_programs", null ],
+                [ "Vagrant Email Configuration", "/developer/development_instructions/vagrant_email_configuration", null ],
+                [ "Troubleshooting", "/developer/development_instructions/troubleshooting", null ],
+                [ "Miscellaneous", "/developer/development_instructions/miscellaneous", null ],
+                [ "Advanced Development", "/developer/development_instructions/automated_grading", [
+                    [ "Automated Grading", "/developer/development_instructions/automated_grading", null ],
+                    [ "Jobs Daemon", "/developer/development_instructions/jobs_daemon", null ],
+                    [ "Lichen Plagiarism Detection", "/developer/development_instructions/plagiarism", null ],
+                    [ "Updating Dependencies", "/developer/development_instructions/updating_dependencies", null ],
+                    [ "Configuring Tie In Programs", "/developer/development_instructions/configuring_tie_in_programs", null ],
                 ] ],
                 [ "Developing the PHP Site", "/developer/developing_the_php_site", [
                     [ "Model", "/developer/developing_the_php_site/model", null ],
@@ -215,21 +217,23 @@ var NAVTREE =
                     [ "Frontend JavaScript", "/developer/developing_the_php_site/javascript", null]
                 ] ],
             ] ],
-            [ "Software and System Design", "/developer", [
-                [ "Database Design", "/developer/database_design", null ],
-                [ "JSON Configuration Files", "/developer/json_configuration_files", null ],
-                [ "JSON Responses", "/developer/json_responses", null ],
-                [ "Interface Design", "/developer/interface_design_style_guide", null ],
-                [ "Web Accessibility", "/developer/interface_design_style_guide/web_accessibility", null ],
-                [ "Router", "/developer/router", null ],
-                [ "API", "https://api.submitty.org", null ],
-                [ "Coding Style Guide", "/developer/coding_style_guide", [
-                    [ "Python", "/developer/coding_style_guide/python", null ],
-                    [ "C++", "/developer/coding_style_guide/c++", null ],
-                    [ "PHP", "/developer/coding_style_guide/php", null ],
-                    [ "JavaScript", "/developer/coding_style_guide/javascript", null ],
-                    [ "CSS", "/developer/coding_style_guide/css", null ]
+            [ "Software and System Design", "/developer/software_and_system_design/interface_design_style_guide", [
+                [ "Interface Design", "/developer/software_and_system_design/interface_design_style_guide", null ],
+                [ "Web Accessibility", "/developer/software_and_system_design/web_accessibility", null ],
+                [ "Database Design", "/developer/software_and_system_design/database_design", null ],
+                [ "Coding Style Guide", "/developer/software_and_system_design/coding_style_guide/index", [
+                    [ "Overview", "/developer/software_and_system_design/coding_style_guide/index", null ],
+                    [ "Python", "/developer/software_and_system_design/coding_style_guide/python", null ],
+                    [ "C++", "/developer/software_and_system_design/coding_style_guide/c++", null ],
+                    [ "PHP", "/developer/software_and_system_design/coding_style_guide/php", null ],
+                    [ "JavaScript", "/developer/software_and_system_design/coding_style_guide/javascript", null ],
+                    [ "CSS", "/developer/software_and_system_design/coding_style_guide/css", null ]
                 ] ],
+                [ "JSON Configuration Files", "/developer/software_and_system_design/json_configuration_files", null ],
+                [ "JSON Responses", "/developer/software_and_system_design/json_responses", null ],
+                [ "Router Response", "/developer/software_and_system_design/router_response", null ],
+                [ "Router", "/developer/software_and_system_design/router", null ],
+                [ "API", "https://api.submitty.org", null ],
             ] ],
             [ "MS/PhD Students", "/developer/ms_phd_students/index", [
                 [ "Overview", "/developer/ms_phd_students/index", null],

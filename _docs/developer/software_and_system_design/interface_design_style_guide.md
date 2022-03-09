@@ -1,6 +1,8 @@
 ---
 title: Interface Design Style Guide
-category: Developer
+category: Developer > Software and System Design
+redirect_from:
+  - /developer/interface_design_style_guide
 ---
 
 ## Preliminary Design Notes

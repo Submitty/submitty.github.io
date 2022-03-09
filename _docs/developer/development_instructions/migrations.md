@@ -1,6 +1,8 @@
 ---
 title: Migrations
-category: Developer
+category: Developer > Development Instructions
+redirect_from:
+  - /developer/migrations
 ---
 
 We use [database migrations](https://en.wikipedia.org/wiki/Schema_migration)

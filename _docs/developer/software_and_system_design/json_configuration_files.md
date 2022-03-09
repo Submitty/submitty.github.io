@@ -1,6 +1,8 @@
 ---
 title: JSON Configuration Files
-category: Developer
+category: Developer > Software and System Design
+redirect_from:
+  - /developer/json_configuration_files
 ---
 
 The system configuration and state are stored in several different

@@ -1,6 +1,9 @@
 ---
 title: Web Accessibility
-category: Developer
+category: Developer > Software and System Design
+redirect_from:
+  - /developer/web_accessibility
+  - /developer/interface_design_style_guide/web_accessibility
 ---
 
 ## Purpose

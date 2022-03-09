@@ -1,6 +1,9 @@
 ---
-title: Coding Style Guide
-category: Developer
+title: Overview
+category: Developer > Software and System Design > Coding Style Guide
+redirect_from:
+  - /developer/coding_style_guide
+  - /developer/coding_style_guide/index
 ---
 
 To maintain a concise and consistent code base, we'll be trying to adopt a coding style that is loose to allow easy contribution, but also tidy. To do this, we use a combination of style guides per language. Generally, you should be following the style guide for that language closely, though you can potentially deviate within reason. 

@@ -1,5 +1,8 @@
 ---
-title: JavaScript Style Guide
+title: JavaScript
+category: Developer > Software and System Design > Coding Style Guide
+redirect_from:
+  - /developer/coding_style_guide/javascript
 ---
 
 For JavaScript, we use the popular [eslint](https://eslint.org/) tool to ensure that

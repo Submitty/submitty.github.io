@@ -1,6 +1,9 @@
 ---
-title: Development Instructions
-category: Developer
+title: Overview
+category: Developer > Development Instructions
+redirect_from:
+  - /developer/development_instructions
+  - /developer/development_instructions/index
 ---
 
 We recommend that you do all file edits within your checkout of the

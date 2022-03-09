@@ -1,6 +1,8 @@
 ---
-title: John Hulton - MS - December 2020
-category: Developer - Poster Session
+title: John Hulton > MS > December 2020
+category: Developer > MS/PhD Students
+redirect_from:
+  - /developer/MS_2020_John_Hulton
 ---
 
 #### Abstract

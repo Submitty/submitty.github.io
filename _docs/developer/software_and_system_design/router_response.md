@@ -1,6 +1,9 @@
 ---
 title: Routes & Response Object
-category: Developer
+category: Developer > Software and System Design
+redirect_from:
+  - /developer/router-response
+  - /developer/router_response
 ---
 
 This page is a more in-depth look at the Router and the Response PHP

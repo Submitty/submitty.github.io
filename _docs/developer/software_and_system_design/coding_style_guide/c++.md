@@ -1,6 +1,8 @@
 ---
 title: C++
-category: Developer
+category: Developer > Software and System Design > Coding Style Guide
+redirect_from:
+  - /developer/coding_style_guide/c++
 ---
 
 To do this we've modified certain important aspects of the [Google Style Guide](https://google.github.io/styleguide/cppguide.html). This is a living document and will likely change as new issues arise.

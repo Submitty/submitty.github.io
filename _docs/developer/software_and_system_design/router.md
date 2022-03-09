@@ -1,6 +1,8 @@
 ---
 title: Router
-category: Developer
+category: Developer > Software and System Design
+redirect_from:
+  - /developer/router
 ---
 
 ### Overview
