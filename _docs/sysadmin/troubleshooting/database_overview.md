@@ -6,7 +6,7 @@ redirect_from:
 ---
 
 Submitty is setup such that it uses one "master" Database and then each course 
-that is added ewould have its own DB. The master DB (named `submitty`) contains
+that is added would have its own DB. The master DB (named `submitty`) contains
 all of the courses, users, the courses the users are in, as well as the users'
 login sessions. Within each course DB (named `submitty_${SEMESTER}_${COURSE}`), 
 there are the gradeables, users, grades, etc. that are specific only to that course. 
