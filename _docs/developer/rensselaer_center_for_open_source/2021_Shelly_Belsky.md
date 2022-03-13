@@ -16,7 +16,7 @@ I worked together with [William Allen](https://github.com/williamjallen) on Lich
   - Ability to specify submitted [files to be compared](/instructor/course_management/plagiarism#files-to-be-compared)
   - Ability to specify [ignored users](/instructor/course_management/plagiarism#users-to-be-ignored) to not be included in the matching algorithm
   - Ability to process [active or all versions](/instructor/course_management/plagiarism#version) of users who made submissions
-  - Comparing for matches against [other gradeables](/instructor/course_management/plagiarism#prior-term-gradeables) from prior terms
+  - Comparing for matches against [other gradeables](/instructor/course_management/plagiarism#other-gradeables) from prior terms
   - Added ability to create multiple plagiarism detection configuration per gradeable
 - UI appearance and functionality improvements to all the plagiarism pages, especially the page displaying the plagiarism results
 - Features for Lichen developers:
