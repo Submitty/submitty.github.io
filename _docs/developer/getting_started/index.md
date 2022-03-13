@@ -80,9 +80,9 @@ Join our Community Discussion:
 * Run the relevant portions of test suite locally:  
   [Submitty Testing Instructions](/developer/testing/)
 
-* Submit a [Pull Request (PR)](/developer/how_to_contribute#how-to-make-a-pull-request-to-our-submitty-github) with your contributions.
+* Submit a [Pull Request (PR)](/developer/getting_started/how_to_contribute#how-to-make-a-pull-request-to-our-submitty-github) with your contributions.
 
-* Help by [Reviewing the Pull Requests](/developer/how_to_contribute#how-to-review-a-pull-request-pr) of other developers.
+* Help by [Reviewing the Pull Requests](/developer/getting_started/how_to_contribute#how-to-review-a-pull-request-pr) of other developers.
 
-* [Improve the online documentation for Submitty](/developer/how_to_contribute#how-to-edit-submittyorg-documentation)
+* [Improve the online documentation for Submitty](/developer/getting_started/how_to_contribute#how-to-edit-submittyorg-documentation)
 

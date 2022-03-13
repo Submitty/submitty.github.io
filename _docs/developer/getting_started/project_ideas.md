@@ -265,6 +265,6 @@ See also:
 
 * [Developer](/developer) pages
 
-* [How to Contribute](/developer/how_to_contribute) page
+* [How to Contribute](/developer/getting_started/how_to_contribute) page
 
 
