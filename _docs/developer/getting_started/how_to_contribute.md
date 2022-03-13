@@ -5,7 +5,7 @@ redirect_from:
   - /developer/how_to_contribute
 ---
 
-Be sure to read the [Suggestions for New Developers](/developer/gettingstarted/index#suggestions-for-new-developers).
+Be sure to read the [Suggestions for New Developers](/developer/getting_started/index#suggestions-for-new-developers).
 
 ### How to make a Pull Request (PR) to Submitty 
 
@@ -135,7 +135,7 @@ Be sure to read the [Suggestions for New Developers](/developer/gettingstarted/i
      * Developers are encouraged to test all user interface modifications with
        [all available Submitty Themes](/student/account/theme):
        e.g., light mode, dark mode, black mode, to ensure compliance/improvement
-       of [Web Accessibility](interface_design_style_guide/web_accessibility).
+       of [Web Accessibility](/developer/software_and_system_design/web_accessibility).
 
      * Including screenshots/videos in the issue or PR message is
        helpful for UI changes -- both to solicit quick feedback from

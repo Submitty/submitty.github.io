@@ -37,7 +37,7 @@ It is also worth to mention that the API is proved useful for making [a working-
 
 An API opens a world of possibilities. Here is a list for future developers. Feel free to come up with new ideas yourself. 
 
-- Help implement more API endpoints to enrich Submitty API. After carefully reading [suggestions for new developers](/developer#suggestions-for-new-developers), you can start writing new endpoints hosted at Submitty that can direct your robot to wash the dishes and fold the laundry.
+- Help implement more API endpoints to enrich Submitty API. After carefully reading [suggestions for new developers](/developer/getting_started/index#suggestions-for-new-developers), you can start writing new endpoints hosted at Submitty that can direct your robot to wash the dishes and fold the laundry.
 - Develop plugins for text editors so that you can autograde your work without switching between windows.
 - Build *your* Submitty application. While sharing data with Submitty, you can rebrand it with your name (like Shailmitty), repaint and reshape everything with your genius aesthetic tastes without fighting with picky people, and even, develop an Android or iOS application that makes everyone forget the web version and keeps Barb on vacation every day.
 
