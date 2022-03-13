@@ -261,4 +261,4 @@ from anywhere inside your vagrant terminal.
 
 This command is similar to the `install_submitty` command which updates all Submitty software and dependencies, but it is only for installing or updating the parts relevant to Lichen.
 
-_See also: [Updating Dependencies](https://submitty.org/developer/updating_dependencies) and [Development Instructions](https://submitty.org/developer/development_instructions)_
+_See also: [Updating Dependencies](/developer/updating_dependencies) and [Development Instructions](https://submitty.org/developer/development_instructions)_

@@ -126,7 +126,7 @@ file size totaling up to 100 mb.
 _Note: You may need to ask your system admin to increase the
 Ubuntu/Apache/php-fpm default upload limit for the server._
 
-[https://submitty.org/sysadmin/system_customization#allowing-large-student-file-upload-submissions](https://submitty.org/sysadmin/system_customization#allowing-large-student-file-upload-submissions)
+[Allow Large File Upload](/sysadmin/system_customization#allowing-large-student-file-upload-submissions)
 
 By default, the uploaded scanned pdf will be visible to students (and
 downloadable) when the scores from manual grading are released.  You
