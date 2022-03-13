@@ -86,7 +86,7 @@ _Note: These instructions should be run under root/sudo._
    *  Add a new entry with a unique key.
    *  add at least one capability to the capabilities list. This capability will determine
       which jobs should be shipped to this machine.  See also
-      [Automated Grading - Multiple Physical Servers](/developer/automated_grading#multiple-physical-servers)
+      [Automated Grading - Multiple Physical Servers](/developer/development_instructions/automated_grading#multiple-physical-servers)
    *  Add the 'address' of the machine to the address field (e.g. ```worker1.myuniversity.edu```).
    *  Add the number of autograding workers (simultaneously processed jobs) for the machine.
    *  Add the name of the submitty user on the machine as the username.

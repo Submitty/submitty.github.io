@@ -8,29 +8,6 @@ redirect_from:
 _Submitty Student Auto Feed is an optional command-line PHP script that can automatically
 fill or update classlists on a cron schedule._
 
-## Table of Contents
-1. [Requirements](#1-requirements)
-2. [Files](#2-files)
-3. [Course Database Backups](#3-course-database-backups)
-4. [Before Installing Auto Feed Script](#4-before-installing-auto-feed-script)
-  * [Student CSV Layout](#41-student-csv-layout)
-5. [Install on Ubuntu Server](#5-install-on-ubuntu-server)
-6. [Command Line Arguments](#6-command-line-arguments)
-7. [Configuration](#7-configuration)
-  * [Configurations (top)](#71-configurations)
-  * [Database Connection](#database-connection)
-  * [Error Logging](#error-logging)
-  * [CSV File Access](#csv-file-access)
-  * [CSV Delimiter](#csv-delimiter)
-  * [CSV Validation](#csv-validation)
-  * [CSV Fields Mapping](#csv-fields-mapping)
-  * [Student Registration Codes](#student-registration-codes)
-  * [Expected Term Code](#expected-term-code)
-  * [Windows Encoding Conversion](#windows-encoding-conversion)
-  * [End of Line Detection](#end-of-line-detection)
-  * [Timezone](#timezone)
-8. [PAM Authentication and `accounts.php`](#8-pam-authentication-and-accountsphp)
-
 ### 1. Requirements
 * Submitty Student Auto Feed is intended to be managed by a systems administrator or similar IT professional.
 * PHP 5.6 or higher with `pgsql` and `iconv` extensions.
@@ -171,7 +148,7 @@ This defines the constant `CSV_FILE` and sets it to the value `/path/to/datafile
 _Do not change the constant_.
 Only change the constant's value.
 
-We would need to change the value to reflect where the student data CSV is located (did you [note this](#before_installing) back in chapter 5?).
+We would need to change the value to reflect where the student data CSV is located (did you [note this](/sysadmin/configuration/registration_feed#4-before-installing-auto-feed-script) back in chapter 5?).
 For example, if your data warehouse delivers the feed CSV to `/users/datawarehouse/enrollment.csv` -- then change the line to read:
 ```php
 define('CSV_FILE', '/users/datawarehouse/enrollment.csv');
