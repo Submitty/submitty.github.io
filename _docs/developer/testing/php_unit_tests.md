@@ -15,14 +15,14 @@ To run the PHP unit test suite locally, `cd` to the `Submitty/site` directory an
 If you are running on WSL and are seeing errors, remove "`php`" from the following commands.
 
 ```
-php vendor/bin/phpunit --configuration tests/phpunit.xml
+php vendor/bin/phpunit
 ```
 
 To run just an individual class or test, you can use the `--filter` flag on PHPUnit.
 For example, to run the function `testInvalidProperty` would be
-`php vendor/bin/phpunit -c tests/phpunit.xml --filter testInvalidProperty` and running all
+`php vendor/bin/phpunit --filter testInvalidProperty` and running all
 of `AccessControlTester` would be
-`php vendor/bin/phpunit -c tests/phpunit.xml --filter AccessControlTester`. Be aware, filter
+`php vendor/bin/phpunit--filter AccessControlTester`. Be aware, filter
 can match against partial strings, so if you have two tests `testFoo` and `testFooBar`,
 running `--filter testFoo` will run them both. Alternatively, you can also directly run
 `phpunit` against a specific class by passing the path to the test class directly to
@@ -34,7 +34,7 @@ The two concepts above can be combined to run a specific test function in a spec
 class by doing:
 
 ```bash
-vendor/bin/phpunit -c tests/phpunit.xml --filter testFunction tests/app/path/to/TestClass.php
+vendor/bin/phpunit --filter testFunction tests/app/path/to/TestClass.php
 ```
 
 You can pass in the `--debug` flag when using PHPUnit to see PHP output, this can be

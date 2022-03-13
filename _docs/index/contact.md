@@ -14,11 +14,12 @@ Are you interested in joining the Submitty Development Team?  Please read:
 
 We have a public [Slack server for Submitty Developers](https://join.slack.com/t/submitty/shared_invite/enQtMzE1NzgyMzUzNzI5LWZhOGM4NWU4M2U3ZmM2ZmM5NTYwNjk3NTc5Yjg1ZGRlYzU1MjcwYWNkNGYxZjk2YTk3ZmEyODY3MjEyOTc0M2E).
 
-Please use the Slack server `#general` and `#summerofcode2020` channels
-for Submitty installation problems, general development questions, and
-feature design discussion.  We have a small administration team and
-very much appreciate the Submitty community working together to help new
-developers.
+Please use the Slack server `#general-welcome` and
+`#gettingstarted-installation-development` and
+`#technical-developers-studio` channels for community introductions,
+to discuss Submitty installation problems, ask general development
+questions, and have feature design discussion.  We appreciate the
+Submitty community working together to help new developers.
 
 When asking for help on installation, please include your host
 operating system & version, and your versions of vagrant and virtual
@@ -44,17 +45,6 @@ Download the [Autograding Tutorial Configurations & Example Submissions](https:/
 
 
 
-## Questions about Production Installations
-
-Instructors and system administrators who are interested in setting up a
-production Submitty installations at their school are welcome and encouraged to
-use the Submitty Google Groups mailing list:
-
-[submitty@googlegroups.com](mailto:submitty@googlegroups.com)  
-[https://groups.google.com/forum/#!forum/submitty](https://groups.google.com/forum/#!forum/submitty)  
-
-or contact the core Submitty development team:  
-[submitty-admin@googlegroups.com](mailto:submitty-admin@googlegroups.com)
 
 
 

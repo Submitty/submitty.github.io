@@ -6,7 +6,7 @@ redirect_from:
 ---
 
 While Submitty provides mechanisms of getting information about a course, or grades, an
-instructor may wish to run one-off queries against their database. To faciliate this,
+instructor may wish to run one-off queries against their database. To facilitate this,
 Submitty provides for each course a "SQL Toolbox" that can be accessed from the
 sidebar. Within the toolbox, instructors may run a `SELECT` query and see the results
 in tabular format.

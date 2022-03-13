@@ -1,5 +1,5 @@
 ---
-category: Instructor > Assignment Preparation > Automated Grading
+category: Instructor > Autograding > Static Analysis
 title: Tree Tool
 redirect_from:
   - /instructor/tree_tool

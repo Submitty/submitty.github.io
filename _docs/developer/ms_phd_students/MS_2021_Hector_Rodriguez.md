@@ -1,12 +1,15 @@
 ---
-title: Héctor D. Rodríguez Figueroa - M. S. - May 2021
-category: Developer - Poster Session
+title: Héctor D. Rodríguez Figueroa > MS > May 2021
+category: Developer > MS/PhD Students
+redirect_from:
+  - /developer/MS_2021_Hector_Rodriguez
 ---
 
 <!-- Pulled from https://stackoverflow.com/a/15422454 -->
 <style type="text/css">
     ol ol { list-style-type: lower-alpha; }
 </style>
+
 
 ## What Is the Submitty Autograder?
 

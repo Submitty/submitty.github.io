@@ -1,6 +1,6 @@
 ---
 title: Vagrant Email Configuration
-category: Developer
+category: Developer > Development Instructions
 ---
 
 

@@ -1,6 +1,9 @@
 ---
-title: MS/PhD Students
-category: Developer
+title: Overview
+category: Developer > MS/PhD Students
+redirect_from:
+  - /developer/ms_phd_students
+  - /developer/poster_session
 ---
 
 ### PhD Theses

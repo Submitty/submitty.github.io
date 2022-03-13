@@ -1,6 +1,6 @@
 ---
 title: Autograding Specification
-category: Instructor -- Autograding Configuration
+category: Instructor > Autograding
 redirect_from:
   - /instructor/assignment_configuration/specification
 ---
