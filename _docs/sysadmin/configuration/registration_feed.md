@@ -318,7 +318,7 @@ That is, the first column of the CSV is #0, the second column is #1, the third c
 
 * `COLUMN_TERM_CODE` contains the code describing the current term.
   This is checked against the "expected" term code for validation.
-  q.v. [Expected Term Code](#expected_term_code)
+  q.v. [Expected Term Code](/sysadmin/configuration/registration_feed#expected-term-code)
 
 
 #### Student Registration Codes
