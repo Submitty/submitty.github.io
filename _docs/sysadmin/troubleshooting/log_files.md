@@ -100,7 +100,7 @@ logs/validator_log.txt
 
 The overall.txt log can be used to inspect the files as they are
 copied from and to various directories
-(see also [Phases of Autograding](assignment_configuration) )
+(see also [Phases of Autograding](/instructor/autograding/phases) )
 
 
 The other three files log each of these phases, which walk through the test cases in your

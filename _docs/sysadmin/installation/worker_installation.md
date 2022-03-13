@@ -6,7 +6,7 @@ redirect_from:
 ---
 
 A Submitty instance is capable of leveraging additional machines to
-[distribute autograding load](/developer/automated_grading).
+[distribute autograding load](/developer/development_instructions/automated_grading).
 This capability can be used to ship jobs which require
 additional resources or specialized hardware to appropriate machines.
 This guide details the steps to install Submitty in worker mode,
