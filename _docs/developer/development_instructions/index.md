@@ -25,7 +25,7 @@ That is, after you have completed
 the [vagrant setup instructions](/developer/vm_install_using_vagrant)
 and entered typed `vagrant ssh`.
 
-Please also see [Installation Version Notes](/sysadmin/version_notes)
+Please also see [Installation Version Notes](/sysadmin/installation/version_notes)
 
 
 ---

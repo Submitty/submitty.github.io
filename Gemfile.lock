@@ -297,11 +297,9 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-
-  github-pages (= 219)
   github-pages (= 225)
   html-proofer (~> 3.19.0)
   webrick (~> 1.7)
 
 BUNDLED WITH
-   2.2.20
+   2.2.24
