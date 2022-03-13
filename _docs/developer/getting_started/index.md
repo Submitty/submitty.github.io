@@ -14,7 +14,7 @@ computer.  The easiest method is to
 Alternately, you can install the system natively on a dedicated
 computer and allow outside access (which requires more steps to set up
 networking, SSL/https, etc.) by following the
-[complete system administrator instructions](/sysadmin).
+[complete system administrator instructions](/sysadmin/installation/index).
 
 
 Please contribute by adding bugs or feature requests to our 

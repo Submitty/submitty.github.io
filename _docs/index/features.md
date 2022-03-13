@@ -146,7 +146,7 @@ _Note: Click on the <u>links</u> and <i class="fas fa-info-circle" style="font-s
   * university username & password (RPI RCS)
   * daily synchronization with registration data (SIS)
   * [student photo page](/instructor/student_photos) {% include feature_text.html text="A yearbook style layout of student faces is helpful to both TAs and instructors of large courses with lecture and recitation or lab, allowing instructors and TAs to identify students who may be struggling, but rarely ask for help." %}
-    * [ID photos downloaded from SIS](/instructor/student_photos#photo-scraper)
+    * [ID photos downloaded from SIS](/instructor/student_photos)
       {% include feature_text.html text="Coming soon: Students can upload their own passport-style photo." %}
   * [multiple levels of access](/sysadmin/user_access_level#user-group-or-role)
     * instructors {% include feature_text.html text="<em>Note:</em> Supports multiple instructors, and can designate a <em>head TA</em> with instructor access." %}
