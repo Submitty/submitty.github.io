@@ -33,7 +33,7 @@ Refactors, Dependencies, etc.
 
 See also
 [Developer: How to Contribute](/developer/getting_started/how_to_contribute) and
-[Developer: Migrations](/developer/development_isntructions/migrations).
+[Developer: Migrations](/developer/development_instructions/migrations).
 
 
 
