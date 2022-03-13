@@ -148,7 +148,7 @@ public function getStudents()
 ```
 
 Any API endpoint must either return a `JsonResponse` or a `RedirectResponse`
-(see [below](/developer/router#what-is-the-response-object-is-it-required) for more information).
+(see [below](/developer/software_and_system_design/router#what-is-the-response-object-is-it-required) for more information).
 
 ### FAQ
 

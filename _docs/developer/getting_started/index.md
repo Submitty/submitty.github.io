@@ -80,7 +80,7 @@ Join our Community Discussion:
 * Run the relevant portions of test suite locally:  
   [Submitty Testing Instructions](/developer/testing/)
 
-* Submit a [Pull Request (PR)](/developer/getting_started/how_to_contribute#how-to-make-a-pull-request-to-our-submitty-github) with your contributions.
+* Submit a [Pull Request (PR)](/developer/getting_started/how_to_contribute#how-to-make-a-pull-request-to-submitty) with your contributions.
 
 * Help by [Reviewing the Pull Requests](/developer/getting_started/how_to_contribute#how-to-review-a-pull-request-pr) of other developers.
 
