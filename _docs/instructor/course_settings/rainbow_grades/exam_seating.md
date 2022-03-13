@@ -9,7 +9,7 @@ redirect_from:
 
 
 Rainbow Grades Exam Seating works in coordination with the
-[Room Templates](/instructor/rainbow_grades/room_templates) interface.
+[Room Templates](/instructor/course_settings/rainbow_grades/room_templates) interface.
 
 
 1. Add ``"exam_seating"`` to the ``"display"`` array in `customization.json` .

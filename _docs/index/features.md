@@ -25,7 +25,7 @@ _Note: Click on the <u>links</u> and <i class="fas fa-info-circle" style="font-s
            text="Organized and transparent system for tracking deadlines 
                  and verified student emergencies." %}
   * [bulk upload of scanned-to-pdf paper worksheets/exams](/instructor/bulk_pdf_upload)
-    * [assigned seating for exams](/instructor/rainbow_grades/room_templates)
+    * [assigned seating for exams](/instructor/course_settings/rainbow_grades/room_templates)
         {% include feature_text.html
            text="Randomized, assigned seating to combat cheating during written examinations." %}
     * [personalized exams with QR codes](/instructor/personalized_exams) to automate upload process
@@ -124,7 +124,7 @@ _Note: Click on the <u>links</u> and <i class="fas fa-info-circle" style="font-s
 &nbsp;
 
 
-* **[Semester grade summary -- *Rainbow Grades*](/instructor/rainbow_grades/index)** {% include feature_text.html text="In large courses, it is important to have a centralized database of grades and allow students to inspect their current grades, and facilitate corrections in the case of data entry errors.  <br>Frequent updates to the database and transparency about the grade calculation process can significantly reduce student confusion and reduce or eliminate student-TA-instructor communications in verifying and/or correcting term grades." %}
+* **[Semester grade summary -- *Rainbow Grades*](/instructor/course_settings/rainbow_grades/index)** {% include feature_text.html text="In large courses, it is important to have a centralized database of grades and allow students to inspect their current grades, and facilitate corrections in the case of data entry errors.  <br>Frequent updates to the database and transparency about the grade calculation process can significantly reduce student confusion and reduce or eliminate student-TA-instructor communications in verifying and/or correcting term grades." %}
   * implement grade formulas from the syllabus
     * options: curve, extra credit, drop lowest quiz, etc.
   * student can compare themself to hypothetical *average* student, *lowest A-* student, *lowest B-* student, etc.

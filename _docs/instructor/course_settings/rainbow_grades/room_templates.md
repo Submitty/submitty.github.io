@@ -7,7 +7,7 @@ redirect_from:
 
 
 Room Templates works in coordination with the Rainbow Grades
-[Exam Seating](/instructor/rainbow_grades/exam_customization).
+[Exam Seating](/instructor/course_settings/rainbow_grades/exam_customization).
 
 
 Submitty can assist in assigning specific seats to each student for

@@ -98,7 +98,7 @@ redirect_from:
 
 8. **Other customization extras**  
    `customization.json` supports other options. While the list may evolve over time, we currently
-   provide documentation for [assigned exam seating](/instructor/rainbow_grades/exam_customization).
+   provide documentation for [assigned exam seating](/instructor/course_settings/rainbow_grades/exam_customization).
 
 
 
