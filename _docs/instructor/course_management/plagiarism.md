@@ -73,7 +73,7 @@ included and compared against in the matching algorithm.
 This field in the form is used to specify which files for each
 student's version(s) are used in the matching algorithm.  Instructors
 can specify which of the three directories --"submissions", "results",
-and "checkout" (see also [Directory Structure](directory_structure))
+and "checkout" (see also [Directory Structure](/instructor/autograding/directory_structure))
 -- to scan and grab submission files from.
 
 In addition to specifying the directories, instructors can also

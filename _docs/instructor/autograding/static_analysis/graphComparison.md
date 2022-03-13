@@ -16,7 +16,7 @@ Given a file of source code, the following steps can be used to create a HTML fi
    * If the file is a python file, "filename.py" use the [Diagnostics](http://submitty.org/instructor/static_analysis "Diagnostics Documentation") tool. 
    * If the file is a C++ file, "filename.cpp" use the [C++ Union Tool](http://submitty.org/instructor/cppUnionTool "C++ Union Tool Documentation")
   Save the JSON output in "filenameUnion.txt"
- 2. Create JSON output of the common AST using the [common AST Tool](/instructor/commonAST "Common AST Tool Documentation"). Save this JSON output in "filenameIntersect.txt"
+ 2. Create JSON output of the common AST using the [common AST Tool](/instructor/autograding/static_analysis/commonAST). Save this JSON output in "filenameIntersect.txt"
  3. Run python jsonDiffRunner.py to create the HTML visualization and data report in reportFile.txt. If the source language is python, use "py" for the lang. If the source language is C++ use "cpp" for the lang.
    ```
    python jsonDiffRunner.py filenameUnion.txt filenameIntersect.txt reportFile.txt lang

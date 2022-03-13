@@ -12,7 +12,7 @@ instructor would like to override the grade for a single student on a
 specific gradeable.  For example:
 
 * **Makeup Exam** Most of the students in the course sit for the [same
-    exam on paper, which is scanned and graded](bulk_pdf_upload) using
+    exam on paper, which is scanned and graded](/instructor/assignment_preparation/bulk_pdf_upload) using
     a detailed manual grading rubric.  One student is unable to make
     the original exam time and instead takes a makeup exam with
     different problems.  This makeup exam is graded outside of
