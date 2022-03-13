@@ -178,7 +178,7 @@ after you create or edit the gradeable.
 
 However, if you have specified a configuration in a private course
 repository, 
-(see [Assignment Configuration](assignment_configuration) page)
+(see [Assignment Configuration](/instructor/assignment_configuration/configuration_path) page)
 you must re-run the BUILD_XXXX.sh script.
 
 1.  Log in to the server.  Navigate to your top level directory, e.g.
