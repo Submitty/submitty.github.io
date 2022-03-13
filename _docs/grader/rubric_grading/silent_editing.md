@@ -17,18 +17,18 @@ checkbox. Also note that each component has been graded by the limited
 access grader 'grader' (check the upper right conner of each
 component).
 
-![](/images/silent_edit_example.png)
+![](/images/silent_edit_example.PNG)
 
 As an instructor, changing the grade of any component will
 automatically make you the grader of that component if "Silent Edit"
 is not checked:
 
-![](/images/silent_edit_off_example.png)
+![](/images/silent_edit_off_example.PNG)
 
 Note that the first component has now been graded by "instructor". If
 "Silent Edit" is checked, the grader will not be overriden:
 
-![](/images/silent_edit_on_example.png)
+![](/images/silent_edit_on_example.PNG)
 
 Note that the second component has still been graded by "grader", even
 though the grade has been changed.

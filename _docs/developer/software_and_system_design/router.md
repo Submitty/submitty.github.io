@@ -11,7 +11,7 @@ redirect_from:
 
 The router takes a request as input, matches it against a predefined collection of routes, checks its validity and calls the corresponding function which returns a `Response` object for rendering.
 
-**URL matching** is done by the [Symfony routing component](https://symfony.com/doc/current/components/routing.html), which has been part of Submitty since [v.19.06.01](<https://submitty.org/sysadmin/version_notes/v.19.06.01>).
+**URL matching** is done by the [Symfony routing component](https://symfony.com/doc/current/components/routing.html), which has been part of Submitty since [v.19.06.01](/sysadmin/installation/version_notes/v.19.06.01).
 
 **Validity checking** checks if the user is authorized to access certain parts of Submitty. For example, a user who is not logged in is not allowed to go anywhere else but login page. Also, a student will be prevented from accessing pages only accessible to instructors. If validity checking is not passed, the user will be redirected to appropriate pages or, for API calls, get JSON responses with fail status.
 
@@ -148,7 +148,8 @@ public function getStudents()
 ```
 
 Any API endpoint must either return a `JsonResponse` or a `RedirectResponse`
-(see [below](/developer/router#what-is-the-response-object-is-it-required) for more information).
+(see [below](/developer/software_and_system_design/router#what-is-the-responseinterface-object-is-it-required
+for more information).
 
 ### FAQ
 

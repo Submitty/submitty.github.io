@@ -14,8 +14,8 @@ access for your TAs and mentors.
 
 Use the "Setup Rotating Sections" option to distribute your student
 list into equal sections for grading assignments other than
-registration section.  See also:  [Registration Section vs. Rotating Section](create_edit_gradeable#grading-by-registration-section-or-rotating-section)
-
+registration section.  See also:
+[Registration Section vs. Rotating Section](/instructor/assignment_preparation/index#grader-assignment-method)
 
 ### Automated Course Enrollment Management
 
@@ -33,7 +33,7 @@ nightly cron job to automatically add students to the relevant
 Submitty course databases and create login accounts to the submission
 server.  This greatly simplifies instructor maintenance of current
 course enrollement.  See also [System Administrator / Student Auto
-Feed](/sysadmin/student_auto_feed).
+Feed](/sysadmin/configuration/registration_feed).
 
 Below are the instructions to manually add students who are not
 traditionally registered, to immediately add a student who registered
@@ -121,7 +121,7 @@ late, or if the feed is not available for your course.
     ```
 
     * Registration section can be custom, for example NULL or STAFF.
-    * Grader group can be a number 1-4. For more information: see [User Group or Role](https://submitty.org/sysadmin/user_access_level#user-group-or-role) documentation
+    * Grader group can be a number 1-4. For more information: see [User Group or Role](/sysadmin/troubleshooting/user_access_level#user-access-level) documentation
 
     You can also supply just the username column, and rest of the fields will be auto-filled with the existing user data and a default value for grader-group as 'Limited Access Grader' (3) will be used.
 

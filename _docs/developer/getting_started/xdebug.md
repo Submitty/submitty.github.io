@@ -13,7 +13,7 @@ For the default configuration, it is recommended to use an extension to enable o
 
 #### PhpStorm
 
-See [PhpStorm Setup Instructions#Enable PHP Debugging using xdebug](/developer/phpstorm#enable-php-debugging-using-xdebug) for details on how to enable and use Xdebug in PhpStorm.
+See [PhpStorm Setup Instructions#Enable PHP Debugging using xdebug](/developer/getting_started/phpstorm#enable-php-debugging-using-xdebug) for details on how to enable and use Xdebug in PhpStorm.
 
 #### VSCode
 

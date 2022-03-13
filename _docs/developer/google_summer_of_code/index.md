@@ -40,7 +40,7 @@ student project reports from previous summers linked below.
    system files and database contents.
 
 7. Submit a pull request to solve an open issue.
-   [https://submitty.org/developer/how_to_contribute](/developer/how_to_contribute)
+   [https://submitty.org/developer/getting_started/how_to_contribute](/developer/getting_started/how_to_contribute)
    
 8. Help test and review pull requests opened by other developers.   
    [https://github.com/Submitty/Submitty/pulls](https://github.com/Submitty/Submitty/pulls)

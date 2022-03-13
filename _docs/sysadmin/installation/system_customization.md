@@ -25,8 +25,6 @@ And the central location of the student VCS (e.g. git version control) repositor
 You may want to back up more of `/var/local/submitty` to save configurations and logs, but be sure to exclude
    `/var/local/submitty/to_be_graded_batch` and `to_be_graded_interactive`.
 
-<small>[Back To Table of Contents](#table-of-contents)</small>
-
 
 ## Capture cron error messages
 

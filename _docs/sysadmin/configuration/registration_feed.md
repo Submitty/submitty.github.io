@@ -8,29 +8,6 @@ redirect_from:
 _Submitty Student Auto Feed is an optional command-line PHP script that can automatically
 fill or update classlists on a cron schedule._
 
-## Table of Contents
-1. [Requirements](#1-requirements)
-2. [Files](#2-files)
-3. [Course Database Backups](#3-course-database-backups)
-4. [Before Installing Auto Feed Script](#4-before-installing-auto-feed-script)
-  * [Student CSV Layout](#41-student-csv-layout)
-5. [Install on Ubuntu Server](#5-install-on-ubuntu-server)
-6. [Command Line Arguments](#6-command-line-arguments)
-7. [Configuration](#7-configuration)
-  * [Configurations (top)](#71-configurations)
-  * [Database Connection](#database-connection)
-  * [Error Logging](#error-logging)
-  * [CSV File Access](#csv-file-access)
-  * [CSV Delimiter](#csv-delimiter)
-  * [CSV Validation](#csv-validation)
-  * [CSV Fields Mapping](#csv-fields-mapping)
-  * [Student Registration Codes](#student-registration-codes)
-  * [Expected Term Code](#expected-term-code)
-  * [Windows Encoding Conversion](#windows-encoding-conversion)
-  * [End of Line Detection](#end-of-line-detection)
-  * [Timezone](#timezone)
-8. [PAM Authentication and `accounts.php`](#8-pam-authentication-and-accountsphp)
-
 ### 1. Requirements
 * Submitty Student Auto Feed is intended to be managed by a systems administrator or similar IT professional.
 * PHP 5.6 or higher with `pgsql` and `iconv` extensions.
@@ -39,20 +16,20 @@ fill or update classlists on a cron schedule._
 * A regularly updated CSV data feed of student enrollment.
   * Contact your university's registrar and/or data warehouse for assistance.
 
-<small>[Back To Table of Contents](#table-of-contents)</small>
+
 ### 2. Files
 Latest version of the auto feed script and supplmental files will be checked into the `master` branch in [`SysadminTools/student_auto_feed/`](https://github.com/Submitty/SysadminTools/tree/master/student_auto_feed)
 * `submitty_student_auto_feed.php` -- Executable PHP script to read student registration CSV and update Submitty classlist enrollment.
 * `config.php` -- **REQUIRED** config file for `submitty_student_auto_feed.php`
 * `accounts.php` -- **IMPORTANT** for Submitty servers utilizing PAM authentication.
 
-<small>[Back To Table of Contents](#table-of-contents)</small>
+
 ### 3. Course Database Backups
 Please use `db_backup.py` (located in [`SysadminTools/nightly_db_backup/`](https://github.com/Submitty/SysadminTools/tree/master/nightly_db_backup)) on a cron schedule to create nightly backups of course databases.
 
 Run `db_backup.py -h` to see extended help and argument list.
 
-<small>[Back To Table of Contents](#table-of-contents)</small>
+
 ### 4. Before Installing Auto Feed Script
 It is important that you can receive a regularly updated data feed of student enrollment.
 The data should be tabulated (like a spreadsheet), but must be written as a CSV file.
@@ -66,7 +43,7 @@ student enrollment data protected by FERPA ([U.S. federal statute 20 U.S.C. § 1
 Please take appropriate information protection measures.
 **_SUBMITTY IS NOT RESPONSIBLE FOR YOUR COURSE'S, DEPARTMENT'S, OR UNIVERSITY'S INFORMATION CONTROL POLICIES OR ACTIVITIES._**
 
-<small>[Back To Table of Contents](#table-of-contents)</small>
+
 ### 4.1 Student CSV Layout
 
 There are ten _required_ columns/fields, and one optional column/field processed by the submitty auto feed script.
@@ -108,7 +85,7 @@ The columns/fields may be in any order.
 * Columns/field data should *not* be enclosed by quotes.
   Quotation marks may be picked up as part of the data and fail certain validation checks.
 
-<small>[Back To Table of Contents](#table-of-contents)</small>
+
 ### 5. Install On Ubuntu Server
 As these are PHP scripts, they _should_ run on any computer that has PHP 5.6+ and the appropriate extensions installed.
 However, these instructions will focus on Ubuntu server (same OS that is supported for Submitty).  Ubuntu 16.04 uses PHP 7.0 by default, and Ubuntu 18.04 uses PHP 7.2 by default.
@@ -136,14 +113,14 @@ sudo chmod 0700 student_submitty_auto_feed.php
 sudo chmod 0600 config.php
 ```
 
-<small>[Back To Table of Contents](#table-of-contents)</small>
+
 ### 6. Command Line Arguments
 
 --- | ---
 `-h` `--help`    | Extended help including usage and argument list.
 `-t [term code]` | Manually set the term code.
 
-<small>[Back To Table of Contents](#table-of-contents)</small>
+
 ### 7. Configuration
 Configuration options exist in `config.php` as "constants".
 The goal, here, is to define each constant to a value reflective of your use of Submitty.
@@ -171,7 +148,7 @@ This defines the constant `CSV_FILE` and sets it to the value `/path/to/datafile
 _Do not change the constant_.
 Only change the constant's value.
 
-We would need to change the value to reflect where the student data CSV is located (did you [note this](#before_installing) back in chapter 5?).
+We would need to change the value to reflect where the student data CSV is located (did you [note this](/sysadmin/configuration/registration_feed#4-before-installing-auto-feed-script) back in chapter 5?).
 For example, if your data warehouse delivers the feed CSV to `/users/datawarehouse/enrollment.csv` -- then change the line to read:
 ```php
 define('CSV_FILE', '/users/datawarehouse/enrollment.csv');
@@ -184,12 +161,12 @@ Summaries are also provided as "code comments" within `config.php`.
 Consistent with C and Java styles, PHP code comments either begin with double slashes `//` or are multiple lines between `/*` and `*/`.
 Using a text editor with syntax highlighting will be highly beneficial as code comments will be given a unique text color (text coloring will vary from editor to editor).
 
-<small>[Back To Table of Contents](#table-of-contents)</small>
+
 ### 7.1 Configurations
 These options are set in `config.php`.
 `config.php` must exist in the same directory and be accessible by the same user account as `submitty_student_auto_feed.php`.
 
-<small>[Back To Table of Contents](#table-of-contents)</small>
+
 #### Database Connection
 ```php
 define('DB_HOST',     'submitty.cs.myuniversity.edu');
@@ -203,7 +180,7 @@ These options specify the login to the Submitty database for the hostname of the
 
 Note that the database is often on the same server as Submitty, but this is not required.  The database can be hosted on a separate server from Submitty.
 
-<small>[Back To Table of Contents](#table-of-contents)</small>
+
 #### Error Logging
 ```php
 define('ERROR_EMAIL',    'sysadmins@lists.myuniversity.edu');
@@ -219,7 +196,7 @@ Emailing error messages can be disabled by setting the value to `null` (without 
 Your campus may restrict or outright deny delivery of the error-log emails.
 Consult with your University's IT department regarding _unauthenticated_ email.
 
-<small>[Back To Table of Contents](#table-of-contents)</small>
+
 #### CSV File Access
 ```php
 define('CSV_FILE', '/path/to/datafile.csv');
@@ -229,7 +206,7 @@ These constants define how the CSV data can be accessed.
 * `CSV_FILE` is the absolute path to the CSV data file.
 * This script does not currently support network access to the CSV data file.
 
-<small>[Back To Table of Contents](#table-of-contents)</small>
+
 #### CSV Delimiter
 ```php
 define('CSV_DELIM_CHAR', chr(9));
@@ -260,7 +237,6 @@ Here are some example delimiters:
   define('CSV_DELIM_CHAR', ';');
   ```
 
-<small>[Back To Table of Contents](#table-of-contents)</small>
 #### CSV Validation
 ```php
 define('VALIDATE_MIN_FILESIZE', 65536);
@@ -285,7 +261,7 @@ This value includes any extraneous fields/columns that your University's registr
   If so, use the number of columns _in the CSV_ to set this option.
   Otherwise, all columns may be ignored and no enrollment additions or updates will be recorded.
 
-<small>[Back To Table of Contents](#table-of-contents)</small>
+
 #### CSV Fields Mapping
 ```php
 define('COLUMN_COURSE_PREFIX', 8);
@@ -342,9 +318,9 @@ That is, the first column of the CSV is #0, the second column is #1, the third c
 
 * `COLUMN_TERM_CODE` contains the code describing the current term.
   This is checked against the "expected" term code for validation.
-  q.v. [Expected Term Code](#expected_term_code)
+  q.v. [Expected Term Code](/sysadmin/configuration/registration_feed#expected-term-code)
 
-<small>[Back To Table of Contents](#table-of-contents)</small>
+
 #### Student Registration Codes
 ```php
 define('STUDENT_REGISTERED_CODES', array('RA', 'RW'));
@@ -365,7 +341,7 @@ In this case, `RA` may mean "Registered by Adviser" and `RW` may mean "Registere
 * Any student not associated with a registration code as listed in this option is assumed to have dropped the course or has otherwise been unregistered for some reason.
   In which case, an update will occur in Submitty's database to reflect the student is no longer enrolled in that course.
 
-<small>[Back To Table of Contents](#table-of-contents)</small>
+
 #### Expected Term Code
 ```php
 define('EXPECTED_TERM_CODE', '201705');
@@ -383,7 +359,7 @@ The student auto feed will check every row for this code and compare it with thi
 Rows that do not match the `define` value will be ignored.
 It is possible that when one row does not match, all rows will not match.
 
-<small>[Back To Table of Contents](#table-of-contents)</small>
+
 #### Windows Encoding Conversion
 ```php
 define('CONVERT_CP1252', true);
@@ -393,7 +369,7 @@ If your student CSV originates from a Windows computer, the auto feed may need t
 Set `CONVERT_CP1252` to `true` if the student CSV originates from a Windows computer.
 Otherwise, set to `false`.
 
-<small>[Back To Table of Contents](#table-of-contents)</small>
+
 #### End of Line Detection
 ```php
 ini_set('auto_detect_line_endings', true);
@@ -401,7 +377,7 @@ ini_set('auto_detect_line_endings', true);
 In summary, this `define` shouldn't be changed.
 It ensures that CSV files exported by Microsoft Excel for Macintosh are correctly processed.
 
-<small>[Back To Table of Contents](#table-of-contents)</small>
+
 #### Timezone
 ```php
 date_default_timezone_set('America/New_York');
@@ -423,7 +399,7 @@ Hawaii (no daylight savings) | `Pacific/Honolulu`
 
 For a complete list of timezones: <http://php.net/manual/en/timezones.php>
 
-<small>[Back To Table of Contents](#table-of-contents)</small>
+
 
 ### 8. PAM Authentication and `accounts.php`
 The script `accounts.php` will automate the creation of local accounts used with PAM authentication.
@@ -438,4 +414,4 @@ Run `accounts.php -h` to see extended help and argument list.
 It is recommended that this script is run every hour as a cron job.
 That way, should an instructor manually add a student to their course, the student's access to Submitty will be available "within an hour".
 
-<small>[Back To Table of Contents](#table-of-contents)</small>
+

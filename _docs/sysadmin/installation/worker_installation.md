@@ -6,7 +6,7 @@ redirect_from:
 ---
 
 A Submitty instance is capable of leveraging additional machines to
-[distribute autograding load](/developer/automated_grading).
+[distribute autograding load](/developer/development_instructions/automated_grading).
 This capability can be used to ship jobs which require
 additional resources or specialized hardware to appropriate machines.
 This guide details the steps to install Submitty in worker mode,
@@ -21,7 +21,7 @@ for your needs (as the script installs all of the dependencies that Submitty dep
 _Note: These instructions should be run under root/sudo._
 
 
-1. [Install Ubuntu 20.04 server edition](/sysadmin)
+1. [Install Ubuntu 20.04 server edition](/sysadmin/installation/server_os)
 
 2. Create a ```submitty``` user on the machine.  You may choose a different user name,
    but the user should only be used for submitty autograding.
@@ -86,7 +86,7 @@ _Note: These instructions should be run under root/sudo._
    *  Add a new entry with a unique key.
    *  add at least one capability to the capabilities list. This capability will determine
       which jobs should be shipped to this machine.  See also
-      [Automated Grading - Multiple Physical Servers](/developer/automated_grading#multiple-physical-servers)
+      [Automated Grading - Multiple Physical Servers](/developer/development_instructions/automated_grading#multiple-physical-servers)
    *  Add the 'address' of the machine to the address field (e.g. ```worker1.myuniversity.edu```).
    *  Add the number of autograding workers (simultaneously processed jobs) for the machine.
    *  Add the name of the submitty user on the machine as the username.

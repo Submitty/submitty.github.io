@@ -12,14 +12,14 @@ instructor would like to override the grade for a single student on a
 specific gradeable.  For example:
 
 * **Makeup Exam** Most of the students in the course sit for the [same
-    exam on paper, which is scanned and graded](bulk_pdf_upload) using
+    exam on paper, which is scanned and graded](/instructor/assignment_preparation/bulk_pdf_upload) using
     a detailed manual grading rubric.  One student is unable to make
     the original exam time and instead takes a makeup exam with
     different problems.  This makeup exam is graded outside of
     Submitty, with a completely different rubric.  The instructor can
     use Grade Override to bypass the rubric used for the assignment
-    and simply enter the total score to be used in [Rainbow
-    Grades](rainbow_grades).
+    and simply enter the total score to be used in
+    [Rainbow Grades](/instructor/course_settings/rainbow_grades/index).
 
 * **Plagiarism** If it is determined that a student submission is in
     violation of the university academic integrity policy, the Grade
@@ -65,8 +65,8 @@ When a student clicks on the Submission and View Grade page for a
 gradeable that has been overridden, they will see the yellow banner
 below.  They are still able to review their submitted materials (if
 any) and detailed rubric manual grading feedback (if any).  The
-overridden score will be visible only from [Rainbow
-Grades](rainbow_grades).
+overridden score will be visible only from
+[Rainbow Grades](/instructor/course_settings/rainbow_grades/index).
 
 ![](/images/studentOverriden.png)
 
@@ -84,7 +84,7 @@ overridden the page is highlighted in yellow as an alert.  The grader
 may still view all submitted materials and may still enter scores and
 feedback in the "Grading Rubric" panel.  The scores and feedback will
 be available to the student (see above).  But these scores will not be
-used in calculating the students overall course grade in [Rainbow
-Grades](rainbow_grades).
+used in calculating the students overall course grade in
+[Rainbow Grades](/instructor/course_settings/rainbow_grades/index).
 
 ![](/images/TAOverriden2.png)

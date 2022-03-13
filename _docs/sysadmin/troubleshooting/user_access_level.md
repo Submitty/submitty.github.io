@@ -89,4 +89,4 @@ the **Student** User Group.  And sometimes it is useful to put the
 head graduate teaching assistant in the **Instructor** group for a
 large course so they can assist with course management.
 
-See also [Create or Edit Gradeable](/instructor/create_edit_gradeable#grading-user-groups).
+See also [Create or Edit Gradeable](/instructor/assignment_preparation/index#create-a-new-gradeable)

@@ -7,7 +7,7 @@ redirect_from:
 
 Submitty has been selected for participation in
 [Google Summer of Code (GSoC) 2022](https://summerofcode.withgoogle.com/).  
-See [GSoC Application & Reports](google_summer_of_code) for more information about
+See [Submitty GSoC Application & Reports](/developer/google_summer_of_code/index) for more information about
 the application process and to read reports from Submitty GSoC contributers
 from Summers 2018, 2019, and 2020.
 
@@ -265,6 +265,6 @@ See also:
 
 * [Developer](/developer) pages
 
-* [How to Contribute](/developer/how_to_contribute) page
+* [How to Contribute](/developer/getting_started/how_to_contribute) page
 
 

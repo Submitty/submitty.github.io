@@ -24,7 +24,7 @@ will be able to read/execute it.
 _Note: These instructions should be run under root/sudo._
 
 
-1. [Install Ubuntu 20.04 server edition (or other supported distro)](/sysadmin)
+1. [Install Ubuntu 20.04 server edition (or other supported distro)](/sysadmin/installation/server_os)
 
    Note: If you are duplicating an existing Submitty installation onto a new server, you should
    synchronize `/etc/passwd`, `/etc/shadow`, `/etc/group`, and `/etc/gshadow` before installing
@@ -155,7 +155,7 @@ _Note: These instructions should be run under root/sudo._
    database host to the socket (e.g. `/var/run/postgresql`).
 
    NOTES:
-   - If you intend to run the [Student Auto Feed](student_auto_feed), do not
+   - If you intend to run the [Student Registration Feed](/sysadmin/configuration/registration_feed), do not
      disable TCP.
 
 7. Test apache config with:  `apache2ctl -t`
@@ -163,7 +163,7 @@ _Note: These instructions should be run under root/sudo._
    If everything looks ok, restart apache with:  `service apache2 restart'
 
 
-8. We suggest reviewing [Additional System Customizations](/sysadmin/system_customization)
+8. We suggest reviewing [Additional System Customizations](/sysadmin/installation/system_customization)
     that might be appropriate for your installation.
 
 
@@ -211,4 +211,4 @@ _Note: These instructions should be run under root/sudo._
 - **Installation Fails During NTP Setup**
   1.  This is indicative that you installed the Ubuntu 20.04 "Live" server.
       "Live" server is unsupported.  Please install the traditional server.
-      Please see the [Server OS](/sysadmin) page for more details.
+      Please see the [Server OS](/sysadmin/installation/server_os) page for more details.

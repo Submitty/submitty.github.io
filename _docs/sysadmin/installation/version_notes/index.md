@@ -2,7 +2,7 @@
 title: Version Notes
 category: System Administrator > Installation
 redirect_from:
-  - /system_administrator/version_notes
+  - /system_admin/version_notes
 ---
 
 The release notes below document additional manual steps required with
@@ -32,8 +32,8 @@ Refactors, Dependencies, etc.
 
 
 See also
-[Developer: How to Contribute](/developer/how_to_contribute) and
-[Developer: Migrations](/developer/migrations).
+[Developer: How to Contribute](/developer/getting_started/how_to_contribute) and
+[Developer: Migrations](/developer/development_instructions/migrations).
 
 
 

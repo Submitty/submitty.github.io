@@ -61,7 +61,7 @@ Functions can have multiple parameters sent to them through a URL.
 Functions may expect their variables to be numeric or alphabetical
 only, you can use the router to pattern match specific variables to
 prevent bad data from getting sent to your functions. Here are some
-[examples](/router#route-that-uses-post)
+[examples](/developer/software_and_system_design/router#route-that-uses-post)
 
 
 #### Specifying request types

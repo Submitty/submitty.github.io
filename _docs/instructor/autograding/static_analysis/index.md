@@ -7,7 +7,7 @@ redirect_from:
 
 
 Submitty provides a number of utilities for analysis of student code
-through the [assignment autograding configuration](assignment_configuration) interface.
+through the [assignment autograding configuration](/instructor/autograding/) interface.
 Many simple use-cases can be addressed using ``submitty_count``, which
 allows an instructor to count occurrences of a variety of syntactic
 features within student code.

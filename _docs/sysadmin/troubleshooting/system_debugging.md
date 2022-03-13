@@ -74,4 +74,4 @@ redirect_from:
 
   When you replace your `.cert` file for apache, be sure to also
   replace the `.pem` file for nginx.  See also
-  [v20.09.00 NGINX for Websocket Request](/sysadmin/version_notes/v20.09.00).
+  [v20.09.00 NGINX for Websocket Request](/sysadmin/installation/version_notes/v20.09.00).

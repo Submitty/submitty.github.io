@@ -97,7 +97,7 @@ redirect_from:
 
 
 1. If the top level `submitty` database does not exist, that must be
-   created first.  For more information: [Database Overview](database_overview)
+   created first.  For more information: [Database Overview](/sysadmin/troubleshooting/database_overview)
 
 
 2. Run the [create_course.sh script](https://github.com/Submitty/Submitty/blob/master/sbin/create_course.sh)
@@ -145,7 +145,7 @@ redirect_from:
    \q
    ```
 
-   For more information: [Database Overview](database_overview)
+   For more information: [Database Overview](/sysadmin/troubleshooting/database_overview)
 
 
 3. Add existing instructor(s) to the course database:

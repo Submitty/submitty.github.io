@@ -63,7 +63,7 @@ sudo systemctl start submitty_autograding_worker
 /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh
 ```
 
-See also: [Automated Grading](/developer/automated_grading)
+See also: [Automated Grading](/developer/development_instructions/automated_grading)
 
 ---
 

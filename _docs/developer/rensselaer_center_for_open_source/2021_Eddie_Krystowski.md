@@ -53,7 +53,7 @@ The PDF Editor tool is a tool for TAs and instructors that allows them to annota
 In the real Submitty environment, there are worker machines which share the load of autograding from the main machine, and could potentially have different capabilities as well. I implemented a configuration option that allows developers to create and run their own worker virtual machine alongside the main Submitty virtual machine to allow for easier debugging and testing of related features.
 
 - Changed setup scripts to allow for simultaneous provisioning of both the main Submitty VM as well as the worker VM
-    - Automates steps 1-7 of [the worker installation instructions](https://submitty.org/sysadmin/worker_installation).
+    - Automates steps 1-7 of [the worker installation instructions](/sysadmin/worker_installation).
 - Added command to start worker VM alongside Submitty VM
 
 See the [Virtual Box Worker](http://localhost:4000/developer/worker_vm) instructions for more information.

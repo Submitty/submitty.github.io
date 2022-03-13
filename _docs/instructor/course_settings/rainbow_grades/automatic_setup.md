@@ -2,7 +2,7 @@
 category: Instructor > Course Settings > Rainbow Grades
 title: Automatic Setup
 redirect_from:
-  - /instructor/rainbow_grades/automatic_setup
+  - /instructor/course_settings/rainbow_grades/automatic_setup
 ---
 
 _NOTE:  This is a work-in-progress._
@@ -37,7 +37,7 @@ see this option then the system administrator has not configured it.
 
 This tool is designed to run with no extra configuration on the instructors part.  If you see a message about 
 limited functionality mode, then please direct the system admin to the
-[Rainbow Grades configuration page](/sysadmin/rainbow_grades).
+[Rainbow Grades configuration page](/sysadmin/configuration/rainbow_grades).
 
 You may continue using this tool in limited functionality mode, however extra steps are required.  Before each use
 of the rainbow grades web interface, you must manually generate grade summaries by navigating to the ```Grade Reports``` 

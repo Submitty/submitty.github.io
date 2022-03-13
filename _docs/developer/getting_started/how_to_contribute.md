@@ -5,7 +5,7 @@ redirect_from:
   - /developer/how_to_contribute
 ---
 
-Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-new-developers).
+Be sure to read the [Suggestions for New Developers](/developer/getting_started/index#suggestions-for-new-developers).
 
 ### How to make a Pull Request (PR) to Submitty 
 
@@ -98,12 +98,12 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
 
       Most moderate database changes and software package
       installation/updates should be handled automatically by
-      [migrations](migrations) and do not need to be flagged in this
+      [migrations](/developer/development_instructions/migrations) and do not need to be flagged in this
       way.  However some operations, like edits to the Apache
       configuration should not be performed automatically via a
       migration because these files commonly have customizations that
       make automation difficult or problematic.    
-      See also: [Installation Version Notes](/sysadmin/version_notes)
+      See also: [Installation Version Notes](/sysadmin/installation/version_notes)
 
     * To help ensure a title follows our standards, we utilize a
     [GitHub workflow](https://github.com/Submitty/Submitty/blob/master/.github/workflows/pr_title.yml)
@@ -135,7 +135,7 @@ Be sure to read the [Suggestions for New Developers](/developer#suggestions-for-
      * Developers are encouraged to test all user interface modifications with
        [all available Submitty Themes](/student/account/theme):
        e.g., light mode, dark mode, black mode, to ensure compliance/improvement
-       of [Web Accessibility](interface_design_style_guide/web_accessibility).
+       of [Web Accessibility](/developer/software_and_system_design/web_accessibility).
 
      * Including screenshots/videos in the issue or PR message is
        helpful for UI changes -- both to solicit quick feedback from

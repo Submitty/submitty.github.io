@@ -31,7 +31,7 @@ Materials" label in the navigation bar.
 
 * Note: The total size of all files uploaded at one time must be less
   than or equal to 10 mb or the value of the
-  [upload file size limit](/sysadmin/system_customization#allowing-large-student-file-upload-submissions)
+  [upload file size limit](/sysadmin/installation/system_customization#allowing-large-student-file-upload-submissions)
   for your server.
 
 

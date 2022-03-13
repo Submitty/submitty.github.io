@@ -3,6 +3,7 @@ title: Update Submitty
 category: System Administrator > Installation
 redirect_from:
   - /developer/update
+  - /sysadmin/update
 ---
 
 

@@ -7,7 +7,7 @@ redirect_from:
 
 ### Configuration
 Submitty includes the ability for instructors to automatically generate rainbow grades by following the 
-[automatic setup instructions](/instructor/rainbow_grades/automatic_setup).
+[automatic setup instructions](/instructor/course_settings/rainbow_grades/automatic_setup).
   
 For this feature to work correctly:
 

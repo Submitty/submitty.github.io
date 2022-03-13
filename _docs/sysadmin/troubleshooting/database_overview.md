@@ -48,4 +48,4 @@ psql -d submitty -f /usr/local/submitty/GIT_CHECKOUT/Submitty/migration/migrator
 psql -d submitty -c "alter schema public owner to submitty_dbuser;"
 ```
 
-Then, continue setup by following the [Course Creation](course_creation) instructions.
+Then, continue setup by following the [Course Creation](/sysadmin/configuration/course_creation) instructions.

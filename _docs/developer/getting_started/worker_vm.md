@@ -123,6 +123,5 @@ vagrant destroy
     `Settings` -> `power` -> `suspend & power button` -> `automatic suspend` == off
     `Settings` -> `power` -> `blank screen` == `never`
 
-14. Follow the worker installation instructions:
-    [https://submitty.org/sysadmin/worker_installation](https://submitty.org/sysadmin/worker_installation)
+14. Follow the [worker installation instructions](/sysadmin/worker_installation)
 

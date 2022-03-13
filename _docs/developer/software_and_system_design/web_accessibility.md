@@ -42,7 +42,7 @@ selection of guidelines to help you get started.
 2. [The Most Important Concept](#the-most-important-concept)
 3. [HTML, CSS, and Javascript](#html-css-and-javascript)
 4. [All interactive controls must be usable by the keyboard](#all-interactive-controls-must-be-usable-by-the-keyboard)
-5. [All interactive controls require a textual description](#all-interactive-controls-require-a-textual-description)
+5. All interactive controls require a textual description
 6. [Data tables versus layout tables](#data-tables-versus-layout-tables)
 7. [All visual elements need to adhere to a minimum contrast ratio](#all-visual-elements-need-to-adhere-to-a-minimum-contrast-ratio)
 
