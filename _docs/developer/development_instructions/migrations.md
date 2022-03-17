@@ -191,7 +191,7 @@ directory or file structure:
 
 4.  Lastly, you should verify that the edits made to the database schema(s) match what you intended to edit in the following file(s):
 
-    `GIT_CHECKOUT/Submitty/migration/data/submitty_db.sql`
-    `GIT_CHECKOUT/Submitty/migration/data/course_tables.sql`
+    `GIT_CHECKOUT/Submitty/migration/migrator/data/submitty_db.sql`
+    `GIT_CHECKOUT/Submitty/migration/migrator/data/course_tables.sql`
 
     If the edits are not inline with what you intended, you may have to modify your new migration in order to achieve the desired result.
