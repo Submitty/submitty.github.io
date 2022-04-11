@@ -298,4 +298,15 @@ Additional links will appear to the right of the copyright notice and credit lin
 
 
 
+## Customizing the login screen
+
+You can customize the login screen with markdown. By default, `# Login` is rendered which you can replace or add onto.
+
+1. Create an empty file `login.md` and place it in Submitty's system configuration folder.
+  * The configuration folder is typically `/usr/local/submitty/config`.
+2. The `login.md` file must be readable by the `submitty_php` user.
+  * e.g. Set ownership of the file to `root:submitty_php` and permissions to `RW-R-----`.
+3. Place whatever content you would like to display on the login screen in this file. You may wish to start the file with `# Login` if you want to keep the current login header.
+
+Refer to [this](/student/communication/markdown) to learn more about markdown.
 
