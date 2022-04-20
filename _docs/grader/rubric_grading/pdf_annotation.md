@@ -13,5 +13,5 @@ Additionally, the grader can add annotations to PDF documents that the
 student has submitted.  These can be handwritten using a touchscreen
 or digital tablet or typewritten textboxes placed on the document.
 
-![](/images/ta_grading/rubric_grading_panels_2.png)
+![](/images/ta_grading/rubric_grading_pdf_annotation.png)
 
