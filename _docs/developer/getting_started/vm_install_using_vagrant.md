@@ -48,6 +48,11 @@ instructions.
    working. If these programs are essential to your workflow, consider
    looking up how to add a separate boot entry with "hypervisorlaunchtype"
    set to "off" for use with VirtualBox.
+   
+   **Note:**
+   Installing WSL2 may also reconfigure your OS to use Hyper-V or Windows hypervisor 
+   platform and prevent VirtualBox from working correctly. It is recommended to not install
+   or use WSL2 alongside Virtualbox for now.
 
 5. The complete installation process could take an hour or more.  Make
    sure your internet connection is strong and consistent.  You'll
