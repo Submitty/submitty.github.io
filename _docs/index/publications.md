@@ -5,6 +5,11 @@ redirect_from:
   - /publications
 ---
 
+* ["Metrics for Student Classroom Engagement and Correlation to Software Assignment Plagiarism"](https://github.com/Submitty/publications/raw/master/2022_SIGCSE_Engagement_Correlation_Plagiarism/2022_SIGCSE_Engagement_Correlation_Plagiarism_abstract.pdf)  
+William Allen, Shelly Belsky, Ben Kelly, Jenay Barela, Matthew Peveler, and Barbara Cutler  
+Poster at ACM Technical Symposium on Computing Science Education (SIGCSE), March 2022.
+
+
 * ["Student-Built Program Supports Thousands During Remote Learning Experience"](https://news.rpi.edu/content/2020/05/27/student-built-program-supports-thousands-during-remote-learning-experience)  
   Mary L. Martialay,  
   Rensselaer News,  

@@ -1,6 +1,6 @@
 ---
 title: Autograding Specification
-category: Instructor -- Autograding Configuration
+category: Instructor > Autograding
 redirect_from:
   - /instructor/assignment_configuration/specification
 ---
@@ -18,7 +18,7 @@ executables.
   **REQUIRED**
   
 * **field:** ``"notebook"``  
-  **type:** _array of notebook objects_ ([notebook docs](notebook))
+  **type:** _array of notebook objects_ ([notebook docs](/instructor/assignment_configuration/notebook))
 
 
 * **field:** ``"assignment_message"``  

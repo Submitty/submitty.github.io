@@ -25,7 +25,7 @@ _Note: Click on the <u>links</u> and <i class="fas fa-info-circle" style="font-s
            text="Organized and transparent system for tracking deadlines 
                  and verified student emergencies." %}
   * [bulk upload of scanned-to-pdf paper worksheets/exams](/instructor/bulk_pdf_upload)
-    * [assigned seating for exams](/instructor/rainbow_grades/room_templates)
+    * [assigned seating for exams](/instructor/course_settings/rainbow_grades/room_templates)
         {% include feature_text.html
            text="Randomized, assigned seating to combat cheating during written examinations." %}
     * [personalized exams with QR codes](/instructor/personalized_exams) to automate upload process
@@ -38,8 +38,8 @@ _Note: Click on the <u>links</u> and <i class="fas fa-info-circle" style="font-s
   * simple grading: [checkpoint grading](/grader/checkpoint_grading) and [numeric / text grading](/grader/numeric_text_grading) {% include feature_text.html text="<em>Remote Learning:</em> Can be used to score participation during synchronous video lectures and/or discussion forums." %}
   * [detailed rubric grading](/grader/rubric_grading) of submitted materials
   * web interface for file access or bulk download
-  * [assign sections of grading to different TAs](/instructor/create_edit_gradeable#grader-assignment-method)
-  * [digital PDF annotation](/grader/rubric_grading/pdf_annotations)
+  * [assign sections of grading to different TAs](/instructor/assignment_preparation/index#grader-assignment-method)
+  * [digital PDF annotation](/grader/rubric_grading/pdf_annotation)
   * grading progress indicator and [grade statistics & histogram](/grader/rubric_grading/statistics)
   * [retroactive rubric and point adjustment](/grader/rubric_grading/common_marks)
   * [grade inquiries](/student/grades/grade_inquiry) (clarifications/corrections of manual grading)
@@ -124,7 +124,7 @@ _Note: Click on the <u>links</u> and <i class="fas fa-info-circle" style="font-s
 &nbsp;
 
 
-* **[Semester grade summary -- *Rainbow Grades*](/instructor/rainbow_grades/index)** {% include feature_text.html text="In large courses, it is important to have a centralized database of grades and allow students to inspect their current grades, and facilitate corrections in the case of data entry errors.  <br>Frequent updates to the database and transparency about the grade calculation process can significantly reduce student confusion and reduce or eliminate student-TA-instructor communications in verifying and/or correcting term grades." %}
+* **[Semester grade summary -- *Rainbow Grades*](/instructor/course_settings/rainbow_grades/index)** {% include feature_text.html text="In large courses, it is important to have a centralized database of grades and allow students to inspect their current grades, and facilitate corrections in the case of data entry errors.  <br>Frequent updates to the database and transparency about the grade calculation process can significantly reduce student confusion and reduce or eliminate student-TA-instructor communications in verifying and/or correcting term grades." %}
   * implement grade formulas from the syllabus
     * options: curve, extra credit, drop lowest quiz, etc.
   * student can compare themself to hypothetical *average* student, *lowest A-* student, *lowest B-* student, etc.
@@ -146,9 +146,9 @@ _Note: Click on the <u>links</u> and <i class="fas fa-info-circle" style="font-s
   * university username & password (RPI RCS)
   * daily synchronization with registration data (SIS)
   * [student photo page](/instructor/student_photos) {% include feature_text.html text="A yearbook style layout of student faces is helpful to both TAs and instructors of large courses with lecture and recitation or lab, allowing instructors and TAs to identify students who may be struggling, but rarely ask for help." %}
-    * [ID photos downloaded from SIS](/instructor/student_photos#photo-scraper)
+    * [ID photos downloaded from SIS](/instructor/student_photos)
       {% include feature_text.html text="Coming soon: Students can upload their own passport-style photo." %}
-  * [multiple levels of access](/sysadmin/user_access_level#user-group-or-role)
+  * [multiple levels of access](/sysadmin/troubleshooting/user_access_level)
     * instructors {% include feature_text.html text="<em>Note:</em> Supports multiple instructors, and can designate a <em>head TA</em> with instructor access." %}
     * full access graders (graduate TAs)
     * limited access graders (mentors)

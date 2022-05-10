@@ -19,7 +19,7 @@ facilitating randomized assigned seating, QR codes, and notes/crib sheets:
 
 
 * Prepare the `test_seating.txt` file:  
-  _Note: [Rainbow Grades](/instructor/rainbow_grades/) can be used to generate this file._
+  _Note: [Rainbow Grades](/instructor/course_settings/rainbow_grades/index) can be used to generate this file._
 
     ```
     Jones     Sally    joness     2     Darrin  308   RED    8    9    6-7:50pm  

@@ -58,6 +58,16 @@ bundle exec jekyll build
 
 which will leave the results in a `_site` directory.
 
+### Running the link checker
+
+GitHub Actions checks each pull request for broken links using the
+[`htmlproofer`](https://github.com/gjtorikian/html-proofer)
+package.  If you wish to run `htmlproofer` locally, `cd` into the `submitty.github.io`
+repository and run the command:
+```
+bundle exec htmlproofer ./_site --assume-extension --empty-alt-ignore --disable_external
+```
+
 ## Editing Content
 
 The site's content is defined with markdown files under the

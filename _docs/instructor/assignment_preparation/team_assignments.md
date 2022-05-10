@@ -42,7 +42,7 @@ add a message that will be shown to other students viewing under
 ```Users Seeking Team/Partner```. Instructors can also set the
 instructions for the message.
 
-![](/images/instructor_team_message.png)
+![](/images/instructor_team_message.PNG)
 
 ### Creating And Editing Teams
 

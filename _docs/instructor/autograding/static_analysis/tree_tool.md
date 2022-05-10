@@ -1,11 +1,11 @@
 ---
-category: Instructor > Assignment Preparation > Automated Grading
+category: Instructor > Autograding > Static Analysis
 title: Tree Tool
 redirect_from:
   - /instructor/tree_tool
 ---
 
-make_tree.js and make_tree_interactive.py are tools to visualize the json output from [commonAST](/instructor/commonAST) and [static analysis](/instructor/static_analysis) as trees.
+make_tree.js and make_tree_interactive.py are tools to visualize the json output from [commonAST](/instructor/autograding/static_analysis/commonAST) and [static analysis](/instructor/static_analysis) as trees.
 
 
 ### make_tree.js

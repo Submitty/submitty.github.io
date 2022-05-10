@@ -1,6 +1,6 @@
 ---
-title: commonAST
-category: Instructor
+title: Common AST
+category: Instructor > Autograding > Static Analysis
 ---
 
 commonast.py is a static analysis tool to count different programming language constructs. 

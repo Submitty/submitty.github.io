@@ -76,6 +76,13 @@ php vendor/bin/phpstan analyze app
 
 Unlike flake8 and phpcs, a path or file _MUST_ be passed to phpstan.
 
+phpstan maintains a list of known errors in the [phpstan-baseline.neon](https://github.com/Submitty/Submitty/blob/master/site/phpstan-baseline.neon) file.
+If you fix one of these errors, you would need to regenerate this file which can be done by doing:
+
+```
+php vendor/bin/phpstan analyze app --generate-baseline
+```
+
 ## JavaScript Linting
 
 The frontend JavaScript code Submitty uses is linted using [eslint](https://eslint.org/).

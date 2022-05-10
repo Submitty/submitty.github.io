@@ -17,6 +17,6 @@ customization options for Rainbow Grades.
 ### Grades Summaries
 
 Use "Grade Summaries" option to export data for use with
-[Rainbow Grades](rainbow_grades).
+[Rainbow Grades](/instructor/course_settings/rainbow_grades/index).
 
 Or export to CSV using the "CSV Report" option.

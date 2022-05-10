@@ -7,18 +7,19 @@ redirect_from:
 ---
 
 Are you interested in joining the Submitty Development Team?  Please read:  
-[Suggestions for New Developers](/developer)  and  [How to Contribute](/developer/how_to_contribute).
+[Suggestions for New Developers](/developer/getting_started/index#suggestions-for-new-developers)  and  [How to Contribute](/developer/getting_started/how_to_contribute).
 
 
 ## Online Community Discussion
 
 We have a public [Slack server for Submitty Developers](https://join.slack.com/t/submitty/shared_invite/enQtMzE1NzgyMzUzNzI5LWZhOGM4NWU4M2U3ZmM2ZmM5NTYwNjk3NTc5Yjg1ZGRlYzU1MjcwYWNkNGYxZjk2YTk3ZmEyODY3MjEyOTc0M2E).
 
-Please use the Slack server `#general` and `#summerofcode2020` channels
-for Submitty installation problems, general development questions, and
-feature design discussion.  We have a small administration team and
-very much appreciate the Submitty community working together to help new
-developers.
+Please use the Slack server `#general-welcome` and
+`#gettingstarted-installation-development` and
+`#technical-developers-studio` channels for community introductions,
+to discuss Submitty installation problems, ask general development
+questions, and have feature design discussion.  We appreciate the
+Submitty community working together to help new developers.
 
 When asking for help on installation, please include your host
 operating system & version, and your versions of vagrant and virtual
@@ -37,24 +38,13 @@ ask the larger community.  Thank you!_
 ## Demo Submitty
 
 To try out Submitty, follow the developer instructions to create a
-[Submitty instance on your local machine](http://submitty.org/developer/vm_install_using_vagrant)
+[Submitty instance on your local machine](/developer/vm_install_using_vagrant)
 using virtual machine using Vagrant and Virtual Box.
 
 Download the [Autograding Tutorial Configurations & Example Submissions](https://github.com/Submitty/Tutorial/archive/main.zip).
 
 
 
-## Questions about Production Installations
-
-Instructors and system administrators who are interested in setting up a
-production Submitty installations at their school are welcome and encouraged to
-use the Submitty Google Groups mailing list:
-
-[submitty@googlegroups.com](mailto:submitty@googlegroups.com)  
-[https://groups.google.com/forum/#!forum/submitty](https://groups.google.com/forum/#!forum/submitty)  
-
-or contact the core Submitty development team:  
-[submitty-admin@googlegroups.com](mailto:submitty-admin@googlegroups.com)
 
 
 

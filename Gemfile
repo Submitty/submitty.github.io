@@ -2,9 +2,11 @@
 source 'https://rubygems.org'
 
 group :jekyll_plugins do
-  gem "github-pages", "223"
+  gem "github-pages", "226"
 end
 
 gem 'wdm', '>= 0.1.1' if Gem.win_platform?
 
 gem "webrick", "~> 1.7"
+
+gem 'html-proofer', "~> 3.19.3"

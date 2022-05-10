@@ -1,5 +1,5 @@
 ---
-category: Instructor > Assignment Preparation > Assignment Configuration
+category: Instructor > Autograding
 title: Sample Assignments
 redirect_from:
   - /instructor/premade_assignments

@@ -1,5 +1,5 @@
 ---
-category: Instructor > Automated Grading
+category: Instructor > Autograding
 title: Directory Structure
 redirect_from:
   - /instructor/directory_structure
@@ -102,7 +102,7 @@ redirect_from:
    script.
 
    For more details, please see: 
-   [Assignment Configuration Details](assignment_configuration)
+   [Assignment Configuration Details](/instructor/autograding/structure)
 
    NOTE: The script copies your homework configuration and testing
    files to the different subdirectories (```build```,

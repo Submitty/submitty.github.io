@@ -13,7 +13,7 @@ message) any test suite failures.
 Before running the test suite, you will need to ensure that autograding
 for csci1100 has been completed, and that you have generated grade
 reports for the course. This is the first step on the 
-[Rainbow Grades](/instructor/rainbow_grades) page.
+[Rainbow Grades](/instructor/course_settings/rainbow_grades) page.
 
 Right now Travis does not run the csci1100 test since the autograding of
 the sample assignments must complete prior to the test being run. If you
