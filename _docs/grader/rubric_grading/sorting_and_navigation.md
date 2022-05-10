@@ -21,28 +21,31 @@ in ascending or descending order.  Select the option once for ascending order, p
 **Random:** Sort students in a pseudo-randomized order.  The random order is different for each gradeable.  The purpose
 of this sorting order is to help distribute bias that comes along with always being graded first or last for each assignment.
 
-## Prev / Next Student Buttons
+## TA Grading Navigation Bar
 
-![](/images/sorting_and_navigation/prev_next_buttons.png)
+![](/images/sorting_and_navigation/navigation_bar.png)
 
-These buttons allow the grader to move to the next submission.
+### Prev / Next Student Buttons
 
-**Limited access graders:** These buttons will only move to submissions within the grader's assigned sections.
+![](/images/sorting_and_navigation/navigation_bar_arrows.png)
 
-**Full access graders:** These buttons can be used to browse submissions from all sections.
+These buttons allow graders to move between student submissions without going back to the grading index. By default,
+they move graders to the previous / next student according to the grading index's default sort. This can be changed in
+the TA grading settings to a variety of options: "Prev/Next Student", "Prev/Next Ungraded Student", "Prev/Next Itempool Student", "Prev/Next Ungraded Itempool Student", "Prev/Next Grade Inquiry", "Prev/Next Active Grade Inquiry".
 
-## Prev / Next Assigned Ungraded Student Buttons
+For full access graders and above, there is an additional option in the TA grading settings to select whether the prev / next buttons go through all students in the grading index or only students in the grader's assigned sections. For limited access graders, this option is hidden and the prev / next buttons will only go to students in the grader's assigned sections.
 
-These buttons allow the grader to move to the previous or next ungraded submission.
-It is worth noting that these buttons will only move to ungraded submissions within a grader's assigned sections.
+Note: If "Prev/Next Student" is not selected for prev / next arrow functionality, the rubric panel will affect the prev / next arrow; with no component open, selecting the next student button will go to the next student meeting the condition in the option for *any* component in the rubric (for "Prev/Next Ungraded Student", it will go to the next student with *any* component ungraded). When a component is open, selecting the next student button will go to the next student meeting the condition with *that specific* component in the rubric (for "Prev/Next Ungraded Student", it will go to the next student with *that specific* component ungraded).
 
-With no component open, selecting the next ungraded student button will move to the next submission with *any* component
-ungraded.  This mode is useful when a grader is responsible for grading all components for a given submission. *(See image below)*
+### Full-screen Button
 
-![](/images/sorting_and_navigation/closed_components.png)
+![](/images/sorting_and_navigation/navigation_bar_full_screen.png)
 
-When a component is open, selecting the next ungraded student button will move to the next submission with
-*that specific component* ungraded.  This mode is most useful when multiple graders are grading a single submission, each
-working on different components. *(See image below)*
+This button switches in and out of full-screen; full-screen hides the header, sidebar, and footer outside of the TA grading
+interface.
 
-![](/images/sorting_and_navigation/open_components.png)
+### Panel Selector Button
+
+![](/images/sorting_and_navigation/navigation_bar_panel_selector.png)
+
+This button brings up a modal that lets graders switch how many panels show up at once in the grading interface (from one to four panels) and also lets them configure how they are displayed in the interface.

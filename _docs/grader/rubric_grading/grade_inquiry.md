@@ -15,24 +15,13 @@ and [Enabling Grade Inquiries](/instructor/grade_inquiry_instructor).
 
   ![](/images/grade_inquiry/instructor_pending_grade_inquiry_gradeable_page.PNG)
 
-* Pressing that button will show details where there is a bold message
-  displaying the number of grade inquiries that are pending.
-
-  ![](/images/grade_inquiry/instructor_grade_inquiry_bold.PNG)  
-
-* Then clicking the blue 'Index of Grading Details for All Students'
-  button will display information for all students. Students with a pending grade inquiry will have a red 'Grade
+* Students with a pending grade inquiry will have a red 'Grade
   Inquiry' button next to their name.
 
   ![](/images/grade_inquiry/instructor_red_grade_inquiry_button.PNG)
 
 * Pressing that button will bring you to the TA grading
-  interface. There will be one tab with an exclamation mark meaning
-  there is a pending grade inquiry.
-
-  ![](/images/grade_inquiry/grading_toolbar_exclamation_icon.PNG)
-
-  There is matching yellow grade inquiry panel:
+  interface, where there is a "Grade Inquiry" panel.
 
   ![](/images/grade_inquiry/instructor_grade_inquiry_panel.PNG)  
 
@@ -42,6 +31,10 @@ and [Enabling Grade Inquiries](/instructor/grade_inquiry_instructor).
 
 * Note: All graders with access to view and grade this student can
   review these messages and participate in this private discussion.
+
+* Note: On the "Grading Stats" page there will be a bold message displaying the number of grade inquiries that are pending.
+
+  ![](/images/grade_inquiry/instructor_grade_inquiry_bold.PNG)  
 
 
 ### Reopening Grade Inquiries
