@@ -141,6 +141,7 @@ var NAVTREE =
                 [ "Update Submitty", "/sysadmin/installation/update", null ],
                 [ "Version Notes", "/sysadmin/installation/version_notes/index", [
                     [ "Overview", "/sysadmin/installation/version_notes/index", null],
+                    [ "v22.05.00", "/sysadmin/installation/version_notes/v22.05.00", null ],
                     [ "v22.03.00", "/sysadmin/installation/version_notes/v22.03.00", null ],
                     [ "v21.11.01", "/sysadmin/installation/version_notes/v21.11.01", null ],
                     [ "v21.06.04", "/sysadmin/installation/version_notes/v21.06.04", null ],
