@@ -23,6 +23,15 @@ redirect_from:
 
 2. You will be prompted to enter your username and password.
 
+   Depending how your university configured Submitty, git auth tokens
+   may be required instead of your password. When Git asks for a password
+   put your token in place of your password. To create a git auth
+   token navigate to the Git Auth Tokens page using the link on the
+   left menu bar. Once you generate a token, make sure to write it down
+   or save it within your Git client as you won't be able to see it again.
+   If you forget or lose your token you can always revoke old ones and
+   recreate a new token.
+
    If the command fails, check the assignment instructions.  Your
    instructor may not have created the intial repositories yet and you
    should check back later.  Contact your instructor if you think the
