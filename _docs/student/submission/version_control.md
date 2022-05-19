@@ -23,6 +23,9 @@ redirect_from:
 
 2. You will be prompted to enter your username and password.
 
+   _NOTE: You may be required to use an [Authentication Token](/student/account/authentication_tokens)
+   instead of your password._
+
    If the command fails, check the assignment instructions.  Your
    instructor may not have created the intial repositories yet and you
    should check back later.  Contact your instructor if you think the
