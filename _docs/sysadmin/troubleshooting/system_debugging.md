@@ -29,8 +29,14 @@ redirect_from:
   sudo journalctl -u submitty_websocket_server
   ```
 
-
 * Look for errors about sockets in:
+
+  ```
+  tail -n 50 /var/local/submitty/socket_errors/<TODAYS_DATE>.log
+  ```
+
+
+* Also for errors about sockets in:
 
   ```
   /var/log/syslog
