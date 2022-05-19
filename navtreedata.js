@@ -36,6 +36,7 @@ var NAVTREE =
                 [ "Preferred Name", "/student/account/preferred_name", null ],
                 [ "Email Address(es)", "/student/account/email_addresses", null ],
                 [ "Password", "/student/account/password", null ],
+                [ "Authentication Tokens", "/student/account/authentication_tokens", null ],
                 [ "Photo", "/student/account/photo", null ],
                 [ "Local Timezone", "/student/account/local_timezone", null ],
                 [ "Theme", "/student/account/theme", null ],
