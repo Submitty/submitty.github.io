@@ -89,6 +89,7 @@ var NAVTREE =
                     [ "Automatic Setup", "/instructor/course_settings/rainbow_grades/automatic_setup", null ],
                     [ "Manual Setup", "/instructor/course_settings/rainbow_grades/manual_setup", null ],
                     [ "Customization Basics", "/instructor/course_settings/rainbow_grades/customization_basics", null ],
+                    [ "Gradeables Customization", "/instructor/course_settings/rainbow_grades/gradeables", null ],
                     [ "Exam Seating", "/instructor/course_settings/rainbow_grades/exam_seating", null ],
                     [ "Room Templates", "/instructor/course_settings/rainbow_grades/room_templates", null ],
                     [ "RPI VPN on WSL Instructions", "/instructor/course_settings/rainbow_grades/wsl_vpn", null ]

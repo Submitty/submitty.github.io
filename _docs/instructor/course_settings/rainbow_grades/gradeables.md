@@ -1,8 +1,9 @@
 ---
-category: Instructor > Automated Grading
+category: Instructor > Course Settings > Rainbow Grades
 title: Gradeables Customization
 redirect_from:
   - /instructor/gradeables
+  - /instructor/rainbow_grades/gradeables
 ---
 
 Gradeables are complex enough to warrant their own ``"gradeables"`` array.
