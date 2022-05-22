@@ -68,10 +68,10 @@ To run it locally (from your host operating system), you can do the following:
 
 ```bash
 # from root level of Submitty repository
-php site/vendor/bin/phpstan analyze -c site/phpstan.neon site/app
+php site/vendor/bin/phpstan analyze -c site/phpstan.neon site/app site/public/index.php site/socket/index.php
 
 # or if in the site/ directory of the Submitty repository
-php vendor/bin/phpstan analyze app
+php vendor/bin/phpstan analyze app public/index.php socket/index.php
 ```
 
 Unlike flake8 and phpcs, a path or file _MUST_ be passed to phpstan.
@@ -80,7 +80,7 @@ phpstan maintains a list of known errors in the [phpstan-baseline.neon](https://
 If you fix one of these errors, you would need to regenerate this file which can be done by doing:
 
 ```
-php vendor/bin/phpstan analyze app --generate-baseline
+php vendor/bin/phpstan analyze app public/index.php socket/index.php --generate-baseline
 ```
 
 ## JavaScript Linting
