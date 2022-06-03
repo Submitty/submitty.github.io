@@ -20,6 +20,11 @@ redirect_from:
    `SPECIFY_TARGET_DIRECTORY` with a path and directory name on your
    computer.  Run the command.
 
+   If your instructor has an assignemnt subdirectory layout, you may need to change directory into the given assignment.
+   ```
+   cd hw1
+   ```
+
 
 2. You will be prompted to enter your username and password.
 
