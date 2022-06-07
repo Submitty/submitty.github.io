@@ -119,7 +119,7 @@ _TODO:_
 
 6. This script will create a directory structure in the current
    directory for the specified repository/gradeable, clone each
-   student respository, create a `provided` branch, and add the files
+   student repository, create a `provided` branch, and add the files
    to that branch.
 
    If a file has been removed from the provided code directory, it

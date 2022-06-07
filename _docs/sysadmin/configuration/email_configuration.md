@@ -7,7 +7,7 @@ redirect_from:
 
 
 Submitty can be configured to send email notifications in addition to
-on-site notications of actions such as instructor announcements, new
+on-site notifications of actions such as instructor announcements, new
 messages on the discussion forum, responses to grade inquiries,
 etc.  See also [notifications & email](/student/notifications).
 

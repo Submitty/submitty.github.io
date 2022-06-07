@@ -37,7 +37,7 @@ Peer matrix options allow to configure the peer grading assignments. My work on 
 
 * **Submit before grading** enables the instructor to allow grading to only those students who have submitted their own assignments. Note that this option should only be used when sufficient submissions have been made, usually after the submissions are closed. 
 
-* **Download Peer CSV**  exports the current peer matrix to csv which can be reuploaded for future/other peer assigments.
+* **Download Peer CSV**  exports the current peer matrix to csv which can be reuploaded for future/other peer assignments.
 
 * **Clear Peer Matrix**  resets the current peer matrix. Note that this option should be used carefully when randomized peer assignments are used as it can't be undone.
 
@@ -48,10 +48,10 @@ Sample course contains sample data which is used for various development purpose
 Optimized and modularized peer grading assignment function to better suit the unit testing needs.
 
 ## Optimized Queries for peer matrix.
-Wrote database queries and server side logic to optimize time take to set the peer matrix via upload csv method. The updated logic uses optimized sql queries along with bulk upload function to reduce the number of server interactions with the databse and pushed data at one go. 
+Wrote database queries and server side logic to optimize time take to set the peer matrix via upload csv method. The updated logic uses optimized sql queries along with bulk upload function to reduce the number of server interactions with the database and pushed data at one go. 
 
 ## Randomized peer assignmend in sample course
-Implemented the randomized peer assigments logic for the sample peer gradeables in the sample course.
+Implemented the randomized peer assignments logic for the sample peer gradeables in the sample course.
 
 ## Documentation
 Wrote documentation at submitty.org for
@@ -61,7 +61,7 @@ Wrote documentation at submitty.org for
 
 ## Review
 Reviewed pull request of fellow developers which included PRs on
-* Late submission sheck
+* Late submission check
 * Adding new grader to the peer matrix
 * Editing peer matrix
 * Upgrading download zip feature for peer gradeables

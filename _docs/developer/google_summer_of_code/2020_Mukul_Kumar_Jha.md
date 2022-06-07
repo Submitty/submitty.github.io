@@ -72,7 +72,7 @@ Following listed Pull Requests were created during the GSoC timeline under this 
 
 - [Plagiarism refactor and mobile page](https://github.com/Submitty/Submitty/pull/5516)
 - [[UI/UX:InstructorUI] Plagiarism full screen & resizable panels](https://github.com/Submitty/Submitty/pull/5611)
-    * Refactored plagarism module code, improved the MVC design flow and synced it with the existing codebase.
+    * Refactored plagiarism module code, improved the MVC design flow and synced it with the existing codebase.
     * Made plagiarism pages compatible across different sized screens.
     * Added full screen display and drag-bar to adjust width of the codebox panels.
 
@@ -150,7 +150,7 @@ Here are some of [my PRs](https://github.com/Submitty/submitty.github.io/pulls/m
 
 #### Overall Experience
 
-I got introduced to Submitty last year and from the very beginning, I loved the Submitty's objective and friendly environment, thanks to [Matthew Peveler](https://github.com/MasterOdin) for helping me with the onboarding and valueable feedbacks through your reviews.
+I got introduced to Submitty last year and from the very beginning, I loved the Submitty's objective and friendly environment, thanks to [Matthew Peveler](https://github.com/MasterOdin) for helping me with the onboarding and valuable feedbacks through your reviews.
 I am very thankful to [Barbara Cutler](https://github.com/bmcutler), Submitty, RPI, and the GSoC team for giving me this chance and for bringing in this amazing experience full of learning and fun.
 Complete project involved a lot of learning and challenges. I loved collaborating with RPI faculty and students and enjoyed working on the project used by not only RPI but a number of other universities across the globe.
 During the whole summer, all of my project mentors were super awesome and super supportive and I learned a lot from them. Special thanks to [Barbara Cutler](https://github.com/bmcutler), [Eli Schiff](https://github.com/elihschiff), [Shail Patel](https://github.com/shailpatels), [Evan Maicus](https://github.com/emaicus), [Matthew Peveler](https://github.com/MasterOdin). They helped me with designing the new interface and gave me interesting developer tips during the whole project, I also enjoyed reviewing other developers code. 

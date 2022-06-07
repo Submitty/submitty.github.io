@@ -13,7 +13,7 @@ and that we are not left with partial DB upgrades due to a broken script.
 To do this, we utilize a custom migration tool written for Submitty,
 [migrator](https://github.com/Submitty/Submitty/tree/master/migration). This tool
 can be used manually, as well as being baked into the
-installation/upgarde procedure of Submitty. For instance, running
+installation/upgrade procedure of Submitty. For instance, running
 `/usr/local/submitty/.setup/INSTALL_SUBMITTY.sh` will apply any pending
 migrations for all environments.
 

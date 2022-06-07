@@ -41,7 +41,7 @@ As a result, we expected Buildbot, the highly configurable Continues Integration
 In general, I was able to set up and have Builbot run builds on pull requests and also changes to the master branch.
 
 The major things are achieved here are :
-- Breakdown and seperation of builds, so using thesame concept of build stages distinct sections such as the `migrator`, `site`, and `autograder` where assigned independent Builbot bulders which run more concurrently.
+- Breakdown and separation of builds, so using thesame concept of build stages distinct sections such as the `migrator`, `site`, and `autograder` where assigned independent Builbot bulders which run more concurrently.
 - There's a dramatic increase in the speed of builds. In practise from between 10mins to 2 hours to less than 5 minutes for the parts that were moved.
 
 <p align="center">
@@ -64,7 +64,7 @@ To complement work being done on Buildbot, and also to help me understand the st
 #### References, major tasks
 
 * Modified python scripts related to generating Sample data for TA notes. [#3885](https://github.com/Submitty/Submitty/pull/3885)
-* Added generation of cancelled submitions in sample data. [#3848](https://github.com/Submitty/Submitty/pull/3848)
+* Added generation of cancelled submissions in sample data. [#3848](https://github.com/Submitty/Submitty/pull/3848)
 * Implemented shorchut buttons for the flatpick date picker. [#3963](https://github.com/Submitty/Submitty/pull/3963)
 * Fixed stream errors on Forensics page. [#4053](https://github.com/Submitty/Submitty/pull/4053)
 

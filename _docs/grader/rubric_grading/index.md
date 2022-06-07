@@ -19,9 +19,9 @@ into Registration or Rotating sections:
 The *white, green, yellow, blue, and purple stoplights* indicate
 grading progress per submission.  Submissions with incomplete grading
 will have a blue "Grade" button.  Completed grading will show the
-cummulative score for that submission.
+cumulative score for that submission.
 
-Clicking on a "Grade" or cummulative score buttons brings up the TA grading interface.
+Clicking on a "Grade" or cumulative score buttons brings up the TA grading interface.
 
 The "View All"/"View Your Sections" button switches between viewing all students registered in the course and registration or rotating sections assigned to the grader. This option is not available for limited access graders.
 
@@ -38,7 +38,7 @@ and dimensions of these panels.
 
 *  **File and Directory Browser** (blue border)  
    Displays the tree
-   hierachy of files and directories.  The grader can view each of the
+   hierarchy of files and directories.  The grader can view each of the
    submission files (the *submissions* directory) and various output and
    logging files produced during autograding (the *results* directory).
    If this gradeable is submitted via GIT or other VCS, the submission

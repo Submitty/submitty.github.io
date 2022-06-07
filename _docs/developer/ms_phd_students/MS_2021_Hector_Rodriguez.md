@@ -120,7 +120,7 @@ happened was a byproduct of the shippers’ original algorithm, summarized below
 3. Pick the oldest one, mark it as being graded, and send it to the worker.
 4. Unlock the autograding queue directory.
 5. Wait for the current submission to finish grading.
-6. Retreive the current submission’s results and save them.
+6. Retrieve the current submission’s results and save them.
 7. Return to Step 1.
 
 Although this works, this has the potential issue of bottlenecking very easily
@@ -294,6 +294,6 @@ Because of this, it would be interesting to experiment with various different
 scheduling algorithms in order to make a system that’s perhaps more “fair” in a
 different sense of the word. Furthermore, a more sophisticated algorithm could
 help overcome some trickier constraints. For example, a worker might have the
-computational capacity to grade mutliple small assignments or one big
+computational capacity to grade multiple small assignments or one big
 assignment. How “heavy” an assignment is is not something that the scheduler
 currently takes into account.

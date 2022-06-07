@@ -260,7 +260,7 @@ sudo systemctl restart php7.4-fpm.service
 ## Show system message to all users
 
 Submitty allows showing a message to all users on all pages. This is useful for advertising
-events that affect all users, such as system maintainence windows where it would be unavailable.
+events that affect all users, such as system maintenance windows where it would be unavailable.
 This message is shown in a yellow bar displayed underneath the header.
 
 To add or remove this message, edit `/usr/local/submitty/config/submitty.json` and add/remove the

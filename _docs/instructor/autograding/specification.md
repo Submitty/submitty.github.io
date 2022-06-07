@@ -148,7 +148,7 @@ executables.
   _NOTE: simple wildcards allowed._
 
   _NOTE: Each string command should be a LINUX command line that will
-  be executed during either the compilation or executation phases of
+  be executed during either the compilation or execution phases of
   automated grading._
 
 

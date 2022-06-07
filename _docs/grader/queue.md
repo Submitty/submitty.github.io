@@ -165,7 +165,7 @@ the current day.  As desired, you can click to view all queue events
 from the current day.  The history displays who was helped, how long
 they waited before help arrive, the length of time they were being
 helped, and who helped them.  The history includes an option to the
-student to the queue if they were accidently removed.
+student to the queue if they were accidentally removed.
 
 Students, graders, and instructors can view data on the office hours
 queue by clicking the "View Queue Stats" button in the Office Hours
