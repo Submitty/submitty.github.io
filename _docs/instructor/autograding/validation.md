@@ -168,7 +168,7 @@ is composed of a score for the associated testcase, as well as any messages that
 student.
 
 #### Configuring a Python Custom Validator
-```
+```json
 {
     "title" : "Sum of 5 random numbers",
     "command" : "./a.out 5",
