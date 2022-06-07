@@ -118,7 +118,7 @@ Your CSS file should go in the directory:
 /Submitty/site/public/css/
 ```
 
-Futher, as we are still integrating responsive design to the site, to soft "enable" mobile on
+Further, as we are still integrating responsive design to the site, to soft "enable" mobile on
 a page, you must explicitly add the following viewport tag to your HTML:
 ```
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />

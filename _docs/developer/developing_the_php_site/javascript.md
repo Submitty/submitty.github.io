@@ -15,7 +15,7 @@ minified JavaScript file that is served to the user.
 Unlike regular JS files, ES6 modules are not included into the global JS scope, and are self-contained. When a module is
 executed, it only has access to the things that it imports, and we cannot call functions defined within modules directly from
 the DOM. As such, to hook a function defined in a module to something in the DOM, such as a click event listener, you will need to 
-use the addEventListener API. This seperation of regular JS and modules also extends to HTML, attributes such as `onclick`
+use the addEventListener API. This separation of regular JS and modules also extends to HTML, attributes such as `onclick`
 and other inline event handlers cannot call functions defined in modules even if they are exported. 
 
 JavaScript modules are placed in the `Submitty/site/ts` directory and running the install script will launch esbuild

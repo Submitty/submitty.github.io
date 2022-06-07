@@ -5,7 +5,7 @@ category: Developer > Google Summer of Code 2019
 
 # Discussion Forum Refactor, VPAT & WebSocket Integration
 
-The project was an upgrade to the Discussion Forum module of the Submitty web application. The Discussion Forum allows students in a course to discuss their coursework, allowing image upload, links and code embed. My work over the summer made the Discussion Forum more user friendly in terms of accesibility and speed of using the Forum
+The project was an upgrade to the Discussion Forum module of the Submitty web application. The Discussion Forum allows students in a course to discuss their coursework, allowing image upload, links and code embed. My work over the summer made the Discussion Forum more user friendly in terms of accessibility and speed of using the Forum
 
 I am [Anubhav Singh](https://github.com/xprilion), an undergraduate student from [NSEC](https://nsec.ac.in), [Kolkata](https://en.wikipedia.org/wiki/Kolkata), as part of [Google Summer of Code](https://summerofcode.withgoogle.com/). 
 
@@ -88,7 +88,7 @@ Working with e2e tests using Selenium was new to me, and with continuous support
 
 ## Future Scope of Work
 
-I believe my work on the WebSocket opens up new avenues for not just the Discussion Forum but also for the rest of Submitty. It allows the possiblity of making a lot of existing features use the benefit of real time and to make new features which take benefit of it. I would look forward to seeing the following in Submitty in future - 
+I believe my work on the WebSocket opens up new avenues for not just the Discussion Forum but also for the rest of Submitty. It allows the possibility of making a lot of existing features use the benefit of real time and to make new features which take benefit of it. I would look forward to seeing the following in Submitty in future - 
 
 - Forum Search working as an extended filter, generating results on the same page instead of going to a new page.
 - Push Notifications to users
@@ -104,4 +104,4 @@ I had an enriching and exciting summer of 2019, working on Submitty under the [G
 
 I extended gratitude to [Saketh](https://github.com/sak6lab), Han and [Drumil](https://github.com/drumilpatel2000) whose comments/reviews helped me in a number of my PRs. 
 
-GSoC with Submitty was a warm and unforgettable experience for me. Everytime I talk of Open Source, Submitty will be remembered fondly.
+GSoC with Submitty was a warm and unforgettable experience for me. Every time I talk of Open Source, Submitty will be remembered fondly.

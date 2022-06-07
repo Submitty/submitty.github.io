@@ -9,7 +9,7 @@ the [python](/developer/testing/python_unit_tests) and [PHP](/developer/testing/
 unit tests, the [Autograding Integration Tests](/developer/testing/autograding_integration_tests),
 and the [Site End-to-End Tests](/developer/testing/site_end_to_end_tests).
 
-Submitty's CI is seperated into different workflows, each workflow contain a number of jobs that run the tests mentioned above. Some jobs can run in parallel and others may depend on other jobs. The workflows are written as yaml files and are located within the repository [here](https://github.com/Submitty/Submitty/tree/master/.github/workflows) under `Submitty/.github/workflows/`.
+Submitty's CI is separated into different workflows, each workflow contain a number of jobs that run the tests mentioned above. Some jobs can run in parallel and others may depend on other jobs. The workflows are written as yaml files and are located within the repository [here](https://github.com/Submitty/Submitty/tree/master/.github/workflows) under `Submitty/.github/workflows/`.
 
 Workflows can also be viewed under the [actions tab](https://github.com/Submitty/Submitty/actions) on the GitHub UI for Submitty's repository. Each workflow run and its status will also be listed here for commits pushed to branches and pull requests.
 

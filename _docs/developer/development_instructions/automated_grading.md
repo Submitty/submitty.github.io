@@ -156,7 +156,7 @@ To do this:
    ```
 
    And similarly from each machine that will be autograding (including
-   the primary machine, as appropriate), run the worker manger and
+   the primary machine, as appropriate), run the worker manager and
    watch the output:
 
    ```

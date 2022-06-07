@@ -27,7 +27,7 @@ redirect_from:
    instead of your password._
 
    If the command fails, check the assignment instructions.  Your
-   instructor may not have created the intial repositories yet and you
+   instructor may not have created the initial repositories yet and you
    should check back later.  Contact your instructor if you think the
    repositories should be available now.
 
@@ -140,7 +140,7 @@ Currently your work is only on your local machine.
 
 3. If you would like to submit this version of your work (for
    automatic and/or manual grading), go to the Submitty website for
-   this assigment and press the blue "Grade My Repository" button.
+   this assignment and press the blue "Grade My Repository" button.
 
    Submitty will checkout the latest version of your code committed
    and pushed to the server, and will run any automated tests and

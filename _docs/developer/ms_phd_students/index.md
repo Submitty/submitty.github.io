@@ -6,11 +6,11 @@ redirect_from:
   - /developer/poster_session
 ---
 
-### PhD Theses
+### PhD Thesis
 
 * Evan Maicus - PhD - *Expected May 2021*
 
-### Masters Theses / Projects
+### Masters Thesis / Projects
 
 * [Hector Rodriguez - MS - *Expected May 2021*](MS_2021_Hector_Rodriguez)
 

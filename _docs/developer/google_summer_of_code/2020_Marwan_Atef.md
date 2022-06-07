@@ -78,7 +78,7 @@ An example for the checkpoint cells updating with websockets
 6. Upon message receiving users call the associated function depending on the message type mentioned above (eg. `SocketNewPostHandler()`)
 7. The associated function makes an Ajax request to fetch the new post and place it in the correct place in the DOM.
 
-#### Refrences
+#### References
 
 * [WebSocket CLient wrapper](https://github.com/Submitty/Submitty/blob/master/site/public/js/websocket.js) `websocket.js`
 * [WebSocket Server](https://github.com/Submitty/Submitty/blob/master/site/app/libraries/socket/Server.php) `Server.php`

@@ -26,7 +26,7 @@ is not checked:
 ![](/images/ta_grading/silent_regrade_off_example.png)
 
 Note that the first component has now been graded by "instructor". If
-"Silent Regrade" is checked, the grader will not be overriden:
+"Silent Regrade" is checked, the grader will not be overridden:
 
 ![](/images/ta_grading/silent_regrade_on_example.png)
 

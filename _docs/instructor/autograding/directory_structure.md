@@ -110,7 +110,7 @@ redirect_from:
    ```config```), and compiles the ```config.h``` file with the core
    grading code located in
    [/usr/local/submitty/src/grading/](https://github.com/Submitty/Submitty/tree/master/grading)
-   to produce executables (stored in the ```bin``` diretory) that will
+   to produce executables (stored in the ```bin``` directory) that will
    be used for grading each submission.  You should not manually edit
    any files in these directories because they will be overwritten the
    next time ```./BUILD_csci1200.sh``` is run.
