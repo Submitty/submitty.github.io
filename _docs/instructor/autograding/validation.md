@@ -168,7 +168,7 @@ is composed of a score for the associated testcase, as well as any messages that
 student.
 
 #### Configuring a Python Custom Validator
-```
+```json
 {
     "title" : "Sum of 5 random numbers",
     "command" : "./a.out 5",
@@ -239,7 +239,7 @@ As input, a python custom validator can take:
 4. Command line arguments provided to this validator.
 
 ##### The Custom Validator Input JSON File
-```
+```json
 {
     "title" : "Sum of 5 random numbers",
     "command" : "./a.out 5",
@@ -262,14 +262,14 @@ When a python custom validator is run, it's associated validation object in the 
 with additional information that may be relevant to validation. In the above testcase,
 the following ```custom_validator_input.json``` might be created:
 
-```
+```json
 {
     "method" : "custom_validator",
     "command" : "python3 grader.py",
     "actual_file" : "STDOUT.txt",
     "expected_file" : "expected_output_1.txt",
     "testcase_prefix" : "test01/",
-    "username": "submitter_id"
+    "username": "submitter_id",
     "foo" : 7,
     "bar" : 2
 }
@@ -306,7 +306,7 @@ in a future release, so that ```stdout``` may instead be used for debug output.
 
 ##### Success
 A single response message:
-```
+```json
 {
     "status" : "success",
     "data": {
@@ -318,7 +318,8 @@ A single response message:
 ```
 
 Multiple messages:
-```
+```json
+{
     "status" : "success",
     "data": {
         "score" : 1,
@@ -349,10 +350,10 @@ to the student. The response should be made up of the following fields:
 Messages are displayed to the student in their testcase results.
 
 ##### Failure
-```
+```json
 {
-  'status' : "failure"
-  'message' : 'A failure message to help you debug the error'
+  "status" : "failure",
+  "message" : "A failure message to help you debug the error"
 }
 ```
 
