@@ -11,6 +11,9 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
+      
+      - name: List current dir
+        run: ls -la
 
       - name: Check Spelling
         uses: codespell-project/actions-codespell@master
