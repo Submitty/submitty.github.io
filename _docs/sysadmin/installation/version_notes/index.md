@@ -6,9 +6,9 @@ redirect_from:
 ---
 
 The release notes below document additional manual steps required with
-installation a new versions of Submitty.  These include editing of
-Apache configuration, or re-compilation/re-building of automated
-grading configurations.
+installation of new versions of Submitty.  These include editing
+Submitty configurations, Apache or Nginx configuration, or
+re-compilation/re-building of automated grading configurations.
 
 
 * Please click the sidebar links for detailed release notes.
