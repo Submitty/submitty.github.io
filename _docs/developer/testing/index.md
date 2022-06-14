@@ -17,7 +17,7 @@ these tests can be roughly broken down into the following high-level types:
 * [Autograding Integration Tests](autograding_integration_tests)
 * [Rainbow Grades Functional Tests](rainbow_grades_tests)
 
-To illustrate the difference between unit testing, integration testing, and end-to-end tests
+To illustrate the difference between unt testing, integration testing, and end-to-end tests
 (also often called functional tests) and what they are for, we recommend the following articles:
 
 * <https://codeahoy.com/2016/07/05/unit-integration-and-end-to-end-tests-finding-the-right-balance/>
