@@ -68,6 +68,14 @@ in [site/package.json](https://github.com/Submitty/Submitty/blob/master/site/pac
 As Submitty is an application, not a library, each dependency in both of those files are pinned to a specific
 version, and should not be set to use a range (e.g. use `1.0.0` over `^1.0.0`).
 
+For developing purposes, if there are code changes are made to the packages managed by [npm](https://npmjs.com) ( 
+[Submitty/pdf-annotate.js](https://github.com/Submitty/pdf-annotate.js) for example), to view the changes locally:
+  1. Clone the repo for the package into the Submitty VM.
+  1. Run `npm install`.
+  1. Run `npm run build`.
+  1. Edit the `package.json` file located in `site` to have the package point the new directory.
+  1. Run the install script.
+
 For python dependencies, we use [pip](https://pip.pypa.io/en/stable/). These are installed currently only at
 installation time, and not managed by Submitty currently. The current list of packages can be found in
 [.setup/install_system](https://github.com/Submitty/Submitty/blob/master/.setup/install_system.sh). You should
