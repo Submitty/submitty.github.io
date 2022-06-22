@@ -73,7 +73,10 @@ For developing purposes, if there are code changes made to the packages managed 
   1. Clone the repo for the package into the Submitty VM.
   1. Run `npm install`.
   1. Run `npm run build`.
-  1. Edit the `package.json` file located in `site` to have the package point the new directory.
+  1. Edit the `site/package.json` on the host machine to have the package point to the new directory temporarily. For example,
+    ```
+    "@submitty/pdf-annotate.js": "file:///PATH/TO/THE/CLONED/REPO/IN/VM",
+    ```
   1. Run the install script.
 
 For python dependencies, we use [pip](https://pip.pypa.io/en/stable/). These are installed currently only at
