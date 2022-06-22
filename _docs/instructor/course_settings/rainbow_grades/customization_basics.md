@@ -49,7 +49,7 @@ It can contain the following:
   **REQUIRED** if using ``"curve"`` in ``"gradeables"`` described below, or if any grade-letter benchmarks are used in ``"display_benchmark"`` above.
 
   Each of the benchmarks starting with "lowest" should be in this array along with the minimum percentage of total points
-  neccessary to obtain that grade. For example to require an 82% for an A-, there should be an entry in the ``"benchmark_percent"`` array:
+  necessary to obtain that grade. For example to require an 82% for an A-, there should be an entry in the ``"benchmark_percent"`` array:
   ``"lowest_a-": 0.82``
 
 * **field:** ``"section"``  

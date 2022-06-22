@@ -74,7 +74,7 @@ The site's content is defined with markdown files under the
 [`docs/`](https://github.com/Submitty/submitty.github.io/blob/main/_docs) folder, where
 then it's separated by a couple of high-level sections (student, instructor,
 sysadmin, developer).  For any new page, a new entry must be added to the
-navigation manually (see below). The rendered markdown uses a varient of
+navigation manually (see below). The rendered markdown uses a variant of
 [Github Flavored Markdown](https://github.github.com/gfm/). For every page,
 it should have a front-matter block at the top of the file that has minimally:
 

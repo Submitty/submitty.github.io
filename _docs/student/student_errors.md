@@ -33,7 +33,7 @@ an issue with new lines. That is probably due to "\r\n" vs "\n". Windows uses
 
 Kill signals exist to prevent a piece of code from running too long and using
 up resources. Sometimes a kill signal will be sent due to an infinite loop
-in your code. If you do not get an infinte loop during local testing it is
+in your code. If you do not get an infinite loop during local testing it is
 possible the inputs being used on Submitty are causing your code to loop.
 Even if you did not experience this during testing.
 
@@ -51,7 +51,7 @@ If you are using python, ineffeicant use of dictionaries, and sets can cause thi
 
 ### Segmentation Fault
 
-For anyone who has ever programmed in a language with explicit memory managment such as C/C++
+For anyone who has ever programmed in a language with explicit memory management such as C/C++
 you are probably familiar with the infamous and seemingly unhelpful error know as Segmentation Fault.
 In short however a SegFault is the result of a memory access violation.
 
@@ -59,8 +59,8 @@ This can occur for a number of reasons, first case we will look at is going out 
 If while iterating over a list your index is out of the range of the list this can 
 result in a memory SegFault.
 
-Another possibily is when using pointers, if a pointer on the stack is initialzied to NULL
-or never intialized in the first place but you try to dereference it this is the same thing 
+Another possibly is when using pointers, if a pointer on the stack is initialzied to NULL
+or never initialized in the first place but you try to dereference it this is the same thing 
 as a NUllPointerException in Java and is a very common issue when dealing with pointers 
 which are commonly found when dealing with Tree structures and and linked lists.
 
@@ -71,5 +71,5 @@ not so large that you run out of memory trying to solve it.  A common example
 of this is infinite recursion. Make sure the base case is eventually called.
 
 There are other reasosn for SegFaults but these are very common examples.
-However what ever the reason DrMemory/Valgrind and gdb are exellent tools to 
-help with more advanced errors if print debugging isnt cutting it. 
+However what ever the reason DrMemory/Valgrind and gdb are excellent tools to 
+help with more advanced errors if print debugging isn't cutting it. 

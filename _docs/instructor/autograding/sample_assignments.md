@@ -9,7 +9,7 @@ redirect_from:
 
 This page is intended for high school teachers who are teaching
 AP Computer Science A. It contains instructions on how to access
-the premade jave assignments. The assignments can be accessed at 
+the premade java assignments. The assignments can be accessed at
 [Java Assignment Repository](https://github.com/Submitty/IntroToJava).
 All of the assignments are intended to be completed in a week.
 
@@ -36,7 +36,7 @@ Learning Objective:
 ```
 Output to console
 data types (int, double, char, boolean, String)
-mathmatical operations (+, -, *, \, %)
+mathematical operations (+, -, *, \, %)
 ```
 
 #### Homework 2
@@ -46,7 +46,7 @@ Learning Objective:
 Data types
 Collect user input and store in variable
 Easy to understand variable names
-Mathmatical operators in Java
+Mathematical operators in Java
 ```
 
 #### Homework 3

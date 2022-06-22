@@ -114,7 +114,7 @@ Edit your Apache configuration:
 You can follow the steps above, or copy the configuration from
 the repository (with edits) and restart Apache.
 
-1. Copy the Apache config from the repostiory:
+1. Copy the Apache config from the repository:
 
    ```
    cp /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/vagrant/sites-available/submitty.conf /etc/apache2/sites-enabled/submitty.conf 

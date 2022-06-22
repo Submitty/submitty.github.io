@@ -22,12 +22,12 @@ commitments.  They are also helpful if you get "stuck" on an
 assignment and need to see the TA or instructor in office hours for
 help before completing the assignment.  They can also be useful for a
 minor illness or personal situation that is not covered by a formal
-medical excused absense.
+medical excused absence.
 
 The late day policy is subject to a few rules:
 
 * The instructor may limit the maximum number of late days that may be
-  used on an assignment.  These restrictions facilitiate prompt TA
+  used on an assignment.  These restrictions facilitate prompt TA
   grading and release of assignment solutions.  Please check the
   assignment instructions and your course syllabus to determine the
   late day limit for each assignment.
@@ -86,12 +86,12 @@ If there is an error in the information in this table, consult the
 course syllabus and contact your TA or instructor as appropriate.
 
 
-## Excused Absense Extensions
+## Excused Absence Extensions
 
 The late day usage table above also displays any assignment extensions
 that have been entered for you by your instructor.  Check your course
 syllabus to learn the procedure for submitting the necessary
-documentation to request a formal excused absense extension for
+documentation to request a formal excused absence extension for
 medical or personal reasons.
 
 Extensions allow you to submit an assignment late without penalty and
@@ -100,5 +100,5 @@ extension before or after you submit your assignment.  The late days
 information for all assignments will be automatically re-calculated
 after new information is entered into the system.
 
-Excused absense extensions are applied to a specific assignment and
+Excused absence extensions are applied to a specific assignment and
 may not be saved for future assignments.
