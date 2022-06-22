@@ -27,7 +27,7 @@ see the photos of the students in their assigned registration sections.
 ### How to Upload Photos
 
   * Photos must be a supported image format (`png`, `jpeg`, `jpg`, `gif`, or `webp`)
-    and mustbe named with the students username (lowercase), e.g., `smithj.png`
+    and must be named with the students username (lowercase), e.g., `smithj.png`
 
   * Click the "Upload Student Photos" button on the top right hand side
     of the page.  This option is only available to instructors.
