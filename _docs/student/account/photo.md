@@ -20,8 +20,8 @@ message will be displayed and your profile photo will be replaced or removed.
 
 ![](/images/student/flagged_photo.png)
 
-After submitting 50 profile photos, you will not be able to upload any more profile photos and
-the following message will be displayed if you attempt to upload another photo.
+Each user is limited to uploading a total of 50 profile photos. 
+Once this limit has been reached, the following message will be displayed if you attempt to upload another profile photo.
 
 ![](/images/student/exhausted_profile_photo_quota.png)
 

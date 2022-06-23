@@ -8,12 +8,11 @@ redirect_from:
 
 In a large class, it can be difficult for instructors, full-access graders, and
 limited-access graders to learn the names of their students.  The Student Photos page is accessed from
-the "Student Photos" tab on the sidebar located on the course's pages.  
+the "Student Photos" tab on the sidebar located on the course's pages.
 
-![](/images/student_photos_sidebar_tab.png)
 
 Instructors can upload photos of their students and view all uploaded students’ photos.
-Full-access graders and limited-access graders also have access to this page. 
+Full-access graders and limited-access graders also have access to this page.
 Full-access graders can see photos of all students in the course, while limited-access graders can only
 see the photos of the students in their assigned registration sections.
 
