@@ -40,7 +40,7 @@ see the photos of the students in their assigned registration sections.
 
     The total file size per upload should not exceed 200MB or 204800KB.
 
-  * After hitting submit, if the page does not automatically refresh after a
+  * After pressing submit, if the page does not automatically refresh after a
     couple seconds, please refresh the page.
 
 
