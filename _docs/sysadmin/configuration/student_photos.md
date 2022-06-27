@@ -38,7 +38,9 @@ see the photos of the students in their assigned registration sections.
 
     ![](/images/student_photos_upload_form.png)
 
-    The total file size per upload should not exceed 200MB or 204800KB.
+    The limit to the total file size per upload is based on your Apache upload POST size.
+
+    _See also: [Configuring Upload Size Limit](/sysadmin/installation/system_customization#allowing-large-student-file-upload-submissions)_
 
   * After pressing submit, if the page does not automatically refresh after a
     couple seconds, please refresh the page.
