@@ -3,18 +3,42 @@ category: Student > Courses & Profile
 title: Authentication Tokens
 ---
 
-Depending how your university has configured Submitty and security, an
-Authentication Token may be required instead of your password.
+Depending how your school has configured Submitty and security, an
+Authentication Token may be required in some instances
+instead of your password.
 
 See Also: [Homework Submission via Version Control / GIT](/student/submission/version_control)
 
+
 ## Creating a new Authentication Token
 
-To create a git auth token navigate to the Git Auth Tokens
-page using the link on the left menu bar. Once you generate a token,
-make sure to write it down or save it within your Git client as you
-won't be able to see it again.  If you forget or lose your token you
-can always revoke old ones and recreate a new token.
+Navigate to the "Authentication Token" page using the link on the left
+menu bar.  Press the "Create New VCS Authentication Token" to create a
+new authentication token.  If you use Submitty from multiple
+computers/devices, you are recommended to create a different token for
+each machine, and give each token a descriptive name and appropriate
+expiration date.
+
+Once you generate a token, the newly-generated token will be displayed
+at the top of the page.  *NOTE: Do not share this token with
+others. Treat it like a password.*
+
+Save this value in a secure place -- it will not be displayed if you
+reload this webpage.  If you forget or lose your token you can always
+revoke old ones and recreate a new token.
+
+
+
+## Using your Authentication Token
+
+Your VCS / GIT Authentication Token can be used to access a
+Submitty-hosted VCS / GIT repository.  Use your Authentication Token
+when prompted for a password.
+
+NOTE: This token will likely be automatically saved and managed by
+your local operating system.  You should not need to re-enter the token each
+time you pull or push code from the repository on the remote server.
+
 
 ## Managing Authentication Tokens
 
@@ -22,6 +46,8 @@ can always revoke old ones and recreate a new token.
    To review and manage what Authentication Tokens are stored on your
    system, open the **Keychain Access** application from Launchpad.
 
-* **Windows**
+* **Windows**  
+   *TODO: Write instructions*
 
-* **Linux**
+* **Linux**  
+   *TODO: Write instructions*
