@@ -196,7 +196,7 @@ To configure your system:
       using the Web UI.
 
       ```
-      TODO: ADD URL & SCRENNSHOTS
+      TODO: ADD URL & SCREENSHOTS
       ```
 
     * Periodically, check the validity and completeness of data in the
@@ -206,7 +206,19 @@ To configure your system:
       TODO: INSERT THESE INSTRUCTIONS
       ```
 
-4.  After making the switch to SAML, you will likely want to force
+4. Customize your login screen.  Write markdown in `/usr/local/submitty/config/login.md`.
+
+   For example:
+
+   ```
+   ![image](/img/University_Logo.png)
+
+   Submitty now uses Authentication via Cisco Duo.
+   Contact submitty-admin@university.edu if you have problems or questions.
+   ```
+
+
+5.  After making the switch to SAML, you will likely want to force
     everyone to re-authenticate with your new Identity Provider
     (IdP).  This can be done in a few ways:
 
