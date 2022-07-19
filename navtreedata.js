@@ -161,6 +161,7 @@ var NAVTREE =
             [ "Configuration & Administration", "/sysadmin/configuration/course_creation", [
                 [ "Course Creation", "/sysadmin/configuration/course_creation", null ],
                 [ "Setting up Version Control", "/sysadmin/configuration/version_control", null ],
+                [ "SAML Authentication", "/sysadmin/configuration/saml_authentication", null ],
                 [ "Email Configuration", "/sysadmin/configuration/email_configuration", null ],
                 [ "Registration Feed", "/sysadmin/configuration/registration_feed", null ],
                 [ "Course Archiving", "/sysadmin/configuration/course_archiving", null ],
