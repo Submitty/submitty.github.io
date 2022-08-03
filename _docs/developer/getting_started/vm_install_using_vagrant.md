@@ -251,7 +251,7 @@ instructions.
 
    * Make sure the HTTPS certificate is trusted by your browser.
 
-     For more information, see [WebSocket](/developer/developing_the_php_site/WebSocket)
+     For more information, see [WebSocket](/developer/developing_the_php_site/websocket)
 
    * You can test the submission, autograding, and viewing of the
      grades details by uploading sample submissions from the Submitty
