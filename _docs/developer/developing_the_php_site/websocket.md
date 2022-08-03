@@ -88,3 +88,22 @@ const ws = new WebSocket('ws://localhost:1511/ws');
 ws.onmessage = (data) => console.log(data);
 ws.send('ping');
 ```
+
+### Debugging WebSocket in HTTPS
+
+Note that most browsers could not trust WebSocket traffics with self-
+signed certificates.  If you are dealing with WebSocket related features,
+there are some workarounds:
+
+- Copy the certificates from your VM and trust it on your host system;
+
+- OR, Trust/Ignore the certificates on your browser;
+
+- OR, Downgrade to HTTP/1.1 without TLS using `.setup/dev-upgrade-h2.sh down`.
+
+You could try following to trust/ignore certificates on your browser:
+
+- For Chrome, start Chrome with `--ignore-certificate-errors`.
+
+- For Firefox, trust the certificate when the warning pops up;
+  And go to `https://localhost:8443/ws` and hit trust again.
