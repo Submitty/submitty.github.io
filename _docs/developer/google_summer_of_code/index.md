@@ -65,6 +65,14 @@ student project reports from previous summers linked below.
 &nbsp;  
   
 
+## Google Summer of Code 2022
+
+* [TBA by Akshat Batra](/developer/google_summer_of_code/2022_Akshat_Batra)
+
+* [TBA by Madhur Jain](/developer/google_summer_of_code/2022_Madhur_Jain)
+
+* [TBA by Poorna Gunathilaka](/developer/google_summer_of_code/2022_Poorna_Gunathilaka)
+
 
 
 ## Google Summer of Code 2020
