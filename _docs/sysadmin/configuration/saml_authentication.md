@@ -125,14 +125,59 @@ To configure your system:
       for your Identity Provider and university policies.
 
       ```
-      TODO: Insert sample C++ source code.
+      #include <iostream>
+      #include <regex>
+      #include <string>
+
+      // see also:
+      // http://submitty.org/sysadmin/configuration/saml_authentication
+
+      int main(int argc, char** argv) {
+
+        // must be called with a single argument, the username to validate
+        // as a SAML username
+        if (argc != 2) {
+          std::cout << "invalid" << std::endl;
+          return 0;
+        }
+
+        // exceptions for VALID userames
+        if (std::string(argv[1]) == "actually_a_valid_username"
+            ) {
+          std::cout << "valid" << std::endl;
+          return 0;
+        }
+
+        // exceptions for INVALID userames
+        if (std::string(argv[1]) == "abc" ||
+            std::string(argv[1]) == "def" ||
+            ) {
+          std::cout << "invalid" << std::endl;
+          return 0;
+        }
+
+        // general pattern for VALID usernames
+        if (std::regex_match(argv[1], std::regex("^[a-z]{2,6}[0-9]{0,2}$"))) {
+          std::cout << "valid" << std::endl;
+          return 0;
+        }
+        std::cout << "invalid" << std::endl;
+      }
       ```
 
-      Compile this program to an executable with this path:
+      Compile this program to an executable with the path
+      `/usr/local/submitty/config/saml/validate`:
+      ```
+      clang++ -g -O3 -o /usr/local/submitty/config/saml/validate /usr/local/submitty/config/saml/validate.cpp
+      ```
 
+      Set the owner, group, and permissions of this file,
+      NOTE:  `submitty_cgi` must have execute permissions:
       ```
-      /usr/local/submitty/config/saml/validate
+      chown root:submitty_php /usr/local/submitty/config/saml/validate
+      chmod 750 /usr/local/submitty/config/saml/validate
       ```
+
 
     * Put all current users into the SAML table by running:
 
@@ -140,10 +185,11 @@ To configure your system:
       /usr/local/submitty/sbin/saml_utils.php --add_users
       ```
 
-      This program will run for a while -- a few seconds per user on
+      This program may run for a few minutes, it will take a few seconds per user on
       your system.  It checks the SAML validity of every username and
       inserts this information into the `saml_mapped_users` table
       of the main Submitty database.
+
 
     * Inspect the contents of the SAML user data in the main Submitty
       database.
@@ -191,20 +237,26 @@ To configure your system:
       ...
       ```
 
-      Correct and/or add additional SAML id to Submitty user id
-      mappings to this table either through manual database inserts or
-      using the Web UI.
-
-      ```
-      TODO: ADD URL & SCREENSHOTS
-      ```
 
     * Periodically, check the validity and completeness of data in the
-      saml table using the username validation script.
+      saml table using the username validation script:
 
       ```
-      TODO: INSERT THESE INSTRUCTIONS
+      /usr/local/submitty/sbin/saml_utils.php --validate_users
       ```
+
+      This program may run for a few minutes, it will take a few
+      seconds per user on your system.
+
+
+    * Correct and/or add additional SAML id to Submitty user id
+      mappings to this table either through manual database inserts or
+      using the Web UI, accessible from the left sidebar of a superuser account, `SAML Management`.
+
+      ```
+      TODO: add screenshots
+      ```
+
 
 4. Customize your login screen.  Write markdown in `/usr/local/submitty/config/login.md`.
 
