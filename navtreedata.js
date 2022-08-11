@@ -129,6 +129,7 @@ var NAVTREE =
                 [ "Docker UI", "/instructor/autograding/docker_ui", null ],
                 [ "Static Analysis", "/instructor/autograding/static_analysis/index", [
                     [ "Overview", "/instructor/autograding/static_analysis/index", null ],
+                    [ "Count TS", "/instructor/autograding/static_analysis/countTS", null ],
                     [ "Tree Tool", "/instructor/autograding/static_analysis/tree_tool", null ],
                     [ "Common AST", "/instructor/autograding/static_analysis/commonAST", null ],
                     [ "CPP Union Tool", "/instructor/autograding/static_analysis/cppUnionTool", null ],
