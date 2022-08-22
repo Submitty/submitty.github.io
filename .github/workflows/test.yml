@@ -1,14 +1,11 @@
-name: Ruby
+name: Test
 
 on:
   push:
-    branches: [ '*' ]
   pull_request:
-    branches: [ '*' ]
 
 jobs:
   test:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -31,4 +28,4 @@ jobs:
       run: bundle exec jekyll build
 
     - name: Check Links
-      run: bundle exec htmlproofer ./_site --assume-extension --empty-alt-ignore --disable_external
+      run: bundle exec htmlproofer ./_site --assume-extension --empty-alt-ignore
