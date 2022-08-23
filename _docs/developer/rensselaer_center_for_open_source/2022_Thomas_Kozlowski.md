@@ -13,6 +13,13 @@ shifted focus to learning about Docker and its use with autograding, as well as
 investigating performance issues that result in incorrect grades being assigned
 when grading too many assignments in parallel.
 
+The Docker performance is complicated and needs more work to get to a proper
+solution. I mainly worked on trying to identify what causes the performance
+issues and searched for ways that might help solve the problem. Ideally, it
+would be great to always get the correct autograding result, but the next best
+would be to provide warnings or errors to suggest fewer autograding jobs should
+be run in parallel.
+
 ### Smaller fixes and features
 
 - Button to demote a user from grader to student
@@ -22,6 +29,7 @@ when grading too many assignments in parallel.
 - Added course section numbers to the Submitty homepage
 - Fixed a bug that caused the late day message to be displayed incorrectly
 - Fixed a bug that caused worker machine installation to fail
+- Improved the container log for autograding
 
 ### In progress work
 
@@ -37,3 +45,4 @@ when grading too many assignments in parallel.
 ### Future work
 
 - Adding an execution logfile for autograding with additional statistics
+- Further work on the performance of docker autograding
