@@ -28,4 +28,4 @@ jobs:
       run: bundle exec jekyll build
 
     - name: Check Links
-      run: bundle exec htmlproofer ./_site --assume-extension --empty-alt-ignore
+      run: bundle exec htmlproofer ./_site --assume-extension  --alt-ignore '/.*/' --disable_external
