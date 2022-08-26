@@ -269,7 +269,7 @@ indirect access to the worker machine as follows:
 
    If the above settings do not work on your system, you may also need
    to install and run
-   [Caffeine](http://manpages.ubuntu.com/manpages/bionic/man1/caffeine.1.html):
+   [Caffeine](https://manpages.ubuntu.com/manpages/bionic/man1/caffeine.1.html):
 
    ```
    sudo apt update

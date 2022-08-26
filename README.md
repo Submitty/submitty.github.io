@@ -1,6 +1,6 @@
 # Submitty.org
 
-This is the documentation website for [Submitty](http://submitty.org),
+This is the documentation website for [Submitty](https://submitty.org),
 an open source course management, assignment submission, exam, and grading system.
 
 
@@ -109,4 +109,4 @@ above structure. Currently, the site only supports three levels of nesting (sub-
 ## Forked from [Edition](https://github.com/CloudCannon/edition-jekyll-template)
 
 This repository was created via a fork of Edition, which is a product documentation theme for Jekyll created
-by by [CloudCannon](http://cloudcannon.com/), the Cloud CMS for Jekyll.
+by by [CloudCannon](https://cloudcannon.com/), the Cloud CMS for Jekyll.

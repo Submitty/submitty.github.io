@@ -110,7 +110,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 `
 1. Enter file location for ssh key. (ex: /home/submitty_daemon/.ssh/id_github)
 1. Enter a passphrase for the SSH key.
-1. Add the key to the ssh-agent. (See [this article](http://mah.everybody.org/docs/ssh#run-ssh-agent) 
+1. Add the key to the ssh-agent. (See [this article](https://mah.everybody.org/docs/ssh#run-ssh-agent) 
    on setting up ssh-agent to start on login).
 1. Add the SSH key to your Github/Gitlab/etc account.
 

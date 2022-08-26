@@ -75,7 +75,7 @@ institutions.
     Windows 10: [step-by-step instructions](https://matthewhorne.me/how-to-install-python-and-pip-on-windows-10/)
 
 
-3.  [Install Selenium](http://selenium-python.readthedocs.io/installation.html) (in terminal/command prompt)
+3.  [Install Selenium](https://selenium-python.readthedocs.io/installation.html) (in terminal/command prompt)
 
     _Note: On Windows, make sure to run cmd as administrator._
 

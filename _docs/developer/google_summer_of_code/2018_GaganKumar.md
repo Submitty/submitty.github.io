@@ -8,7 +8,7 @@ redirect_from:
 
 # Discussion Forum Enhancements
 
-### [Submitty](http://submitty.org)
+### [Submitty](https://submitty.org)
 *Homework Submission, Automated Grading, and TA grading system*
 
 GitHub : [https://github.com/Submitty/Submitty](https://github.com/Submitty/Submitty)

@@ -8,12 +8,12 @@ redirect_from:
 
 # Instructor Interface for Plagiarism Detection
 
-[Submitty](http://submitty.org) is an open source programming
+[Submitty](https://submitty.org) is an open source programming
 assignment submission system from the 
 [Rensselaer Center for Open Source Software (RCOS)](https://rcos.io/), 
 launched by the
-[Department of Computer Science](http://www.cs.rpi.edu/) at
-[Rensselaer Polytechnic Institute](http://www.rpi.edu/).
+[Department of Computer Science](https://www.cs.rpi.edu/) at
+[Rensselaer Polytechnic Institute](https://www.rpi.edu/).
 
 My GSoC project involved working on the Plagiarism Detector (also called "Lichen") of Submitty Organization.
 Along with my GSoC project, I also worked on implementing some crucial features and fixing bugs.

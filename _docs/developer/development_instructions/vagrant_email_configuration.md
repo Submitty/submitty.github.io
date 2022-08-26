@@ -9,7 +9,7 @@ important messages to users via email.  Please see the System Administrator
 Documentation: [Email Configuration](/sysadmin/email_configuration)
 
 On the developer vagrant machine, the sending of emails is simulated with the
-[nullsmtpd server](http://github.com/MasterOdin/nullsmtpd).
+[nullsmtpd server](https://github.com/MasterOdin/nullsmtpd).
 
 
 
