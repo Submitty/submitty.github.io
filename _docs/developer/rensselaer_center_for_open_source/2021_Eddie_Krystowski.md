@@ -11,7 +11,7 @@ In the summer of 2021, I worked mainly on improving and standardizing various as
 Dark Mode is a feature that allows the user to change the overall look of Submitty to one with a darker palette. Some of the work I did regarding dark mode consisted of:
 - Improving the consistency of dark mode throughout the site
 - Refactoring stylesheets to properly use dark-mode colors
-- Fixing low contrast areas, especially in less frequently visited pages, by using WAVE (Web Accessability Evaluation Tool) to ensure a 7:1 minimum contrast ratio across most pages.
+- Fixing low contrast areas, especially in less frequently visited pages, by using WAVE (Web Accessibility Evaluation Tool) to ensure a 7:1 minimum contrast ratio across most pages.
     - I fixed the contrast of code boxes in dark mode which were very difficult for students to use due to the syntax highlighting not considering the site theme.
 
 
