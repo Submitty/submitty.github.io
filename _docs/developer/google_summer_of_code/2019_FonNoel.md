@@ -5,7 +5,7 @@ category: Developer > Google Summer of Code 2019
 
 # GSOC 2019 REPORT: Continuous Integration Testing (Automation) for Submitty
 <p align="center">
-<img src="https://miro.medium.com/max/700/1*gU5njSRBxB-bjkPdcNuZnA.png" height="250">
+<img src="https://miro.medium.com/max/700/1*gU5njSRBxB-bjkPdcNuZnA.png" alt="gsoc & submitty logos" height="250">
 </p>
  The aim of this project is to expand the code coverage of the unit and integration tests for Submitty codebase.
 
@@ -45,7 +45,7 @@ The major things are achieved here are :
 - There's a dramatic increase in the speed of builds. In practise from between 10mins to 2 hours to less than 5 minutes for the parts that were moved.
 
 <p align="center">
-<img src="../../../images/submitty_pr_with_buildbot.png" height="250">
+<img src="../../../images/submitty_pr_with_buildbot.png" alt="buildbot screenshot" height="250">
 
 *A Submitty pull request showing 4 newly introduced builders powered by buildbot*
 </p>
