@@ -29,9 +29,7 @@ communication between students and the teaching staff.
    thumbtack to indicate their importance.
 
    Instructors can also choose to send the announcement as a Submitty
-   system email to all members of the course, if [ ]() 
-
-also by email, if [configured on the server](/sysadmin/email_configuration).
+   system email to all members of the course, if [configured on the server](/sysadmin/email_configuration).
 
 * **Post Edit History** users have the ability to edit their
    post. Members of the teaching staff have the ability to view each

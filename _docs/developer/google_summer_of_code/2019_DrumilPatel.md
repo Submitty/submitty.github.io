@@ -92,6 +92,6 @@ Presently <b>Assignment Autograding</b> can generate both random inputs and outp
 
 ## Acknowledgments
 
-I had an overwhelming summer contributing in Submitty through [Google Summer of Code](). I am really obliged and thankful to [Barbara Cutler](https://github.com/bmcutler) and [Evan Maicus](https://github.com/emaicus) for mentoring me throughout the course of program. I am really thankful to [Peter Bailie](https://github.com/pbailie), [Matthew Peveler](https://github.com/masterodin), [Shail Patel](https://github.com/shailpatels) and all other student at RPI working in RCOS and GSoC.
+I had an overwhelming summer contributing in Submitty through [Google Summer of Code](https://summerofcode.withgoogle.com/). I am really obliged and thankful to [Barbara Cutler](https://github.com/bmcutler) and [Evan Maicus](https://github.com/emaicus) for mentoring me throughout the course of program. I am really thankful to [Peter Bailie](https://github.com/pbailie), [Matthew Peveler](https://github.com/masterodin), [Shail Patel](https://github.com/shailpatels) and all other student at RPI working in RCOS and GSoC.
 
 Submitty has playe a crucial role in developing my interset in open source world. Every time I will think about open source Submitty will be first word which will come in my mind.
