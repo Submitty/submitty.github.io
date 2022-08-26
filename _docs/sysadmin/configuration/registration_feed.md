@@ -213,7 +213,7 @@ define('CSV_DELIM_CHAR', chr(9));
 ```
 
 Every CSV file has a delimiter character that separates each data field, and this delimiter needs to be specified.
-Usually, the delimiter is a comma, but it can be any character from the [standard ASCII table](http://www.asciitable.com/).
+Usually, the delimiter is a comma, but it can be any character from the [standard ASCII table](https://www.asciitable.com/).
 The delimiter character can be directly quoted (e.g. `','` for comma) or specified by its ASCII value (e.g. `chr(44)` for comma).
 In the example above, `chr(9)` is the _tab_ key.
 
@@ -397,7 +397,7 @@ Alaska | `America/Anchorage`
 Hawaii | `America/Adak`
 Hawaii (no daylight savings) | `Pacific/Honolulu`
 
-For a complete list of timezones: <http://php.net/manual/en/timezones.php>
+For a complete list of timezones: <https://php.net/manual/en/timezones.php>
 
 
 

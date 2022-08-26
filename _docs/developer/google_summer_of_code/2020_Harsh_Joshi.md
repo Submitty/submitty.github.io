@@ -9,7 +9,7 @@ The idea of peer grading has been introduced in some e-learning platforms but is
 # About 
 My Name is [Harsh Joshi](https://linkedin.com/in/josharsh). I am a computer science undergradute from the University of Petroleum and Energy Studies.
 The project was under the mentorship of [Barbara Cutler](https://www.cs.rpi.edu/~cutler/), [Evan Maicus](https://github.com/emaicus) and [John Hulton](https://github.com/jchulton).
-### [Submitty](http://submitty.org)
+### [Submitty](https://submitty.org)
 **Homework Submission, Automated Grading, and TA grading system**
 
 GitHub : [https://github.com/Submitty/Submitty](https://github.com/Submitty/Submitty)

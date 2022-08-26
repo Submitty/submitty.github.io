@@ -130,7 +130,7 @@ To configure your system:
       #include <string>
 
       // see also:
-      // http://submitty.org/sysadmin/configuration/saml_authentication
+      // https://submitty.org/sysadmin/configuration/saml_authentication
 
       int main(int argc, char** argv) {
 

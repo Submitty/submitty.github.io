@@ -76,7 +76,7 @@ Explore the options / settings on your scanner.  Things to check:
 #### Scanning with the ScanSnap iX500 on Linux
 
 We use the portable ScanSnap iX500 for scanning our exams. This works with
-[SANE](http://www.sane-project.org/) out of the box; a variety of of
+[SANE](https://www.sane-project.org/) out of the box; a variety of of
 front-ends for SANE exist that work well with this
 scanner. [Simple-scan](https://github.com/GNOME/simple-scan) works
 fairly well - you will need to make sure to select the scanner in its

@@ -19,7 +19,7 @@ redirect_from:
    We recommend that to connect to the DB that you use one of the following
    options ranging from simplest to most powerful.
 
-   1. [psql](http://postgresguide.com/utilities/psql.html) (CLI for connecting to PostgreSQL)
+   1. [psql](https://postgresguide.com/utilities/psql.html) (CLI for connecting to PostgreSQL)
 
    2. [pgAdmin](https://www.pgadmin.org/) (GUI for connecting to PostgreSQL)
 

@@ -54,7 +54,7 @@ The major things are achieved here are :
 
 * **[Buildbot Set Up Repository](https://github.com/Submitty/submitty-buildbot/)** (Code and Configuration)
 
-* **[Running Buildbot Setup](http://submitty-ci.cs.rpi.edu/)** (Live)
+* **[Running Buildbot Setup](https://submitty-ci.cs.rpi.edu/)** (Live)
 
 
 ## 2. Submitty PRs

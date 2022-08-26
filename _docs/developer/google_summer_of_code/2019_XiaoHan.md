@@ -9,7 +9,7 @@ The project aims to establish a REST API for Submitty. The API provides an alter
 
 The project mainly consists of two parts: replacing the original router of Submitty and implementing API endpoints.
 
-The project is carried out by [XIAO Han](https://github.com/zjxiaohan), an undergraduate student from [Zhejiang University](http://www.zju.edu.cn/english/), as part of [Google Summer of Code](https://summerofcode.withgoogle.com/).
+The project is carried out by [XIAO Han](https://github.com/zjxiaohan), an undergraduate student from [Zhejiang University](https://www.zju.edu.cn/english/), as part of [Google Summer of Code](https://summerofcode.withgoogle.com/).
 
 ### Contributions
 

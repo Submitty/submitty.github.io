@@ -18,4 +18,4 @@ network 192.168.56.0
 broadcast 192.168.56.255
 ```
 
-References and useful links: [https://gist.github.com/pjdietz/5768124](https://gist.github.com/pjdietz/5768124) and [http://christophermaier.name/2010/09/01/host-only-networking-with-virtualbox/](https://christophermaier.name/2010/09/01/host-only-networking-with-virtualbox/)
+References and useful links: [https://gist.github.com/pjdietz/5768124](https://gist.github.com/pjdietz/5768124) and [https://christophermaier.name/2010/09/01/host-only-networking-with-virtualbox/](https://christophermaier.name/2010/09/01/host-only-networking-with-virtualbox/)
