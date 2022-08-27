@@ -1,10 +1,12 @@
 ---
-title: Count TS
+title: Count
 category: Instructor > Autograding > Static Analysis
 ---
 
 The command `submitty_count_ts` can be used to count and verify that student submissions for a
 programming course contain specific static language features.
+
+`submitty_count_ts` is a refactor and replacement of the existing haskell implementation of the `submitty_count` utility. Instructors should switch to the `submitty_count_ts` command and revised command line arguments in preparation for the deprecation of `submitty_count`.
 
 To use ``submitty_count_ts``, simply invoke it as a command within the ``config.json`` file for a
 given assignment, supplying the type of feature to count, the feature itself and
