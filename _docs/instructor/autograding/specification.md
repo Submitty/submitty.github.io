@@ -56,7 +56,7 @@ executables.
   Depending on the testcase type, there is a minimum RLIMIT value that will be used,
   regardless if the limit it set lower in the configuration file.
   
-  If the Testcase is for compliation, it will use the following minimum RLIMIT values:
+  If the Testcase is for compilation, it will use the following minimum RLIMIT values:
   * RLIMIT_CPU: 60
   * RLIMIT_FSIZE: 10MB
   * RLIMIT_RSS: 1GB
