@@ -19,12 +19,18 @@ Documentation for the new command is added to the website.
 
 I also got the chance to work with docker container. Submitty autograding can be run in a docker container. The dockerfiles relevant to these docker containers had to be updated to the include the new `count` command. To keep the size of the docker images minimal it was decided only to include the binaries in docker images. Therefore I created a new github action in the AnalysisToolsTS repo which builds binaries from the source code when a new release is made. These binaries were then used in the docker images.
 
+#### Main Pull requests in AnalysisToolsTS:
+- [[Feature:Autograding] tree-sitter c-api](https://github.com/Submitty/AnalysisToolsTS/pull/2)
+- [[Feature:Autograding] Add Java counting](https://github.com/Submitty/AnalysisToolsTS/pull/9)
+- [[Feature:Developer] Build binaries on release](https://github.com/Submitty/AnalysisToolsTS/pull/6)
+
+
 ## Other contributions
 
-While working on the `count` command, I also worked on autograding features and bugfixes in Submitty main repository. 
+While working on the `count` command, I also worked on autograding features and bugfixes in Submitty main repository.
 
 
-### BugFixes
+#### BugFixes
 - [[Bugfix:Autograding] Success, information messages not shown](https://github.com/Submitty/Submitty/pull/8264)
 - [[Bugfix:Autograding] Random input-output build](https://github.com/Submitty/Submitty/pull/8185)
 - [[Bugfix:InstructorUI] Peer graders grading themselves](https://github.com/Submitty/Submitty/pull/7983)
@@ -34,7 +40,7 @@ While working on the `count` command, I also worked on autograding features and 
 - [[Bugfix:Submission] Fix bad breadcrumb link for peer grading](https://github.com/Submitty/Submitty/pull/7783)
 - [[Bugfix:CourseMaterials] Restrict course material for no section](https://github.com/Submitty/Submitty/pull/7770)
 
-### Features
+#### Features
 - [[Feature:Autograding] Tolerance check in diff validator](https://github.com/Submitty/Submitty/pull/8251)
 - [[Feature:Autograding] Environment variables in config.json](https://github.com/Submitty/Submitty/pull/8086)
 - [[Feature:Autograding] Autograding command json file](https://github.com/Submitty/Submitty/pull/8046)
