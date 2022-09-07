@@ -39,6 +39,17 @@ submitty_count -l c token Goto main.cpp
 This second example will output the number of occurrences of the token ``goto`` in the
 C/C++ source file ``main.cpp``.
 
+The ``comment_count`` tool in Submitty counts the number of comments in the student code. Example usage:
+
+```
+comment_count *.py
+```
+
+It is also possible to provide a list of files written in different programming languages.
+
+```
+comment_count *.py *.cpp
+```
 
 Here are a couple sample configurations:  
 [Tutorial Example: 04 Python Static Analysis](https://github.com/Submitty/Tutorial/blob/main/examples/04_python_static_analysis/config/config.json)  
