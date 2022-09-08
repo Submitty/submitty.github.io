@@ -44,7 +44,7 @@ If user allows it , a push subscription is generated (if not generated already) 
 This node server is continuously running and it fetches the notifications that are to be send form the database , these notifications are then sent to push subciptions for the users stored in the database earlier using the web-push library.
 On the frontend, these notifications are received by the user’s active service worker and upon listening to the push event it formats the information received into user readable push notifications and sends to the browser to display to the user.
 ##### Future Scope: 
-The code is currently being written using Javacript and node , much of the code could be re-written in php along with the use of pre-existing code available in the codebase in php.
+The code is currently being written using Javascript and node , much of the code could be re-written in php along with the use of pre-existing code available in the codebase in php.
 A separate table could be created to manage and send push notifications which could be included with several functionalities to improve the user experience.
 There are a couple of options of how push  notifications could be formatted with in a service worker and could be used to show interactive push notifications.
 
