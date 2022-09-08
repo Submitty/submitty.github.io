@@ -2,8 +2,8 @@
 title: Madhur Jain
 category: Developer > Google Summer of Code 2022
 ---
-
-
+## About
+My Name is [Madhur Jain](https://github.com/immortalcodes). I am a Computer Science undergradute from the Indian Institute of Technology Bhilai.
 
 ## About the Project :
 
@@ -68,7 +68,7 @@ I love the vision behind Opensource and being able to contribute to one such pro
 
 ## Acknowledgement : 
 
-I am highly grateful to the whole Submitty Team for their constant support and help. I would like to thank Barbara Cutler for her crucial guidance throughout the project. I can't thank Shail Patel enough, for all the 1v1 guidance, help, encouragement and learnings he provided. Our discussions and interactions provided me with deep insights that go beyond the dimensions of the project. Constant help from
-Chris and William helped me move forward with my project.
+I am highly grateful to the whole Submitty Team for their constant support and help. I would like to thank [Barbara Cutler](https://github.com/bmcutler) for her crucial guidance throughout the project. I can't thank [Shail Patel](https://github.com/shailpatels) enough, for all the 1v1 guidance, help, encouragement and learnings he provided. Our discussions and interactions provided me with deep insights that go beyond the dimensions of the project. Constant help from
+[Chris](https://github.com/cjreed121) and [William](https://github.com/williamjallen) helped me move forward with my project.
 I am also grateful to the RPI students and fellow GSoC contributors who worked on Submitty during the summers and helped in reviewing and discussing my contributions.
 Lastly, I would like to thank Google for organising the Google Summer of Code program that helps foster the culture of Opensource within the developers.
