@@ -59,9 +59,11 @@ Decide and implement the caching strategies for various pages depending upon how
 
 ## Overall Experience and Learnings :
 
-My GSoC journey at Submitty was one of the best experince that I had as a developer and as a learner.I was able to explore and dive into a lot of awesome codes and concepts. The organisation mentored me to a lot of awesome coding and development practices and methods. There was a lot of exposure. Principally it was leanring about how you plan out and lay the base of what you want to achieve as a developer and even more what is the best path forward with all the options  and techs available.
-Constant trying out things and..
-The Submittyb developers team has been awesome , they created a great environment for productive discussions and resolutions of doubts and queries
+My GSoC journey at Submitty was one of the best experiences that I  had as a developer and as a learner. Working on a project that is used daily by a huge number of Students and Teachers for the management of courses in college education is truly incredible. Being a college student myself I was able to resonate thoroughly with the application and that made my work and experience so lively and relatable. 
+On the technological front, I was able to explore and dive into a lot of awesome codes and concepts. The amount of exposure and learning throughout the development process provided me with deep insights regarding several good coding practices and methods. The best thing I gained was learning about how to plan and lay the foundation for the features you want to achieve as a developer and even more what is the best path forward with all the options and tech stacks available.
+The Submitty developers' team has been awesome, they created a great environment for productive discussions and resolutions of doubts and queries. Daily meetings over Webex, suggestions, comments and discussions over Slack and Github helped a lot to improve and bring the best version of code.
+I love the vision behind Opensource and being able to contribute to one such project had a great impact on me that will further motivate me to explore and contribute more to Opensource.
+
 
 
 ## Acknowledgement : 
