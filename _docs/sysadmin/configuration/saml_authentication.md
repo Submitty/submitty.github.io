@@ -272,6 +272,15 @@ To configure your system:
 
 5.  After making the switch to SAML, you will likely want to force
     everyone to re-authenticate with your new Identity Provider
-    (IdP). This will happen automatically after running the
-    CONFIGURE_SUBMITTY.py script. If you make a change and want
-    all users to login again, then just re-run CONFIGURE_SUBMITTY.py.
+    (IdP).  This can be done in a few ways:
+
+    * By clearing the session table in the database.
+
+      ```
+      TRUNCATE TABLE sessions;
+      ```
+
+    * Or, by running CONFIGURE_SUBMITTY.py. It will clear the jwt secret
+      and invalidate all current sessions.
+
+
