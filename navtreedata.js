@@ -213,6 +213,7 @@ var NAVTREE =
                     [ "Lichen Plagiarism Detection", "/developer/development_instructions/plagiarism", null ],
                     [ "Updating Dependencies", "/developer/development_instructions/updating_dependencies", null ],
                     [ "Configuring Tie In Programs", "/developer/development_instructions/configuring_tie_in_programs", null ],
+                    [ "Performance Testing", "/developer/development_instructions/performance_testing", null ]
                 ] ],
                 [ "Developing the PHP Site", "/developer/developing_the_php_site", [
                     [ "Model", "/developer/developing_the_php_site/model", null ],
