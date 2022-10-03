@@ -280,14 +280,7 @@ To configure your system:
       TRUNCATE TABLE sessions;
       ```
 
-    * Or, by running CONFIGURE_SUBMITTY.py clears the jwt.
+    * Or, by running CONFIGURE_SUBMITTY.py. It will clear the jwt secret
+      and invalidate all current sessions.
 
-      TODO: VERIFY THIS???
 
-
-    * Or, by deleting the jwt secrets file.  It will be recreated
-      (TODO: WHEN?  When INSTALL_SUBMITTY.sh is run???)
-
-      ```
-      rm /usr/local/submity/config/secrets_submitty_php.json
-      ```
