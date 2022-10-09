@@ -26,13 +26,15 @@ You can open the test runner by navigating into `site/` and using the command:
 npx cypress open
 ```
 
+Once Cypress opens, select the "E2E Testing" on the left and then select a local browser to test against.
+
 *Note:* On startup Cypress will try and check if the site is running on the `http://localhost:1511` address, make sure you have a local instance of Submitty that is running while testing with Cypress. 
 
 ### Running Tests
 
-From the test runner you should see a list of spec files. You can either run everything by clicking "Run integration spec(s)" on the top right corner or click on an individual file to only run the tests under that file. You can also choose which browser installed on your machine to run the tests against. 
+From the test runner you should see a list of spec files, selecting one will run the tests defined in that file. 
 
-![Example interface of running spec file](/images/test-running-interface.png) 
+[See an overview of the Cypress application here](https://docs.cypress.io/guides/core-concepts/cypress-app)
 
 Once the tests have been run you can interact with the site on the right hand side of the runner. This is a good way of debugging what state the site is in if a test fails. You can also right click and see the console for any errors or information. During this time you're terminal should have a list of HTTP responses the site has been sending to your browser. For example:
 
@@ -51,8 +53,6 @@ GET /authentication/login 200 1.629 ms - -
 POST /authentication/check_login?old=http%253A%252F%252Flocalhost%253A1511%252Fhome 302 205.710 ms - 96
 ```
 
-A complete overview can be found [here](https://docs.cypress.io/guides/core-concepts/test-runner.html#Overview)
-
 ### Running Headless
 
 You can run the entire test suite in headless mode. This will pipe the browser display directly to Cypress without getting displayed and is faster than the test-runner. This can be done with the command:
@@ -64,22 +64,25 @@ npx cypress run
 
 If any test fails a screen shot will be taken of the step that failed. Additionally, a video will be recorded each time of the run. They can be found under the `site/cypress/screenshots` and `site/cypress/videos` directories.
 
-See the full usage [here](https://docs.cypress.io/guides/tooling/plugins-guide.html#Use-Cases)
+[See the full usage here](https://docs.cypress.io/guides/guides/screenshots-and-videos)
 
 ## Writing Tests
 
-Test files are written under the `site/cypress/integration` and should follow the format `*.spec.js*` you can
+Test files are written under the `site/cypress/e2e` and should follow the format `*.spec.js*`. You can
 create folders as needed to organize groups of tests together.
 
 **Cypress test suite structure:**
-Here is a quick overview of the file structure on Submitty, for a more details see the Cypress docs [here](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Folder-Structure)
+
+Here is a quick overview of the file structure on Submitty.
+
+[For a more details see the Cypress docs here](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Folder-Structure)
 
 ```
-cypress.json
+cypress.config.ts
 cypress/
 ├── fixtures
 │   └── example.json
-├── integration
+├── e2e
 │   └── ...
 │
 ├── plugins
@@ -95,14 +98,13 @@ cypress/
 
 While the main test files are in the integration directory, there are some supporting files. The `fixtures` directory contains files used to mock data. This can be text files, JSON, images, etc. 
 
-The `commands.js` file 
-allow you to program Cypress commands. Actions that require multiple steps and might be done often can be grouped together under a single command to prevent repetition, for example the action of logging into the Submitty site is a command. You can also write plain JavaScript functions in this file and import them using ES6 module syntax.
+The `commands.js` file allow you to program Cypress commands. Actions that require multiple steps and might be done often can be grouped together under a single command to prevent repetition, for example the action of logging into the Submitty site is a command. You can also write plain JavaScript functions in this file and import them using ES6 module syntax.
 
 The `support/index.js` file instructs Cypress which files to include with every test, you most likely won't need to touch this file. 
 
 The `plugins/index.js` allows you to extend Cypress's default behavior. You can read more about them [here](https://docs.cypress.io/guides/tooling/plugins-guide.html#Use-Cases). 
 
-The top level `cypress.json` is the global configuration used.
+The top level `cypress.config.ts` is the global configuration used.
 
 ### Test Structure
 
@@ -122,12 +124,12 @@ describe('foo', () => {
 });
 ```
 
-This will produce the following structure in the test runner:
+This will organize the test "baz" under the folders "foo" and "bar" when viewing the test in the runner, for organzing files with a large amount of tests this can be useful.
 
-![Cypress organization in the test runner](/images/cypress-structure.png)
 
 You can also use the `afterEach` and `beforeEach` function calls to perform setup and teardown for each test. 
-Be sure to read Cypress's best-practices for using these functions [here](https://docs.cypress.io/guides/references/best-practices.html#Using-after-or-afterEach-hooks).
+
+[Be sure to read Cypress's best-practices for using these functions here](https://docs.cypress.io/guides/references/best-practices.html#Using-after-or-afterEach-hooks).
 
 ### Workflow 
 
@@ -168,7 +170,7 @@ cy.get('my_element')
 });
 ```
 
-This prevents code from being executed if a previous part of the chain fails, see more about it [here](https://docs.cypress.io/guides/core-concepts/introduction-to-cypress.html#Commands-Are-Asynchronous)
+This prevents code from being executed if a previous part of the chain fails, [see more about it here](https://docs.cypress.io/guides/core-concepts/introduction-to-cypress.html#Commands-Are-Asynchronous)
 
 ### Debugging
 
