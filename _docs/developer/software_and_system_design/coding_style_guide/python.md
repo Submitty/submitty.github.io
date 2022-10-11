@@ -5,7 +5,7 @@ redirect_from:
   - /developer/coding_style_guide/python
 ---
 
-__Minimum Version__: 3.6
+__Minimum Version__: 3.8
 
 For Python, we use [flake8](http://flake8.pycqa.org/en/latest/) to check Python code such that it follows things laid out in
 [PEP-8](https://www.python.org/dev/peps/pep-0008/), [PEP-257](https://www.python.org/dev/peps/pep-0257/), etc. The code is

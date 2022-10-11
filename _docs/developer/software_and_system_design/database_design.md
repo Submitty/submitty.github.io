@@ -16,7 +16,7 @@ redirect_from:
    to connect to. The user and password are both `submitty_dbuser`. All tables are then
    located in the `public` schema.
 
-   We recommed that to connect to the DB that you use one of the following
+   We recommend that to connect to the DB that you use one of the following
    options ranging from simplest to most powerful.
 
    1. [psql](http://postgresguide.com/utilities/psql.html) (CLI for connecting to PostgreSQL)

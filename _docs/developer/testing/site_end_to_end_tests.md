@@ -27,7 +27,7 @@ a different browser stack by modifying the `setUpClass` method in
 You'll need to install the
 [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/getting-started)
 to allow selenium access to utilize Chrome. You can either download the binary
-from the above site or use your OS' package manager. For convinence, we list
+from the above site or use your OS' package manager. For convenience, we list
 some options for installation on Mac, Linux, and Windows below. For any step
 that lists `<CHROMEDRIVER_VERSION>`, you will have to determine the appropriate
 version using the [Version Selection](https://sites.google.com/a/chromium.org/chromedriver/downloads/version-selection)

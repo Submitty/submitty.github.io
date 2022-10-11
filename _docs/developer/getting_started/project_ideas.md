@@ -8,7 +8,7 @@ redirect_from:
 Submitty has been selected for participation in
 [Google Summer of Code (GSoC) 2022](https://summerofcode.withgoogle.com/).  
 See [Submitty GSoC Application & Reports](/developer/google_summer_of_code/index) for more information about
-the application process and to read reports from Submitty GSoC contributers
+the application process and to read reports from Submitty GSoC contributors
 from Summers 2018, 2019, and 2020.
 
 
@@ -217,7 +217,7 @@ Tracker](https://github.com/Submitty/Submitty/issues).
    Once a potential vulnerability is found, the system must be
    promptly patched and documented to prevent future problems.
 
-   _Expected Outcomes_: Security risk assessment, indentification and repair
+   _Expected Outcomes_: Security risk assessment, identification and repair
    of specific security vulnerabilities, expansion and creation of continuous
    integration tools to prevent introduction of new vulnerabilities.
 

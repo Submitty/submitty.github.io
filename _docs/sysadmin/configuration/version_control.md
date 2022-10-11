@@ -57,7 +57,7 @@ module for Apache2 (mod_wsgi) which allows us to utilize a python
 script to handle the authentication process for repository
 access. Unfortunately, do to limitations within the module, the user
 that runs this script must be the same user that own the Apache2
-process. To limit access to any criticial information by a user that
+process. To limit access to any critical information by a user that
 isn't handled by Submitty, the authentication script goes through a
 REST API endpoint within Submitty built specifically for the VCS
 process.
@@ -88,12 +88,12 @@ add the instructors to this group._
 To grade a repository, Submitty must have access to it through the `submitty_daemon` user. 
 
 If you're only using internal repositories (those located under `/var/local/submitty/vcs/git`), then you don't 
-need to do anything futher to support grading these, as if the VCS URL is detected as having the submission url,
+need to do anything further to support grading these, as if the VCS URL is detected as having the submission url,
 it will replace that URL with the absolute file path for `submitty_daemon` to use to checkout.
 
 An example of this would be that you set the submission url to be "https://submitty.cs.rpi.edu" and give the VCS url
 for a gradeable to be "https://submitty.cs.rpi.edu/{$vcs_type}/{$course}/{$semester}/{$gradeable_id}/{$user_id}", 
-then `submitty_daemon` will subsitute in the full absolute path
+then `submitty_daemon` will substitute in the full absolute path
 `/var/local/submitty/vcs/{$vcs_type}/{$semester}/{$course}/{$gradeable_id}/{$user_id}` to use.
 
 ### Using External Git

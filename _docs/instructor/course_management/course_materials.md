@@ -45,7 +45,7 @@ Materials" label in the navigation bar.
     ![](/images/DatepickerClose.png)
 
     In addition to selecting the date and time for release from the
-    calender, there are shortcut buttons for "now" and "end of time"
+    calendar, there are shortcut buttons for "now" and "end of time"
     at the bottom.
         
     ![](/images/DatepickerSingleSoon.png)

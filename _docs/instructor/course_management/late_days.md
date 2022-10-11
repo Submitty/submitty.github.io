@@ -13,9 +13,9 @@ allowed per student.  These new late days may be used for any future
 homeworks.  This is useful if you want to award late days as an
 incentive.
 
-Use the "Excused Absense Extensions" to grant an extension of a
+Use the "Excused Absence Extensions" to grant an extension of a
 specific number of days for a specific assignment.  This is useful
-when the student has an excused absense.  These late days cannot be
+when the student has an excused absence.  These late days cannot be
 used on other assignments.
 
 
@@ -32,7 +32,7 @@ panel in the Overall Late Day Usage Table.
 
 To calculate a student's late day usage we define the following terms:
 
-* **Allowed Per Term** - How many late days a particular student is alloted per term. Each student is initially alloted a number of allowed late days equal to the number specified in Course Settings under Initial Allowed Late Days. 
+* **Allowed Per Term** - How many late days a particular student is allotted per term. Each student is initially allotted a number of allowed late days equal to the number specified in Course Settings under Initial Allowed Late Days. 
 
  * **Changing Allowed per term** - An instructor may change the number of allowed late days for an individual student on the Late Days Allowed page. Changes to allowed late days go into effect starting on the date provided under Datestamp. Effective that date the student's allowed late days will be updated. Submissions before that date will not be affected. Datestamps may be for the past or future.
 

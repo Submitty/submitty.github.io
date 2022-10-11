@@ -8,7 +8,7 @@ category: Developer > Google Summer of Code 2019
 <b> Automating Configuration For Assignments Uploads </b> is an upgrade to old assignment configuration. Previously all inputs and outputs file was to be provided at time of configuration of assignment this made input and output constant for every submission.
 After this project we can add random inputs and corresponding output at the time of submission.This is possible by providing an instructor solution and python script which can generate random inputs. We can also generate only outputs from predefined inputs at the time of building gradeable. This can be used to remove dependencies on predefined output.
 
-I am [Drumil Patel](https://github.com/drumilpatel2000) an undergraduate Electrical Engineer from [Indian Institue of Technology, Roorkee](https://www.iitr.ac.in).
+I am [Drumil Patel](https://github.com/drumilpatel2000) an undergraduate Electrical Engineer from [Indian Institute of Technology, Roorkee](https://www.iitr.ac.in).
 
 This project was mentored by [Barbara Cutler](https://github.com/bmcutler), [Evan Maicus](https://github.com/emaicus).
 

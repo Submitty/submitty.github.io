@@ -20,7 +20,7 @@ _Note: Click on the <u>links</u> and <i class="fas fa-info-circle" style="font-s
         {% include feature_text.html
            text="A consistent and firm assignment deadline policy is crucial in large courses.  
                  Allow students to make limited adjustments to deadlines." %}
-    * [excused absense extensions](/student/submission/late_days#excused-absense-extensions)
+    * [excused absence extensions](/student/submission/late_days#excused-absence-extensions)
         {% include feature_text.html
            text="Organized and transparent system for tracking deadlines 
                  and verified student emergencies." %}
@@ -91,7 +91,7 @@ _Note: Click on the <u>links</u> and <i class="fas fa-info-circle" style="font-s
     * Instructor email announcements
   * all threads tagged with one or more course-specific categories
   * threads can be globally *pinned* by the instructor/TA
-  * students can *bookmark* threads for later refererence
+  * students can *bookmark* threads for later reference
 
 &nbsp;
 
