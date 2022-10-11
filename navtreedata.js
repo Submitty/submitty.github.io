@@ -129,6 +129,7 @@ var NAVTREE =
                 [ "Docker UI", "/instructor/autograding/docker_ui", null ],
                 [ "Static Analysis", "/instructor/autograding/static_analysis/index", [
                     [ "Overview", "/instructor/autograding/static_analysis/index", null ],
+                    [ "Count", "/instructor/autograding/static_analysis/count", null ],
                     [ "Tree Tool", "/instructor/autograding/static_analysis/tree_tool", null ],
                     [ "Common AST", "/instructor/autograding/static_analysis/commonAST", null ],
                     [ "CPP Union Tool", "/instructor/autograding/static_analysis/cppUnionTool", null ],
@@ -162,6 +163,7 @@ var NAVTREE =
             [ "Configuration & Administration", "/sysadmin/configuration/course_creation", [
                 [ "Course Creation", "/sysadmin/configuration/course_creation", null ],
                 [ "Setting up Version Control", "/sysadmin/configuration/version_control", null ],
+                [ "SAML Authentication", "/sysadmin/configuration/saml_authentication", null ],
                 [ "Email Configuration", "/sysadmin/configuration/email_configuration", null ],
                 [ "Registration Feed", "/sysadmin/configuration/registration_feed", null ],
                 [ "Course Archiving", "/sysadmin/configuration/course_archiving", null ],
@@ -212,6 +214,7 @@ var NAVTREE =
                     [ "Lichen Plagiarism Detection", "/developer/development_instructions/plagiarism", null ],
                     [ "Updating Dependencies", "/developer/development_instructions/updating_dependencies", null ],
                     [ "Configuring Tie In Programs", "/developer/development_instructions/configuring_tie_in_programs", null ],
+                    [ "Performance Testing", "/developer/development_instructions/performance_testing", null ]
                 ] ],
                 [ "Developing the PHP Site", "/developer/developing_the_php_site", [
                     [ "Model", "/developer/developing_the_php_site/model", null ],
@@ -247,6 +250,10 @@ var NAVTREE =
             ] ],
             [ "Rensselaer Center for Open Source", "/developer/rensselaer_center_for_open_source/moorthy", [
                 [ "Moorthy", "/developer/rensselaer_center_for_open_source/moorthy", null ],
+                [ "2022 Evan Bowen Shi",    "/developer/rensselaer_center_for_open_source/2022_Evan_Bowen_Shi", null ],
+                [ "2022 Jerry Jiarui Lu",    "/developer/rensselaer_center_for_open_source/2022_Jerry_Jiarui_Lu", null ],
+                [ "2022 Thomas Kozlowski",    "/developer/rensselaer_center_for_open_source/2022_Thomas_Kozlowski", null ],
+                [ "2022 Matthew Bonnecaze",    "/developer/rensselaer_center_for_open_source/2022_Matthew_Bonnecaze", null ],
                 [ "2021 William Allen",    "/developer/rensselaer_center_for_open_source/2021_William_Allen", null ],
                 [ "2021 Shelly Belsky",    "/developer/rensselaer_center_for_open_source/2021_Shelly_Belsky", null ],
                 [ "2021 Miles Ednie",      "/developer/rensselaer_center_for_open_source/2021_Miles_Ednie", null ],
@@ -256,9 +263,12 @@ var NAVTREE =
             ] ],
             [ "Google Summer of Code", "/developer/google_summer_of_code/index", [
                 [ "Overview","/developer/google_summer_of_code/index", null ],
-                [ "2020 Mukul Kumar Jha", "/developer/google_summer_of_code/2020_Mukul_Kumar_Jha", null ],
-                [ "2020 Marwan Atef", "/developer/google_summer_of_code/2020_Marwan_Atef", null ],
+                [ "2022 Akshat Batra", "/developer/google_summer_of_code/2022_Akshat_Batra", null ],
+                [ "2022 Madhur Jain", "/developer/google_summer_of_code/2022_Madhur_Jain", null ],
+                [ "2022 Poorna Gunathilaka", "/developer/google_summer_of_code/2022_Poorna_Gunathilaka", null ],
                 [ "2020 Harsh Joshi", "/developer/google_summer_of_code/2020_Harsh_Joshi", null ],
+                [ "2020 Marwan Atef", "/developer/google_summer_of_code/2020_Marwan_Atef", null ],
+                [ "2020 Mukul Kumar Jha", "/developer/google_summer_of_code/2020_Mukul_Kumar_Jha", null ],
                 [ "2019 Fon Noel", "/developer/google_summer_of_code/2019_FonNoel", null ],
                 [ "2019 Drumil Patel", "/developer/google_summer_of_code/2019_DrumilPatel", null ],
                 [ "2019 Anubhav Singh", "/developer/google_summer_of_code/2019_AnubhavSingh", null ],
