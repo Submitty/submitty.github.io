@@ -91,7 +91,7 @@ ws.send('ping');
 
 ### Debugging WebSocket in HTTPS
 
-Note that most browsers could not trust WebSocket traffics with self-
+Note that most browsers do not trust WebSocket traffics with self-
 signed certificates.  If you are dealing with WebSocket related features,
 there are some workarounds:
 
