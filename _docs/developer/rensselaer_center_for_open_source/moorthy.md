@@ -2,7 +2,7 @@
 title: Moorthy
 category: Developer > Rensselaer Center for Open Source (RCOS)
 redirect_from:
-  - /developer/rcos_moorthy.md
+  - /developer/rcos_moorthy
   - /developer/rpi_summer_rcos
   - /developer/rpi_summer_rcos/index
 ---
