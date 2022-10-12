@@ -143,7 +143,8 @@ However, this should be only applied to the `php.ini` running the web server and
 
 ## Increasing the max number of files that can be uploaded at once
 
-By default, PHP only allows 20 files to be uploaded at a time. To change this limit, edit:
+By default, PHP only allows 20 files to be uploaded at a time.
+This limit is probably sufficient, but to change this limit, edit:
 
 ```
 /etc/php/7.4/fpm/php.ini
@@ -152,7 +153,8 @@ By default, PHP only allows 20 files to be uploaded at a time. To change this li
 and modify the variable:
 
 ```
-upload_max_filesize
+; Maximum number of files that can be uploaded via a single request
+max_file_uploads = 20
 ```
 
 Then restart PHP
@@ -181,6 +183,10 @@ Change these variables as appropriate:
 post_max_size
 upload_max_filesize
 ```
+
+We have found that a value of `200M` for both variables has been
+appropriate, specifically for bulk uploading of scanned paper exams
+for online grading.
 
 And restart apache:
 
