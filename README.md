@@ -28,10 +28,12 @@ After cloning the repository to your local machine, you will need to use
 Bundler to install the dependencies. This can be accomplished
 by running:
 
+Note: The installation may take some time, so please be patient if it is stuck installing a file.
+
 ```bash
 bundle install
 ```
-Note: The installation may take some time, so please be patient if it is stuck installing a file.
+
 ### Running the Site
 
 To view the site locally, and the results of any changes you make,
