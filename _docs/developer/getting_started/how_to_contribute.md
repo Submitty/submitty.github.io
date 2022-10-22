@@ -271,7 +271,7 @@ If you want to update or add documentation to Submitty.org here's what you do:
   * Navigate to whichever page you want to edit and open it in your text editor of choice. 
     The files are written in Markdown.
 
-  * Run Jekyll locally to generate and view the webpages and proofread your edits:
+  * Run Jekyll locally to generate and view the webpages and proofread your edits. Please read the README.md file to learn how to run Jekyll locally. Within the file you will be instructed to install Ruby and install certain dependencies:
     [README.md](https://github.com/Submitty/submitty.github.io/blob/main/README.md)
 
   * After you are done editing, you can submit a pull request for review.  
