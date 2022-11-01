@@ -7,6 +7,7 @@ The following Python modules of Submitty are unit tested:
 * Migrator (under `migrations/` folder)
 * Autograding (under `autograding/` folder)
 * python_submitty_utils (under `python_submitty_utils/` folder)
+* submitty_jobs (under `sbin/submitty_daemon_jobs/` folder)
 
 ### Running Python Unit Tests
 
@@ -42,6 +43,32 @@ python3 -m unittest tests.test_cli
 # run one test function
 python3 -m unittest tests.test_cli.TestCli.test_no_args 
 ```
+
+#### Submitty Daemon Jobs
+
+Make sure the python system dependencies are locally installed, this can be done by running the following command at the root of the project structure.
+
+```bash
+python3 -m pip install -r .setup/pip/system_requirements.txt
+
+```
+
+For the submitty_daemon_jobs unit tests, you will need to set the top level directory to `sbin/submitty_daemon_jobs` when running them. This can be done by the following command
+
+```bash
+#in the sbin/submitty_daemon_jobs directory
+
+python3 -m unittest discover tests -t .
+```
+
+Or if you're using `coverage`
+
+```bash
+#in the sbin/submitty_daemon_jobs directory
+
+coverage run -m unittest discover tests -t .
+```
+
 
 ### Writing Python Unit Tests
 
