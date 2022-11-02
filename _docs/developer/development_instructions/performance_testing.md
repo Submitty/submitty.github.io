@@ -36,6 +36,7 @@ with your URL.
 _NOTE: Only run this on a server that you have permission to do so on._
 
 ## SQL
+
 #### Viewing Queries Executed by Submitty
 
 When Submitty is in debug mode (enabled by default in a Vagrant VM), the footer of pages will have an additional `Show Page Details` link which shows all queries that were made on the database in the process of rendering the page.
