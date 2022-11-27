@@ -32,7 +32,7 @@ by running:
 ```bash
 bundle install
 ```
-Note: The installation may take some time, so please be patient if it is stuck installing a file.
+Note: The installation may take some time, so please be patient if it is stuck installing a file. In addition, if you are receiving an error regarding a dependancy then it is best to look up the dependency and download it directly rather than through the build.
 ### Running the Site
 
 To view the site locally, and the results of any changes you make,
