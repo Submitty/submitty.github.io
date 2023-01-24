@@ -206,8 +206,7 @@ instructions.
    vagrant up
    ```
 
-   On PowerShell, you will have to set the environment variable in a
-   different way:
+   On PowerShell, you will have to set the environment variable differently:
 
    ```pwsh
    $Env:NO_SUBMISSIONS=1
@@ -245,7 +244,7 @@ instructions.
    * From a web browser (Chrome, Firefox, IE, etc.) on your host
      computer, go to:
 
-     <https://localhost:1511/index.php>
+     <http://localhost:1511/index.php>
 
      (see the VM login & password info below)
 
@@ -326,7 +325,7 @@ instructions.
 
 
 1. When you take a break from Submitty development work, you can
-   suspend the Submitty VM to to save resources (CPU and battery) on
+   suspend the Submitty VM to save resources (CPU and battery) on
    your host machine.
 
    ```
@@ -464,3 +463,20 @@ instructions.
    This has been tested with Blink for iOS and Termius for iOS (also available on Android, untested).
 
 6. Navigate to `localhost:1511` on the remote device.
+
+---
+
+## Developing in HTTPS
+
+For *developers* who need to upgrade to HTTP/2 in their development environments,
+please follow the step below:
+
+- Run `bash .setup/dev-upgrade-h2.sh up`.
+
+   After a successful execution, please use `https://` instead of `http://`.
+
+- To downgrade to HTTP/1.1, run `bash .setup/dev-upgrade-h2.sh down`.
+
+The script should automatically handle the upgrading and issuing a self-signed
+certificate.  If your browser complains about the security, please head to
+[WebSocket](/developer/developing_the_php_site/websocket).
