@@ -266,7 +266,7 @@ GEM
     unf_ext (0.0.8.2)
     unf_ext (0.0.8.2-x64-mingw32)
     unicode-display_width (1.8.0)
-    webrick (1.7.0)
+    webrick (1.8.0)
     yell (2.2.2)
     zeitwerk (2.6.0)
 
@@ -277,7 +277,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages (= 227)
   html-proofer (~> 3.19.4)
-  webrick (~> 1.7)
+  webrick (~> 1.8)
 
 BUNDLED WITH
    2.2.24
