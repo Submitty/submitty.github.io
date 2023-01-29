@@ -133,7 +133,8 @@ instructions.
 
      VirtualBox: <https://www.virtualbox.org/wiki/Linux_Downloads>
 
-     Vagrant: <https://vagrant-deb.linestarve.com/>
+     Vagrant: <https://developer.hashicorp.com/vagrant/downloads> 
+     (if that doesn't work, try: <https://vagrant-deb.linestarve.com/>)
 
 5. Clone [the Submitty repository](https://github.com/Submitty/Submitty) to a location on
    your computer (the "host").
