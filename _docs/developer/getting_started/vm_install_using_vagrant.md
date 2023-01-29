@@ -28,7 +28,7 @@ instructions.
    also required (most computers have these).  Submitty is RAM and I/O
    intensive, so more RAM and a fast disk are better.
 
-2. Make sure you have at least 20GB of hard disk available for
+2. Make sure you have at least 65GB of hard disk available for
    installation.  We do not recommend installing the Submitty
    Developer VM on DropBox, OneDrive, GoogleDrive, or other cloud
    storage.
