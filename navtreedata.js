@@ -182,6 +182,9 @@ var NAVTREE =
                 [ "Project Ideas", "/developer/getting_started/project_ideas", null ],
                 [ "How to Contribute", "/developer/getting_started/how_to_contribute", null ],
                 [ "VM Install using Vagrant", "/developer/getting_started/vm_install_using_vagrant", null ],
+                [ "Apple Silicon", "/developer/getting_started/vagrant_qemu_arm_mac", [
+                    [ "Vagrant QEMU Install", "/developer/getting_started/vagrant_qemu_arm_mac", null ]
+                ] ],
                 [ "Advanced Setup", "/developer/getting_started/phpstorm", [
                     [ "PhpStorm Setup Instructions", "/developer/getting_started/phpstorm", null ],
                     [ "Xdebug Setup Instructions", "/developer/getting_started/xdebug", null ],
