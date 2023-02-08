@@ -8,13 +8,16 @@ redirect_from:
 
 Submitty is proud to have been selected for participation in [Google
 Summer of Code](https://summerofcode.withgoogle.com/) and to work with
-talented students from several different countries.  We have been
-selected for Google Summer of Code (GSoC) 2022!  Please read the
+talented students from several different countries.  Please read the
 student project reports from previous summers linked below.
 
 
 ![](/images/GSoC-Vertical.png){:width="250px"}
 
+
+_NOTE: The organizations selected for Summer 2023 Google Summer of
+   Code will be announced in late February.  The instructions below
+   are from 2022 and will be updated if Submitty is accepted!_
 
 ## How to Apply to Submitty for Google Summer of Code 2022
 
@@ -69,9 +72,9 @@ student project reports from previous summers linked below.
 
 * [Website Security and Penetration Testing by Akshat Batra](/developer/google_summer_of_code/2022_Akshat_Batra)
 
-* [TBA by Madhur Jain](/developer/google_summer_of_code/2022_Madhur_Jain)
+* [Progressive Web App by Madhur Jain](/developer/google_summer_of_code/2022_Madhur_Jain)
 
-* [TBA by Poorna Gunathilaka](/developer/google_summer_of_code/2022_Poorna_Gunathilaka)
+* [Static Analysis for Autograding by Poorna Gunathilaka](/developer/google_summer_of_code/2022_Poorna_Gunathilaka)
 
 
 
