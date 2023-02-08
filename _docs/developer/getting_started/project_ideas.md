@@ -223,6 +223,10 @@ See also:
 
 * [Developer](/developer) pages
 
-* [How to Contribute](/developer/getting_started/how_to_contribute) page
+* [Review a Pull Request](/developer/getting_started/review_a_pull_request)
+
+* [Make a Pull Request](/developer/getting_started/make_a_pull_request)
+
+* [Edit Submitty Documentation](/developer/getting_started/edit_submitty_documentation)
 
 
