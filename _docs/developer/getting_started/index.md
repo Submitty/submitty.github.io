@@ -36,6 +36,7 @@ redirect_from:
   Install the updated code on your VM, test the changes, and comment on or
   [review the PR through GitHub](/developer/getting_started/review_a_pull_request)
 
+
 * Look through our [GitHub Issues lists](https://github.com/Submitty/Submitty/issues) for some ideas
   of problems to explore.
 
