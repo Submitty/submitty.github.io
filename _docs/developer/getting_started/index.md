@@ -24,9 +24,9 @@ redirect_from:
   [complete system administrator instructions](/sysadmin/installation/index).
 
 * Read through the
-  [Student](/student/),
-  [Grader](/grader/), and
-  [Instructor](/instructor/)
+  [Student](/student/account/index),
+  [Grader](/grader/index), and
+  [Instructor](/instructor)
   instructions and try it out.
 
 * Learn how to use git.
