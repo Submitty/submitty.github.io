@@ -41,7 +41,7 @@ attempt to automatically edit the Apache configuration.  PR's requiring
 manual system administrator edits before/after installation should be
 prefixed by `[SYSADMIN ACTION]`.
 
-See also: [How to make a Pull Request(PR) to Submitty](/developer/getting_started/make-a-pull-request)
+See also: [How to make a Pull Request(PR) to Submitty](/developer/getting_started/make_a_pull_request)
 
 
 ### Manually Applying Migrations
