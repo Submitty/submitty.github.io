@@ -42,12 +42,12 @@ _NOTE: The organizations selected for Summer 2023 Google Summer of
    test this feature on your development VM. Inspect the relevant
    system files and database contents.
 
-7. Submit a pull request to solve an open issue.
-   [https://submitty.org/developer/getting_started/how_to_contribute](/developer/getting_started/how_to_contribute)
+7. Submit a pull request to solve [an open issue](https://github.com/Submitty/Submitty/issues).
+   [https://submitty.org/developer/getting_started/make_a_pull_request](/developer/getting_started/make_a_pull_request)
    
-8. Help test and review pull requests opened by other developers.   
-   [https://github.com/Submitty/Submitty/pulls](https://github.com/Submitty/Submitty/pulls)
-
+8. Help test and review [open pull requests](https://github.com/Submitty/Submitty/pulls) opened by other developers.
+   [https://submitty.org/developer/getting_started/review_a_pull_request](/developer/getting_started/review_a_pull_request)
+   
 9. Prepare your application. We recommend propsective contributors focus on one
    of our suggested projects from the project ideas list above. Successful
    applicants will be able to expand and enhance the proposed project idea

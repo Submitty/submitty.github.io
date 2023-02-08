@@ -32,7 +32,7 @@ Refactors, Dependencies, etc.
 
 
 See also
-[Developer: How to Contribute](/developer/getting_started/how_to_contribute) and
+[Developer: Make A Pull Request](/developer/getting_started/make_a_pull_request) and
 [Developer: Migrations](/developer/development_instructions/migrations).
 
 

@@ -180,7 +180,9 @@ var NAVTREE =
             [ "Getting Started", "/developer/getting_started/index", [
                 [ "Overview", "/developer/getting_started/index", null ],
                 [ "Project Ideas", "/developer/getting_started/project_ideas", null ],
-                [ "How to Contribute", "/developer/getting_started/how_to_contribute", null ],
+                [ "Review a Pull Request", "/developer/getting_started/review_a_pull_request", null ],
+                [ "Make a Pull Request", "/developer/getting_started/make_a_pull_request", null ],
+                [ "Edit Submitty Documentation", "/developer/getting_started/edit_submitty_documentation", null ],
                 [ "VM Install using Vagrant", "/developer/getting_started/vm_install_using_vagrant", null ],
                 [ "Advanced Setup", "/developer/getting_started/phpstorm", [
                     [ "PhpStorm Setup Instructions", "/developer/getting_started/phpstorm", null ],

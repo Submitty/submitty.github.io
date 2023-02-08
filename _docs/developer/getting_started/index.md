@@ -24,16 +24,18 @@ redirect_from:
   [complete system administrator instructions](/sysadmin/installation/index).
 
 * Read through the
-  [Instructor] (/instructor/),
-  [Grader] (/instructor/), and
-  [Student] (/instructor/) instructions and try it out.
+  [Student](/student/account/index),
+  [Grader](/grader/index), and
+  [Instructor](/instructor)
+  instructions and try it out.
 
 * Learn how to use git.
 
 * Browse our open [GitHub Pull Requests](https://github.com/Submitty/Submitty/pulls).
-  Pick a PR and read the PR notes, linked issues, and other documentation.
+  Pick an open PR and read the PR notes, linked issues, and other documentation.
   Install the updated code on your VM, test the changes, and comment on or
-  [review the PR through GitHub](/developer/getting_started/how_to_contribute#how-to-review-a-pull-request-pr).
+  [review the PR through GitHub](/developer/getting_started/review_a_pull_request)
+
 
 * Look through our [GitHub Issues lists](https://github.com/Submitty/Submitty/issues) for some ideas
   of problems to explore.
@@ -77,10 +79,11 @@ redirect_from:
 * Run the relevant portions of test suite locally:  
   [Submitty Testing Instructions](/developer/testing/)
 
-* Submit a [Pull Request (PR)](/developer/getting_started/how_to_contribute#how-to-make-a-pull-request-pr-to-submitty)
+* Submit a [Pull Request (PR)](/developer/getting_started/make_a_pull_request)
   with your contributions.
 
-* Help by [Reviewing the Pull Requests](/developer/getting_started/how_to_contribute#how-to-review-a-pull-request-pr) of other developers.
+* Help by [Reviewing the Pull Requests](/developer/getting_started/review_a_pull_request)
+  of other developers.
 
-* [Improve the online documentation for Submitty](/developer/getting_started/how_to_contribute#how-to-edit-submittyorg-documentation)
+* [Improve the online documentation for Submitty](/developer/getting_started/edit_submitty_documentation).
 

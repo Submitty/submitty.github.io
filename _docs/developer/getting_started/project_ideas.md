@@ -52,7 +52,6 @@ Tracker](https://github.com/Submitty/Submitty/issues).
 
    _Difficulty Level_: medium or hard
 
-
 2. **Streamline instructor configuration of automated grading**
 
    Currently, instructors must write a configuration as a `config.json`
@@ -136,7 +135,6 @@ Tracker](https://github.com/Submitty/Submitty/issues).
    _GSoC Project Size_: 175 or 350 hours
 
    _Difficulty Level_: medium or hard
-
 
 
 4. **Continuous Integration Testing**
@@ -223,6 +221,10 @@ See also:
 
 * [Developer](/developer) pages
 
-* [How to Contribute](/developer/getting_started/how_to_contribute) page
+* [Review a Pull Request](/developer/getting_started/review_a_pull_request)
+
+* [Make a Pull Request](/developer/getting_started/make_a_pull_request)
+
+* [Edit Submitty Documentation](/developer/getting_started/edit_submitty_documentation)
 
 
