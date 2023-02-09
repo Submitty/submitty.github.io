@@ -107,9 +107,12 @@ instructions.
 
 3. Download and install the latest version of [Git](https://git-scm.com/downloads).
 
-4. Download and install [VirtualBox](https://www.virtualbox.org/) and [Vagrant](https://www.vagrantup.com)
+4. Download and install [VirtualBox](https://www.virtualbox.org/wiki/Download_Old_Builds_6_1) and [Vagrant](https://www.vagrantup.com)
+   
+   **NOTE**
+   Please download VirtualBox 6 instead of 7.
 
-   Below are quick steps to get everything installed and running.
+Below are quick steps to get everything installed and running.
 
    **Windows 10**
 
