@@ -61,6 +61,10 @@ the installation process.
 
    $ vagrant plugin install vagrant-qemu
    ```
+   Note: It is possible that you may need to install Rosetta before installing vagrant. Run the following command to install Rosetta:
+   ```
+   $ sudo softwareupdate --install-rosetta
+   ```
 
 3. Clone and open the Submitty repository
 
