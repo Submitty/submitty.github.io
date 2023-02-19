@@ -230,6 +230,30 @@ students are using the system at once.
 ## Tune the performance of the website to handle a large number of users
 
 
+Reading the PHP memory limit from `/etc/php/7.4/fpm/php.ini`
+
+```
+memory_limit = <MEMORY LIMIT>
+```
+
+If the server you are running on only runs the Submitty web server, 
+you should consider using the static process manager for PHP-FPM.
+
+#### Updating configuration
+
+After editing any values in the PHP-FPM sections below, be sure to
+restart apache and php-fpm:
+
+
+```
+sudo systemctl restart apache2.service
+sudo systemctl restart php7.4-fpm.service
+```
+
+
+#### PHP-FPM settings using the static process manager
+
+
 Adjust the following settings in `/etc/php/7.4/fpm/pool.d/submitty.conf`.
 
 We have found that the following settings work well for a production
@@ -237,8 +261,32 @@ server with approximately 2000 students.  The commented out line is
 the default value.  Please read the documentation to determine values
 that are appropriate for your own system.
 
+```
+;pm = dynamic
+pm = static
+
+;pm.max_children = 20
+pm.max_children = 225
+```
+
+The [PHP-FPM Process Calculator](https://spot13.com/pmcalculator/) 
+can be used to calculate a `pm.max_children` value for your server
+(the other values can be ignored for the static process manager).
+
+
+#### PHP-FPM settings using the dynamic process manager
+
+
+Adjust the following settings in `/etc/php/7.4/fpm/pool.d/submitty.conf`.
+
+The commented out line is the default value.  Please read the documentation
+to determine values that are appropriate for your own system.
+
 
 ```
+; pm = dynamic
+pm = dynamic
+
 ; pm.start_servers = 4
 pm.start_servers = 20
 
@@ -252,15 +300,8 @@ pm.max_spare_servers = 30
 pm.max_children = 100
 ```
 
-
-After editing these values, be sure to restart apache and php-fpm:
-
-
-```
-sudo systemctl restart apache2.service
-sudo systemctl restart php7.4-fpm.service
-```
-
+The [PHP-FPM Process Calculator](https://spot13.com/pmcalculator/)
+can be used to calculate values for your server.
 
 
 ## Show system message to all users
