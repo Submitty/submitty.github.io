@@ -152,16 +152,6 @@ The dashboard displays student information for various categories, including:
 
 * Instructors can click on the column headings to sort the student data in ascending or descending order.
 
-* Instructors can also filter the data by recent activity in specific categories by entering date(s) or values and clicking on "Apply". This allows you to quickly identify students who have not been active recently.
+* Instructors can also filter the data by recent activity in specific categories by entering date(s) or values and clicking on "Apply". This allows instructors to quickly identify students who have not been active recently.
 
 * Note: Students highlighted in red do not have the specified recent or minimum levels of activity in one or more categories. This allows instructors to easily identify students who may need additional support or outreach.
-
-
-
-
-
-
-
-
-
-
