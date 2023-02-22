@@ -128,3 +128,40 @@ late, or if the feed is not available for your course.
 3.  Click on the "Upload Graderlist" button in the upper right. Select your prepared .csv file and press "Submit"
 
 
+### Student Activity Dashboard
+
+The Student Activity Dashboard provides instructors with a powerful tool for monitoring and tracking their students' activities on the system. By using this dashboard, instructors can ensure that students are keeping up with their coursework and reach out to them if they are falling behind.
+
+To access the dashboard, click on the "Student Activity Dashboard" tab. You will be presented with a table of student data.
+
+![](/images/student_activity_dashboard.png)
+
+
+### Viewing Student Information
+
+The dashboard displays student information for various categories, including:
+
+- Gradeable Submission Date
+- Forum View Date
+- Forum Post Date
+- Gradeable Access Date
+- Number of Poll Responses
+- Office Hours Queue Date
+
+### Sorting and Filtering Data
+
+* Instructors can click on the column headings to sort the student data in ascending or descending order.
+
+* Instructors can also filter the data by recent activity in specific categories by entering date(s) or values and clicking on "Apply". This allows you to quickly identify students who have not been active recently.
+
+* Note: Students highlighted in red do not have the specified recent or minimum levels of activity in one or more categories. This allows instructors to easily identify students who may need additional support or outreach.
+
+
+
+
+
+
+
+
+
+
