@@ -12,12 +12,12 @@ See Also: [Homework Submission via Version Control / GIT](/student/submission/ve
 
 ## Creating a new Authentication Token
 
-Navigate to the "Authentication Token" page using the link on the left
-menu bar.  Press the "Create New VCS Authentication Token" to create a
-new authentication token.  If you use Submitty from multiple
-computers/devices, you are recommended to create a different token for
-each machine, and give each token a descriptive name and appropriate
-expiration date.
+Navigate to the "My Profile" page using the link on the left menu bar and then
+click on the "Authentication Tokens" button at the bottom.  Press the "Create
+New VCS Authentication Token" to create a new authentication token.  If you
+use Submitty from multiple computers/devices, you are recommended to create a
+different token for each machine, and give each token a descriptive name and
+appropriate expiration date.
 
 Once you generate a token, the newly-generated token will be displayed
 at the top of the page.  *NOTE: Do not share this token with

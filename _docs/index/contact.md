@@ -7,7 +7,7 @@ redirect_from:
 ---
 
 Are you interested in joining the Submitty Development Team?  Please read:  
-[Suggestions for New Developers](/developer/getting_started/index#suggestions-for-new-developers)  and  [How to Contribute](/developer/getting_started/how_to_contribute).
+[Suggestions for New Developers](/developer/getting_started/index).
 
 
 ## Online Community Discussion

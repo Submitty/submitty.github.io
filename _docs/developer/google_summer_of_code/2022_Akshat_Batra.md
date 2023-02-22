@@ -97,7 +97,7 @@ Students and limited access graders could view the details about the progress of
 
 [PR #8216](https://github.com/Submitty/Submitty/pull/8216)
 
-I felt the necessity of being able to view the common settings (if any) for a folder i.e. common release date, common section and common "hide materials" setting. To accomplish this I developed a client side solution to recursively traverse the folder structure of course materials page to determine the settings that were common in all files/folders within each folder.
+I felt the necessity of being able to view the common settings (if any) for a folder i.e. common release date, common section(s) and common "hide materials" setting. To accomplish this I developed a client side solution to recursively traverse the folder structure of course materials page to determine the settings that were common in all files/folders within each folder.
 
 I also reviewed pull requests by other developers; it was a very pleasant experience.
 

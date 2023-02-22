@@ -13,7 +13,7 @@ jobs:
     steps:
       #
       # pull request titles format rules here:
-      # https://submitty.org/developer/getting_started/how_to_contribute#how-to-make-a-pull-request-pr-to-submitty
+      # https://submitty.org/developer/getting_started/make_a_pull_request
       #
       # [<TYPE>:<MODULE>] <SUBJECT>
       #

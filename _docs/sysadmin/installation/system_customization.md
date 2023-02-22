@@ -143,7 +143,8 @@ However, this should be only applied to the `php.ini` running the web server and
 
 ## Increasing the max number of files that can be uploaded at once
 
-By default, PHP only allows 20 files to be uploaded at a time. To change this limit, edit:
+By default, PHP only allows 20 files to be uploaded at a time.
+This limit is probably sufficient, but to change this limit, edit:
 
 ```
 /etc/php/7.4/fpm/php.ini
@@ -152,7 +153,8 @@ By default, PHP only allows 20 files to be uploaded at a time. To change this li
 and modify the variable:
 
 ```
-upload_max_filesize
+; Maximum number of files that can be uploaded via a single request
+max_file_uploads = 20
 ```
 
 Then restart PHP
@@ -181,6 +183,10 @@ Change these variables as appropriate:
 post_max_size
 upload_max_filesize
 ```
+
+We have found that a value of `200M` for both variables has been
+appropriate, specifically for bulk uploading of scanned paper exams
+for online grading.
 
 And restart apache:
 
@@ -224,6 +230,30 @@ students are using the system at once.
 ## Tune the performance of the website to handle a large number of users
 
 
+Reading the PHP memory limit from `/etc/php/7.4/fpm/php.ini`
+
+```
+memory_limit = <MEMORY LIMIT>
+```
+
+If the server you are running on only runs the Submitty web server, 
+you should consider using the static process manager for PHP-FPM.
+
+#### Updating configuration
+
+After editing any values in the PHP-FPM sections below, be sure to
+restart apache and php-fpm:
+
+
+```
+sudo systemctl restart apache2.service
+sudo systemctl restart php7.4-fpm.service
+```
+
+
+#### PHP-FPM settings using the static process manager
+
+
 Adjust the following settings in `/etc/php/7.4/fpm/pool.d/submitty.conf`.
 
 We have found that the following settings work well for a production
@@ -231,8 +261,32 @@ server with approximately 2000 students.  The commented out line is
 the default value.  Please read the documentation to determine values
 that are appropriate for your own system.
 
+```
+;pm = dynamic
+pm = static
+
+;pm.max_children = 20
+pm.max_children = 225
+```
+
+The [PHP-FPM Process Calculator](https://spot13.com/pmcalculator/) 
+can be used to calculate a `pm.max_children` value for your server
+(the other values can be ignored for the static process manager).
+
+
+#### PHP-FPM settings using the dynamic process manager
+
+
+Adjust the following settings in `/etc/php/7.4/fpm/pool.d/submitty.conf`.
+
+The commented out line is the default value.  Please read the documentation
+to determine values that are appropriate for your own system.
+
 
 ```
+; pm = dynamic
+pm = dynamic
+
 ; pm.start_servers = 4
 pm.start_servers = 20
 
@@ -246,15 +300,8 @@ pm.max_spare_servers = 30
 pm.max_children = 100
 ```
 
-
-After editing these values, be sure to restart apache and php-fpm:
-
-
-```
-sudo systemctl restart apache2.service
-sudo systemctl restart php7.4-fpm.service
-```
-
+The [PHP-FPM Process Calculator](https://spot13.com/pmcalculator/)
+can be used to calculate values for your server.
 
 
 ## Show system message to all users
@@ -310,3 +357,28 @@ You can customize the login screen with markdown. By default, `# Login` is rende
 
 Refer to [this](/student/communication/markdown) to learn more about markdown.
 
+
+
+## Preferred Name Change Logging
+
+In the interests of diversity, Submitty provides for users to set a preferred name should it be different from their legal name.  This feature can be abused, so changes to a user's preferred name is recorded into Postgresql's log for review.  To make it easier to locate these logged messages, a sysadmin tools script, `pnc_compile.pl`, is provided to fetch the preferred name change logs from Postgresql and compile them into a human readable report.
+
+**IMPORTANT:** `pnc_compile.pl` needs to operate on a host that can directly access Postgresql's log.  Typically, this means the script must be setup on the same server as Postgresql.
+
+1. Make sure your host has Perl 5.30.0 or later.
+  * Ubuntu 20.04 includes Perl 5.30.0.
+2. Retrieve `pnc_compile.pl` from [Github](https://raw.githubusercontent.com/Submitty/SysadminTools/main/preferred_name_logging/pnc_compile.pl) (right click link and choose "Save Link As...")
+3. Edit code file to setup its configuration.
+  * Locate the two lines shown below.  They are near the top of the file.  These lines dictate where to look for Postgresql's log and where to write the script's compiled log.
+  * `$PSQL_LOG` dictates where Postgresql's log is located. `$PNC_LOG` dictates where this script will record and append its report.
+  * The default for `$PSQL_LOG` is set for Postgresql 12 running in Ubuntu 20.04.  The default for `$PNC_LOG` will write the script's report to the same directory as the script file.
+  *  Change these values to match your host's setup.
+  ```perl
+  my $PSQL_LOG = "/var/log/postgresql/postgresql-12-main.log";
+  my $PNC_LOG  = "preferred_name_change_report.log";
+  ```
+4. Setup a cron schedule to run the script.
+  * Postgresql's log is typically owned by `root`, so it is mandatory to run the script as `root`.
+  * Be sure to set execute permission on the script.
+  * The script will parse Postgresql's log *by the current day's datestamp*, so it is intended that the script is run once per day.
+  * Alternatively, if you wish to schedule the crontab for overnight after 12AM, you can set the `-y` or `--yesterday` argument so the script will intentionally parse Postgresql's log by the *previous* day's datestamp.  e.g. `/path/to/pnc_compile.pl -y`
