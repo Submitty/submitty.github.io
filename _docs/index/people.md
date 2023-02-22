@@ -11,13 +11,21 @@ redirect_from:
 ---
 
 
+## 2022 Summer Developers
+
+![](/images/people/2022_summer.png)
+
+Jiarui (Jerry) Lu, Matthew Bonnecaze, Thomas Kozlowski, Bowen (Evan) Shi, Chris Reed, William Allen
+
+---
+
 ## 2021 Summer & Fall Developers
 
 ![](/images/people/2021_summer_fall.png)
 
 Miles Ednie, Henrik Lam, Stephanie Li, Javier Portorreal, Eddie Krystowki, Chris Reed, Ben Kelly, Jenay Barela, Shelly Belsky, William Allen, Jensen Li
 
-
+---
 
 ## 2019 Summer Developers
 
