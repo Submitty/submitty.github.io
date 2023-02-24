@@ -12,7 +12,7 @@ Are you interested in joining the Submitty Development Team?  Please read:
 
 ## Online Community Discussion
 
-We have a public [Slack server for Submitty Developers](https://join.slack.com/t/submitty/shared_invite/enQtMzE1NzgyMzUzNzI5LWZhOGM4NWU4M2U3ZmM2ZmM5NTYwNjk3NTc5Yjg1ZGRlYzU1MjcwYWNkNGYxZjk2YTk3ZmEyODY3MjEyOTc0M2E).
+We have a public [Slack server for Submitty Users and Developers](https://join.slack.com/t/submitty/shared_invite/enQtMzE1NzgyMzUzNzI5LWZhOGM4NWU4M2U3ZmM2ZmM5NTYwNjk3NTc5Yjg1ZGRlYzU1MjcwYWNkNGYxZjk2YTk3ZmEyODY3MjEyOTc0M2E).
 
 Please use the Slack server `#general-welcome` and
 `#gettingstarted-installation-development` and

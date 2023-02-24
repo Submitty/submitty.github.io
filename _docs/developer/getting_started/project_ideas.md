@@ -5,7 +5,8 @@ redirect_from:
   - /developer/project_ideas
 ---
 
-Submitty has applied to [Google Summer of Code (GSoC) 2023](https://summerofcode.withgoogle.com/).
+We are thrilled to announce that Submitty has been accepted
+to [Google Summer of Code (GSoC) 2023](https://summerofcode.withgoogle.com/).
 See [Submitty GSoC Application & Reports](/developer/google_summer_of_code/index) for more information about
 the application process and to read reports from Submitty GSoC contributors
 from Summers 2018, 2019, 2020, and 2022.
