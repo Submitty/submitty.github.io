@@ -3,12 +3,14 @@ title: How To Review a Pull Request
 category: Developer > Getting Started
 ---
 
-Be sure to read the [Suggestions for New Developers](/developer/getting_started/index).
 
-So you've been asked to review another developer's code.  What do
-you need to do?
+You've been asked to review another developer's work, which has been
+posted to GitHub as an open [pull request (PR)](https://github.com/Submitty/Submitty/pulls).
+What do you need to do?
 
-1. Make sure you understand the purpose of the PR.  Read the notes in
+1. Read the [Suggestions for New Developers](/developer/getting_started/index).
+
+2. Make sure you understand the purpose of the PR.  Read the notes in
    the PR and read the notes from any issues that are referenced in the
    PR.
 
@@ -25,7 +27,7 @@ you need to do?
       main branch to understand how the system works without the new feature.
 
 
-2. Checkout the branch containing the bug fixes and/or new feature.
+3. Checkout the branch containing the bug fixes and/or new feature.
 
     * If the PR is a branch of the main Submitty repository, you can
       check it out with
@@ -52,11 +54,11 @@ you need to do?
       Review the PR normally and delete the temporary branch when you are done
 
 
-3.  [Re-install the system](/developer/development_instructions/index)
+4.  [Re-install the system](/developer/development_instructions/index)
     as necessary
 
 
-4. Test the system with typical use cases.  Think about how a novice
+5. Test the system with typical use cases.  Think about how a novice
    user will experience this portion of the Submitty system.  Is it
    clear and intuitive?  Are the instructions (on page or on
    submitty.org) clear?  As appropriate leave comments for the PR
@@ -67,7 +69,7 @@ you need to do?
    leave a comment in the PR describing how to reproduce the problem.
 
 
-5. Look through the source code for the pull request.  Depending on
+6. Look through the source code for the pull request.  Depending on
    your familiarity with this portion of the code, your review may be
    cursory or in depth.
 
@@ -92,12 +94,12 @@ you need to do?
 
 
 
-6. Is the PR title appropriate?  Are the PR notes sufficient?  Will a
+7. Is the PR title appropriate?  Are the PR notes sufficient?  Will a
    system administrator understand the purpose & importance of
    installing this commit on their system?  
 
 
-7. Through the github review system, leave feedback and comments and
+8. Through the github review system, leave feedback and comments and
    indicate whether you approve as is
    or require changes on this PR before it can be merged.
 
