@@ -3,6 +3,7 @@ title:  v.19.06.01 > URL Rewrite Rules
 category: System Administrator > Installation Version Notes
 redirect_from:
   - /system_admin/version_notes/v.19.06.01
+  - /sysadmin/version_notes/v.19.06.01
 ---
 
 Beginning with version `v.19.06.01` of the main Submitty repository we
