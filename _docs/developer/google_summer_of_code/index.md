@@ -43,11 +43,14 @@ the student project reports from previous summers linked below.
    
    Ask specific technical questions about the Submitty system and open
    issues and help answer technical questions from other new developers if
-   you think you can help.
+   you think you can help.  Your engagement in the community discussion
+   during the application period (both asking and answering questions) will 
+   be taken into account as we evaluate your application.
 
    _NOTE: The Submitty mentors for Google Summer of Code are on our
    Slack channel.  Please communicate through the public channels and
-   do not private message any mentors._
+   do not direct messsage (DM) / private message any mentors.  
+   Mentors will generally not respond to private messages._
 
 6. Search the Submitty Github for related open issues (bugs and feature requests):   
    [https://github.com/Submitty/Submitty/issues](https://github.com/Submitty/Submitty/issues)
@@ -63,7 +66,7 @@ the student project reports from previous summers linked below.
 9. Help test and review [open pull requests](https://github.com/Submitty/Submitty/pulls) contributed by other developers.
    [https://submitty.org/developer/getting_started/review_a_pull_request](/developer/getting_started/review_a_pull_request)
    
-10. Prepare your application. We recommend propsective contributors focus on one
+10. Prepare your application. We recommend prospective contributors focus on one
    of our suggested projects from the project ideas list above. Successful
    applicants will be able to expand and enhance the proposed project idea
    with a timeline of design and implementation milestones, and will
