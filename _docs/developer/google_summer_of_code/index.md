@@ -49,7 +49,7 @@ the student project reports from previous summers linked below.
 
    _NOTE: The Submitty mentors for Google Summer of Code are on our
    Slack channel.  Please communicate through the public channels and
-   do not direct messsage (DM) / private message any mentors.  
+   do not direct messsage (DM) / private message any mentors. 
    Mentors will generally not respond to private messages._
 
 6. Search the Submitty Github for related open issues (bugs and feature requests):   
@@ -60,7 +60,7 @@ the student project reports from previous summers linked below.
    test this feature on your development VM. Inspect the relevant
    system files and database contents.
 
-8. Submit a pull request to solve an open issue.
+8. Submit a pull request to solve an open issue.  
    [https://submitty.org/developer/getting_started/make_a_pull_request](/developer/getting_started/make_a_pull_request)
    
 9. Help test and review [open pull requests](https://github.com/Submitty/Submitty/pulls) contributed by other developers.
@@ -80,8 +80,10 @@ the student project reports from previous summers linked below.
 
 12. The application window for Google Summer of Code closes on April 4th, 2023 at 18:00 UTC.
    Please carefully read all of the program requirements.  
-   [Google Summer of Code 2023 Timeline](https://developers.google.com/open-source/gsoc/timeline)  
-   [https://summerofcode.withgoogle.com/](https://summerofcode.withgoogle.com/)  
+   
+     * [Google Summer of Code 2023 Timeline](https://developers.google.com/open-source/gsoc/timeline)  
+
+     * [https://summerofcode.withgoogle.com/](https://summerofcode.withgoogle.com/)  
 
 &nbsp;  
   
