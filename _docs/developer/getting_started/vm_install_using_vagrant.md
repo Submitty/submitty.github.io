@@ -28,7 +28,7 @@ instructions.
    also required (most computers have these).  Submitty is RAM and I/O
    intensive, so more RAM and a fast disk are better.
 
-2. Make sure you have at least 20GB of hard disk available for
+2. Make sure you have at least 65GB of hard disk available for
    installation.  We do not recommend installing the Submitty
    Developer VM on DropBox, OneDrive, GoogleDrive, or other cloud
    storage.
@@ -133,7 +133,8 @@ instructions.
 
      VirtualBox: <https://www.virtualbox.org/wiki/Linux_Downloads>
 
-     Vagrant: <https://vagrant-deb.linestarve.com/>
+     Vagrant: <https://developer.hashicorp.com/vagrant/downloads> 
+     (if that doesn't work, try: <https://vagrant-deb.linestarve.com/>)
 
 5. Clone [the Submitty repository](https://github.com/Submitty/Submitty) to a location on
    your computer (the "host").
@@ -214,6 +215,31 @@ instructions.
    ```
    SET NO_SUBMISSIONS
    ```
+   When the install has completed, you should see the message:
+   ```
+   #####################################################################
+
+                        INSTALLATION SUCCESS!
+   
+                           .GGQGGGSlu
+                         .GGGGGGGGGGGS
+                    :llUGGGGGGGGGGGGGGGG
+                    'GGGGGGGGGGGGGGGGGGb        .
+                       %GGGGGGGGGGGGGGG~   ..GSGGG
+                          GGGGGGGGGGGGGGSGGGGGGGGGG[
+                        ;GGGGGGGGGGGGp\ \ \GGGGGGGGL
+                       !GGGGGGGGGGGGGGS\ \ \GGGGGG
+                       GGGGGGGGGGGGGGGGG\ \ \9GGGG
+                       %GGGGGGGGGGGGGGGS/ / /.GGG
+                        %GGGGGGGGGGGGGS/ / /GGG
+                         '%NNNNNNNNNNNNNNNNNN
+   #####################################################################
+   ```
+   *NOTE: There are times when the install will pause for a brief period with the message `Done`. This does not mean the install has ended, and the install should continue after a bit of time.*
+
+   If you do not see this message due to an error or the installation has frozen,
+   check out [Installation Troubleshooting](#installation-troubleshooting)
+
 
 ---
 
@@ -358,6 +384,20 @@ instructions.
 
 ## Installation Troubleshooting
 
+* If your install seems to randomly freeze during `vagrant up` 
+with no explanation, then there are a couple of things that may be going wrong:
+
+    *Note: If this happens, it may be worth running a simple `vagrant destroy` before you try to `vagrant up` again. It is possible to repair, but it is usually more effort than it is worth.*
+
+    * First, check to make sure you have a solid internet connection. 
+    Even if the connection is fast, it may experience drop-outs every 
+    once in a while, so it is highly recommended to install it with a wired 
+    connection to the internet.
+
+    * Secondly, check to make sure your computer is not going to 
+    sleep, this can be changed in settings for some systems, or you 
+    can install a program to keep it awake (for example, amphetamine on Mac).
+
 * If an error is thrown during `vagrant up`, you may need to
    uninstall Virtual Box and all virtual machines by typing the
    following commands:
@@ -398,6 +438,7 @@ instructions.
     "Allow apps download from".  You may also need to restart your computer.
 
     Similar instructions for other OS.
+
 
 * See also [Development Instructions Troubleshooting](/developer/development_instructions/troubleshooting)
 
