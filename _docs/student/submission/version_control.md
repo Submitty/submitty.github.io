@@ -68,6 +68,11 @@ _TODO:_
 _TODO:_
 
 
+### Private, Single Repository with Gradeable Subdirectories
+
+1. If your instructor does not create a repository for you, 
+
+
 ### Committing Your Work
 
 1. To check what changes you've made since your last commit, run:
