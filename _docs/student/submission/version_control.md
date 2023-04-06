@@ -20,12 +20,6 @@ redirect_from:
    `SPECIFY_TARGET_DIRECTORY` with a path and directory name on your
    computer.  Run the command.
 
-   If your instructor has an assignment subdirectory layout, you may need to change directory into the given assignment.
-   
-   ```
-   cd hw1
-   ```
-
 
 2. You will be prompted to enter your username and password.
 
@@ -68,9 +62,24 @@ _TODO:_
 _TODO:_
 
 
-### Private, Single Repository with Gradeable Subdirectories
+### External, Instructor-Created, Student Forked Repositories with Assignments in Subdirectories (e.g Gitlab)
+#### This example uses Gitlab
 
-1. If your instructor does not create a repository for you, 
+1. Go to your school's Gitlab website, and navigate to your course. (Either use the url, e.g. gitlab.university.edu/course_id or by searching for the course)
+
+2. Navigate to the repository specified by your instructor (e.g. student101)
+
+3. Fork the repository, under your namespace. (for help, view [How to Fork in Gitlab](https://docs.gitlab.com/ee/user/project/repository/forking_workflow.html)
+   * You may need to create an SSH key to allow pushing/pulling from Gitlab 
+   
+   * If you use the SSH clone option, to set the upstream repository, use the command `git remote add upstream git@GITLAB_URL:COURSE_ID/PROJECT_NAME.git` replacing GITLAB_URL with your universities gitlab url, COURSE_ID with your given course_id, and PROJECT_NAME with your given repository name (e.g. git@gitlab.university.edu:cptr101/student101). 
+   
+   * If you clone with https, use `git remote add upstream https://GITLAB_URL/COURSE_ID/PROJECT_NAME.git` instead
+
+
+4. Clone the repository to your local IDE
+
+5. Make desired changes. To pull changes from the upstream repository, use the commands `git pull`, `git fetch upstream`, `git checkout main`, and `git merge upstream/main` (replace main with your desired branch, if the name is different). Use the below instructions to push your changes. 
 
 
 ### Committing Your Work
@@ -151,7 +160,7 @@ Currently your work is only on your local machine.
 
 3. If you would like to submit this version of your work (for
    automatic and/or manual grading), go to the Submitty website for
-   this assignment and press the blue "Grade My Repository" button.
+   this assignment and press the green "Grade My Repository" button.
 
    Submitty will checkout the latest version of your code committed
    and pushed to the server, and will run any automated tests and
@@ -160,7 +169,7 @@ Currently your work is only on your local machine.
 
    If you notice any problems with your work, you can modify the code
    on your local machine, commit those changes, push the commit to the
-   server, and then press the blue "Grade My Repository" button again.
+   server, and then press the green "Grade My Repository" button again.
 
 
 4. _TODO: We eventually plan to add a 'hook' to trigger repository

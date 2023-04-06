@@ -76,7 +76,7 @@ _TODO:_
 _TODO:_
 
 
-### Externally Instructor-Created, Student Forked Repositories with Assignments in Subdirectories (e.g Gitlab)
+### External, Instructor-Created, Student Forked Repositories with Assignments in Subdirectories (e.g Gitlab)
 
 ## _This example will be using a locally hosted Gitlab server._
 
@@ -97,8 +97,9 @@ _TODO:_
 
 6. Instruct your students to _fork_ the repository, thereby changing the course_id to their user_id. 
 
-
 ##### _Disclaimer_ Submitty needs access to the repositories, whether that be through public repositories, or adding a key to give Submitty access to private repositories. 
+
+
 ### Uploading Instructor Provided Code to GIT
 
 
