@@ -72,15 +72,18 @@ _TODO:_
 3. Fork the repository, under your namespace. (for help, view [How to Fork in Gitlab](https://docs.gitlab.com/ee/user/project/repository/forking_workflow.html))
    * You may need to create an SSH key to allow pushing/pulling from Gitlab 
    
-   * If you use the SSH clone option, to set the upstream repository, use the command `git remote add upstream git@GITLAB_URL:COURSE_ID/PROJECT_NAME.git` replacing GITLAB_URL with your universities gitlab url, COURSE_ID with your given course_id, and PROJECT_NAME with your given repository name (e.g. git@gitlab.university.edu:cptr101/student101). 
+   * If you use the SSH clone option, to set the upstream repository, use the command `git remote add upstream git@GITLAB_URL:COURSE_ID/PROJECT_NAME.git` 
    
    * If you clone with https, use `git remote add upstream https://GITLAB_URL/COURSE_ID/PROJECT_NAME.git` instead
 
 
 4. Clone the repository to your local IDE
 
-5. Make desired changes. To pull changes from the upstream repository, use the commands `git pull`, `git fetch upstream`, `git checkout main`, and `git merge upstream/main` (replace main with your desired branch, if the name is different). Use the below instructions to push your changes. 
+5. Make desired changes. To pull changes from the upstream repository, use the commands `git pull`, `git fetch upstream`, `git checkout main`, and `git merge upstream/main` (replace main with your desired branch, if the name is different). Use the instructions listed below to push your changes. 
 
+   * GITLAB_URL is the url of your school's gitlab server.
+   * COURSE_ID is provided by your instructor. 
+   * PROJECT_NAME is provided by your instructor. 
 
 ### Committing Your Work
 
