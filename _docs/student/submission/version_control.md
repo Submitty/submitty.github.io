@@ -69,7 +69,7 @@ _TODO:_
 
 2. Navigate to the repository specified by your instructor (e.g. student101)
 
-3. Fork the repository, under your namespace. (for help, view [How to Fork in Gitlab](https://docs.gitlab.com/ee/user/project/repository/forking_workflow.html)
+3. Fork the repository, under your namespace. (for help, view [How to Fork in Gitlab](https://docs.gitlab.com/ee/user/project/repository/forking_workflow.html))
    * You may need to create an SSH key to allow pushing/pulling from Gitlab 
    
    * If you use the SSH clone option, to set the upstream repository, use the command `git remote add upstream git@GITLAB_URL:COURSE_ID/PROJECT_NAME.git` replacing GITLAB_URL with your universities gitlab url, COURSE_ID with your given course_id, and PROJECT_NAME with your given repository name (e.g. git@gitlab.university.edu:cptr101/student101). 
