@@ -7,12 +7,12 @@ redirect_from:
 ---
 
 Are you interested in joining the Submitty Development Team?  Please read:  
-[Suggestions for New Developers](/developer/getting_started/index#suggestions-for-new-developers)  and  [How to Contribute](/developer/getting_started/how_to_contribute).
+[Suggestions for New Developers](/developer/getting_started/index).
 
 
 ## Online Community Discussion
 
-We have a public [Slack server for Submitty Developers](https://join.slack.com/t/submitty/shared_invite/enQtMzE1NzgyMzUzNzI5LWZhOGM4NWU4M2U3ZmM2ZmM5NTYwNjk3NTc5Yjg1ZGRlYzU1MjcwYWNkNGYxZjk2YTk3ZmEyODY3MjEyOTc0M2E).
+We have a public [Slack server for Submitty Users and Developers](https://join.slack.com/t/submitty/shared_invite/enQtMzE1NzgyMzUzNzI5LWZhOGM4NWU4M2U3ZmM2ZmM5NTYwNjk3NTc5Yjg1ZGRlYzU1MjcwYWNkNGYxZjk2YTk3ZmEyODY3MjEyOTc0M2E).
 
 Please use the Slack server `#general-welcome` and
 `#gettingstarted-installation-development` and

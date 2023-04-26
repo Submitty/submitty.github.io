@@ -144,6 +144,7 @@ var NAVTREE =
                 [ "Update Submitty", "/sysadmin/installation/update", null ],
                 [ "Version Notes", "/sysadmin/installation/version_notes/index", [
                     [ "Overview", "/sysadmin/installation/version_notes/index", null],
+                    [ "v23.03.01", "/sysadmin/installation/version_notes/v23.03.01", null ],
                     [ "v22.06.00", "/sysadmin/installation/version_notes/v22.06.00", null ],
                     [ "v22.05.00", "/sysadmin/installation/version_notes/v22.05.00", null ],
                     [ "v22.03.00", "/sysadmin/installation/version_notes/v22.03.00", null ],
@@ -180,7 +181,9 @@ var NAVTREE =
             [ "Getting Started", "/developer/getting_started/index", [
                 [ "Overview", "/developer/getting_started/index", null ],
                 [ "Project Ideas", "/developer/getting_started/project_ideas", null ],
-                [ "How to Contribute", "/developer/getting_started/how_to_contribute", null ],
+                [ "Review a Pull Request", "/developer/getting_started/review_a_pull_request", null ],
+                [ "Make a Pull Request", "/developer/getting_started/make_a_pull_request", null ],
+                [ "Edit Submitty Documentation", "/developer/getting_started/edit_submitty_documentation", null ],
                 [ "VM Install using Vagrant", "/developer/getting_started/vm_install_using_vagrant", null ],
                 [ "Apple Silicon", "/developer/getting_started/vagrant_qemu_arm_mac", [
                     [ "Vagrant QEMU Install", "/developer/getting_started/vagrant_qemu_arm_mac", null ]

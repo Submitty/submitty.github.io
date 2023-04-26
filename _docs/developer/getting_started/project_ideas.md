@@ -5,12 +5,11 @@ redirect_from:
   - /developer/project_ideas
 ---
 
-Submitty has been selected for participation in
-[Google Summer of Code (GSoC) 2022](https://summerofcode.withgoogle.com/).  
+We are thrilled to announce that Submitty has been accepted
+to [Google Summer of Code (GSoC) 2023](https://summerofcode.withgoogle.com/).
 See [Submitty GSoC Application & Reports](/developer/google_summer_of_code/index) for more information about
 the application process and to read reports from Submitty GSoC contributors
-from Summers 2018, 2019, and 2020.
-
+from Summers 2018, 2019, 2020, and 2022.
 
 
 The project ideas listed below target a variety of different topics
@@ -23,9 +22,38 @@ on specific issues through our [Submitty GitHub Issue
 Tracker](https://github.com/Submitty/Submitty/issues).
 
 
+1. **Refactor and Performance Improvements for the Manual/TA Grading Interface**
+
+   [Overview of Rubric Grading Interface](/grader/rubric_grading/index)
+
+   Our TA grading interface is elaborate, highly-featured, and
+   customizable.  However, the interface is visually overwhelming to
+   new graders.  Some of our TA grading features are not adequately
+   tested by automated unit and end-to-end regression testing.
+   Finally, the performance of these webpages is problematic for large
+   courses due to inefficient database queries.  
 
 
-1. **Streamline instructor configuration of automated grading**
+   [Open Issues related to TA Grading](https://github.com/Submitty/Submitty/issues?q=is%3Aopen+is%3Aissue+label%3A%22TA+Grading+%2F+TA+UI%22)
+
+   _Expected Outcomes_: The goal would be to
+   expand the automated testing of the TA Grading pages,
+   patch bugs uncovered by this improved testing,
+   refactor the existing code and SQL queries to improve performance, and
+   possibly propose and execute small user interface revisions.
+   
+   _Skills & Experience Required_: Some programming experience, willingness to
+   learn web and database development.  Having served as a teaching
+   assistant or instructor with grading experience
+   design will be beneficial.
+
+   _Possible Mentors_: Barb Cutler, Jensen Li
+
+   _GSoC Project Size_: 350 hours
+
+   _Difficulty Level_: medium or hard
+
+2. **Streamline instructor configuration of automated grading**
 
    Currently, instructors must write a configuration as a `config.json`
    (and any necessary additional files) and upload or store these
@@ -61,7 +89,9 @@ Tracker](https://github.com/Submitty/Submitty/issues).
 
    _Difficulty Level_: medium or hard
    
-2. **Containers for Automated Grading**
+
+
+3. **Containers for Automated Grading**
 
    Automated testing of student submitted software carries system and
    security risks from malicious code but also simply buggy or inefficient
@@ -101,88 +131,14 @@ Tracker](https://github.com/Submitty/Submitty/issues).
    systems and/or networking programming.  Experience with virtual
    machines and Docker containerization is beneficial.
 
-   _Possible Mentors_: Barb Cutler, Jasmine Plum, Matthew Peveler
+   _Possible Mentors_: Barb Cutler, William Allen, Matthew Peveler
 
    _GSoC Project Size_: 175 or 350 hours
 
    _Difficulty Level_: medium or hard
-   
- 
-3. **Static Program Analysis for Autograding**
-
-   We currently using simple lexical (token-based) static analysis
-   in our intro programming courses to verify students are using (or
-   not using) specific language features.  In order to expand these
-   checks we are working on producing and analyzing an abstract syntax
-   tree of the submitted code.  This project may by synergistic
-   and integrate with the use of
-   programming language tokenization and parsing used for our Lichen
-   Plagiarism Detection module.
-
-   [Open Issues related to Static Program Analysis](https://github.com/Submitty/Submitty/issues?q=is%3Aissue+is%3Aopen+static+analysis+label%3A%22static+program+analysis%22)
 
 
-   [Submitty Autograding Tutorial Examples](https://github.com/Submitty/Tutorial)
-
-   [Additional Autograding Examples](https://github.com/Submitty/Submitty/tree/master/more_autograding_examples)
-
-   [Open Issues related to Lichen Plagiarism Detection](https://github.com/Submitty/Submitty/issues?q=is%3Aopen+is%3Aissue+label%3A%22Lichen+Plagiarism+Detection%22)
-
-
-   _Expected Outcomes_: Implementation and integration of new static analysis tools
-   into the Submitty autograding pipeline.  Creation of additional autograding
-   tutorial examples and corresponding continuous integration regression testing.
-
-   _Skills & Experience Required_: Upper level coursework in programming
-   languages, compilers, and/or program analysis.
-
-   _Possible Mentors_: Barb Cutler, Matthew Peveler, and other active developers
-
-   _GSoC Project Size_: 175 hours
-
-   _Difficulty Level_: medium
-
-
-4. **Submitty Progressive Web App (PWA)**
-
-   Submitty's initial platform target was web browsers on standard
-   laptop and desktop computers, where students will do their
-   software development and instructors/TAs will view or download and grade
-   complex assignments.
-
-   As Submitty expanded to include elements from learning
-   management platforms such as a discussion forum, office hours queue,
-   lecture polling, semester grades data, simple grading spreadsheets for attendance, and presentation of
-   student photos and information, our users requested additional
-   mobile-friendly access and features.
-   Most of these Submitty pages successfully target a variety of display
-   resolutions.
-
-   We would also like to explore the implementation and maintenance of
-   a progressive web app, which would leverage this website
-   re-targeting and allow push notifications.
-
-   [Open Issues related to API](https://github.com/Submitty/Submitty/labels/API)
-
-   _Expected Outcomes_: Investigation, selection, and integration of an appropriate
-   PWA platform.  Creation of necessary system administrator documentation
-   for installation.  Updating and improving the display of existing Submitty pages
-   to better target typical phone screen resolutions, as necessary.
-   
-   _Skills & Experience Required_: Critical eye for visual design, some
-   programming experience with html, css, javascript, reactive designs
-   (e.g., bootstrap), and willingness to learn additional web, database, and
-   mobile computing development technologies.  Personal access to
-   variety of different operating systems, and phone/tablet hardware
-   will be beneficial.
-
-   _Possible Mentors_: Shail Patel, Matthew Peveler, and other active developers
-
-   _GSoC Project Size_: 175 hours
-
-   _Difficulty Level_: easy or medium
-
-5. **Continuous Integration Testing**
+4. **Continuous Integration Testing**
 
     Each commit and pull request to github launches continuous
     integration testing of a portion of the Submitty code base.  We
@@ -203,14 +159,14 @@ Tracker](https://github.com/Submitty/Submitty/issues).
     _Skills & Experience Required_: Advanced programming experience, experience
     with the relevant programming languages, tuning system performance, etc.
 
-   _Possible Mentors_: Matthew Peveler, Shail Patel, and other active developers
+   _Possible Mentors_: Shail Patel, William Allen, Matthew Peveler
 
    _GSoC Project Size_: 175 or 350 hours
 
    _Difficulty Level_: medium or hard
 
 
-6. **Website Security and Penetration Testing**
+5. **Website Security and Penetration Testing**
 
    Submitty is responsible for securing confidential information.  It
    is important that we regularly assess the security of this data.
@@ -224,14 +180,14 @@ Tracker](https://github.com/Submitty/Submitty/issues).
    _Skills & Experience Required_: Computer security coursework and/or practical
    experience searching for system vulnerabilities.
 
-   _Possible Mentors_: Jasmine Plum, Matthew Peveler, and other active developers
+   _Possible Mentors_: Chris Reed, Matthew Peveler
 
    _GSoC Project Size_: 175 or 350 hours
 
    _Difficulty Level_: medium or hard
    
 
-7. **Instructional Materials and Documentation**
+6. **Instructional Materials and Documentation**
 
    We would like to reduce the learning curve for new instructors and
    provide more starter material for instructors teaching introductory
@@ -259,12 +215,17 @@ Tracker](https://github.com/Submitty/Submitty/issues).
 
    _Difficulty Level_: easy or medium
 
+
 See also:
 
 * [Submitty GitHub Issue Tracker](https://github.com/Submitty/Submitty/issues)
 
 * [Developer](/developer) pages
 
-* [How to Contribute](/developer/getting_started/how_to_contribute) page
+* [Review a Pull Request](/developer/getting_started/review_a_pull_request)
+
+* [Make a Pull Request](/developer/getting_started/make_a_pull_request)
+
+* [Edit Submitty Documentation](/developer/getting_started/edit_submitty_documentation)
 
 
