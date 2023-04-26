@@ -145,4 +145,4 @@ the installation process.
 
 
 ### Next Steps
-   * [Using your Submitty Developer VM](/getting_started/vm_install_using_vagrant#using-your-submitty-developer-vm)
+   * [Using your Submitty Developer VM](vm_install_using_vagrant#using-your-submitty-developer-vm)
