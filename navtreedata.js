@@ -141,7 +141,8 @@ var NAVTREE =
             [ "Installation", "/sysadmin/installation/index", [
                 [ "Overview", "/sysadmin/installation/index", null ],
                 [ "Server OS", "/sysadmin/installation/server_os", null ],
-                [ "Update Submitty", "/sysadmin/installation/update", null ],
+                [ "Update GNU/Linux Server", "/sysadmin/installation/update_server", null ],
+                [ "Update Submitty", "/sysadmin/installation/update_submitty", null ],
                 [ "Version Notes", "/sysadmin/installation/version_notes/index", [
                     [ "Overview", "/sysadmin/installation/version_notes/index", null],
                     [ "v23.03.01", "/sysadmin/installation/version_notes/v23.03.01", null ],

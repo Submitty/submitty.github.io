@@ -32,7 +32,7 @@ courses' DB, config files, etc.
 For all commands, it is required that you pass in the environment you wish
 to operate on to migrator.
 
-See also: [System Administration / Update Submitty](/sysadmin/installation/update)
+See also: [System Administration / Update Submitty](/sysadmin/installation/update_submitty)
 
 NOTE: Some mandatory installation updates _should not be implemented_
 via the migration system if automatic updates may be problematic due
