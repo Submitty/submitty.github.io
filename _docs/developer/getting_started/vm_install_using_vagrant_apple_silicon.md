@@ -141,6 +141,31 @@ the installation process.
    $ NO_SUBMISSIONS=1 vagrant up
    ```
 
+   When the install has completed, you should see the message:
+   ```
+   #####################################################################
+
+                        INSTALLATION SUCCESS!
+   
+                           .GGQGGGSlu
+                         .GGGGGGGGGGGS
+                    :llUGGGGGGGGGGGGGGGG
+                    'GGGGGGGGGGGGGGGGGGb        .
+                       %GGGGGGGGGGGGGGG~   ..GSGGG
+                          GGGGGGGGGGGGGGSGGGGGGGGGG[
+                        ;GGGGGGGGGGGGp\ \ \GGGGGGGGL
+                       !GGGGGGGGGGGGGGS\ \ \GGGGGG
+                       GGGGGGGGGGGGGGGGG\ \ \9GGGG
+                       %GGGGGGGGGGGGGGGS/ / /.GGG
+                        %GGGGGGGGGGGGGS/ / /GGG
+                         '%NNNNNNNNNNNNNNNNNN
+   #####################################################################
+   ```
+   *NOTE: There are times when the install will pause for a brief period with the message `Done`. This does not mean the install has ended, and the install should continue after a bit of time.*
+
+   If you do not see this message due to an error or the installation has frozen,
+   check out [Installation Troubleshooting](#installation-troubleshooting)
+
 ---
 
 
