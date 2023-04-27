@@ -6,6 +6,10 @@ redirect_from:
   - /sysadmin/version_notes
 ---
 
+
+Please also see [Update GNU/Linux Server](../update_server) and [Update Submitty](../update_submitty).
+
+
 The release notes below document additional manual steps required with
 installation of new versions of Submitty.  These include editing
 Submitty configurations, Apache or Nginx configuration, or
