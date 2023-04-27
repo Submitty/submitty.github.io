@@ -141,14 +141,14 @@ To configure your system:
           return 0;
         }
 
-        // exceptions for VALID userames
+        // exceptions for VALID usernames
         if (std::string(argv[1]) == "actually_a_valid_username"
             ) {
           std::cout << "valid" << std::endl;
           return 0;
         }
 
-        // exceptions for INVALID userames
+        // exceptions for INVALID usernames
         if (std::string(argv[1]) == "abc" ||
             std::string(argv[1]) == "def" ||
             ) {
