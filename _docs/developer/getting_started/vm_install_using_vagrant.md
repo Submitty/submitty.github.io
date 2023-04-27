@@ -21,6 +21,14 @@ instructions.
 
 ---
 
+_IMPORTANT NOTE: If you are using an Apple Mac computer
+with [Apple Silicon (e.g., M1 or M2)](https://support.apple.com/en-us/HT211814),
+first released in late 2020, you will follow
+the [Vagrant QEMU instructions](/developer/getting_started/vm_install_using_vagrant_apple_silicon).
+If you using an Intel-based Mac, you will follow the instructions below._
+
+---
+
 ## Pre-Installation Checklist
 
 1. To develop with a Virtual Machine (VM), your computer should have
@@ -61,17 +69,6 @@ instructions.
    go to sleep during installation.
 
 ---
-
-
-_IMPORTANT NOTE: If you are using an Apple Mac computer
-with [Apple Silicon (e.g., M1 or M2)](https://support.apple.com/en-us/HT211814),
-first released in late 2020, you will follow
-the [Vagrant QEMU instructions](/developer/getting_started/vm_install_using_vagrant_apple_silicon).
-If you using an Intel-based Mac, you will follow the instructions below._
-
-
----
-
 
 ## Submitty Developer VM Installation
 
