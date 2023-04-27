@@ -184,7 +184,9 @@ var NAVTREE =
                 [ "Review a Pull Request", "/developer/getting_started/review_a_pull_request", null ],
                 [ "Make a Pull Request", "/developer/getting_started/make_a_pull_request", null ],
                 [ "Edit Submitty Documentation", "/developer/getting_started/edit_submitty_documentation", null ],
-                [ "VM Install using Vagrant", "/developer/getting_started/vm_install_using_vagrant", null ],
+                [ "VM Install using Vagrant", "/developer/getting_started/vm_install_using_vagrant", [
+                    [ "Vagrant QEMU on Apple Silicon", "/developer/getting_started/vm_install_using_vagrant_apple_silicon", null ]
+                ] ],
                 [ "Advanced Setup", "/developer/getting_started/phpstorm", [
                     [ "PhpStorm Setup Instructions", "/developer/getting_started/phpstorm", null ],
                     [ "Xdebug Setup Instructions", "/developer/getting_started/xdebug", null ],

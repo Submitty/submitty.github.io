@@ -25,6 +25,12 @@ executables.
   **type:** _string_  
   **default value:** ``""``
 
+* **field** ``"max_submission_size"``  
+  **type:** _integer_  
+  **default value:** 100000
+
+  This is the max size in bytes of all files combined for a website submission.
+
 
 * **field:** ``"grading_parameters"``  
   **type:** _associative array / mapping from string to integer_
