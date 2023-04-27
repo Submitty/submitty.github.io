@@ -1,6 +1,6 @@
 ---
-title: Vagrant QEMU Install
-category: Developer > Getting Started > Apple Silicon
+title: Vagrant QEMU on Apple Silicon
+category: Developer > Getting Started > VM Install using Vagrant
 redirect-from:
   - /developer/vagrant_qemu_arm_mac
 ---
@@ -144,5 +144,6 @@ the installation process.
 ---
 
 
-### Next Steps
-   * [Using your Submitty Developer VM](vm_install_using_vagrant#using-your-submitty-developer-vm)
+### Now you can continue with the regular development instructions...
+
+[Using your Submitty Developer VM](vm_install_using_vagrant#using-your-submitty-developer-vm)
