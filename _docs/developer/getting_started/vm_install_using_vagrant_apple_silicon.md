@@ -164,7 +164,7 @@ the installation process.
    *NOTE: There are times when the install will pause for a brief period with the message `Done`. This does not mean the install has ended, and the install should continue after a bit of time.*
 
    If you do not see this message due to an error or the installation has frozen,
-   check out [Installation Troubleshooting](#installation-troubleshooting)
+   check out [Installation Troubleshooting](vm_install_using_vagrant#installation-troubleshooting)
 
 ---
 
