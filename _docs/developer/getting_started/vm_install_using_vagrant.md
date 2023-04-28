@@ -324,8 +324,8 @@ If you using an Intel-based Mac, you will follow the instructions below._
     | postgres | postgres | database process |
     | instructor | instructor | Instructor submitty user |
     | ta | ta | Full access grader submitty user |
-    | student | student | Student submitty user |
     | grader | grader | Limited access grader submitty user |
+    | student | student | Student submitty user |
 
 4. The VM has the following four courses by default and they are all part of the current semester:
 
