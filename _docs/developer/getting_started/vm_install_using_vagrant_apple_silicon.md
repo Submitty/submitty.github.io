@@ -16,7 +16,7 @@ architecture.
 
 ---
 
-### Requirements
+## Requirements
 
 1. Make sure you have an Apple Silicon Mac running macOS Monterey
 (12.4) or higher.
@@ -31,7 +31,7 @@ the installation process.
 
 ---
 
-### Pre-Installation Steps
+## Pre-Installation Steps
 
 1. Enable SMB file sharing
 
@@ -43,7 +43,7 @@ the installation process.
 
 ---
 
-### Installation
+## Installation
 
 1. Install [Homebrew](https://brew.sh/)
    ```
@@ -169,6 +169,6 @@ the installation process.
 ---
 
 
-### Now you can continue with the regular development instructions...
+## Now you can continue with the regular development instructions...
 
 [Using your Submitty Developer VM](vm_install_using_vagrant#using-your-submitty-developer-vm)
