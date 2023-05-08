@@ -76,29 +76,29 @@ _TODO:_
 _TODO:_
 
 
-### Externally Instructor-Created, Student Forked Repositories with Assignments in Subdirectories (e.g Gitlab)
+### External, Instructor-Created, Student Forked Repositories with Assignments in Subdirectories (e.g Gitlab)
 
-## _This example will be using a locally hosted Gitlab server._
+ _This example will be using a locally hosted Gitlab server._ This will create a course-wide repository, that the students will fork, giving them the ability to pull changes that the instructor pushes. This could be adding extra homework options, or fixing a linting error. Submitty will need access to the student's repositories, whether that be adding a SSH key for private repositories, or having public repositories.
 
-1. Create a group with the same ID as the course_id (e.g. cptr101)
+ * GITLAB_URL is the URL for your school's VCS system. 
+ * PROJECT_NAME is the name of the project created in step 2
+ * {$user_id} will be replaced with the student's user id automatically by Submitty
+
+1. Create a group with a simple name (e.g. cptr101. This could also be the instructors repository) 
 
 2. Create a project within that group with a simple name (e.g. student101)
 
-3. Clone the repository to your local IDE, and add your assignments. In this example, there are 
-   multiple assignments in a group, say 'learning I/O operations' would have multiple assignments. 
-   To do this, create a folder with a name like 'week_1_input_output'. Create a subfolder for the assignment, having the subfolder be called something
-   similar to the assignment name (e.g. 01_hello_world for the assignment Hello World). To do this without grouping assignments, just create the folders in the root of the 
-   repository. 
+3. Clone the repository to your local IDE, and add your assignments. These assignments should be in subfolders, either in the root folder, or in nested subfolders. 
+(e.g. /01_hello_world, or /input_output/01_hello_world) 
 
-4. Create the course (if not already set up), and set the course VCS base url to (for example) git@GITLAB_URL:{$user_id}/PROJECT_NAME.git, replacing GITLAB_URL with your local 
-   gitlab server url, and PROJECT_NAME with the name of the project created earlier. The $user_id will be set later automatically by Submitty, replacing it with the given student's user_id. 
+4. Create the course (if not already set up), and set the course VCS base url to git@GIT_URL:{$user_id}/PROJECT_NAME.git
 
-5. Create the gradeable like default, however for 'subdirectory', enter the full path to the assignment, (e.g. /week_1_input_output/01_hello_world)
+5. Create the gradeable like default, and for the 'subdirectory' field, enter the full path to the assignment, (e.g. /input_output/01_hello_world)
 
-6. Instruct your students to _fork_ the repository, thereby changing the course_id to their user_id. 
+6. Give your students the URL to the repository, and instruct them to _fork_ it.
 
 
-##### _Disclaimer_ Submitty needs access to the repositories, whether that be through public repositories, or adding a key to give Submitty access to private repositories. 
+
 ### Uploading Instructor Provided Code to GIT
 
 
