@@ -10,6 +10,31 @@ redirect_from:
 
 ---
 
+## 2023 Spring Developers
+
+![](/images/people/2023_spring.png)
+
+
+Hannah Rose,
+Mahi Pasarkar,
+Jason Ng,
+Eden Bendheim,
+Kerui (Ray) Wu,
+Zachary Silverstein,
+Viane Matsibekker,
+Anson Decker,
+Adam Tuhacek,
+Jaeseok Kang,
+Sátvik Karanam,
+Jenay Barela,
+Jason Chen,
+Yanli Wang,
+Bairong Zhang,
+Hanson Gu
+
+
+---
+
 
 ## 2022 Summer Developers
 

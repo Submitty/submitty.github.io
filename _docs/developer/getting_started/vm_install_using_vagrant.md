@@ -21,6 +21,14 @@ instructions.
 
 ---
 
+_IMPORTANT NOTE: If you are using an Apple Mac computer
+with [Apple Silicon (e.g., M1 or M2)](https://support.apple.com/en-us/HT211814),
+first released in late 2020, you will follow
+the [Vagrant QEMU instructions](/developer/getting_started/vm_install_using_vagrant_apple_silicon).
+If you using an Intel-based Mac, you will follow the instructions below._
+
+---
+
 ## Pre-Installation Checklist
 
 1. To develop with a Virtual Machine (VM), your computer should have
@@ -60,10 +68,10 @@ instructions.
    computer settings and make sure the machine does not hibernate or
    go to sleep during installation.
 
-
 ---
 
 ## Submitty Developer VM Installation
+
 
 1. Enable Virtualization
 
@@ -107,9 +115,12 @@ instructions.
 
 3. Download and install the latest version of [Git](https://git-scm.com/downloads).
 
-4. Download and install [VirtualBox](https://www.virtualbox.org/) and [Vagrant](https://www.vagrantup.com)
+4. Download and install [VirtualBox](https://www.virtualbox.org/wiki/Download_Old_Builds_6_1) and [Vagrant](https://www.vagrantup.com)
+   
+   **NOTE**
+   Please download VirtualBox 6 instead of 7.
 
-   Below are quick steps to get everything installed and running.
+Below are quick steps to get everything installed and running.
 
    **Windows 10**
 
@@ -311,9 +322,10 @@ instructions.
     | submitty_php | submitty_php | Submitty process |
     | submitty_daemon | submitty_daemon | Submitty process |
     | postgres | postgres | database process |
-    | instructor | instructor | Submitty user |
-    | ta | ta | Submitty user |
-    | student | student | Submitty user |
+    | instructor | instructor | Instructor submitty user |
+    | ta | ta | Full access grader submitty user |
+    | grader | grader | Limited access grader submitty user |
+    | student | student | Student submitty user |
 
 4. The VM has the following four courses by default and they are all part of the current semester:
 
