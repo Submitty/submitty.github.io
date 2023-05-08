@@ -141,7 +141,8 @@ var NAVTREE =
             [ "Installation", "/sysadmin/installation/index", [
                 [ "Overview", "/sysadmin/installation/index", null ],
                 [ "Server OS", "/sysadmin/installation/server_os", null ],
-                [ "Update Submitty", "/sysadmin/installation/update", null ],
+                [ "Update GNU/Linux Server", "/sysadmin/installation/update_server", null ],
+                [ "Update Submitty", "/sysadmin/installation/update_submitty", null ],
                 [ "Version Notes", "/sysadmin/installation/version_notes/index", [
                     [ "Overview", "/sysadmin/installation/version_notes/index", null],
                     [ "v23.03.01", "/sysadmin/installation/version_notes/v23.03.01", null ],
@@ -184,7 +185,9 @@ var NAVTREE =
                 [ "Review a Pull Request", "/developer/getting_started/review_a_pull_request", null ],
                 [ "Make a Pull Request", "/developer/getting_started/make_a_pull_request", null ],
                 [ "Edit Submitty Documentation", "/developer/getting_started/edit_submitty_documentation", null ],
-                [ "VM Install using Vagrant", "/developer/getting_started/vm_install_using_vagrant", null ],
+                [ "VM Install using Vagrant", "/developer/getting_started/vm_install_using_vagrant", [
+                    [ "Vagrant QEMU on Apple Silicon", "/developer/getting_started/vm_install_using_vagrant_apple_silicon", null ]
+                ] ],
                 [ "Advanced Setup", "/developer/getting_started/phpstorm", [
                     [ "PhpStorm Setup Instructions", "/developer/getting_started/phpstorm", null ],
                     [ "Xdebug Setup Instructions", "/developer/getting_started/xdebug", null ],

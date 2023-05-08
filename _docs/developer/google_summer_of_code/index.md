@@ -49,7 +49,7 @@ the student project reports from previous summers linked below.
 
    _NOTE: The Submitty mentors for Google Summer of Code are on our
    Slack channel.  Please communicate through the public channels and
-   do not direct messsage (DM) / private message any mentors. 
+   do not direct message (DM) / private message any mentors. 
    Mentors will generally not respond to private messages._
 
 6. Search the Submitty Github for related open issues (bugs and feature requests):   
