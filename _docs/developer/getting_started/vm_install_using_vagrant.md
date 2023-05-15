@@ -190,7 +190,7 @@ Below are quick steps to get everything installed and running.
    few hours depending on your Internet connection speed.  When this
    command finishes, your VM is ready to use.
 
-   On **Windows 10**: If `vagrant up` stays stuck on `SSH auth method: private key`
+   **On Windows 10**: If `vagrant up` stays stuck on `SSH auth method: private key`
    for more than 5 minutes, it is likely WSL2 or hypervisor is still
    installed. See [this page]("https://learn.microsoft.com/en-us/troubleshoot/
    windows-client/application-management/virtualization-apps-not-work-with-hyper-v")
