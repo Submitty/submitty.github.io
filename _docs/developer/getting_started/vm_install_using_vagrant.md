@@ -196,7 +196,7 @@ Below are quick steps to get everything installed and running.
    for how to turn off hypervisor in the Control Panel. In the same
    "Turn Windows features on or off" window, uncheck "Virtual Machine Platform"
    to disable WSL2. This will restart your computer. After the restart,
-   try `vagrant up` again and it should continue past `SSH auth method: private key`.
+   try `vagrant up` again and it should likely continue past `SSH auth method: private key`.
 
 7. When the `vagrant up` command completes successfully, you will be
    able to access the Submitty website (instructions follow in the
