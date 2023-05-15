@@ -192,8 +192,7 @@ Below are quick steps to get everything installed and running.
 
    **On Windows 10**: If `vagrant up` stays stuck on `SSH auth method: private key`
    for more than 5 minutes, it is likely WSL2 or hypervisor is still
-   installed. See [this page]("https://learn.microsoft.com/en-us/troubleshoot/
-windows-client/application-management/virtualization-apps-not-work-with-hyper-v")
+   installed. See [this page]("https://learn.microsoft.com/en-us/troubleshoot/windows-client/application-management/virtualization-apps-not-work-with-hyper-v")
    for how to turn off hypervisor in the Control Panel. In the same
    "Turn Windows features on or off" window, uncheck "Virtual Machine Platform"
    to disable WSL2. This will restart your computer. After the restart,
