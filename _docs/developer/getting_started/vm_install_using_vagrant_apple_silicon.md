@@ -16,7 +16,7 @@ architecture.
 
 ---
 
-### Requirements
+## Requirements
 
 1. Make sure you have an Apple Silicon Mac running macOS Monterey
 (12.4) or higher.
@@ -31,7 +31,7 @@ the installation process.
 
 ---
 
-### Pre-Installation Steps
+## Pre-Installation Steps
 
 1. Enable SMB file sharing
 
@@ -43,7 +43,7 @@ the installation process.
 
 ---
 
-### Installation
+## Installation
 
 1. Install [Homebrew](https://brew.sh/)
    ```
@@ -141,9 +141,34 @@ the installation process.
    $ NO_SUBMISSIONS=1 vagrant up
    ```
 
+   When the install has completed, you should see the message:
+   ```
+   #####################################################################
+
+                        INSTALLATION SUCCESS!
+   
+                           .GGQGGGSlu
+                         .GGGGGGGGGGGS
+                    :llUGGGGGGGGGGGGGGGG
+                    'GGGGGGGGGGGGGGGGGGb        .
+                       %GGGGGGGGGGGGGGG~   ..GSGGG
+                          GGGGGGGGGGGGGGSGGGGGGGGGG[
+                        ;GGGGGGGGGGGGp\ \ \GGGGGGGGL
+                       !GGGGGGGGGGGGGGS\ \ \GGGGGG
+                       GGGGGGGGGGGGGGGGG\ \ \9GGGG
+                       %GGGGGGGGGGGGGGGS/ / /.GGG
+                        %GGGGGGGGGGGGGS/ / /GGG
+                         '%NNNNNNNNNNNNNNNNNN
+   #####################################################################
+   ```
+   *NOTE: There are times when the install will pause for a brief period with the message `Done`. This does not mean the install has ended, and the install should continue after a bit of time.*
+
+   If you do not see this message due to an error or the installation has frozen,
+   check out [Installation Troubleshooting](vm_install_using_vagrant#installation-troubleshooting)
+
 ---
 
 
-### Now you can continue with the regular development instructions...
+## Now you can continue with the regular development instructions...
 
 [Using your Submitty Developer VM](vm_install_using_vagrant#using-your-submitty-developer-vm)
