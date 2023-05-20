@@ -95,7 +95,7 @@ number:
 
 2. Setting up the worker machine(s):
 
-   Follow the [worker installation instructions](https://submitty.org/sysadmin/installation/worker_installation)
+   Follow the [worker installation instructions](/sysadmin/installation/worker_installation)
 
 
 3. Next, create homework assignment autograding configurations that
