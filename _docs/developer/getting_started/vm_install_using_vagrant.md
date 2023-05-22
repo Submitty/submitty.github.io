@@ -14,25 +14,31 @@ Unix/Linux).  The installation process will create a new Virtual
 Machine (VM) on your computer and the VM will use the Ubuntu GNU/Linux
 operating system.
 
-__Note:__ We only officially support and test development using VirtualBox. 
+<br>
+
+##### On Virtualization Software
+
+We only officially support and test development using VirtualBox. 
 The instructions below are for VirtualBox.  While alternatively using 
 VMWare should work, we have not tested this, and do not provide these 
 instructions.
 
----
+<br>
 
-_IMPORTANT NOTE: If you are using an Apple Mac computer
+##### IMPORTANT NOTE for Apple Sillicon
+
+f you are using an Apple Mac computer
 with [Apple Silicon (e.g., M1 or M2)](https://support.apple.com/en-us/HT211814),
 first released in late 2020, you will follow
 the [Vagrant QEMU instructions](/developer/getting_started/vm_install_using_vagrant_apple_silicon).
-If you using an Intel-based Mac, you will follow the instructions below._
+If you using an Intel-based Mac, you will follow the instructions below.
 
 ---
 
 ## Pre-Installation Checklist
 
 1. To develop with a Virtual Machine (VM), your computer should have
-   at least 8GB of RAM and a 64-bit host OS.  AMD-V or Intel VT-x are
+   at least 8GB of RAM and a 64-bit host OS.  Hardware virtualization AMD-V or Intel VT-x are
    also required (most computers have these).  Submitty is RAM and I/O
    intensive, so more RAM and a fast disk are better.
 
@@ -46,27 +52,26 @@ If you using an Intel-based Mac, you will follow the instructions below._
    shutting down the VMWare VMs, or stopping the VMWare services, or
    uninstalling VMWare.
 
-4. If you're running Windows, it is recommended to disable Hyper-V.
-   Leaving it enabled will force VirtualBox to use the Hyper-V
-   backend, which will be slower and can cause instability in the
-   VM.
-   
-   **Note:**
-   This may stop programs like Docker Desktop and WSL 2 from
-   working. If these programs are essential to your workflow, consider
-   looking up how to add a separate boot entry with "hypervisorlaunchtype"
-   set to "off" for use with VirtualBox.
-   
-   **Note:**
-   Installing WSL2 may also reconfigure your OS to use Hyper-V or Windows hypervisor 
-   platform and prevent VirtualBox from working correctly. It is recommended to not install
-   or use WSL2 alongside Virtualbox for now.
-
-5. The complete installation process could take an hour or more.  Make
+4. The complete installation process could take an hour or more.  Make
    sure your internet connection is strong and consistent.  You'll
    probably want to plug in your laptop power cord.  Check your
    computer settings and make sure the machine does not hibernate or
    go to sleep during installation.
+
+<br>
+
+#### Additional Pre-Installation Steps for Windows Users
+
+1. In **Turn Windows features on or off**, uncheck Hyper-V.  Leaving it enabled
+   will force VirtualBox to use the Hyper-V backend, which will be slower
+   and can cause instability in the VM.
+      - **Note:**
+      This may stop programs like Docker Desktop and WSL 2 from
+      working. If these programs are essential to your workflow, consider
+      looking up how to add a separate boot entry with "hypervisorlaunchtype"
+      set to "off" for use with VirtualBox.
+
+2. In the same menu, uncheck "Virtual Machine Platform."
 
 ---
 
@@ -74,113 +79,135 @@ If you using an Intel-based Mac, you will follow the instructions below._
 
 
 1. Enable Virtualization
+   
+   > **MacOS**
+   > 1. Virtualization is generally enabled by default.
 
-   **MacOS**
-   1. Virtualization is generally enabled by default.
+   > **Windows 10**
+   > 1. Open the **Settings** app by searching for it in the windows bar or 
+   > clicking it in the Windows menu.
+   >
+   > 2. Navigate to **Update and Security**, then select **Recovery** from the
+   > side menu.
+   >
+   >3. Under **Advanced Startup**, click **Restart Now**.
+   >
+   > 4. Once your PC has rebooted, click the **Troubleshoot** option.
+   >
+   > 5. Click **Advanced Options**.
+   >
+   > 6. Click **UEFI Firmware Settings** and restart as suggested.
+   >
+   > 7. Enter your **BIOS** (generally by pressing Del, F12, or other keys
+   > while booting). If you are not able to find the key combo needed to enter
+   > your BIOS, refer to [this guide](https://www.tomshardware.com/reviews/bios-keys-to-access-your-firmware,5732.html).
+   >
+   > 8. Locate **Virtualization**, and enable it. (Note: If you cannot find the
+   > option to enable virtualization, [search Google](http://tinyurl.com/enable-virtualization)
+   > for a tutorial on enabling it with your motherboard.)
+   >
+   > 9. Reboot your computer.
 
-   **Windows 10**
-   1. Open the **Settings** app by searching for it in the windows bar or clicking it in the Windows menu.
+   > **Ubuntu**
+   > 1. Enter your **BIOS** (generally by pressing Del, F12, or other keys
+   > while booting).
+   >
+   > 2. Navigate the **BIOS Settings**.
+   >
+   > 3. Locate **Virtualization** and enable it.
+   >
+   > 4. Be sure to choose **Hardware Virtualization** in the **System ->
+   > Acceleration** settings of the virtual machine you are using.
+   >
+   >  **NOTE** 
+   >  If using secure boot, vagrant may fail to work with VirtualBox. You will
+   >  then either need to disable secure boot from the boot menu/BIOS or follow 
+   > [these steps](https://era86.github.io/2018/01/24/vagrant-virtualbox-secureboot-in-ubuntu-1604.html)
+   > to self-sign the necessary packages to run vagrant and VirtualBox.
 
-   2. Navigate to **Update and Security**, then select **Recovery** from the side menu.
-
-   3. Under **Advanced Startup**, click **Restart Now**.
-
-   4. Once your PC has rebooted, click the **Troubleshoot** option.
-
-   5. Click **Advanced Options**.
-
-   6. Click **UEFI Firmware Settings** and restart as suggested.
-
-   7. Enter your **BIOS** (generally by pressing Del, F12, or other keys while booting). If you are not able to find the key combo needed to enter your BIOS, refer to [this guide](https://www.tomshardware.com/reviews/bios-keys-to-access-your-firmware,5732.html).
-
-   8. Locate **Virtualization**, and enable it. (Note: If you cannot find the option to enable virtualization, [search Google](http://tinyurl.com/enable-virtualization) for a tutorial on enabling it with your motherboard.)
-
-   9. Reboot your computer.
-
-   **Ubuntu**
-   1. Enter your **BIOS** (generally by pressing Del, F12, or other keys while booting).
-
-   2. Navigate the **BIOS Settings**.
-
-   3. Locate **Virtualization** and enable it.
-
-   4. Be sure to choose **Hardware Virtualization** in the **System -> Acceleration** settings of the virtual machine you are using.
-
-   **NOTE** 
-   If using secure boot, vagrant may fail to work with VirtualBox. You will then either need to disable secure boot from
-   the boot menu/BIOS or follow [these steps](https://era86.github.io/2018/01/24/vagrant-virtualbox-secureboot-in-ubuntu-1604.html)
-   to self-sign the necessary packages to run vagrant and VirtualBox.
+   <br>
 
 2. Download and install the latest version of [Ruby](https://www.ruby-lang.org/en/downloads).
+   
+   <br>
 
 3. Download and install the latest version of [Git](https://git-scm.com/downloads).
-
-4. Download and install [VirtualBox](https://www.virtualbox.org/wiki/Download_Old_Builds_6_1) and [Vagrant](https://www.vagrantup.com)
    
-   **NOTE**
-   Please download VirtualBox 6 instead of 7.
+   <br>
 
-Below are quick steps to get everything installed and running.
+4. Download and install [VirtualBox 6](https://www.virtualbox.org/wiki/Download_Old_Builds_6_1)
+   and [Vagrant](https://www.vagrantup.com). Virtual Box 7 may not work
+   currently with Submitty.
 
-   **Windows 10**
+   - Below are quick steps to get Virtual Box and Vagrant installed and running:
 
-   * You can just go to the respective sites and download the necessary binaries.
+      > **Windows 10**
+      >
+      > * You can just go to the respective sites and download the necessary
+      > binaries.
 
-   **MacOS**
+      >**MacOS**
+      >
+      > * You can either go to respective sites and download the necessary binaries
+      > or install [homebrew](http://brew.sh/) if you don't have it and then run:
+      >
+      >     ```
+      >     brew install --cask virtualbox
+      >     brew install --cask vagrant
+      >     ```
 
-   * You can either go to respective sites and download the necessary binaries or
-     install [homebrew](http://brew.sh/)    if you don't have it and then run:
-
-     ```
-     brew install --cask virtualbox
-     brew install --cask vagrant
-     ```
-
-   **Ubuntu/Debian**
-
-   * The Ubuntu repository does not contain the latest version of Vagrant or VirtualBox and using
-     them may not work nor are they supported. We recommend that you either download the necessary binaries
-     from their respective steps or follow the steps outlined below for each:
-
-     VirtualBox: <https://www.virtualbox.org/wiki/Linux_Downloads>
-
-     Vagrant: <https://developer.hashicorp.com/vagrant/downloads> 
-     (if that doesn't work, try: <https://vagrant-deb.linestarve.com/>)
-
-5. Clone [the Submitty repository](https://github.com/Submitty/Submitty) to a location on
-   your computer (the "host").
+      > **Ubuntu/Debian**
+      >
+      > * The Ubuntu repository does not contain the latest version of Vagrant or
+      > VirtualBox and using them may not work nor are they supported. We recommend
+      > that you either download the necessary binaries from their respective steps
+      > or follow the steps outlined below for each:
+      >
+      >    VirtualBox: <https://www.virtualbox.org/wiki/Linux_Downloads>
+      >    
+      >    Vagrant: <https://developer.hashicorp.com/vagrant/downloads> 
+      >    (if that doesn't work, try: <https://vagrant-deb.linestarve.com/>)
+   
+   <br>
+   
+5. Clone [the Submitty repository](https://github.com/Submitty/Submitty) to a
+   location on your computer (the "host").
 
    ```
    git clone https://github.com/Submitty/Submitty.git
    ```
    
-   **NOTE:** If you are not currently part of the Submitty organization on Github, you may want to
+   - **NOTE:** If you are not currently part of the Submitty organization on Github, you may want to
    [fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
-   the repo and use the git url from your fork instead, especially if you are looking to contribute.
+   the repo and use the git url from your fork instead, especially if you are looking
+   to contribute.
 
-   _OPTIONAL: If you will be developing code in one of the companion
-   Submitty repositories (e.g., AnalysisTools, Lichen, RainbowGrades, Tutorial), also
-   clone those repositories to the same directory.  For example:_
+   - _OPTIONAL: If you will be developing code in one of the [companion
+   Submitty repositories](https://github.com/Submitty) (e.g., AnalysisTools, Lichen,
+   RainbowGrades, Tutorial), also clone those repositories to the same directory.
+   For example:_
 
-     ```
-     home
-     └── myusername
-         └── Submitty
-             └── GIT_CHECKOUT
-                 ├── AnalysisTools  (optional)
-                 ├── Lichen         (optional)
-                 ├── RainbowGrades  (optional)
-                 ├── Submitty
-                 └── Tutorial       (optional)
-     ```
+        ```
+        home
+        └── myusername
+            └── Submitty
+                └── GIT_CHECKOUT
+                    ├── AnalysisTools  (optional)
+                    ├── Lichen         (optional)
+                    ├── RainbowGrades  (optional)
+                    ├── Submitty
+                    └── Tutorial       (optional)
+        ```
 
-    _This host directory structure will be shared / synced between
-    your host operating system and the Submitty virtual machine._
+      _This host directory structure will be shared / synced between
+      your host operating system and the Submitty virtual machine._
 
+   <br>
+   
 6. Navigate into the Submitty repository on your computer in a
    shell/terminal and type:
 
-   _Windows should run CMD or powershell on administrator mode_
+   (_Windows should run CMD or powershell on administrator mode_)
 
    ```
    vagrant up
@@ -189,14 +216,6 @@ Below are quick steps to get everything installed and running.
    Vagrant will build your VM.  This will take maybe 30 minutes to a
    few hours depending on your Internet connection speed.  When this
    command finishes, your VM is ready to use.
-
-   **On Windows 10**: If `vagrant up` stays stuck on `SSH auth method: private key`
-   for more than 5 minutes, it is likely WSL2 or hypervisor is still
-   installed. See [this page](https://learn.microsoft.com/en-us/troubleshoot/windows-client/application-management/virtualization-apps-not-work-with-hyper-v)
-   for how to turn off hypervisor in the Control Panel. In the same
-   "Turn Windows features on or off" window, uncheck "Virtual Machine Platform"
-   to disable WSL2. This will restart your computer. After the restart,
-   try `vagrant up` again and it should likely continue past `SSH auth method: private key`.
 
 7. When the `vagrant up` command completes successfully, you will be
    able to access the Submitty website (instructions follow in the
