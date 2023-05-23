@@ -32,6 +32,9 @@ by running:
 bundle install
 ```
 
+During the install, it may hang up when installing the dependency ``nokogiri``.
+Don't worry: press enter and it should continue.
+
 ### Running the Site
 
 To view the site locally, and the results of any changes you make,
