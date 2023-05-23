@@ -257,7 +257,7 @@ extended in the next step.
 
 ---
 
-## Vagrant Up Troubleshooting
+## <a name="vagrant-up-troubleshooting"> </a> Vagrant Up Troubleshooting
 
 Depending on when Vagrant Up paused, we have different suggestions.
 This list will be updated over time as more common errors are
@@ -427,7 +427,7 @@ See also [Development Instructions Troubleshooting](/developer/development_instr
 
 ---
 
-## Starting and Stopping the Submitty VM
+## <a name="starting-and-stopping-the-submitty-vm"></a> Starting and Stopping the Submitty VM
 
 When the `vagrant up` command completes successfully, you will be
 able to access the Submitty website.
