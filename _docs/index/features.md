@@ -182,3 +182,11 @@ _Note: Click on the <u>links</u> and <i class="fas fa-info-circle" style="font-s
   * significant recent improvements
   * W3C html validation
   * mobile-friendly (phone and tablet compatibility)
+
+&nbsp;
+
+
+* **Progressive Web APP(PWA)**
+  * Now submitty can be installed much like an app on any platform(Mac,Android,ios,linux,etc)
+  * PWAs combine website resources with mobile app features, providing a cross-platform experience and features such as push notification 
+  * PWAs offer advantages like installability, responsiveness, re-engagement, discoverability, network independence, and security.
