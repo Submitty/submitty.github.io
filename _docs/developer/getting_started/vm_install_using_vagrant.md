@@ -430,19 +430,16 @@ with no explanation, then there are a couple of things that may be going wrong:
    This will delete all virtual machine settings. Then install
    the latest version of Virtual Box and vagrant from the links given in step 3 (using Ubuntu Software).
 
-* If you are on Apple Mac computer with [Apple Silicon (e.g., M1 or M2)](https://support.apple.com/en-us/HT211814),
-    and an error is thrown during `vagrant up` because the forwarded port is already in use
+* If you encounter an error during `vagrant up` because the forwarded port is already in use
     on the host machine, you may need to check if another VM is using that specified port. This may happen when 
     you have already installed a VM or the installation of vagrant failed and you didn't destroy vagrant.
-    You may use the following command to see the location of any other VM using that port then you may `vagrant destroy` : 
-    
-   ```
-   sudo lsof -i:<PORT> 
+    You may use the following command to see the location of any other VM then you may `vagrant destroy` : 
 
    ```
-    Where `<PORT>` is the specified forwarded port. 
+   vagrant global-status 
 
-
+   ```
+   
 * If it has been a while since your last `vagrant destroy` and
     `vagrant up` you may need to update/upgrade/reinstall the virtual
     box, vagrant, and the installed boxes on your
