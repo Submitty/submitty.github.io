@@ -439,16 +439,7 @@ with no explanation, then there are a couple of things that may be going wrong:
    This will delete all virtual machine settings. Then install
    the latest version of Virtual Box and vagrant from the links given in step 3 (using Ubuntu Software).
 
-* If you encounter an error during `vagrant up` because the forwarded port is already in use
-    on the host machine, you may need to check if another VM is using that specified port. This may happen when 
-    you have already installed a VM or the installation of vagrant failed and you didn't destroy vagrant.
-    You may use the following command to see the location of any other VM then you may `vagrant destroy` : 
 
-   ```
-   vagrant global-status 
-
-   ```
-   
 * If it has been a while since your last `vagrant destroy` and
     `vagrant up` you may need to update/upgrade/reinstall the virtual
     box, vagrant, and the installed boxes on your

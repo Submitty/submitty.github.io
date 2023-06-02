@@ -9,23 +9,40 @@ category: Developer > Development Instructions
 
 ## Forwarded Port Already in Use
 
-If you see an error similar to:
+* If you see an error similar to:
 
-```
-Vagrant cannot forward the specified ports on this VM, since they
-would collide with some other application that is already listening
-on these ports. The forwarded port to #### is already in use
-on the host machine.
-```
+  ```
+  Vagrant cannot forward the specified ports on this VM, since they
+  would collide with some other application that is already listening
+  on these ports. The forwarded port to #### is already in use
+  on the host machine.
+  ```
 
-This means that one or more of the ports requested by vagrant is already in
-use by another application running on your computer. You can choose to use
-an alternate port through an environment variable. The current variables are
-`VM_PORT_SITE`, `VM_PORT_WS`, `VM_PORT_DB`, `VM_PORT_SAML`, and `VM_PORT_SSH`.
+  This means that one or more of the ports requested by vagrant is already in
+  use by another application running on your computer.
 
-You can edit the Vagrantfile directly or create a `.env` file in the
-root of your project with the text (for example) `VM_PORT_SITE=1500`
-so that you don't have to add it to every `vagrant up` command.
+
+* This may happen if you attempt to create mutliple Submitty VMs --
+  perhaps unintentionally!  E.g., if you have multiple directories on
+  your computer each with a clone/copy of the Submitty repo.  It is
+  necessary to run `vagrant destroy` in each of these
+  directories/repositories to clean up unwanted VMs.
+
+  The following command can help locate misplaced repositories/VMs:
+
+  ```
+  vagrant global-status
+  ```
+
+
+* You can choose to override the default ports and use an alternate
+  port through an environment variable. The current variables are
+  `VM_PORT_SITE`, `VM_PORT_WS`, `VM_PORT_DB`, `VM_PORT_SAML`, and
+  `VM_PORT_SSH`.
+
+  You can edit the Vagrantfile directly or create a `.env` file in the
+  root of your project with the text (for example) `VM_PORT_SITE=1500`
+  so that you don't have to add it to every `vagrant up` command.
 
 
 ---
