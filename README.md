@@ -28,9 +28,9 @@ for example, this would be accomplished by doing `sudo apt-get install ruby-dev`
    git clone https://github.com/Submitty/submitty.github.io.git
    ```
 
-   _NOTE: We recommend placing the code in a directory/folder on your
-   machine without spaces, because some developers have experienced
-   errors with bundler when the full path contained spaces._
+   * _NOTE: We recommend placing the code in a directory/folder on your
+     machine without spaces, because some developers have experienced
+     errors with bundler when the full path contained spaces._
 
 
 2. Use Bundler to install the dependencies. This can be accomplished
@@ -40,8 +40,15 @@ by running:
    bundle install
    ```
 
-   During the install, it may hang up when installing the dependency ``nokogiri``.
-   Don't worry: press enter and it should continue.
+   * _NOTE: During the install, it may hang up when installing the
+     dependency ``nokogiri``.  Don't worry: press enter and it should
+     continue.
+
+
+   * _NOTE: If an error is thrown during the installation process you
+     may need to downgrade from 3.0 to use Ruby-2.7 and make sure this
+     is indeed the version that the Bundler is using and not another
+     one in a different directory._
 
 
 ### Running the Site
