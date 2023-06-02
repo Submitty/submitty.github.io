@@ -141,7 +141,7 @@ the installation process.
    $ NO_SUBMISSIONS=1 vagrant up
    ```
 
-   When the install has completed, you should see the message:
+6. When the install has completed, you should see the message:
    ```
    #####################################################################
 
@@ -161,10 +161,18 @@ the installation process.
                          '%NNNNNNNNNNNNNNNNNN
    #####################################################################
    ```
-   *NOTE: There are times when the install will pause for a brief period with the message `Done`. This does not mean the install has ended, and the install should continue after a bit of time.*
+   
+   *NOTE: There are times when the install will pause for a brief
+    period with the message `Done`. This does not mean the install has
+    ended, and the install should continue after a bit of time.*
 
-   If you do not see this message due to an error or the installation has frozen,
-   check out [Installation Troubleshooting](vm_install_using_vagrant#installation-troubleshooting)
+
+   If you do not see this message due to an error or the installation
+   has frozen, check out:
+
+   * [Installation Troubleshooting](#installation-troubleshooting)
+
+   * [Development Instructions Troubleshooting](/developer/development_instructions/troubleshooting)
 
 ---
 
