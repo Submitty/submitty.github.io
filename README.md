@@ -7,8 +7,6 @@ an open source course management, assignment submission, exam, and grading syste
 To report issues for this repository, please file them under the
 [Submitty/Submitty](https://github.com/Submitty/Submitty) repository.
 
-![Submitty screenshot](images/Submission_Result_Buggy.png)
-
 ## Local Development
 
 ### Prerequisites
@@ -24,39 +22,53 @@ for example, this would be accomplished by doing `sudo apt-get install ruby-dev`
 
 ### Setup
 
-After cloning the repository to your local machine, you will need to use
-Bundler to install the dependencies. This can be accomplished
+1. Clone the respository on your local machine, e.g.,
+
+   ```
+   git clone https://github.com/Submitty/submitty.github.io.git
+   ```
+
+   _NOTE: We recommend placing the code in a directory/folder on your
+   machine without spaces, because some developers have experienced
+   errors with bundler when the full path contained spaces._
+
+
+2. Use Bundler to install the dependencies. This can be accomplished
 by running:
 
-```bash
-bundle install
-```
+   ```bash
+   bundle install
+   ```
+
+   During the install, it may hang up when installing the dependency ``nokogiri``.
+   Don't worry: press enter and it should continue.
+
 
 ### Running the Site
 
-To view the site locally, and the results of any changes you make,
-you will want to use the `jekyll` commands through Bundler, namely
-the `serve` sub-command, as shown below:
+* To view the site locally, and the results of any changes you make,
+   you will want to use the `jekyll` commands through Bundler, namely
+   the `serve` sub-command, as shown below:
 
-```bash
-bundle exec jekyll serve
-```
+   ```bash
+   bundle exec jekyll serve
+   ```
 
-If you have an error running on the default port (4000), you can specify an
-alternate port, e.g.
+* NOTE: If you have an error running on the default port (4000), you can specify an
+   alternate port, e.g.
 
-```bash
-bundle exec jekyll serve --port 4001
-```
+   ```bash
+   bundle exec jekyll serve --port 4001
+   ```
 
+* If you wish to build the site locally instead of running it, you can do:
 
-If you wish to build the site locally instead of running it, you can do:
+   ```bash
+   bundle exec jekyll build
+   ```
 
-```bash
-bundle exec jekyll build
-```
+   which will leave the results in a `_site` directory.
 
-which will leave the results in a `_site` directory.
 
 ### Running the link checker
 
@@ -67,6 +79,7 @@ repository and run the command:
 ```
 bundle exec htmlproofer ./_site --assume-extension --empty-alt-ignore --disable_external
 ```
+
 
 ## Editing Content
 
