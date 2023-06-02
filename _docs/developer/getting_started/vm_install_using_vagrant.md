@@ -190,21 +190,6 @@ Below are quick steps to get everything installed and running.
    few hours depending on your Internet connection speed.  When this
    command finishes, your VM is ready to use.
 
-   __Note:__ If you happen to see an error similar to:
-   ```
-   Vagrant cannot forward the specified ports on this VM, since they
-   would collide with some other application that is already listening
-   on these ports. The forwarded port to #### is already in use
-   on the host machine.
-   ```
-   This means that one or more of the ports requested by vagrant is already in
-   use by another application running on your computer. You can choose to use
-   an alternate port through an environment variable. The current variables are
-   `VM_PORT_SITE`, `VM_PORT_WS`, `VM_PORT_DB`, `VM_PORT_SAML`, and `VM_PORT_SSH`.
-   
-   It may be easier to create a `.env` file in the root of your project with the
-   text (for example) `VM_PORT_SITE=1500` so that you don't have to add it to
-   every `vagrant up` command.
 
 7. When the `vagrant up` command completes successfully, you will be
    able to access the Submitty website (instructions follow in the
@@ -242,7 +227,8 @@ Below are quick steps to get everything installed and running.
    ```
    SET NO_SUBMISSIONS
    ```
-   When the install has completed, you should see the message:
+
+8. When the install has completed, you should see the message:
    ```
    #####################################################################
 
@@ -262,11 +248,18 @@ Below are quick steps to get everything installed and running.
                          '%NNNNNNNNNNNNNNNNNN
    #####################################################################
    ```
-   *NOTE: There are times when the install will pause for a brief period with the message `Done`. This does not mean the install has ended, and the install should continue after a bit of time.*
 
-   If you do not see this message due to an error or the installation has frozen,
-   check out [Installation Troubleshooting](#installation-troubleshooting)
+   *NOTE: There are times when the install will pause for a brief
+    period with the message `Done`. This does not mean the install has
+    ended, and the install should continue after a bit of time.*
 
+
+   If you do not see this message due to an error or the installation
+   has frozen, check out:
+
+   * [Installation Troubleshooting](#installation-troubleshooting)
+
+   * [Development Instructions Troubleshooting](/developer/development_instructions/troubleshooting)
 
 ---
 

@@ -123,22 +123,6 @@ the installation process.
    $ vagrant up --provider=qemu
    ```
 
-   __Note:__ If you happen to see an error similar to:
-   ```
-   Vagrant cannot forward the specified ports on this VM, since they
-   would collide with some other application that is already listening
-   on these ports. The forwarded port to #### is already in use
-   on the host machine.
-   ```
-   This means that one or more of the ports requested by vagrant is already in
-   use by another application running on your computer. You can choose to use
-   an alternate port through an environment variable. The current variables are
-   `VM_PORT_SITE`, `VM_PORT_WS`, `VM_PORT_DB`, `VM_PORT_SAML`, and `VM_PORT_SSH`.
-   
-   It may be easier to create a `.env` file in the root of your project with the
-   text (for example) `VM_PORT_SITE=1500` so that you don't have to add it to
-   every `vagrant up` command.
-
 5. After the `vagrant up` command completes, the VM is started and
    running in the background.
 
@@ -157,7 +141,7 @@ the installation process.
    $ NO_SUBMISSIONS=1 vagrant up
    ```
 
-   When the install has completed, you should see the message:
+6. When the install has completed, you should see the message:
    ```
    #####################################################################
 
@@ -177,10 +161,18 @@ the installation process.
                          '%NNNNNNNNNNNNNNNNNN
    #####################################################################
    ```
-   *NOTE: There are times when the install will pause for a brief period with the message `Done`. This does not mean the install has ended, and the install should continue after a bit of time.*
+   
+   *NOTE: There are times when the install will pause for a brief
+    period with the message `Done`. This does not mean the install has
+    ended, and the install should continue after a bit of time.*
 
-   If you do not see this message due to an error or the installation has frozen,
-   check out [Installation Troubleshooting](vm_install_using_vagrant#installation-troubleshooting)
+
+   If you do not see this message due to an error or the installation
+   has frozen, check out:
+
+   * [Installation Troubleshooting](#installation-troubleshooting)
+
+   * [Development Instructions Troubleshooting](/developer/development_instructions/troubleshooting)
 
 ---
 
