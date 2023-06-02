@@ -190,6 +190,7 @@ Below are quick steps to get everything installed and running.
    few hours depending on your Internet connection speed.  When this
    command finishes, your VM is ready to use.
 
+
 7. When the `vagrant up` command completes successfully, you will be
    able to access the Submitty website (instructions follow in the
    next section).
@@ -226,7 +227,8 @@ Below are quick steps to get everything installed and running.
    ```
    SET NO_SUBMISSIONS
    ```
-   When the install has completed, you should see the message:
+
+8. When the install has completed, you should see the message:
    ```
    #####################################################################
 
@@ -246,11 +248,18 @@ Below are quick steps to get everything installed and running.
                          '%NNNNNNNNNNNNNNNNNN
    #####################################################################
    ```
-   *NOTE: There are times when the install will pause for a brief period with the message `Done`. This does not mean the install has ended, and the install should continue after a bit of time.*
 
-   If you do not see this message due to an error or the installation has frozen,
-   check out [Installation Troubleshooting](#installation-troubleshooting)
+   *NOTE: There are times when the install will pause for a brief
+    period with the message `Done`. This does not mean the install has
+    ended, and the install should continue after a bit of time.*
 
+
+   If you do not see this message due to an error or the installation
+   has frozen, check out:
+
+   * [Installation Troubleshooting](#installation-troubleshooting)
+
+   * [Development Instructions Troubleshooting](/developer/development_instructions/troubleshooting)
 
 ---
 
