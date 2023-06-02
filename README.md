@@ -31,6 +31,10 @@ by running:
 ```bash
 bundle install
 ```
+   **NOTE**
+   If an error is thrown during the installation process you may need to use 
+   Ruby-2.7.0 and make sure this is indeed the version that the Bundler is
+   using and not another one in a different directory.
 
 ### Running the Site
 
