@@ -41,8 +41,8 @@ by running:
    ```
 
    * _NOTE: During the install, it may hang up when installing the
-     dependency ``nokogiri``.  Don't worry: press enter and it should
-     continue.
+     dependency ``nokogiri``.  Don't worry: continue waiting. If still is stalling here,
+     press enter and it should continue._
 
 
    * _NOTE: If an error is thrown during the installation process you
