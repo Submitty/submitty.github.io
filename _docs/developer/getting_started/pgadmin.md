@@ -25,7 +25,9 @@ redirect_from:
 * Once you have opened Navigate to the `Connection`sub-section.
   The following parameters should be changed:
 
-    * `Host name/address`: `localhost`.
+    * `Host name/address`: `localhost`. 
+
+      - If you get a connection timeout error, try `127.0.0.1` instead.
 
     * `Port`: `16442`
 
