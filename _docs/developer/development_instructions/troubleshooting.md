@@ -40,10 +40,18 @@ category: Developer > Development Instructions
   `VM_PORT_SITE`, `VM_PORT_WS`, `VM_PORT_DB`, `VM_PORT_SAML`, and
   `VM_PORT_SSH`.
 
-  You can edit the Vagrantfile directly or create a `.env` file in the
-  root of your project with the text (for example) `VM_PORT_SITE=1500`
-  so that you don't have to add it to every `vagrant up` command.
-
+  For example, if the conflicting port is the default site port (1511),
+  and you want to use port 1512 instead:
+  ```
+  VM_PORT_SITE=1512 vagrant up
+  ```
+  
+  You can alternatively create a `.env` file in the root of your project
+  with the text `VM_PORT_SITE=1512` (and any other variables separated by
+  newlines). Note that you will need to install the env plugin beforehand:
+  ```
+  vagrant plugin install vagrant-env
+  ```
 
 ---
 
