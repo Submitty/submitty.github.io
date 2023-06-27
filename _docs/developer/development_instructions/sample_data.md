@@ -52,7 +52,11 @@ As a developer, there are 4 sample courses:
 
 Sample Courses Student Data is set using `.yml` files and the script `/.setup/bin/setup_sample_courses.py`.
 
+#### Predefined Users
+
 `setup_sample_courses.py` parses the yaml files in `.setup/data/users/`. If you want to know more about how to write the user yaml files, read `.setup/data/users.yml`, which explains all the options.
+
+#### Random Users
 
 `setup_sample_courses.py` also generates random users. Randomly generated users generate random family and given names, user ids based on the names chosen, random anonymous user ids, numeric ids, and pronouns. For more information, read the `generate_random_users` function in `setup_sample_courses.py`.
 
@@ -60,14 +64,14 @@ Randomly generated students are the same in every build, unless you make changes
 
 If you make changes that use/alter random number generation, you may need to 
 edit the following files:
-    Peer Review:
-        students.txt
-        graders.txt
-    Office Hours Queue:
-        queue_data.json
-    Discussion Forum:
-        threads.txt
-        posts.txt
+- Peer Review:
+    - `.setup/data/random/students.txt`
+    - `.setup/data/random/graders.txt`
+- Office Hours Queue:
+    - `.setup/data/queue/queue_data.json`
+- Discussion Forum:
+    - `.setup/data/forum/threads.txt`
+    - `.setup/data/forum/posts.txt`
         
 These files are manually written for a given set of users (the set is predetermined due to 
 the random's seed staying the same). If you make any changes that affects the contents of the 
