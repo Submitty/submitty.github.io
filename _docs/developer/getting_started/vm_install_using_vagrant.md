@@ -533,11 +533,11 @@ with no explanation, then there are a couple of things that may be going wrong:
 For *developers* who need to upgrade to HTTP/2 in their development environments,
 please follow the step below:
 
-- Run `bash .setup/dev-upgrade-h2.sh up`.
+- Run `bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/dev-upgrade-h2.sh up`.
 
    After a successful execution, please use `https://` instead of `http://`.
 
-- To downgrade to HTTP/1.1, run `bash .setup/dev-upgrade-h2.sh down`.
+- To downgrade to HTTP/1.1, run `bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/dev-upgrade-h2.sh down`.
 
 The script should automatically handle the upgrading and issuing a self-signed
 certificate.  If your browser complains about the security, please head to
