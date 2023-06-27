@@ -99,7 +99,7 @@ there are some workarounds:
 
 - OR, Trust/Ignore the certificates on your browser;
 
-- OR, Downgrade to HTTP/1.1 without TLS using `.setup/dev-upgrade-h2.sh down`.
+- OR, Downgrade to HTTP/1.1 without TLS using `bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/dev-upgrade-h2.sh down`.
 
 You could try following to trust/ignore certificates on your browser:
 
