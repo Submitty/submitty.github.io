@@ -10,6 +10,39 @@ redirect_from:
 
 ---
 
+## 2023 Spring Developers
+
+![](/images/people/2023_spring.png)
+
+
+Hannah Rose,
+Mahi Pasarkar,
+Jason Ng,
+Eden Bendheim,
+Kerui (Ray) Wu,
+Zachary Silverstein,
+Viane Matsibekker,
+Anson Decker,
+Adam Tuhacek,
+Jaeseok Kang,
+Sátvik Karanam,
+Jenay Barela,
+Jason Chen,
+Yanli Wang,
+Bairong Zhang,
+Hanson Gu
+
+
+---
+
+
+## 2022 Summer Developers
+
+![](/images/people/2022_summer.png)
+
+Jiarui (Jerry) Lu, Matthew Bonnecaze, Thomas Kozlowski, Bowen (Evan) Shi, Chris Reed, William Allen
+
+---
 
 ## 2021 Summer & Fall Developers
 
@@ -17,7 +50,7 @@ redirect_from:
 
 Miles Ednie, Henrik Lam, Stephanie Li, Javier Portorreal, Eddie Krystowki, Chris Reed, Ben Kelly, Jenay Barela, Shelly Belsky, William Allen, Jensen Li
 
-
+---
 
 ## 2019 Summer Developers
 

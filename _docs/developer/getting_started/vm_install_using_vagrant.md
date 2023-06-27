@@ -21,6 +21,14 @@ instructions.
 
 ---
 
+_IMPORTANT NOTE: If you are using an Apple Mac computer
+with [Apple Silicon (e.g., M1 or M2)](https://support.apple.com/en-us/HT211814),
+first released in late 2020, you will follow
+the [Vagrant QEMU instructions](/developer/getting_started/vm_install_using_vagrant_apple_silicon).
+If you using an Intel-based Mac, you will follow the instructions below._
+
+---
+
 ## Pre-Installation Checklist
 
 1. To develop with a Virtual Machine (VM), your computer should have
@@ -28,7 +36,7 @@ instructions.
    also required (most computers have these).  Submitty is RAM and I/O
    intensive, so more RAM and a fast disk are better.
 
-2. Make sure you have at least 20GB of hard disk available for
+2. Make sure you have at least 65GB of hard disk available for
    installation.  We do not recommend installing the Submitty
    Developer VM on DropBox, OneDrive, GoogleDrive, or other cloud
    storage.
@@ -60,10 +68,10 @@ instructions.
    computer settings and make sure the machine does not hibernate or
    go to sleep during installation.
 
-
 ---
 
 ## Submitty Developer VM Installation
+
 
 1. Enable Virtualization
 
@@ -107,9 +115,12 @@ instructions.
 
 3. Download and install the latest version of [Git](https://git-scm.com/downloads).
 
-4. Download and install [VirtualBox](https://www.virtualbox.org/) and [Vagrant](https://www.vagrantup.com)
+4. Download and install [VirtualBox](https://www.virtualbox.org/wiki/Download_Old_Builds_6_1) and [Vagrant](https://www.vagrantup.com)
+   
+   **NOTE**
+   Please download VirtualBox 6 instead of 7.
 
-   Below are quick steps to get everything installed and running.
+Below are quick steps to get everything installed and running.
 
    **Windows 10**
 
@@ -133,7 +144,8 @@ instructions.
 
      VirtualBox: <https://www.virtualbox.org/wiki/Linux_Downloads>
 
-     Vagrant: <https://vagrant-deb.linestarve.com/>
+     Vagrant: <https://developer.hashicorp.com/vagrant/downloads> 
+     (if that doesn't work, try: <https://vagrant-deb.linestarve.com/>)
 
 5. Clone [the Submitty repository](https://github.com/Submitty/Submitty) to a location on
    your computer (the "host").
@@ -177,6 +189,7 @@ instructions.
    Vagrant will build your VM.  This will take maybe 30 minutes to a
    few hours depending on your Internet connection speed.  When this
    command finishes, your VM is ready to use.
+
 
 7. When the `vagrant up` command completes successfully, you will be
    able to access the Submitty website (instructions follow in the
@@ -228,10 +241,43 @@ instructions.
    SET NO_SUBMISSIONS
    ```
 
+
    Or in PowerShell,
    ```pwsh
    $Env:NO_SUBMISSIONS
    ```
+8. When the install has completed, you should see the message:
+   ```
+   #####################################################################
+
+                        INSTALLATION SUCCESS!
+   
+                           .GGQGGGSlu
+                         .GGGGGGGGGGGS
+                    :llUGGGGGGGGGGGGGGGG
+                    'GGGGGGGGGGGGGGGGGGb        .
+                       %GGGGGGGGGGGGGGG~   ..GSGGG
+                          GGGGGGGGGGGGGGSGGGGGGGGGG[
+                        ;GGGGGGGGGGGGp\ \ \GGGGGGGGL
+                       !GGGGGGGGGGGGGGS\ \ \GGGGGG
+                       GGGGGGGGGGGGGGGGG\ \ \9GGGG
+                       %GGGGGGGGGGGGGGGS/ / /.GGG
+                        %GGGGGGGGGGGGGS/ / /GGG
+                         '%NNNNNNNNNNNNNNNNNN
+   #####################################################################
+   ```
+
+   *NOTE: There are times when the install will pause for a brief
+    period with the message `Done`. This does not mean the install has
+    ended, and the install should continue after a bit of time.*
+
+
+   If you do not see this message due to an error or the installation
+   has frozen, check out:
+
+   * [Installation Troubleshooting](#installation-troubleshooting)
+
+   * [Development Instructions Troubleshooting](/developer/development_instructions/troubleshooting)
 
 ---
 
@@ -303,9 +349,10 @@ instructions.
     | submitty_php | submitty_php | Submitty process |
     | submitty_daemon | submitty_daemon | Submitty process |
     | postgres | postgres | database process |
-    | instructor | instructor | Submitty user |
-    | ta | ta | Submitty user |
-    | student | student | Submitty user |
+    | instructor | instructor | Instructor submitty user |
+    | ta | ta | Full access grader submitty user |
+    | grader | grader | Limited access grader submitty user |
+    | student | student | Student submitty user |
 
 4. The VM has the following four courses by default and they are all part of the current semester:
 
@@ -376,6 +423,20 @@ instructions.
 
 ## Installation Troubleshooting
 
+* If your install seems to randomly freeze during `vagrant up` 
+with no explanation, then there are a couple of things that may be going wrong:
+
+    *Note: If this happens, it may be worth running a simple `vagrant destroy` before you try to `vagrant up` again. It is possible to repair, but it is usually more effort than it is worth.*
+
+    * First, check to make sure you have a solid internet connection. 
+    Even if the connection is fast, it may experience drop-outs every 
+    once in a while, so it is highly recommended to install it with a wired 
+    connection to the internet.
+
+    * Secondly, check to make sure your computer is not going to 
+    sleep, this can be changed in settings for some systems, or you 
+    can install a program to keep it awake (for example, amphetamine on Mac).
+
 * If an error is thrown during `vagrant up`, you may need to
    uninstall Virtual Box and all virtual machines by typing the
    following commands:
@@ -416,6 +477,7 @@ instructions.
     "Allow apps download from".  You may also need to restart your computer.
 
     Similar instructions for other OS.
+
 
 * See also [Development Instructions Troubleshooting](/developer/development_instructions/troubleshooting)
 

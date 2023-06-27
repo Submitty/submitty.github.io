@@ -3,7 +3,12 @@ title: Version Notes
 category: System Administrator > Installation
 redirect_from:
   - /system_admin/version_notes
+  - /sysadmin/version_notes
 ---
+
+
+Please also see [Update GNU/Linux Server](../update_server) and [Update Submitty](../update_submitty).
+
 
 The release notes below document additional manual steps required with
 installation of new versions of Submitty.  These include editing
@@ -32,7 +37,7 @@ Refactors, Dependencies, etc.
 
 
 See also
-[Developer: How to Contribute](/developer/getting_started/how_to_contribute) and
+[Developer: Make A Pull Request](/developer/getting_started/make_a_pull_request) and
 [Developer: Migrations](/developer/development_instructions/migrations).
 
 
