@@ -123,4 +123,4 @@ an error instead. To do this, place at the top of the file:
 <?php
 
 declare(script_types=1);
-``
+```
