@@ -5,7 +5,7 @@ redirect_from:
   - /developer/development_instructions/sample_data
 ---
 
-As a developer, there are 4 sample courses:
+As a developer, there are 5 sample courses:
 - **BLANK**
     - Empty course.
 - **DEVELOPMENT**
@@ -15,6 +15,9 @@ As a developer, there are 4 sample courses:
     - For manual & automated website testing.
 - **TUTORIAL**
     - All tutorial gradeables are in sequence, emphasizing one new feature as they grow in complexity.
+- **PLAGIARISM**
+    - Used to test Lichen plagiarism detection.
+    - This is not available by default. You must clone the [Lichen Test Data](https://github.com/Submitty/LichenTestData) repository locally to see this.
 
 ---
 
