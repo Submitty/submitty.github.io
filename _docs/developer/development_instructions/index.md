@@ -261,29 +261,7 @@ these changes.
 
 ## Re-Creating All Sample Course Data
 
-* If you've changed the script to create a new course
-  (`create_course.sh`), or the schema for the master database
-  (`submitty_db.sql`), or the schema for the course databases
-  (`course_tables.sql`), we need to delete all courses, and recreate
-  the course databases, users, and sample submission uploads.
-
-  _NOTE: Make sure you are not be connected to any DBs (e.g., through
-  pgAdmin) or else running the below scripts could put things into a
-  broken state._
-
-  Run this command:
-
-  ```
-  sudo bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/bin/recreate_sample_courses.sh
-  ```
-  
-  You can append the `--no_submissions` flag to the above command to
-  skip creation of any sample submission data in the sample courses.
-  This will accelerate the completion of this command, but you will be
-  missing the hundreds of sample student submissions present in the
-  full installation.
-
-  See also: [Database Migrations](/developer/development_instructions/migrations)
+To re-create sample course data, see [Re-Creating All Sample Course Data](/developer/development_instructions/sample_data#re-creating-all-sample-course-data)
 
 
 ---
