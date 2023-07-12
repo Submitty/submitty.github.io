@@ -10,6 +10,7 @@ As a developer, there are 5 sample courses:
     - Empty course.
 - **DEVELOPMENT**
     - All files from `/more_autograding_examples/`, which mostly tests autograding.
+    - Most new features that need gradeables to test them will be put here.
 - **SAMPLE**
     - A simultation of a "live" course mid-semester with lots of students and lots of submissions. Tests features such as ta grading, due dates, categories, etc.
     - For manual & automated website testing.
