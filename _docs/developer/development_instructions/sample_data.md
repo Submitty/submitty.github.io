@@ -43,8 +43,25 @@ As a developer, there are 4 sample courses:
   missing the hundreds of sample student submissions present in the
   full installation.
 
+
+  This command will also have to be run twice a year on July 1st and January 1st when the test semester will change from fall to spring or vice versa.
+
   See also: [Database Migrations](/developer/development_instructions/migrations)
 
+---
+
+## Predefined Data
+
+Predefined data is set using files in `/.setup/data/` and the script `/.setup/bin/setup_sample_courses.py`.
+
+| Data | Location | 
+|------|----------|
+| Course Gradeables | `/.setup/data/courses` |
+| Forum Threads | `/.setup/data/forum` |
+| Polls | `/.setup/data/polls` |
+| Office Hours Queue | `/.setup/data/queue` |
+| Team Assignment | `/.setup/data/teams` |
+| Predefined Users | `/.setup/data/users` |
 
 ---
 
@@ -60,7 +77,7 @@ Sample Courses Student Data is set using `.yml` files and the script `/.setup/bi
 
 `setup_sample_courses.py` also generates random users. Randomly generated users generate random family and given names, user ids based on the names chosen, random anonymous user ids, numeric ids, and pronouns. For more information, read the `generate_random_users` function in `setup_sample_courses.py`.
 
-Randomly generated students are the same in every build, unless you make changes to `setup_sample_courses.py` or related files. This is because the random seed is set to a specific value. This decision was to keep test cases consistent. However, if you make changes that utilize randomness, it may change the randomly generated students. 
+Randomly generated students are the same in every build, unless you make changes to `setup_sample_courses.py` or related files. This is because the random seed is set to a specific value. This decision was to keep test cases consistent. However, if you make changes that utilize randomness, it may change the randomly generated students, thus making the test cases obsolete. 
 
 If you make changes that use/alter random number generation, you may need to 
 edit the following files:
@@ -72,10 +89,11 @@ edit the following files:
 - Discussion Forum:
     - `.setup/data/forum/threads.txt`
     - `.setup/data/forum/posts.txt`
+- Teams:
+    - `.setup/data/teams/sample_open_team_homework_teams.csv`
         
 These files are manually written for a given set of users (the set is predetermined due to 
 the random's seed staying the same). If you make any changes that affects the contents of the 
 set these files will be outdated and result in failure of recreate_sample_courses.
 
 You may also need to edit test cases in Cypress, Selenium, etc. 
-
