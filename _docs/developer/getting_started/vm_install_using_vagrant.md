@@ -485,7 +485,7 @@ with no explanation, then there are a couple of things that may be going wrong:
 
 4. Retrieve the private key for the vagrant machine, located at `<SUBMITTY GIT REPO>/.vagrant/machines/<VM>/<VM BACKEND>/private_key`.
 
-   At the time of writing, `<VM>` is `ubuntu-20.04`, and `<VM BACKEND>` is `virtualbox`.
+   At the time of writing, `<VM>` is `ubuntu-22.04`, and `<VM BACKEND>` is `virtualbox`.
 
 5. Use SSH to connect from the remote device to the machine that is running the VM, and use SSH port forwarding (local forwarding) to forward the necessary ports.
 
