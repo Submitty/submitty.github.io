@@ -57,10 +57,11 @@ redirect_from:
    need to restart fpm to ensure that the webpage sees the change:_
 
    ```
-   sudo service php8.4-fpm restart
+   sudo service php8.1-fpm restart
    ```
 
-   _Note: Ubuntu 20.04 is using 7.4, but older versions might be using `php7.0-fpm`._
+   _Note: Depending on your version of Ubuntu, your version of php fpm will be different._
+   
 
 
 7. Give permissions to create new users and update apache configurations
@@ -118,10 +119,12 @@ redirect_from:
 
    _Note: You will sometimes need to restart PHP-FPM after adding a course._
    ```
-   sudo service php7.4-fpm restart
+   sudo service php8.1-fpm restart
    ```
 
-   _Note: Ubuntu 20.04 is using 7.4, but older versions might be using `php7.0-fpm`._
+
+   _Note: Depending on your version of Ubuntu, your version of php fpm will be different._
+
 
    You can confirm that a directory has been created and populated
    with initial files in the data directory.  For this example (if you
