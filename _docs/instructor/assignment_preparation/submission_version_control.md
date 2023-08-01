@@ -7,22 +7,61 @@ redirect_from:
   - /instructor/git
 ---
 
+### Using Git
+
+Submitty supports utilizing Git for handling submissions by students.
+When a student hits "submit", Submitty performs a clone of their
+repository. Submitty then does a checkout of the last revision made before
+the timestamp of when they hit the submit button.
+
+To configure Git for an assignment, you will want to select type 
+"Students will submit by committing files to a version control system (VCS) repository",
+and then chosing the option that suits your needs. 
+
+![](/images/instructor/assignment_preparation/vcs_gradeable_type.png)
+
+Submitty comes with a setup for an internal Git server out of the box,
+but if you wish to use an external source, such as Github, you may need
+to configure Submitty to be able to access those repos via SSH. See 
+[System Administrator/Setting Up Git](/sysadmin/git) for more details.
+
 
 ### Assignment Creation
 
-1. When you create a new gradeable, specify that students will submit
-their work by version control (GIT).  _Note: this selection cannot be
-modified after initial gradeable creation._
+Text fields in the VCS Repository Details section support the following list of "variables"
+which get replaced during execution of Submitty:
+* {$vcs_type} - VCS type being used (currently always git)
+* {$gradeable_id} - ID of gradeable being submitteds
+* {$user_id} - ID of user who is submitting 
+* {$team_id} - ID of team who is submitting
 
-2. If this is a team assignment, encourage the students to form their teams through the Submitty interface promptly, so they are not delayed by the creation of their team version control repository.
+There are multiple different options for students submitting files from version control. 
 
+* Submitty hosted -- single gradeable repository
+   - This should be used when you want Submitty to create an empty repository for each student in the course automatically.
+   The path to this repository will be {$vcs_base_url}/{$gradeable_id}/{$user_id}.
+* Submitty hosted – choose repository name (can be used for multiple gradeables)
+   - This should be used when you want to specify the repository path, instead of using the gradeable id. This can be used for multiple gradeables. 
+* Externally hosted - public repository, students will provide URL
+   - This should be used if the students will create repositories and supply the link.
+* Externally hosted - private repository, students will provide URL -- (INCOMPLETE)
+   - The implementation of the access requirements for this gradeable is incomplete. 
+* Externally hosted - Instructor created repository
+   - This should be used if the Instructor/Sysadmin creates a repository that all students fork.
+
+
+ If this is a team assignment, encourage the students to form their teams through the Submitty interface promptly, so they are not delayed by the creation of their team version control repository.
+
+3. If the students files will be in a subdirectory of their main repository, select "yes" and put the path to the student's files in the required field. 
+
+![](/images/instructor/assignment_preparation/subdirectory_gradeables.png)
 
 ### Generating Submitty Server Version Control Repositories
 
 Once you have created the gradeable, you may create empty repositories
-for each student/team for that assignment.  The provided script
-`generate_repos.py` creates a bare shared repository with restricted
-permissions
+for each student/team for that assignment if you are using the Submitty hosted
+VCS repositories.  The provided script `generate_repos.py` creates a bare 
+shared repository with restricted permissions.
 
 The script accepts a `--help` flag to explain the arguments it
 accepts. The basic usage:
@@ -74,7 +113,6 @@ _TODO:_
 ### Private, Student-Created Repositories (e.g., Github)
 
 _TODO:_
-
 
 
 ### Uploading Instructor Provided Code to GIT

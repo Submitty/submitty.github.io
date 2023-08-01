@@ -140,7 +140,7 @@ Currently your work is only on your local machine.
 
 3. If you would like to submit this version of your work (for
    automatic and/or manual grading), go to the Submitty website for
-   this assignment and press the blue "Grade My Repository" button.
+   this assignment and press the green "Grade My Repository" button.
 
    Submitty will checkout the latest version of your code committed
    and pushed to the server, and will run any automated tests and
@@ -149,7 +149,7 @@ Currently your work is only on your local machine.
 
    If you notice any problems with your work, you can modify the code
    on your local machine, commit those changes, push the commit to the
-   server, and then press the blue "Grade My Repository" button again.
+   server, and then press the green "Grade My Repository" button again.
 
 
 4. _TODO: We eventually plan to add a 'hook' to trigger repository
