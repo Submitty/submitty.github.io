@@ -12,7 +12,7 @@ machines* in addition to your primary vagrant virtual machine.
 ## Automated Virtualbox Worker Installation
 
 These steps will create a worker machine alongside the normal Submitty machine.
-1. Destroy `ubuntu-20.04` and `submitty-worker` vagrant machines (if they exist) with 
+1. Destroy `ubuntu-22.04` and `submitty-worker` vagrant machines (if they exist) with 
 ```
 vagrant destroy
 ```
@@ -62,7 +62,7 @@ vagrant destroy
    Choose `Dynamically allocated`
    Specify size: e.g., 20GB
 
-5. Download the Ubuntu 20.04 installer 64 bit .iso.
+5. Download the Ubuntu 22.04 installer 64 bit .iso.
    Save this somewhere on your host computer.
 
 6. Click on `Start` to power on.
@@ -79,7 +79,7 @@ vagrant destroy
    Then click through various menus, and wait a while installing system.
    Then restart the VM to finish installation.
 
-8. At some point, it will suggest that you install updates for Ubuntu 20.04, go ahead and do that.
+8. At some point, it will suggest that you install updates for Ubuntu 22.04, go ahead and do that.
    You'll probably have to reboot.
 
 9. Allow ssh connections to the worker VM from outside (e.g., from your primary machine):

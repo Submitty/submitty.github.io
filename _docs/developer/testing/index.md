@@ -12,7 +12,6 @@ these tests can be roughly broken down into the following high-level types:
 * [Python Unit Tests](python_unit_tests)
 * [PHP Unit Tests](php_unit_tests)
 *  Site End-to-End (E2E) tests
-	- [Selenium test suite](site_end_to_end_tests)
 	- [Cypress test suite](cypress)
 * [Autograding Integration Tests](autograding_integration_tests)
 * [Rainbow Grades Functional Tests](rainbow_grades_tests)
@@ -83,7 +82,6 @@ pip3 install docker
 pip3 install paramiko
 pip3 install psycopg2-binary
 pip3 install coverage
-pip3 install --pre selenium
 pip3 install flake8
 pip3 install websocket
 pip3 install websocket-client

@@ -2,9 +2,13 @@
 title: End-to-End testing with Cypress
 ---
 
-[Cypress](https://www.cypress.io/) is an open source end-to-end testing framework. It runs tests against 
-a locally hosted instance of Submitty by automating a browser. Tests are written in JavaScript and are executed 
-in the Cypress test-runner.
+The _End-to-End Testing_ (e2e) suite utilizes [Cypress](https://www.cypress.io/),
+an open source end-to-end testing framework. It runs tests against 
+a locally hosted instance of Submitty by automating a browser. 
+Tests are written in JavaScript and are executed 
+in the Cypress test-runner. This does not test the PHP (or C++) code
+directly, but rather focuses on user navigation through the website. It 
+used to use Selenium, but has been rewritten in using Cypress.
 
 ## Installation 
 

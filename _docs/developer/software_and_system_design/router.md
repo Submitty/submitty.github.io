@@ -38,16 +38,16 @@ public function showHomepage() {...}
 
 #### Route with Course Information
 
-A majority of links in Submitty require course information to return correct contents. Therefore, it is necessary for the router to know which `(semester, course)` tuple is requested. It is needed to prepend the route with `/courses/{_semester}/{_course}`. The course information will be loaded automatically before calling the function.
+A majority of links in Submitty require course information to return correct contents. Therefore, it is necessary for the router to know which `(term, course)` tuple is requested. It is needed to prepend the route with `/courses/{_term}/{_course}`. The course information will be loaded automatically before calling the function.
 
 ```php
 /**
- * @Route("/courses/{_semester}/{_course}/reports")
+ * @Route("/courses/{_term}/{_course}/reports")
  */
 public function showReportPage() {...}
 ```
 
-To visit the page defined above, simply go to `{base_url}/f19/sample/reports`. If you are using Ubuntu 20.04 VM, going to `http://localhost:1511/s21/sample/reports` should take you to the right page.
+To visit the page defined above, simply go to `{base_url}/{current term}/sample/reports`. 
 
 #### Route with Parameters
 
@@ -55,12 +55,12 @@ Sometimes we may want to pass parameters to functions. Wrapping the parameter na
 
 ```php
 /**
- * @Route("/courses/{_semester}/{_course}/student/{gradeable_id}")
+ * @Route("/courses/{_term}/{_course}/student/{gradeable_id}")
  */
 public function showHomeworkPage($gradeable_id){...}
 ```
 
-Note that `{_semester}` and `{_course}` are actually special cases of parameters that are automatically processed by the router.
+Note that `{_term}` and `{_course}` are actually special cases of parameters that are automatically processed by the router.
 
 Also, note that parameters in the `GET` query are passed to the function too without the need for explicit definition as long as parameter names are the same.
 
@@ -79,14 +79,14 @@ In some cases, you may want routes to match number-only parameters, or those not
 
 ```php
 /**
- * @Route("/courses/{_semester}/{_course}/notifications/{nid}", requirements={"nid": "[1-9]\d*"})
+ * @Route("/courses/{_term}/{_course}/notifications/{nid}", requirements={"nid": "[1-9]\d*"})
  */
 public function openNotification($nid) {...}
 ```
 
 ```php
 /**
- * @Route("/courses/{_semester}/{_course}", requirements={"_semester": "^(?!api)[^\/]+", "_course": "[^\/]+"})
+ * @Route("/courses/{_term}/{_course}", requirements={"_term": "^(?!api)[^\/]+", "_course": "[^\/]+"})
  */
 public function navigationPage() {...}
 ```
@@ -112,7 +112,7 @@ For example, the following route will only allow instructor access.
 
 ```php
 /**
- * @Route("/courses/{_semester}/{_course}/course_materials/modify_permission")
+ * @Route("/courses/{_term}/{_course}/course_materials/modify_permission")
  * @AccessControl(role="INSTRUCTOR")
  */
 public function modifyCourseMaterialsFilePermission($filename, $checked)
@@ -141,8 +141,8 @@ And an API route for a method within a course:
 
 ```php
 /**
- * @Route("/courses/{_semester}/{_course}/users", methods={"GET"})
- * @Route("/api/courses/{_semester}/{_course}/users", methods={"GET"})
+ * @Route("/courses/{_term}/{_course}/users", methods={"GET"})
+ * @Route("/api/courses/{_term}/{_course}/users", methods={"GET"})
  */
 public function getStudents()
 ```
