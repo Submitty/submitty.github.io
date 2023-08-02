@@ -5,7 +5,7 @@ redirect_from:
   - /developer/coding_style_guide/php
 ---
 
-__Minimum Version__: 7.4
+__Minimum Version__: 8.1
 
 For PHP, we use a foundation of [PSR-1](https://www.php-fig.org/psr/psr-1/) and
 [PSR-12](https://www.php-fig.org/psr/psr-12/), with some slight modifications on
@@ -123,4 +123,4 @@ an error instead. To do this, place at the top of the file:
 <?php
 
 declare(script_types=1);
-``
+```

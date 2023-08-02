@@ -190,6 +190,7 @@ Below are quick steps to get everything installed and running.
    few hours depending on your Internet connection speed.  When this
    command finishes, your VM is ready to use.
 
+
 7. When the `vagrant up` command completes successfully, you will be
    able to access the Submitty website (instructions follow in the
    next section).
@@ -226,7 +227,8 @@ Below are quick steps to get everything installed and running.
    ```
    SET NO_SUBMISSIONS
    ```
-   When the install has completed, you should see the message:
+
+8. When the install has completed, you should see the message:
    ```
    #####################################################################
 
@@ -246,11 +248,18 @@ Below are quick steps to get everything installed and running.
                          '%NNNNNNNNNNNNNNNNNN
    #####################################################################
    ```
-   *NOTE: There are times when the install will pause for a brief period with the message `Done`. This does not mean the install has ended, and the install should continue after a bit of time.*
 
-   If you do not see this message due to an error or the installation has frozen,
-   check out [Installation Troubleshooting](#installation-troubleshooting)
+   *NOTE: There are times when the install will pause for a brief
+    period with the message `Done`. This does not mean the install has
+    ended, and the install should continue after a bit of time.*
 
+
+   If you do not see this message due to an error or the installation
+   has frozen, check out:
+
+   * [Installation Troubleshooting](#installation-troubleshooting)
+
+   * [Development Instructions Troubleshooting](/developer/development_instructions/troubleshooting)
 
 ---
 
@@ -451,6 +460,15 @@ with no explanation, then there are a couple of things that may be going wrong:
 
     Similar instructions for other OS.
 
+* If this error is thrown during `vagrant up` command:
+   ```
+   ubuntu-26.84: E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/g/gcc-9gcc-9_9.4.0-1ubuntu1-20.84.1_amd64.deb Connection fail [IP: 189.211.241.193]
+   ```
+   then you should use VPN to connect to the internet and then try `vagrant up`.This error usually occurs when you are outside the United States and the connection to the Ubuntu package repository is being blocked or restricted.
+
+   __Note:__ The IP address provided in the error message may vary.
+   ProtonVPN, which provides free VPN service can be used. You can download from their official website at (https://protonvpn.com). You can also use other VPN services.
+
 
 * See also [Development Instructions Troubleshooting](/developer/development_instructions/troubleshooting)
 
@@ -476,7 +494,7 @@ with no explanation, then there are a couple of things that may be going wrong:
 
 4. Retrieve the private key for the vagrant machine, located at `<SUBMITTY GIT REPO>/.vagrant/machines/<VM>/<VM BACKEND>/private_key`.
 
-   At the time of writing, `<VM>` is `ubuntu-20.04`, and `<VM BACKEND>` is `virtualbox`.
+   At the time of writing, `<VM>` is `ubuntu-22.04`, and `<VM BACKEND>` is `virtualbox`.
 
 5. Use SSH to connect from the remote device to the machine that is running the VM, and use SSH port forwarding (local forwarding) to forward the necessary ports.
 

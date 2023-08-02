@@ -145,6 +145,7 @@ var NAVTREE =
                 [ "Update Submitty", "/sysadmin/installation/update_submitty", null ],
                 [ "Version Notes", "/sysadmin/installation/version_notes/index", [
                     [ "Overview", "/sysadmin/installation/version_notes/index", null],
+                    [ "v23.07.00", "/sysadmin/installation/version_notes/v23.07.00", null ],
                     [ "v23.03.01", "/sysadmin/installation/version_notes/v23.03.01", null ],
                     [ "v22.06.00", "/sysadmin/installation/version_notes/v22.06.00", null ],
                     [ "v22.05.00", "/sysadmin/installation/version_notes/v22.05.00", null ],
@@ -205,7 +206,6 @@ var NAVTREE =
                     [ "Linting / Static Analysis", "/developer/testing/linting_static_analysis", null ],
                     [ "Python Unit Tests", "/developer/testing/python_unit_tests", null ],
                     [ "PHP Unit Tests", "/developer/testing/php_unit_tests", null ],
-                    [ "Selenium End-to-End Tests", "/developer/testing/site_end_to_end_tests", null ],
                     [ "Cypress End-to-End Tests", "/developer/testing/cypress", null ],
                     [ "Autograding Integration Tests", "/developer/testing/autograding_integration_tests", null ],
                     [ "GitHub Actions", "/developer/testing/github_actions", null ]

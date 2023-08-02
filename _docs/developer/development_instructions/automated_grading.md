@@ -95,23 +95,7 @@ number:
 
 2. Setting up the worker machine(s):
 
-   1. Download the Submitty github repository and run the installation scripts
-      for the worker machine.
-
-      _TODO: Write these instructions._
-      
-   2. Create the user account that will have access to send files from
-      the primary machine to the worker machine.  In our example we
-      name that user account `submitty`.  That user account must be in
-      the `submitty_daemon` and `submitty_daemonphp` groups.
-
-      _TODO: proofread these instructions_
-
-   3. Generate and install an ssh key pair to allow the `submitty_daemon` user
-      on the primary machine to ssh to the worker machine using the
-      specified username, without a password.
-
-      _TODO: Add instructions/details/link on key generation_
+   Follow the [worker installation instructions](/sysadmin/installation/worker_installation)
 
 
 3. Next, create homework assignment autograding configurations that
