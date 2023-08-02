@@ -64,7 +64,7 @@ _TODO:_
 
 ### External, Instructor-Created, Student Forked Repositories (e.g Gitlab)
 
-# These instructions will help you fork and access the repository created by your instructor. Before you follow these instructions, if you are using private repositories, you will need to add a SSH key to your git system if your instructor has not already.
+__These instructions will help you fork and access the repository created by your instructor. Before you follow these instructions, if you are using private repositories, you will need to add a SSH key to your git system if your instructor has not already.__
 
 1. Navigate to the course repository specified by your instructor. Duplicate this window, and leave one copy open, as you will come back to it in step 4. 
 
