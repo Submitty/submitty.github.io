@@ -7,7 +7,7 @@ on all commits and pull requests against the GitHub repository. As part of this 
 that the code passes the [linters / static analysis](/developer/testing/linting_static_analysis),
 the [python](/developer/testing/python_unit_tests) and [PHP](/developer/testing/php_unit_tests)
 unit tests, the [Autograding Integration Tests](/developer/testing/autograding_integration_tests),
-and the [Site End-to-End Tests](/developer/testing/site_end_to_end_tests).
+and the [Site End-to-End Tests](/developer/testing/cypress).
 
 Submitty's CI is separated into different workflows, each workflow contain a number of jobs that run the tests mentioned above. Some jobs can run in parallel and others may depend on other jobs. The workflows are written as yaml files and are located within the repository [here](https://github.com/Submitty/Submitty/tree/master/.github/workflows) under `Submitty/.github/workflows/`.
 

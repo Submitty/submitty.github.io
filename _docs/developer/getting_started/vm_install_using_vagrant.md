@@ -460,6 +460,15 @@ with no explanation, then there are a couple of things that may be going wrong:
 
     Similar instructions for other OS.
 
+* If this error is thrown during `vagrant up` command:
+   ```
+   ubuntu-26.84: E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/g/gcc-9gcc-9_9.4.0-1ubuntu1-20.84.1_amd64.deb Connection fail [IP: 189.211.241.193]
+   ```
+   then you should use VPN to connect to the internet and then try `vagrant up`.This error usually occurs when you are outside the United States and the connection to the Ubuntu package repository is being blocked or restricted.
+
+   __Note:__ The IP address provided in the error message may vary.
+   ProtonVPN, which provides free VPN service can be used. You can download from their official website at (https://protonvpn.com). You can also use other VPN services.
+
 
 * See also [Development Instructions Troubleshooting](/developer/development_instructions/troubleshooting)
 
