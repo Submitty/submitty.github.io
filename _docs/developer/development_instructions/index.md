@@ -200,6 +200,30 @@ autograding configuration, you'll probably need to:
 
 ---
 
+## hello
+
+In case your system encounters a crash while working with Vagrant, it is beneficial to take precautions to avoid the loss of progress. Snapshots can come to the rescue in such situations. Snapshots are essentially saved states of your virtual machines, allowing you to capture the current system state and revert back to it if needed. The following links provide a detailed explanation of how to take snapshots using the respective virtualization tool:
+
+* Virtual Box
+https://www.youtube.com/watch?v=Kl-Qc6N9znw
+
+* VMWare
+
+https://www.youtube.com/watch?v=DQutP_-2j3g 
+
+* Vagrant
+
+https://developer.hashicorp.com/vagrant/docs/cli/snapshot
+
+In the event of a system crash, you can revert to the previously taken snapshot using the respective virtualization tool. Once you have restored the snapshot, you can then proceed with the following steps:
+
+1. Launch the virtual machine using `vagrant up`.
+2. Access the virtual machine with `vagrant ssh`.
+3. Run `submitty_install` in the terminal to get the changes made in the code.
+
+
+---
+
 ## System Clock Testing & Troubleshooting
 
 * If the VM has a clock skew (incorrect time)
@@ -321,4 +345,8 @@ these changes.
   the shared directory of the Submitty working repository.  It will
   also destroy the databases, and any grading configuration or grading
   work that has been done._
+
+
+
+
 
