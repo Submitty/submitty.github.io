@@ -204,8 +204,6 @@ autograding configuration, you'll probably need to:
 
 In the event of a non-recoverable error while working on Submitty the last resort is to perform a fresh `vagrant up`. However, this process can be time-consuming. To avoid such situations and save time, it is highly recommended to take a snapshot when you first set up your Vagrant environment by following the tutorial links provided below:
 
-
-
 * [Virtual Box](https://www.youtube.com/watch?v=Kl-Qc6N9znw)
 
 * [VMWare](https://www.youtube.com/watch?v=DQutP_-2j3g)
