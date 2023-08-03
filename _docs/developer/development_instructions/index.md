@@ -159,7 +159,7 @@ Similarly, if you are upgrading your current working branch with
 multiple pull requests from the `main` Submitty branch, or if you are
 reviewing and testing the pull request from another developer that may
 include more significant Submitty source code changes, it will likely
-be necessary to conduct a more complete update and reset re-set of all
+be necessary to conduct a more complete update and reset of all
 of the Submitty source code.
 
 * In these cases, run this shortcut in the vagrant terminal:
@@ -200,26 +200,23 @@ autograding configuration, you'll probably need to:
 
 ---
 
-## hello
+## Virtual Machine Recovery using Snapshots
 
-In case your system encounters a crash while working with Vagrant, it is beneficial to take precautions to avoid the loss of progress. Snapshots can come to the rescue in such situations. Snapshots are essentially saved states of your virtual machines, allowing you to capture the current system state and revert back to it if needed. The following links provide a detailed explanation of how to take snapshots using the respective virtualization tool:
+In the event of a non-recoverable error while working on Submitty the last resort is to perform a fresh `vagrant up`. However, this process can be time-consuming. To avoid such situations and save time, it is highly recommended to take a snapshot when you first set up your Vagrant environment by following the tutorial links provided below:
 
-* Virtual Box
-https://www.youtube.com/watch?v=Kl-Qc6N9znw
 
-* VMWare
 
-https://www.youtube.com/watch?v=DQutP_-2j3g 
+* [Virtual Box](https://www.youtube.com/watch?v=Kl-Qc6N9znw)
 
-* Vagrant
+* [VMWare](https://www.youtube.com/watch?v=DQutP_-2j3g)
 
-https://developer.hashicorp.com/vagrant/docs/cli/snapshot
+* [Vagrant](https://developer.hashicorp.com/vagrant/docs/cli/snapshot)
 
-In the event of a system crash, you can revert to the previously taken snapshot using the respective virtualization tool. Once you have restored the snapshot, you can then proceed with the following steps:
+By taking a snapshot at this initial stage, you can later revert to this saved state if needed, ensuring a quick recovery. Once you have restored the snapshot, you can then proceed with the following steps:
 
 1. Launch the virtual machine using `vagrant up`.
 2. Access the virtual machine with `vagrant ssh`.
-3. Run `submitty_install` in the terminal to get the changes made in the code.
+3. Run `submitty_install` command to conduct a more complete update and reset of all of the Submitty source code.
 
 
 ---
