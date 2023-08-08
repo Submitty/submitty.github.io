@@ -52,7 +52,7 @@ There are multiple different options for students submitting files from version 
 
  If this is a team assignment, encourage the students to form their teams through the Submitty interface promptly, so they are not delayed by the creation of their team version control repository.
 
-3. If the students files will be in a subdirectory of their main repository, select "yes" and put the path to the student's files in the required field. 
+ If the students files will be in a subdirectory of their main repository, select "yes" and put the path to the student's files in the required field. 
 
 ![](/images/instructor/assignment_preparation/subdirectory_gradeables.png)
 

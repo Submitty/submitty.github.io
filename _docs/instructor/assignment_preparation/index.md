@@ -53,7 +53,7 @@ and/or manually by the instructor/TAs.
    electronic format.
 
    **_Student File Submission_** There are two types of gradeables where students can submit their files
-   to Submitty, directly uploading to the website, or by submitting the files using a version control system (VCS). 
+   to Submitty: directly uploading to the website, or submitting the files using a version control system (VCS). 
    These should be used for homework/project/exercise where students will directly upload files (e.g., code,
    pdfs, images, etc.) to Submitty for grading. (For help with VCS gradeables, view [Submission via Version Control](/instructor/assignment_preparation/submission_version_control) ).
 
