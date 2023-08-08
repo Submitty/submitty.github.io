@@ -74,7 +74,7 @@ __These instructions will help you fork and access the repository created by you
 
 4. Set the upstream repository using `git remote add upstream SSH_URL`. Replace `SSH_URL` with the 'Clone with SSH' URL from the course repository window from step 1.
 
-4. To pull changes from the upstream repository, use the commands
+5. To pull changes from the upstream repository, use the commands:
  ```
  git pull
  git fetch upstream

@@ -80,7 +80,7 @@ _TODO:_
 
 ***Submitty will need access to the student's repositories, whether that be adding a SSH key for private repositories, or having public repositories.***
 
-1. Create a group/organization with a simple name (e.g. cptr101. This part can be skipped if using the instructors repositories.) 
+1. Create a group/organization with a simple name (e.g. cptr101. This part can be skipped if using the instructor's repositories.) 
 
 2. Create a project within that group/organization with a simple name (e.g. student101)
 
@@ -89,11 +89,11 @@ _TODO:_
 4. Create the course (if not already set up).
 
 5. Create the gradeable, selecting the proper gradeable type, in the required field, 
-type the SSH clone link, but replace your user id with {$user_id} `Should look like git@github.com:{$user_id}/student101.git`
+type the SSH clone link, but replace your user id with {$user_id}. `Should look like git@github.com:{$user_id}/student101.git`
 
 6. Give your students the URL to the repository, and instruct them to _fork_ it.
 
-__NOTE: Students user ids in Submitty need to be the same as your VCS system__
+__NOTE: Students user ids in Submitty need to be the same as your VCS system.__
 
 
 ### Uploading Instructor Provided Code to GIT
