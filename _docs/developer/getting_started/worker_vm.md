@@ -44,6 +44,25 @@ vagrant destroy
 
 ---
 
+## Connecting to the Worker Machine
+
+If you would like to ensure the worker is functioning properly, or enter the worker machine for managing it directly, you can follow these steps.
+
+To connect to a worker machine through SSH, run:
+```
+vagrant ssh <worker-name>
+```
+
+If you want to test the connection between the primary VM and a worker, you can first `vagrant ssh` into the primary machine and then run this command to SSH into the worker from there:
+```
+su submitty_daemon -c ssh submitty@<ip-address>
+```
+The IP address of the worker machine will be indicated in the `.vagrant/workers.json` file.
+
+__NOTE__: Depending on the performance of your computer and the size of the autograding queue passed to the worker, the SSH command may hang for some time.
+
+---
+
 ## Manual Worker Installation (VirtualBox)
 
 1. Open the Virtual Box application.
