@@ -193,7 +193,7 @@ var NAVTREE =
                     [ "PhpStorm Setup Instructions", "/developer/getting_started/phpstorm", null ],
                     [ "Xdebug Setup Instructions", "/developer/getting_started/xdebug", null ],
                     [ "PGAdmin Setup Instructions", "/developer/getting_started/pgadmin", null ],
-                    [ "Virtual Box Worker", "/developer/getting_started/worker_vm", null ],
+                    [ "Worker VM Setup", "/developer/getting_started/worker_vm", null ],
                 ] ],
             ] ],
             [ "Development Instructions", "/developer/development_instructions/index", [
