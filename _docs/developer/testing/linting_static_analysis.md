@@ -62,7 +62,7 @@ The PHP code of Submitty is statically analyzed by [phpstan](https://phpstan.org
 We recommend running it inside the VM as it is already installed on it. Simply ``vagrant ssh`` inside your Submitty
 folder and navigate to
 ```
-/usr/local/submitty/GIT_CHECKOUT/Submitty/#
+/usr/local/submitty/GIT_CHECKOUT/Submitty/site/
 ```
 Then run:
 
