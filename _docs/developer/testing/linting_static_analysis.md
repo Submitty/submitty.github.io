@@ -52,8 +52,6 @@ The following instructions were tested for Windows:
 5. Now run ``php vendor/bin/phpcs --extensions=php ./app`` inside your ``site`` directory. You can change ``./app``
 if you want to lint only a specific file.
 
-The PHP code of Submitty is linted using [phpcs](https://github.com/squizlabs/PHP_CodeSniffer).
-
 See also: [PHP Style Guide](/developer/coding_style_guide/php)
 
 ## PHP Static Analysis
