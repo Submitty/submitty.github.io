@@ -105,14 +105,34 @@ team), the instructor(s), and the full access graders.
 _TODO:_
 
 
-### Private, Instructor-Created Repositories (e.g., Github Classroom)
-
-_TODO:_
-
-
 ### Private, Student-Created Repositories (e.g., Github)
 
 _TODO:_
+
+
+### External, Private, Instructor-Created Repositories (e.g., Gitlab or Github Classroom)
+
+
+__NOTE: Your Submitty server will need access to the student's repositories, whether
+that be adding a SSH key for private repositories, or having public
+repositories.__
+
+1. Create a group/organization with a simple name
+(e.g. `cptr101`. This part can be skipped if using the instructor's repositories.) 
+
+2. Create a project within that group/organization with a simple name (e.g. `student101`)
+
+3. Clone the repository to your local IDE, and add your assignment(s).
+
+4. Create the course (if not already set up).
+
+5. Create the gradeable, selecting the proper gradeable type, in the required field, 
+type the SSH clone link, but replace your user id with `{$user_id}`.
+E.g.,  `git@github.com:{$user_id}/student101.git`
+
+6. Give your students the URL to the repository, and instruct them to _fork_ it.
+
+__NOTE: Students user ids in Submitty need to be the same as your VCS system.__
 
 
 ### Uploading Instructor Provided Code to GIT
