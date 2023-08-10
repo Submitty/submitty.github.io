@@ -52,17 +52,13 @@ redirect_from:
 _TODO:_
 
 
-### Private, Instructor-Created Repositories (e.g., Github Classroom)
-
-_TODO:_
-
 
 ### Private, Student-Created Repositories (e.g., Github)
 
 _TODO:_
 
 
-### External, Instructor-Created, Student Forked Repositories (e.g Gitlab)
+### External, Private, Instructor-Created Repositories (e.g., Gitlab or Github Classroom)
 
 __These instructions will help you fork and access the repository created by your instructor. Before you follow these instructions, if you are using private repositories, you will need to add a SSH key to your git system if your instructor has not already.__
 
