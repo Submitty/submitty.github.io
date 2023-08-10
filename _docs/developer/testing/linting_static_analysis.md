@@ -64,7 +64,12 @@ See also: [PHP Style Guide](/developer/coding_style_guide/php)
 ## PHP Static Analysis
 
 The PHP code of Submitty is statically analyzed by [phpstan](https://phpstan.org/user-guide/getting-started).
-To run it locally (from your host operating system), you can do the following:
+We recommend running it inside the VM as it is already installed on it. Simply ``vagrant ssh`` inside your Submitty
+folder and navigate to
+```
+/usr/local/submitty/GIT_CHECKOUT/Submitty/#
+```
+Then run:
 
 ```bash
 # from root level of Submitty repository
