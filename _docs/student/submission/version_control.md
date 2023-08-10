@@ -52,36 +52,52 @@ redirect_from:
 _TODO:_
 
 
-### Private, Instructor-Created Repositories (e.g., Github Classroom)
-
-_TODO:_
-
 
 ### Private, Student-Created Repositories (e.g., Github)
 
 _TODO:_
 
 
-### External, Instructor-Created, Student Forked Repositories (e.g Gitlab)
+### External, Private, Instructor-Created Repositories (e.g., Gitlab or Github Classroom)
 
-__These instructions will help you fork and access the repository created by your instructor. Before you follow these instructions, if you are using private repositories, you will need to add a SSH key to your git system if your instructor has not already.__
+__NOTE: These instructions will help you fork and access the repository
+created by your instructor. Before you follow these instructions, if
+you are using private repositories, you will need to add a SSH key to
+your git system if your instructor has not already.__
 
-1. Navigate to the course repository specified by your instructor. Duplicate this window, and leave one copy open, as you will come back to it in step 4. 
+1. Navigate to the course repository specified by your
+   instructor. Duplicate this window, and leave one copy open, as you
+   will come back to it in step 4.
 
 2. Fork the repository, under your namespace.
 
-3. Clone the repository to your IDE using the 'Clone with SSH' option. Using Github, `git clone git@github.com:myusername/student101.git`.
+3. Clone the repository to your IDE using the 'Clone with SSH'
+   option. Using Github:
 
-4. Set the upstream repository using `git remote add upstream SSH_URL`. Replace `SSH_URL` with the 'Clone with SSH' URL from the course repository window from step 1.
+   ```
+   git clone git@github.com:myusername/student101.git
+   ```
+
+4. Set the upstream repository using:
+
+   ```
+   git remote add upstream SSH_URL
+   ```
+
+   Replace `SSH_URL` with the 'Clone with SSH' URL from the
+   course repository window from step 1.
 
 5. To pull changes from the upstream repository, use the commands:
- ```
- git pull
- git fetch upstream
- git checkout main
- git merge upstream/main
- ``` 
-   Replace 'main' with your modified branch if the name is different. Use the instructions listed below to push your changes. 
+
+   ```
+   git pull git fetch upstream git checkout main git merge upstream/main
+   ```
+
+   Replace `main` with your modified branch if the name is
+   different. Use the instructions listed below to push your changes.
+
+
+
 
 
 ### Committing Your Work
