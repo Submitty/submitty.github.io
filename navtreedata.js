@@ -200,6 +200,7 @@ var NAVTREE =
                 [ "Overview", "/developer/development_instructions/index", null ],
                 [ "Migrations", "/developer/development_instructions/migrations", null ],
                 [ "Resolving Merge Conflicts", "/developer/development_instructions/merge_conflicts", null ],
+                [ "Localization / Language Support", "/developer/development_instructions/localization", null ],
                 [ "Continuous Integration Testing", "/developer/testing/index", [
                     [ "Overview", "/developer/testing/index", null ],
                     [ "Installing PHP", "/developer/testing/install_php", null ],
