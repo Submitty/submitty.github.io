@@ -28,7 +28,7 @@ have the ability to turn off this blindness and see who they're grading, but som
 see who you are grading is appropiate for the current gradeable. 
 
 A bugfix I worked on was the blindness setting for limited access graders (i.e. undergraduate mentors) was accidentally
-hiding student information for full-access graders (i.e. instrucotrs and TAs). Worse, the limited access setting wasn't
+hiding student information for full-access graders (i.e. instructors and TAs). Worse, the limited access setting wasn't
 hiding student information from the mentors themselves for team assignments! There were some small logic changes
 necessary to get this setting working again.
 
@@ -41,6 +41,6 @@ Unfortunately, this refactor was my main failure of the summer. I overestimate t
 is not set up for client-side rendering. Still, I got the grounds going for a refactor, and if I continue working on Submitty
 in the future, I am confident I could continue this refactoring effort into a much faster user experience!
 
-### Side-wide Refactor
+### Side-wide Refactors
 
 The Submitty codebase has some outdated terminology. Grade Inquiries used to be called Regrade Requests, so that's what they were referred as in the code. We also used a mix of the word "semester" and the word "term" throughout when our goal is to switch to entirely the word "term" to be less confusing to schools without a semester system. These refactors were great for familiarizing myself with the codebase as I was a new Submitty developer this summer. The "semester" to "term" refactor isn't quite done, but it's getting there!
