@@ -124,9 +124,7 @@ be able to reload the website and see the update.
   See also: [PhpStorm configuration instructions](/developer/getting_started/phpstorm)
 
 
----
-
-## Clearing Your Browser Cache
+### Clearing Your Browser Cache
 
 
 * If the JavaScript files have changed and there are errors or you do not see the
@@ -193,9 +191,8 @@ of the Submitty source code.
 Note: The above commands will also apply any necessary system and
 database [Migrations](/developer/development_instructions/migrations).
 
----
 
-## Autograding Development
+### Autograding Development
 
 In addition to the `submitty_install` command above, if you modify an
 autograding configuration, you'll probably need to:
@@ -203,24 +200,6 @@ autograding configuration, you'll probably need to:
 * [Rebuild Gradeables](/instructor/assignment_preparation/index#builddebug-all-grading-configurations) using those configurations, and also
 
 * [Batch Regrade Homeworks](/instructor/batch_regrade_submissions) already submitted to those gradeables.
-
----
-
-## Virtual Machine Recovery using Snapshots
-
-In the event of a non-recoverable error while working on Submitty the last resort is to, perform a fresh `vagrant up`. However, this process can be time-consuming. To avoid such situations and save time, it is highly recommended to take a snapshot when you first set up your Vagrant environment by following the tutorial links provided below:
-
-* [Virtual Box](https://www.youtube.com/watch?v=Kl-Qc6N9znw)
-
-* [VMWare](https://www.youtube.com/watch?v=DQutP_-2j3g)
-
-* [Vagrant](https://developer.hashicorp.com/vagrant/docs/cli/snapshot)
-
-By taking a snapshot at this initial stage, you can later revert to this saved state if needed, ensuring a quick recovery. Once you have restored the snapshot, you can then proceed with the following steps:
-
-1. Launch the virtual machine using `vagrant up`.
-2. Access the virtual machine with `vagrant ssh`.
-3. Run `submitty_install` command to conduct a more complete update and reset of all of the Submitty source code.
 
 ---
 
@@ -349,4 +328,22 @@ these changes.
   the shared directory of the Submitty working repository.  It will
   also destroy the databases, and any grading configuration or grading
   work that has been done._
+
+---
+
+## Virtual Machine Recovery using Snapshots
+
+In the event of a non-recoverable error while working on Submitty the last resort is to, perform a fresh `vagrant up`. However, this process can be time-consuming. To avoid such situations and save time, it is highly recommended to take a snapshot when you first set up your Vagrant environment by following the tutorial links provided below:
+
+* [Virtual Box](https://www.youtube.com/watch?v=Kl-Qc6N9znw)
+
+* [VMWare](https://www.youtube.com/watch?v=DQutP_-2j3g)
+
+* [Vagrant](https://developer.hashicorp.com/vagrant/docs/cli/snapshot)
+
+By taking a snapshot at this initial stage, you can later revert to this saved state if needed, ensuring a quick recovery. Once you have restored the snapshot, you can then proceed with the following steps:
+
+1. Launch the virtual machine using `vagrant up`.
+2. Access the virtual machine with `vagrant ssh`.
+3. Run `submitty_install` command to conduct a more complete update and reset of all of the Submitty source code.
 
