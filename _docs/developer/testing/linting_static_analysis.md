@@ -37,34 +37,32 @@ See also: [Python Style Guide](/developer/coding_style_guide/python)
 
 ## PHP Linting
 
-*You will need PHP installed on your host system first, see [Installing PHP](/developer/testing/install_php)*
-
 The PHP code of Submitty is linted using [phpcs](https://github.com/squizlabs/PHP_CodeSniffer).
+The following instructions were tested for Windows:
 
-You can run the PHP Linter locally (from your host operating system):
-If you are running on WSL and are seeing errors, remove "`php`" from the following commands.
+1. First, you will need PHP installed on your host system first. See [Installing PHP](/developer/testing/install_php)*
 
-```bash
-# from root level of Submitty repository
-php site/vendor/bin/phpcs
+2. Next, you will need [Composer](https://getcomposer.org/doc/00-intro.md) installed on your host system as well.
+	During this install, you will need to change settings in a php.ini file. Change the settings the prompt recommends.
 
-# or if in the site/ directory of the Submitty
-php vendor/bin/phpcs
-```
+3. Run ``composer global require slevomat/coding-standard`` and ``composer global require "squizlabs/php_codesniffer=*"`` inside your terminal.
 
-Similarly, you can pass a specific file or directory to `phpcs`, e.g:
+4. ``cd`` to your ``site`` directory in your Submitty repository and run ``composer update``.
 
-```bash
-# from root level of Submitty repository...  run phpcs against all files in this subdirectory
-php site/vendor/bin/phpcs site/app/controllers/student/
-```
+5. Now run ``php vendor/bin/phpcs --extensions=php ./app`` inside your ``site`` directory. You can change ``./app``
+if you want to lint only a specific file.
 
 See also: [PHP Style Guide](/developer/coding_style_guide/php)
 
 ## PHP Static Analysis
 
 The PHP code of Submitty is statically analyzed by [phpstan](https://phpstan.org/user-guide/getting-started).
-To run it locally (from your host operating system), you can do the following:
+We recommend running it inside the VM as it is already installed on it. Simply ``vagrant ssh`` inside your Submitty
+folder and navigate to
+```
+/usr/local/submitty/GIT_CHECKOUT/Submitty/site/
+```
+Then run:
 
 ```bash
 # from root level of Submitty repository
