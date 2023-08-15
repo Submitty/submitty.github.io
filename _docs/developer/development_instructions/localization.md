@@ -24,7 +24,7 @@ To:
 <p> { { localize("Page_Description.Text_To_Translate", "Text in the page I will translate") } } </p>
 ```
 The localize function requires two arguments:
-The first argument, composed of two parts separated by a dot, should be consistent across the entire twig file. The first part represents the role or purpose of the page, while the second part describes the text you're translating. Use underscores to replace spaces in this part.
+The first argument is composed of two parts separated by a dot. The first part of the first argument should stay the same across the entire twig file. The first part represents the role or purpose of the page, while the second part describes the text you're translating. Use underscores to replace spaces in this part.
 The second argument is the original text that will be displayed on the website.
 
 * **Pull Request Review and Merge**
