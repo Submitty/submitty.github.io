@@ -29,7 +29,7 @@ Set the following parameters under the `Connection` tab:
   - `Port`: `2222`
   - `User Name`: `root`
   - `Authentication Type`: `Key pair (OpenSSH or PuTTY)`
-  - `Private Key File`: `<submitty repository root>/.vagrant/machines/ubuntu-20.04/virtualbox/private_key`
+  - `Private Key File`: `<submitty repository root>/.vagrant/machines/ubuntu-22.04/virtualbox/private_key`
   - `Key Passphrase`: leave empty
 - `Root Path`: `/usr/local/submitty`
 - `Web server URL`: `http://localhost:1511/`

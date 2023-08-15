@@ -12,8 +12,9 @@ the following platforms:
 
 | Distro | Version | Supported            | Release Page |
 |--------|---------|----------------------|--------------|
-| Ubuntu | 20.04   | Yes                  | [Release Page](http://releases.ubuntu.com/focal/)
-| Ubuntu | 18.04   | Yes                  | [Release Page](http://releases.ubuntu.com/bionic/)
+| Ubuntu | 22.04   | Yes                  | [Release Page](http://releases.ubuntu.com/jammy/)
+| Ubuntu | 20.04   | No  (Since 07/2023)  | [Release Page](http://releases.ubuntu.com/focal/)
+| Ubuntu | 18.04   | No                   | [Release Page](http://releases.ubuntu.com/bionic/)
 | Ubuntu | 16.04   | No  (Since 05/2019)  | [Release Page](http://releases.ubuntu.com/xenial/)
 | Debian | 8       | No  (Since 05/2019)  | [Release Page](https://www.debian.org/releases/jessie/)
 
