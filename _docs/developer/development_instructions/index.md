@@ -55,8 +55,9 @@ Please also see [Installation Version Notes](/sysadmin/installation/version_note
 ## Website and Bin Script Changes
 
 * If you have only made minor or modest visual changes to website
-  (e.g., the html, css, twig, or php files), or other files in the
-  `site` folder, you can apply those changes by running this shortcut:
+  (e.g., the html, css, twig, or php files), other files in the `site`
+  folder, or translation files in the Localization repository, you can
+  apply those changes by running this shortcut:
 
   ```
   submitty_install_site

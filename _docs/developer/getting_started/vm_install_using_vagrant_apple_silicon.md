@@ -82,7 +82,7 @@ the installation process.
    are looking to contribute.
    
    _OPTIONAL: If you will be developing code in one of the companion
-   Submitty repositories (e.g., AnalysisTools, Lichen, RainbowGrades, Tutorial), also
+   Submitty repositories (e.g., AnalysisTools, Lichen, Localization, RainbowGrades, Tutorial), also
    clone those repositories to the same directory.  For example:_
 
    ```
@@ -92,6 +92,7 @@ the installation process.
            └── GIT_CHECKOUT
                ├── AnalysisTools  (optional)
                ├── Lichen         (optional)
+               ├── Localization   (optional)
                ├── RainbowGrades  (optional)
                ├── Submitty
                └── Tutorial       (optional)
