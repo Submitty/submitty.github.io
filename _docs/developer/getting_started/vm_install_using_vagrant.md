@@ -325,6 +325,7 @@ Below are quick steps to get everything installed and running.
 
     | user | password | role |
     |------|----------|-------|
+    | superuser | superuser | Superuser |
     | vagrant | vagrant | OS user |
     | root | vagrant | OS user |
     | submitty_cgi | submitty_cgi | Submitty process |
