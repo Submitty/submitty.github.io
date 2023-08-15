@@ -5,14 +5,13 @@ redirect_from:
   - /instructor/create_edit_gradeable
 ---
 
-![](/images/new_gradeable_form.png)
+![](/images/instructor/assignment_preparation/new_gradeable.png)
 
 ### Create a New Gradeable
 
-To create a new gradeable, instructor users should click the "New
-Gradeable" button in the top right corner, under the Submitty logo.
-Fill out this form (details in the following sections) and press "Add
-Gradeable".
+To create a new gradeable, instructor users should click "New
+Gradeable" in the sidebar on the left of the screen. 
+Fill out this form (details in the following sections) and press "Create New Gradeable".
 
 Most of the fields on the Create/Edit Gradeable form can be changed
 later.  You can return to this form from the main page by pressing the
@@ -31,19 +30,18 @@ TAs have started grading!_
 
 
 
-
 ### Types of Gradeables
 
 A "Gradeable" is any single item that will be graded automatically
-and/or manually by the instructor/TAs.  We offer 3 basic types of
-gradeables: electronic submission, numeric, or checkboxes.
+and/or manually by the instructor/TAs.
 
-
-   **_Electronic Submission_** should be used for
-   homework/project/exercise file uploads by students (e.g., code,
-   .pdfs, images, etc.) or submitted via VCS.  Electronic Submission 
-   can be automatically graded, fully manually graded, or a combination
-   of both.
+   **_Checkpoints_** should be used for manually graded items with one
+   or more parts that are marked as full, half, or no credit.  This is
+   commonly used for in class exercises (e.g., lab or recitation)
+   where the TAs verify the students have completed the exercise and
+   demonstrated sufficient competency with the material.  Similar to
+   numeric gradeables, we provide a spreadsheet-like interface for
+   manual data entry.
 
    **_Numeric_** is used for data entry of quizzes or exams where the
    scores for each student are a simple array of one or more numbers
@@ -54,15 +52,13 @@ gradeables: electronic submission, numeric, or checkboxes.
    if your numeric scores for this gradeable are already in an
    electronic format.
 
-   **_Checkpoints_** should be used for manually graded items with one
-   or more parts that are marked as full, half, or no credit.  This is
-   commonly used for in class exercises (e.g., lab or recitation)
-   where the TAs verify the students have completed the exercise and
-   demonstrated sufficient competency with the material.  Similar to
-   numeric gradeables, we provide a spreadsheet-like interface for
-   manual data entry.
+   **_Student File Submission_** There are two types of gradeables where students can submit their files
+   to Submitty: directly uploading to the website, or submitting the files using a version control system (VCS). 
+   These should be used for homework/project/exercise where students will directly upload files (e.g., code,
+   pdfs, images, etc.) to Submitty for grading. (For help with VCS gradeables, view [Submission via Version Control](/instructor/assignment_preparation/submission_version_control) ).
 
-
+  **_TA/Instructor Upload_** should be used when a TA or instructor will (bulk) upload assignments to
+  Submitty for grading. 
 
 
 ### Autograding Configuration Path
@@ -98,7 +94,7 @@ From the create/edit a gradeable page you can specify (or change):
   students.
   
 * the date/time the student can start making grade inquiries, if grade inquiry is enabled for the gradeable.
-   
+
 
 
 ### Grading User Groups
@@ -216,7 +212,7 @@ you must re-run the BUILD_XXXX.sh script.
    directory:
 
    ```
-   /var/local/submitty/courses/s17/course_01/submissions/ASSIGNMENT_ID/USER_ID/VERSION
+   /var/local/submitty/courses/SEMESTER/COURSE/submissions/ASSIGNMENT_ID/USER_ID/VERSION
    ``` 
 
    For direct file upload submissions (single file or .zip) this
@@ -226,17 +222,17 @@ you must re-run the BUILD_XXXX.sh script.
    `.submit.timestamp` file.  This is the time of submission, not
    the time that automated grading started/finished.
 
-   For submission via SVN, this directory will only contain the
+   For submission via VCS, this directory will only contain the
    `.submit.timestamp` file.  This timestamp will be used to retrieve
    the state of the repo at the time of submission.
 
 
-4. For SVN submissions, you may also inspect an archive of the
-   files/directory structure SVN repo at submission time in this
+4. For VCS submissions, you may also inspect an archive of the
+   files/directory structure VCS repo at submission time in this
    directory:
 
    ```
-   /var/local/submitty/courses/s17/course_01/checkout/ASSIGNMENT_ID/USER_ID/VERSION
+   /var/local/submitty/courses/SEMESTER/COURSE/checkout/ASSIGNMENT_ID/USER_ID/VERSION
    ```    
 
 
@@ -245,7 +241,7 @@ you must re-run the BUILD_XXXX.sh script.
    in this directory:
 
    ```
-   /var/local/submitty/courses/s17/course_01/results/ASSIGNMENT_ID/USER_ID/VERSION
+   /var/local/submitty/courses/SEMESTER/COURSE/results/ASSIGNMENT_ID/USER_ID/VERSION
    ```
 
    In this directory you will find the `results_grade.txt` summary of
@@ -253,32 +249,3 @@ you must re-run the BUILD_XXXX.sh script.
    logfiles for each test case.  You will also find log files for the
    compilation, runner, and validation components of automated grading
    that are helpful in debugging assignment configurations.
-
-### Using Git
-
-Submitty supports utilizing Git for handling submissions by students.
-When a student hits "submit", Submitty performs a clone of their
-repository. Submitty then does a checkout of the last revision made before
-the timestamp of when they hit the submit button.
-
-To configure Git for an assignment, you will want to select type 
-"Electronic File" and then "Version Control System (VCS) Repository".
-You will then be presented with a textbox to type in the repo url to
-use. If the string does not start with a / nor has a "://" in it, it
-will combine the contents of the textbox with the base url. You will
-see the URL/path that will be shown to the users underneath the text
-box.
-
-![](/images/create_gradeable_git.png)
-
-Additionally, the text field supports the following list of "variables"
-which get replaced during execution of Submitty:
-* {$vcs_type} - VCS type being used (currently always git)
-* {$gradeable_id} - ID of gradeable being submitted
-* {$user_id} - ID of user who is submitting 
-* {$team_id} - ID of team who is submitting
-
-Submitty comes with a setup for an internal Git server out of the box,
-but if you wish to use an external source, such as Github, you may need
-to configure Submitty to be able to access those repos via SSH. See 
-[System Administrator/Setting Up Git](/sysadmin/git) for more details.
