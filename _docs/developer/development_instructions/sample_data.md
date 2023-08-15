@@ -22,38 +22,6 @@ As a developer, there are 5 sample courses:
 
 ---
 
-## Re-Creating All Sample Course Data
-
-* If you've changed the script to create a new course
-  (`create_course.sh`), or the schema for the master database
-  (`submitty_db.sql`), or the schema for the course databases
-  (`course_tables.sql`), or you changed student/gradeable data
-  we need to delete all courses and recreate
-  the course databases, users, and sample submission uploads.
-
-  _NOTE: Make sure you are not be connected to any DBs (e.g., through
-  pgAdmin) or else running the below scripts could put things into a
-  broken state._
-
-  Run this command:
-
-  ```
-  sudo bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/bin/recreate_sample_courses.sh
-  ```
-  
-  You can append the `--no_submissions` flag to the above command to
-  skip creation of any sample submission data in the sample courses.
-  This will accelerate the completion of this command, but you will be
-  missing the hundreds of sample student submissions present in the
-  full installation.
-
-
-  This command will also have to be run twice a year on July 1st and January 1st when the test semester will change from fall to spring or vice versa.
-
-  See also: [Database Migrations](/developer/development_instructions/migrations)
-
----
-
 ## Predefined Data
 
 Predefined data is set using files in `/.setup/data/` and the script `/.setup/bin/setup_sample_courses.py`.
@@ -101,3 +69,8 @@ the random's seed staying the same). If you make any changes that affects the co
 set these files will be outdated and result in failure of recreate_sample_courses.
 
 You may also need to edit test cases in Cypress, Selenium, etc. 
+
+---
+
+See also: [Re-Creating All Sample Course Data](/developer/development_instructions/index#re-creating-all-sample-course-data)
+
