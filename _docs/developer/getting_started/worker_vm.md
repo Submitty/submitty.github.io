@@ -1,5 +1,5 @@
 ---
-title: Virtual Box Worker Installation
+title: Worker VM Setup
 category: Developer > Getting Started > Advanced Setup
 redirect_from:
   - /developer/worker_vm
@@ -9,42 +9,61 @@ If you are are developing or testing the distributed system for
 automated grading, you may want to set up one or more *worker
 machines* in addition to your primary vagrant virtual machine.
 
-## Automated Virtualbox Worker Installation
+## Automated Worker Installation
 
 These steps will create a worker machine alongside the normal Submitty machine.
-1. Destroy `ubuntu-22.04` and `submitty-worker` vagrant machines (if they exist) with 
+1. Make sure to destroy any existing vagrant machines with 
 ```
 vagrant destroy
 ```
 
-2. Create the Submitty VM and the worker VM with 
+2. Ensure you have [Python 3](https://www.python.org/downloads/) installed on your machine
+
+3. Generate configuration for the desired number of worker machines
    ```
-   WORKER_PAIR=1 vagrant up
+   python3 generate_workers.py [-n NUM] [--ip-range IP_RANGE] [--base-port PORT]
    ```
-   On Windows you will have to first set the environment variable to 1 which lasts for the session of that console, then call vagrant up.
+   This will create or update a configuration file stored at `.vagrant/workers.json`.
+   Now you can create the virtual machines with:
    ```
-   SET WORKER_PAIR=1
    vagrant up
    ```
-   If you want to unset the variable, you can do
-   ```
-   SET WORKER_PAIR=
-   ```
 
-   **NOTE**
-   If you encounter error messages relating to IP addresses, you may need to change the IP for the `submitty-worker` machine in the `Vagrantfile` to avoid collisions.
+   If you happen to encounter error messages regarding IP addresses or port conflicts, you can manually edit the `workers.json` file as needed.
 
-   When not using the Worker VM, it is recommended to set `enabled: false` under the `submitty-worker` machine in `/usr/local/submitty/config/autograding_workers.json` to avoid prolonged wait times when running `INSTALL_SUBMITTY.sh`.
+   __NOTE__: Do not edit the `workers.json` configuration file or run the aforementioned python script if there are any existing vagrant machines in your project. This can result in the existing VMs continuing to run in the background or storing their data with no clean way to remove them.
 
-3. To boot up both VMs after they have been halted, simply run 
+4. To delete the worker machines and revert to a normal development setup, you can first run
    ```
-   WORKER_PAIR=1 vagrant up
+   vagrant destroy
    ```
-   using the same method as in step 2.
+   And confirm to delete all the existing virtual machines.
+
+   Next, you can delete the `workers.json` file, which will remove the worker configuration from your project.
+   The next `vagrant up` should only create the primary development virtual machine without any workers.
 
 ---
 
-## Manual Virtualbox Worker Installation
+## Connecting to the Worker Machine
+
+If you would like to ensure the worker is functioning properly, or enter the worker machine for managing it directly, you can follow these steps.
+
+To connect to a worker machine through SSH, run:
+```
+vagrant ssh <worker-name>
+```
+
+If you want to test the connection between the primary VM and a worker, you can first `vagrant ssh` into the primary machine and then run this command to SSH into the worker from there:
+```
+su submitty_daemon -c ssh submitty@<ip-address>
+```
+The IP address of the worker machine will be indicated in the `.vagrant/workers.json` file.
+
+__NOTE__: Depending on the performance of your computer and the size of the autograding queue passed to the worker, the SSH command may hang for some time.
+
+---
+
+## Manual Worker Installation (VirtualBox)
 
 1. Open the Virtual Box application.
 
