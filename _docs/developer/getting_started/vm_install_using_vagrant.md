@@ -159,7 +159,7 @@ Below are quick steps to get everything installed and running.
    the repo and use the git url from your fork instead, especially if you are looking to contribute.
 
    _OPTIONAL: If you will be developing code in one of the companion
-   Submitty repositories (e.g., AnalysisTools, Lichen, RainbowGrades, Tutorial), also
+   Submitty repositories (e.g., AnalysisTools, Lichen, Localization, RainbowGrades, Tutorial), also
    clone those repositories to the same directory.  For example:_
 
      ```
@@ -169,6 +169,7 @@ Below are quick steps to get everything installed and running.
              └── GIT_CHECKOUT
                  ├── AnalysisTools  (optional)
                  ├── Lichen         (optional)
+                 ├── Localization   (optional)
                  ├── RainbowGrades  (optional)
                  ├── Submitty
                  └── Tutorial       (optional)
@@ -325,6 +326,7 @@ Below are quick steps to get everything installed and running.
 
     | user | password | role |
     |------|----------|-------|
+    | superuser | superuser | Superuser |
     | vagrant | vagrant | OS user |
     | root | vagrant | OS user |
     | submitty_cgi | submitty_cgi | Submitty process |
@@ -404,6 +406,12 @@ Below are quick steps to get everything installed and running.
 ---
 
 ## Installation Troubleshooting
+
+* If your install becomes stuck on ``SSH auth method: private key`` for more than three minutes,
+   then what you can do is open Virtual Box, navigate to your VM, and click the green "Show" button.
+   Having the VM's terminal GUI open can seem to keep it awake for communication. While developing on Submitty,
+   this "Show" terminal option can sometimes lead to the VM being faster with loads, so it may be worth having the GUI
+   open even after your vagrant up.
 
 * If your install seems to randomly freeze during `vagrant up` 
 with no explanation, then there are a couple of things that may be going wrong:
