@@ -52,14 +52,52 @@ redirect_from:
 _TODO:_
 
 
-### Private, Instructor-Created Repositories (e.g., Github Classroom)
-
-_TODO:_
-
 
 ### Private, Student-Created Repositories (e.g., Github)
 
 _TODO:_
+
+
+### External, Private, Instructor-Created Repositories (e.g., Gitlab or Github Classroom)
+
+__NOTE: These instructions will help you fork and access the repository
+created by your instructor. Before you follow these instructions, if
+you are using private repositories, you will need to add a SSH key to
+your git system if your instructor has not already.__
+
+1. Navigate to the course repository specified by your
+   instructor. Duplicate this window, and leave one copy open, as you
+   will come back to it in step 4.
+
+2. Fork the repository, under your namespace.
+
+3. Clone the repository to your IDE using the 'Clone with SSH'
+   option. Using Github:
+
+   ```
+   git clone git@github.com:myusername/student101.git
+   ```
+
+4. Set the upstream repository using:
+
+   ```
+   git remote add upstream SSH_URL
+   ```
+
+   Replace `SSH_URL` with the 'Clone with SSH' URL from the
+   course repository window from step 1.
+
+5. To pull changes from the upstream repository, use the commands:
+
+   ```
+   git pull git fetch upstream git checkout main git merge upstream/main
+   ```
+
+   Replace `main` with your modified branch if the name is
+   different. Use the instructions listed below to push your changes.
+
+
+
 
 
 ### Committing Your Work
@@ -140,7 +178,7 @@ Currently your work is only on your local machine.
 
 3. If you would like to submit this version of your work (for
    automatic and/or manual grading), go to the Submitty website for
-   this assignment and press the blue "Grade My Repository" button.
+   this assignment and press the green "Grade My Repository" button.
 
    Submitty will checkout the latest version of your code committed
    and pushed to the server, and will run any automated tests and
@@ -149,7 +187,7 @@ Currently your work is only on your local machine.
 
    If you notice any problems with your work, you can modify the code
    on your local machine, commit those changes, push the commit to the
-   server, and then press the blue "Grade My Repository" button again.
+   server, and then press the green "Grade My Repository" button again.
 
 
 4. _TODO: We eventually plan to add a 'hook' to trigger repository
