@@ -159,7 +159,7 @@ Below are quick steps to get everything installed and running.
    the repo and use the git url from your fork instead, especially if you are looking to contribute.
 
    _OPTIONAL: If you will be developing code in one of the companion
-   Submitty repositories (e.g., AnalysisTools, Lichen, RainbowGrades, Tutorial), also
+   Submitty repositories (e.g., AnalysisTools, Lichen, Localization, RainbowGrades, Tutorial), also
    clone those repositories to the same directory.  For example:_
 
      ```
@@ -169,6 +169,7 @@ Below are quick steps to get everything installed and running.
              └── GIT_CHECKOUT
                  ├── AnalysisTools  (optional)
                  ├── Lichen         (optional)
+                 ├── Localization   (optional)
                  ├── RainbowGrades  (optional)
                  ├── Submitty
                  └── Tutorial       (optional)
