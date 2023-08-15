@@ -5,14 +5,19 @@ redirect_from:
   - /developer/migrations
 ---
 
+<<<<<<< HEAD
 The goals of localization or internationalization include the
 translation of the website into multiple languages, to increase the
 accessibility of Submitty to users in all locales or regions.
+=======
+To contribute to the localization effort for Submitty, follow these steps to update Twig templated files and provide translations for various text elements on the website. By following these steps, you'll be ensuring that the platform is accessible to users in various languages and regions.
+>>>>>>> a4754a87c60b5032a4637c76dcc91171ff09ec2f
 
 To contribute to Submitty's localization and translation efforts,
 follow these steps to update twig templated files and provide
 translations for various text elements on the website.
 
+<<<<<<< HEAD
 ---
 
 ## Server Language Specification
@@ -69,9 +74,29 @@ And replace that text string with the following syntax:
 ```
 <p> { { localize("Page_Description.Text_To_Translate", "Text in the page I will translate") } } </p>
 ```
+=======
+    Begin by making a pull request in the Submitty repository. The purpose of this pull request is to update the twig template files.
+
+    Locate the specific twig template file responsible for rendering the page you wish to translate.
+
+    In the identified template file, replace plain text content with the following format:
+
+    From:
+    ```
+    <p>Text in the page I will translate</p>
+    ```
+    To:
+    ```
+    <p> { { localize("Page_Description.Text_To_Translate", "Text in the page I will translate") } } </p>
+    ```
+    The localize function requires two arguments:
+    The first argument is composed of two parts separated by a dot. The first part of the first argument should stay the same across the entire twig file. The first part represents the role or purpose of the page, while the second part describes the text you're translating. Use underscores to replace spaces in this part.
+    The second argument is the original text that will be displayed on the website.
+>>>>>>> a4754a87c60b5032a4637c76dcc91171ff09ec2f
 
 The `localize` function requires two arguments:
 
+<<<<<<< HEAD
 * The first argument is the hierarchical tag or label, separated by
   one or more dots.  The hierarchy should begin with the name of the
   page, and intuitively name and organize/group all phrases that
@@ -80,6 +105,9 @@ The `localize` function requires two arguments:
   you're translating. Use underscores to replace spaces in this part.
   Avoid using apostrophes, quotes, accents, and other special
   characters.
+=======
+    After creating the pull request with the twig template updates, the Submitty developer team will review and merge the changes into the repository.
+>>>>>>> a4754a87c60b5032a4637c76dcc91171ff09ec2f
 
 * The second argument is the original English text that will be
   displayed on the website if a translation in the user's language is
@@ -122,6 +150,7 @@ Edit the JSON file by translating the "Text in the page I will
 translate" text within the "Page_Description" section.  The JSON file
 format should resemble the following:
 
+<<<<<<< HEAD
 ```
   {
     "Page_Description": {
@@ -129,6 +158,22 @@ format should resemble the following:
     }
   }
 ```
+=======
+    Once the pull request is merged and a new version of Submitty is released, navigate to the Localization Repository and go to the Localization/lang directory.
+    If a JSON file for the language you're translating to isn't available, create one. The file name format is as follows: ```<language_code>_<country_code>.json```.
+    Copy the content of the en_US.json file and paste it into the newly created or existing JSON file.
+    Edit the JSON file by translating the "Text in the page I will translate" text within the "Page_Description" section.
+    The JSON file format should resemble the following:
+    ```
+      {
+        "Page_Description": {
+          "Text_To_Translate": "Translated text for the page"
+        }
+      }
+    ```
+    Submit a pull request with your translation changes in the JSON file.
+    Await the review and merge of the pull request. Once merged, the translation will become available.
+>>>>>>> a4754a87c60b5032a4637c76dcc91171ff09ec2f
 
 You should test your translation by following the
 [Development Instructions](/developer/development_instructions/index#incremental-development-updates).
@@ -136,3 +181,7 @@ You should test your translation by following the
 When you are finished, submit a pull request to the Localization
 repository with your new and/or modified JSON files. 
 
+<<<<<<< HEAD
+=======
+    To view the newly translated content on the website, you will need to Navigate to "My Profile" and choose the desired language and region settings.
+>>>>>>> a4754a87c60b5032a4637c76dcc91171ff09ec2f
