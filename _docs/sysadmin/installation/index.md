@@ -75,7 +75,7 @@ _Note: These instructions should be run under root/sudo._
    disabled functions contains:
 
    ```
-   popen,pclose,proc_open,chmod,php_real_logo_guid,php_egg_logo_guid,php_ini_scanned_files,php_ini_loaded_file,readlink,symlink,link,set_file_buffer,proc_close,proc_terminate,proc_get_status,proc_nice,getmyuid,getmygid,getmyinode,putenv,get_current_user,magic_quotes_runtime,set_magic_quotes_runtime,import_request_variables,ini_alter,stream_socket_server,stream_socket_accept,stream_socket_pair,stream_get_transports,stream_wrapper_restore,mb_send_mail,openlog,syslog,closelog,pfsockopen,posix_kill,apache_child_terminate,apache_get_modules,apache_get_version,apache_lookup_uri,apache_reset_timeout,apache_response_headers,virtual,system,phpinfo,exec,shell_exec,passthru,
+   popen,pclose,proc_open,php_real_logo_guid,php_egg_logo_guid,php_ini_scanned_files,php_ini_loaded_file,readlink,symlink,link,set_file_buffer,proc_close,proc_terminate,proc_get_status,proc_nice,getmyuid,getmygid,getmyinode,putenv,get_current_user,magic_quotes_runtime,set_magic_quotes_runtime,import_request_variables,ini_alter,stream_socket_server,stream_socket_accept,stream_socket_pair,stream_get_transports,stream_wrapper_restore,mb_send_mail,openlog,syslog,closelog,pfsockopen,posix_kill,apache_child_terminate,apache_get_modules,apache_get_version,apache_lookup_uri,apache_reset_timeout,apache_response_headers,virtual,system,phpinfo,exec,shell_exec,passthru,
    ```
 
    _Note: Depending on your version of Ubuntu, your version of php fpm will be different._
@@ -141,7 +141,59 @@ _Note: These instructions should be run under root/sudo._
    At this point, you should be able to access the site by going to `your_domain`
    through a browser.
 
-6. We recommend that you should leave the PostgreSQL setup unless you know what
+6. Configure NGINX
+
+   Submitty uses a NGINX server to proxy the websocket server. By default
+   the websocket server will run without HTTPS. If Apache is configured with
+   HTTPS then websockets must also be configured with HTTPS or they will
+   not connect. To setup HTTPS on NGINX,
+   modify `/etc/nginx/sites-available/submitty.conf` and put the following:
+
+   ```
+   server {
+       # SSL configuration
+       listen 8443 ssl default_server;
+       listen [::]:8443 ssl default_server;
+
+       #dont show OS or version identity
+       server_tokens off; 
+
+       ssl on;
+       ssl_certificate /etc/apache2/ssl/submitty-demo.pem;
+       ssl_certificate_key /etc/apache2/ssl/submitty-demo.key;
+       ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+       ssl_prefer_server_ciphers on;
+       ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-RC4-SHA:ECDHE-RSA-AES128-SHA:AES128-SHA:RC4-SHA;
+       ssl_session_cache shared:SSL:10m;
+
+       server_name _;
+
+       location / {
+           return 404;
+       }
+
+       location /ws {
+           proxy_pass http://unix:/var/local/submitty/run/websocket/server.sock:;
+           proxy_http_version 1.1;
+           proxy_set_header Upgrade $http_upgrade;
+           proxy_set_header Connection "Upgrade";
+           proxy_set_header Host $host;
+       }
+   }
+   ```
+
+   You should modify the values for `ssl_certificate` and `ssl_certificate_key`
+   to point to your SSL certificate and private key.
+
+   To create the `.pem` file required by NGINX, combine the existing
+   `chain.cer` cert chain with the `submitty.cer` file:
+
+   ```
+   cp submitty.cer submitty.pem
+   cat chain.cer >> submitty.pem
+   ```
+
+7. We recommend that you should leave the PostgreSQL setup unless you know what
    you're doing. If you are running PostgreSQL on the same server as Submitty,
    we recommend using the UNIX socket, and to disable TCP if unused. By default,
    the socket is found at `/var/run/postgresql`, and disabling TCP is done through
@@ -158,12 +210,12 @@ _Note: These instructions should be run under root/sudo._
    - If you intend to run the [Student Registration Feed](/sysadmin/configuration/registration_feed), do not
      disable TCP.
 
-7. Test apache config with:  `apache2ctl -t`
+8. Test apache config with:  `apache2ctl -t`
 
    If everything looks ok, restart apache with:  `service apache2 restart'
 
 
-8. We suggest reviewing [Additional System Customizations](/sysadmin/installation/system_customization)
+9. We suggest reviewing [Additional System Customizations](/sysadmin/installation/system_customization)
     that might be appropriate for your installation.
 
 
