@@ -146,7 +146,9 @@ _Note: These instructions should be run under root/sudo._
    Submitty uses a NGINX server to proxy the websocket server. By default
    the websocket server will run without HTTPS. If Apache is configured with
    HTTPS then websockets must also be configured with HTTPS or they will
-   not connect. To setup HTTPS on NGINX, modify `/etc/nginx/sites-available/submitty.conf` and put the following:
+   not connect. To setup HTTPS on NGINX,
+   modify `/etc/nginx/sites-available/submitty.conf` and put the following:
+
    ```
    server {
        # SSL configuration
@@ -180,7 +182,16 @@ _Note: These instructions should be run under root/sudo._
    }
    ```
 
-   You should modify the values for `ssl_certificate` and `ssl_certificate_key` to point to your SSL certificate and private key.
+   You should modify the values for `ssl_certificate` and `ssl_certificate_key`
+   to point to your SSL certificate and private key.
+
+   To create the `.pem` file required by NGINX, combine the existing
+   `chain.cer` cert chain with the `submitty.cer` file:
+
+   ```
+   cp submitty.cer submitty.pem
+   cat chain.cer >> submitty.pem
+   ```
 
 7. We recommend that you should leave the PostgreSQL setup unless you know what
    you're doing. If you are running PostgreSQL on the same server as Submitty,
