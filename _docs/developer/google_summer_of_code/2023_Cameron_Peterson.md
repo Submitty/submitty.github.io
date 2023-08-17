@@ -27,7 +27,7 @@ My first few PR's related to GSOC 2023 were focusing on adding other ways to sub
 * [Fix get_vcs_info Return Value](https://github.com/Submitty/Submitty/pull/9461)
 
 ## Continuous Integration
-After finishing the PR's related to gradeables, I started working on improving the continuous integration (CI) pipeline. The first PR that got merged was an old PR that I took over, adding tests for PHP functions in the plagiarism section of Submitty. I also took over a PR to add Yamllint to the Github Actions pipeline. At this point, Submitty was using Selenium to do some end-to-end (e2e) tests, and they were becoming flaky, and increasingly difficult to test locally. We decided to switch from some Selenium tests, and some Cypress tests to entirely Cypress tests. I re-wrote or helped re-write six of the Selenium tests in Cypress, and helped write one from scratch. After all of the Selenium tests that were running in CI were changed to Cypress, I removed Selenium from the CI, and changed a couple of the tests to pass. At this point, all of the tests passed on a consistant basis, and none of them were flaky. I also did some small changes to increase the reliability of tests.
+After finishing the PR's related to gradeables, I started working on improving the continuous integration (CI) pipeline. The first PR that got merged was an old PR that I took over, adding tests for PHP functions in the plagiarism section of Submitty. I also took over a PR to add Yamllint to the Github Actions pipeline. At this point, Submitty was using Selenium to do some end-to-end (e2e) tests, and they were becoming flaky, and increasingly difficult to test locally. We decided to switch from some Selenium tests, and some Cypress tests to entirely Cypress tests. I re-wrote or helped re-write multiple of the Selenium tests in Cypress, and helped write multiple tess from scratch. After all of the Selenium tests that were running in CI were changed to Cypress, I removed Selenium from the CI, and changed a couple of the tests to pass. At this point, all of the tests passed on a consistant basis, and none of them were flaky. I also did some small changes to increase the reliability of tests.
 
 ### Main PR's for CI tests
 * [Replace Forum tests](https://github.com/Submitty/Submitty/pull/9393)
@@ -58,7 +58,3 @@ After the midterm evaluation, I started working on decreasing the time that the 
 
 ### Cypress Cloud PR
 * [Integrate Cypress Cloud](https://github.com/Submitty/Submitty/pull/9517)
-...
-
-
-
