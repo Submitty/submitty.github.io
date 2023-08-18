@@ -1,15 +1,12 @@
 ---
 title: Cypress Cloud
 ---
-
-# Cypress Cloud
-
 Submitty has an open source Cypress license to record and run tests via Cypress Cloud. Cypress records tests to [Cypress Cloud](https://cloud.cypress.io/projects/es51qa), where you can view a video of the tests running, and if they failed, a screenshot of the website at the point of failure. This also allows Cypress to automatically parallelize the cypress tests into four separate machines. 
 
-### Parallelization
+## Parallelization
 Cypress automatically parallelizes the tests by starting four separate VMs to run the tests. The first machine to finish the 'setup' stage takes the test that Cypress estimates will take the longest (Usually accessibility.spec.js). The second machine to finish takes the second longest test... etc. After each machine finishes its current test, it will take the next longest test, until all tests have finished. 
 
-### Videos/Screenshots
+## Videos/Screenshots
 To view the videos or screenshots of the cypress tests;
 
 1. Navigate to your PR in Github
