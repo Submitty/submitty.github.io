@@ -33,11 +33,11 @@ Using these filters carefully resolves statistical irregularities caused by late
 
 ### Implementing Bugfixes
 
-* I refactored the code responsible for displaying warning messages before late submissions because I discovered some inconsistencies. Previously, incorrect messages or no messages would appear due to the logic used to display the messages or because the code inaccurately assessed the time against the deadline, which potentially misled students. The new code carefully addresses edge cases and eliminates the need to reload the submission portal after the due date has passed. This enables timely display of warning messages directly after the deadline, facilitated by a Javascript timer synchronizing with the server periodically.
+* I refactored the code responsible for displaying warning messages before late submissions because I discovered some inconsistencies. Previously, incorrect messages or no messages would appear due to the logic used to display the messages or the code inaccurately assessing the time against the deadline, which potentially misled students. The new code carefully addresses edge cases and eliminates the need to reload the submission portal after the due date has passed. This enables timely display of warning messages directly after the deadline, facilitated by a Javascript timer synchronizing with the server periodically.
 
 * I identified and resolved an issue with a Submitty page that was causing excessive queries by adding it to the ignore list. Moving forward, the plan is to refactor the queries that are executed iteratively and combine them into a single larger query.
 
-* I located and removed a duplicate and faulty page that was appearing.
+* I located and removed a duplicated faulty page that was appearing.
 
 * I resolved an issue that prevented instructors from downloading student submissions.
 
