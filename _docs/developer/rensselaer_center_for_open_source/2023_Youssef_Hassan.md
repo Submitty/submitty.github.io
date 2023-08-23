@@ -24,9 +24,9 @@ Using these filters carefully resolves statistical irregularities caused by late
 
 * Further, I introduced two new settings into the profile page, allowing for customizable sidebar display options. These settings offer users the choice to show only icons on narrow screens or to keep the sidebar expanded at all times, addressing both desktop and mobile interfaces. This adjustment addresses the previous issue where the sidebar would inconveniently collapse on narrower screens.
 
-* With valuable assistance from Barb Cutler, I introduced the initial version of documentation that guides new developers and contributors in translating pages within Submitty.
+* With valuable assistance from Barbara Cutler, I introduced the initial version of documentation that guides new developers and contributors in translating pages within Submitty.
 
-* Furthermore, utilizing code previously implemented by fellow contributor Satvik Karanam, I contributed to the translation of Submitty's profile page into French. This marked the first translation beyond English in Submitty's supported languages.
+* Furthermore, utilizing code previously implemented by fellow contributor Sátvik Karanam, I contributed to the translation of Submitty's profile page into French. This marked the first translation beyond English in Submitty's supported languages.
 
 * I enhanced the documentation to assist future contributors in addressing challenges I encountered, including troubleshooting the installation of a virtual machine using Vagrant and resolving issues related to generating and viewing Submitty webpages.
 
@@ -43,4 +43,4 @@ Using these filters carefully resolves statistical irregularities caused by late
 
 ### Acknowledgments
 
-* I would like to express my gratitude to Barb Cutler and my fellow contributors during the summer for their assistance and guidance when I encountered challenges. I greatly appreciate the opportunity to work on Submitty during the summer.
+* I would like to express my gratitude to Barbara Cutler and my fellow contributors during the summer for their assistance and guidance when I encountered challenges. I greatly appreciate the opportunity to work on Submitty during the summer.
