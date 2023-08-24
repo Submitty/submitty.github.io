@@ -22,7 +22,7 @@ Using these filters carefully resolves statistical irregularities caused by late
 
 * I modified the display names used by instructors and graders when addressing grade inquiries.
 
-* Further, I introduced two new settings into the profile page, allowing for customizable sidebar display options. These settings offer users the choice to show only icons on narrow screens or to keep the sidebar expanded at all times, addressing both desktop and mobile interfaces. This adjustment addresses the previous issue where the sidebar would inconveniently collapse on narrower screens.
+* Further, I introduced a new setting into the profile page, allowing for customizable sidebar display options. This setting offers users the choice to show only icons on narrow screens or to keep the sidebar expanded at all times. This adjustment addresses the previous issue where the sidebar would inconveniently collapse on narrower screens.
 
 * With valuable assistance from Barbara Cutler, I introduced the initial version of documentation that guides new developers and contributors in translating pages within Submitty.
 
