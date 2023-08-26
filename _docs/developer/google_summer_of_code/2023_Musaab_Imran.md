@@ -6,6 +6,8 @@ category: Developer > Google Summer of Code 2023
 ## 🛡️ Website Security and Penetration Testing
 The security of the Submitty website is of paramount importance due to its direct impact on student grades and academic integrity. Even a single vulnerability can lead to unfair academic advantages and legal complications concerning student data protection. Therefore, this project aimed to contribute to the assurance of proper access control, authorization mechanisms, and robust code that align with the high security standards expected from educational platforms like Submitty.
 
+You can find all my merged PRs in [this link](https://github.com/Submitty/Submitty/pulls?q=assignee%3A%40me+is%3Amerged)
+
 ---
 ## 🎯 Project Scope
 The primary goal of this project was to conduct an extensive penetration testing campaign to identify and remediate potential vulnerabilities in the Submitty website. The scope of the project encompassed a wide array of attacks, spanning from common web vulnerabilities to more advanced exploitation techniques. The ultimate aim was to fortify the security posture of Submitty and bolster its protection against malicious attacks.
