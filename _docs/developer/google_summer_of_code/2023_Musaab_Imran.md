@@ -126,8 +126,8 @@ For any inquiries, feedback, or additional information, please feel free to cont
 
 ---
 ## 🤝 Acknowledgment
-I extend my heartfelt gratitude to the Submitty team for their unwavering support throughout the Google Summer of Code program. My sincere thanks to mentors **Dr. Barb Culter** and **Chris Reed** for their invaluable guidance, which significantly enriched my learning experience. Their expertise and insights were pivotal in shaping my growth, and I eagerly anticipate contributing to Submitty in the future.
+I extend my heartfelt gratitude to the Submitty team for their unwavering support throughout the Google Summer of Code program. My sincere thanks to mentors <a href="https://www.linkedin.com/in/cutlerbarbara" style="color: blue;">Dr. Barb Cutler</a> and <a href="https://www.linkedin.com/in/christopher-j-reed" style="color: blue;">Chris Reed</a> for their invaluable guidance, which significantly enriched my learning experience. Their expertise and insights were pivotal in shaping my growth, and I eagerly anticipate contributing to Submitty in the future.
 
 Sincerely,
 
-**Musaab Imran**
+<a href="https://www.linkedin.com/in/musaab-imran" style="color: blue;">Musaab Imran</a>
