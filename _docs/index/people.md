@@ -56,7 +56,7 @@ Miles Ednie, Henrik Lam, Stephanie Li, Javier Portorreal, Eddie Krystowki, Chris
 
 ![](/images/people/2019_summer.jpeg)
 
-Kevin McKinney, Alexa Orosz, Jacob McKnight, Maya Tung, Saketh Dargula, Shail Patel, and Evan Maicus
+Kevin McKinney, Alexa Orosz, Jacob McKnight, Maya Tung, Saketh Dargula, Shail Patel, Evan Maicus and Barb Cutler
 
 ---
 
