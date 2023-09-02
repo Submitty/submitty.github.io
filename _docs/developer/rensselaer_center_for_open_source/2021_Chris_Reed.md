@@ -37,7 +37,7 @@ timer is visible, a progress bar of how far along you are in the test would also
 in the past. This required having an accurate Javascript timer, a method to sync back with the server periodically, and a way for gradeables to
 store their allowed minutes in the database when being built.
 
-Another feature I implemented was the ability for instructors to chose an order for which gradeables should be completed. This forces students 
+Another feature I implemented was the ability for instructors to choose an order for which gradeables should be completed. This forces students 
 to complete a certain assignment before being allowed to open and submit the next assignment. This could be used in work at your own pace classes
 or in crash courses.
 
