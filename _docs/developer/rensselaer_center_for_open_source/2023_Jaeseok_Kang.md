@@ -66,7 +66,7 @@ Future Works
 
 
 
-### Query edits
+### Database Queries
 
 Grading Stats
  - The grading stats page now features the count of unresolved inquiries assigned to each grader
