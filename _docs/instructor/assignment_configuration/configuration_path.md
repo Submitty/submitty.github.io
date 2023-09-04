@@ -26,7 +26,7 @@ Submitty provides a number of simple autograding configurations that
 can be selected from the drop down selection menu (prefixed by
 "PROVIDED").  These default, provided autograding configurations are:
 
-_TODO: Insert documentation of the upload only, pdf_exam, iclicker,
+_TODO: Insert documentation of the upload only, pdf_exam, 
 left-right seating assignment, 2 & 3 page test notes upload._
 
 

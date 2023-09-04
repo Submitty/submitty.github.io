@@ -26,7 +26,6 @@ It can contain the following:
 * ``"instructor_notes"``: Shows notes for early warnings, plagiarism, etc. only to the instructor
 * ``"grade_summary"``: Shows the overall score and score for each syllabus bucket (e.g. Homework)
 * ``"grade_details"``: Shows the score for each gradeable
-* ``"iclicker"``: Shows iClicker information including indivudal responses color-coded for correctness.
 * ``"final_grade"``: Shows final grade letters and some statistics about the final grade distribution.
 * ``"exam_seating"``: Shows exam seating assignments. To display the assignment on the Submitty course homepage,
   the instructor should make sure "Display Rainbow Grades Custom Message" is enabled in "Course Settings" on the Submitty

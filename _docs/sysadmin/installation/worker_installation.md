@@ -49,15 +49,8 @@ _Note: These instructions should be run under root/sudo._
    You will be asked to provide the name of your submitty user by the
    [CONFIGURE_SUBMITTY.py script](https://github.com/Submitty/Submitty/blob/master/.setup/CONFIGURE_SUBMITTY.py).
 
-6. Run installations specific to your university, installing any necessary languages,
-   library, or software for your autograding tasks.
-   For example:  [RPI Computer Science specific installations](https://github.com/Submitty/Submitty/blob/master/.setup/distro_setup/ubuntu/rpi.sh)
 
-   ```
-   sudo bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/distro_setup/ubuntu/rpi.sh
-   ```
-
-7. Add the submitty user to the ```submitty_daemon```, ```submitty_daemonphp```, and ```docker```
+6. Add the submitty user to the ```submitty_daemon```, ```submitty_daemonphp```, and ```docker```
    groups.
 
    ```
@@ -66,7 +59,7 @@ _Note: These instructions should be run under root/sudo._
    sudo usermod -a -G docker YOUR_SUBMITTY_USER
    ```
 
-8. Next, we must set up an ssh key so that submitty_daemon user on the primary
+7. Next, we must set up an ssh key so that submitty_daemon user on the primary
    machine can copy files to our worker machine.
 
    On primary submitty:  
@@ -79,7 +72,7 @@ _Note: These instructions should be run under root/sudo._
    ssh-copy-id -i ~/.ssh/id_rsa.pub SUBMITTY_USER@HOSTNAME
    ```
 
-9. Finally, we must add the machine to the list of workers available to our
+8. Finally, we must add the machine to the list of workers available to our
    primary machine. To do this:  
    *  Log on to the primary Submitty machine.
    *  Open ```/usr/local/submitty/config/autograding_workers.json``` with your favorite text editor.
