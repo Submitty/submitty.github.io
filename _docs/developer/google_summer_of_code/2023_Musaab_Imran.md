@@ -85,6 +85,29 @@ Implemented Content-Security-Policy header which prevents external iframe embedd
 
 🔺[PR #9695](https://github.com/Submitty/Submitty/pull/9695)
 
+
+#### Adding CORS Security Headers
+Implemented CORS security headers to prevent cross-origin attacks, enhancing web security by preventing potentially unsafe cross-origin interactions, safeguarding against credential leakage and minimizing data exposure risks.
+
+🔺[PR #9771](https://github.com/Submitty/Submitty/pull/9771)
+
+
+#### Referrer Policy Header 
+Implemented Referrer-Policy header to prevent the leakage of sensitive information, reducing the risk of information disclosure attacks.
+
+🔺[PR #9772](https://github.com/Submitty/Submitty/pull/9772)
+
+
+#### Updating Disabled Functions List 
+Updated the list of disabled functions to prevent the execution of potentially dangerous PHP functions. This reduces the risk of remote code execution and other malicious attacks.
+
+🔺[PR ]()
+
+#### Whitelisting MIME Types
+Whitelisted MIME types to prevent the execution of potentially dangerous file types. This reduces the risk of remote code execution and other malicious attacks. Only the allowed MIME types can be uploaded to the server.
+
+🔺[PR ]()
+
 ---
 ## 👾 Bugfix PRs
 In this category, you'll find pull requests aimed at resolving various bugs.
@@ -126,6 +149,9 @@ This category contains pull requests that added documentation of the Submitty.
 
 #### Virtual Machine Snapshots
 🔻[PR #521](https://github.com/Submitty/submitty.github.io/pull/521)
+
+#### Updating Disabled Functions List 
+🔻[PR #541](https://github.com/Submitty/submitty.github.io/pull/541)
 
 ---
 ## 🚩 Conclusion
