@@ -187,12 +187,24 @@ Below are quick steps to get everything installed and running.
    vagrant up
    ```
 
-   Vagrant will build your VM.  This will take maybe 30 minutes to a
+   Vagrant will build your VM from scratch.  This will take maybe 30 minutes to a
    few hours depending on your Internet connection speed.  When this
    command finishes, your VM is ready to use.
 
+   If you wish to use a pre-packaged VM that is created daily by the CI, type:
 
-7. When the `vagrant up` command completes successfully, you will be
+   Mac/Linux
+   ```
+   VAGRANT_BOX=Submitty/Submitty_Dev vagrant up
+   ```
+   
+   Windows
+   ```
+   set VAGRANT_BOX=Submitty/Submitty_Dev
+   vagrant up
+   ```
+
+8. When the `vagrant up` command completes successfully, you will be
    able to access the Submitty website (instructions follow in the
    next section).
 
@@ -229,7 +241,7 @@ Below are quick steps to get everything installed and running.
    SET NO_SUBMISSIONS
    ```
 
-8. When the install has completed, you should see the message:
+9. When the install has completed, you should see the message:
    ```
    #####################################################################
 
