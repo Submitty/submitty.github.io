@@ -209,7 +209,6 @@ var NAVTREE =
                     [ "Python Unit Tests", "/developer/testing/python_unit_tests", null ],
                     [ "PHP Unit Tests", "/developer/testing/php_unit_tests", null ],
                     [ "Cypress End-to-End Tests", "/developer/testing/cypress", null ],
-                    [ "Cypress Cloud", "/developer/testing/cypress_cloud", null ],
                     [ "Autograding Integration Tests", "/developer/testing/autograding_integration_tests", null ],
                     [ "GitHub Actions", "/developer/testing/github_actions", null ]
                 ] ],
