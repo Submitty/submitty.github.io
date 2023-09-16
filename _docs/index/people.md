@@ -10,6 +10,22 @@ redirect_from:
 
 ---
 
+## 2023 Summer Developers
+
+![](/images/people/2023_summer.png)
+
+Jaeseok Kang,
+Nia Heermance,
+Yanli Wang,
+Sátvik Karanam,
+Youssef Hassan,
+William Allen,
+Viane Matsibekker,
+Chris Reed,
+Barb Cutler
+
+---
+
 ## 2023 Spring Developers
 
 ![](/images/people/2023_spring.png)
