@@ -22,7 +22,7 @@ category: Developer > Development Instructions
   use by another application running on your computer.
 
 
-* This may happen if you attempt to create mutliple Submitty VMs --
+* This may happen if you attempt to create multiple Submitty VMs --
   perhaps unintentionally!  E.g., if you have multiple directories on
   your computer each with a clone/copy of the Submitty repo.  It is
   necessary to run `vagrant destroy` in each of these
@@ -33,6 +33,32 @@ category: Developer > Development Instructions
   ```
   vagrant global-status
   ```
+
+* If you might have old, forgotten VMs from previous OS versions
+  hanging around it can be helpful to completely delete the `.vagrant`
+  folder in your repository.  Also check to see if you have multiple
+  clones or backups of the repository and thus multiple `.vagrant`
+  folders on your machine.
+
+
+* You can scan to see what processes on your machine are using the
+  conflicting ports.  Depending on your operating system, try these
+  commands:
+
+  ```
+  netstat -anvp tcp | awk 'NR<3 || /LISTEN/'
+  ```
+
+  ```
+  lsof -i | grep LISTEN
+  ```
+
+  Then you can type `kill <pid>` with the `<pid>` of the process (if
+  you confirm you don't need that process).  If you don't recognize
+  the process using the port in question, search to figure out if you
+  can or should disable it.  For example, on MacOS, the AirPlay
+  Receiver in Control Center is using port 7000, so you may choose to
+  turn that off.
 
 
 * You can choose to override the default ports and use an alternate
