@@ -11,7 +11,7 @@ set up to activate and modify the database as appropiate.
 
 ### Editing an Existing Trigger Function
 To edit an existing trigger function, simply edit the appropiate file inside the
-``migrations/migrator/triggers`` directory. When you next run ``submitty_install`
+``migrations/migrator/triggers`` directory. When you next run ``submitty_install``
 or the migrator manually, the trigger functions on the database will be updated
 with the changes to the code.
 
