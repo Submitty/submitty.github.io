@@ -199,7 +199,9 @@ var NAVTREE =
             [ "Development Instructions", "/developer/development_instructions/index", [
                 [ "Overview", "/developer/development_instructions/index", null ],
                 [ "Sample Courses Data", "/developer/development_instructions/sample_data", null ],
-                [ "Migrations", "/developer/development_instructions/migrations", null ],
+                [ "Migrations", "/developer/development_instructions/migrations", [
+                    [ "Trigger Functions", "/developer/development_instructions/trigger_functions", null ]
+                ] ],
                 [ "Resolving Merge Conflicts", "/developer/development_instructions/merge_conflicts", null ],
                 [ "Localization / Language Support", "/developer/development_instructions/localization", null ],
                 [ "Continuous Integration Testing", "/developer/testing/index", [
