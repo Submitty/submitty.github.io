@@ -1,14 +1,13 @@
 ---
 title: Trigger Functions
 category: Developer > Development Instructions
-redirect_from:
-  - /developer/trigger_functions
 ---
 
 Trigger functions are a useful tool to keep data in sync. When a
 database table's column is modified, a trigger function can be
-set up to activate and modify the database as appropiate. We
-use PL/pgSQL for our trigger functions, which is a procedural
+set up to activate and modify the database as appropiate.
+
+We use PL/pgSQL for our trigger functions, which is a procedural
 programming language part of PostgreSQL, the language our database
 queries are conducted in.
 
@@ -65,15 +64,25 @@ To create a new trigger function,
         
         CREATE TRIGGER some_name_about_your_trigger_function
         BEFORE/AFTER UPDATE/INSERT/DELETE ON public.the_table_your_function_is_activated_by
-        FOR EACH ROW EXECUTE PROCEDURE trigger_function_name();
+        FOR EACH ROW EXECUTE PROCEDURE public.trigger_function_name();
     ```
     There's a few things to break down here. Your trigger function can be actived before or after
-    a table has a deltion, an insertion, or a value update on it. Pick either ``BEFORE`` or ``AFTER``. Pick either ``UPDATE``, ``INSERT``, or ``DELETE``. If you want your function to be activated on, say, an update or an insertion, write instead
+    a table has a deletion, an insertion, or a value update on it. Pick either ``BEFORE`` or ``AFTER``. Pick either ``UPDATE``, ``INSERT``, or ``DELETE``. If you want your function to be activated on, say, an update or an insertion, write instead
     ``UPDATE OR INSERT`` in the spot above.
 
-    The blank body of the trigger function above is neccessary so that we can then
-    bind the trigger function to the appropiate action on the table. The blank body will
-    be replaced by the migrator with the completed body in your file, so do not worry.
+    Declaring the trigger function above is neccessary so that we can then
+    bind the trigger function to the appropiate action on the table. You do not need
+    the body to be blank, but we recommend it to be to avoid code duplication.
+    The blank body will be replaced by the migrator with the completed body in
+    your other file, so do not worry.
 
     It can be strategic to choose when in your migration you include the code above,
     as you may want your trigger function binded only after a table is created.
+
+4.  Make sure you include in the down migration section the deletion of the trigger function.
+
+    ```
+        DROP TRIGGER IF EXISTS
+            the_same_name_about_your_trigger_function
+            ON public.the_table_your_function_is_activated_by;
+    ```
