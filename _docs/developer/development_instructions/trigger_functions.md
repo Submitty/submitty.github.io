@@ -7,7 +7,10 @@ redirect_from:
 
 Trigger functions are a useful tool to keep data in sync. When a
 database table's column is modified, a trigger function can be
-set up to activate and modify the database as appropiate.
+set up to activate and modify the database as appropiate. We
+use PL/pgSQL for our trigger functions, which is a procedural
+programming language part of PostgreSQL, the language our database
+queries are conducted in.
 
 ### Editing an Existing Trigger Function
 To edit an existing trigger function, simply edit the appropiate file inside the
