@@ -40,7 +40,7 @@ still a work in progress._
    or:
 
    ```
-   select * from courses where semester='s18';
+   select * from courses where term='s18';
    ```
 
    **status = 1**  
@@ -59,13 +59,13 @@ still a work in progress._
 3. Change the status values as desired, for example:
 
    ```
-   update courses set status=2 where semester='s18' and course='csci1100';
+   update courses set status=2 where term='s18' and course='csci1100';
    ```
 
-   or archive all courses for the semester:
+   or archive all courses for the term:
 
    ```
-   update courses set status=2 where semester='s18';
+   update courses set status=2 where term='s18';
    ```
 
 
@@ -81,7 +81,7 @@ still a work in progress._
 To prevent accidental modification, we recommend that you remove write
 access from folders and files for archived courses.  And we suggest
 you consider switching the group for your course to limit access to
-the files of past semesters to the current instructors only.
+the files of past terms to the current instructors only.
 
 ```
 chmod ugo-w /var/local/submitty/courses/<SEMESTER>/<COURSE>
