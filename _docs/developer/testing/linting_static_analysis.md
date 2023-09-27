@@ -80,7 +80,7 @@ If you fix one of these errors, you would need to regenerate this file which can
 ```
 php -d memory_limit=8G vendor/bin/phpstan analyze app public/index.php socket/index.php --generate-baseline
 ```
-The argument `-d memory_limit=8G` is necessary as otherwise phpstan will not have enough memory
+The argument `-d memory_limit=8G` is suggested as otherwise phpstan will not have enough memory
 to generate a new baseline.
 
 ## JavaScript Linting
