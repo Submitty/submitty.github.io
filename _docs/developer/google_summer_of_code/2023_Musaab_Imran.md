@@ -101,12 +101,12 @@ Implemented Referrer-Policy header to prevent the leakage of sensitive informati
 #### Updating Disabled Functions List 
 Updated the list of disabled functions to prevent the execution of potentially dangerous PHP functions. This reduces the risk of remote code execution and other malicious attacks.
 
-🔺[PR ]()
+🔺[PR #]()
 
 #### Whitelisting MIME Types
 Whitelisted MIME types to prevent the execution of potentially dangerous file types. This reduces the risk of remote code execution and other malicious attacks. Only the allowed MIME types can be uploaded to the server.
 
-🔺[PR ]()
+🔺[PR #]()
 
 ---
 ## 👾 Bugfix PRs
