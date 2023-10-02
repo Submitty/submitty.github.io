@@ -78,8 +78,10 @@ phpstan maintains a list of known errors in the [phpstan-baseline.neon](https://
 If you fix one of these errors, you would need to regenerate this file which can be done by doing:
 
 ```
-php vendor/bin/phpstan analyze app public/index.php socket/index.php --generate-baseline
+php vendor/bin/phpstan analyze app public/index.php socket/index.php --generate-baseline --memory-limit 2G
 ```
+The argument `--memory_limit 2G` is necessary when phpstan will otherwise not have enough memory
+to generate a new baseline. You can see how much memory phpstan has been using with the `-v` flag
 
 ## JavaScript Linting
 
