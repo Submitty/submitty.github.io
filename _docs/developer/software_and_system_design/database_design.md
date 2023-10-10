@@ -28,7 +28,7 @@ redirect_from:
    4. [DataGrip](https://www.jetbrains.com/datagrip/) ("Database IDE", can connect to most DB types)
 
 
-Note: To add the Submitty server to pgAdmin, follow the [pgAdmin setup instructions](/developer/pgadmin).
+Note: To add the Submitty server to pgAdmin, follow the [pgAdmin setup instructions](/developer/getting_started/pgadmin).
 
 
 
