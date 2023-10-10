@@ -28,16 +28,7 @@ redirect_from:
    4. [DataGrip](https://www.jetbrains.com/datagrip/) ("Database IDE", can connect to most DB types)
 
 
-Note: When adding a new server to pgAdmin, change the following parameters in the
-server's `Connection` settings:
-
-* `Host name/address`: `localhost`
-* `Port`: `16442`
-* `Username`: `submitty_dbuser`
-* `Password`: `submitty_dbuser`
-
-You do not need to change the port or the maintenance database - the port should say `5432`
-and the maintenance database should say `postgres` by default.
+Note: To add the Submitty server to pgAdmin, follow the [pgAdmin setup instructions](/developer/pgadmin).
 
 
 
