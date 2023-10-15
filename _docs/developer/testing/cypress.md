@@ -14,6 +14,8 @@ used to use Selenium, but has been rewritten in using Cypress.
 
 Make sure you have `node.js` version 10 or higher installed locally. You can check using the command: `node -v` 
 
+Make sure to install [`node.js`](https://www.nodejs.org/) on your desktop (inside Program Files) and not inside your local Submitty repository on your desktop. 
+
 ```bash
 # from the site directory
 npm install
