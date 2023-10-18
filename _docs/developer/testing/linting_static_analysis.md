@@ -66,10 +66,10 @@ Then run:
 
 ```bash
 # from root level of Submitty repository
-php site/vendor/bin/phpstan analyze -c site/phpstan.neon site/app site/public/index.php site/socket/index.php
+php site/vendor/bin/phpstan analyze -c site/phpstan.neon
 
 # or if in the site/ directory of the Submitty repository
-php vendor/bin/phpstan analyze app public/index.php socket/index.php
+php vendor/bin/phpstan analyze
 ```
 
 Unlike flake8 and phpcs, a path or file _MUST_ be passed to phpstan.
