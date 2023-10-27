@@ -83,10 +83,31 @@ php vendor/bin/phpstan analyze app public/index.php socket/index.php --generate-
 The argument `--memory_limit 2G` is necessary when phpstan will otherwise not have enough memory
 to generate a new baseline. You can see how much memory phpstan has been using with the `-v` flag
 
-## submitty_test script for PHP
+# Submitty Test Script for PHP Linting
 
-There is a script for php static analysis and code sniffer
-Just like submitty_install_site, you can use "submitty_test php-lint" inside your VM.
+The `submitty_test` script is an alias for the `SUBMITTY_TEST.sh` script, similar to `submitty_install_site`. 
+This script streamlines the process of PHP linting by performing the following steps:
+
+1. Changes the directory to `GIT_CHECKOUT/Submitty/site`.
+2. Installs Composer if not already installed (skips if Composer is already installed).
+3. Executes the specified PHP linting command.
+4. Returns to the original directory.
+
+## Commands:
+
+- `phpcs`: Runs PHP CodeSniffer.
+- `phpstan`: Runs PHP static analysis.
+- `php-lint`: Runs both PHP CodeSniffer and PHPStan.
+
+## Additional Arguments:
+
+The `submitty_test` script accepts additional arguments, such as `--memory_limit 2G`.
+
+## Example Usage:
+
+```
+submitty_test php-lint --memory-limit 2G
+```
 
 ## JavaScript Linting
 
