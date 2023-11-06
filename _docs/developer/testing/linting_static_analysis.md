@@ -33,6 +33,13 @@ Optionally, you can pass in a specific file or directory to only lint that file 
 python3 -m flake8 bin/generate_repos.py
 ```
 
+If you wish to automatically fix the basic linting problems:
+You can use [black formatter](https://github.com/psf/black)
+```bash
+pip install git+https://github.com/psf/black
+black < file/s location >
+```
+
 See also: [Python Style Guide](/developer/coding_style_guide/python)
 
 ## PHP Linting
