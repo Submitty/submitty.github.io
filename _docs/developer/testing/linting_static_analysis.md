@@ -35,8 +35,14 @@ python3 -m flake8 bin/generate_repos.py
 
 If you wish to automatically fix the basic linting problems, you can use [black formatter](https://github.com/psf/black):
 ```bash
+# install black formatter
 pip install git+https://github.com/psf/black
-black < file/s location >
+
+# formats all the files in that directory
+black ./files/location/
+
+# formats specified file
+black ./location/file.py
 ```
 
 See also: [Python Style Guide](/developer/coding_style_guide/python)
