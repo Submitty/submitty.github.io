@@ -23,7 +23,7 @@ level of Submitty source tree:
 python3 -m flake8
 
 # from root level of Submitty repository using pylint
-python3 -m pylint *.py
+python3 -m pylint --recursive=y .
 ```
 
 _NOTE: Our Travis CI testing currently [excludes a number of legacy source code files](https://github.com/Submitty/Submitty/blob/master/.flake8).

@@ -17,4 +17,4 @@ pip3 install flake8 flake8-bugbear pylint
 and then you can just run `flake8` at the root to check all files or pass it an individual file to check just that.
 To see all files that are currently checked as part of Travis-CI, please look at the `.flake8` config file.
 
-For pylint, you can just run `pylint *.py` at the root to check all files or pass it an individual file.
+For pylint, you can just run `pylint --recursive=y .` at the root to check all files or pass it an individual file.
