@@ -13,14 +13,17 @@ Be sure to start with the [Initial Set Up](/developer/testing/#initial-set-up) i
 
 ## Python Linting
 
-The Python code of Submitty is linted using [flake8](https://flake8.pycqa.org/en/latest/) and
-[flake8-bugbear](https://github.com/PyCQA/flake8-bugbear). You can run the Python linter
-locally (on your host operating system) by running the following command from the root
+The Python code of Submitty is linted using [flake8](https://flake8.pycqa.org/en/latest/), 
+[flake8-bugbear](https://github.com/PyCQA/flake8-bugbear), and [pylint](https://pylint.readthedocs.io/en/stable/). 
+You can run the Python linter locally (on your host operating system) by running the following command from the root
 level of Submitty source tree:
 
 ```bash
-# from root level of Submitty repository
+# from root level of Submitty repository using flake8
 python3 -m flake8
+
+# from root level of Submitty repository using pylint
+python3 -m pylint *.py
 ```
 
 _NOTE: Our Travis CI testing currently [excludes a number of legacy source code files](https://github.com/Submitty/Submitty/blob/master/.flake8).
@@ -29,8 +32,11 @@ from Python linting, though there is effort to bring more and more of them under
 Optionally, you can pass in a specific file or directory to only lint that file or directory, e.g.:
 
 ```bash
-# from root level of Submitty repository...  to lint a specific file:
+# from root level of Submitty repository...  to lint a specific file using flake:
 python3 -m flake8 bin/generate_repos.py
+
+# from root level of Submitty repository...  to lint a specific file using pylint:
+python3 -m pylint bin/generate_repos.py
 ```
 
 See also: [Python Style Guide](/developer/coding_style_guide/python)
