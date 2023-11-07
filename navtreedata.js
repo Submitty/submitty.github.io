@@ -233,7 +233,7 @@ var NAVTREE =
                     [ "Frontend JavaScript", "/developer/developing_the_php_site/javascript", null]
                 ] ],
             ] ],
-            [ "Troubleshooting & Other Information", "/developer/troubleshooting/troubleshooting", [
+            [ "Troubleshooting & Other Information", "/developer/troubleshooting/installation_troubleshooting", [
                 [ "Installation", "/developer/troubleshooting/installation_troubleshooting", null ],
                 [ "Re-Installation", "/developer/troubleshooting/reinstallation_troubleshooting", null ],
                 [ "System Clock Testing", "/developer/troubleshooting/system_clock_testing_troubleshooting", null ],
