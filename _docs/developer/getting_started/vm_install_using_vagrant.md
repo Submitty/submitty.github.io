@@ -258,9 +258,7 @@ Below are quick steps to get everything installed and running.
    If you do not see this message due to an error or the installation
    has frozen, check out:
 
-   * [Installation Troubleshooting](#installation-troubleshooting)
-
-   * [Development Instructions Troubleshooting](/developer/development_instructions/troubleshooting)
+   * [Installation Troubleshooting](/developer/troubleshooting/installation_troubleshooting.md)
 
 ---
 
@@ -402,84 +400,6 @@ Below are quick steps to get everything installed and running.
    ```
    vagrant up
    ```
-
----
-
-## Installation Troubleshooting
-
-* If your install becomes stuck on ``SSH auth method: private key`` for more than three minutes,
-   then what you can do is open Virtual Box, navigate to your VM, and click the green "Show" button.
-   Having the VM's terminal GUI open can seem to keep it awake for communication. While developing on Submitty,
-   this "Show" terminal option can sometimes lead to the VM being faster with loads, so it may be worth having the GUI
-   open even after your vagrant up.
-
-* If your install seems to randomly freeze during `vagrant up` 
-with no explanation, then there are a couple of things that may be going wrong:
-
-    *Note: If this happens, it may be worth running a simple `vagrant destroy` before you try to `vagrant up` again. It is possible to repair, but it is usually more effort than it is worth.*
-
-    * First, check to make sure you have a solid internet connection. 
-    Even if the connection is fast, it may experience drop-outs every 
-    once in a while, so it is highly recommended to install it with a wired 
-    connection to the internet.
-
-    * Secondly, check to make sure your computer is not going to 
-    sleep, this can be changed in settings for some systems, or you 
-    can install a program to keep it awake (for example, amphetamine on Mac).
-
-* If an error is thrown during `vagrant up`, you may need to
-   uninstall Virtual Box and all virtual machines by typing the
-   following commands:
-
-   _CAUTION: This should only be done if you do not have any other virtual machines._
-
-   To remove Virtual Box type:
-
-   ```
-   sudo apt-get remove --purge virtualbox
-   ```
-   To remove all virtual machines and configuration files type:
-
-   ```
-   sudo rm ~/"VirtualBox VMs" -Rf
-   sudo rm ~/.config/VirtualBox/ -Rf
-   ```
-   This will delete all virtual machine settings. Then install
-   the latest version of Virtual Box and vagrant from the links given in step 3 (using Ubuntu Software).
-
-* If it has been a while since your last `vagrant destroy` and
-    `vagrant up` you may need to update/upgrade/reinstall the virtual
-    box, vagrant, and the installed boxes on your
-    system:
-
-    For example, on Mac:
-
-    ```
-    brew reinstall --cask virtualbox
-    brew reinstall --cask vagrant
-    vagrant plugin update
-    vagrant box update
-    ```
-
-    If you continue to have errors on Mac with `vagrant up` after
-    reinstalling virtualbox and vagrant, check "System Preferences" ->
-    "Security & Privacy".  You may need to approve/reapprove
-    "Allow apps download from".  You may also need to restart your computer.
-
-    Similar instructions for other OS.
-
-* If this error is thrown during `vagrant up` command:
-   ```
-   ubuntu-26.84: E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/g/gcc-9gcc-9_9.4.0-1ubuntu1-20.84.1_amd64.deb Connection fail [IP: 189.211.241.193]
-   ```
-   then you should use VPN to connect to the internet and then try `vagrant up`.This error usually occurs when you are outside the United States and the connection to the Ubuntu package repository is being blocked or restricted.
-
-   __Note:__ The IP address provided in the error message may vary.
-   ProtonVPN, which provides free VPN service can be used. You can download from their official website at (https://protonvpn.com). You can also use other VPN services.
-
-
-* See also [Development Instructions Troubleshooting](/developer/development_instructions/troubleshooting)
-
 ---
 
 ## Testing with a remote device

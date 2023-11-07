@@ -171,9 +171,7 @@ the installation process.
    If you do not see this message due to an error or the installation
    has frozen, check out:
 
-   * [Installation Troubleshooting](/developer/getting_started/vm_install_using_vagrant#installation-troubleshooting)
-
-   * [Development Instructions Troubleshooting](/developer/development_instructions/troubleshooting)
+   * [Installation Troubleshooting](/developer/troubleshooting/installation_troubleshooting.md)
 
 ---
 

@@ -215,7 +215,6 @@ var NAVTREE =
                     [ "GitHub Actions", "/developer/testing/github_actions", null ]
                 ] ],
                 [ "Vagrant Email Configuration", "/developer/development_instructions/vagrant_email_configuration", null ],
-                [ "Troubleshooting", "/developer/development_instructions/troubleshooting", null ],
                 [ "Miscellaneous", "/developer/development_instructions/miscellaneous", null ],
                 [ "Advanced Development", "/developer/development_instructions/automated_grading", [
                     [ "Automated Grading", "/developer/development_instructions/automated_grading", null ],
@@ -233,6 +232,11 @@ var NAVTREE =
                     [ "WebSocket", "/developer/developing_the_php_site/websocket", null ],
                     [ "Frontend JavaScript", "/developer/developing_the_php_site/javascript", null]
                 ] ],
+            ] ],
+            [ "Troubleshooting & Other Information", "/developer/troubleshooting/troubleshooting", [
+                [ "Installation", "/developer/troubleshooting/installation_troubleshooting", null ],
+                [ "Re-Installation", "/developer/troubleshooting/reinstallation_troubleshooting", null ],
+                [ "System Clock Testing", "/developer/troubleshooting/system_clock_testing_troubleshooting", null ],
             ] ],
             [ "Software and System Design", "/developer/software_and_system_design/interface_design_style_guide", [
                 [ "Interface Design", "/developer/software_and_system_design/interface_design_style_guide", null ],
