@@ -171,7 +171,7 @@ the installation process.
    If you do not see this message due to an error or the installation
    has frozen, check out:
 
-   * [Installation Troubleshooting](/developer/troubleshooting/installation_troubleshooting.md)
+   * [Installation Troubleshooting](/developer/troubleshooting/installation_troubleshooting)
 
 ---
 
