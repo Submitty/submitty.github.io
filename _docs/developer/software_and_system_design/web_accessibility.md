@@ -51,9 +51,6 @@ provide additional guidance.  The W3C has authored a series of in-depth industry
 recommendations called [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/)
 (a.k.a. "WCAG").
 
-If you have any questions on web accessibility, please post them in Submitty's
-slack channel and tag `@pbailie`.
-
 ### Examine Your Interface Design With WAVE
 The [Web Accessibility Evaluation (WAVE) tool](https://wave.webaim.org/extension/)
 is a browser plugin that can analyze your UI design and point out accessibility
