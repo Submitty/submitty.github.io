@@ -184,6 +184,7 @@ redirect_from:
 Although it is not yet implemented in web-GUI, RainbowGrades support drop lowest grade.
 Directly edit the customization.json file
 Here is a example usage, removing one lowest gradeable from given type
+
   ```json
 {
   "count": 8,
@@ -200,7 +201,5 @@ Here is a example usage, removing one lowest gradeable from given type
      ]
 }
   ```
-
-
 
 
