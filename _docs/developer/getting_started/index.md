@@ -12,7 +12,7 @@ redirect_from:
 
 ## Suggestions for New Developers
 
-* Join our Community Discussion on Slack:
+* Join our Community Discussion on Zulip:
   [Contact Us](/contact)
 
 * You'll need to set up the full system on your own computer.  The

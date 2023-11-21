@@ -66,10 +66,10 @@ Then run:
 
 ```bash
 # from root level of Submitty repository
-php site/vendor/bin/phpstan analyze -c site/phpstan.neon site/app site/public/index.php site/socket/index.php
+php site/vendor/bin/phpstan analyze -c site/phpstan.neon
 
 # or if in the site/ directory of the Submitty repository
-php vendor/bin/phpstan analyze app public/index.php socket/index.php
+php vendor/bin/phpstan analyze
 ```
 
 Unlike flake8 and phpcs, a path or file _MUST_ be passed to phpstan.
@@ -78,7 +78,35 @@ phpstan maintains a list of known errors in the [phpstan-baseline.neon](https://
 If you fix one of these errors, you would need to regenerate this file which can be done by doing:
 
 ```
-php vendor/bin/phpstan analyze app public/index.php socket/index.php --generate-baseline
+php vendor/bin/phpstan analyze app public/index.php socket/index.php --generate-baseline --memory-limit 2G
+```
+The argument `--memory_limit 2G` is necessary when phpstan will otherwise not have enough memory
+to generate a new baseline. You can see how much memory phpstan has been using with the `-v` flag
+
+# Submitty Test Script for PHP Linting
+
+The `submitty_test` script is an alias for the `SUBMITTY_TEST.sh` script, similar to `submitty_install_site`. 
+This script streamlines the process of PHP linting by performing the following steps:
+
+1. Changes the directory to `GIT_CHECKOUT/Submitty/site`.
+2. Installs Composer if not already installed (skips if Composer is already installed).
+3. Executes the specified PHP linting command.
+4. Returns to the original directory.
+
+## Commands:
+
+- `phpcs`: Runs PHP CodeSniffer.
+- `phpstan`: Runs PHP static analysis.
+- `php-lint`: Runs both PHP CodeSniffer and PHPStan.
+
+## Additional Arguments:
+
+The `submitty_test` script accepts additional arguments, such as `--memory_limit 2G`.
+
+## Example Usage:
+
+```
+submitty_test php-lint --memory-limit 2G
 ```
 
 ## JavaScript Linting
