@@ -6,7 +6,7 @@ category: Developer > Google Summer of Code 2023
 ## 🛡️ Website Security and Penetration Testing
 The security of the Submitty website is of paramount importance due to its direct impact on student grades and academic integrity. Even a single vulnerability can lead to unfair academic advantages and legal complications concerning student data protection. Therefore, this project aimed to contribute to the assurance of proper access control, authorization mechanisms, and robust code that align with the high security standards expected from educational platforms like Submitty.
 
-You can find all my merged PRs in <a href="https://github.com/Submitty/Submitty/pulls?q=assignee%3A%40me+is%3Amerged" style="color:blue">this link</a>.
+You can find all my merged PRs in <a href="https://github.com/Submitty/Submitty/pulls?q=assignee%3Amusaabimran+is%3Amerged+" style="color:blue">this link</a>.
 
 ---
 ## 🎯 Project Scope
@@ -98,15 +98,10 @@ Implemented Referrer-Policy header to prevent the leakage of sensitive informati
 🔺[PR #9772](https://github.com/Submitty/Submitty/pull/9772)
 
 
-#### Updating Disabled Functions List 
-Updated the list of disabled functions to prevent the execution of potentially dangerous PHP functions. This reduces the risk of remote code execution and other malicious attacks.
-
-🔺[PR ]()
-
 #### Whitelisting MIME Types
 Whitelisted MIME types to prevent the execution of potentially dangerous file types. This reduces the risk of remote code execution and other malicious attacks. Only the allowed MIME types can be uploaded to the server.
 
-🔺[PR ]()
+🔺[PR #10003](https://github.com/Submitty/Submitty/pull/10003)
 
 ---
 ## 👾 Bugfix PRs
