@@ -26,9 +26,6 @@ python3 -m flake8
 python3 -m pylint --recursive=y .
 ```
 
-_NOTE: Our Travis CI testing currently [excludes a number of legacy source code files](https://github.com/Submitty/Submitty/blob/master/.flake8).
-from Python linting, though there is effort to bring more and more of them under flake8._
-
 Optionally, you can pass in a specific file or directory to only lint that file or directory, e.g.:
 
 ```bash
