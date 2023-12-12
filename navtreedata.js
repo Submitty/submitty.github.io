@@ -145,6 +145,7 @@ var NAVTREE =
                 [ "Update Submitty", "/sysadmin/installation/update_submitty", null ],
                 [ "Version Notes", "/sysadmin/installation/version_notes/index", [
                     [ "Overview", "/sysadmin/installation/version_notes/index", null],
+                    [ "v23.07.00", "/sysadmin/installation/version_notes/v23.07.00", null ],
                     [ "v23.03.01", "/sysadmin/installation/version_notes/v23.03.01", null ],
                     [ "v22.06.00", "/sysadmin/installation/version_notes/v22.06.00", null ],
                     [ "v22.05.00", "/sysadmin/installation/version_notes/v22.05.00", null ],
@@ -192,20 +193,23 @@ var NAVTREE =
                     [ "PhpStorm Setup Instructions", "/developer/getting_started/phpstorm", null ],
                     [ "Xdebug Setup Instructions", "/developer/getting_started/xdebug", null ],
                     [ "PGAdmin Setup Instructions", "/developer/getting_started/pgadmin", null ],
-                    [ "Virtual Box Worker", "/developer/getting_started/worker_vm", null ],
+                    [ "Worker VM Setup", "/developer/getting_started/worker_vm", null ],
                 ] ],
             ] ],
             [ "Development Instructions", "/developer/development_instructions/index", [
                 [ "Overview", "/developer/development_instructions/index", null ],
-                [ "Migrations", "/developer/development_instructions/migrations", null ],
+                [ "Sample Courses Data", "/developer/development_instructions/sample_data", null ],
+                [ "Migrations", "/developer/development_instructions/migrations", [
+                    [ "Trigger Functions", "/developer/development_instructions/trigger_functions", null ]
+                ] ],
                 [ "Resolving Merge Conflicts", "/developer/development_instructions/merge_conflicts", null ],
+                [ "Localization / Language Support", "/developer/development_instructions/localization", null ],
                 [ "Continuous Integration Testing", "/developer/testing/index", [
                     [ "Overview", "/developer/testing/index", null ],
                     [ "Installing PHP", "/developer/testing/install_php", null ],
                     [ "Linting / Static Analysis", "/developer/testing/linting_static_analysis", null ],
                     [ "Python Unit Tests", "/developer/testing/python_unit_tests", null ],
                     [ "PHP Unit Tests", "/developer/testing/php_unit_tests", null ],
-                    [ "Selenium End-to-End Tests", "/developer/testing/site_end_to_end_tests", null ],
                     [ "Cypress End-to-End Tests", "/developer/testing/cypress", null ],
                     [ "Autograding Integration Tests", "/developer/testing/autograding_integration_tests", null ],
                     [ "GitHub Actions", "/developer/testing/github_actions", null ]
@@ -255,6 +259,12 @@ var NAVTREE =
             ] ],
             [ "Rensselaer Center for Open Source", "/developer/rensselaer_center_for_open_source/moorthy", [
                 [ "Moorthy", "/developer/rensselaer_center_for_open_source/moorthy", null ],
+                [ "2023 Jaeseok Kang",    "/developer/rensselaer_center_for_open_source/2023_Jaeseok_Kang", null ],
+                [ "2023 Mahi Pasarkar",    "/developer/rensselaer_center_for_open_source/2023_Mahi_Pasarkar", null ],
+                [ "2023 Nia Heermance",    "/developer/rensselaer_center_for_open_source/2023_Nia_Heermance", null ],
+                [ "2023 Sátvik Karanam",    "/developer/rensselaer_center_for_open_source/2023_Satvik_Karanam", null ],
+                [ "2023 Viane Matsibekker",    "/developer/rensselaer_center_for_open_source/2023_Viane_Matsibekker", null ],
+                [ "2023 Youssef Hassan",    "/developer/rensselaer_center_for_open_source/2023_Youssef_Hassan", null ],
                 [ "2022 Evan Bowen Shi",    "/developer/rensselaer_center_for_open_source/2022_Evan_Bowen_Shi", null ],
                 [ "2022 Jerry Jiarui Lu",    "/developer/rensselaer_center_for_open_source/2022_Jerry_Jiarui_Lu", null ],
                 [ "2022 Thomas Kozlowski",    "/developer/rensselaer_center_for_open_source/2022_Thomas_Kozlowski", null ],
@@ -268,6 +278,9 @@ var NAVTREE =
             ] ],
             [ "Google Summer of Code", "/developer/google_summer_of_code/index", [
                 [ "Overview","/developer/google_summer_of_code/index", null ],
+                [ "2023 Cameron Peterson", "/developer/google_summer_of_code/2023_Cameron_Peterson", null ],
+                [ "2023 Musaab Imran", "/developer/google_summer_of_code/2023_Musaab_Imran", null ],
+                [ "2023 Saumya Borwankar", "/developer/google_summer_of_code/2023_Saumya_Borwankar", null ],
                 [ "2022 Akshat Batra", "/developer/google_summer_of_code/2022_Akshat_Batra", null ],
                 [ "2022 Madhur Jain", "/developer/google_summer_of_code/2022_Madhur_Jain", null ],
                 [ "2022 Poorna Gunathilaka", "/developer/google_summer_of_code/2022_Poorna_Gunathilaka", null ],

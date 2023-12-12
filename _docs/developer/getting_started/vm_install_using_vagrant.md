@@ -159,7 +159,7 @@ Below are quick steps to get everything installed and running.
    the repo and use the git url from your fork instead, especially if you are looking to contribute.
 
    _OPTIONAL: If you will be developing code in one of the companion
-   Submitty repositories (e.g., AnalysisTools, Lichen, RainbowGrades, Tutorial), also
+   Submitty repositories (e.g., AnalysisTools, Lichen, Localization, RainbowGrades, Tutorial), also
    clone those repositories to the same directory.  For example:_
 
      ```
@@ -169,6 +169,7 @@ Below are quick steps to get everything installed and running.
              └── GIT_CHECKOUT
                  ├── AnalysisTools  (optional)
                  ├── Lichen         (optional)
+                 ├── Localization   (optional)
                  ├── RainbowGrades  (optional)
                  ├── Submitty
                  └── Tutorial       (optional)
@@ -343,6 +344,7 @@ Below are quick steps to get everything installed and running.
 
     | user | password | role |
     |------|----------|-------|
+    | superuser | superuser | Superuser |
     | vagrant | vagrant | OS user |
     | root | vagrant | OS user |
     | submitty_cgi | submitty_cgi | Submitty process |
@@ -423,6 +425,12 @@ Below are quick steps to get everything installed and running.
 
 ## Installation Troubleshooting
 
+* If your install becomes stuck on ``SSH auth method: private key`` for more than three minutes,
+   then what you can do is open Virtual Box, navigate to your VM, and click the green "Show" button.
+   Having the VM's terminal GUI open can seem to keep it awake for communication. While developing on Submitty,
+   this "Show" terminal option can sometimes lead to the VM being faster with loads, so it may be worth having the GUI
+   open even after your vagrant up.
+
 * If your install seems to randomly freeze during `vagrant up` 
 with no explanation, then there are a couple of things that may be going wrong:
 
@@ -478,6 +486,15 @@ with no explanation, then there are a couple of things that may be going wrong:
 
     Similar instructions for other OS.
 
+* If this error is thrown during `vagrant up` command:
+   ```
+   ubuntu-26.84: E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/g/gcc-9gcc-9_9.4.0-1ubuntu1-20.84.1_amd64.deb Connection fail [IP: 189.211.241.193]
+   ```
+   then you should use VPN to connect to the internet and then try `vagrant up`.This error usually occurs when you are outside the United States and the connection to the Ubuntu package repository is being blocked or restricted.
+
+   __Note:__ The IP address provided in the error message may vary.
+   ProtonVPN, which provides free VPN service can be used. You can download from their official website at (https://protonvpn.com). You can also use other VPN services.
+
 
 * See also [Development Instructions Troubleshooting](/developer/development_instructions/troubleshooting)
 
@@ -503,7 +520,7 @@ with no explanation, then there are a couple of things that may be going wrong:
 
 4. Retrieve the private key for the vagrant machine, located at `<SUBMITTY GIT REPO>/.vagrant/machines/<VM>/<VM BACKEND>/private_key`.
 
-   At the time of writing, `<VM>` is `ubuntu-20.04`, and `<VM BACKEND>` is `virtualbox`.
+   At the time of writing, `<VM>` is `ubuntu-22.04`, and `<VM BACKEND>` is `virtualbox`.
 
 5. Use SSH to connect from the remote device to the machine that is running the VM, and use SSH port forwarding (local forwarding) to forward the necessary ports.
 

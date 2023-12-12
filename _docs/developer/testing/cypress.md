@@ -2,13 +2,16 @@
 title: End-to-End testing with Cypress
 ---
 
-[Cypress](https://www.cypress.io/) is an open source end-to-end testing framework. It runs tests against 
-a locally hosted instance of Submitty by automating a browser. Tests are written in JavaScript and are executed 
-in the Cypress test-runner.
+The _End-to-End Testing_ (e2e) suite utilizes [Cypress](https://www.cypress.io/),
+an open source end-to-end testing framework. It runs tests against 
+a locally hosted instance of Submitty by automating a browser. 
+Tests are written in JavaScript and are executed 
+in the Cypress test-runner. This does not test the PHP (or C++) code
+directly, but rather focuses on user navigation through the website. It 
+used to use Selenium, but has been rewritten in using Cypress.
 
 ## Installation 
-
-Make sure you have `node.js` version 10 or higher installed locally. You can check using the command: `node -v` 
+Make sure you have [`node.js`](https://www.nodejs.org/)  version 10 or higher installed locally. You can check using the command: `node -v` 
 
 ```bash
 # from the site directory
@@ -16,6 +19,8 @@ npm install
 ```
 
 If you are on Linux, view [this page](https://docs.cypress.io/guides/getting-started/installing-cypress.html#Linux) to see what dependencies you may need to install additionally for Cypress.
+
+If you are on WSL and run into an error, make sure you installed `node.js` on your desktop (Program Files) and not inside your local Submitty repository.
 
 ## Cypress Test Runner
 

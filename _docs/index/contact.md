@@ -12,27 +12,54 @@ Are you interested in joining the Submitty Development Team?  Please read:
 
 ## Online Community Discussion
 
-We have a public [Slack server for Submitty Users and Developers](https://join.slack.com/t/submitty/shared_invite/enQtMzE1NzgyMzUzNzI5LWZhOGM4NWU4M2U3ZmM2ZmM5NTYwNjk3NTc5Yjg1ZGRlYzU1MjcwYWNkNGYxZjk2YTk3ZmEyODY3MjEyOTc0M2E).
 
-Please use the Slack server `#general-welcome` and
-`#gettingstarted-installation-development` and
-`#technical-developers-studio` channels for community introductions,
-to discuss Submitty installation problems, ask general development
-questions, and have feature design discussion.  We appreciate the
-Submitty community working together to help new developers.
 
-When asking for help on installation, please include your host
-operating system & version, and your versions of vagrant and virtual
-box.  When asking for help on how to patch bugs or implement new features,
-please describe what you've done to get started, what you've figured
-out, and specifically where you're stuck.
 
-_Special Request: Please do not contact administrator individuals by Slack
-direct private message or personal email to ask technical questions.
-It is likely that other developers have the same or similar questions
-or are experiencing the same bug.  So we'd like to answer those questions
-on the public forum.  And you'll probably get a faster reply when you
-ask the larger community.  Thank you!_
+
+
+
+<div style="width: 100%;">
+<div style="width: 80%; float: left;"> 
+We have a public <a href="https://submitty.zulipchat.com/join/7keujybzs4ismpedptpqsqpv/">Zulip server for Submitty Users and Developers</a>.
+<br>
+Zulip is an open-source modern team chat app designed to keep both live and asynchronous conversations organized.
+</div>
+<div style="margin-left: 80%;"> 
+<center>
+<a href="https://zulip.com/"><img src="/images/zulip-icon-128x128.png" width="80px"></a>
+</center>
+</div>
+</div>        
+
+
+
+
+* Please use the Zulip stream `#General-Welcome-Introductions` for
+community introductions.
+
+* Use the `#Installation/Getting Started`
+stream to discuss Submitty installation problems and introductory
+development questions.  When asking for help on installation, please
+include your host operating system & version, and your versions of
+vagrant and virtual box.
+
+* The `#Submitty Developer Studio` stream is for more advanced
+development questions and feature design discussion.  When asking for
+help on how to patch bugs or implement new features, please describe
+what you've done to get started, what you've figured out, and
+specifically where you're stuck.
+
+* If there is already a topic within the stream that is related to your
+question, please use that.  Otherwise, please start a new topic.  We
+appreciate the Submitty community working together to help new
+developers.
+
+* _Special Request: Please do not contact administrator individuals by
+Zulip direct private message or personal email to ask technical
+questions.  It is likely that other developers have the same or
+similar questions or are experiencing the same bug.  So we'd like to
+answer those questions on the public forum.  And you'll probably get a
+faster reply when you ask the larger community.  Thank you!_
 
 
 ## Demo Submitty
