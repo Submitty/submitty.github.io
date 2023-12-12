@@ -1,10 +1,8 @@
 ---
 title: Installation Troubleshooting
-category: Developer > Troubleshooting
+category: Developer > Development Troubleshooting
 ---
 
-
----
 
 * If your install becomes stuck on ``SSH auth method: private key`` for more than three minutes,
    then what you can do is open Virtual Box, navigate to your VM, and click the green "Show" button.

@@ -172,7 +172,7 @@ var NAVTREE =
                 [ "Rainbow Grades", "/sysadmin/configuration/rainbow_grades", null ],
                 [ "Student Photos", "/sysadmin/configuration/student_photos", null ]
             ] ],
-            [ "Troubleshooting & Other Information", "/sysadmin/troubleshooting/database_overview", [
+            [ "SysAdmin Troubleshooting, etc.", "/sysadmin/troubleshooting/database_overview", [
                 [ "Database Overview", "/sysadmin/troubleshooting/database_overview", null ],
                 [ "User Access Level", "/sysadmin/troubleshooting/user_access_level", null ],
                 [ "Log Files", "/sysadmin/troubleshooting/log_files", null ],
@@ -233,9 +233,9 @@ var NAVTREE =
                     [ "Frontend JavaScript", "/developer/developing_the_php_site/javascript", null]
                 ] ],
             ] ],
-            [ "Troubleshooting & Other Information", "/developer/troubleshooting/installation_troubleshooting", [
-                [ "Installation", "/developer/troubleshooting/installation_troubleshooting", null ],
-                [ "System Clock Testing", "/developer/troubleshooting/system_clock_testing_troubleshooting", null ],
+            [ "Development Troubleshooting", "/developer/troubleshooting/installation_troubleshooting", [
+                [ "Installation Troubleshooting", "/developer/troubleshooting/installation_troubleshooting", null ],
+                [ "System Clock Troubleshooting", "/developer/troubleshooting/system_clock_testing_troubleshooting", null ],
             ] ],
             [ "Software and System Design", "/developer/software_and_system_design/interface_design_style_guide", [
                 [ "Interface Design", "/developer/software_and_system_design/interface_design_style_guide", null ],

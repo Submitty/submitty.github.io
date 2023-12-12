@@ -1,9 +1,8 @@
 ---
 title: System Clock Testing & Troubleshooting
-category: Developer > Troubleshooting
+category: Developer > Development Troubleshooting
 ---
 
----
 
 * If the VM has a clock skew (incorrect time)
 

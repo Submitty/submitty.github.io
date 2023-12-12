@@ -1,6 +1,6 @@
 ---
 title: Database Overview
-category: System Administrator > Troubleshooting & Other Information
+category: System Administrator > SysAdmin Troubleshooting, etc.
 redirect_from:
   - /sysadmin/database_overview
 ---
