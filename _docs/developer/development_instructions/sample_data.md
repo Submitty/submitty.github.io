@@ -72,4 +72,4 @@ You may also need to edit test cases in Cypress, Selenium, etc.
 
 ---
 
-See also: [Re-Creating All Sample Course Data](/developer/troubleshooting/reinstallation_troubleshooting)
+See also: [Re-Creating All Sample Course Data](/developer/development_instructions/index#re-creating-all-sample-course-data)
