@@ -1,6 +1,6 @@
 ---
 title: Websockets / System & Debugging
-category: System Administrator > Troubleshooting & Other Information
+category: System Administrator > SysAdmin Troubleshooting, etc.
 redirect_from:
   - /sysadmin/system_debugging
 ---
@@ -81,3 +81,14 @@ redirect_from:
   When you replace your `.cert` file for apache, be sure to also
   replace the `.pem` file for nginx.  See also
   [v20.09.00 NGINX for Websocket Request](/sysadmin/installation/version_notes/v20.09.00).
+
+### Testing Websockets while NGINX is closed
+
+
+  * We want to make sure that the site remains 100% functional, minus the live updates, when Websockets are down
+    to test this you can stop NGINX in vagrant ssh to recreate this behavior by typing in:
+
+    ```
+    sudo systemctl stop nginx
+    ```
+    with nginx stopped you can test functions of the site without being connected to the websocket client.

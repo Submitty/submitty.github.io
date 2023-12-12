@@ -10,6 +10,22 @@ redirect_from:
 
 ---
 
+## 2023 Summer Developers
+
+![](/images/people/2023_summer.png)
+
+Jaeseok Kang,
+Nia Heermance,
+Yanli Wang,
+Sátvik Karanam,
+Youssef Hassan,
+William Allen,
+Viane Matsibekker,
+Chris Reed,
+Barb Cutler
+
+---
+
 ## 2023 Spring Developers
 
 ![](/images/people/2023_spring.png)
@@ -56,7 +72,7 @@ Miles Ednie, Henrik Lam, Stephanie Li, Javier Portorreal, Eddie Krystowki, Chris
 
 ![](/images/people/2019_summer.jpeg)
 
-Kevin McKinney, Alexa Orosz, Jacob McKnight, Maya Tung, Saketh Dargula, Shail Patel, and Evan Maicus
+Kevin McKinney, Alexa Orosz, Jacob McKnight, Maya Tung, Saketh Dargula, Shail Patel, Evan Maicus and Barb Cutler
 
 ---
 

@@ -82,7 +82,7 @@ the installation process.
    are looking to contribute.
    
    _OPTIONAL: If you will be developing code in one of the companion
-   Submitty repositories (e.g., AnalysisTools, Lichen, RainbowGrades, Tutorial), also
+   Submitty repositories (e.g., AnalysisTools, Lichen, Localization, RainbowGrades, Tutorial), also
    clone those repositories to the same directory.  For example:_
 
    ```
@@ -92,6 +92,7 @@ the installation process.
            └── GIT_CHECKOUT
                ├── AnalysisTools  (optional)
                ├── Lichen         (optional)
+               ├── Localization   (optional)
                ├── RainbowGrades  (optional)
                ├── Submitty
                └── Tutorial       (optional)
@@ -170,9 +171,7 @@ the installation process.
    If you do not see this message due to an error or the installation
    has frozen, check out:
 
-   * [Installation Troubleshooting](#installation-troubleshooting)
-
-   * [Development Instructions Troubleshooting](/developer/development_instructions/troubleshooting)
+   * [Installation Troubleshooting](/developer/troubleshooting/installation_troubleshooting)
 
 ---
 

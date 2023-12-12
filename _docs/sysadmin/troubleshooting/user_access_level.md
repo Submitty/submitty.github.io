@@ -1,6 +1,6 @@
 ---
 title: User Access Level
-category: System Administrator > Troubleshooting & Other Information
+category: System Administrator > SysAdmin Troubleshooting, etc.
 redirect_from:
   - /sysadmin/user_access_level
 ---

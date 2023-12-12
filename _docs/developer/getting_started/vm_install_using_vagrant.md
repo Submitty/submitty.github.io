@@ -159,7 +159,7 @@ Below are quick steps to get everything installed and running.
    the repo and use the git url from your fork instead, especially if you are looking to contribute.
 
    _OPTIONAL: If you will be developing code in one of the companion
-   Submitty repositories (e.g., AnalysisTools, Lichen, RainbowGrades, Tutorial), also
+   Submitty repositories (e.g., AnalysisTools, Lichen, Localization, RainbowGrades, Tutorial), also
    clone those repositories to the same directory.  For example:_
 
      ```
@@ -169,6 +169,7 @@ Below are quick steps to get everything installed and running.
              └── GIT_CHECKOUT
                  ├── AnalysisTools  (optional)
                  ├── Lichen         (optional)
+                 ├── Localization   (optional)
                  ├── RainbowGrades  (optional)
                  ├── Submitty
                  └── Tutorial       (optional)
@@ -275,9 +276,7 @@ Below are quick steps to get everything installed and running.
    If you do not see this message due to an error or the installation
    has frozen, check out:
 
-   * [Installation Troubleshooting](#installation-troubleshooting)
-
-   * [Development Instructions Troubleshooting](/developer/development_instructions/troubleshooting)
+   * [Installation Troubleshooting](/developer/troubleshooting/installation_troubleshooting)
 
 ---
 
@@ -343,6 +342,7 @@ Below are quick steps to get everything installed and running.
 
     | user | password | role |
     |------|----------|-------|
+    | superuser | superuser | Superuser |
     | vagrant | vagrant | OS user |
     | root | vagrant | OS user |
     | submitty_cgi | submitty_cgi | Submitty process |
@@ -418,69 +418,6 @@ Below are quick steps to get everything installed and running.
    ```
    vagrant up
    ```
-
----
-
-## Installation Troubleshooting
-
-* If your install seems to randomly freeze during `vagrant up` 
-with no explanation, then there are a couple of things that may be going wrong:
-
-    *Note: If this happens, it may be worth running a simple `vagrant destroy` before you try to `vagrant up` again. It is possible to repair, but it is usually more effort than it is worth.*
-
-    * First, check to make sure you have a solid internet connection. 
-    Even if the connection is fast, it may experience drop-outs every 
-    once in a while, so it is highly recommended to install it with a wired 
-    connection to the internet.
-
-    * Secondly, check to make sure your computer is not going to 
-    sleep, this can be changed in settings for some systems, or you 
-    can install a program to keep it awake (for example, amphetamine on Mac).
-
-* If an error is thrown during `vagrant up`, you may need to
-   uninstall Virtual Box and all virtual machines by typing the
-   following commands:
-
-   _CAUTION: This should only be done if you do not have any other virtual machines._
-
-   To remove Virtual Box type:
-
-   ```
-   sudo apt-get remove --purge virtualbox
-   ```
-   To remove all virtual machines and configuration files type:
-
-   ```
-   sudo rm ~/"VirtualBox VMs" -Rf
-   sudo rm ~/.config/VirtualBox/ -Rf
-   ```
-   This will delete all virtual machine settings. Then install
-   the latest version of Virtual Box and vagrant from the links given in step 3 (using Ubuntu Software).
-
-* If it has been a while since your last `vagrant destroy` and
-    `vagrant up` you may need to update/upgrade/reinstall the virtual
-    box, vagrant, and the installed boxes on your
-    system:
-
-    For example, on Mac:
-
-    ```
-    brew reinstall --cask virtualbox
-    brew reinstall --cask vagrant
-    vagrant plugin update
-    vagrant box update
-    ```
-
-    If you continue to have errors on Mac with `vagrant up` after
-    reinstalling virtualbox and vagrant, check "System Preferences" ->
-    "Security & Privacy".  You may need to approve/reapprove
-    "Allow apps download from".  You may also need to restart your computer.
-
-    Similar instructions for other OS.
-
-
-* See also [Development Instructions Troubleshooting](/developer/development_instructions/troubleshooting)
-
 ---
 
 ## Testing with a remote device
@@ -503,7 +440,7 @@ with no explanation, then there are a couple of things that may be going wrong:
 
 4. Retrieve the private key for the vagrant machine, located at `<SUBMITTY GIT REPO>/.vagrant/machines/<VM>/<VM BACKEND>/private_key`.
 
-   At the time of writing, `<VM>` is `ubuntu-20.04`, and `<VM BACKEND>` is `virtualbox`.
+   At the time of writing, `<VM>` is `ubuntu-22.04`, and `<VM BACKEND>` is `virtualbox`.
 
 5. Use SSH to connect from the remote device to the machine that is running the VM, and use SSH port forwarding (local forwarding) to forward the necessary ports.
 

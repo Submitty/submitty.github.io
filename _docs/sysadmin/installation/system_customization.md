@@ -134,7 +134,7 @@ allowed to connect more frequently.
 To improve the security of the system, it might be useful to disable various unused PHP functions. This can be done by modifying the [disabled_functions](https://secure.php.net/manual/en/ini.core.php#ini.disable-functions) directive. Provided below is the setting used within our Vagrant and live setup:
 
 ```
-disable_functions = popen,pclose,proc_open,chmod,php_real_logo_guid,php_egg_logo_guid,php_ini_scanned_files,php_ini_loaded_file,readlink,symlink,link,set_file_buffer,proc_close,proc_terminate,proc_get_status,proc_nice,getmyuid,getmygid,getmyinode,putenv,get_current_user,magic_quotes_runtime,set_magic_quotes_runtime,import_request_variables,ini_alter,stream_socket_client,stream_socket_server,stream_socket_accept,stream_socket_pair,stream_get_transports,stream_wrapper_restore,mb_send_mail,openlog,syslog,closelog,pfsockopen,posix_kill,apache_child_terminate,apache_get_modules,apache_get_version,apache_lookup_uri,apache_reset_timeout,apache_response_headers,virtual,system,phpinfo,exec,shell_exec,passthru,pcntl_alarm,pcntl_fork,pcntl_waitpid,pcntl_wait,pcntl_wifexited,pcntl_wifstopped,pcntl_wifsignaled,pcntl_wexitstatus,pcntl_wtermsig,pcntl_wstopsig,pcntl_signal,pcntl_signal_dispatch,pcntl_get_last_error,pcntl_strerror,pcntl_sigprocmask,pcntl_sigwaitinfo,pcntl_sigtimedwait,pcntl_exec,pcntl_getpriority,pcntl_setpriority,
+disable_functions = popen,pclose,proc_open,php_real_logo_guid,php_egg_logo_guid,php_ini_scanned_files,php_ini_loaded_file,readlink,symlink,link,set_file_buffer,proc_close,proc_terminate,proc_get_status,proc_nice,getmyuid,getmygid,getmyinode,putenv,get_current_user,magic_quotes_runtime,set_magic_quotes_runtime,import_request_variables,ini_alter,stream_socket_client,stream_socket_server,stream_socket_accept,stream_socket_pair,stream_get_transports,stream_wrapper_restore,mb_send_mail,openlog,syslog,closelog,pfsockopen,posix_kill,apache_child_terminate,apache_get_modules,apache_get_version,apache_lookup_uri,apache_reset_timeout,apache_response_headers,virtual,system,phpinfo,exec,shell_exec,passthru,pcntl_alarm,pcntl_fork,pcntl_waitpid,pcntl_wait,pcntl_wifexited,pcntl_wifstopped,pcntl_wifsignaled,pcntl_wexitstatus,pcntl_wtermsig,pcntl_wstopsig,pcntl_signal,pcntl_signal_dispatch,pcntl_get_last_error,pcntl_strerror,pcntl_sigprocmask,pcntl_sigwaitinfo,pcntl_sigtimedwait,pcntl_exec,pcntl_getpriority,pcntl_setpriority,disk_free_space,disk_total_space,diskfreespace,getlastmo,getmypid,extract,parse_str,mail,fsockopen,posix_setpgid,posix_setsid,posix_setuid,exif_read_data,read_exif_data,exif_thumbnail,exif_imagetype,tempnam,
 ```
 
 However, this should be only applied to the `php.ini` running the web server and not applied to the `cgi/php.ini` which does require some of these functions to function properly.
@@ -147,7 +147,7 @@ By default, PHP only allows 20 files to be uploaded at a time.
 This limit is probably sufficient, but to change this limit, edit:
 
 ```
-/etc/php/7.4/fpm/php.ini
+/etc/php/8.1/fpm/php.ini
 ```
 
 and modify the variable:
@@ -159,7 +159,7 @@ max_file_uploads = 20
 
 Then restart PHP
 ```
-systemctl reload php7.4-fpm
+systemctl reload php8.1-fpm
 ```
 
 ## Allowing Large Student File Upload Submissions
@@ -172,10 +172,10 @@ value, view/edit this file:
 
 
 ```
-/etc/php/7.4/fpm/php.ini
+/etc/php/8.1/fpm/php.ini
 ```
 
-_Note: Ubuntu 20.04 is using 7.4, but older versions might be using `php7.0-fpm`._
+_Note: Depending on your version of Ubuntu, your version of php fpm will be different._
 
 Change these variables as appropriate:
 
@@ -192,17 +192,17 @@ And restart apache:
 
 ```
 sudo systemctl restart apache2.service
-sudo systemctl restart php7.4-fpm.service
+sudo systemctl restart php8.1-fpm.service
 ```
 
 and/or
 
 ```
 sudo service apache2 restart
-sudo service php7.4-fpm restart
+sudo service php8.1-fpm restart
 ```
 
-_Note: Ubuntu 20.04 is using 7.4, but older versions might be using `php7.0-fpm`._
+_Note: Depending on your version of Ubuntu, your version of php fpm will be different._
 
 By default, a Submitty electronic gradeable allows students to upload
 files totaling 100KB.  Instructors can adjust this limit per gradeable
@@ -214,7 +214,7 @@ in the `config.json`, for example:
 ```
 
 If you are having difficulty with student upload size, you can modify the
-following in `/etc/php/7.4/fpm/php.ini`:
+following in `/etc/php/8.1/fpm/php.ini`:
 
 ```
 memory_limit
@@ -230,7 +230,7 @@ students are using the system at once.
 ## Tune the performance of the website to handle a large number of users
 
 
-Reading the PHP memory limit from `/etc/php/7.4/fpm/php.ini`
+Reading the PHP memory limit from `/etc/php/8.1/fpm/php.ini`
 
 ```
 memory_limit = <MEMORY LIMIT>
@@ -247,14 +247,14 @@ restart apache and php-fpm:
 
 ```
 sudo systemctl restart apache2.service
-sudo systemctl restart php7.4-fpm.service
+sudo systemctl restart php8.1-fpm.service
 ```
 
 
 #### PHP-FPM settings using the static process manager
 
 
-Adjust the following settings in `/etc/php/7.4/fpm/pool.d/submitty.conf`.
+Adjust the following settings in `/etc/php/8.1/fpm/pool.d/submitty.conf`.
 
 We have found that the following settings work well for a production
 server with approximately 2000 students.  The commented out line is
@@ -277,7 +277,7 @@ can be used to calculate a `pm.max_children` value for your server
 #### PHP-FPM settings using the dynamic process manager
 
 
-Adjust the following settings in `/etc/php/7.4/fpm/pool.d/submitty.conf`.
+Adjust the following settings in `/etc/php/8.1/fpm/pool.d/submitty.conf`.
 
 The commented out line is the default value.  Please read the documentation
 to determine values that are appropriate for your own system.

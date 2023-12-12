@@ -38,7 +38,7 @@ the student project reports from previous summers linked below.
 4. Review our project ideas list:   
    [https://submitty.org/developer/project_ideas](/developer/project_ideas)
 
-5. Join our Slack channel to ask questions and meet other new developers:   
+5. Join our Zulip server to ask questions and meet other new developers:   
    [https://submitty.org/contact](/contact)
    
    Ask specific technical questions about the Submitty system and open
@@ -48,7 +48,7 @@ the student project reports from previous summers linked below.
    be taken into account as we evaluate your application.
 
    _NOTE: The Submitty mentors for Google Summer of Code are on our
-   Slack channel.  Please communicate through the public channels and
+   Zulip server.  Please communicate through the public streams and
    do not direct message (DM) / private message any mentors. 
    Mentors will generally not respond to private messages._
 

@@ -179,3 +179,27 @@ redirect_from:
 
 [SAMPLE_Makefile]: https://github.com/Submitty/RainbowGrades/blob/main/SAMPLE_Makefile
 [SAMPLE_customization.json]: https://github.com/Submitty/RainbowGrades/blob/main/SAMPLE_customization.json
+
+[Drop lowest function]
+Although it is not yet implemented in web-GUI, RainbowGrades support drop lowest grade.
+Directly edit the customization.json file
+Here is a example usage, removing one lowest gradeable from given type
+
+  ```json
+{
+  "count": 8,
+  "percent": 0.12,
+  "type": "quiz",
+  "remove_lowest": 1,
+  "ids": [
+    {
+      "max": 10.0,
+      "id": "quiz01",
+      "percent": 0.125,
+      "released": true
+    }
+     ]
+}
+  ```
+
+

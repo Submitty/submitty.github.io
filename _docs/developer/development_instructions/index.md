@@ -28,7 +28,6 @@ complicated and expensive steps at the bottom of the page._
 
 Please also see [Installation Version Notes](/sysadmin/installation/version_notes)
 
-
 ---
 
 ## Submitty Help - List of Shortcuts
@@ -55,8 +54,9 @@ Please also see [Installation Version Notes](/sysadmin/installation/version_note
 ## Website and Bin Script Changes
 
 * If you have only made minor or modest visual changes to website
-  (e.g., the html, css, twig, or php files), or other files in the
-  `site` folder, you can apply those changes by running this shortcut:
+  (e.g., the html, css, twig, or php files), other files in the `site`
+  folder, or translation files in the Localization repository, you can
+  apply those changes by running this shortcut:
 
   ```
   submitty_install_site
@@ -124,9 +124,7 @@ be able to reload the website and see the update.
   See also: [PhpStorm configuration instructions](/developer/getting_started/phpstorm)
 
 
----
-
-## Clearing Your Browser Cache
+### Clearing Your Browser Cache
 
 
 * If the JavaScript files have changed and there are errors or you do not see the
@@ -162,6 +160,9 @@ include more significant Submitty source code changes, it will likely
 be necessary to conduct a more complete update and reset re-set of all
 of the Submitty source code.
 
+
+
+
 * In these cases, run this shortcut in the vagrant terminal:
 
    ```
@@ -186,9 +187,12 @@ of the Submitty source code.
    sudo /usr/local/submitty/.setup/INSTALL_SUBMITTY.sh clean
    ```
 
----
 
-## Autograding Development
+Note: The above commands will also apply any necessary system and
+database [Migrations](/developer/development_instructions/migrations).
+
+
+### Autograding Development
 
 In addition to the `submitty_install` command above, if you modify an
 autograding configuration, you'll probably need to:
@@ -197,42 +201,6 @@ autograding configuration, you'll probably need to:
 
 * [Batch Regrade Homeworks](/instructor/batch_regrade_submissions) already submitted to those gradeables.
 
-
----
-
-## System Clock Testing & Troubleshooting
-
-* If the VM has a clock skew (incorrect time)
-
-  ```
-  sudo service ntp stop
-  sudo ntpd -gq
-  sudo service ntp start
-  ```
-
-
-* If you need to test time and/or date dependent elements, you can
-  change it in the vagrant machine so you don't have to wait.  To
-  remove the syncing and set your own time:
-
-  ```
-  sudo systemctl disable ntp
-  timedatectl set-ntp 0
-  sudo date -s "<year>-<month>-<day> <hour>:<minute>:<seconds>
-  ```
-
-  To check the date, helpful to make sure the date and time you set has stuck:
-
-  ```
-  date
-  ``` 
-
-  To sync back with the current time:
-
-  ```
-  sudo systemctl enable ntp
-  timedatectl set-ntp 1
-  ```
 
 ---
 
@@ -255,16 +223,15 @@ these changes.
   ```
   sudo python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/update_database.py
   ```
-
-
+  
 ---
 
 ## Re-Creating All Sample Course Data
-
 * If you've changed the script to create a new course
   (`create_course.sh`), or the schema for the master database
   (`submitty_db.sql`), or the schema for the course databases
-  (`course_tables.sql`), we need to delete all courses, and recreate
+  (`course_tables.sql`), or you changed student/gradeable data
+  we need to delete all courses and recreate
   the course databases, users, and sample submission uploads.
 
   _NOTE: Make sure you are not be connected to any DBs (e.g., through
@@ -283,8 +250,11 @@ these changes.
   missing the hundreds of sample student submissions present in the
   full installation.
 
-  See also: [Database Migrations](/developer/development_instructions/migrations)
 
+  NOTE: This command will also have to be run twice a year on July 1st and January 1st when the test semester will change from fall to spring or vice versa.
+
+
+  See also: [Sample Course Data](/developer/development_instructions/sample_data)
 
 ---
 
@@ -321,4 +291,24 @@ these changes.
   the shared directory of the Submitty working repository.  It will
   also destroy the databases, and any grading configuration or grading
   work that has been done._
+
+---
+---
+
+
+## Virtual Machine Recovery using Snapshots
+
+In the event of a non-recoverable error while working on Submitty the last resort is to, perform a fresh `vagrant up`. However, this process can be time-consuming. To avoid such situations and save time, it is highly recommended to take a snapshot when you first set up your Vagrant environment by following the tutorial links provided below:
+
+* [Virtual Box](https://www.youtube.com/watch?v=Kl-Qc6N9znw)
+
+* [VMWare](https://www.youtube.com/watch?v=DQutP_-2j3g)
+
+* [Vagrant](https://developer.hashicorp.com/vagrant/docs/cli/snapshot)
+
+By taking a snapshot at this initial stage, you can later revert to this saved state if needed, ensuring a quick recovery. Once you have restored the snapshot, you can then proceed with the following steps:
+
+1. Launch the virtual machine using `vagrant up`.
+2. Access the virtual machine with `vagrant ssh`.
+3. Run `submitty_install` command to conduct a more complete update and reset of all of the Submitty source code.
 

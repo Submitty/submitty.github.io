@@ -13,65 +13,78 @@ Be sure to start with the [Initial Set Up](/developer/testing/#initial-set-up) i
 
 ## Python Linting
 
-The Python code of Submitty is linted using [flake8](https://flake8.pycqa.org/en/latest/) and
-[flake8-bugbear](https://github.com/PyCQA/flake8-bugbear). You can run the Python linter
-locally (on your host operating system) by running the following command from the root
+The Python code of Submitty is linted using [flake8](https://flake8.pycqa.org/en/latest/), 
+[flake8-bugbear](https://github.com/PyCQA/flake8-bugbear), and [pylint](https://pylint.readthedocs.io/en/stable/). 
+You can run the Python linter locally (on your host operating system) by running the following command from the root
 level of Submitty source tree:
 
 ```bash
-# from root level of Submitty repository
+# from root level of Submitty repository using flake8
 python3 -m flake8
-```
 
-_NOTE: Our Travis CI testing currently [excludes a number of legacy source code files](https://github.com/Submitty/Submitty/blob/master/.flake8).
-from Python linting, though there is effort to bring more and more of them under flake8._
+# from root level of Submitty repository using pylint
+python3 -m pylint --recursive=y .
+```
 
 Optionally, you can pass in a specific file or directory to only lint that file or directory, e.g.:
 
 ```bash
-# from root level of Submitty repository...  to lint a specific file:
+# from root level of Submitty repository...  to lint a specific file using flake:
 python3 -m flake8 bin/generate_repos.py
+
+# from root level of Submitty repository...  to lint a specific file using pylint:
+python3 -m pylint bin/generate_repos.py
+```
+
+If you wish to automatically fix the basic linting problems, you can use [black formatter](https://github.com/psf/black):
+```bash
+# install black formatter
+pip install git+https://github.com/psf/black
+
+# formats all the files in that directory
+black ./files/location/
+
+# formats specified file
+black ./location/file.py
 ```
 
 See also: [Python Style Guide](/developer/coding_style_guide/python)
 
 ## PHP Linting
 
-*You will need PHP installed on your host system first, see [Installing PHP](/developer/testing/install_php)*
-
 The PHP code of Submitty is linted using [phpcs](https://github.com/squizlabs/PHP_CodeSniffer).
+The following instructions were tested for Windows:
 
-You can run the PHP Linter locally (from your host operating system):
-If you are running on WSL and are seeing errors, remove "`php`" from the following commands.
+1. First, you will need PHP installed on your host system first. See [Installing PHP](/developer/testing/install_php)*
 
-```bash
-# from root level of Submitty repository
-php site/vendor/bin/phpcs
+2. Next, you will need [Composer](https://getcomposer.org/doc/00-intro.md) installed on your host system as well.
+	During this install, you will need to change settings in a php.ini file. Change the settings the prompt recommends.
 
-# or if in the site/ directory of the Submitty
-php vendor/bin/phpcs
-```
+3. Run ``composer global require slevomat/coding-standard`` and ``composer global require "squizlabs/php_codesniffer=*"`` inside your terminal.
 
-Similarly, you can pass a specific file or directory to `phpcs`, e.g:
+4. ``cd`` to your ``site`` directory in your Submitty repository and run ``composer update``.
 
-```bash
-# from root level of Submitty repository...  run phpcs against all files in this subdirectory
-php site/vendor/bin/phpcs site/app/controllers/student/
-```
+5. Now run ``php vendor/bin/phpcs --extensions=php ./app`` inside your ``site`` directory. You can change ``./app``
+if you want to lint only a specific file.
 
 See also: [PHP Style Guide](/developer/coding_style_guide/php)
 
 ## PHP Static Analysis
 
 The PHP code of Submitty is statically analyzed by [phpstan](https://phpstan.org/user-guide/getting-started).
-To run it locally (from your host operating system), you can do the following:
+We recommend running it inside the VM as it is already installed on it. Simply ``vagrant ssh`` inside your Submitty
+folder and navigate to
+```
+/usr/local/submitty/GIT_CHECKOUT/Submitty/site/
+```
+Then run:
 
 ```bash
 # from root level of Submitty repository
-php site/vendor/bin/phpstan analyze -c site/phpstan.neon site/app site/public/index.php site/socket/index.php
+php site/vendor/bin/phpstan analyze -c site/phpstan.neon
 
 # or if in the site/ directory of the Submitty repository
-php vendor/bin/phpstan analyze app public/index.php socket/index.php
+php vendor/bin/phpstan analyze
 ```
 
 Unlike flake8 and phpcs, a path or file _MUST_ be passed to phpstan.
@@ -80,7 +93,35 @@ phpstan maintains a list of known errors in the [phpstan-baseline.neon](https://
 If you fix one of these errors, you would need to regenerate this file which can be done by doing:
 
 ```
-php vendor/bin/phpstan analyze app public/index.php socket/index.php --generate-baseline
+php vendor/bin/phpstan analyze app public/index.php socket/index.php --generate-baseline --memory-limit 2G
+```
+The argument `--memory_limit 2G` is necessary when phpstan will otherwise not have enough memory
+to generate a new baseline. You can see how much memory phpstan has been using with the `-v` flag
+
+# Submitty Test Script for PHP Linting
+
+The `submitty_test` script is an alias for the `SUBMITTY_TEST.sh` script, similar to `submitty_install_site`. 
+This script streamlines the process of PHP linting by performing the following steps:
+
+1. Changes the directory to `GIT_CHECKOUT/Submitty/site`.
+2. Installs Composer if not already installed (skips if Composer is already installed).
+3. Executes the specified PHP linting command.
+4. Returns to the original directory.
+
+## Commands:
+
+- `phpcs`: Runs PHP CodeSniffer.
+- `phpstan`: Runs PHP static analysis.
+- `php-lint`: Runs both PHP CodeSniffer and PHPStan.
+
+## Additional Arguments:
+
+The `submitty_test` script accepts additional arguments, such as `--memory_limit 2G`.
+
+## Example Usage:
+
+```
+submitty_test php-lint --memory-limit 2G
 ```
 
 ## JavaScript Linting
