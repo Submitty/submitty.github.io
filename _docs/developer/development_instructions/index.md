@@ -28,8 +28,6 @@ complicated and expensive steps at the bottom of the page._
 
 Please also see [Installation Version Notes](/sysadmin/installation/version_notes)
 
-Please also see [Re-Installation Troubleshooting](/developer/troubleshooting/reinstallation_troubleshooting)
-
 ---
 
 ## Submitty Help - List of Shortcuts
