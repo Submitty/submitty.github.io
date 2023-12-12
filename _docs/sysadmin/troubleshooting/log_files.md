@@ -1,6 +1,6 @@
 ---
 title: Log Files
-category: System Administrator > Troubleshooting & Other Information
+category: System Administrator > SysAdmin Troubleshooting, etc.
 redirect_from:
   - /instructor/log_files
   - /sysadmin/log_files

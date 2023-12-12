@@ -28,7 +28,6 @@ complicated and expensive steps at the bottom of the page._
 
 Please also see [Installation Version Notes](/sysadmin/installation/version_notes)
 
-
 ---
 
 ## Submitty Help - List of Shortcuts
@@ -202,41 +201,6 @@ autograding configuration, you'll probably need to:
 
 * [Batch Regrade Homeworks](/instructor/batch_regrade_submissions) already submitted to those gradeables.
 
----
-
-## System Clock Testing & Troubleshooting
-
-* If the VM has a clock skew (incorrect time)
-
-  ```
-  sudo service ntp stop
-  sudo ntpd -gq
-  sudo service ntp start
-  ```
-
-
-* If you need to test time and/or date dependent elements, you can
-  change it in the vagrant machine so you don't have to wait.  To
-  remove the syncing and set your own time:
-
-  ```
-  sudo systemctl disable ntp
-  timedatectl set-ntp 0
-  sudo date -s "<year>-<month>-<day> <hour>:<minute>:<seconds>
-  ```
-
-  To check the date, helpful to make sure the date and time you set has stuck:
-
-  ```
-  date
-  ``` 
-
-  To sync back with the current time:
-
-  ```
-  sudo systemctl enable ntp
-  timedatectl set-ntp 1
-  ```
 
 ---
 
@@ -259,12 +223,10 @@ these changes.
   ```
   sudo python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/update_database.py
   ```
-
-
+  
 ---
 
 ## Re-Creating All Sample Course Data
-
 * If you've changed the script to create a new course
   (`create_course.sh`), or the schema for the master database
   (`submitty_db.sql`), or the schema for the course databases
@@ -331,6 +293,8 @@ these changes.
   work that has been done._
 
 ---
+---
+
 
 ## Virtual Machine Recovery using Snapshots
 
