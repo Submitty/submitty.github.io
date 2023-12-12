@@ -235,7 +235,6 @@ var NAVTREE =
             ] ],
             [ "Troubleshooting & Other Information", "/developer/troubleshooting/installation_troubleshooting", [
                 [ "Installation", "/developer/troubleshooting/installation_troubleshooting", null ],
-                [ "Re-Installation", "/developer/troubleshooting/reinstallation_troubleshooting", null ],
                 [ "System Clock Testing", "/developer/troubleshooting/system_clock_testing_troubleshooting", null ],
             ] ],
             [ "Software and System Design", "/developer/software_and_system_design/interface_design_style_guide", [
