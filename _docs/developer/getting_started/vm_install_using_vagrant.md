@@ -14,9 +14,9 @@ Unix/Linux).  The installation process will create a new Virtual
 Machine (VM) on your computer and the VM will use the Ubuntu GNU/Linux
 operating system.
 
-__Note:__ We only officially support and test development using VirtualBox. 
-The instructions below are for VirtualBox.  While alternatively using 
-VMWare should work, we have not tested this, and do not provide these 
+__Note:__ We only officially support and test development using VirtualBox.
+The instructions below are for VirtualBox.  While alternatively using
+VMWare should work, we have not tested this, and do not provide these
 instructions.
 
 ---
@@ -50,15 +50,15 @@ If you using an Intel-based Mac, you will follow the instructions below._
    Leaving it enabled will force VirtualBox to use the Hyper-V
    backend, which will be slower and can cause instability in the
    VM.
-   
+
    **Note:**
    This may stop programs like Docker Desktop and WSL 2 from
    working. If these programs are essential to your workflow, consider
    looking up how to add a separate boot entry with "hypervisorlaunchtype"
    set to "off" for use with VirtualBox.
-   
+
    **Note:**
-   Installing WSL2 may also reconfigure your OS to use Hyper-V or Windows hypervisor 
+   Installing WSL2 may also reconfigure your OS to use Hyper-V or Windows hypervisor
    platform and prevent VirtualBox from working correctly. It is recommended to not install
    or use WSL2 alongside Virtualbox for now.
 
@@ -106,7 +106,7 @@ If you using an Intel-based Mac, you will follow the instructions below._
 
    4. Be sure to choose **Hardware Virtualization** in the **System -> Acceleration** settings of the virtual machine you are using.
 
-   **NOTE** 
+   **NOTE**
    If using secure boot, vagrant may fail to work with VirtualBox. You will then either need to disable secure boot from
    the boot menu/BIOS or follow [these steps](https://era86.github.io/2018/01/24/vagrant-virtualbox-secureboot-in-ubuntu-1604.html)
    to self-sign the necessary packages to run vagrant and VirtualBox.
@@ -153,7 +153,7 @@ Below are quick steps to get everything installed and running.
    ```
    git clone https://github.com/Submitty/Submitty.git
    ```
-   
+
    **NOTE:** If you are not currently part of the Submitty organization on Github, you may want to
    [fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
    the repo and use the git url from your fork instead, especially if you are looking to contribute.
@@ -211,17 +211,30 @@ Below are quick steps to get everything installed and running.
    NO_SUBMISSIONS=1 vagrant up
    ```
 
-   On Windows, you will have to first set the environment variable `NO_SUBMISSIONS` to 1
-   which lasts for the session of that console, then call vagrant up.
-   
+   On Windows `cmd`, you will have to first set the environment variable
+   `NO_SUBMISSIONS` to 1 which lasts for the session of that console,
+   then call vagrant up.
+
    ```
    SET NO_SUBMISSIONS=1
    vagrant up
    ```
 
-   If you want to unset the variable later, you can do
+   On PowerShell, you will have to set the environment variable differently:
+
+   ```pwsh
+   $Env:NO_SUBMISSIONS=1
+   vagrant up
+   ```
+
+   If you want to unset the variable later in `cmd`, you can do
    ```
    SET NO_SUBMISSIONS=
+   ```
+
+   Or in PowerShell,
+   ```pwsh
+   Remove-Item Env:\NO_SUBMISSIONS
    ```
 
    Similarly, you can check that the variable is set by doing
@@ -229,6 +242,11 @@ Below are quick steps to get everything installed and running.
    SET NO_SUBMISSIONS
    ```
 
+
+   Or in PowerShell,
+   ```pwsh
+   $Env:NO_SUBMISSIONS
+   ```
 8. When the install has completed, you should see the message:
    ```
    #####################################################################
@@ -279,10 +297,10 @@ Below are quick steps to get everything installed and running.
      grades details by uploading sample submissions from the Submitty
      repository, located in one of these these directories:
 
-     For the "tutorial" course:  
+     For the "tutorial" course:
      <https://github.com/Submitty/Tutorial/tree/main/examples>
 
-     For the "sample" course:  
+     For the "sample" course:
      <https://github.com/Submitty/Submitty/tree/master/more_autograding_examples>
 
 2. When the VM is "up", you can connect from your host computer to the
@@ -312,7 +330,7 @@ Below are quick steps to get everything installed and running.
     ```
 
     If it asks for password, it should be "vagrant"
-    and then 
+    and then
 
     ```sh
     sudo su
@@ -354,7 +372,7 @@ Below are quick steps to get everything installed and running.
 
 
 1. When you take a break from Submitty development work, you can
-   suspend the Submitty VM to to save resources (CPU and battery) on
+   suspend the Submitty VM to save resources (CPU and battery) on
    your host machine.
 
    ```
@@ -444,3 +462,20 @@ Below are quick steps to get everything installed and running.
    This has been tested with Blink for iOS and Termius for iOS (also available on Android, untested).
 
 6. Navigate to `localhost:1511` on the remote device.
+
+---
+
+## Developing in HTTPS
+
+For *developers* who need to upgrade to HTTP/2 in their development environments,
+please follow the step below:
+
+- Run `bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/dev-upgrade-h2.sh up`.
+
+   After a successful execution, please use `https://` instead of `http://`.
+
+- To downgrade to HTTP/1.1, run `bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/dev-upgrade-h2.sh down`.
+
+The script should automatically handle the upgrading and issuing a self-signed
+certificate.  If your browser complains about the security, please head to
+[WebSocket](/developer/developing_the_php_site/websocket).

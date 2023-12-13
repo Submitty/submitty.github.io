@@ -359,6 +359,11 @@ Refer to [this](/student/communication/markdown) to learn more about markdown.
 
 
 
+## Changing the multi-processing module of Apache2, Enabling HTTP2
+
+Please refer to [this sysadmin action](/sysadmin/installation/version_notes/v23.12.02) page.
+
+
 ## Preferred Name Change Logging
 
 In the interests of diversity, Submitty provides for users to set a preferred name should it be different from their legal name.  This feature can be abused, so changes to a user's preferred name is recorded into Postgresql's log for review.  To make it easier to locate these logged messages, a sysadmin tools script, `pnc_compile.pl`, is provided to fetch the preferred name change logs from Postgresql and compile them into a human readable report.
@@ -382,3 +387,4 @@ In the interests of diversity, Submitty provides for users to set a preferred na
   * Be sure to set execute permission on the script.
   * The script will parse Postgresql's log *by the current day's datestamp*, so it is intended that the script is run once per day.
   * Alternatively, if you wish to schedule the crontab for overnight after 12AM, you can set the `-y` or `--yesterday` argument so the script will intentionally parse Postgresql's log by the *previous* day's datestamp.  e.g. `/path/to/pnc_compile.pl -y`
+
