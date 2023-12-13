@@ -361,7 +361,8 @@ Refer to [this](/student/communication/markdown) to learn more about markdown.
 
 ## Changing the multi-processing module of Apache2, Enabling HTTP2
 
-Please refer to [this sysadmin action](/sysadmin/installation/version_notes/v23.02.XX) page.
+Please refer to [this sysadmin action](/sysadmin/installation/version_notes/v23.12.02) page.
+
 
 ## Preferred Name Change Logging
 
