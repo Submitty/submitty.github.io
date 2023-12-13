@@ -10,6 +10,56 @@ redirect_from:
 
 ---
 
+## 2023 Fall Developers
+
+![](/images/people/2023_fall.png)
+
+Hayeon Oh, 
+Thomas Orifici, 
+Dana Siong Sin,
+Tevin Zhuo,
+Jaeseok Kang,
+Tate Whiteberg,
+Arnav Pawar, 
+Chris Reed,
+Youssef Hassan,
+Anson Decker,
+Nicole Wu,
+Chuanyi Pan,
+Rita Lei,
+William Allen,
+Nia Heermance,
+Viane Matsibekker,
+Zheyu Deng, 
+Yanli Wang
+
+![](/images/people/2023_fall_presentation.png)
+
+Benjamin Lee,
+Jason Lee,
+Thomas Orifici,
+Tevin Zhuo,
+Oscar Li,
+Arnav Pawar,
+Hayeon Oh, 
+Tate Whiteberg,
+Dana Siong Sin,
+Chuanyi Pan,
+Nicole Wu,
+Jaeseok Kang,
+Rita Lei,
+Yanli Wang,
+Viane Matsibekker,
+Zheyu Deng, 
+Anson Decker,
+Chris Reed,
+William Allen,
+Youssef Hassan,
+Nia Heermance
+
+
+---
+
 ## 2023 Summer Developers
 
 ![](/images/people/2023_summer.png)
@@ -38,7 +88,7 @@ Eden Bendheim,
 Kerui (Ray) Wu,
 Zachary Silverstein,
 Viane Matsibekker,
-Anson Decker,
+
 Adam Tuhacek,
 Jaeseok Kang,
 Sátvik Karanam,
