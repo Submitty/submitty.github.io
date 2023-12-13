@@ -88,7 +88,7 @@ Eden Bendheim,
 Kerui (Ray) Wu,
 Zachary Silverstein,
 Viane Matsibekker,
-
+Anson Decker,
 Adam Tuhacek,
 Jaeseok Kang,
 Sátvik Karanam,
