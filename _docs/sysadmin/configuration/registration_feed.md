@@ -10,27 +10,27 @@ fill or update classlists on a cron schedule._
 
 ### 1. Requirements
 * Submitty Student Auto Feed is intended to be managed by a systems administrator or similar IT professional.
-* PHP 5.6 or higher with `pgsql` and `iconv` extensions.
+* PHP 7.3 or higher with the pgsql extension.
   * Although not a necessity, the auto feed script can operate on the same server that Submitty is running on.
-  * The `ssh2` extension is also required if the data feed CSV resides on a different server than the script is running from (this also includes running the script on the Submitty server).
+  * Code has not been audited for PHP 8.1 or later.  It may or may not work.
 * A regularly updated CSV data feed of student enrollment.
   * Contact your university's registrar and/or data warehouse for assistance.
 
 
 ### 2. Files
-Latest version of the auto feed script and supplmental files will be checked into the `master` branch in [`SysadminTools/student_auto_feed/`](https://github.com/Submitty/SysadminTools/tree/master/student_auto_feed)
+Latest version of the auto feed script and supplmental files will be checked into the "main" branch in [`SysadminTools/student_auto_feed/`](https://github.com/Submitty/SysadminTools/tree/main/student_auto_feed)
 * `submitty_student_auto_feed.php` -- Executable PHP script to read student registration CSV and update Submitty classlist enrollment.
-* `config.php` -- **REQUIRED** config file for `submitty_student_auto_feed.php`
-* `accounts.php` -- **IMPORTANT** for Submitty servers utilizing PAM authentication.
+* `config.php` -- **REQUIRED** config file.
+* `ssaf_cli.php`, `ssaf_db.php`, `ssaf_sql.php`, `ssaf_validate.php` **REQUIRED** additional code modules.
+* `add_drop_report.php` -- **OPTIONAL** Executable script to generate reports on how many students have added and/or dropped from their courses.
+* `crn_copymap.php` -- **OPTIONAL** Script to setup course/section mapping to duplicate enrollments.  Intended for unofficial "practice" courses.
+* `csv_local.php` -- **OPTIONAL** Script to retrieve a registration CSV datasheet.
+* `imap_remote.php` -- **OPTIONAL** Script to retrieve a registration CSV datasheet from an IMAP email account.  Requires imap extension.
+* `json_remote.hph` -- **OPTIONAL** Script to retrieve JSON encoded data of student registration from another server, via SSH.  Requires ssh2 extension.
+* `ssaf.sh` -- **OPTIONAL** Bash shell script for using a datasheet retrieval script, add/drop report script, and the autofeed script.  Intended to be used with cron.
 
 
-### 3. Course Database Backups
-Please use `db_backup.py` (located in [`SysadminTools/nightly_db_backup/`](https://github.com/Submitty/SysadminTools/tree/master/nightly_db_backup)) on a cron schedule to create nightly backups of course databases.
-
-Run `db_backup.py -h` to see extended help and argument list.
-
-
-### 4. Before Installing Auto Feed Script
+### 3. Before Installing Auto Feed Script
 It is important that you can receive a regularly updated data feed of student enrollment.
 The data should be tabulated (like a spreadsheet), but must be written as a CSV file.
 You will likely need the cooperation from your university's data warehouse and/or registrar.
@@ -44,10 +44,10 @@ Please take appropriate information protection measures.
 **_SUBMITTY IS NOT RESPONSIBLE FOR YOUR COURSE'S, DEPARTMENT'S, OR UNIVERSITY'S INFORMATION CONTROL POLICIES OR ACTIVITIES._**
 
 
-### 4.1 Student CSV Layout
+### 3.1 Student CSV Layout
 
-There are ten _required_ columns/fields, and one optional column/field processed by the submitty auto feed script.
-The student CSV data file may have additional fields, which will be ignored by, _but there may not be less than the ten columns/fields required_.
+There are eleven _required_ columns/fields, and one optional column/field processed by the submitty auto feed script.
+The student CSV data file may have additional fields, which will be ignored, _but there may not be less than the eleven columns/fields required_.
 The columns/fields may be in any order.
 `config.php` will map the requisite (and optional) columns/fields to their respective data points.
 (q.v. [CSV Fields Mapping](#csv-fields-mapping) for additional explanation)
@@ -58,21 +58,22 @@ The columns/fields may be in any order.
 3. Student's campus computer systems user account ID
   * The student CSV file should **_NEVER_** contain account passwords.
 4. An alternate numeric ID.
-  * This is intended to be the student's campus assign ID number, but could be
-    any alternate alphanumeric ID code assigned to the student by the data feed.
+  * This is intended to be the student's campus assigned ID number, but could be
+  any alternate alphanumeric ID code assigned to the student by the data feed.
   * This ID code can contain delimiter characters, such as dashes.
 5. Student's email address
-6. Course the student is enrolled in
-  * This is actually **_two_** fields/columns.
-    One is the course "prefix" (often the dept. code), and the other is the course "number".
-    Combined, they make up the course code as listed in the course catalog.
-    e.g. Prefix is "CSIS" and number is "101" as in "CSIS 101" in the course catalog.
+6. Course the student is enrolled in.  This is actually **_two_** fields/columns.
+  * One field is the course "prefix" (often the dept. code).
+  * The other field is the course "number".
+  * Combined, they make up the course code as listed in the course catalog.
+  e.g. Prefix could be "CSIS" and number could be "101" as in "CSIS 101" in the course catalog.
 7. Student's registration status
   * A student can drop enrollment during an academic term, and this may be reflected by a code in the student CSV file.
-    Alternatively, the student's enrollment entry, in the CSV file, can be entirely omitted when a course is dropped.
-    The student auto feed script is intended to work with either case.
+  Alternatively, the student's enrollment entry, in the CSV file, can be entirely omitted when a course is dropped.
+  The student auto feed script is intended to work with either case.
 8. Which lab/course section a student is enrolled in.
 9. The "term code" for the current academic term must exist in every data row.
+10. The course and section registration number that the student is enrolled with.
 
 ##### This data point is _optional_ in the student CSV file:
 1. Student's "preferred" first name
@@ -80,53 +81,50 @@ The columns/fields may be in any order.
   * Submitty permits students to manually set their own "preferred" name, even if the student CSV file contains no record of it.
 
 ##### Other Requirements:
-* Every column/field must be delimited by a the same character.
+* Every column/field must be delimited by the same character.
 * While commas are a common delimiter, `tab` characters are recommended.
 * Columns/field data should *not* be enclosed by quotes.
   Quotation marks may be picked up as part of the data and fail certain validation checks.
 
 
-### 5. Install On Ubuntu Server
-As these are PHP scripts, they _should_ run on any computer that has PHP 5.6+ and the appropriate extensions installed.
-However, these instructions will focus on Ubuntu server (same OS that is supported for Submitty).  Ubuntu 16.04 uses PHP 7.0 by default, and Ubuntu 18.04 uses PHP 7.2 by default.
-
-As Ubuntu is part of the Debian Linux family, these instructions are very likely to work with other Debian family distributions with, perhaps, minor adjustments.
+### 4. Install On Ubuntu Server
+As these are PHP scripts, they _should_ run on any computer that has PHP 7.3 or 7.4 and the appropriate extensions installed.
+However, these instructions will focus on Ubuntu server 20.04 which provides PHP 7.4 by default.
 
 1. If they haven't already been installed, install PHP and the required extensions.
 ```bash
-sudo apt-get install php php-pgsql php-iconv php-ssh2
+$ sudo apt-get install php php-pgsql
 ```
-   NOTE: `php-iconv` is not needed in Ubuntu 18.04.  It is part of the `php-common` package installed with `php`.
 2. Ensure the extensions are active.
 ```bash
-sudo phpenmod php-pgsql php-iconv php-ssh2
+$ sudo phpenmod php-pgsql
 ```
-3. Create a directory on the server to run the scripts and copy `submitty_student_auto_feed.php` and `config.php` from the repository to your new directory.
-  *  `submitty_student_auto_feed.php` and `config.php` both should reside in the same directory and both must be accessible by the same user account.
+3. Create a directory on the server to run the scripts and copy all files from `SysadminTools/student_auto_feed/`.
   * `root` is technically _not_ required to run the auto feed, but the account owning the script files will be responsible to run the auto feed via cron.
 4. File permissions:
-  * `submitty_student_auto_feed.php` is intended to be executable.
-  * `config.php` is _not_ intended to be executable.
-  * The following sets owner only permissions of "Read/Write/Execute" to `submitty_student_auto_feed.php` and "Read/Write" (non executable) to `config.php`:
+  * `submitty_student_auto_feed.php`, `ssaf.sh`, `csv_local.php`, `imap_remote.php`, `json_remote.php` are intended to be executable.  The other files are not.
+  * The following sets owner only permissions of "Read/Write/Execute" to `submitty_student_auto_feed.php` and "Read/Write" (non executable) to `config.php` and other code files.
 ```bash
-sudo chmod 0700 student_submitty_auto_feed.php
-sudo chmod 0600 config.php
+$ sudo chmod 0700 student_submitty_auto_feed.php
+$ sudo chmod 0600 ssaf_*.php config.php
 ```
 
 
-### 6. Command Line Arguments
+### 5. Command Line Arguments
 
---- | ---
-`-h` `--help`    | Extended help including usage and argument list.
+---|---
+`-h` `--help` | Extended help including usage and argument list.
 `-t [term code]` | Manually set the term code.
+`-a [auth string]` | Override for DB connection string.
+`-l` | Send test message to log and quit.  Useful to see if logs are successfully being emailed.
 
 
-### 7. Configuration
+### 6. Configuration
 Configuration options exist in `config.php` as "constants".
 The goal, here, is to define each constant to a value reflective of your use of Submitty.
 The provided defaults, while illustrative, typically will not work.
 
-**IMPORTANT** -- these lines are treated as actual PHP program code.
+**IMPORTANT** -- these lines are PHP program code.
 `define` is a function that requires parentheses.
 Inside the parentheses are (usually) string-values arguments, comma separated.
 String values must be enclosed in single or double quotes.
@@ -143,12 +141,12 @@ Here is an example option:
 ```php
 define('CSV_FILE', '/path/to/datafile.csv');
 ```
-This defines the constant `CSV_FILE` and sets it to the value `/path/to/datafile.csv`.
+This defines the constant `CSV_FILE` and sets its value to `/path/to/datafile.csv`.
 
 _Do not change the constant_.
 Only change the constant's value.
 
-We would need to change the value to reflect where the student data CSV is located (did you [note this](/sysadmin/configuration/registration_feed#4-before-installing-auto-feed-script) back in chapter 5?).
+We would need to change the value to reflect where the student data CSV is located (did you [note this](/sysadmin/configuration/registration_feed#4-before-installing-auto-feed-script) back in chapter 3?).
 For example, if your data warehouse delivers the feed CSV to `/users/datawarehouse/enrollment.csv` -- then change the line to read:
 ```php
 define('CSV_FILE', '/users/datawarehouse/enrollment.csv');
@@ -162,7 +160,7 @@ Consistent with C and Java styles, PHP code comments either begin with double sl
 Using a text editor with syntax highlighting will be highly beneficial as code comments will be given a unique text color (text coloring will vary from editor to editor).
 
 
-### 7.1 Configurations
+### 6.1 Configurations
 These options are set in `config.php`.
 `config.php` must exist in the same directory and be accessible by the same user account as `submitty_student_auto_feed.php`.
 
@@ -196,15 +194,17 @@ Emailing error messages can be disabled by setting the value to `null` (without 
 Your campus may restrict or outright deny delivery of the error-log emails.
 Consult with your University's IT department regarding _unauthenticated_ email.
 
+This command will help you determine if error logs are being successfully emailed or not.
+```bash
+$ ./submitty_student_auto_feed.php -l
+```
 
 #### CSV File Access
 ```php
 define('CSV_FILE', '/path/to/datafile.csv');
 ```
 
-These constants define how the CSV data can be accessed.
-* `CSV_FILE` is the absolute path to the CSV data file.
-* This script does not currently support network access to the CSV data file.
+This defines where the CSV data can be accessed.
 
 
 #### CSV Delimiter
@@ -227,7 +227,6 @@ Here are some example delimiters:
   ```php
   define('CSV_DELIM_CHAR', chr(44));
   ```
-
 * Tilde
   ```php
   define('CSV_DELIM_CHAR', '~');
@@ -247,11 +246,11 @@ These options are used to (loosely) detect a bad CSV file.
 * `VALIDATE_MIN_FILESIZE` sets the acceptable minimum file size as an _integer_ in bytes.
 This is useful to detect an egregiously small CSV that could indicate data corruption (such as a file containing end-of-line characters, but no actual data).
 
-  It is possible to snare a legitimate CSV as a false-positive, so setting this value relatively small, but greater than zero, is advised.
-  Here are a couples tips to help you decide what should be a reasonable validation filesize.
-  * A CSV with 5,120 end-of-line chars (empty rows) will be 5,120 bytes (5 kilobytes) in size.
-    CP-1252 (MS-Windows) encoded CSVs have _two_ end-of-line chars per row, so 5,120 empty rows will make up a 10 kilobyte CSV.
-  * As seen in the example above, 65,536 bytes = 64 kilobytes.
+    It is possible to snare a legitimate CSV as a false-positive, so setting this value relatively small, but greater than zero, is advised.
+    Here are a couples tips to help you decide what should be a reasonable validation filesize.
+    * A CSV with 5,120 end-of-line chars (empty rows) will be 5,120 bytes (5 kilobytes) in size.
+      CP-1252 (MS-Windows) encoded CSVs have _two_ end-of-line chars per row, so 5,120 empty rows will make up a 10 kilobyte CSV.
+    * As seen in the example above, 65,536 bytes = 64 kilobytes.
 
 * `VALIDATE_NUM_FIELDS` is a check to make sure that an exact number of fields/columns is present in every row of the CSV.
 Any row that does not have this exact value is expected to have unreliable data and is ignored by the auto feed script.
@@ -275,6 +274,7 @@ define('COLUMN_LASTNAME',      1);
 define('COLUMN_PREFERREDNAME', 3);
 define('COLUMN_EMAIL',         4);
 define('COLUMN_TERM_CODE',     0);
+define('COLUMN_REG_ID',        12);
 ```
 
 Each of these constants represents the data fields that must be read from the student data CSV.
@@ -320,61 +320,55 @@ That is, the first column of the CSV is #0, the second column is #1, the third c
   This is checked against the "expected" term code for validation.
   q.v. [Expected Term Code](/sysadmin/configuration/registration_feed#expected-term-code)
 
+* `COLUMN_REG_ID` is the course catalog registration number for an individual course *and* section.
+  This is the code students (or their advisors) use to enroll in an available course *and* section.
+
 
 #### Student Registration Codes
 ```php
 define('STUDENT_REGISTERED_CODES', array('RA', 'RW'));
+define('STUDENT_AUDIT_CODES', array('AU'));
+define('STUDENT_LATEDROP_CODES', array('W'));
 ```
 
-This option is a little more complicated to look at, but is actually not any more difficult than the others.
+These options are a little more complicated to look at, but are actually not any more difficult than the others.
 This `define` is creating a list (a.k.a. "array") of all the registration codes that indicate a student is enrolled in a course.
 Your student CSV may include students who were enrolled in a course, but that enrollment may change mid-term.
 
-In the above example, the two codes `RA` and `RW` indicate a student is enrolled in a course.
-In this case, `RA` may mean "Registered by Adviser" and `RW` may mean "Registered by Web".
+In the above example, the two codes `'RA'` and `'RW'` indicate a martriculating student who has enrolled in a course.
+In this case, `'RA'` may mean "Registered by Adviser" and `'RW'` may mean "Registered by Web".
 
+* `STUDENT_REGISTERED_CODES` indicate a martriculating students who have enrolled.
+* `STUDENT_AUDIT_CODES` indicate students who have enrolled but will not earn credit.
+* `STUDENT_LATEDROP_CODES` indicate students that have withdrawn their enrollment after the drop deadline.
 * You will need to coordinate with your University's registrar or data warehouse to determine what all the enrollment codes are.
-* You will need to replace/remove/add enrollment codes to this `define` that are found in your student CSV.
-* This example has two codes, but you may have more codes or only one code.
-* Even if there is only one registration code, you _must_ have the `array(` and `));` program code.
-* Don't forget the commas -- just like in an English list, every item (code) is separated by commas.
-* Any student not associated with a registration code as listed in this option is assumed to have dropped the course or has otherwise been unregistered for some reason.
-  In which case, an update will occur in Submitty's database to reflect the student is no longer enrolled in that course.
+* While the first example has two codes, you may have more codes or only one code.
+* Even if there is only one registration code, you _must_ still enclose it within `array(` and `));`.
+* Don't forget the commas -- just like in an English list, every code is separated by commas.
+* Any student not associated with a registration code, as above, is assumed to have dropped the course or been disenrolled.
+  In either case, an update will occur in Submitty's database to reflect the student is no longer enrolled in that course.
 
 
 #### Expected Term Code
 ```php
-define('EXPECTED_TERM_CODE', '201705');
+define('EXPECTED_TERM_CODE', '202309');
 ```
 
 This check will ensure that a course's enrollment database does not accidentally get clobbered by a student enrollment list for a different term.
+This is useful for data protection, should enrollment CSV datasheets automatically represent a new term without notice.
 
-Every term (semester) should be associated with a unique code.
-This code will have to be updated by a sysadmin, as needed.
+Every term (semester) should be associated with a unique code.  If that information is not in the CSV datasheet, set this to `NULL`.
 
-Per example, above, `201705` might be a code for the Summer 2017 semester.
-That is `201705` might be year 2017, starting month 5 (May).
-
-The student auto feed will check every row for this code and compare it with this `define` statement.
-Rows that do not match the `define` value will be ignored.
+The student auto feed will check every row for this code.
+Rows that do not match the `define` value will be ignored and a warning added to the error log.
 It is possible that when one row does not match, all rows will not match.
-
-
-#### Windows Encoding Conversion
-```php
-define('CONVERT_CP1252', true);
-```
-
-If your student CSV originates from a Windows computer, the auto feed may need to do a text encoding conversion from CP-1252 to UTF-8; especially when the CSV character data is expected to include [diacritics](https://en.wikipedia.org/wiki/Diacritic).
-Set `CONVERT_CP1252` to `true` if the student CSV originates from a Windows computer.
-Otherwise, set to `false`.
 
 
 #### End of Line Detection
 ```php
 ini_set('auto_detect_line_endings', true);
 ```
-In summary, this `define` shouldn't be changed.
+This shouldn't be changed.
 It ensures that CSV files exported by Microsoft Excel for Macintosh are correctly processed.
 
 
@@ -382,7 +376,7 @@ It ensures that CSV files exported by Microsoft Excel for Macintosh are correctl
 ```php
 date_default_timezone_set('America/New_York');
 ```
-This option must be set to your timezone.  The example, above, is set to Eastern timezone.
+This must be set to your timezone.  The example, above, is set to Eastern timezone.
 
 ##### Suggested Settings For Timezones in USA
 
@@ -400,9 +394,11 @@ Hawaii (no daylight savings) | `Pacific/Honolulu`
 For a complete list of timezones: <http://php.net/manual/en/timezones.php>
 
 
+### 7. Data Sourcing
+
 
 ### 8. PAM Authentication and `accounts.php`
-The script `accounts.php` will automate the creation of local accounts used with PAM authentication.
+The script `accounts.php` (found in `SysadminTools/sample_bin`) will automate the creation of local accounts used with PAM authentication.
 
 *This script is not needed when using database authentication.*
 
