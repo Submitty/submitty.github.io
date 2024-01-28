@@ -147,6 +147,39 @@ Below are quick steps to get everything installed and running.
      Vagrant: <https://developer.hashicorp.com/vagrant/downloads> 
      (if that doesn't work, try: <https://vagrant-deb.linestarve.com/>)
 
+   **Fedora/Red Hat Linux**
+
+   * For Fedora, the latest version of VirtualBox is recommended to prevent errors. Download the RPM from the virtual box website. Make sure your version of Fedora is up to date using
+   ```
+   sudo dnf update
+   sudo dnf upgrade
+   ```
+   and inputting your password. Then install the virtual box rpm using 
+   ```
+   sudo dnf install VirtualBox-xxxxx.rpm 
+   ```
+   Install vagrant using 
+   ```
+   sudo dnf install vagrant
+   ```
+   Now move on to step 5.
+
+   **NOTE**
+   when running vagrant up, use vagrant up --provider=virtualbox so it doesnt default to libvirt
+
+   **Common errors when running vagrant up(Fedora/RHEL)**
+   1. Missing virtnetworkd:
+      Enable it in your terminal by running:
+      ```
+      sudo systemctl start virtnetworkd
+      ```
+      If your vagrant ever freezes kill it with 
+      '''
+      VBoxManage controlvm VM_NAME poweroff
+      '''
+      or reboot the computer and then run vagrant destroy before re-running vagrant up with the provider again.
+
+
 5. Clone [the Submitty repository](https://github.com/Submitty/Submitty) to a location on
    your computer (the "host").
 
