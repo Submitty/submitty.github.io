@@ -112,7 +112,7 @@ $ sudo chmod 0600 ssaf_*.php config.php
 
 ### 5. Command Line Arguments
 
----|---
+--- | ---
 `-h` `--help` | Extended help including usage and argument list.
 `-t [term code]` | Manually set the term code.
 `-a [auth string]` | Override for DB connection string.
@@ -397,7 +397,63 @@ For a complete list of timezones: <http://php.net/manual/en/timezones.php>
 ### 7. Data Sourcing
 
 
-### 8. PAM Authentication and `accounts.php`
+### 8. CRN Copymap
+
+`crn_copymap.php` is used to create a mapping for duplicating and maintaining enrollment of both course and section to another course and section.
+The intent is to duplicate enrollment where the second course/sections are a related "practice" or "bootstrap" course of the first course/sections.
+
+For example: a data structures course is taught in C++, but there are no previous courses in the cirriculum taught with C++ as most of the cirriculum is taught with Python, Java, or C#, etc.
+Therefore, an unofficial practice C++ course is provided for students as a purely optional, extra learning resource.
+CRN Copymap is used to duplicate and maintain enrollment from data structures to the unofficial C++ practice course.
+
+#### Usage
+```bash
+$ crn_copymap.php [-h | --help | help] (term) (course-a) (sections) (course-b) (sections)
+```
+Create a mapping of CRNs (course and sections) that are to be duplicated.
+This is useful if a professor wishes to have a course enrollment, by section, duplicated to another course.
+Particularly when the duplicated course has no enrollment data provided by either the registrar or IT.
+
+##### Command Line Arguments
+
+--- | ---
+`-h`, `--help`, `help` | Show help message.
+term | Term code of courses and sections being mapped.  Required.
+course-a | Original course.  Required.
+sections | Section list or "all" of course-a.  Required.
+course-b | Course being copied to.  Required.
+sections | Section list of course-b.  This can be ommited when course-a sections is "all".  Otherwise, required.
+
+##### Examples
+
+```bash
+$ ./crn_copymap.php f23 csci1000 all csci2000
+```
+All sections of CSCI-1000 of Fall 2023 are duplicated as the same sections in CSCI-2000.
+
+
+```bash
+$ ./crn_copymap.php f23 csci1000 1-5 csci2000 1-5
+```
+Sections 1—5 of CSCI-1000 of Fall 2023 are duplicated to CSCI-2000 sections 1—5, respectively.
+
+
+```bash
+$ ./crn_copymap.php f23 csci1000 1,3,5-9 csci2000 2,4,6-10
+```
+This duplicates CSCI-1000 of Fall 2023 sections 1, 3, and 5—9 to CSCI-2000 sections 2, 4, and 6—10 respectively.
+
+To be certain:
+* CSCI-1000 section 1 is duplicated to CSCI-2000 section 2
+* CSCI-1000 section 3 is duplicated to CSCI-2000 section 4
+* CSCI-1000 section 5 is duplicated to CSCI-2000 section 6
+* CSCI-1000 section 6 is duplicated to CSCI-2000 section 7
+* CSCI-1000 section 7 is duplicated to CSCI-2000 section 8
+* CSCI-1000 section 8 is duplicated to CSCI-2000 section 9
+* CSCI-1000 section 9 is duplicated to CSCI-2000 section 10
+
+
+### 9. PAM Authentication and `accounts.php`
 The script `accounts.php` (found in `SysadminTools/sample_bin`) will automate the creation of local accounts used with PAM authentication.
 
 *This script is not needed when using database authentication.*
