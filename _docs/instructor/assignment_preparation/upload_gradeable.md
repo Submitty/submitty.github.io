@@ -50,9 +50,10 @@ __Other Electronic Types__
   "grade_inquiry_per_component_allowed": false,
 }
 ```
-  "ta_grading": true/false,
-  "discussion_thread_id": "thread_id",
-  "syllabus_bucket": "Homework"
+#### Other
+* ta_grading -- If the TA will grade any/all of the assignments (Default false)
+* discussion_thread_id -- The thread ID if using forums (Default none)
+* syllabus_bucket -- (Default "Homework")
 #### All variables
 ```json
 {
