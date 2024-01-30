@@ -10,7 +10,7 @@ redirect_from:
 ### Create a New Gradeable
 
 To create a new gradeable, instructor users should click "New
-Gradeable" in the sidebar on the left of the screen. 
+Gradeable" in the sidebar on the left of the screen. Either [Upload a JSON file](/instructor/assignment_preparation/upload_gradeable) 
 Fill out this form (details in the following sections) and press "Create New Gradeable".
 
 Most of the fields on the Create/Edit Gradeable form can be changed
