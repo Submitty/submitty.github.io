@@ -149,23 +149,24 @@ Below are quick steps to get everything installed and running.
 
    **Fedora/Red Hat Linux**
 
-   * For Fedora, the latest version of VirtualBox is recommended to prevent errors. Download the RPM from the virtual box website. Make sure your version of Fedora is up to date using
-   ```
-   sudo dnf update
-   sudo dnf upgrade
-   ```
-   and inputting your password. Then install the virtual box rpm using 
-   ```
-   sudo dnf install VirtualBox-xxxxx.rpm 
-   ```
-   Install vagrant using 
-   ```
-   sudo dnf install vagrant
-   ```
-   Now move on to step 5.
+   * For Fedora, the latest version of VirtualBox is recommended to prevent errors. Download the RPM from the virtual box website. Make sure your version of 
+     Fedora is up to date using
+     ```
+     sudo dnf update
+     sudo dnf upgrade
+     ```
+     and inputting your password. Then install the Virtual Box rpm using: 
+     ```
+     sudo dnf install VirtualBox-xxxxx.rpm 
+     ```
+     Install Vagrant using: 
+     ```
+     sudo dnf install vagrant
+     ```
+     Now move on to step 5.
 
    **NOTE**
-   when running vagrant up, use vagrant up --provider=virtualbox so it doesnt default to libvirt
+   when running vagrant up, use `vagrant up --provider=virtualbox` so it doesnt default to libvirt
 
    **Common errors when running vagrant up(Fedora/RHEL)**
    1. Missing virtnetworkd:
@@ -173,11 +174,11 @@ Below are quick steps to get everything installed and running.
       ```
       sudo systemctl start virtnetworkd
       ```
-      If your vagrant ever freezes kill it with 
+   2. If your vagrant ever freezes kill it with 
       '''
       VBoxManage controlvm VM_NAME poweroff
       '''
-      or reboot the computer and then run vagrant destroy before re-running vagrant up with the provider again.
+      or if that doesn't work, reboot the computer and then run `vagrant destroy` before re-running `vagrant up --provider=virtualbox` again.
 
 
 5. Clone [the Submitty repository](https://github.com/Submitty/Submitty) to a location on
