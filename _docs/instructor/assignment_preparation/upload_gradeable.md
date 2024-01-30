@@ -83,7 +83,7 @@ __Other Electronic Types__
   "title": "Testing Json",
   "id": "hw-1-1-1222",
   "type": "Electronic File",
-  "bulk_upload": true
+  "bulk_upload": true,
   "syllabus_bucket": "Homework"
 }
 ```
