@@ -116,7 +116,7 @@ $ sudo chmod 0600 ssaf_*.php config.php
 `-h` `--help` | Extended help including usage and argument list.
 `-t [term code]` | Manually set the term code.
 `-a [auth string]` | Override for DB connection string.
-`-l` | Send test message to log and quit.  Useful to see if logs are successfully being emailed.
+`-l` | Send test message to log and quit.  Useful to test if logs are successfully being emailed.
 
 
 ### 6. Configuration
@@ -395,16 +395,123 @@ For a complete list of timezones: <http://php.net/manual/en/timezones.php>
 
 
 ### 7. Data Sourcing
+These optional scripts can assist in retrieving CSV data, as opposed to the data being directly delivered to a local file system.
 
 
-### 8. CRN Copymap
+#### `csv_local.php`
+Should CSV data files be made available in the local or *a mounted filesystem*, this script will help you validate and retrieve the CSV data file for the registration feed script.  Validation includes file's existence and that the timestamp is current, so to not reprocess an old CSV file.
 
-`crn_copymap.php` is used to create a mapping for duplicating and maintaining enrollment of both course and section to another course and section.
+**`config.php`**
+*Define* |
+`'LOCAL_SOURCE_CSV'` | Path/file to retrieve and placed in the location of [`'CSV_FILE'`](#csv-file-access) so that it may be processed.
+
+Note: Any existing CSV data files located by `'CSV_FILE'` are replaced.
+
+
+#### `imap_remote.php`
+This script will retrieve CSV Data files attached to an email in an IMAP email account and deliver it to the location specified by `'CSV_FILE'`.
+
+***IMPORTANT:*** This script is highly specialized, and is currently obsolete and unsupported.  It is provided "as is" as a resource for another developer to adapt for their University's needs.
+
+**config.php**
+*define* |
+`'IMAP_HOSTNAME'` | FQDN of the IMAP email service.
+`'IMAP_PORT'` | Network port to access IMAP email.
+`'IMAP_USERNAME'` | IMAP email account's name/owner.
+`'IMAP_PASSWORD'` | Password to access IMAP account.
+`'IMAP_FOLDER'` | What folder to look for the email containing the CSV data file.
+`'IMAP_OPTIONS'` | This needs to be an `array()` of strings.
+                   Please review "Optional flags for names", under "Mailbox" at [php.net](https://www.php.net/manual/en/function.imap-open.php).
+                   Do not include the backslash `\`.
+`'IMAP_FROM'` | The expected sender of the email.  This is to help identify the correct email.
+`'IMAP_SUBJECT'` | The expected email's subject.  This is to help identify the correct email.
+`'IMAP_ATTACHMENT'` | The expected attachment's filename.  This is to help identify the correct file attachment.
+
+*Note 1:* This script requires the imap extension for PHP.
+
+*Note 2:* This script does not work with any form of multi factor authentication, e.g. OATH2.
+
+*Note 3:* This script will check for the number of unopened emails.
+If there is not exactly one unopened email, this script aborts without retrieving a CSV data file.
+
+
+#### `json_remote.php`
+This script attempts to open an SSH connection to another server, locate and read a JSON data file of enrolled students, and write the data as a CSV to the location specified by `'CSV_FILE'`.
+
+***IMPORTANT:*** This script is highly specialized, and is currently obsolete and unsupported.  It is provided "as is" as a resource for another developer to adapt for their University's needs.
+
+**config.php**
+*define* |
+`'JSON_REMOTE_HOSTNAME'` | FQDN of the host server to access for the JSON file.
+`'JSON_REMOTE_PORT'` | Network port for SSH access.  Usually 22.
+`'JSON_REMOTE_FINGERPRINT`' | This must match the SSH fingerprint (SHA1 hash in hexadecimal) of the host server.
+`'JSON_REMOTE_USERNAME'` | Remote SSH account name.
+`'JSON_REMOTE_PASSWORD'` | Password for SSH account name.
+`'JSON_REMOTE_PATH'` | path on host server to read the JSON data file.
+
+The following JSON elements, per student, are required so they match the CSV data columns as defined in `config.php`.
+
+JSON | `config.php
+--- | ---
+`'first_name'` | `'COLUMN_FIRSTNAME'`
+`'last_name'` | `'COLUMN_LASTNAME'`
+`'email'` | `'COLUMN_EMAIL'`
+`'rcs'` | `'COLUMN_USER_ID'`
+`'rin'` | `'COLUMN_NUMERIC_ID'`
+`'course_prefix'` | `'COLUMN_COURSE_PREFIX'`
+`'course_number'` | `'COLUMN_COURSE_NUMBER'`
+`'course_section'` | `'COLUMN_SECTION'`
+
+*Note 1:* This script requires the ssh2 extension for PHP.
+
+*Note 2:* This script does not support using cryptographic keypairs for authentication.
+
+
+### 8. SSAF Startup Script
+
+`ssaf.sh` is provided as a convenience to run the registration feed with data sourcing.
+This is intended to be run as a cron job.
+
+#### Usage
+
+```bash
+$ ./ssaf.sh (data_source) (term) [DB_auth]
+```
+
+***Command Line Argument*** |
+data_source | `csv_local` \| `imap_remote` \| `json_remote`
+              Which data sourcing script to run first: csv_local.php, imap_remote.php, or json_remote.php (required)
+term | Term code to pass to submitty_student_auto_feed.php (required)
+DB_auth | Database authentication string that overrides config.php [optional]
+
+
+### 9. CRN Copymap
+
+`crn_copymap.php` script is used to create a mapping for duplicating and maintaining enrollment of both course and section to another course and section.
 The intent is to duplicate enrollment where the second course/sections are a related "practice" or "bootstrap" course of the first course/sections.
 
-For example: a data structures course is taught in C++, but there are no previous courses in the cirriculum taught with C++ as most of the cirriculum is taught with Python, Java, or C#, etc.
+This tool will create a CSV file by the autofeed for duplicating enrollment records.
+Copymap CSVs are tied to a specific term, so a new copymap CSV must be created every term.
+
+*For example:* a data structures course is taught in C++, but there are no previous courses in the cirriculum taught with C++ as most of the cirriculum is taught with Python, Java, or C#, etc.
 Therefore, an unofficial practice C++ course is provided for students as a purely optional, extra learning resource.
 CRN Copymap is used to duplicate and maintain enrollment from data structures to the unofficial C++ practice course.
+
+*Note:* Course enrollment duplication not only involves enrolled students, but also unenrolled students.
+That is, following the above example, students who join data structures will also join C++ Practice, and students who *leave* data structures will also leave C++ Practice.
+
+
+#### Config.php
+
+The following constant is defined in `config.php`:
+```php
+define('CRN_COPYMAP_FILE', "path/to/csv");
+```
+Change `path/to/csv` to the location that the copymap CSV will be written.
+Although not mandatory, this can be the same location as [`CSV_FILE`](#csv-file-access)
+
+Alternatively, set this to `null` to disable CRN Copymap, in which the registration feed script will ignore any existing copymap CSV files.
+
 
 #### Usage
 ```bash
@@ -414,17 +521,15 @@ Create a mapping of CRNs (course and sections) that are to be duplicated.
 This is useful if a professor wishes to have a course enrollment, by section, duplicated to another course.
 Particularly when the duplicated course has no enrollment data provided by either the registrar or IT.
 
-##### Command Line Arguments
-
---- | ---
+***Command Line Arguments*** |
 `-h`, `--help`, `help` | Show help message.
-term | Term code of courses and sections being mapped.  Required.
+term | Current term code.  Required.
 course-a | Original course.  Required.
 sections | Section list or "all" of course-a.  Required.
 course-b | Course being copied to.  Required.
 sections | Section list of course-b.  This can be ommited when course-a sections is "all".  Otherwise, required.
 
-##### Examples
+#### Examples
 
 ```bash
 $ ./crn_copymap.php f23 csci1000 all csci2000
@@ -453,7 +558,10 @@ To be certain:
 * CSCI-1000 section 9 is duplicated to CSCI-2000 section 10
 
 
-### 9. PAM Authentication and `accounts.php`
+### 10. Add/Drop Reports
+
+
+### 11. PAM Authentication and `accounts.php`
 The script `accounts.php` (found in `SysadminTools/sample_bin`) will automate the creation of local accounts used with PAM authentication.
 
 *This script is not needed when using database authentication.*
@@ -465,5 +573,3 @@ Run `accounts.php -h` to see extended help and argument list.
 
 It is recommended that this script is run every hour as a cron job.
 That way, should an instructor manually add a student to their course, the student's access to Submitty will be available "within an hour".
-
-
