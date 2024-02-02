@@ -113,10 +113,10 @@ $ sudo chmod 0600 ssaf_*.php config.php
 ### 5. Command Line Arguments
 
 --- | ---
-`-h` `--help` | Extended help including usage and argument list.
-`-t [term code]` | Manually set the term code.
+`-h` `--help`      | Extended help including usage and argument list.
+`-t [term code]`   | Manually set the term code.
 `-a [auth string]` | Override for DB connection string.
-`-l` | Send test message to log and quit.  Useful to test if logs are successfully being emailed.
+`-l`               | Send test message to log and quit.  Useful to test if logs are successfully being emailed.
 
 
 ### 6. Configuration
@@ -395,7 +395,7 @@ For a complete list of timezones: <http://php.net/manual/en/timezones.php>
 
 
 ### 7. Data Sourcing
-These optional scripts can assist in retrieving CSV data, as opposed to the data being directly delivered to a local file system.
+These optional scripts can assist in retrieving CSV data, as opposed to the data being directly delivered to a local file system.  Any existing CSV data file referenced by `'CSV_FILE'` will be replaced.
 
 
 #### `csv_local.php`
@@ -405,13 +405,11 @@ Should CSV data files be made available in the local or *a mounted filesystem*, 
 *Define* |
 `'LOCAL_SOURCE_CSV'` | Path/file to retrieve and placed in the location of [`'CSV_FILE'`](#csv-file-access) so that it may be processed.
 
-Note: Any existing CSV data files located by `'CSV_FILE'` are replaced.
-
 
 #### `imap_remote.php`
 This script will retrieve CSV Data files attached to an email in an IMAP email account and deliver it to the location specified by `'CSV_FILE'`.
 
-***IMPORTANT:*** This script is highly specialized, and is currently obsolete and unsupported.  It is provided "as is" as a resource for another developer to adapt for their University's needs.
+***IMPORTANT:*** This script is highly specialized, and is currently obsolete and unsupported.  This script is provided "as is" as a resource for another developer to adapt for their University's needs.  Use at your own risk.
 
 **config.php**
 *define* |
@@ -438,7 +436,7 @@ If there is not exactly one unopened email, this script aborts without retrievin
 #### `json_remote.php`
 This script attempts to open an SSH connection to another server, locate and read a JSON data file of enrolled students, and write the data as a CSV to the location specified by `'CSV_FILE'`.
 
-***IMPORTANT:*** This script is highly specialized, and is currently obsolete and unsupported.  It is provided "as is" as a resource for another developer to adapt for their University's needs.
+***IMPORTANT:*** This script is highly specialized, and is currently obsolete and unsupported.  This script is provided "as is" as a resource for another developer to adapt for their University's needs.  Use at your own risk.
 
 **config.php**
 *define* |
@@ -451,8 +449,7 @@ This script attempts to open an SSH connection to another server, locate and rea
 
 The following JSON elements, per student, are required so they match the CSV data columns as defined in `config.php`.
 
-JSON | `config.php
---- | ---
+JSON | `config.php`
 `'first_name'` | `'COLUMN_FIRSTNAME'`
 `'last_name'` | `'COLUMN_LASTNAME'`
 `'email'` | `'COLUMN_EMAIL'`
@@ -559,6 +556,37 @@ To be certain:
 
 
 ### 10. Add/Drop Reports
+`add_drop_report.php` is an optional script for providing a report on any growth or reduction of student enrollment in all Submitty courses.
+The report is written to local disk and can optionally be emailed.
+
+#### Usage
+```bash
+$ ./add_drop_report.php (run) (term_code)
+```
+
+***Command Line Arguments*** |
+run | `1`, before the Auto Feed script is used so to cache current enrollment totals.
+      `2`, after the Auto Feed script is used, so comparisons can be calculated with cached totals.
+term_code | Current term's code.  e.g. `s24` might be Spring 2024.
+
+#### Example
+```bash
+$ ./add_drop_report.php 1 s24
+```
+This is run *before* the auto feed script.  A temporary cache file of student enrollments for term Spring 2024 is created.
+
+```bash
+$ ./add_drop_report.php 2 s24
+```
+This is run *after* the auto feed script.  The temporary cache file is compared with new enrollment totals and a report is created.
+
+#### Config.php
+
+The following constants are defined in `config.php`:
+Define | Use
+`'ADD_DROP_TO_EMAIL'` | Email address that reports are sent to.  Set this to `null` to disable emailing of reports.
+`'ADD_DROP_FROM_EMAIL'` | Email address marked as the sender of the report.
+`'ADD_DROP_FILES_PATH'` | Base folder that contains all written reports and temporary enrollment cache data.  Reports are further sorted into sub folders by semester code.
 
 
 ### 11. PAM Authentication and `accounts.php`
