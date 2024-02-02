@@ -70,6 +70,7 @@ __Other Electronic Types__
     "team_size_max": 3,
     "inherit_from": "gradeable_id",
   },
+  "bulk_upload": true,
   "grading_inquiry": {
     "grade_inquiry_per_component_allowed": false
   },
