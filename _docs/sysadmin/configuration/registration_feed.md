@@ -5,29 +5,36 @@ redirect_from:
   - /sysadmin/student_auto_feed
 ---
 
-_Submitty Student Auto Feed is an optional command-line PHP script that can automatically
-fill or update classlists on a cron schedule._
+Submitty Student Auto Feed is an optional command-line PHP ssystem that can automatically fill or update Submitty classlists on a cron schedule.
+
+Programming adjustments may be needed for compatibility with your organization's network.
+
+**SUBMITTY STUDENT AUTO FEED AND ALL RELATED MATERIALS ARE PROVIDED "AS IS".  USE AT YOUR OWN RISK.**
+
 
 ### 1. Requirements
 * Submitty Student Auto Feed is intended to be managed by a systems administrator or similar IT professional.
 * PHP 7.3 or higher with the pgsql extension.
+  * Code is tested on Ubuntu 20.04, but may work on other OSes that can run PHP.
   * Although not a necessity, the auto feed script can operate on the same server that Submitty is running on.
-  * Code has not been audited for PHP 8.1 or later.  It may or may not work.
+  * Code has not been audited for PHP 8.  It may or may not work.
 * A regularly updated CSV data feed of student enrollment.
   * Contact your university's registrar and/or data warehouse for assistance.
 
 
 ### 2. Files
-Latest version of the auto feed script and supplmental files will be checked into the "main" branch in [`SysadminTools/student_auto_feed/`](https://github.com/Submitty/SysadminTools/tree/main/student_auto_feed)
-* `submitty_student_auto_feed.php` -- Executable PHP script to read student registration CSV and update Submitty classlist enrollment.
-* `config.php` -- **REQUIRED** config file.
-* `ssaf_cli.php`, `ssaf_db.php`, `ssaf_sql.php`, `ssaf_validate.php` **REQUIRED** additional code modules.
-* `add_drop_report.php` -- **OPTIONAL** Executable script to generate reports on how many students have added and/or dropped from their courses.
-* `crn_copymap.php` -- **OPTIONAL** Script to setup course/section mapping to duplicate enrollments.  Intended for unofficial "practice" courses.
-* `csv_local.php` -- **OPTIONAL** Script to retrieve a registration CSV datasheet.
-* `imap_remote.php` -- **OPTIONAL** Script to retrieve a registration CSV datasheet from an IMAP email account.  Requires imap extension.
-* `json_remote.hph` -- **OPTIONAL** Script to retrieve JSON encoded data of student registration from another server, via SSH.  Requires ssh2 extension.
-* `ssaf.sh` -- **OPTIONAL** Bash shell script for using a datasheet retrieval script, add/drop report script, and the autofeed script.  Intended to be used with cron.
+Latest version of the auto feed and supplmental files will be checked into the "main" branch in [`SysadminTools/student_auto_feed/`](https://github.com/Submitty/SysadminTools/tree/main/student_auto_feed)
+
+File | |
+`submitty_student_auto_feed.php` | **REQUIRED** | Executable PHP script to read student registration CSV and update Submitty classlist enrollment.
+`config.php` | **REQUIRED** | config file.
+`ssaf_cli.php`, `ssaf_db.php`, `ssaf_sql.php`, `ssaf_validate.php` | **REQUIRED** | additional code modules.
+`add_drop_report.php` | **OPTIONAL** | Executable script to generate reports of how many students have added and/or dropped from their courses.
+`crn_copymap.php` | **OPTIONAL** | Script to setup course/section mapping to duplicate enrollments.  Intended for unofficial "practice" courses.
+`csv_local.php` | **OPTIONAL** | Script to retrieve a registration CSV datasheet.
+`imap_remote.php` | **OPTIONAL** *Obsolete* | Script to retrieve a registration CSV datasheet from an IMAP email account.  Requires imap extension.
+`json_remote.hph` | **OPTIONAL** *Obsolete* | Script to retrieve JSON encoded data of student registration from another server, via SSH.  Requires ssh2 extension.
+`ssaf.sh` | **OPTIONAL** | Bash shell script for using a datasheet retrieval script, add/drop report script, and the autofeed script.  Intended to be used with cron.
 
 
 ### 3. Before Installing Auto Feed Script
@@ -43,10 +50,11 @@ student enrollment data protected by FERPA ([U.S. federal statute 20 U.S.C. § 1
 Please take appropriate information protection measures.
 **_SUBMITTY IS NOT RESPONSIBLE FOR YOUR COURSE'S, DEPARTMENT'S, OR UNIVERSITY'S INFORMATION CONTROL POLICIES OR ACTIVITIES._**
 
+(q.v. [Data Sourcing](#7-data-sourcing))
 
 ### 3.1 Student CSV Layout
 
-There are eleven _required_ columns/fields, and one optional column/field processed by the submitty auto feed script.
+There are eleven _required_ columns/fields, and one optional column/field processed by the Submitty auto feed script.
 The student CSV data file may have additional fields, which will be ignored, _but there may not be less than the eleven columns/fields required_.
 The columns/fields may be in any order.
 `config.php` will map the requisite (and optional) columns/fields to their respective data points.
@@ -56,21 +64,20 @@ The columns/fields may be in any order.
 1. Student's legal first name
 2. Student's legal last name
 3. Student's campus computer systems user account ID
-  * The student CSV file should **_NEVER_** contain account passwords.
+   * The student CSV file should **_NEVER_** contain account passwords.
 4. An alternate numeric ID.
-  * This is intended to be the student's campus assigned ID number, but could be
-  any alternate alphanumeric ID code assigned to the student by the data feed.
-  * This ID code can contain delimiter characters, such as dashes.
+   * This is intended to be the student's campus assigned ID number, but could be any alternate alphanumeric ID code assigned to the student by the data feed.
+   * This ID code can contain delimiter characters, such as dashes.
 5. Student's email address
 6. Course the student is enrolled in.  This is actually **_two_** fields/columns.
-  * One field is the course "prefix" (often the dept. code).
-  * The other field is the course "number".
-  * Combined, they make up the course code as listed in the course catalog.
-  e.g. Prefix could be "CSIS" and number could be "101" as in "CSIS 101" in the course catalog.
+   * One field is the course "prefix" (often the dept. code).
+   * The other field is the course "number".
+   * Combined, they make up the course code as listed in the course catalog.
+     e.g. Prefix could be "CSIS" and number could be "101" as in "CSIS 101" in the course catalog.
 7. Student's registration status
-  * A student can drop enrollment during an academic term, and this may be reflected by a code in the student CSV file.
-  Alternatively, the student's enrollment entry, in the CSV file, can be entirely omitted when a course is dropped.
-  The student auto feed script is intended to work with either case.
+   * A student can drop enrollment during an academic term, and this may be reflected by a code in the student CSV file.
+     Alternatively, the student's enrollment entry, in the CSV file, can be entirely omitted when a course is dropped.
+     The student auto feed script is intended to work with either case.
 8. Which lab/course section a student is enrolled in.
 9. The "term code" for the current academic term must exist in every data row.
 10. The course and section registration number that the student is enrolled with.
@@ -246,11 +253,11 @@ These options are used to (loosely) detect a bad CSV file.
 * `VALIDATE_MIN_FILESIZE` sets the acceptable minimum file size as an _integer_ in bytes.
 This is useful to detect an egregiously small CSV that could indicate data corruption (such as a file containing end-of-line characters, but no actual data).
 
-    It is possible to snare a legitimate CSV as a false-positive, so setting this value relatively small, but greater than zero, is advised.
-    Here are a couples tips to help you decide what should be a reasonable validation filesize.
-    * A CSV with 5,120 end-of-line chars (empty rows) will be 5,120 bytes (5 kilobytes) in size.
-      CP-1252 (MS-Windows) encoded CSVs have _two_ end-of-line chars per row, so 5,120 empty rows will make up a 10 kilobyte CSV.
-    * As seen in the example above, 65,536 bytes = 64 kilobytes.
+   It is possible to snare a legitimate CSV as a false-positive, so setting this value relatively small, but greater than zero, is advised.
+   Here are a couples tips to help you decide what should be a reasonable validation filesize.
+   * A CSV with 5,120 end-of-line chars (empty rows) will be 5,120 bytes (5 kilobytes) in size.
+     CP-1252 (MS-Windows) encoded CSVs have _two_ end-of-line chars per row, so 5,120 empty rows will make up a 10 kilobyte CSV.
+   * As seen in the example above, 65,536 bytes = 64 kilobytes.
 
 * `VALIDATE_NUM_FIELDS` is a check to make sure that an exact number of fields/columns is present in every row of the CSV.
 Any row that does not have this exact value is expected to have unreliable data and is ignored by the auto feed script.
@@ -284,18 +291,16 @@ Different universities will order the data differently, therefore the auto feed 
 That is, the first column of the CSV is #0, the second column is #1, the third column is #2, and so on.
 
 * `COLUMN_COURSE_PREFIX` represents the course __prefix__ (often the dept. code) as seen in the course catalog.
-  The entire course code would be the __prefix__ and __number__ combined.
-
 * `COLUMN_COURSE_NUMBER` represents the course __number__ as seen in the course catalog.
-  The entire course code would be the __prefix__ and __number__ combined.
 
-  __*IMPORTANT:*__ The student CSV must have separate columns for the prefix/dept code and the course number.
-  This permits the auto feed script to process enrollment for courses in multiple departments.
+   The entire course code would be the __prefix__ and __number__ combined.
 
-  __*For Example*__ |
-  _Prefix_ | "CSIS" (Computer Science and Information Systems dept.)
-  _Number_ | "101" (introductory programming course)
-  _Course Listed In Catalog_ | "CSIS 101" or "CSIS-101"
+   __*IMPORTANT:*__ The CSV data file must have separate columns for the prefix/dept code and the course number.
+
+   __*For Example*__ |
+   _Prefix_ | "CSIS" (Computer Science and Information Systems dept.)
+   _Number_ | "101" (introductory programming course)
+   _Course Listed In Catalog_ | "CSIS 101" or "CSIS-101"
 
 * `COLUMN_REGISTRATION` represents the column that has a code to verify that a student is enrolled or not.
   q.v. [Student Registration Codes](#student-registration-codes)
@@ -330,23 +335,18 @@ define('STUDENT_REGISTERED_CODES', array('RA', 'RW'));
 define('STUDENT_AUDIT_CODES', array('AU'));
 define('STUDENT_LATEDROP_CODES', array('W'));
 ```
+These constants are creating lists (a.k.a. "arrays") of all the registration codes that indicate a student's enrollment in a course.
+In the above example, the two codes `'RA'` and `'RW'` may represent codes for "Registered by Adviser" and "Registered by Web".
 
-These options are a little more complicated to look at, but are actually not any more difficult than the others.
-This `define` is creating a list (a.k.a. "array") of all the registration codes that indicate a student is enrolled in a course.
-Your student CSV may include students who were enrolled in a course, but that enrollment may change mid-term.
-
-In the above example, the two codes `'RA'` and `'RW'` indicate a martriculating student who has enrolled in a course.
-In this case, `'RA'` may mean "Registered by Adviser" and `'RW'` may mean "Registered by Web".
-
-* `STUDENT_REGISTERED_CODES` indicate a martriculating students who have enrolled.
+* `STUDENT_REGISTERED_CODES` indicate matriculating students who have enrolled.
 * `STUDENT_AUDIT_CODES` indicate students who have enrolled but will not earn credit.
 * `STUDENT_LATEDROP_CODES` indicate students that have withdrawn their enrollment after the drop deadline.
 * You will need to coordinate with your University's registrar or data warehouse to determine what all the enrollment codes are.
 * While the first example has two codes, you may have more codes or only one code.
 * Even if there is only one registration code, you _must_ still enclose it within `array(` and `));`.
 * Don't forget the commas -- just like in an English list, every code is separated by commas.
-* Any student not associated with a registration code, as above, is assumed to have dropped the course or been disenrolled.
-  In either case, an update will occur in Submitty's database to reflect the student is no longer enrolled in that course.
+* Any enrolled student no longer associated with a registration code is assumed to have dropped the course or otherwise been disenrolled.
+  The student will automatically be moved to the course's "null section", as an indication of their disenrollment,
 
 
 #### Expected Term Code
@@ -357,10 +357,10 @@ define('EXPECTED_TERM_CODE', '202309');
 This check will ensure that a course's enrollment database does not accidentally get clobbered by a student enrollment list for a different term.
 This is useful for data protection, should enrollment CSV datasheets automatically represent a new term without notice.
 
-Every term (semester) should be associated with a unique code.  If that information is not in the CSV datasheet, set this to `NULL`.
+Every term (semester) should be associated with a unique code.  If that information is not in the CSV datasheet, set this to `null`.
 
 The student auto feed will check every row for this code.
-Rows that do not match the `define` value will be ignored and a warning added to the error log.
+Rows that do not match this constant's  value will be ignored and a warning added to the error log.
 It is possible that when one row does not match, all rows will not match.
 
 
@@ -399,7 +399,7 @@ These optional scripts can assist in retrieving CSV data, as opposed to the data
 
 
 #### `csv_local.php`
-Should CSV data files be made available in the local or *a mounted filesystem*, this script will help you validate and retrieve the CSV data file for the registration feed script.  Validation includes file's existence and that the timestamp is current, so to not reprocess an old CSV file.
+Should CSV data files be made available in the local or a mounted filesystem, this script will help you validate and retrieve the CSV data file for the auto feed.  Validation includes file's existence and that the timestamp is current, so to not reprocess an old CSV file.
 
 **`config.php`**
 *Define* |
@@ -409,7 +409,7 @@ Should CSV data files be made available in the local or *a mounted filesystem*, 
 #### `imap_remote.php`
 This script will retrieve CSV Data files attached to an email in an IMAP email account and deliver it to the location specified by `'CSV_FILE'`.
 
-***IMPORTANT:*** This script is highly specialized, and is currently obsolete and unsupported.  This script is provided "as is" as a resource for another developer to adapt for their University's needs.  Use at your own risk.
+***IMPORTANT:*** This script is highly specialized, and is currently obsolete and unsupported.  This script is provided "as is" as a sample for another developer to adapt for their University's needs.  Use at your own risk.
 
 **config.php**
 *define* |
@@ -436,7 +436,7 @@ If there is not exactly one unopened email, this script aborts without retrievin
 #### `json_remote.php`
 This script attempts to open an SSH connection to another server, locate and read a JSON data file of enrolled students, and write the data as a CSV to the location specified by `'CSV_FILE'`.
 
-***IMPORTANT:*** This script is highly specialized, and is currently obsolete and unsupported.  This script is provided "as is" as a resource for another developer to adapt for their University's needs.  Use at your own risk.
+***IMPORTANT:*** This script is highly specialized, and is currently obsolete and unsupported.  This script is provided "as is" as a sample for another developer to adapt for their University's needs.  Use at your own risk.
 
 **config.php**
 *define* |
@@ -466,7 +466,7 @@ JSON | `config.php`
 
 ### 8. SSAF Startup Script
 
-`ssaf.sh` is provided as a convenience to run the registration feed with data sourcing.
+`ssaf.sh` is provided as a convenience to run the auto feed with data sourcing.
 This is intended to be run as a cron job.
 
 #### Usage
@@ -514,8 +514,8 @@ Alternatively, set this to `null` to disable CRN Copymap, in which the registrat
 ```bash
 $ crn_copymap.php [-h | --help | help] (term) (course-a) (sections) (course-b) (sections)
 ```
-Create a mapping of CRNs (course and sections) that are to be duplicated.
-This is useful if a professor wishes to have a course enrollment, by section, duplicated to another course.
+Create a mapping of course and sections that are to be duplicated.
+This is useful if a professor wishes to have course enrollment, by section, duplicated to another course.
 Particularly when the duplicated course has no enrollment data provided by either the registrar or IT.
 
 ***Command Line Arguments*** |
