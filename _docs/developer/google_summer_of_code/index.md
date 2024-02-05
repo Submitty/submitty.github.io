@@ -6,18 +6,26 @@ redirect_from:
 ---
 
 
-Submitty is proud to have been selected for participation in [Google
-Summer of Code](https://summerofcode.withgoogle.com/) for Summer 2023!
-This will be our fifth year participating in the program!  Please read
-the student project reports from previous summers linked below.
+Submitty has been a participating organization of [Google Summer of
+Code](https://summerofcode.withgoogle.com/) for five successful
+seasons.  Please read the student project reports from previous
+summers linked below.  We have applied for selection for Summer
+2024 and our [Project ideas](/developer/project_ideas)
+list has been updated.
 
 
-[![](/images/GSoC-Vertical.png){:width="250px"}](https://summerofcode.withgoogle.com/)
-
+<center>
+<a href="https://summerofcode.withgoogle.com"><img src="/images/GSoC-Vertical.png" width="250px"></a>
+</center>
 
 [comment]: <> _NOTE: The organizations selected for Summer 2023 Google Summer of
 [comment]: <>   Code will be announced in late February.  The instructions below
 [comment]: <>    are from 2022 and will be updated if Submitty is accepted!_
+
+_NOTE: The organizations selected for Summer 2024 Google Summer of
+Code will be announced in late February.  The instructions below
+are from 2023 and will be updated if Submitty is accepted!_
+
 
 ## How to Apply to Submitty for Google Summer of Code 2023
 
@@ -86,7 +94,18 @@ the student project reports from previous summers linked below.
      * [https://summerofcode.withgoogle.com/](https://summerofcode.withgoogle.com/)  
 
 &nbsp;  
-  
+
+
+
+## Google Summer of Code 2023
+
+* [Continuous Integration Optimization by Cameron Peterson](/developer/google_summer_of_code/2023_Cameron_Peterson)
+
+* [Website Security and Penetration Testing by Musaab Imran](/developer/google_summer_of_code/2023_Musaab_Imran)
+
+* [Docker Containers for Autograding Improvements by Saumya Borwankar](/developer/google_summer_of_code/2023_Saumya_Borwankar)
+
+
 
 ## Google Summer of Code 2022
 
