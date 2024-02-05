@@ -101,7 +101,7 @@ developers.
    include small user interface revisions.
 
    _Skills & Experience Required_: Web and database development
-   experience and general software design and implementaton
+   experience and general software design and implementation
    experience.  Experience with end-to-end automated testing (Cypress)
    and and having served as a teaching assistant with grading
    experience design is beneficial but not required.
@@ -125,7 +125,7 @@ developers.
    file (and any necessary additional files) and upload or store these
    files on the server file system.  We have a prototype Web GUI
    interface we call the "Notebook Builder" but the current state of
-   the feature is undocoumented and functionality is limited.  We
+   the feature is undocumented and functionality is limited.  We
    would like to improve and expand this feature to facilitate
    instructor creation of basic and moderate complexity autograding
    configurations.
@@ -203,10 +203,10 @@ developers.
    expanded as necessary, and features that are missing documentation
    and examples should be identified (e.g., generated random input and
    output from instructor solution, customized docker containers,
-   autograding graphical output, autogradin) and resolved by creating
+   autograding graphical output, autograding) and resolved by creating
    new examples.  Finally, we would like to create and support a
    resource for the community of crowd-sourced complete programming
-   assignments/exercies with included autograding configuration.
+   assignments/exercises with included autograding configuration.
 
    _Skills & Experience Required_: Moderate to advanced programming
    experience, willingness to learn web and database development.
