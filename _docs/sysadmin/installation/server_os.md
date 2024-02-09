@@ -30,6 +30,8 @@ next academic year from when we added support of the new LTS version.
 For the other distros, we will attempt to support the latest version
 before dropping support, but may drop support at anytime.
 
+Please do not use Ubuntu 2X.04 “Live” version, only the traditional version is supported.
+
 ### Partitioning the disk
 
 Assuming this is a standalone machine with no other information on 
