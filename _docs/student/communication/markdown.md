@@ -42,15 +42,18 @@ using markdown.
 
 
 *  **Italics**  
-    Adding `_` (one underscore) or `*` (one asterisk) before and after text will _italicize_ that text.
+    Adding `_` (one underscore) or `*` (one asterisk) before and after text will _italicize_ that text. Opening
+    and closing symbols need to match.
 
 
 *  **Bold**  
-    Adding `__` (two underscores) `**` (two asterisks) before and after text will make that text __bold__.
+    Adding `__` (two underscores) `**` (two asterisks) before and after text will make that text __bold__. Opening
+    and closing symbols need to match.
 
 
 *  **Bold and Italics**  
     Adding `___` (three underscores) `***` (three asterisks) before and after text will make that text ___bold and italic___.
+    Opening and closing symbols need to match.
 
 
 *  **Inline Code**  
