@@ -104,7 +104,7 @@ the installation process.
 4. Start up Vagrant and provision the machine
 
    ```
-   $ vagrant up --provider=qemu
+   $ BASE_BOX=1 vagrant up --provider=qemu
    ```
 
    You may be prompted to enter your login username and password
@@ -121,7 +121,7 @@ the installation process.
    ```
    $ vagrant destroy
    
-   $ vagrant up --provider=qemu
+   $ BASE_BOX=1 vagrant up --provider=qemu
    ```
 
 5. After the `vagrant up` command completes, the VM is started and
