@@ -6,28 +6,21 @@ redirect_from:
 ---
 
 
-Submitty has been a participating organization of [Google Summer of
-Code](https://summerofcode.withgoogle.com/) for five successful
-seasons.  Please read the student project reports from previous
-summers linked below.  We have applied for selection for Summer
-2024 and our [Project ideas](/developer/project_ideas)
-list has been updated.
-
+We are thrilled to announce that Submitty has been accepted to [Google
+Summer of Code (GSoC) 2024](https://summerofcode.withgoogle.com/).
+Project reports from participants in previous summers are linked
+below.
 
 <center>
 <a href="https://summerofcode.withgoogle.com"><img src="/images/GSoC-Vertical.png" width="250px"></a>
 </center>
 
-[comment]: <> _NOTE: The organizations selected for Summer 2023 Google Summer of
-[comment]: <>   Code will be announced in late February.  The instructions below
-[comment]: <>    are from 2022 and will be updated if Submitty is accepted!_
-
-_NOTE: The organizations selected for Summer 2024 Google Summer of
-Code will be announced in late February.  The instructions below
-are from 2023 and will be updated if Submitty is accepted!_
+[comment]: <> _NOTE: The organizations selected for Summer 2024 Google Summer of
+[comment]: <> Code will be announced in late February.  The instructions below
+[comment]: <> are from 2023 and will be updated if Submitty is accepted!_
 
 
-## How to Apply to Submitty for Google Summer of Code 2023
+## How to Apply to Submitty for Google Summer of Code 2024
 
 1. Read the GSOC information for contributors to confirm your eligibility:  
 
@@ -35,7 +28,7 @@ are from 2023 and will be updated if Submitty is accepted!_
 
    * [https://developers.google.com/open-source/gsoc/faq#what_are_the_eligibility_requirements_for_participation](https://developers.google.com/open-source/gsoc/faq#what_are_the_eligibility_requirements_for_participation)
 
-   * [https://opensource.googleblog.com/2022/11/get-ready-for-google-summer-of-code-2023.html](https://opensource.googleblog.com/2022/11/get-ready-for-google-summer-of-code-2023.html)
+   * [https://opensource.googleblog.com/2024/02/mentor-organizations-announced-for-google-summer-of-code-2024.html](https://opensource.googleblog.com/2024/02/mentor-organizations-announced-for-google-summer-of-code-2024.html)
 
 2. Read our [Suggestions for New Developers](/developer).
 
@@ -44,7 +37,7 @@ are from 2023 and will be updated if Submitty is accepted!_
    in a virtual machine on your computer.
 
 4. Review our project ideas list:   
-   [https://submitty.org/developer/project_ideas](/developer/project_ideas)
+   [https://submitty.org/developer/getting_started/project_ideas](/developer/getting_started/project_ideas)
 
 5. Join our Zulip server to ask questions and meet other new developers:   
    [https://submitty.org/contact](/contact)
@@ -75,21 +68,22 @@ are from 2023 and will be updated if Submitty is accepted!_
    [https://submitty.org/developer/getting_started/review_a_pull_request](/developer/getting_started/review_a_pull_request)
    
 10. Prepare your application. We recommend prospective contributors focus on one
-   of our suggested projects from the project ideas list above. Successful
+   of our suggested projects from the [project ideas](/developer/getting_started/project_ideas) list. Successful
    applicants will be able to expand and enhance the proposed project idea
    with a timeline of design and implementation milestones, and will
    demonstrate curiosity and motivation for the topic.  
 
 11. Document your skills, relevant coursework, non-course experience, and future
-   career goals that qualify you to work on this project.  Include your
-   approximate schedule for the summer, including start date, end date,
-   and number of hours of work per week, and any
-   classes, employment, or other time commitments during that period.
+   career goals that qualify you to work on this project.
 
-12. The application window for Google Summer of Code closes on April 4th, 2023 at 18:00 UTC.
+12. Include your approximate schedule for the summer: start date, end date,
+   and number of hours of work per week.  Also, describe any
+   classes, employment, or other time commitments during that time period.
+
+12. The application window for Google Summer of Code closes on April 2th, 2024 at 18:00 UTC.
    Please carefully read all of the program requirements.  
    
-     * [Google Summer of Code 2023 Timeline](https://developers.google.com/open-source/gsoc/timeline)  
+     * [Google Summer of Code 2024 Timeline](https://developers.google.com/open-source/gsoc/timeline)  
 
      * [https://summerofcode.withgoogle.com/](https://summerofcode.withgoogle.com/)  
 
