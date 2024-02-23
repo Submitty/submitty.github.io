@@ -5,24 +5,25 @@ redirect_from:
   - /developer/project_ideas
 ---
 
-Submitty has been a participating organization of [Google Summer of
-Code](https://summerofcode.withgoogle.com/) for five successful
-seasons.
-See [Submitty GSoC Application & Reports](/developer/google_summer_of_code/index) for more information
+[comment]: <> Submitty has been a participating organization of
+[comment]: <> [Google Summer of Code](https://summerofcode.withgoogle.com/)
+[comment]: <> for five successful seasons.
+
+We are thrilled to announce that Submitty has been accepted to [Google
+Summer of Code (GSoC) 2024](https://summerofcode.withgoogle.com/).
+See [Submitty GSoC Application &
+Reports](/developer/google_summer_of_code/index) for more information
 about the application process and to read reports from Submitty GSoC
-contributors from Summers 2018, 2019, 2020, 2022, and 2023.
-We have applied for selection for Summer 2024 and our Project Ideas
-list below has been updated.  The organizations selected for Summer
-2024 Google Summer of Code will be announced in late February.  
+contributors in past summers.
+
+[comment]: <> We have applied for selection for
+[comment]: <> Summer 2024 and our Project Ideas list below has been updated.  The
+[comment]: <> organizations selected for Summer 2024 Google Summer of Code will be
+[comment]: <> announced in late February.
 
 [comment]: <> _NOTE: The organizations selected for Summer 2023 Google Summer of
 [comment]: <>   Code will be announced in late February.  The instructions below
 [comment]: <>    are from 2022 and will be updated if Submitty is accepted!_
-
-[comment]: <> We are thrilled to announce that Submitty has been accepted
-[comment]: <> to [Google Summer of Code (GSoC) 2023](https://summerofcode.withgoogle.com/).
-
-
 
 
 The project ideas listed below target a variety of different topics
@@ -37,6 +38,9 @@ join
 our [Zulip server](/contact) to meet the Submitty mentors and other new
 developers.
 
+
+&nbsp;    
+  
 
 1. **Expand Testing of the Manual/TA Rubric Grading Interface**
 
@@ -69,6 +73,8 @@ developers.
    _GSoC Project Size_: 90 or 175 hours
 
    _Difficulty Level_: introductory to medium
+
+   &nbsp;    
 
 
 2. **Refactor and Performance Improvements for the Manual/TA Rubric Grading Interface**
@@ -112,6 +118,7 @@ developers.
 
    _Difficulty Level_: medium to challenging
 
+   &nbsp;
 
 
 3. **Notebook Builder: UI To Streamline Instructor Configuration of Automated Grading**
@@ -163,7 +170,8 @@ developers.
    _GSoC Project Size_: 90 or 175 or 350 hours
 
    _Difficulty Level_: introductory or medium
-   
+
+   &nbsp;    
 
 4. **Expansion of Examples and Documentation of Intermediate and Advanced Autograding Features**
 
@@ -219,6 +227,8 @@ developers.
 
    _Difficulty Level_: medium to challenging
 
+   &nbsp;
+        
 
 5. **AI/ML to Enhance and Steamline Manual / TA Grading**
 
@@ -267,7 +277,7 @@ developers.
    data and the potential for improving the efficiency of the
    manual/TA grading process and the quality/accuracy and quantity of
    useful constructive feedback to students.
-  
+   
    _Skills & Experience Required_: Coursework and/or professional
    experience in AI/ML and modern AI/ML technology.  Moderate to
    advanced programming experience, and willingness to learn web and
@@ -280,6 +290,8 @@ developers.
    _GSoC Project Size_: 175 or 350 hours
 
    _Difficulty Level_:  medium to challenging
+
+   &nbsp;    
 
 6. **Other Topics**
 
@@ -301,6 +313,7 @@ developers.
 
    _Difficulty Level_:  introductory to medium to challenging
    
+&nbsp;    
 
 See also:
 
