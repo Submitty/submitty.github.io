@@ -70,7 +70,7 @@ __Other Electronic Types__
     "team_size_max": 3,
     "inherit_from": "gradeable_id",
   },
-  "bulk_upload": true,
+  "bulk_upload": false,
   "grading_inquiry": {
     "grade_inquiry_per_component_allowed": false
   },
@@ -83,7 +83,7 @@ __Other Electronic Types__
 ```json
 {
   "title": "Testing Json",
-  "id": "hw-1-1-1222",
+  "id": "hw-bulk-upload",
   "type": "Electronic File",
   "bulk_upload": true,
   "syllabus_bucket": "Homework"
@@ -93,8 +93,21 @@ __Other Electronic Types__
 ```json
 {
   "title": "Checkpoints Gradeable",
-  "id": "hw-1-1-1222",
+  "id": "hw-checkpoints",
   "type": "Checkpoints",
   "syllabus_bucket": "Homework"
 }
 ```
+#### Sample VCS Template
+```json
+{
+  "title": "VCS Gradeable",
+  "id": "hw-vcs",
+  "type": "Electronic File",
+  "syllabus_bucket": "Homework",
+  "vcs": {
+    "repository_type": "submitty-hosted",
+    "vcs_path": "http://localhost:1511/path/to/repository",
+    "vcs_subdirectory": "subdirectory"
+  },
+}
