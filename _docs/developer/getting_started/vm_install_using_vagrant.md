@@ -221,10 +221,23 @@ Below are quick steps to get everything installed and running.
    vagrant up
    ```
 
-   Vagrant will build your VM.  This will take maybe 30 minutes to a
-   few hours depending on your Internet connection speed.  When this
-   command finishes, your VM is ready to use.
+   If you are using VirtualBox as your provider, you will by default use
+   a pre-packaged Submitty VM. This will have all of Submitty already setup.
+   Vagrant will build your VM for you. This process will take 10 minutes to
+   maybe half an hour depending on your internet connection speed.
+   When this command finishes, your VM is ready to use.
 
+   If you wish to run `vagrant up` from scratch, on Linux or Mac type:
+   ```
+   BASE_BOX=1 vagrant up
+   ```
+   or on Windows, type: 
+   ```
+   SET BASE_BOX=1
+   vagrant up
+   ```
+   This process will take anywhere from 30 minutes to a few hours depending on your
+   internet speed. 
 
 7. When the `vagrant up` command completes successfully, you will be
    able to access the Submitty website (instructions follow in the
