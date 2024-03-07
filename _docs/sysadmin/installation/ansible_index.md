@@ -18,7 +18,9 @@ server (whether on a dedicated machine or a VM).
 
 2. [Edit default playbook to match your server](ansible/playbooks/submitty_install.yml)
 
-Note: Your edits should match your dedicated machine (or VM) necessary requirements to properly install Submitty onto your machine. This 
+   Note: Your edits should match your dedicated machine (or VM) necessary requirements to properly install Submitty onto your machine. This will ensure the install script can run without failure. See ansible/roles/app_submitty/defaults/main.yml for example. 
+
+3. []
 
 
 
