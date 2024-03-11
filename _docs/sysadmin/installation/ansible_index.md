@@ -18,10 +18,17 @@ server (whether on a dedicated machine or a VM).
 
 2. [Edit default playbook to match your server](ansible/playbooks/submitty_install.yml)
 
-   Note: Your edits should match your dedicated machine (or VM) necessary requirements to properly install Submitty onto your machine. This will ensure the install script can run without failure. See ansible/roles/app_submitty/defaults/main.yml for example. 
+   Note: Your edits should match your dedicated machine(or VM) necessary requirements to properly install Submitty onto your machine. This will ensure the install script can run without failure. See ansible/roles/app_submitty/defaults/main.yml for example. 
 
-3. []
+3. [Run ansible script]
 
+   In the terminal, run the command:
+      Ansible-playbook -i inventory/submitty playbooks/submitty_install.yml
 
+This ansible command will run the entire Submitty install process step by step. See (ansible/roles/app_submitty/tasks/main.yml) for more information on the Install process. 
+
+4. [Check Install Log]
+   Navigate to (/usr/local/submitty/install.log) on your machine(or VM) to see the output of the install process. 
+   
 
 
