@@ -22,11 +22,11 @@ Need a machine with ansible - find link how to install ansible on any machine
    synchronize `/etc/passwd`, `/etc/shadow`, `/etc/group`, and `/etc/gshadow` before installing
    the rest of Submitty to avoid mismatched UIDs and GIDs of the Submitty users.
 
-2. Edit inventory and add server IP
+2. Edit inventory and add server IP:
 
    Replace submitty_ip with your machine's IP address. This will give you access to the site on the server once the install process is completed successfully. 
 
-3. Edit default playbook to match your server(ansible/playbooks/submitty_install.yml)
+3. Edit default playbook to match your server(ansible/playbooks/submitty_install.yml):
 
    Note: Your edits should match your dedicated machine (or VM) necessary requirements to properly install Submitty onto your machine. See `ansible/roles/app_submitty/defaults/main.yml` for default installation parameters. 
 
