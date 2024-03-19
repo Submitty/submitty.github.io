@@ -73,7 +73,7 @@ If you using an Intel-based Mac, you will follow the instructions below._
 ## Submitty Developer VM Installation
 
 
-1. Enable Virtualization
+#### 1. Enable Virtualization
 
    **MacOS**
    1. Virtualization is generally enabled by default.
@@ -126,16 +126,17 @@ If you using an Intel-based Mac, you will follow the instructions below._
    the boot menu/BIOS or follow [these steps](https://era86.github.io/2018/01/24/vagrant-virtualbox-secureboot-in-ubuntu-1604.html)
    to self-sign the necessary packages to run Vagrant and VirtualBox.
 
-2. Download and install the latest version of [Ruby](https://www.ruby-lang.org/en/downloads).
+#### 2. Download and install the latest dependencies
 
-3. Download and install the latest version of [Git](https://git-scm.com/downloads).
-
-4. Download and install [VirtualBox](https://www.virtualbox.org/wiki/Download_Old_Builds_6_1) and [Vagrant](https://www.vagrantup.com)
+   - [Ruby](https://www.ruby-lang.org/en/downloads)
+   - [Git](https://git-scm.com/downloads)
+   - [VirtualBox](https://www.virtualbox.org/wiki/Download_Old_Builds_6_1)
+   - [Vagrant](https://www.vagrantup.com)
    
    **Note:**
    Please download VirtualBox 6 instead of 7.
 
-Below are quick steps to get everything installed and running.
+Below are steps specific to an OS.
 
    **Windows**
 
@@ -178,7 +179,6 @@ Below are quick steps to get everything installed and running.
      ```
      sudo dnf install vagrant
      ```
-     Now move on to step 5.
 
       **Note:**
       When running vagrant up, use `vagrant up --provider=virtualbox` so it doesn't default to libvirt
@@ -196,12 +196,13 @@ Below are quick steps to get everything installed and running.
          or if that doesn't work, reboot the computer and then run `vagrant destroy` before re-running `vagrant up --provider=virtualbox` again.
 
 
-5. Clone [the Submitty repository](https://github.com/Submitty/Submitty) to a location on
-   your computer (the "host").
+#### 3. Clone the [Submitty repository](https://github.com/Submitty/Submitty)
 
-   ```
-   git clone https://github.com/Submitty/Submitty.git
-   ```
+Clone it to a location on your computer (the "host").
+
+```
+git clone https://github.com/Submitty/Submitty.git
+```
 
    **Note:** If you are not currently part of the Submitty organization on GitHub, you may want to
    [fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
@@ -211,50 +212,58 @@ Below are quick steps to get everything installed and running.
    Submitty repositories (e.g., AnalysisTools, Lichen, Localization, RainbowGrades, Tutorial), also
    clone those repositories to the same directory.  For example:_
 
-     ```
-     home
-     └── myusername
-         └── Submitty
-             └── GIT_CHECKOUT
-                 ├── AnalysisTools  (optional)
-                 ├── Lichen         (optional)
-                 ├── Localization   (optional)
-                 ├── RainbowGrades  (optional)
-                 ├── Submitty
-                 └── Tutorial       (optional)
-     ```
+```
+home
+└── myusername
+   └── Submitty
+         └── GIT_CHECKOUT
+            ├── AnalysisTools  (optional)
+            ├── Lichen         (optional)
+            ├── Localization   (optional)
+            ├── RainbowGrades  (optional)
+            ├── Submitty
+            └── Tutorial       (optional)
+```
 
-    _This host directory structure will be shared / synced between
-    your host operating system and the Submitty virtual machine._
+   _This host directory structure will be shared / synced between
+   your host operating system and the Submitty virtual machine._
 
-6. Navigate into the Submitty repository on your computer in a
-   shell/terminal and type:
+#### 4. Run Vagrant
 
-   _Windows should run CMD or powershell on administrator mode_
+   Navigate into the Submitty repository on your computer in a shell/terminal.
 
-   ```
-   vagrant up
-   ```
+   **Build pre-packaged VM**
 
    If you are using VirtualBox as your provider, you will by default use
    a pre-packaged Submitty VM. This will have all of Submitty already setup.
-   Vagrant will build your VM for you. This process will take 10 minutes to
+   Vagrant will build your VM for you.
+
+   _On Windows, run CMD or PowerShell on administrator mode_.
+
+```
+vagrant up
+```
+
+   This process will take 10 minutes to
    maybe half an hour depending on your internet connection speed.
-   When this command finishes, your VM is ready to use.
+
+   **Build from scratch**
 
    If you wish to run `vagrant up` from scratch, on Linux or Mac type:
-   ```
-   BASE_BOX=1 vagrant up
-   ```
+```
+BASE_BOX=1 vagrant up
+```
    or on Windows, type: 
-   ```
-   SET BASE_BOX=1
-   vagrant up
-   ```
+```
+SET BASE_BOX=1
+vagrant up
+```
    This process will take anywhere from 30 minutes to a few hours depending on your
    internet speed. 
 
-7. When the `vagrant up` command completes successfully, you will be
+**Build without sample submissions**
+
+   When the `vagrant up` command completes successfully, you will be
    able to access the Submitty website (instructions follow in the
    next section).
 
@@ -309,7 +318,9 @@ Below are quick steps to get everything installed and running.
    ```pwsh
    $Env:NO_SUBMISSIONS
    ```
-8. When the installation has completed, you should see the message:
+**Done!**
+
+   When the installation has completed, you should see the message:
    ```
    #####################################################################
 
