@@ -164,6 +164,7 @@ var NAVTREE =
                 [ "System Customization", "/sysadmin/installation/system_customization", null ],
             ] ],
             [ "Configuration & Administration", "/sysadmin/configuration/course_creation", [
+                [ "Term Creation", "/sysadmin/configuration/term_creation", null ],
                 [ "Course Creation", "/sysadmin/configuration/course_creation", null ],
                 [ "Setting up Version Control", "/sysadmin/configuration/version_control", null ],
                 [ "SAML Authentication", "/sysadmin/configuration/saml_authentication", null ],
