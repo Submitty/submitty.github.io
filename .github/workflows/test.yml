@@ -16,7 +16,7 @@ jobs:
 
     - name: Get Ruby version
       id: rubyversion
-      run: echo "::set-output name=version::$(curl https://raw.githubusercontent.com/github/pages-gem/master/.ruby-version)"
+      run: echo "::set-output name=version::3.2"
 
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1

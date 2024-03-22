@@ -77,6 +77,7 @@ number:
         "capabilities": [
             "extra_ram"
         ],
+        "enabled": true,
         "num_autograding_workers": 2
     }
    ```

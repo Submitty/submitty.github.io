@@ -153,7 +153,7 @@ This defines the constant `CSV_FILE` and sets its value to `/path/to/datafile.cs
 _Do not change the constant_.
 Only change the constant's value.
 
-We would need to change the value to reflect where the student data CSV is located (did you [note this](/sysadmin/configuration/registration_feed#4-before-installing-auto-feed-script) back in chapter 3?).
+We would need to change the value to reflect where the student data CSV is located (did you [note this](/sysadmin/configuration/registration_feed#3-before-installing-auto-feed-script) back in chapter 3?).
 For example, if your data warehouse delivers the feed CSV to `/users/datawarehouse/enrollment.csv` -- then change the line to read:
 ```php
 define('CSV_FILE', '/users/datawarehouse/enrollment.csv');

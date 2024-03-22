@@ -38,6 +38,8 @@ _Note: These instructions should be run under root/sudo._
    mkdir -p /usr/local/submitty/GIT_CHECKOUT
    git clone https://github.com/Submitty/Submitty.git /usr/local/submitty/GIT_CHECKOUT/Submitty
    ```
+   Ensure ```/usr/local/submitty/GIT_CHECKOUT/Submitty``` is owned by the ```submitty``` user.
+   The ```submitty``` user should be able to read/write to this directory.
 
 5. Run the automated portion of the install, using the ```--worker``` option.
 
@@ -85,7 +87,7 @@ _Note: These instructions should be run under root/sudo._
    *  Add the name of the submitty user on the machine as the username.
    *  Set the machine to be enabled.
 
-9. Run ```/usr/local/submitty/.setup/INSTALL_SUBMITTY.sh``` so that the changes take effect.
+9. Run ```/usr/local/submitty/.setup/INSTALL_SUBMITTY.sh``` on primary machine so that the changes take effect.
 
 10. Inside of your assignment configurations, you may now add the line  
     ```
