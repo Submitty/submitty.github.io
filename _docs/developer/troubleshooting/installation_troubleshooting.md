@@ -169,3 +169,86 @@ broadcast 192.168.56.255
 ```
 
 References and useful links: [https://gist.github.com/pjdietz/5768124](https://gist.github.com/pjdietz/5768124) and [http://christophermaier.name/2010/09/01/host-only-networking-with-virtualbox/](http://christophermaier.name/2010/09/01/host-only-networking-with-virtualbox/)
+
+---
+
+## SSH connection was unexpectedly closed
+
+* If you see an error similar to on ARM64 Machine (Apple Silicon):
+
+  ```
+  The SSH connection was unexpectedly closed by the remote end. This
+  usually indicates that SSH within the guest machine was unable to
+  properly start up. Please boot the VM in GUI mode to check whether
+  it is booting properly.
+  ```
+
+  This error message is indicating that there may be a problem with the SSH service on the VM, and you should check the VM's graphical interface to troubleshoot and ensure that it is starting up correctly.
+
+
+#### Try the following steps:
+
+* Reinstalls Vagrant using Homebrew
+  ```
+  brew reinstall --cask vagrant
+  ```
+
+* Updates the Vagrant plugins to the latest versions
+  ```
+  vagrant plugin update
+  ```
+  
+* Updates the Vagrant box to the latest version
+  ```
+  vagrant box update
+  ```
+
+* Verify qemu is install correctly
+
+  * Firstly, use this command will display the installed version of QEMU for ARM64. 
+    ```
+    qemu-system-aarch64 --version
+    ```
+      
+  * Secondly, Verify that the QEMU binary for ARM64 is accessible in your system's PATH by running:
+    ```
+    which qemu-system-aarch64
+    ```
+
+    *Note: This command will display the path to the QEMU ARM64 binary (e.g., /opt/homebrew/bin/qemu-system-aarch64)
+
+* Verify Vagrant Installation
+  ```
+  vagrant --version
+  ```
+
+* Verify Path: if Vagrant is installed but the command is not recognized, it might be due to the PATH variable not including the directory where Vagrant is installed. 
+  ```
+  echo $PATH
+  ```
+
+    * If Vagrant's directory is not in your PATH, you can add it temporarily for the current session by running:
+
+      ```
+      export PATH="/path/to/vagrant/directory:$PATH"
+      ```
+    * You should replace `/path/to/vagrant/directory` with the actual path where Vagrant is installed
+    * You can find the path by runing command `which vagrant` or `where vagrant`
+    * For example, if Vagrant is installed in `/usr/local/bin/vagrant`, the export command would look like this:`export PATH="/usr/local/bin:$PATH"`
+
+* Removes the `.vagrant` folder, which stores Vagrant environment settings and state. This step effectively resets the Vagrant environment.
+  ```
+  rm -r .vagrant
+  ```
+
+* Destroys the Vagrant environment, shutting down and removing the associated VM instance
+  ```
+  vagrant destroy
+  ```
+
+* Boots up a new Vagrant environment using the QEMU provider
+  ```
+  vagrant up --provider=qemu
+  ```
+
+---
