@@ -73,7 +73,7 @@ If you using an Intel-based Mac, you will follow the instructions below._
 ## Submitty Developer VM Installation
 
 
-1. Enable Virtualization
+#### 1. Enable Virtualization
 
    **MacOS**
    1. Virtualization is generally enabled by default.
@@ -97,6 +97,21 @@ If you using an Intel-based Mac, you will follow the instructions below._
 
    9. Reboot your computer.
 
+   **Windows 11**
+   1. Open **Change advanced start-up options** by searching for it in the search bar.
+
+   2. Under **Advanced Startup**, click **Restart Now**.
+
+   3. Once your PC has rebooted, click the **Troubleshoot** option.
+
+   4. Click **Advanced Options**.
+
+   5. Click **UEFI Firmware Settings** and restart as suggested.
+
+   6. Locate **Virtualization**, and enable it. (Note: If you cannot find the option to enable virtualization, [search Google](http://tinyurl.com/enable-virtualization) for a tutorial on enabling it with your motherboard.)
+
+   7. Reboot your computer.
+
    **Ubuntu**
    1. Enter your **BIOS** (generally by pressing Del, F12, or other keys while booting).
 
@@ -106,30 +121,31 @@ If you using an Intel-based Mac, you will follow the instructions below._
 
    4. Be sure to choose **Hardware Virtualization** in the **System -> Acceleration** settings of the virtual machine you are using.
 
-   **NOTE**
-   If using secure boot, vagrant may fail to work with VirtualBox. You will then either need to disable secure boot from
+   **Note:**
+   If using secure boot, Vagrant may fail to work with VirtualBox. You will then either need to disable secure boot from
    the boot menu/BIOS or follow [these steps](https://era86.github.io/2018/01/24/vagrant-virtualbox-secureboot-in-ubuntu-1604.html)
-   to self-sign the necessary packages to run vagrant and VirtualBox.
+   to self-sign the necessary packages to run Vagrant and VirtualBox.
 
-2. Download and install the latest version of [Ruby](https://www.ruby-lang.org/en/downloads).
+#### 2. Download and install the latest dependencies
 
-3. Download and install the latest version of [Git](https://git-scm.com/downloads).
-
-4. Download and install [VirtualBox](https://www.virtualbox.org/wiki/Download_Old_Builds_6_1) and [Vagrant](https://www.vagrantup.com)
+   - [Ruby](https://www.ruby-lang.org/en/downloads)
+   - [Git](https://git-scm.com/downloads)
+   - [VirtualBox](https://www.virtualbox.org/wiki/Download_Old_Builds_6_1)
+   - [Vagrant](https://www.vagrantup.com)
    
-   **NOTE**
+   **Note:**
    Please download VirtualBox 6 instead of 7.
 
-Below are quick steps to get everything installed and running.
+Below are steps specific to an OS.
 
-   **Windows 10**
+   **Windows**
 
    * You can just go to the respective sites and download the necessary binaries.
 
    **MacOS**
 
    * You can either go to respective sites and download the necessary binaries or
-     install [homebrew](http://brew.sh/)    if you don't have it and then run:
+     install [Homebrew](http://brew.sh/), if you don't have it, and then run:
 
      ```
      brew install --cask virtualbox
@@ -149,7 +165,7 @@ Below are quick steps to get everything installed and running.
 
    **Fedora/Red Hat Linux**
 
-   * For Fedora, the latest version of VirtualBox is recommended to prevent errors. Download the RPM from the virtual box website. Make sure your version of 
+   * For Fedora, the latest version of VirtualBox is recommended to prevent errors. Download the RPM from the VirtualBox website. Make sure your version of 
      Fedora is up to date using
      ```
      sudo dnf update
@@ -163,32 +179,32 @@ Below are quick steps to get everything installed and running.
      ```
      sudo dnf install vagrant
      ```
-     Now move on to step 5.
 
-   **NOTE**
-   when running vagrant up, use `vagrant up --provider=virtualbox` so it doesnt default to libvirt
+      **Note:**
+      When running vagrant up, use `vagrant up --provider=virtualbox` so it doesn't default to libvirt
 
-   **Common errors when running vagrant up(Fedora/RHEL)**
-   1. Missing virtnetworkd:
-      Enable it in your terminal by running:
-      ```
-      sudo systemctl start virtnetworkd
-      ```
-   2. If your vagrant ever freezes kill it with 
-      '''
-      VBoxManage controlvm VM_NAME poweroff
-      '''
-      or if that doesn't work, reboot the computer and then run `vagrant destroy` before re-running `vagrant up --provider=virtualbox` again.
+      **Common errors when running vagrant up (Fedora/RHEL)**
+      1. Missing virtnetworkd:
+         Enable it in your terminal by running:
+         ```
+         sudo systemctl start virtnetworkd
+         ```
+      2. If your vagrant ever freezes kill it with 
+         '''
+         VBoxManage controlvm VM_NAME poweroff
+         '''
+         or if that doesn't work, reboot the computer and then run `vagrant destroy` before re-running `vagrant up --provider=virtualbox` again.
 
 
-5. Clone [the Submitty repository](https://github.com/Submitty/Submitty) to a location on
-   your computer (the "host").
+#### 3. Clone the [Submitty repository](https://github.com/Submitty/Submitty)
 
-   ```
-   git clone https://github.com/Submitty/Submitty.git
-   ```
+Clone it to a location on your computer (the "host").
 
-   **NOTE:** If you are not currently part of the Submitty organization on Github, you may want to
+```
+git clone https://github.com/Submitty/Submitty.git
+```
+
+   **Note:** If you are not currently part of the Submitty organization on GitHub, you may want to
    [fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
    the repo and use the git url from your fork instead, especially if you are looking to contribute.
 
@@ -196,50 +212,58 @@ Below are quick steps to get everything installed and running.
    Submitty repositories (e.g., AnalysisTools, Lichen, Localization, RainbowGrades, Tutorial), also
    clone those repositories to the same directory.  For example:_
 
-     ```
-     home
-     └── myusername
-         └── Submitty
-             └── GIT_CHECKOUT
-                 ├── AnalysisTools  (optional)
-                 ├── Lichen         (optional)
-                 ├── Localization   (optional)
-                 ├── RainbowGrades  (optional)
-                 ├── Submitty
-                 └── Tutorial       (optional)
-     ```
+```
+home
+└── myusername
+   └── Submitty
+         └── GIT_CHECKOUT
+            ├── AnalysisTools  (optional)
+            ├── Lichen         (optional)
+            ├── Localization   (optional)
+            ├── RainbowGrades  (optional)
+            ├── Submitty
+            └── Tutorial       (optional)
+```
 
-    _This host directory structure will be shared / synced between
-    your host operating system and the Submitty virtual machine._
+   _This host directory structure will be shared / synced between
+   your host operating system and the Submitty virtual machine._
 
-6. Navigate into the Submitty repository on your computer in a
-   shell/terminal and type:
+#### 4. Run Vagrant
 
-   _Windows should run CMD or powershell on administrator mode_
+   Navigate into the Submitty repository on your computer in a shell/terminal.
 
-   ```
-   vagrant up
-   ```
+   **Build pre-packaged VM**
 
    If you are using VirtualBox as your provider, you will by default use
    a pre-packaged Submitty VM. This will have all of Submitty already setup.
-   Vagrant will build your VM for you. This process will take 10 minutes to
+   Vagrant will build your VM for you.
+
+   _On Windows, run CMD or PowerShell on administrator mode_.
+
+```
+vagrant up
+```
+
+   This process will take 10 minutes to
    maybe half an hour depending on your internet connection speed.
-   When this command finishes, your VM is ready to use.
+
+   **Build from scratch**
 
    If you wish to run `vagrant up` from scratch, on Linux or Mac type:
-   ```
-   BASE_BOX=1 vagrant up
-   ```
+```
+BASE_BOX=1 vagrant up
+```
    or on Windows, type: 
-   ```
-   SET BASE_BOX=1
-   vagrant up
-   ```
+```
+SET BASE_BOX=1
+vagrant up
+```
    This process will take anywhere from 30 minutes to a few hours depending on your
    internet speed. 
 
-7. When the `vagrant up` command completes successfully, you will be
+**Build without sample submissions**
+
+   When the `vagrant up` command completes successfully, you will be
    able to access the Submitty website (instructions follow in the
    next section).
 
@@ -248,7 +272,7 @@ Below are quick steps to get everything installed and running.
    autograding for a dozen or more sample submissions for each of the
    more than 100 users in the sample courses.
 
-   On MacOS and linux, if your development work *will not require sample assignment
+   On MacOS and Linux, if your development work *will not require sample assignment
    submissions or autograding results*, you may prepend
    `NO_SUBMISSIONS=1` to the previous command, which will skip the
    creation of these sample submissions and their autograding and
@@ -294,7 +318,9 @@ Below are quick steps to get everything installed and running.
    ```pwsh
    $Env:NO_SUBMISSIONS
    ```
-8. When the install has completed, you should see the message:
+**Done!**
+
+   When the installation has completed, you should see the message:
    ```
    #####################################################################
 
@@ -315,7 +341,7 @@ Below are quick steps to get everything installed and running.
    #####################################################################
    ```
 
-   *NOTE: There are times when the install will pause for a brief
+   **Note:** There are times when the install will pause for a brief
     period with the message `Done`. This does not mean the install has
     ended, and the install should continue after a bit of time.*
 
@@ -341,14 +367,12 @@ Below are quick steps to get everything installed and running.
      (see the VM login & password info below)
 
    * You can test the submission, autograding, and viewing of the
-     grades details by uploading sample submissions from the Submitty
-     repository, located in one of these these directories:
+     grade details by uploading sample submissions from the Submitty
+     repository, located in one of these directories:
 
-     For the "tutorial" course:
-     <https://github.com/Submitty/Tutorial/tree/main/examples>
+     - The ["tutorial" course](https://github.com/Submitty/Tutorial/tree/main/examples)
 
-     For the "sample" course:
-     <https://github.com/Submitty/Submitty/tree/master/more_autograding_examples>
+     - The ["sample" course](https://github.com/Submitty/Submitty/tree/master/more_autograding_examples)
 
 2. When the VM is "up", you can connect from your host computer to the
     virtual machine via ssh.  Windows users will need to install SSH
@@ -408,7 +432,7 @@ Below are quick steps to get everything installed and running.
     * development
     * blank
 
-    *Note: The current semester is calculated by either using an `s` if in the month is < 7 else use `f`
+    **Note**: The current semester is calculated by either using an `s` if in the month is < 7 else use `f`
     and then take the last two digits of the current year. So April 2017 would be `s17` while September
     2017 would be `f17`.*
 
@@ -440,7 +464,7 @@ Below are quick steps to get everything installed and running.
    vagrant up
    ```
 
-   NOTE: when resuming work, you may see this warning several times,
+   Note: when resuming work, you may see this warning several times,
    `default: Warning: Remote connection disconnect. Retrying..  .`
    These warnings are not harmful and can be ignored.
 
@@ -503,7 +527,7 @@ Below are quick steps to get everything installed and running.
 
    where `$SUBMITTY_HOST` is a reference to the `Host` from the SSH config file.
 
-   **NOTE**
+   **Note:**
    Especially for mobile operating systems, make sure that your SSH client supports SSH port forwarding. On iOS, you will also have to enable location tracking for the client to keep the connection alive in the background.
 
    This has been tested with Blink for iOS and Termius for iOS (also available on Android, untested).
