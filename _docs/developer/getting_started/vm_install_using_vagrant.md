@@ -169,17 +169,16 @@ Below are quick steps to get everything installed and running.
    when running vagrant up, use `vagrant up --provider=virtualbox` so it doesnt default to libvirt
 
    **Common errors when running vagrant up(Fedora/RHEL)**
-   1. Missing virtnetworkd:
-      Enable it in your terminal by running:
-      ```
-      sudo systemctl start virtnetworkd
-      ```
-   2. If your vagrant ever freezes kill it with 
-      '''
-      VBoxManage controlvm VM_NAME poweroff
-      '''
-      or if that doesn't work, reboot the computer and then run `vagrant destroy` before re-running `vagrant up --provider=virtualbox` again.
-
+      1. Missing virtnetworkd:
+         Enable it in your terminal by running:
+         ```
+         sudo systemctl start virtnetworkd
+         ```
+      2. If your vagrant ever freezes kill it with 
+         ```
+         VBoxManage controlvm VM_NAME poweroff
+         ```
+         or if that doesn't work, reboot the computer and then run `vagrant destroy` before re-running `vagrant up --provider=virtualbox` again.
 
 5. Clone [the Submitty repository](https://github.com/Submitty/Submitty) to a location on
    your computer (the "host").
