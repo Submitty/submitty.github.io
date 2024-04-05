@@ -26,15 +26,28 @@ Getting Started:
 
 3. Edit Inventory and Add Server IP:
 
-   Replace submitty_ip with your machine's IP address. This will give you access to the site on the server once the install process is completed successfully. 
+   Replace 'submitty_ip' with your machine's IP address. This will give you access to the site on the server once the install process is completed successfully. 
 
 4. Edit default playbook to match your server(ansible/playbooks/submitty_install.yml):
 
    Note: Your edits should match your dedicated machine (or VM) necessary requirements to properly install Submitty onto your machine. See `ansible/roles/app_submitty/defaults/main.yml` for default installation parameters. 
 
+5. Configure SSL
 
+   Secure Sockets Layer (SSL) is a protocol for establishing authenticated and encrypted links between networked computers. It's necessary for secure data transmission, such as user login credentials.
 
-**ssl**
+   To configure SSL for your Submitty installation, you'll need to obtain an SSL certificate. This can be from a Certificate Authority (CA) or a self-signed certificate if it's for development purposes.
+
+   Once you have your certificate and key, place them in the appropriate directory (usually `/etc/ssl/certs/` for the certificate and `/etc/ssl/private/` for the key). 
+
+   Then, update the `ansible/roles/app_submitty/defaults/main.yml` file with the paths to your certificate and key. The relevant lines might look something like this:
+
+   ```yaml
+   ssl_certificate: /etc/ssl/certs/mycert.pem
+   ssl_certificate_key: /etc/ssl/private/mykey.pem
+   ```
+
+   Save your changes and proceed to run the Ansible script.
 
 6. Run Ansible Script
 
@@ -44,7 +57,7 @@ Getting Started:
    Ansible-playbook -i inventory/submitty playbooks/submitty_install.yml
    ```
 
-   This ansible command will run the entire Submitty install process step by step. See `ansible/roles/app_submitty/tasks/main.yml` for more information on the Install process. 
+This command initiates the Ansible playbook, which orchestrates the comprehensive installation process for Submitty. For a detailed understanding of the installation steps, refer to `ansible/roles/app_submitty/tasks/main.yml`.
 
 7. Check Install Log
 
