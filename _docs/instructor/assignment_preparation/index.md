@@ -249,3 +249,51 @@ you must re-run the BUILD_XXXX.sh script.
    logfiles for each test case.  You will also find log files for the
    compilation, runner, and validation components of automated grading
    that are helpful in debugging assignment configurations.
+
+
+### Download Gradeable as JSON
+
+You can download the JSON representation of your gradeable by clicking the 'Download Gradeable Json' 
+button at the top right of the 'Edit Gradeable' screen. This JSON file can be re-uploaded into a new course 
+to use the same parameters as the existing gradeable.
+
+Below is the list of parameters downloaded. VCS and Team Gradeable are only downloaded if the gradeable is using them. 
+```json
+{
+  "title": "Example Json",
+  "instructions_url": "",
+  "id": "Example ID",
+  "type": "Electronic File",
+  "vcs": {
+    "repository_type": "submitty-hosted",
+    "vcs_path": "http://localhost:1511/path/to/repository",
+    "vcs_subdirectory": "subdirectory"
+  },
+  "team_gradeable": {
+    "team_size_max": 3,
+    "inherit_from": "gradeable_id",
+  },
+  "bulk_upload": false,
+  "grading_inquiry": false,
+  "grade_inquiry_per_component_allowed": false,
+  "ta_grading": false,
+  "discussion_thread_id": "thread_id",
+  "syllabus_bucket": "Homework",
+  "autograding_config_path": "path/to/config",
+  "dates": {
+    "ta_view_start_date": "2024-1-10 23:59:59.00",
+    "submission_open_date": "2024-1-10 23:59:59.00",
+    "submission_due_date": "2024-2-10 23:59:59.00",
+    "grade_start_date": "2024-2-10 23:59:59.00",
+    "grade_due_date": "2024-3-10 23:59:59.00",
+    "team_lock_date": "2024-1-10 23:59:59.00",
+    "grade_released_date": "2024-3-10 23:59:59.00",
+    "grade_inquiry_start_date": "2024-3-10 23:59:59.00",
+    "grade_inquiry_due_date": "2024-3-10 23:59:59.00",
+    "has_due_date": true,
+    "has_release_date": true,
+    "late_days_allowed": true,
+    "late_days": 3
+  }
+}
+```
