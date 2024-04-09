@@ -66,7 +66,7 @@ Four digit year, one or two digit month, two digit day, two digit hour, minute, 
 * has_due_date -- (true/false) If the gradeable has a due date,
 * has_release_date -- (true/false) If the gradeable has a grade_released_date
 * late_days_allowed -- (true/false) If students are allowed to use late days on the assignment
-* late_days -- The amount of late days students can use on the assignment 3
+* late_days -- The amount of late days students can use on the assignment
 ```json
 "dates": {
     "ta_view_start_date": "2024-1-10 23:59:59.00",
