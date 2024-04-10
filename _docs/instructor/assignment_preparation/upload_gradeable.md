@@ -41,7 +41,7 @@ __Other Electronic Types__
 ```json
 "team_gradeable": {
     "team_size_max": 3,
-    "inherit_from": "gradeable_id",
+    "inherit_from": "gradeable_id"
 }
 ```
 #### Grade inquiries
@@ -103,7 +103,7 @@ Four digit year, one or two digit month, two digit day, two digit hour, minute, 
   },
   "team_gradeable": {
     "team_size_max": 3,
-    "inherit_from": "gradeable_id",
+    "inherit_from": "gradeable_id"
   },
   "bulk_upload": false,
   "grading_inquiries": false,
