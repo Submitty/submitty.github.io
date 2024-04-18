@@ -23,7 +23,7 @@ will be able to read/execute it.
 
 _Note: These instructions should be run under root/sudo._
 
-We have two methods for installing Submitty. The first method is running the bootstrap script which follows the set of instructions listed below. The second is through running the Ansible script. We find these instructions {{here}}.
+We have two methods for installing Submitty. The first method is running the bootstrap script which follows the set of instructions listed below. The second is through running the Ansible script. We find these instructions in ansible_index.md.
 
 1. [Install Ubuntu 22.04 server edition (or other supported distro)](/sysadmin/installation/server_os)
 
