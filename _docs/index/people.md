@@ -10,6 +10,29 @@ redirect_from:
 
 ---
 
+## 2024 Spring Developers
+
+![](/images/people/2024_spring.png)
+
+Michael Krar,
+Joshua Wei,
+Jeffrey Cordero,
+Raymond Reynoso Ramirez,
+Ryan Varughese,
+Tate Whiteberg,
+Kush Raval,
+Josiah Riggins,
+Chris Reed,
+Johnny Chen,
+James Fitzgerald,
+Viane Matsibekker,
+Jaeseok Kang,
+Hanson Gu,
+Zheyu Deng,
+Junyi Wu
+
+---
+
 ## 2023 Fall Developers
 
 ![](/images/people/2023_fall.png)
