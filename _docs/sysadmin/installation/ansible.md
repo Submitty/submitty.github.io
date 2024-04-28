@@ -36,6 +36,9 @@ Getting Started:
    **Important**: Any variables defined in the playbook will take precedence over the default values.
    This allows for fine-tuning and customization of your Submitty installation.
 
+   **Reminder**: Ensure that the `submitty_version` variable in your playbook matches the version of Submitty you intend to install. This is crucial for the correct functioning of your installation.
+
+
 5. SSL Configuration
 
    Note: If you use SSL, follow steps to configure. If not, skip to step 6. 
