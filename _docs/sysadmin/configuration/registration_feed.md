@@ -95,7 +95,7 @@ The columns/fields may be in any order.
 
 
 ### 4. Install On Ubuntu Server
-As these are PHP scripts, they _should_ run on any computer that has PHP 7.3 or 7.4 and the appropriate extensions installed.
+As these are PHP scripts, they _should_ run on any computer that has a version of PHP 7.3 through 8.3, and the appropriate extensions installed.
 However, these instructions will focus on Ubuntu server 20.04 which provides PHP 7.4 by default.
 
 1. If they haven't already been installed, install PHP and the required extensions.
@@ -364,14 +364,6 @@ Rows that do not match this constant's  value will be ignored and a warning adde
 It is possible that when one row does not match, all rows will not match.
 
 
-#### End of Line Detection
-```php
-ini_set('auto_detect_line_endings', true);
-```
-This shouldn't be changed.
-It ensures that CSV files exported by Microsoft Excel for Macintosh are correctly processed.
-
-
 #### Timezone
 ```php
 date_default_timezone_set('America/New_York');
@@ -401,8 +393,8 @@ These optional scripts can assist in retrieving CSV data, as opposed to the data
 #### `csv_local.php`
 Should CSV data files be made available in the local or a mounted filesystem, this script will help you validate and retrieve the CSV data file for the auto feed.  Validation includes file's existence and that the timestamp is current, so to not reprocess an old CSV file.
 
-**`config.php`**
-*Define* |
+##### `config.php`
+*define* |
 `'LOCAL_SOURCE_CSV'` | Path/file to retrieve and placed in the location of [`'CSV_FILE'`](#csv-file-access) so that it may be processed.
 
 
@@ -411,7 +403,7 @@ This script will retrieve CSV Data files attached to an email in an IMAP email a
 
 ***IMPORTANT:*** This script is highly specialized, and is currently obsolete and unsupported.  This script is provided "as is" as a sample for another developer to adapt for their University's needs.  Use at your own risk.
 
-**config.php**
+##### `config.php`
 *define* |
 `'IMAP_HOSTNAME'` | FQDN of the IMAP email service.
 `'IMAP_PORT'` | Network port to access IMAP email.
@@ -438,7 +430,7 @@ This script attempts to open an SSH connection to another server, locate and rea
 
 ***IMPORTANT:*** This script is highly specialized, and is currently obsolete and unsupported.  This script is provided "as is" as a sample for another developer to adapt for their University's needs.  Use at your own risk.
 
-**config.php**
+##### `config.php`
 *define* |
 `'JSON_REMOTE_HOSTNAME'` | FQDN of the host server to access for the JSON file.
 `'JSON_REMOTE_PORT'` | Network port for SSH access.  Usually 22.

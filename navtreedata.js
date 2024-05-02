@@ -111,6 +111,7 @@ var NAVTREE =
                 [ "Team Assignments", "/instructor/assignment_preparation/team_assignments", null ],
                 [ "Bulk PDF Upload", "/instructor/assignment_preparation/bulk_pdf_upload", null ],
                 [ "Personalized Exam", "/instructor/assignment_preparation/personalized_exams", null ],
+                [ "Upload Gradeable from JSON", "/instructor/assignment_preparation/upload_gradeable", null ],
             ] ],
             [ "Assignment Configuration", "/instructor/assignment_configuration/configuration_path", [
                 [ "Configuration Path","/instructor/assignment_configuration/configuration_path", null],
@@ -126,6 +127,7 @@ var NAVTREE =
                 [ "Validation", "/instructor/autograding/validation", null ],
                 [ "Batch Regrade Submissions", "/instructor/autograding/batch_regrade", null ],
                 [ "Sample Assignments", "/instructor/autograding/sample_assignments", null ],
+                [ "Docker Images", "/instructor/autograding/docker_images", null ],
                 [ "Docker UI", "/instructor/autograding/docker_ui", null ],
                 [ "Static Analysis", "/instructor/autograding/static_analysis/index", [
                     [ "Overview", "/instructor/autograding/static_analysis/index", null ],
