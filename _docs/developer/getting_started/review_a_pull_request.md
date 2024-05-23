@@ -166,7 +166,7 @@ you have setup ssh keys for working with github.
     And then to push them to the external contributor's fork and update
     the PR on github:
     ```
-    git push upstream contributorusername:contributor_branch_name
+    git push upstream contributorusername-contributor_branch_name:contributor_branch_name
     ```
 
     Confirm that you can see the changes on the Github website for the PR.
