@@ -109,4 +109,72 @@ What do you need to do?
    the main branch.
 
 
+### Working with a PR from an External Contributor's fork
+
+An external contributor cannot make new branches on the Submitty
+repositories.  Instead, external contributors will fork the Submitty
+repository and then make a PR from a branch on their fork.  We can
+collaborate on the PR (e.g., make small revisions) assuming they have
+granted permission for collaborators to push to their fork.  The
+instructions below are for command line use of git, and assume that
+you have setup ssh keys for working with github.
+
+
+1.  First, from the PR on github, find the name of the fork + branch
+    name.  It should be formatted something like this:
+
+    ```
+    contributorusername:contributor_branch_name
+    ```
+
+2.  Next, make a local branch on your computer in your working repository
+    with the proposed code changes.  Here are the command lines
+    (substitute the fork & branch name we found above):
+
+    ```
+    git checkout -b contributorusername-contributor_branch_name main
+    git pull git@github.com:contributorusername/Submitty.git contributor_branch_name
+    ```
+
+    This has made a local branch named
+    `contributorusername-contributor_branch_name` where you can test and
+    review the PR and make code edits as needed.
+
+
+3.  Specify the upstream to be the contributors fork:
+
+    ```
+    git remote add upstream git@github.com:contributorusername/Submitty.git
+    ```
+
+    Confirm that the upstream was set:
+    ```
+    git remote -v
+    ```
+
+    Which should print something like this:
+    ```
+    origin	git@github.com:Submitty/Submitty.git (fetch)
+    origin	git@github.com:Submitty/Submitty.git (push)
+    upstream	git@github.com:contributorusername/Submitty.git (fetch)
+    upstream	git@github.com:contributorusername/Submitty.git (push)
+    ```
+
+4.  Now once you are finished with your code changes, commit them to the
+    local branch (named `contributorusername-contributor_branch_name`).
+
+    And then to push them to the external contributor's fork and update
+    the PR on github:
+    ```
+    git push upstream contributorusername:contributor_branch_name
+    ```
+
+    Confirm that you can see the changes on the Github website for the PR.
+
+    If you encounter a permissions error, it is possible that the external
+    contributor didn't grant access for collaboration on the branch.
+
+
+---
+
 See also [How to Make a Pull Request](make_a_pull_request).
