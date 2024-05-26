@@ -167,8 +167,11 @@ Be sure to read the [Suggestions for New Developers](/developer/getting_started/
        for specific reviewers.
 
 
+---
+
 See also [How to Review a Pull Request](review_a_pull_request).
 
+---
 
 These guidelines drawn from:
 
