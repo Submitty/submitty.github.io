@@ -187,8 +187,9 @@ var NAVTREE =
             [ "Getting Started", "/developer/getting_started/index", [
                 [ "Overview", "/developer/getting_started/index", null ],
                 [ "Project Ideas", "/developer/getting_started/project_ideas", null ],
-                [ "Review a Pull Request", "/developer/getting_started/review_a_pull_request", null ],
                 [ "Make a Pull Request", "/developer/getting_started/make_a_pull_request", null ],
+                [ "Review a Pull Request", "/developer/getting_started/review_a_pull_request", null ],
+                [ "Commit to PR from Fork", "/developer/getting_started/commit_to_PR_from_fork", null ],
                 [ "Edit Submitty Documentation", "/developer/getting_started/edit_submitty_documentation", null ],
                 [ "VM Install using Vagrant", "/developer/getting_started/vm_install_using_vagrant", [
                     [ "Vagrant QEMU on Apple Silicon", "/developer/getting_started/vm_install_using_vagrant_apple_silicon", null ]
