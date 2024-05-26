@@ -55,7 +55,7 @@ What do you need to do?
 
     * If you need to make edits to a PR made from a branch in a forked
       repo, see:  
-      [How to Checkout and Commit to a Fork PR](commit_to_fork_PR)
+      [How to Checkout and Commit to a Fork PR](commit_to_PR_from_fork)
 
 
 4.  [Re-install the system](/developer/development_instructions/index)
