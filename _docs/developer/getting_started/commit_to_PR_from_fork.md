@@ -22,26 +22,29 @@ The instructions below are for command line use of git.
 
 
 1.  First, from the PR on the Github website, find the name of the
-    fork + branch name.  It should be formatted something like this:
+    user + branch name.  It should be formatted something like this:
     ```
     contributorusername:contributor_branch_name
     ```
 
+    Additionally, find the name of the fork on the fork's page on Github.  
+    The `fork_name` may simply be `Submitty`, or the author may have chosen to another name.
+    
 
 2.  Next, make a local branch on your computer in your working repository
-    with the proposed code changes.  Here are the command lines
-    (substitute the fork & branch name we found above):
+    with the proposed code changes. Here are the command lines
+    (substitute the user, branch, and fork names we found above):
 
     If you **are not** using ssh keys on git:
     ```
     git checkout -b contributorusername-contributor_branch_name main
-    git pull https://github.com/contributorusername/Submitty.git contributor_branch_name
+    git pull https://github.com/contributorusername/fork_name.git contributor_branch_name
     ```
     
     If you **are** using ssh keys on git:
     ```
     git checkout -b contributorusername-contributor_branch_name main
-    git pull git@github.com:contributorusername/Submitty.git contributor_branch_name
+    git pull git@github.com:contributorusername/fork_name.git contributor_branch_name
     ```
 
 
@@ -58,13 +61,13 @@ The instructions below are for command line use of git.
 
     If you **are not** using ssh keys on git:
     ```
-    git remote add upstream https://github.com/contributorusername/Submitty.git
+    git remote add upstream https://github.com/contributorusername/fork_name.git
     ```
 
 
     If you **are** using ssh keys on git:
     ```
-    git remote add upstream git@github.com:contributorusername/Submitty.git
+    git remote add upstream git@github.com:contributorusername/fork_name.git
     ```
 
 
@@ -77,16 +80,16 @@ The instructions below are for command line use of git.
     ```
     origin      https://github.com/Submitty/Submitty.git (fetch)
     origin      https://github.com/Submitty/Submitty.git (push)
-    upstream    https://github.com/contributorusername/Submitty.git (fetch)
-    upstream    https://github.com/contributorusername/Submitty.git (push)
+    upstream    https://github.com/contributorusername/fork_name.git (fetch)
+    upstream    https://github.com/contributorusername/fork_name.git (push)
     ```
 
     Or this if you **are** using ssh keys on git:
     ```
     origin      git@github.com:Submitty/Submitty.git (fetch)
     origin      git@github.com:Submitty/Submitty.git (push)
-    upstream    git@github.com:contributorusername/Submitty.git (fetch)
-    upstream    git@github.com:contributorusername/Submitty.git (push)
+    upstream    git@github.com:contributorusername/fork_name.git (fetch)
+    upstream    git@github.com:contributorusername/fork_name.git (push)
     ```
 
 
