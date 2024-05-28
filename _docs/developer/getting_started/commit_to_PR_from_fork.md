@@ -22,49 +22,52 @@ The instructions below are for command line use of git.
 
 
 1.  First, from the PR on the Github website, find the name of the
-    fork + branch name.  It should be formatted something like this:
+    user + branch name.  It should be formatted something like this:
     ```
     contributorusername:contributor_branch_name
     ```
 
+    Additionally, find the name of the fork
+    on the fork's page on Github.
+    
 
-2.  Next, make a local branch on your computer in your working repository
-    with the proposed code changes.  Here are the command lines
-    (substitute the fork & branch name we found above):
+3.  Next, make a local branch on your computer in your working repository
+    with the proposed code changes. Here are the command lines
+    (substitute the user, branch, and fork names we found above):
 
     If you **are not** using ssh keys on git:
     ```
     git checkout -b contributorusername-contributor_branch_name main
-    git pull https://github.com/contributorusername/Submitty.git contributor_branch_name
+    git pull https://github.com/contributorusername/fork_name.git contributor_branch_name
     ```
     
     If you **are** using ssh keys on git:
     ```
     git checkout -b contributorusername-contributor_branch_name main
-    git pull git@github.com:contributorusername/Submitty.git contributor_branch_name
+    git pull git@github.com:contributorusername/fork_name.git contributor_branch_name
     ```
 
 
-3.  This has made a local branch named
+4.  This has made a local branch named
     `contributorusername-contributor_branch_name`.  Go ahead and test
     and review the PR and make code edits and new commits to your
     local branch as needed.
 
 
 
-4.  In order to push the changes to the contributor's fork (and the PR
+5.  In order to push the changes to the contributor's fork (and the PR
     on Github from the fork), you will specify the upstream to be the
     contributor's fork:
 
     If you **are not** using ssh keys on git:
     ```
-    git remote add upstream https://github.com/contributorusername/Submitty.git
+    git remote add upstream https://github.com/contributorusername/fork_name.git
     ```
 
 
     If you **are** using ssh keys on git:
     ```
-    git remote add upstream git@github.com:contributorusername/Submitty.git
+    git remote add upstream git@github.com:contributorusername/fork_name.git
     ```
 
 
@@ -77,20 +80,20 @@ The instructions below are for command line use of git.
     ```
     origin      https://github.com/Submitty/Submitty.git (fetch)
     origin      https://github.com/Submitty/Submitty.git (push)
-    upstream    https://github.com/contributorusername/Submitty.git (fetch)
-    upstream    https://github.com/contributorusername/Submitty.git (push)
+    upstream    https://github.com/contributorusername/fork_name.git (fetch)
+    upstream    https://github.com/contributorusername/fork_name.git (push)
     ```
 
     Or this if you **are** using ssh keys on git:
     ```
     origin      git@github.com:Submitty/Submitty.git (fetch)
     origin      git@github.com:Submitty/Submitty.git (push)
-    upstream    git@github.com:contributorusername/Submitty.git (fetch)
-    upstream    git@github.com:contributorusername/Submitty.git (push)
+    upstream    git@github.com:contributorusername/fork_name.git (fetch)
+    upstream    git@github.com:contributorusername/fork_name.git (push)
     ```
 
 
-5.  Now once you are finished with your code changes, first commit them to
+6.  Now once you are finished with your code changes, first commit them to
     the local branch (named
     `contributorusername-contributor_branch_name`).
 
@@ -103,7 +106,7 @@ The instructions below are for command line use of git.
     *NOTE:  If you encounter a permissions error, it is possible that the external
     contributor didn't grant access for collaboration on the branch.*
 
-6.  Confirm that you can see the changes on the Github website for the PR.
+7.  Confirm that you can see the changes on the Github website for the PR.
 
 
 ---
