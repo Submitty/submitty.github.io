@@ -27,8 +27,8 @@ The instructions below are for command line use of git.
     contributorusername:contributor_branch_name
     ```
 
-    Additionally, find the name of the fork
-    on the fork's page on Github.
+    Additionally, find the name of the fork on the fork's page on Github.  
+    The `fork_name` may simply be `Submitty`, or the author may have chosen to another name.
     
 
 2.  Next, make a local branch on your computer in your working repository
