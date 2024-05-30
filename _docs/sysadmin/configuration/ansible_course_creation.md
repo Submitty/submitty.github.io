@@ -30,7 +30,7 @@ sudo apt-get install ansible
 3. Run the playbook using the following command:
 
     ```
-    ansible-playbook -i inventory/submitty playbooks/create_course.yml
+    ansible-playbook -i inventory/submitty playbooks/submitty_course_creation.yml
     ```
 
 4. Once the process is complete, your new course should be available in Submitty.
