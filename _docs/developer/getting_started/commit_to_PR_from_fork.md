@@ -20,10 +20,10 @@ merging to the main branch.
 
 The instructions below are for command line use of git.
 
-1. **Before** you begin, confirm that your lcoal main branch of Submitty is
+1. **Before** you begin, confirm that your local main branch of Submitty is
     up-to-date. Additionally, if the PR's branch is not up-to-date with Submitty's main,
-    there will be a button on its Github webpage that you can press to update it.
-    You may need to resolve some merge conflicts in the process of updating it.
+    there will be a button on its page on Github that you can press to update it.
+    You may need to resolve merge conflicts in the process of updating it.
     
     ![alt text](/images/update-branch.png)
 
