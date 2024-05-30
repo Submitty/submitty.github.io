@@ -15,6 +15,7 @@ Before you begin, ensure that you have installed Ansible on your machine. If not
 
 ```bash
 sudo apt-get install ansible
+```
 
 Steps to Create a Course
 
