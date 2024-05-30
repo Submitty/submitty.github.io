@@ -22,7 +22,7 @@ sudo apt-get install ansible
 1. Navigate to the ansible directory in your Submitty installation:
 
     ```
-    cd /path/to/submitty/ansible
+    cd /.setup/ansible
     ```
 
 2. There is a playbook available named create_course.yml. This playbook contains the necessary tasks to create a new course in Submitty. You can edit this file to specify the details of the course you want to create.
@@ -30,7 +30,7 @@ sudo apt-get install ansible
 3. Run the playbook using the following command:
 
     ```
-    ansible-playbook create_course.yml
+    ansible-playbook -i inventory/submitty playbooks/create_course.yml
     ```
 
 4. Once the process is complete, your new course should be available in Submitty.
