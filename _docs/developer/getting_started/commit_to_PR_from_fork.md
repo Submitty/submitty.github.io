@@ -20,8 +20,14 @@ merging to the main branch.
 
 The instructions below are for command line use of git.
 
+1. **Before** you begin, confirm that your local main branch of Submitty is
+    up-to-date. Additionally, if the PR's branch is not up-to-date with Submitty's main,
+    there will be a button on its page on Github that you can press to update it.
+    You may need to resolve merge conflicts in the process of updating it.
+    
+    ![alt text](/images/update-branch.png)
 
-1.  First, from the PR on the Github website, find the name of the
+2.  From the PR on the Github website, find the name of the
     user + branch name.  It should be formatted something like this:
     ```
     contributorusername:contributor_branch_name
@@ -31,7 +37,7 @@ The instructions below are for command line use of git.
     The `fork_name` may simply be `Submitty`, or the author may have chosen to another name.
     
 
-2.  Next, make a local branch on your computer in your working repository
+3.  Next, make a local branch on your computer in your working repository
     with the proposed code changes. Here are the command lines
     (substitute the user, branch, and fork names we found above):
 
@@ -48,14 +54,14 @@ The instructions below are for command line use of git.
     ```
 
 
-3.  This has made a local branch named
+4.  This has made a local branch named
     `contributorusername-contributor_branch_name`.  Go ahead and test
     and review the PR and make code edits and new commits to your
     local branch as needed.
 
 
 
-4.  In order to push the changes to the contributor's fork (and the PR
+5.  In order to push the changes to the contributor's fork (and the PR
     on Github from the fork), you will specify the upstream to be the
     contributor's fork:
 
@@ -93,7 +99,7 @@ The instructions below are for command line use of git.
     ```
 
 
-5.  Now once you are finished with your code changes, first commit them to
+6.  Now once you are finished with your code changes, first commit them to
     the local branch (named
     `contributorusername-contributor_branch_name`).
 
@@ -106,7 +112,7 @@ The instructions below are for command line use of git.
     *NOTE:  If you encounter a permissions error, it is possible that the external
     contributor didn't grant access for collaboration on the branch.*
 
-6.  Confirm that you can see the changes on the Github website for the PR.
+7.  Confirm that you can see the changes on the Github website for the PR.
 
 
 ---
