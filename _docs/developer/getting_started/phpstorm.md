@@ -51,7 +51,7 @@ Under the `Mappings` tab, set the following:
 This step will configure PhpStorm to use the PHP CLI that is configured inside your vagrant machine.
 It is important to use this PHP installation as opposed to some other one as it ensures environment consistency among developers and production servers.
 
-Under PhpStorm settings, open `Languages & Frameworks` > `PHP`. Press the `...` button next to `CLI Interpreter` and, on the left list of the interpreters window, press the `+` and select `From Docker, Vagrant, VM, Remote...`.
+Under PhpStorm settings, open `PHP`. Press the `...` button next to `CLI Interpreter` and, on the left list of the interpreters window, press the `+` and select `From Docker, Vagrant, VM, Remote...`.
 Select `Vagrant` from the list of radio buttons.
 Then press `OK` to add the interpreter and `OK` to save the list of interpreters.
 
@@ -61,7 +61,7 @@ Open `Tools` > `Deployment...` > `Options`. Set `Upload changed files automatica
 
 ## Enable PHP debugging using xdebug
 
-Under PhpStorm settings, open `Languages & Frameworks` > `PHP` > `Debug`. In the pre-configuration steps, press `Validate` to open the configuration validator. Choose `Remote Web Server` and set the following:
+Under PhpStorm settings, open `PHP` > `Debug`. In the pre-configuration steps, press `Validate` to open the configuration validator. Choose `Remote Web Server` and set the following:
 
 - `Path to create validation script`: `<submitty repository root>/site/public`
 - `Deployment Server`: Use the SFTP connection you set up in the first step
@@ -91,7 +91,7 @@ Now you can browse the tables in the database window by expanding the tabs next 
 
 ## Running PHPUnit tests
 
-Under PhpStorm settings, open `Languages & Frameworks` > `PHP` > `Test Frameworks`. Press the `+` button to add a testing configuration, using the `PHPUnit by Remote Interpreter` type. Choose the interpreter you configured in earlier steps. Then set:
+Under PhpStorm settings, open `PHP` > `Test Frameworks`. Press the `+` button to add a testing configuration, using the `PHPUnit by Remote Interpreter` type. Choose the interpreter you configured in earlier steps. Then set:
 
 - `PHPUnit Library`: `Use Composer autoloader`
 - `Path to script`: `/usr/local/submitty/GIT_CHECKOUT/Submitty/site/vendor/autoloader.php`
@@ -132,7 +132,7 @@ Press `OK` to save the run configuration. If you then `Debug` the configuration,
 
 During debugging, you may get decently upset at how often you step into magic methods and class loaders etc. There's an easy fix for this:
 
-Under PhpStorm settings, open `Languages & Frameworks` > `PHP` > `Debug` > `Step Filters`. Check `Skip magic methods` and add the following to `Skipped Methods`:
+Under PhpStorm settings, open `PHP` > `Debug` > `Step Filters`. Check `Skip magic methods` and add the following to `Skipped Methods`:
 
 - `app\views\AbstractView->__construct`
 - `app\models\AbstractModel->convertName`
