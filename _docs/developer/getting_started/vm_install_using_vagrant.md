@@ -400,7 +400,12 @@ Below are quick steps to get everything installed and running.
     | grader | grader | Limited access grader submitty user |
     | student | student | Student submitty user |
 
-4. The VM has the following four courses by default and they are all part of the current semester:
+   Note that there are many more student and grader users on the VM; you may
+   log in as any of them using their **User ID** as the username and password.
+   The easiest way to see the list of users is to log in as an instructor, access
+   a course, and click **Manage Students** or **Manage Graders**.
+
+5. The VM has the following four courses by default and they are all part of the current semester:
 
     * tutorial
     * sample
