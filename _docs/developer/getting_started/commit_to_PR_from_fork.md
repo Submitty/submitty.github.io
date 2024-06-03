@@ -18,6 +18,12 @@ the forked repository has granted the necessary permissions*.  This
 allows multiple developers to collaborate and finalize a PR for
 merging to the main branch.
 
+If you use Github Desktop or have the Github CLI installed, the simplest
+way to work on a fork is to click the **Code** dropdown on the PR's page
+on Github and checkout the PR from there. 
+
+![alt text](/images/fork-checkout.png)
+
 The instructions below are for command line use of git.
 
 1. **Before** you begin, confirm that your local main branch of Submitty is
