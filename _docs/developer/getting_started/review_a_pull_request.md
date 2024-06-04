@@ -53,6 +53,10 @@ What do you need to do?
       Now you have a version of the code in a new branch on the main repo.
       Review the PR normally and delete the temporary branch when you are done
 
+    * If you need to make edits to a PR made from a branch in a forked
+      repo, see:  
+      [How to Checkout and Commit to a Fork PR](commit_to_PR_from_fork)
+
 
 4.  [Re-install the system](/developer/development_instructions/index)
     as necessary
@@ -108,5 +112,6 @@ What do you need to do?
    hopefully, in short order, approving that the code be merged into
    the main branch.
 
+---
 
 See also [How to Make a Pull Request](make_a_pull_request).

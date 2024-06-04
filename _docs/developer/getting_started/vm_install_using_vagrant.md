@@ -93,7 +93,7 @@ If you using an Intel-based Mac, you will follow the instructions below._
 
    7. Enter your **BIOS** (generally by pressing Del, F12, or other keys while booting). If you are not able to find the key combo needed to enter your BIOS, refer to [this guide](https://www.tomshardware.com/reviews/bios-keys-to-access-your-firmware,5732.html).
 
-   8. Locate **Virtualization**, and enable it. (Note: If you cannot find the option to enable virtualization, [search Google](http://tinyurl.com/enable-virtualization) for a tutorial on enabling it with your motherboard.)
+   8. Locate **Virtualization**, and enable it. (Note: Some motherboards may call it SVM, AMD-V, VT-x/Vanderpool. If you cannot find the option to enable virtualization, [search Google](http://tinyurl.com/enable-virtualization) for a tutorial on enabling it with your motherboard.) 
 
    9. Reboot your computer.
 
@@ -102,7 +102,7 @@ If you using an Intel-based Mac, you will follow the instructions below._
 
    2. Navigate the **BIOS Settings**.
 
-   3. Locate **Virtualization** and enable it.
+   3. Locate **Virtualization** and enable it. (Some motherboards may call it SVM, AMD-V, VT-x/Vanderpool)
 
    4. Be sure to choose **Hardware Virtualization** in the **System -> Acceleration** settings of the virtual machine you are using.
 
@@ -147,6 +147,39 @@ Below are quick steps to get everything installed and running.
      Vagrant: <https://developer.hashicorp.com/vagrant/downloads> 
      (if that doesn't work, try: <https://vagrant-deb.linestarve.com/>)
 
+   **Fedora/Red Hat Linux**
+
+   * For Fedora, the latest version of VirtualBox is recommended to prevent errors. Download the RPM from the virtual box website. Make sure your version of 
+     Fedora is up to date using
+     ```
+     sudo dnf update
+     sudo dnf upgrade
+     ```
+     and inputting your password. Then install the Virtual Box rpm using: 
+     ```
+     sudo dnf install VirtualBox-xxxxx.rpm 
+     ```
+     Install Vagrant using: 
+     ```
+     sudo dnf install vagrant
+     ```
+     Now move on to step 5.
+
+   **NOTE**
+   when running vagrant up, use `vagrant up --provider=virtualbox` so it doesnt default to libvirt
+
+   **Common errors when running vagrant up(Fedora/RHEL)**
+      1. Missing virtnetworkd:
+         Enable it in your terminal by running:
+         ```
+         sudo systemctl start virtnetworkd
+         ```
+      2. If your vagrant ever freezes kill it with 
+         ```
+         VBoxManage controlvm VM_NAME poweroff
+         ```
+         or if that doesn't work, reboot the computer and then run `vagrant destroy` before re-running `vagrant up --provider=virtualbox` again.
+
 5. Clone [the Submitty repository](https://github.com/Submitty/Submitty) to a location on
    your computer (the "host").
 
@@ -187,10 +220,23 @@ Below are quick steps to get everything installed and running.
    vagrant up
    ```
 
-   Vagrant will build your VM.  This will take maybe 30 minutes to a
-   few hours depending on your Internet connection speed.  When this
-   command finishes, your VM is ready to use.
+   If you are using VirtualBox as your provider, you will by default use
+   a pre-packaged Submitty VM. This will have all of Submitty already setup.
+   Vagrant will build your VM for you. This process will take 10 minutes to
+   maybe half an hour depending on your internet connection speed.
+   When this command finishes, your VM is ready to use.
 
+   If you wish to run `vagrant up` from scratch, on Linux or Mac type:
+   ```
+   BASE_BOX=1 vagrant up
+   ```
+   or on Windows, type: 
+   ```
+   SET BASE_BOX=1
+   vagrant up
+   ```
+   This process will take anywhere from 30 minutes to a few hours depending on your
+   internet speed. 
 
 7. When the `vagrant up` command completes successfully, you will be
    able to access the Submitty website (instructions follow in the
@@ -354,7 +400,12 @@ Below are quick steps to get everything installed and running.
     | grader | grader | Limited access grader submitty user |
     | student | student | Student submitty user |
 
-4. The VM has the following four courses by default and they are all part of the current semester:
+   Note that there are many more student and grader users on the VM; you may
+   log in as any of them using their **User ID** as the username and password.
+   The easiest way to see the list of users is to log in as an instructor, access
+   a course, and click **Manage Students** or **Manage Graders**.
+
+5. The VM has the following four courses by default and they are all part of the current semester:
 
     * tutorial
     * sample

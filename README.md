@@ -130,3 +130,10 @@ above structure. Currently, the site only supports three levels of nesting (sub-
 
 This repository was created via a fork of Edition, which is a product documentation theme for Jekyll created
 by by [CloudCannon](http://cloudcannon.com/), the Cloud CMS for Jekyll.
+
+
+
+### Ruby Version Troubleshooting
+
+In February 2024:
+* https://ritviknag.com/tech-tips/ruby-versioning-hell-with-jekyll-&-github-pages/

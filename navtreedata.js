@@ -111,6 +111,7 @@ var NAVTREE =
                 [ "Team Assignments", "/instructor/assignment_preparation/team_assignments", null ],
                 [ "Bulk PDF Upload", "/instructor/assignment_preparation/bulk_pdf_upload", null ],
                 [ "Personalized Exam", "/instructor/assignment_preparation/personalized_exams", null ],
+                [ "Upload Gradeable from JSON", "/instructor/assignment_preparation/upload_gradeable", null ],
             ] ],
             [ "Assignment Configuration", "/instructor/assignment_configuration/configuration_path", [
                 [ "Configuration Path","/instructor/assignment_configuration/configuration_path", null],
@@ -126,6 +127,7 @@ var NAVTREE =
                 [ "Validation", "/instructor/autograding/validation", null ],
                 [ "Batch Regrade Submissions", "/instructor/autograding/batch_regrade", null ],
                 [ "Sample Assignments", "/instructor/autograding/sample_assignments", null ],
+                [ "Docker Images", "/instructor/autograding/docker_images", null ],
                 [ "Docker UI", "/instructor/autograding/docker_ui", null ],
                 [ "Static Analysis", "/instructor/autograding/static_analysis/index", [
                     [ "Overview", "/instructor/autograding/static_analysis/index", null ],
@@ -164,6 +166,7 @@ var NAVTREE =
                 [ "System Customization", "/sysadmin/installation/system_customization", null ],
             ] ],
             [ "Configuration & Administration", "/sysadmin/configuration/course_creation", [
+                [ "Term Creation", "/sysadmin/configuration/term_creation", null ],
                 [ "Course Creation", "/sysadmin/configuration/course_creation", null ],
                 [ "Setting up Version Control", "/sysadmin/configuration/version_control", null ],
                 [ "SAML Authentication", "/sysadmin/configuration/saml_authentication", null ],
@@ -184,8 +187,9 @@ var NAVTREE =
             [ "Getting Started", "/developer/getting_started/index", [
                 [ "Overview", "/developer/getting_started/index", null ],
                 [ "Project Ideas", "/developer/getting_started/project_ideas", null ],
-                [ "Review a Pull Request", "/developer/getting_started/review_a_pull_request", null ],
                 [ "Make a Pull Request", "/developer/getting_started/make_a_pull_request", null ],
+                [ "Review a Pull Request", "/developer/getting_started/review_a_pull_request", null ],
+                [ "Commit to PR from Fork", "/developer/getting_started/commit_to_PR_from_fork", null ],
                 [ "Edit Submitty Documentation", "/developer/getting_started/edit_submitty_documentation", null ],
                 [ "VM Install using Vagrant", "/developer/getting_started/vm_install_using_vagrant", [
                     [ "Vagrant QEMU on Apple Silicon", "/developer/getting_started/vm_install_using_vagrant_apple_silicon", null ]
