@@ -93,7 +93,7 @@ If you using an Intel-based Mac, you will follow the instructions below._
 
    7. Enter your **BIOS** (generally by pressing Del, F12, or other keys while booting). If you are not able to find the key combo needed to enter your BIOS, refer to [this guide](https://www.tomshardware.com/reviews/bios-keys-to-access-your-firmware,5732.html).
 
-   8. Locate **Virtualization**, and enable it. (Note: If you cannot find the option to enable virtualization, [search Google](http://tinyurl.com/enable-virtualization) for a tutorial on enabling it with your motherboard.)
+   8. Locate **Virtualization**, and enable it. (Note: Some motherboards may call it SVM, AMD-V, VT-x/Vanderpool. If you cannot find the option to enable virtualization, [search Google](http://tinyurl.com/enable-virtualization) for a tutorial on enabling it with your motherboard.) 
 
    9. Reboot your computer.
 
@@ -117,7 +117,7 @@ If you using an Intel-based Mac, you will follow the instructions below._
 
    2. Navigate the **BIOS Settings**.
 
-   3. Locate **Virtualization** and enable it.
+   3. Locate **Virtualization** and enable it. (Some motherboards may call it SVM, AMD-V, VT-x/Vanderpool)
 
    4. Be sure to choose **Hardware Virtualization** in the **System -> Acceleration** settings of the virtual machine you are using.
 
@@ -190,11 +190,10 @@ Below are steps specific to an OS.
          sudo systemctl start virtnetworkd
          ```
       2. If your vagrant ever freezes kill it with 
-         '''
+         ```
          VBoxManage controlvm VM_NAME poweroff
-         '''
+         ```
          or if that doesn't work, reboot the computer and then run `vagrant destroy` before re-running `vagrant up --provider=virtualbox` again.
-
 
 #### 3. Clone the [Submitty repository](https://github.com/Submitty/Submitty)
 
@@ -425,7 +424,12 @@ vagrant up
     | grader | grader | Limited access grader submitty user |
     | student | student | Student submitty user |
 
-4. The VM has the following four courses by default and they are all part of the current semester:
+   Note that there are many more student and grader users on the VM; you may
+   log in as any of them using their **User ID** as the username and password.
+   The easiest way to see the list of users is to log in as an instructor, access
+   a course, and click **Manage Students** or **Manage Graders**.
+
+5. The VM has the following four courses by default and they are all part of the current semester:
 
     * tutorial
     * sample
