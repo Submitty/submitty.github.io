@@ -120,6 +120,12 @@ The instructions below are for command line use of git.
 
 7.  Confirm that you can see the changes on the Github website for the PR.
 
+8.  NOTE that when you move on to work on another PR from a fork, you will need to
+    cleanup / unset the upstream before you can set it to another repository:
+
+    ```
+    git remote rm upstream
+    ```
 
 ---
 
