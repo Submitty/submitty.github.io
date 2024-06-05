@@ -5,6 +5,9 @@ redirect_from:
   - /sysadmin/course_creation
 ---
 
+**Note**: If you are using Ansible for managing Submitty, 
+you can follow these [instructions](/_docs/sysadmin/configuration/ansible_course_creation.md) to create a course using Ansible.
+
 
 ### UNIX Users and Groups
 

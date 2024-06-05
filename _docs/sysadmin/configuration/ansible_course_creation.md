@@ -11,11 +11,7 @@ Ansible is a powerful automation tool that can be used to manage configurations 
 
 ## Prerequisites
 
-Before you begin, ensure that you have installed Ansible on your machine. If not, you can install it using the following command:
-
-```bash
-sudo apt-get install ansible
-```
+This guide assumes that you are already following the Ansible installation guide for Submitty. If you have not yet installed Ansible or set up Submitty with Ansible, please refer to the [Ansible Installation Guide](sysadmin/installation/ansible.md) before proceeding with course creation.
 
 ## Steps to Create a Course
 
@@ -35,6 +31,6 @@ sudo apt-get install ansible
 
 4. Once the process is complete, your new course should be available in Submitty.
 
-**For a more detailed step-by-step guide on creating a course, you can refer to the [Course Creation Documentation](course_creation.md). 
+    **For a more detailed step-by-step guide on creating a course, you can refer to the [Course Creation Documentation](course_creation.md). 
 
-**If you wish to understand the individual tasks that are performed during the course creation process, you can examine the tasks defined under the `submitty_course_creation` role. 
+    **If you wish to understand the individual tasks that are performed during the course creation process, you can examine the tasks defined under the `submitty_course_creation` role. 
