@@ -73,251 +73,262 @@ If you using an Intel-based Mac, you will follow the instructions below._
 ## Submitty Developer VM Installation
 
 
-#### 1. Enable Virtualization
+1. ENABLE VIRTUALIZATION  
+   *Follow the instructions below specific to your host operating system:*
 
-   **MacOS**
-   1. Virtualization is generally enabled by default.
+   * **MacOS**  
+     *Virtualization is generally enabled by default.*
 
-   **Windows 10**
-   1. Open the **Settings** app by searching for it in the windows bar or clicking it in the Windows menu.
+   * **Windows 10**
+      1. Open the **Settings** app by searching for it in the windows bar or clicking it in the Windows menu.
+      2. Navigate to **Update and Security**, then select **Recovery** from the side menu.
+      3. Under **Advanced Startup**, click **Restart Now**.
+      4. Once your PC has rebooted, click the **Troubleshoot** option.
+      5. Click **Advanced Options**.
+      6. Click **UEFI Firmware Settings** and restart as suggested.
+      7. Enter your **BIOS** (generally by pressing Del, F12, or other keys while booting).
+         If you are not able to find the key combo needed to enter your BIOS,
+         refer to [this guide](https://www.tomshardware.com/reviews/bios-keys-to-access-your-firmware,5732.html).
+      8. Locate **Virtualization**, and enable it.
+         (Note: Some motherboards may call it SVM, AMD-V, VT-x/Vanderpool.
+         If you cannot find the option to enable virtualization,
+         [search Google](http://tinyurl.com/enable-virtualization) for a tutorial on enabling it with your motherboard.) 
+      9. Reboot your computer.
 
-   2. Navigate to **Update and Security**, then select **Recovery** from the side menu.
+   * **Windows 11**
+      1. Open **Change advanced start-up options** by searching for it in the search bar.
+      2. Under **Advanced Startup**, click **Restart Now**.
+      3. Once your PC has rebooted, click the **Troubleshoot** option.
+      4. Click **Advanced Options**.
+      5. Click **UEFI Firmware Settings** and restart as suggested.
+      6. Locate **Virtualization**, and enable it.
+         (Note: If you cannot find the option to enable virtualization,
+         [search Google](http://tinyurl.com/enable-virtualization) for a tutorial on enabling it with your motherboard.)
+      7. Reboot your computer.
 
-   3. Under **Advanced Startup**, click **Restart Now**.
+   * **Ubuntu**
+      1. Enter your **BIOS** (generally by pressing Del, F12, or other keys while booting).
+      2. Navigate the **BIOS Settings**.
+      3. Locate **Virtualization** and enable it. (Some motherboards may call it SVM, AMD-V, VT-x/Vanderpool)
+      4. Be sure to choose **Hardware Virtualization** in the **System -> Acceleration**
+         settings of the virtual machine you are using.  
+      5. **Note:** If using secure boot, Vagrant may fail to work with VirtualBox.
+         You will then either need to disable secure boot from the boot menu/BIOS or
+         follow [these steps](https://era86.github.io/2018/01/24/vagrant-virtualbox-secureboot-in-ubuntu-1604.html)
+         to self-sign the necessary packages to run Vagrant and VirtualBox.
 
-   4. Once your PC has rebooted, click the **Troubleshoot** option.
+2. DOWNLOAD AND INSTALL THE LATEST DEPENDENCIES
 
-   5. Click **Advanced Options**.
-
-   6. Click **UEFI Firmware Settings** and restart as suggested.
-
-   7. Enter your **BIOS** (generally by pressing Del, F12, or other keys while booting). If you are not able to find the key combo needed to enter your BIOS, refer to [this guide](https://www.tomshardware.com/reviews/bios-keys-to-access-your-firmware,5732.html).
-
-   8. Locate **Virtualization**, and enable it. (Note: Some motherboards may call it SVM, AMD-V, VT-x/Vanderpool. If you cannot find the option to enable virtualization, [search Google](http://tinyurl.com/enable-virtualization) for a tutorial on enabling it with your motherboard.) 
-
-   9. Reboot your computer.
-
-   **Windows 11**
-   1. Open **Change advanced start-up options** by searching for it in the search bar.
-
-   2. Under **Advanced Startup**, click **Restart Now**.
-
-   3. Once your PC has rebooted, click the **Troubleshoot** option.
-
-   4. Click **Advanced Options**.
-
-   5. Click **UEFI Firmware Settings** and restart as suggested.
-
-   6. Locate **Virtualization**, and enable it. (Note: If you cannot find the option to enable virtualization, [search Google](http://tinyurl.com/enable-virtualization) for a tutorial on enabling it with your motherboard.)
-
-   7. Reboot your computer.
-
-   **Ubuntu**
-   1. Enter your **BIOS** (generally by pressing Del, F12, or other keys while booting).
-
-   2. Navigate the **BIOS Settings**.
-
-   3. Locate **Virtualization** and enable it. (Some motherboards may call it SVM, AMD-V, VT-x/Vanderpool)
-
-   4. Be sure to choose **Hardware Virtualization** in the **System -> Acceleration** settings of the virtual machine you are using.
-
-   **Note:**
-   If using secure boot, Vagrant may fail to work with VirtualBox. You will then either need to disable secure boot from
-   the boot menu/BIOS or follow [these steps](https://era86.github.io/2018/01/24/vagrant-virtualbox-secureboot-in-ubuntu-1604.html)
-   to self-sign the necessary packages to run Vagrant and VirtualBox.
-
-#### 2. Download and install the latest dependencies
-
-   - [Ruby](https://www.ruby-lang.org/en/downloads)
-   - [Git](https://git-scm.com/downloads)
-   - [VirtualBox](https://www.virtualbox.org/wiki/Download_Old_Builds_6_1)
-   - [Vagrant](https://www.vagrantup.com)
+   * You will need:  
+     *Follow the instructions below specific to your host operating system*
+     
+      * [Ruby](https://www.ruby-lang.org/en/downloads)  
+      * [Git](https://git-scm.com/downloads)  
+      * [VirtualBox](https://www.virtualbox.org/wiki/Download_Old_Builds_6_1)  
+      * [Vagrant](https://www.vagrantup.com)  
    
-   **Note:**
-   Please download VirtualBox 6 instead of 7.
+   
+   * **MacOS**  
+      You can either go to respective sites and download the necessary binaries or
+      install [Homebrew](http://brew.sh/), if you don't have it, and then run:
 
-Below are steps specific to an OS.
+      ```
+      brew install --cask virtualbox
+      brew install --cask vagrant
+      ```
 
-   **Windows**
+   * **Windows**  
+      *You can just go to the respective sites and download the necessary binaries.*
 
-   * You can just go to the respective sites and download the necessary binaries.
 
-   **MacOS**
+   * **Ubuntu/Debian**
 
-   * You can either go to respective sites and download the necessary binaries or
-     install [Homebrew](http://brew.sh/), if you don't have it, and then run:
+      * The Ubuntu repository does not contain the latest version of
+        Vagrant or VirtualBox and using them may not work nor are they
+        supported. We recommend that you either download the necessary
+        binaries from their respective steps or follow the steps
+        outlined below for each:
+
+        VirtualBox: <https://www.virtualbox.org/wiki/Linux_Downloads>
+
+        Vagrant: <https://developer.hashicorp.com/vagrant/downloads>  
+        (if that doesn't work, try: <https://vagrant-deb.linestarve.com/>)
+
+   * **Fedora/Red Hat Linux**
+
+      * For Fedora, the latest version of VirtualBox is recommended to
+        prevent errors. Download the RPM from the VirtualBox
+        website. Make sure your version of Fedora is up to date using
+        ```
+        sudo dnf update
+        sudo dnf upgrade
+        ```
+
+        and inputting your password. Then install the Virtual Box rpm
+        using:
+        ```
+        sudo dnf install VirtualBox-xxxxx.rpm
+        ```
+
+        Install Vagrant using:
+        ```
+        sudo dnf install vagrant
+        ```
+
+      * **Note:**
+        When running vagrant up, use `vagrant up --provider=virtualbox` so it doesn't default to libvirt
+
+      * **Common errors when running vagrant up (Fedora/RHEL)**
+      
+        1. Missing virtnetworkd:  
+           Enable it in your terminal by running:
+           ```
+           sudo systemctl start virtnetworkd
+           ```
+               
+        2. If your vagrant ever freezes kill it with 
+           ```
+           VBoxManage controlvm VM_NAME poweroff
+           ```
+           or if that doesn't work, reboot the computer and then
+           run `vagrant destroy` before re-running `vagrant up --provider=virtualbox` again.
+
+
+3. CLONE THE [SUBMITTY REPOSITORY](https://github.com/Submitty/Submitty)
+
+   * Clone it to a location on your computer (the "host").
 
      ```
-     brew install --cask virtualbox
-     brew install --cask vagrant
+     git clone https://github.com/Submitty/Submitty.git
      ```
 
-   **Ubuntu/Debian**
+     **Note:** If you are not currently part of the Submitty organization on GitHub, you may want to
+     [fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
+     the repo and use the git url from your fork instead, especially if you are looking to contribute.
 
-   * The Ubuntu repository does not contain the latest version of Vagrant or VirtualBox and using
-     them may not work nor are they supported. We recommend that you either download the necessary binaries
-     from their respective steps or follow the steps outlined below for each:
+   * _OPTIONAL: If you will be developing code in one of the companion
+      Submitty repositories (e.g., AnalysisTools, Lichen,
+      Localization, RainbowGrades, Tutorial), also clone those
+      repositories to the same directory.  For example:_
 
-     VirtualBox: <https://www.virtualbox.org/wiki/Linux_Downloads>
+      ```
+      home
+      └── myusername
+          └── Submitty
+               └── GIT_CHECKOUT
+                   ├── AnalysisTools  (optional)
+                   ├── Lichen         (optional)
+                   ├── Localization   (optional)
+                   ├── RainbowGrades  (optional)
+                   ├── Submitty
+                   └── Tutorial       (optional)
+      ```
 
-     Vagrant: <https://developer.hashicorp.com/vagrant/downloads> 
-     (if that doesn't work, try: <https://vagrant-deb.linestarve.com/>)
+      _This host directory structure will be shared / synced between
+      your host operating system and the Submitty virtual machine._
 
-   **Fedora/Red Hat Linux**
 
-   * For Fedora, the latest version of VirtualBox is recommended to prevent errors. Download the RPM from the VirtualBox website. Make sure your version of 
-     Fedora is up to date using
+4. RUN VAGRANT
+
+   If you have an AMD processor you can choose to download a pre-made
+   VM that is created weekly OR you can create the VM from scratch
+   (which will take substantially more time).  If you have an ARM chip
+   (e.g., the Apple Silicon Mac M1/M2/M3), you must create the VM from
+   scratch.
+
+   
+   * Navigate into the Submitty repository on your computer in a
+     shell/terminal.       _On Windows, run CMD or PowerShell on administrator mode_.
+
+
+   * **Build pre-packaged VM**
+
+     If you are using VirtualBox as your provider, you will by default
+     use a pre-packaged Submitty VM. This will have all of Submitty
+     already setup.  Vagrant will build your VM for you.
+
      ```
-     sudo dnf update
-     sudo dnf upgrade
-     ```
-     and inputting your password. Then install the Virtual Box rpm using: 
-     ```
-     sudo dnf install VirtualBox-xxxxx.rpm 
-     ```
-     Install Vagrant using: 
-     ```
-     sudo dnf install vagrant
+     vagrant up
      ```
 
-      **Note:**
-      When running vagrant up, use `vagrant up --provider=virtualbox` so it doesn't default to libvirt
-
-      **Common errors when running vagrant up (Fedora/RHEL)**
-      1. Missing virtnetworkd:
-         Enable it in your terminal by running:
-         ```
-         sudo systemctl start virtnetworkd
-         ```
-      2. If your vagrant ever freezes kill it with 
-         ```
-         VBoxManage controlvm VM_NAME poweroff
-         ```
-         or if that doesn't work, reboot the computer and then run `vagrant destroy` before re-running `vagrant up --provider=virtualbox` again.
-
-#### 3. Clone the [Submitty repository](https://github.com/Submitty/Submitty)
-
-Clone it to a location on your computer (the "host").
-
-```
-git clone https://github.com/Submitty/Submitty.git
-```
-
-   **Note:** If you are not currently part of the Submitty organization on GitHub, you may want to
-   [fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
-   the repo and use the git url from your fork instead, especially if you are looking to contribute.
-
-   _OPTIONAL: If you will be developing code in one of the companion
-   Submitty repositories (e.g., AnalysisTools, Lichen, Localization, RainbowGrades, Tutorial), also
-   clone those repositories to the same directory.  For example:_
-
-```
-home
-└── myusername
-   └── Submitty
-         └── GIT_CHECKOUT
-            ├── AnalysisTools  (optional)
-            ├── Lichen         (optional)
-            ├── Localization   (optional)
-            ├── RainbowGrades  (optional)
-            ├── Submitty
-            └── Tutorial       (optional)
-```
-
-   _This host directory structure will be shared / synced between
-   your host operating system and the Submitty virtual machine._
-
-#### 4. Run Vagrant
-
-   Navigate into the Submitty repository on your computer in a shell/terminal.
-
-   **Build pre-packaged VM**
-
-   If you are using VirtualBox as your provider, you will by default use
-   a pre-packaged Submitty VM. This will have all of Submitty already setup.
-   Vagrant will build your VM for you.
-
-   _On Windows, run CMD or PowerShell on administrator mode_.
-
-```
-vagrant up
-```
-
-   This process will take 10 minutes to
-   maybe half an hour depending on your internet connection speed.
-
-   **Build from scratch**
-
-   If you wish to run `vagrant up` from scratch, on Linux or Mac type:
-```
-BASE_BOX=1 vagrant up
-```
-   or on Windows, type: 
-```
-SET BASE_BOX=1
-vagrant up
-```
-   This process will take anywhere from 30 minutes to a few hours depending on your
-   internet speed. 
-
-**Build without sample submissions**
-
-   When the `vagrant up` command completes successfully, you will be
-   able to access the Submitty website (instructions follow in the
-   next section).
-
-   The VM will continue to run jobs in the background and consume a
-   nontrivial amount of CPU resources, while completing a backlog of
-   autograding for a dozen or more sample submissions for each of the
-   more than 100 users in the sample courses.
-
-   On MacOS and Linux, if your development work *will not require sample assignment
-   submissions or autograding results*, you may prepend
-   `NO_SUBMISSIONS=1` to the previous command, which will skip the
-   creation of these sample submissions and their autograding and
-   decrease the time to complete installation.
-
-   ```
-   NO_SUBMISSIONS=1 vagrant up
-   ```
-
-   On Windows `cmd`, you will have to first set the environment variable
-   `NO_SUBMISSIONS` to 1 which lasts for the session of that console,
-   then call vagrant up.
-
-   ```
-   SET NO_SUBMISSIONS=1
-   vagrant up
-   ```
-
-   On PowerShell, you will have to set the environment variable differently:
-
-   ```pwsh
-   $Env:NO_SUBMISSIONS=1
-   vagrant up
-   ```
-
-   If you want to unset the variable later in `cmd`, you can do
-   ```
-   SET NO_SUBMISSIONS=
-   ```
-
-   Or in PowerShell,
-   ```pwsh
-   Remove-Item Env:\NO_SUBMISSIONS
-   ```
-
-   Similarly, you can check that the variable is set by doing
-   ```
-   SET NO_SUBMISSIONS
-   ```
+     *This process will take 10 minutes to maybe half an hour
+     depending on your internet connection speed.*
 
 
-   Or in PowerShell,
-   ```pwsh
-   $Env:NO_SUBMISSIONS
-   ```
-**Done!**
+   * **Build from scratch**
+
+     If you wish to run `vagrant up` from scratch, on Linux or Mac type:
+     ```
+     BASE_BOX=1 vagrant up
+     ```
+     
+     Or on Windows, type: 
+     ```
+     SET BASE_BOX=1
+     vagrant up
+     ```
+
+     *This process will take anywhere from 30 minutes to a few hours
+     depending on your internet speed.*
+
+
+     ***ADDITIONAL NOTE:** When the `vagrant up` command completes
+     successfully, you will be able to access the Submitty website
+     (instructions follow in the next section).  The VM will continue
+     to run jobs in the background and consume a nontrivial amount of
+     CPU resources, while completing a backlog of autograding for a
+     dozen or more sample submissions for each of the more than 100
+     users in the sample courses.*
+
+
+   * **Build without sample submissions**
+
+     If your development work *will not require sample assignment
+     submissions or autograding results*, you may prepend
+     `NO_SUBMISSIONS=1` to the previous command, which will skip the
+     creation of these sample submissions and their autograding and
+     decrease the time to complete installation.
+
+
+     * On Mac or Linux:  
+       ```
+       NO_SUBMISSIONS=1 vagrant up
+       ```
+
+     * Or on Windows using `cmd`:  
+       ```
+       SET NO_SUBMISSIONS=1
+       vagrant up
+       ```
+
+       Or on Windows using PowerShell, you will have to set the environment variable differently:  
+       ```pwsh
+       $Env:NO_SUBMISSIONS=1
+       vagrant up
+       ```
+
+       If you want to unset the variable later in `cmd`, you can do:  
+       ```
+       SET NO_SUBMISSIONS=
+       ```
+
+       Or in PowerShell:  
+       ```pwsh
+       Remove-Item Env:\NO_SUBMISSIONS
+       ```
+
+       Similarly, you can check that the variable is set by doing:  
+       ```
+       SET NO_SUBMISSIONS
+       ```
+
+       Or in PowerShell:  
+       ```pwsh
+       $Env:NO_SUBMISSIONS
+       ```
+
+
+5. AND YOU ARE DONE!
 
    When the installation has completed, you should see the message:
    ```
@@ -340,15 +351,14 @@ vagrant up
    #####################################################################
    ```
 
-   **Note:** There are times when the install will pause for a brief
+   ***Note:** There are times when the install will pause for a brief
     period with the message `Done`. This does not mean the install has
     ended, and the install should continue after a bit of time.*
 
 
    If you do not see this message due to an error or the installation
-   has frozen, check out:
-
-   * [Installation Troubleshooting](/developer/troubleshooting/installation_troubleshooting)
+   has frozen, check out:  
+   [Installation Troubleshooting](/developer/troubleshooting/installation_troubleshooting)
 
 ---
 
