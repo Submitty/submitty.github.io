@@ -7,9 +7,12 @@ title: Writing Markdown
 ## Formatting using Markdown
 
 Markdown has become a common standard for formatting online text.
-Submitty allows simple formatting using markdown in several 
-Click on the markdown symbol to enable formatting of your post
-using markdown.
+Submitty allows simple formatting using markdown in
+[Discussion Forum](/student/communication/forum) posts
+(and also on several other Submitty webpages).
+
+To begin, click the markdown symbol to enable formatting of your post using markdown.
+Then use the standard markdown syntax show below:
 
 * **Headings**  
     Adding a number of `#` and a space before text will make it a heading:
@@ -102,14 +105,11 @@ using markdown.
     To add a table, use three or more hyphens `(---)` to create each column’s header, and use pipes `(|)` to separate each column. For compatibility, you should also add a pipe on either end of the row.
 
     ```
-    To add a table, use three or more hyphens (---) to create each column’s header, and use pipes (|) to separate each column. For compatibility, you should also add a pipe on either end of the row.
-
     | Syntax      | Description |
     | ----------- | ----------- |
     | Header      | Title       |
     | Paragraph   | Text        |
 
     ```
-    For more Information , [Click here](https://www.markdownguide.org/extended-syntax/#tables)
 
-
+For more information, see also: [Markdown Guide](https://www.markdownguide.org/)
