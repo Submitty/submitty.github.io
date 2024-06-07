@@ -6,7 +6,7 @@ redirect_from:
 ---
 
 **Note**: If you are using Ansible for managing Submitty, 
-you can follow these [instructions](/_docs/sysadmin/configuration/ansible_term_creation.md) to create a term using Ansible.
+you can follow these [instructions](/_docs/sysadmin/configuration/ansible_term_creation) to create a term using Ansible.
 
 ### Creating a term
 To create a term, you should use the script 
