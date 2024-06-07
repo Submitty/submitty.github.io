@@ -145,6 +145,7 @@ var NAVTREE =
                 [ "Server OS", "/sysadmin/installation/server_os", null ],
                 [ "Update GNU/Linux Server", "/sysadmin/installation/update_server", null ],
                 [ "Update Submitty", "/sysadmin/installation/update_submitty", null ],
+                [ "Ansible Installation", "/sysadmin/installation/ansible", null ],
                 [ "Version Notes", "/sysadmin/installation/version_notes/index", [
                     [ "Overview", "/sysadmin/installation/version_notes/index", null],
                     [ "v23.12.02", "/sysadmin/installation/version_notes/v23.12.02", null ],
@@ -167,7 +168,9 @@ var NAVTREE =
             ] ],
             [ "Configuration & Administration", "/sysadmin/configuration/course_creation", [
                 [ "Term Creation", "/sysadmin/configuration/term_creation", null ],
+                [ "Ansible Term Creation", "/sysadmin/configuration/ansible_term_creation", null ],
                 [ "Course Creation", "/sysadmin/configuration/course_creation", null ],
+                [ "Ansible Course Creation", "/sysadmin/configuration/ansible_course_creation", null ],
                 [ "Setting up Version Control", "/sysadmin/configuration/version_control", null ],
                 [ "SAML Authentication", "/sysadmin/configuration/saml_authentication", null ],
                 [ "Email Configuration", "/sysadmin/configuration/email_configuration", null ],
