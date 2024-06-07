@@ -11,7 +11,7 @@ Ansible is a powerful automation tool that can be used to manage configurations 
 
 ## Prerequisites
 
-This guide assumes that you are already following the Ansible installation guide for Submitty. If you have not yet installed Ansible or set up Submitty with Ansible, please refer to the [Ansible Installation Guide](installation/ansible) before proceeding with course creation.
+This guide assumes that you are already following the Ansible installation guide for Submitty. If you have not yet installed Ansible or set up Submitty with Ansible, please refer to the [Ansible Installation Guide](/_docs/sysadmin/installation/ansible) before proceeding with course creation.
 
 ## Steps to Create a Course
 
