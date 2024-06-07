@@ -1,8 +1,6 @@
 ---
 title: Term Creation using Ansible
 category: System Administrator > Configuration & Administration
-redirect_from:
-  - /sysadmin/ansible_term_creation
 ---
 
 # Term Creation using Ansible

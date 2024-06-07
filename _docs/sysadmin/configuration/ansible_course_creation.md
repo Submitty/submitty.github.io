@@ -1,8 +1,6 @@
 ---
 title: Course Creation
 category: System Administrator > Configuration & Administration
-redirect_from:
-  - /sysadmin/ansible_course_creation
 ---
 
 # Course Creation using Ansible
