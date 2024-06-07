@@ -38,7 +38,6 @@ Getting Started:
 
    **Reminder**: Ensure that the `submitty_version` variable in your playbook matches the version of Submitty you intend to install. This is crucial for the correct functioning of your installation.
 
-
 5. SSL Configuration
 
    Note: If you use SSL, follow steps to configure. If not, skip to step 6. 
@@ -69,6 +68,7 @@ Getting Started:
 
    ```
    cd .setup/ansible
+
    ```
    
    Once you are in the `ansible` directory, you can proceed with the installation by running the
@@ -81,6 +81,7 @@ Getting Started:
    This command initiates the Ansible playbook, which orchestrates the comprehensive installation 
    process for Submitty. For a detailed understanding of the installation steps, refer to
    `.setup/ansible/roles/app_submitty/tasks/main.yml`.
+
 
 7. Review Installation Log on VM
 
