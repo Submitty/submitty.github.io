@@ -1,15 +1,11 @@
 ---
-title: Course Creation
+title: Course Creation using Ansible
 category: System Administrator > Configuration & Administration
 ---
 
-# Course Creation using Ansible
-
-Ansible is a powerful automation tool that can be used to manage configurations and automate the course creation process in Submitty.
-
-## Prerequisites
-
-This guide assumes that you are already following the Ansible installation guide for Submitty. If you have not yet installed Ansible or set up Submitty with Ansible, please refer to the [Ansible Installation Guide](/sysadmin/installation/ansible) before proceeding with course creation.
+NOTE: This guide assumes that you have first created a Submitty server
+using Ansible following the
+[Installation using Ansible](/sysadmin/installation/ansible) instructions.
 
 ## Steps to Create a Course
 
@@ -29,6 +25,11 @@ This guide assumes that you are already following the Ansible installation guide
 
 4. Once the process is complete, your new course should be available in Submitty.
 
-    **For a more detailed step-by-step guide on creating a course, you can refer to the [Course Creation Documentation](course_creation)
+    **For a more detailed step-by-step guide on creating a course, you
+      can refer to the [Course Creation](course_creation)
+      instructions.
 
     **If you wish to understand the individual tasks that are performed during the course creation process, you can examine the tasks defined under the `submitty_course_creation` role.
+
+See also:  
+[Ansible Term Creation](/sysadmin/configuration/ansible_term_creation)

@@ -145,7 +145,7 @@ var NAVTREE =
                 [ "Server OS", "/sysadmin/installation/server_os", null ],
                 [ "Update GNU/Linux Server", "/sysadmin/installation/update_server", null ],
                 [ "Update Submitty", "/sysadmin/installation/update_submitty", null ],
-                [ "Ansible Installation", "/sysadmin/installation/ansible", null ],
+                [ "Ansible Server Installation", "/sysadmin/installation/ansible", null ],
                 [ "Version Notes", "/sysadmin/installation/version_notes/index", [
                     [ "Overview", "/sysadmin/installation/version_notes/index", null],
                     [ "v23.12.02", "/sysadmin/installation/version_notes/v23.12.02", null ],

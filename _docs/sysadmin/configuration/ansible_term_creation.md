@@ -3,13 +3,9 @@ title: Term Creation using Ansible
 category: System Administrator > Configuration & Administration
 ---
 
-# Term Creation using Ansible
-
-Ansible is a powerful automation tool that can be used to manage configurations and automate the term creation process in Submitty.
-
-## Prerequisites
-
-This guide assumes that you are already following the Ansible installation guide for Submitty. If you have not yet installed Ansible or set up Submitty with Ansible, please refer to the [Ansible Installation Guide](/sysadmin/installation/ansible) before proceeding with term creation.
+NOTE: This guide assumes that you have first created a Submitty server
+using Ansible following the
+[Installation using Ansible](/sysadmin/installation/ansible) instructions.
 
 ## Steps to Create a Term
 
@@ -33,6 +29,11 @@ This guide assumes that you are already following the Ansible installation guide
 
 4. Once the process is complete, your new term should be available in Submitty.
 
-    **For a more detailed step-by-step guide on creating a course, you can refer to the [Term Creation Documentation](term_creation). 
+    **For a more detailed step-by-step guide on creating a course, you
+      can refer to the [Term Creation](term_creation) instructions.
 
-    **If you wish to understand the individual tasks that are performed during the course creation process, you can examine the tasks defined under the `submitty_term_creation` role. 
+    **If you wish to understand the individual tasks that are performed during the course creation process, you can examine the tasks defined under the `submitty_term_creation` role.
+
+
+See also:  
+[Ansible Course Creation](/sysadmin/configuration/ansible_course_creation)
