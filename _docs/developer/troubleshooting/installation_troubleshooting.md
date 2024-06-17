@@ -192,26 +192,27 @@ References and useful links: [https://gist.github.com/pjdietz/5768124](https://g
 Submitty vagrant no longer uses Virtual Box Guest Additions.  If you
 see errors about version mismatch with Guest Additions, and if the VM
 hangs trying to update the version of Guest Additions to match the
-host version of Guest Additions you may have old versions of the
+host version of Guest Additions, you may have old versions of the
 development process on your machine and may need to more completely
 uninstall and reinstall Virtual Box and Vagrant to reset your system.
 
-NOTE: THESE ACTIONS WILL DELETE ALL VMS ON YOUR SYSTEM.
+**NOTE: THESE ACTIONS WILL DELETE ALL VMS ON YOUR SYSTEM.**
 
 Some things to check:
 
 * From your main Submitty repository, e.g. `<SOMETHING>/GIT_CHECKOUT/Submitty/`
   run `rm -rf .vagrant`
 
-(you may need to put sudo in front)
+  (you may need to put sudo in front)
 
-rm /Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso
-rm -rf /opt/vagrant/
-rm -rf /Users/cutler/.vagrant.d/
+* Check all files on your filesystem for vagrant.  Run 'locate
+  vagrant' and remove any old library / installation files you see.
+  E.g.:
 
+  ```
+  rm /Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso
+  rm -rf /opt/vagrant/
+  rm -rf /Users/MY_HOME_DIRECTORY/.vagrant.d/
+  rm -rf /Users/MY_HOME_DIRECTORY/.gem/specs/rubygems.org%443/quick/Marshal.4.8/vagrant-vbguest-0.31.0.gemspec
+  ```
 
-/Users/cutler/.gem/specs/rubygems.org%443/quick/Marshal.4.8/vagrant-vbguest-0.31.0.gemspec
-& others
-
-
-type 'locate vagrant'
