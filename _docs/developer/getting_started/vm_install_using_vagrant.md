@@ -135,6 +135,7 @@ If you using an Intel-based Mac, you will follow the instructions below._
       ```
       brew install --cask virtualbox
       brew install --cask vagrant
+      vagrant plugin install vagrant-timezone
       ```
 
    * **Windows**  

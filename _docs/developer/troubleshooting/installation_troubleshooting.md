@@ -56,6 +56,7 @@ with no explanation, then there are a couple of things that may be going wrong:
     brew reinstall --cask vagrant
     vagrant plugin update
     vagrant box update
+    vagrant plugin install vagrant-timezone
     ```
 
     If you continue to have errors on Mac with `vagrant up` after
@@ -98,9 +99,23 @@ with no explanation, then there are a couple of things that may be going wrong:
   directories/repositories to clean up unwanted VMs.
 
   The following command can help locate misplaced repositories/VMs:
-
   ```
   vagrant global-status
+  ```
+
+  If you see unnecessary VMs, you can clean them up with (replace
+  `1a2b3c4d` with the id of the VM you wish to destroy):
+  ```
+  vagrant destroy 1a2b3c4d
+  ```
+
+  If the command above does not successfully destroy and remove the VM from the
+  global-status list, you may see an error similar to: `The machine
+  with the name 'ubuntu-20.04' was not found configured for this
+  Vagrant environment.`  You can try to clean up these undestroyed VMs record by
+  running:
+  ```
+  vagrant global-status --prune
   ```
 
 * If you might have old, forgotten VMs from previous OS versions
@@ -169,3 +184,34 @@ broadcast 192.168.56.255
 ```
 
 References and useful links: [https://gist.github.com/pjdietz/5768124](https://gist.github.com/pjdietz/5768124) and [http://christophermaier.name/2010/09/01/host-only-networking-with-virtualbox/](http://christophermaier.name/2010/09/01/host-only-networking-with-virtualbox/)
+
+
+## Guest Additions
+
+
+Submitty vagrant no longer uses Virtual Box Guest Additions.  If you
+see errors about version mismatch with Guest Additions, and if the VM
+hangs trying to update the version of Guest Additions to match the
+host version of Guest Additions you may have old versions of the
+development process on your machine and may need to more completely
+uninstall and reinstall Virtual Box and Vagrant to reset your system.
+
+NOTE: THESE ACTIONS WILL DELETE ALL VMS ON YOUR SYSTEM.
+
+Some things to check:
+
+* From your main Submitty repository, e.g. `<SOMETHING>/GIT_CHECKOUT/Submitty/`
+  run `rm -rf .vagrant`
+
+(you may need to put sudo in front)
+
+rm /Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso
+rm -rf /opt/vagrant/
+rm -rf /Users/cutler/.vagrant.d/
+
+
+/Users/cutler/.gem/specs/rubygems.org%443/quick/Marshal.4.8/vagrant-vbguest-0.31.0.gemspec
+& others
+
+
+type 'locate vagrant'
