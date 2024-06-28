@@ -71,7 +71,22 @@ It can contain the following:
   **REQUIRED** if using ``"final_grade"`` in ``"display"``
 
   Each grade letter that you want should be associated with the minimum overall semester score required to get that grade.
-  This array is unrelated to benchmarks.
+  This array is unrelated to benchmarks. For example:
+
+  ```json
+  "final_cutoff" : {
+     "A": 93.0,
+     "A-": 90.0,
+     "B+": 87.0,
+     "B": 83.0,
+     "B-": 80.0,
+     "C+": 77.0,
+     "C": 73.0,
+     "C-": 70.0,
+     "D+": 67.0,
+     "D": 63.0
+  }
+  ```
 
 * **field:** ``"manual_grade"``  
   **type:** _array of associative arrays_  
