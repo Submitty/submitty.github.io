@@ -74,20 +74,20 @@ It can contain the following:
   This array is unrelated to benchmarks.
 
 * **field:** ``"manual_grade"``  
-  **type:** _associative array / mapping from string to associative array_  
+  **type:** _array of associative arrays_  
 
-  For each student that you want to assign a manual grade to, their id must
-  be mapped to an associative array with a field ``"grade"`` mapped to a string
-  with the letter grade you want to give them, and ``"note"`` containing any note
-  about the adjustment. The note is only visible to the instructor. For example, 
+  For each student that you want to assign a manual grade to, add an item to
+  ``"manual_grade"`` with fields ``"user"``, ``"grade"``, and ``"note"`` containing
+  any note about the adjustment. The note is only visible to the instructor. For example, 
   to give user ``smithj`` a grade lettter of ``D`` with a reason of 
   ``"Put in extraordinary effort."``:
 
   ```json
-  "smithj" : {
+  "manual_grade" : [{
+     "user":"smithj",
      "grade": "D",
      "note": "Put in extraordinary effort."
-  }
+  }]
   ```
 
 * **field:** ``"warning"``  
