@@ -43,6 +43,18 @@ It can contain the following:
    * ``"lowest_a-``, ``"lowest_b-"``, ``"lowest_c-"``, ``"lowest_d"``: Based on curves, the lowest scores that will earn
    the name of the benchmark. 
 
+  ```json
+    "display_benchmark": [
+      "average",
+      "stddev",
+      "perfect",
+      "lowest_a-",
+      "lowest_b-",
+      "lowest_c-",
+      "lowest_d"
+    ]
+  ```
+
 * **field:** ``"benchmark_percent"``  
   **type:** _associative array / mapping from string to float_  
   **REQUIRED** if using ``"curve"`` in ``"gradeables"`` described below, or if any grade-letter benchmarks are used in ``"display_benchmark"`` above.
@@ -50,6 +62,16 @@ It can contain the following:
   Each of the benchmarks starting with "lowest" should be in this array along with the minimum percentage of total points
   necessary to obtain that grade. For example to require an 82% for an A-, there should be an entry in the ``"benchmark_percent"`` array:
   ``"lowest_a-": 0.82``
+
+  To display all benchmarks, include the following:
+  ```json
+    "benchmark_percent": {
+      "lowest_a-": 0.9,
+      "lowest_b-": 0.8,
+      "lowest_c-": 0.7,
+      "lowest_d": 0.6
+    }
+  ```
 
 * **field:** ``"section"``  
   **type:** _associative array / mapping from string to string_  
@@ -75,16 +97,16 @@ It can contain the following:
 
   ```json
   "final_cutoff" : {
-     "A": 93.0,
-     "A-": 90.0,
-     "B+": 87.0,
-     "B": 83.0,
-     "B-": 80.0,
-     "C+": 77.0,
-     "C": 73.0,
-     "C-": 70.0,
-     "D+": 67.0,
-     "D": 63.0
+    "A": 93.0,
+    "A-": 90.0,
+    "B+": 87.0,
+    "B": 83.0,
+    "B-": 80.0,
+    "C+": 77.0,
+    "C": 73.0,
+    "C-": 70.0,
+    "D+": 67.0,
+    "D": 63.0
   }
   ```
 
