@@ -82,6 +82,21 @@ It can contain the following:
   this array will be treated as invalid and ignored. These labels are only displayed
   on the instructor's `output.html`.
 
+  ```json
+    "section": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "10"
+    }
+  ```
+
 * **field:** ``"messages"``  
   **type:** _array of strings_  
 
