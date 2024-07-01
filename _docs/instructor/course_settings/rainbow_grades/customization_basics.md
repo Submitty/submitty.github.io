@@ -26,11 +26,25 @@ It can contain the following:
 * ``"instructor_notes"``: Shows notes for early warnings, plagiarism, etc. only to the instructor
 * ``"grade_summary"``: Shows the overall score and score for each syllabus bucket (e.g. Homework)
 * ``"grade_details"``: Shows the score for each gradeable
+* ``"section"``: Show the students' registration section.
+* ``"messages"``: Show a text message at the top of the page.
 * ``"final_grade"``: Shows final grade letters and some statistics about the final grade distribution.
+* ``"manual_grade"``: Manually assign final grades to specific students.
 * ``"exam_seating"``: Shows exam seating assignments. To display the assignment on the Submitty course homepage,
   the instructor should make sure "Display Rainbow Grades Custom Message" is enabled in "Course Settings" on the Submitty
   course page.
 * ``"display_rank_to_individual"``: Shows each student's rank in the course, independent of section.
+
+  ```json
+    "display": [
+      "grade_summary",
+      "grade_details",
+      "section",
+      "messages",
+      "final_grade",
+      "manual_grade"
+    ]
+  ```
 
 * **field:** ``"display_benchmark"``  
   **type:** _array of strings_  
@@ -102,6 +116,12 @@ It can contain the following:
 
   These messages will be displayed at the top of the instructor summary and each
   student's individual Rainbow Grades report.
+
+  ```json
+    "messages": [
+      "Example message"
+    ]
+  ```
 
 * **field:** ``"final_cutoff"``  
   **type:** _associative array / mapping from string to float_  
