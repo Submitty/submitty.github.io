@@ -74,7 +74,8 @@ var NAVTREE =
                 [ "Resolving a Grade Inquiry", "/grader/rubric_grading/grade_inquiry", null ],
                 [ "Statistics", "/grader/rubric_grading/statistics", null ]
             ] ],
-            [ "Managing Office Hours", "/grader/queue", null ]
+            [ "Managing Office Hours", "/grader/queue", null ],
+            [ "Resolving a Version Conflict", "/grader/resolving_version_conflict", null ]
         ] ],
         [ "Instructor", "/instructor", [
             [ "Overview", "/instructor", null ],
