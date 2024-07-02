@@ -228,11 +228,20 @@ Below are quick steps to get everything installed and running.
 
    If you wish to run `vagrant up` from scratch, on Linux or Mac type:
    ```
-   BASE_BOX=1 vagrant up
+   FROM_SCRATCH=1 vagrant up
    ```
    or on Windows, type: 
    ```
-   SET BASE_BOX=1
+   SET FROM_SCRATCH=1
+   vagrant up
+   ```
+   If you wish to use a specific version of the pre-packaged Submitty VM, on Linux or Mac type:
+   ```
+   PREBUILT_VERSION={version} vagrant up
+   ```
+   or on Windows, type: 
+   ```
+   SET PREBUILT_VERSION={version}
    vagrant up
    ```
    This process will take anywhere from 30 minutes to a few hours depending on your
