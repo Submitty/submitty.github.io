@@ -261,6 +261,7 @@ If you using an Intel-based Mac, you will follow the instructions below._
     SET PREBUILT_VERSION={version}
     vagrant up
     ```
+    *The version must be only the numbers, not including the `v` in front, for example `24.05.00.2405260215` not `v24.05.00.2405260215`*
 
     *This process will take 10 minutes to maybe half an hour
     depending on your internet connection speed.*
