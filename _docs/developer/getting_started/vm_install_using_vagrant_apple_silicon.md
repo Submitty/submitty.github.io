@@ -59,6 +59,8 @@ the installation process.
 
    $ brew install --cask vagrant
 
+   $ vagrant plugin install vagrant-timezone
+
    $ vagrant plugin install vagrant-qemu
    ```
    Note: It is possible that you may need to install Rosetta before installing vagrant. Run the following command to install Rosetta:
