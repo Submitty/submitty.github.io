@@ -44,8 +44,6 @@ with no explanation, then there are a couple of things that may be going wrong:
    This will delete all virtual machine settings. Then install
    the latest version of Virtual Box and vagrant from the links given in step 3 (using Ubuntu Software).
 
-  __This will not have submissions in the VM, so you will have to manually add some__
-
 * If it has been a while since your last `vagrant destroy` and
     `vagrant up` you may need to update/upgrade/reinstall the virtual
     box, vagrant, and the installed boxes on your
