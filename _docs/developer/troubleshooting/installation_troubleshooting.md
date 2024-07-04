@@ -44,15 +44,6 @@ with no explanation, then there are a couple of things that may be going wrong:
    This will delete all virtual machine settings. Then install
    the latest version of Virtual Box and vagrant from the links given in step 3 (using Ubuntu Software).
 
-* If you are not using the prebuilt Submitty VM, and you get an error like
-  ```
-  FileNotFoundError: [Errno 2] No such file or directory: '/tmp/tmpad2cfj3v/abernl'
-  ```
-  This is a known issue with our implementation of Git gradeables, which will be resolved when we have the time. Until then, you can do.
-  ```
-  NO_SUBMISSIONS=1 vagrant up
-  ```
-
   __This will not have submissions in the VM, so you will have to manually add some__
 
 * If it has been a while since your last `vagrant destroy` and
