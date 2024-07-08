@@ -5,7 +5,7 @@ title: Resolving a Version Conflict
 
 ## Overview of Issue
 
-Typically, this issue occurs when the student changes the active version after the TA has finished grading. The use case Submitty aims to support is that students can submit multiple times before the due date. If we have any automated grading that runs on every submission, we store every submission and the teaching staff can review every submission version number and the autograding for each of those versions. Once the deadline passes, manual/TA grading opens and the TA/instructor will manually grade the current active version. By default, the students final/last version is the active version. We do allow students the option of picking a different version to be the active one. This is relevant if they made an additional submission after the deadline (a course might have a policy allowing a student the flexibility to submit by choice a subset of assignments "late"), but then decide that an earlier version is good enough and they will save their "late day" for another assignment.
+Typically, this issue occurs when the student changes the active version after the TA has started grading. Submitty supports multiple submissions before the due date. Any automated grading runs on each submission, and we store all submissions. Teaching staff can review each submission's version number and autograding results. After the deadline, manual/TA grading opens, and the TA/instructor grades the current active version. By default, the student's final version is active, but they can select a different version, even after the manual grading begins. This is where the version conflict results.
 
 
 ## Resolving the Version Conflict Manually
