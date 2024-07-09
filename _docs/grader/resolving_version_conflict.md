@@ -10,6 +10,6 @@ Typically, this issue occurs when the student changes the active version after t
 
 ## Resolving the Version Conflict Manually
 
-To clear this issue in the grading interface, you'll need to navigate through each rubric component labeled with a conflict. Confirm and update TA grading for the new version by interacting with each component by clicking on a rubric component (e.g., -1, -2), deselect if currently selected, and then reselect it. For custom comments, ensure edits are made directly to the comment for changes to save correctly. Once all conflicts are resolved, the student can view your comments for the entire gradeable again. Alternatively, you can revert to the initially marked version of the assignment from the TA grading interface. 
+To clear this issue in the grading interface, you'll need to navigate through each rubric component labeled with a conflict. Confirm and update TA grading for the new version by interacting with each component by clicking on a rubric component (e.g., -1, -2), deselect if currently selected, save the component, and then reselect and save it again. For custom comments, ensure edits are made directly to the comment for changes to save correctly. Once all conflicts are resolved, the student can view your comments for the entire gradeable again. Alternatively, you can revert to the initially marked version of the assignment from the TA grading interface. 
 
 ![](/images/ta_grading/versionconflict.png)
