@@ -244,28 +244,39 @@ If you using an Intel-based Mac, you will follow the instructions below._
 
    * **Build pre-packaged VM**
 
-     If you are using VirtualBox as your provider, you will by default
-     use a pre-packaged Submitty VM. This will have all of Submitty
-     already setup.  Vagrant will build your VM for you.
+    If you are using VirtualBox as your provider, you will by default
+    use a pre-packaged Submitty VM. This will have all of Submitty
+    already setup.  Vagrant will build your VM for you.
 
-     ```
-     vagrant up
-     ```
+    ```
+    vagrant up
+    ```
 
-     *This process will take 10 minutes to maybe half an hour
-     depending on your internet connection speed.*
+    If you wish to use a specific version of the pre-packaged Submitty VM, on Linux or Mac type:
+    ```
+    PREBUILT_VERSION={version} vagrant up
+    ```
+    or on Windows, type:
+    ```
+    SET PREBUILT_VERSION={version}
+    vagrant up
+    ```
+    *The version must be only the numbers, not including the `v` in front, for example `24.05.00.2405260215` not `v24.05.00.2405260215`*
+
+    *This process will take 10 minutes to maybe half an hour
+    depending on your internet connection speed.*
 
 
    * **Build from scratch**
 
      If you wish to run `vagrant up` from scratch, on Linux or Mac type:
      ```
-     BASE_BOX=1 vagrant up
+     FROM_SCRATCH=1 vagrant up
      ```
      
      Or on Windows, type: 
      ```
-     SET BASE_BOX=1
+     SET FROM_SCRATCH=1
      vagrant up
      ```
 
