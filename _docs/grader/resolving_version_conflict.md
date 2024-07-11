@@ -10,7 +10,7 @@ Typically, this issue occurs when the student changes the active version after t
 
 ## Using the "Clear Version Conflicts" Button
 
-In the grading interface, there is a "Clear Version Conflicts" button that has been provided to resolve this issue. It can be found through navigating to a student gradeable that has a version conflict, opening rubric, and the button appears along the top right of the grading rubric page. Once clicked, a message appears asking for confirmation, click “ok”, and the version conflict is cleared. 
+In the grading interface, there is a "Clear Version Conflicts" button that has been provided to resolve this issue. It can be found through navigating to a student gradeable that has a version conflict, opening rubric, and the button appears along the top right of the grading rubric page. If there are comments from previous versions, a red text can be seen at the header of each component within the gradeable. Once clicked, on that gradeable there is a blue button to choose to save the previous message, or a white button to discard. The message can also be updated, then saved. When the comments are all saved or discarded: click the "Clear Version Conflicts" button. A message will appear asking for confirmation, click “ok”, and the version conflict is cleared. 
 
 ![](/images/ta_grading/version_conflict_button.png)
 
