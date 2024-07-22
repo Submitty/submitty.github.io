@@ -128,7 +128,7 @@ executables.
   **type:** _boolean_  
   **default value:** ``false``  
 
-  _Students will not how many points hidden test cases are worth or
+  _Students will not know how many points hidden test cases are worth or
   how many points they recieve for that test case. For similar functionality
   while still allowing students to see how many points they receive, adjust
   ``show_message``, ``show_actual``, and ``show_expected`` in validation instead._
