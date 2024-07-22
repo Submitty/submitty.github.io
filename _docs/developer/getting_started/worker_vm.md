@@ -11,36 +11,36 @@ machines* in addition to your primary vagrant virtual machine.
 
 ## Automated Worker Installation
 
-These steps will create a worker machine alongside the normal Submitty machine.
-1. Make sure to destroy any existing vagrant machines with 
-```
-vagrant destroy
-```
-
-2. Ensure you have [Python 3](https://www.python.org/downloads/) installed on your machine
-
-3. Generate configuration for the desired number of worker machines
+1. Make sure to destroy any existing worker machines before generating a new worker configuration.
+   Failure to do this could result in 'hidden' worker machines from the previous configuration
+   still running on your computer, taking up disk space and resources.
    ```
-   python3 generate_workers.py [-n NUM] [--ip-range IP_RANGE] [--base-port PORT]
-   ```
-   This will create or update a configuration file stored at `.vagrant/workers.json`.
-   Now you can create the virtual machines with:
-   ```
-   vagrant up
+   vagrant workers destroy
    ```
 
-   If you happen to encounter error messages regarding IP addresses or port conflicts, you can manually edit the `workers.json` file as needed.
+2. Ensure you have [Python 3](https://www.python.org/downloads/) installed on your machine.
+   `python3 --version`
 
-   __NOTE__: Do not edit the `workers.json` configuration file or run the aforementioned python script if there are any existing vagrant machines in your project. This can result in the existing VMs continuing to run in the background or storing their data with no clean way to remove them.
-
-4. To delete the worker machines and revert to a normal development setup, you can first run
+3. Generate configuration for the worker machine(s).
    ```
-   vagrant destroy
+   vagrant workers generate
    ```
-   And confirm to delete all the existing virtual machines.
+   For multiple workers, use the `-n` flag. (ex. `-n 3` for 3 machines).
 
-   Next, you can delete the `workers.json` file, which will remove the worker configuration from your project.
-   The next `vagrant up` should only create the primary development virtual machine without any workers.
+   If using a provider other than the default for your system, use the `--provider` flag.
+   (ex. `--provider parallels`)
+
+4. If you are on MacOS running QEMU, make sure to restart the network socket.
+   ```
+   vagrant workers socket restart
+   ```
+   If the VM runs into errors when attempting to reach the internet, try starting the socket
+   in public mode. (`--public`)
+
+5. Now you can provision the virtual machines with:
+   ```
+   vagrant workers up
+   ```
 
 ---
 
