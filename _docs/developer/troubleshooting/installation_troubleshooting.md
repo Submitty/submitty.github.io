@@ -157,10 +157,11 @@ with no explanation, then there are a couple of things that may be going wrong:
   ```
   *  Steps to edit the env file
   
-  Go inside of the repo and find a file with name "Vagrantfile"
+  1. Go to Submitty install directory and locate the file named "Vagrantfile."
+  2. Open the "Vagrantfile" in a text editor.
   ![img.png](img.png)
-  Open it in the Text Editor and change the port which is throwing the error and change it with the port of your choice
-![img_2.png](img_2.png)
+  3. Identify the port causing the error and change it to a port of your choice.
+  ![img_2.png](img_2.png)
   
   You can alternatively create a `.env` file in the root of your project
   with the text `VM_PORT_SITE=1512` (and any other variables separated by
