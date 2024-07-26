@@ -27,19 +27,27 @@ machines* in addition to your primary vagrant virtual machine.
    ```
    For multiple workers, use the `-n` flag. (ex. `-n 3` for 3 machines).
 
+   This command will generate workers for `virtualbox`, or `qemu` if you are on M-series macOS.
    If using a provider other than the default for your system, use the `--provider` flag.
-   (ex. `--provider parallels`)
+   (ex. `--provider my-custom-provider`)
 
-4. If you are on MacOS running QEMU, make sure to restart the network socket.
+5. If you are on MacOS running QEMU, make sure to restart the network socket.
    ```
    vagrant workers socket restart
    ```
    If the VM runs into errors when attempting to reach the internet, try starting the socket
-   in public mode. (`--public`)
+   in public mode. (`vagrant workers socket restart --public`)
 
-5. Now you can provision the virtual machines with:
+6. Now you can create the worker machine(s) with:
    ```
    vagrant workers up
+   ```
+   Do not use the --provider flag with this command, since it will conflict with the
+   provider generated in step 3.
+
+7. Once all the workers are fully set up and running, `vagrant ssh` into the main VM and run:
+   ```
+   refresh_vagrant_workers
    ```
 
 ---
@@ -50,14 +58,15 @@ If you would like to ensure the worker is functioning properly, or enter the wor
 
 To connect to a worker machine through SSH, run:
 ```
-vagrant ssh <worker-name>
+vagrant workers ssh <worker-name>
 ```
 
 If you want to test the connection between the primary VM and a worker, you can first `vagrant ssh` into the primary machine and then run this command to SSH into the worker from there:
 ```
-su submitty_daemon -c ssh submitty@<ip-address>
+su submitty_daemon -c ssh <worker-name>
 ```
-The IP address of the worker machine will be indicated in the `.vagrant/workers.json` file.
+
+The list of worker names can be displayed with `vagrant workers status`.
 
 __NOTE__: Depending on the performance of your computer and the size of the autograding queue passed to the worker, the SSH command may hang for some time.
 
