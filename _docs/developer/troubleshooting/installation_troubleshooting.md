@@ -155,14 +155,7 @@ with no explanation, then there are a couple of things that may be going wrong:
   ```
   VM_PORT_SITE=1512 vagrant up
   ```
-  *  Steps to edit the env file
-  
-  1. Go to Submitty install directory and locate the file named "Vagrantfile."
-  2. Open the "Vagrantfile" in a text editor.
-  ![img.png](img.png)
-  3. Identify the port causing the error and change it to a port of your choice.
-  ![img_2.png](img_2.png)
-  
+    
   You can alternatively create a `.env` file in the root of your project
   with the text `VM_PORT_SITE=1512` (and any other variables separated by
   newlines). Note that you will need to install the env plugin beforehand:
