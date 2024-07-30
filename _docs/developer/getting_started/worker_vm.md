@@ -11,41 +11,34 @@ machines* in addition to your primary vagrant virtual machine.
 
 ## Automated Worker Installation
 
-1. Make sure to destroy any existing worker machines before generating a new worker configuration.
-   Failure to do this could result in 'hidden' worker machines from the previous configuration
-   still running on your computer, taking up disk space and resources.
-   ```
-   vagrant workers destroy
-   ```
+These instructions are intended to be followed after [configuring the main virtual machine](/developer/getting_started/vm_install_using_vagrant).
 
-2. Ensure you have [Python 3](https://www.python.org/downloads/) installed on your machine.
+1. Ensure you have [Python 3](https://www.python.org/downloads/) installed on your machine.
    `python3 --version`
 
-3. Generate configuration for the worker machine(s).
+2. Generate configuration for the worker machine(s).
    ```
    vagrant workers generate
    ```
-   For multiple workers, use the `-n` flag. (ex. `-n 3` for 3 machines).
+   For multiple workers, append the `-n` flag. (ex. `-n 3` for 3 machines).
 
-   This command will generate workers for `virtualbox`, or `qemu` if you are on M-series macOS.
-   If using a provider other than the default for your system, use the `--provider` flag.
-   (ex. `--provider my-custom-provider`)
-
-5. If you are on MacOS running QEMU, make sure to restart the network socket.
+3. If you are on MacOS running QEMU, make sure to restart the network socket.
    ```
    vagrant workers socket restart
    ```
    If the VM runs into errors when attempting to reach the internet, try starting the socket
    in public mode. (`vagrant workers socket restart --public`)
+   
+   __NOTE__: Never interact with the socket while a worker machine is running. This can make the machine inaccessible.
 
 6. Now you can create the worker machine(s) with:
    ```
    vagrant workers up
    ```
    Do not use the --provider flag with this command, since it will conflict with the
-   provider generated in step 3.
+   provider of the main virtual machine.
 
-7. Once all the workers are fully set up and running, `vagrant ssh` into the main VM and run:
+7. Once all the workers are fully set up and running, `vagrant ssh` into the main virtual machine and run:
    ```
    refresh_vagrant_workers
    ```
