@@ -155,7 +155,7 @@ with no explanation, then there are a couple of things that may be going wrong:
   ```
   VM_PORT_SITE=1512 vagrant up
   ```
-  
+    
   You can alternatively create a `.env` file in the root of your project
   with the text `VM_PORT_SITE=1512` (and any other variables separated by
   newlines). Note that you will need to install the env plugin beforehand:
