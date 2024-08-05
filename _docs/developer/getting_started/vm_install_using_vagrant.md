@@ -54,7 +54,13 @@ instructions.
    platform and prevent VirtualBox from working correctly. It is recommended to not install
    or use WSL2 alongside Virtualbox for now.
 
-5. The complete installation process could take an hour or more.  Make
+5. If you're on M-series macOS, you will be using QEMU with SMB file sharing.
+   To enable this, open **System Settings** and navigate to **General > Sharing**.
+   Press the (i) button next to **File Sharing**, and in the popup window
+   click "Options...". Then turn on "Share files and folders using SMB" and
+   check the box next to your name in the list below.
+
+6. The complete installation process could take an hour or more.  Make
    sure your internet connection is strong and consistent.  You'll
    probably want to plug in your laptop power cord.  Check your
    computer settings and make sure the machine does not hibernate or
