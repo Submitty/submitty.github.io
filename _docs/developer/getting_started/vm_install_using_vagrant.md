@@ -124,7 +124,7 @@ If you using an Intel-based Mac, you will follow the instructions below._
      
       * [Ruby](https://www.ruby-lang.org/en/downloads)  
       * [Git](https://git-scm.com/downloads)  
-      * [VirtualBox](https://www.virtualbox.org/wiki/Download_Old_Builds_6_1)  
+      * [VirtualBox](https://www.virtualbox.org/wiki/Download_Old_Builds_6_1) (or [QEMU](https://www.qemu.org) instead for M-series macOS)
       * [Vagrant](https://www.vagrantup.com)  
    
    
@@ -133,9 +133,9 @@ If you using an Intel-based Mac, you will follow the instructions below._
       install [Homebrew](http://brew.sh/), if you don't have it, and then run:
 
       ```
-      brew install --cask virtualbox
       brew install --cask vagrant
-      vagrant plugin install vagrant-timezone
+      brew install --cask virtualbox # if on Intel chip
+      brew install qemu && vagrant plugin install vagrant-qemu # if on M-series chip
       ```
 
    * **Windows**  
@@ -234,7 +234,7 @@ If you using an Intel-based Mac, you will follow the instructions below._
    If you have an AMD processor you can choose to download a pre-made
    VM that is created weekly OR you can create the VM from scratch
    (which will take substantially more time).  If you have an ARM chip
-   (e.g., the Apple Silicon Mac M1/M2/M3), you must create the VM from
+   (such as Apple M-series), you must create the VM from
    scratch.
 
    
@@ -248,9 +248,15 @@ If you using an Intel-based Mac, you will follow the instructions below._
     use a pre-packaged Submitty VM. This will have all of Submitty
     already setup.  Vagrant will build your VM for you.
 
+    To create the virtual machine, run:
     ```
-    vagrant up
+    vagrant up --provider=virtualbox
     ```
+    Replace `virtualbox` with `qemu` if on M-series macOS.
+
+    ***Note:** The vagrant up command provisions the virtual machine on the first run.
+    For subsequent runs, you do not need to append the `--provider` flag as the VM is
+    already created.*
 
     If you wish to use a specific version of the pre-packaged Submitty VM, on Linux or Mac type:
     ```
