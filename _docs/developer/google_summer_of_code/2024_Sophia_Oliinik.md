@@ -38,5 +38,11 @@ https://github.com/Submitty/Submitty/pull/10653 add manual grade to display
 https://github.com/Submitty/Submitty/pull/10665 separate manual and gui customization
 https://github.com/Submitty/Submitty/pull/10679 clear version conflicts with save
 https://github.com/Submitty/Submitty/pull/10750 base_url for rainbowgrades
+https://github.com/Submitty/Submitty/pull/10741 display memory/runtime in stats page
+https://github.com/Submitty/Submitty/pull/10763 add gradeable percents to GUI
+https://github.com/Submitty/Submitty/pull/10765 add ClampGradeablesInBucket
+https://github.com/Submitty/Submitty/pull/10840 add term and course
+https://github.com/Submitty/RainbowGrades/pull/56 display rainbowgrades version
+
 
 Acknowledgment:
