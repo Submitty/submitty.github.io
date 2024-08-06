@@ -239,67 +239,69 @@ operating system.
 
    * **Build pre-packaged VM**
 
-    *NOTE: The pre-packaged Submitty VM is not (yet)
-    available for qemu / M-Series ARM Mac machines.*
-
-    If you are using VirtualBox as your provider, you will by default
-    use a pre-packaged Submitty VM.  This will have all of Submitty
-    already setup.  This is a recently built machine,
-    but it may be slightly older than the current
-    [main branch on GitHub](https://github.com/Submitty/Submitty).
-
-
-    To create the virtual machine from the pre-packaged image, run:
-    ```
-    vagrant up --provider=virtualbox
-    ```
-
-    If you wish to use a specific version of the pre-packaged Submitty VM, on Linux/MacOS type:
-    ```
-    PREBUILT_VERSION={version} vagrant up --provider=virtualbox
-    ```
-    
-    or on Windows, type:
-    ```
-    SET PREBUILT_VERSION={version} 
-    vagrant up --provider=virtualbox
-    ```
-    
-    *The version must be only the numbers, not including the `v` in front, for example `24.05.00.2405260215` not `v24.05.00.2405260215`*
-
-    *This process will take 10 minutes to maybe half an hour
-    depending on your internet connection speed.*
-
-
-    ***Note:** The vagrant up command creates and provisions the virtual machine on the first run.
-    The `--provider` flag is important if you have more than one provider
-    installed on your machine (e.g., VirtualBox, VMWare, QEMU, libvirt).
-    For subsequent runs, you do not need to append the `--provider` flag as the VM is
-    already created.*
+     *NOTE: The pre-packaged Submitty VM is not (yet)
+     available for qemu / M-Series ARM Mac machines.*
+ 
+     If you are using VirtualBox as your provider, you will by default
+     use a pre-packaged Submitty VM.  This will have all of Submitty
+     already setup.  This is a recently built machine,
+     but it may be slightly older than the current
+     [main branch on GitHub](https://github.com/Submitty/Submitty).
+ 
+ 
+     To create the virtual machine from the pre-packaged image, run:
+     ```
+     vagrant up --provider=virtualbox
+     ```
+ 
+     If you wish to use a specific version of the pre-packaged Submitty VM, on Linux/MacOS type:
+     ```
+     PREBUILT_VERSION={version} vagrant up --provider=virtualbox
+     ```
+     
+     or on Windows, type:
+     ```
+     SET PREBUILT_VERSION={version} 
+     vagrant up --provider=virtualbox
+     ```
+     
+     *The version must be only the numbers, not including the `v` in front, for example `24.05.00.2405260215` not `v24.05.00.2405260215`*
+ 
+     *This process will take 10 minutes to maybe half an hour
+     depending on your internet connection speed.*
+ 
+ 
+     ***Note:** The vagrant up command creates and provisions the virtual machine on the first run.
+     The `--provider` flag is important if you have more than one provider
+     installed on your machine (e.g., VirtualBox, VMWare, QEMU, libvirt).
+     For subsequent runs, you do not need to append the `--provider` flag as the VM is
+     already created.*
 
 
    * **Build (from scratch) using QEMU on an M-Series Arm MacOS**
 
-    If you have an M-series ARM Mac, run:
-    ```
-    vagrant up --provider=qemu
-    ```
-
-    *As noted above, you do not need to append the `--provider` flag on subsequent runs after the VM is already created.*
+     If you have an M-series ARM Mac, run:
+     ```
+     vagrant up --provider=qemu
+     ```
+ 
+     *As noted above, you do not need to append the `--provider` flag on subsequent runs after the VM is already created.*
 
 
    * **Build from scratch**
 
      If you wish to run `vagrant up` from scratch, on Linux or Intel-based Mac type:
      ```
-     FROM_SCRATCH=1 vagrant up
+     FROM_SCRATCH=1 vagrant up --virtualbox
      ```
      
      Or on Windows, type: 
      ```
      SET FROM_SCRATCH=1
-     vagrant up
+     vagrant up --virtualbox
      ```
+
+     *As noted above, you do not need to append the `--provider` flag on subsequent runs after the VM is already created.*
 
      *This process will take anywhere from 30 minutes to a few hours
      depending on your internet speed.*
@@ -325,13 +327,13 @@ operating system.
 
      * On Mac or Linux:  
        ```
-       NO_SUBMISSIONS=1 vagrant up
+       NO_SUBMISSIONS=1 vagrant up --provider=...
        ```
 
      * Or on Windows using `cmd`:  
        ```
        SET NO_SUBMISSIONS=1
-       vagrant up
+       vagrant up --provider=...
        ```
 
        Or on Windows using PowerShell, you will have to set the environment variable differently:  
