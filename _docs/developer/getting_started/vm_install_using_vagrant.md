@@ -180,10 +180,6 @@ and Intel machines and QEMU for M-Series ARM MacOS machines.*
         sudo dnf install vagrant
         ```
 
-DELETE
-      * **Note:**
-        When running vagrant up, use `vagrant up --provider=virtualbox` so it doesn't default to libvirt
-
       * **Common errors when running vagrant up (Fedora/RHEL)**
       
         1. Missing virtnetworkd:  
@@ -276,7 +272,9 @@ DELETE
     depending on your internet connection speed.*
 
 
-    ***Note:** The vagrant up command provisions the virtual machine on the first run.
+    ***Note:** The vagrant up command creates and provisions the virtual machine on the first run.
+    The `--provider` flag is important if you have more than one virtual box provider
+    installed on your machine (e.g., VirtualBox, VMWare, QEMU, libvirt).
     For subsequent runs, you do not need to append the `--provider` flag as the VM is
     already created.*
 
@@ -288,7 +286,7 @@ DELETE
     vagrant up --provider=qemu
     ```
 
-    *As noted above, you do not need to append the `--provider` flag is only necessary on the first run when the VM is created.*
+    *As noted above, the `--provider` flag is only necessary on the first run when the VM is created.*
 
 
    * **Build from scratch**
