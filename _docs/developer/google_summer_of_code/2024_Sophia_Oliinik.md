@@ -13,8 +13,30 @@ Daily/written
 
 Clearly defined work:
 - documentation prs
-- prs reviewed
-- prs created 
-- bugfix prs
+version conflict documentation
+https://github.com/Submitty/submitty.github.io/pull/617
 
-Acknowledgment 
+updated version conflict doc
+https://github.com/Submitty/submitty.github.io/pull/623
+
+- prs created 
+hover text to rainbowgrades
+https://github.com/Submitty/RainbowGrades/pull/77
+
+- bugfix prs
+https://github.com/Submitty/Submitty/pull/10426
+update rainbowgrades url
+
+https://github.com/Submitty/Submitty/pull/10427
+fix some spelling errors
+
+- prs reviewed
+https://github.com/Submitty/Submitty/pull/10518 final grade gui configuration
+https://github.com/Submitty/Submitty/pull/10615 markdown buttons exceeding width
+https://github.com/Submitty/Submitty/pull/10635 add a clear conflict button
+https://github.com/Submitty/Submitty/pull/10653 add manual grade to display
+https://github.com/Submitty/Submitty/pull/10665 separate manual and gui customization
+https://github.com/Submitty/Submitty/pull/10679 clear version conflicts with save
+https://github.com/Submitty/Submitty/pull/10750 base_url for rainbowgrades
+
+Acknowledgment:
