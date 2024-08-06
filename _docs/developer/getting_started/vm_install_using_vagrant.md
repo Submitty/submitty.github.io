@@ -295,7 +295,7 @@ operating system.
      FROM_SCRATCH=1 vagrant up --virtualbox
      ```
      
-     Or on Windows, type: 
+     Or on Windows with `cmd`, type: 
      ```
      SET FROM_SCRATCH=1
      vagrant up --virtualbox
