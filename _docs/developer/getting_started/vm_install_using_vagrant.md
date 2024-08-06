@@ -316,7 +316,7 @@ operating system.
      users in the sample courses.*
 
 
-   * **Build without sample submissions**
+   * **Build from scratch without sample submissions**
 
      If your development work *will not require sample assignment
      submissions or autograding results*, you may prepend
@@ -324,42 +324,52 @@ operating system.
      creation of these sample submissions and their autograding and
      decrease the time to complete installation.
 
-
-     * On Mac or Linux:  
+     * On Linux or Intel-based Mac:  
        ```
-       NO_SUBMISSIONS=1 vagrant up --provider=...
+       NO_SUBMISSIONS=1 FROM_SCRATCH=1 vagrant up --provider=virtualbox
        ```
 
-     * Or on Windows using `cmd`:  
+     * On M-series ARM Mac:
+       ```
+       NO_SUBMISSIONS=1 vagrant up --provider=qemu
+       ```
+
+     * On Windows using `cmd`:  
        ```
        SET NO_SUBMISSIONS=1
-       vagrant up --provider=...
+       SET FROM_SCRATCH=1
+       vagrant up --provider=virtualbox
        ```
 
-       Or on Windows using PowerShell, you will have to set the environment variable differently:  
+       On Windows using PowerShell, you will have to set the environment variables differently:  
        ```pwsh
        $Env:NO_SUBMISSIONS=1
+       $Env:FROM_SCRATCH=1
        vagrant up
        ```
 
-       If you want to unset the variable later in `cmd`, you can do:  
+       If you want to unset the variables later in `cmd`, you can do:  
        ```
        SET NO_SUBMISSIONS=
+       SET FROM_SCRATCH=
        ```
 
        Or in PowerShell:  
        ```pwsh
        Remove-Item Env:\NO_SUBMISSIONS
+       Remove-Item Env:\FROM_SCRATCH
        ```
 
-       Similarly, you can check that the variable is set by doing:  
+       Similarly, you can check that the variables are set in `cmd` with:  
        ```
        SET NO_SUBMISSIONS
+       SET FROM_SCRATCH
        ```
 
        Or in PowerShell:  
        ```pwsh
        $Env:NO_SUBMISSIONS
+       $Env:FROM_SCRATCH
        ```
 
 
