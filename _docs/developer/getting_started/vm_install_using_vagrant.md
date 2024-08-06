@@ -51,8 +51,8 @@ operating system.
 
 5. If you're on M-series ARM MacOS (e.g., M1, M2, M3), you will be using QEMU with SMB file sharing.
    To enable this, open **System Settings** and navigate to **General > Sharing**.
-   Press the (i) button next to **File Sharing**, and in thse popup window
-   click "Options...". Then turn on "Share files and folder using SMB" and
+   Press the (i) button next to **File Sharing**, and in the popup window
+   click "Options...". Then turn on "Share files and folders using SMB" and
    check the box next to your name in the list below.
 
 6. The complete installation process could take an hour or more and 
