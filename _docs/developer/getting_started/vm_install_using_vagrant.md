@@ -14,10 +14,8 @@ Unix/Linux).  The installation process will create a new Virtual
 Machine (VM) on your computer and the VM will use the Ubuntu GNU/Linux
 operating system.
 
-__Note:__ We only officially support and test development using VirtualBox.
-The instructions below are for VirtualBox.  While alternatively using
-VMWare should work, we have not tested this, and do not provide these
-instructions.
+***NOTE:** We only officially support and test development using VirtualBox for AMD 
+and Intel machines and QEMU for M-Series ARM MacOS machines.*
 
 ---
 
@@ -43,24 +41,23 @@ instructions.
    backend, which will be slower and can cause instability in the
    VM.
 
-   **Note:**
-   This may stop programs like Docker Desktop and WSL 2 from
+   ***NOTE:**   This may stop programs like Docker Desktop and WSL 2 from
    working. If these programs are essential to your workflow, consider
    looking up how to add a separate boot entry with "hypervisorlaunchtype"
-   set to "off" for use with VirtualBox.
+   set to "off" for use with VirtualBox.*
 
-   **Note:**
-   Installing WSL2 may also reconfigure your OS to use Hyper-V or Windows hypervisor
+   ***NOTE:**   Installing WSL2 may also reconfigure your OS to use Hyper-V or Windows hypervisor
    platform and prevent VirtualBox from working correctly. It is recommended to not install
-   or use WSL2 alongside Virtualbox for now.
+   or use WSL2 alongside Virtualbox for now.*
 
-5. If you're on M-series macOS, you will be using QEMU with SMB file sharing.
+5. If you're on M-series ARM MacOS (e.g., M1, M2, M3), you will be using QEMU with SMB file sharing.
    To enable this, open **System Settings** and navigate to **General > Sharing**.
    Press the (i) button next to **File Sharing**, and in the popup window
    click "Options...". Then turn on "Share files and folders using SMB" and
    check the box next to your name in the list below.
 
-6. The complete installation process could take an hour or more.  Make
+6. The complete installation process could take an hour or more and 
+   will quite possiby fail if paused or interrupted.  Make
    sure your internet connection is strong and consistent.  You'll
    probably want to plug in your laptop power cord.  Check your
    computer settings and make sure the machine does not hibernate or
@@ -110,7 +107,7 @@ instructions.
       3. Locate **Virtualization** and enable it. (Some motherboards may call it SVM, AMD-V, VT-x/Vanderpool)
       4. Be sure to choose **Hardware Virtualization** in the **System -> Acceleration**
          settings of the virtual machine you are using.  
-      5. **Note:** If using secure boot, Vagrant may fail to work with VirtualBox.
+      5. **NOTE:** If using secure boot, Vagrant may fail to work with VirtualBox.
          You will then either need to disable secure boot from the boot menu/BIOS or
          follow [these steps](https://era86.github.io/2018/01/24/vagrant-virtualbox-secureboot-in-ubuntu-1604.html)
          to self-sign the necessary packages to run Vagrant and VirtualBox.
@@ -122,18 +119,27 @@ instructions.
      
       * [Ruby](https://www.ruby-lang.org/en/downloads)  
       * [Git](https://git-scm.com/downloads)  
-      * [VirtualBox](https://www.virtualbox.org/wiki/Download_Old_Builds_6_1) (or [QEMU](https://www.qemu.org) instead for M-series macOS)
+      * M-SERIES ARM MacOS: [QEMU](https://www.qemu.org)  
+      * EVERYONE ELSE: [VirtualBox](https://www.virtualbox.org/wiki/Download_Old_Builds_6_1)  
       * [Vagrant](https://www.vagrantup.com)  
    
    
    * **MacOS**  
       You can either go to respective sites and download the necessary binaries or
-      install [Homebrew](http://brew.sh/), if you don't have it, and then run:
+      install [Homebrew](http://brew.sh/), if you don't have it, and then:
+
+      If you have an M-series ARM Mac, run:
+      ```
+      brew install --cask vagrant
+      brew install qemu
+      vagrant plugin install vagrant-qemu
+      ```
+  
+      Or if you have an older Intel-based Mac, run:
 
       ```
       brew install --cask vagrant
-      brew install --cask virtualbox # if on Intel chip
-      brew install qemu && vagrant plugin install vagrant-qemu # if on M-series chip
+      brew install --cask virtualbox
       ```
 
    * **Windows**  
@@ -174,6 +180,7 @@ instructions.
         sudo dnf install vagrant
         ```
 
+DELETE
       * **Note:**
         When running vagrant up, use `vagrant up --provider=virtualbox` so it doesn't default to libvirt
 
@@ -193,7 +200,7 @@ instructions.
            run `vagrant destroy` before re-running `vagrant up --provider=virtualbox` again.
 
 
-3. CLONE THE [SUBMITTY REPOSITORY](https://github.com/Submitty/Submitty)
+4. CLONE THE [SUBMITTY REPOSITORY](https://github.com/Submitty/Submitty)
 
    * Clone it to a location on your computer (the "host").
 
@@ -201,14 +208,15 @@ instructions.
      git clone https://github.com/Submitty/Submitty.git
      ```
 
-     **Note:** If you are not currently part of the Submitty organization on GitHub, you may want to
+     ***NOTE:** If you are not currently part of the Submitty organization on GitHub, you may want to
      [fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
-     the repo and use the git url from your fork instead, especially if you are looking to contribute.
+     the repo and use the git url from your fork instead, especially if you are looking to contribute.*
 
-   * _OPTIONAL: If you will be developing code in one of the companion
+
+   * **OPTIONAL:** If you will be developing code in one of the companion
       Submitty repositories (e.g., AnalysisTools, Lichen,
       Localization, RainbowGrades, Tutorial), also clone those
-      repositories to the same directory.  For example:_
+      repositories to the same directory.  For example:
 
       ```
       home
@@ -223,57 +231,69 @@ instructions.
                    └── Tutorial       (optional)
       ```
 
-      _This host directory structure will be shared / synced between
-      your host operating system and the Submitty virtual machine._
+      *This host directory structure will be shared / synced between
+      your host operating system and the Submitty virtual machine.*
 
 
-4. RUN VAGRANT
-
-   If you have an AMD processor you can choose to download a pre-made
-   VM that is created weekly OR you can create the VM from scratch
-   (which will take substantially more time).  If you have an ARM chip
-   (such as Apple M-series), you must create the VM from
-   scratch.
+5. RUN VAGRANT
 
    
    * Navigate into the Submitty repository on your computer in a
-     shell/terminal.       _On Windows, run CMD or PowerShell on administrator mode_.
+     shell/terminal.   *On Windows, run CMD or PowerShell on administrator mode.*
 
 
    * **Build pre-packaged VM**
 
-    If you are using VirtualBox as your provider, you will by default
-    use a pre-packaged Submitty VM. This will have all of Submitty
-    already setup.  Vagrant will build your VM for you.
+    *NOTE: The pre-packaged Submitty VM is not (yet)
+    available for qemu / M-Series ARM Mac machines.*
 
-    To create the virtual machine, run:
+    If you are using VirtualBox as your provider, you will by default
+    use a pre-packaged Submitty VM.  This will have all of Submitty
+    already setup.  This is a recently built machine,
+    but it may be slightly older than the current
+    [main branch on GitHub](https://github.com/Submitty/Submitty).
+
+
+    To create the virtual machine from the pre-packaged image, run:
     ```
     vagrant up --provider=virtualbox
     ```
-    Replace `virtualbox` with `qemu` if on M-series macOS.
 
-    ***Note:** The vagrant up command provisions the virtual machine on the first run.
-    For subsequent runs, you do not need to append the `--provider` flag as the VM is
-    already created.*
-
-    If you wish to use a specific version of the pre-packaged Submitty VM, on Linux or Mac type:
+    If you wish to use a specific version of the pre-packaged Submitty VM, on Linux type:
     ```
-    PREBUILT_VERSION={version} vagrant up
+    PREBUILT_VERSION={version} vagrant up --provider=virtualbox
     ```
+    
     or on Windows, type:
     ```
-    SET PREBUILT_VERSION={version}
-    vagrant up
+    SET PREBUILT_VERSION={version} 
+    vagrant up --provider=virtualbox
     ```
+    
     *The version must be only the numbers, not including the `v` in front, for example `24.05.00.2405260215` not `v24.05.00.2405260215`*
 
     *This process will take 10 minutes to maybe half an hour
     depending on your internet connection speed.*
 
 
+    ***Note:** The vagrant up command provisions the virtual machine on the first run.
+    For subsequent runs, you do not need to append the `--provider` flag as the VM is
+    already created.*
+
+
+  * **Build (from scratch) using QEMU on an M-Series Arm MacOKS**
+
+    If you have an M-series ARM MacOS, run:
+    ```
+    vagrant up --provider=qemu
+    ```
+
+    *As noted above, you do not need to append the `--provider` flag is only necessary on the first run when the VM is created.*
+
+
    * **Build from scratch**
 
-     If you wish to run `vagrant up` from scratch, on Linux or Mac type:
+     If you wish to run `vagrant up` from scratch, on Linux or IntelMac type:
      ```
      FROM_SCRATCH=1 vagrant up
      ```
@@ -344,7 +364,7 @@ instructions.
        ```
 
 
-5. AND YOU ARE DONE!
+7. AND YOU ARE DONE!
 
    When the installation has completed, you should see the message:
    ```
