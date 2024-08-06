@@ -14,8 +14,7 @@ Unix/Linux).  The installation process will create a new Virtual
 Machine (VM) on your computer and the VM will use the Ubuntu GNU/Linux
 operating system.
 
-***NOTE:** We only officially support and test development using VirtualBox for AMD 
-and Intel machines and QEMU for M-Series ARM MacOS machines.*
+***NOTE:** We only officially support and test development using VirtualBox for AMD and Intel machines and QEMU for M-Series ARM MacOS machines.*
 
 ---
 
@@ -52,12 +51,12 @@ and Intel machines and QEMU for M-Series ARM MacOS machines.*
 
 5. If you're on M-series ARM MacOS (e.g., M1, M2, M3), you will be using QEMU with SMB file sharing.
    To enable this, open **System Settings** and navigate to **General > Sharing**.
-   Press the (i) button next to **File Sharing**, and in the popup window
-   click "Options...". Then turn on "Share files and folders using SMB" and
+   Press the (i) button next to **File Sharing**, and in thse popup window
+   click "Options...". Then turn on "Share files and folder using SMB" and
    check the box next to your name in the list below.
 
 6. The complete installation process could take an hour or more and 
-   will quite possiby fail if paused or interrupted.  Make
+   will quite possibly fail if paused or interrupted.  Make
    sure your internet connection is strong and consistent.  You'll
    probably want to plug in your laptop power cord.  Check your
    computer settings and make sure the machine does not hibernate or
@@ -255,7 +254,7 @@ and Intel machines and QEMU for M-Series ARM MacOS machines.*
     vagrant up --provider=virtualbox
     ```
 
-    If you wish to use a specific version of the pre-packaged Submitty VM, on Linux type:
+    If you wish to use a specific version of the pre-packaged Submitty VM, on Linux/MacOS type:
     ```
     PREBUILT_VERSION={version} vagrant up --provider=virtualbox
     ```
@@ -273,25 +272,25 @@ and Intel machines and QEMU for M-Series ARM MacOS machines.*
 
 
     ***Note:** The vagrant up command creates and provisions the virtual machine on the first run.
-    The `--provider` flag is important if you have more than one virtual box provider
+    The `--provider` flag is important if you have more than one provider
     installed on your machine (e.g., VirtualBox, VMWare, QEMU, libvirt).
     For subsequent runs, you do not need to append the `--provider` flag as the VM is
     already created.*
 
 
-  * **Build (from scratch) using QEMU on an M-Series Arm MacOKS**
+   * **Build (from scratch) using QEMU on an M-Series Arm MacOS**
 
-    If you have an M-series ARM MacOS, run:
+    If you have an M-series ARM Mac, run:
     ```
     vagrant up --provider=qemu
     ```
 
-    *As noted above, the `--provider` flag is only necessary on the first run when the VM is created.*
+    *As noted above, you do not need to append the `--provider` flag on subsequent runs after the VM is already created.*
 
 
    * **Build from scratch**
 
-     If you wish to run `vagrant up` from scratch, on Linux or IntelMac type:
+     If you wish to run `vagrant up` from scratch, on Linux or Intel-based Mac type:
      ```
      FROM_SCRATCH=1 vagrant up
      ```
