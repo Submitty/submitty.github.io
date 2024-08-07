@@ -14,8 +14,7 @@ Unix/Linux).  The installation process will create a new Virtual
 Machine (VM) on your computer and the VM will use the Ubuntu GNU/Linux
 operating system.
 
-***NOTE:** We only officially support and test development using VirtualBox for AMD 
-and Intel machines and QEMU for M-Series ARM MacOS machines.*
+***NOTE:** We only officially support and test development using VirtualBox for AMD and Intel machines and QEMU for M-Series ARM MacOS machines.*
 
 ---
 
@@ -57,7 +56,7 @@ and Intel machines and QEMU for M-Series ARM MacOS machines.*
    check the box next to your name in the list below.
 
 6. The complete installation process could take an hour or more and 
-   will quite possiby fail if paused or interrupted.  Make
+   will quite possibly fail if paused or interrupted.  Make
    sure your internet connection is strong and consistent.  You'll
    probably want to plug in your laptop power cord.  Check your
    computer settings and make sure the machine does not hibernate or
@@ -240,67 +239,69 @@ and Intel machines and QEMU for M-Series ARM MacOS machines.*
 
    * **Build pre-packaged VM**
 
-    *NOTE: The pre-packaged Submitty VM is not (yet)
-    available for qemu / M-Series ARM Mac machines.*
+     *NOTE: The pre-packaged Submitty VM is not (yet)
+     available for qemu / M-Series ARM Mac machines.*
+ 
+     If you are using VirtualBox as your provider, you will by default
+     use a pre-packaged Submitty VM.  This will have all of Submitty
+     already setup.  This is a recently built machine,
+     but it may be slightly older than the current
+     [main branch on GitHub](https://github.com/Submitty/Submitty).
+ 
+ 
+     To create the virtual machine from the pre-packaged image, run:
+     ```
+     vagrant up --provider=virtualbox
+     ```
+ 
+     If you wish to use a specific version of the pre-packaged Submitty VM, on Linux/MacOS type:
+     ```
+     PREBUILT_VERSION={version} vagrant up --provider=virtualbox
+     ```
+     
+     or on Windows, type:
+     ```
+     SET PREBUILT_VERSION={version} 
+     vagrant up --provider=virtualbox
+     ```
+     
+     *The version must be only the numbers, not including the `v` in front, for example `24.05.00.2405260215` not `v24.05.00.2405260215`*
+ 
+     *This process will take 10 minutes to maybe half an hour
+     depending on your internet connection speed.*
+ 
+ 
+     ***Note:** The vagrant up command creates and provisions the virtual machine on the first run.
+     The `--provider` flag is important if you have more than one provider
+     installed on your machine (e.g., VirtualBox, VMWare, QEMU, libvirt).
+     For subsequent runs, you do not need to append the `--provider` flag as the VM is
+     already created.*
 
-    If you are using VirtualBox as your provider, you will by default
-    use a pre-packaged Submitty VM.  This will have all of Submitty
-    already setup.  This is a recently built machine,
-    but it may be slightly older than the current
-    [main branch on GitHub](https://github.com/Submitty/Submitty).
 
+   * **Build (from scratch) using QEMU on an M-Series Arm MacOS**
 
-    To create the virtual machine from the pre-packaged image, run:
-    ```
-    vagrant up --provider=virtualbox
-    ```
-
-    If you wish to use a specific version of the pre-packaged Submitty VM, on Linux type:
-    ```
-    PREBUILT_VERSION={version} vagrant up --provider=virtualbox
-    ```
-    
-    or on Windows, type:
-    ```
-    SET PREBUILT_VERSION={version} 
-    vagrant up --provider=virtualbox
-    ```
-    
-    *The version must be only the numbers, not including the `v` in front, for example `24.05.00.2405260215` not `v24.05.00.2405260215`*
-
-    *This process will take 10 minutes to maybe half an hour
-    depending on your internet connection speed.*
-
-
-    ***Note:** The vagrant up command creates and provisions the virtual machine on the first run.
-    The `--provider` flag is important if you have more than one virtual box provider
-    installed on your machine (e.g., VirtualBox, VMWare, QEMU, libvirt).
-    For subsequent runs, you do not need to append the `--provider` flag as the VM is
-    already created.*
-
-
-  * **Build (from scratch) using QEMU on an M-Series Arm MacOKS**
-
-    If you have an M-series ARM MacOS, run:
-    ```
-    vagrant up --provider=qemu
-    ```
-
-    *As noted above, the `--provider` flag is only necessary on the first run when the VM is created.*
+     If you have an M-series ARM Mac, run:
+     ```
+     vagrant up --provider=qemu
+     ```
+ 
+     *As noted above, you do not need to append the `--provider` flag on subsequent runs after the VM is already created.*
 
 
    * **Build from scratch**
 
-     If you wish to run `vagrant up` from scratch, on Linux or IntelMac type:
+     If you wish to run `vagrant up` from scratch, on Linux or Intel-based Mac type:
      ```
-     FROM_SCRATCH=1 vagrant up
+     FROM_SCRATCH=1 vagrant up --virtualbox
      ```
      
-     Or on Windows, type: 
+     Or on Windows with `cmd`, type: 
      ```
      SET FROM_SCRATCH=1
-     vagrant up
+     vagrant up --virtualbox
      ```
+
+     *As noted above, you do not need to append the `--provider` flag on subsequent runs after the VM is already created.*
 
      *This process will take anywhere from 30 minutes to a few hours
      depending on your internet speed.*
@@ -315,7 +316,7 @@ and Intel machines and QEMU for M-Series ARM MacOS machines.*
      users in the sample courses.*
 
 
-   * **Build without sample submissions**
+   * **Build from scratch without sample submissions**
 
      If your development work *will not require sample assignment
      submissions or autograding results*, you may prepend
@@ -323,42 +324,52 @@ and Intel machines and QEMU for M-Series ARM MacOS machines.*
      creation of these sample submissions and their autograding and
      decrease the time to complete installation.
 
-
-     * On Mac or Linux:  
+     * On Linux or Intel-based Mac:  
        ```
-       NO_SUBMISSIONS=1 vagrant up
+       NO_SUBMISSIONS=1 FROM_SCRATCH=1 vagrant up --provider=virtualbox
        ```
 
-     * Or on Windows using `cmd`:  
+     * On M-series ARM Mac:
+       ```
+       NO_SUBMISSIONS=1 vagrant up --provider=qemu
+       ```
+
+     * On Windows using `cmd`:  
        ```
        SET NO_SUBMISSIONS=1
-       vagrant up
+       SET FROM_SCRATCH=1
+       vagrant up --provider=virtualbox
        ```
 
-       Or on Windows using PowerShell, you will have to set the environment variable differently:  
+       On Windows using PowerShell, you will have to set the environment variables differently:  
        ```pwsh
        $Env:NO_SUBMISSIONS=1
+       $Env:FROM_SCRATCH=1
        vagrant up
        ```
 
-       If you want to unset the variable later in `cmd`, you can do:  
+       If you want to unset the variables later in `cmd`, you can do:  
        ```
        SET NO_SUBMISSIONS=
+       SET FROM_SCRATCH=
        ```
 
        Or in PowerShell:  
        ```pwsh
        Remove-Item Env:\NO_SUBMISSIONS
+       Remove-Item Env:\FROM_SCRATCH
        ```
 
-       Similarly, you can check that the variable is set by doing:  
+       Similarly, you can check that the variables are set in `cmd` with:  
        ```
        SET NO_SUBMISSIONS
+       SET FROM_SCRATCH
        ```
 
        Or in PowerShell:  
        ```pwsh
        $Env:NO_SUBMISSIONS
+       $Env:FROM_SCRATCH
        ```
 
 
