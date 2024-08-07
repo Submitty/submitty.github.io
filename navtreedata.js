@@ -128,6 +128,7 @@ var NAVTREE =
                 [ "Validation", "/instructor/autograding/validation", null ],
                 [ "Batch Regrade Submissions", "/instructor/autograding/batch_regrade", null ],
                 [ "Sample Assignments", "/instructor/autograding/sample_assignments", null ],
+                [ "Hidden Testcase Examples", "/instructor/autograding/hidden_testcase_examples", null ],
                 [ "Docker Images", "/instructor/autograding/docker_images", null ],
                 [ "Docker UI", "/instructor/autograding/docker_ui", null ],
                 [ "Static Analysis", "/instructor/autograding/static_analysis/index", [
