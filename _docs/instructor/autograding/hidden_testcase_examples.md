@@ -35,7 +35,7 @@ This is what it will look like for students:
 ### Hide Testcase Details, Show Score
 
 In your `config.json`, **do not** change the `hidden` field.
-Instead, add these lines to the testcase:
+Instead, add these lines to the validation of the testcase:
 ```
 "show_actual": never,
 "show_expected": never
