@@ -48,6 +48,7 @@ var NAVTREE =
                 [ "Automated Testing", "/student/submission/automated_testing", null ],
                 [ "Late Days & Extensions", "/student/submission/late_days", null ],
                 [ "Managing Versions", "/student/submission/managing_versions", null ],
+                [ "Resolving Version Conflicts", "/student/submission/resolving_version_conflict", null],
                 [ "Team Assignments", "/student/submission/team_assignments", null ]
             ] ],
             [ "Grades", "/student/grades/index", [
