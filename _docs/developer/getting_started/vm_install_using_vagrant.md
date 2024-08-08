@@ -14,7 +14,9 @@ Unix/Linux).  The installation process will create a new Virtual
 Machine (VM) on your computer and the VM will use the Ubuntu GNU/Linux
 operating system.
 
-***NOTE:** We only officially support and test development using VirtualBox for AMD and Intel machines and QEMU for M-Series ARM MacOS machines.*
+***NOTE:** We only officially support and test development using
+VirtualBox for AMD and Intel machines and QEMU for
+M-Series ARM MacOS machines.*
 
 ---
 
@@ -47,16 +49,17 @@ operating system.
 
    ***NOTE:**   Installing WSL2 may also reconfigure your OS to use Hyper-V or Windows hypervisor
    platform and prevent VirtualBox from working correctly. It is recommended to not install
-   or use WSL2 alongside Virtualbox for now.*
+   or use WSL2 alongside VirtualBox for now.*
 
-5. If you're on M-series ARM MacOS (e.g., M1, M2, M3), you will be using QEMU with SMB file sharing.
+5. If you're on an M-series ARM MacOS (e.g., M1, M2, M3),
+   you will be using QEMU with SMB file sharing.
    To enable this, open **System Settings** and navigate to **General > Sharing**.
    Press the (i) button next to **File Sharing**, and in the popup window
    click "Options...". Then turn on "Share files and folders using SMB" and
    check the box next to your name in the list below.
 
 6. The complete installation process could take an hour or more and 
-   will quite possibly fail if paused or interrupted.  Make
+   will probably fail if paused or interrupted.  Make
    sure your internet connection is strong and consistent.  You'll
    probably want to plug in your laptop power cord.  Check your
    computer settings and make sure the machine does not hibernate or
@@ -86,8 +89,9 @@ operating system.
       8. Locate **Virtualization**, and enable it.
          (Note: Some motherboards may call it SVM, AMD-V, VT-x/Vanderpool.
          If you cannot find the option to enable virtualization,
-         [search Google](http://tinyurl.com/enable-virtualization) for a tutorial on enabling it with your motherboard.) 
-      9. Reboot your computer.
+         [search Google](http://tinyurl.com/enable-virtualization)
+         for a tutorial on enabling it with your motherboard.) 
+      9. Reboot your computer.  
 
    * **Windows 11**
       1. Open **Change advanced start-up options** by searching for it in the search bar.
@@ -112,15 +116,14 @@ operating system.
          to self-sign the necessary packages to run Vagrant and VirtualBox.
 
 2. DOWNLOAD AND INSTALL THE LATEST DEPENDENCIES
+   *Follow the instructions below specific to your host operating system*
 
-   * You will need:  
-     *Follow the instructions below specific to your host operating system*
-     
+   * You will need:     
       * [Ruby](https://www.ruby-lang.org/en/downloads)  
       * [Git](https://git-scm.com/downloads)  
-      * M-SERIES ARM MacOS: [QEMU](https://www.qemu.org)  
-      * EVERYONE ELSE: [VirtualBox](https://www.virtualbox.org/wiki/Download_Old_Builds_6_1)  
       * [Vagrant](https://www.vagrantup.com)  
+      * *M-SERIES ARM MacOS:* [QEMU](https://www.qemu.org)  
+      * *EVERYONE ELSE:* [VirtualBox](https://www.virtualbox.org/wiki/Download_Old_Builds_6_1)  
    
    
    * **MacOS**  
@@ -162,14 +165,14 @@ operating system.
 
       * For Fedora, the latest version of VirtualBox is recommended to
         prevent errors. Download the RPM from the VirtualBox
-        website. Make sure your version of Fedora is up to date using
+        website. Make sure your version of Fedora is up to date using:
         ```
         sudo dnf update
         sudo dnf upgrade
         ```
 
-        and inputting your password. Then install the Virtual Box rpm
-        using:
+        and then inputting your password when prompted.
+        Then install the Virtual Box rpm using:
         ```
         sudo dnf install VirtualBox-xxxxx.rpm
         ```
@@ -205,7 +208,8 @@ operating system.
 
      ***NOTE:** If you are not currently part of the Submitty organization on GitHub, you may want to
      [fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
-     the repo and use the git url from your fork instead, especially if you are looking to contribute.*
+     the repo and use the git url from your fork instead, especially if you are looking to
+     contribute.  You will then make PRs to the main Submitty repository from branches on your fork.*
 
 
    * **OPTIONAL:** If you will be developing code in one of the companion
@@ -240,7 +244,7 @@ operating system.
    * **Build pre-packaged VM**
 
      *NOTE: The pre-packaged Submitty VM is not (yet)
-     available for qemu / M-Series ARM Mac machines.*
+     available for QEMU / M-Series ARM Mac machines.*
  
      If you are using VirtualBox as your provider, you will by default
      use a pre-packaged Submitty VM.  This will have all of Submitty
@@ -274,36 +278,33 @@ operating system.
      ***Note:** The vagrant up command creates and provisions the virtual machine on the first run.
      The `--provider` flag is important if you have more than one provider
      installed on your machine (e.g., VirtualBox, VMWare, QEMU, libvirt).
-     For subsequent runs, you do not need to append the `--provider` flag as the VM is
+     For subsequent runs of `vagrant up` (e.g., to re-start the VM),
+     you do not need to append the `--provider` flag as the VM is
      already created.*
-
-
-   * **Build (from scratch) using QEMU on an M-Series Arm MacOS**
-
-     If you have an M-series ARM Mac, run:
-     ```
-     vagrant up --provider=qemu
-     ```
- 
-     *As noted above, you do not need to append the `--provider` flag on subsequent runs after the VM is already created.*
 
 
    * **Build from scratch**
 
-     If you wish to run `vagrant up` from scratch, on Linux or Intel-based Mac type:
-     ```
-     FROM_SCRATCH=1 vagrant up --virtualbox
-     ```
+      * Using QEMU on an M-Series Arm MacOS, type:
+        ```
+        vagrant up --provider=qemu
+        ```
+ 
+      * On Linux or Intel-based Mac, type:
+        ```
+        FROM_SCRATCH=1 vagrant up --provider=virtualbox
+        ```
      
-     Or on Windows with `cmd`, type: 
-     ```
-     SET FROM_SCRATCH=1
-     vagrant up --virtualbox
-     ```
+      * Or on Windows with `cmd`, type: 
+        ```
+        SET FROM_SCRATCH=1
+        vagrant up --provider=virtualbox
+       ```
 
-     *As noted above, you do not need to append the `--provider` flag on subsequent runs after the VM is already created.*
+     *As noted above, you do not need to append the `--provider` flag on
+     subsequent runs of `vagrant up` after the VM is already created.*
 
-     *This process will take anywhere from 30 minutes to a few hours
+     *Building the VM from scratch will take anywhere from 30 minutes to a few hours
      depending on your internet speed.*
 
 
@@ -324,14 +325,14 @@ operating system.
      creation of these sample submissions and their autograding and
      decrease the time to complete installation.
 
-     * On Linux or Intel-based Mac:  
-       ```
-       NO_SUBMISSIONS=1 FROM_SCRATCH=1 vagrant up --provider=virtualbox
-       ```
-
      * On M-series ARM Mac:
        ```
        NO_SUBMISSIONS=1 vagrant up --provider=qemu
+       ```
+
+     * On Linux or Intel-based Mac:  
+       ```
+       NO_SUBMISSIONS=1 FROM_SCRATCH=1 vagrant up --provider=virtualbox
        ```
 
      * On Windows using `cmd`:  
