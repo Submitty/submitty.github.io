@@ -38,6 +38,7 @@ GEM
     faraday-net_http (3.1.0)
       net-http
     ffi (1.16.3)
+    ffi (1.16.3-x64-mingw-ucrt)
     forwardable-extended (2.6.0)
     gemoji (4.1.0)
     github-pages (231)
@@ -233,6 +234,8 @@ GEM
       uri
     nokogiri (1.16.3-arm64-darwin)
       racc (~> 1.4)
+    nokogiri (1.16.3-x64-mingw-ucrt)
+      racc (~> 1.4)
     nokogiri (1.16.3-x86_64-linux)
       racc (~> 1.4)
     octokit (4.25.1)
@@ -270,19 +273,23 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.9.1)
+    unf_ext (0.0.9.1-x64-mingw-ucrt)
     unicode-display_width (1.8.0)
     uri (0.13.0)
+    wdm (0.2.0)
     webrick (1.8.1)
     yell (2.2.2)
 
 PLATFORMS
   arm64-darwin-22
+  x64-mingw-ucrt
   x86_64-linux
 
 DEPENDENCIES
   github-pages (= 231)
   html-proofer (~> 3.19.4)
   json
+  wdm (>= 0.1.1)
   webrick (~> 1.8)
 
 BUNDLED WITH
