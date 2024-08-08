@@ -48,7 +48,7 @@ var NAVTREE =
                 [ "Automated Testing", "/student/submission/automated_testing", null ],
                 [ "Late Days & Extensions", "/student/submission/late_days", null ],
                 [ "Managing Versions", "/student/submission/managing_versions", null ],
-                [ "Resolving Version Conflicts", "/student/submission/resolving_version_conflict", null],
+                [ "Submission Version Conflict", "/student/submission/submission_version_conflict", null],
                 [ "Team Assignments", "/student/submission/team_assignments", null ]
             ] ],
             [ "Grades", "/student/grades/index", [
@@ -76,7 +76,7 @@ var NAVTREE =
                 [ "Statistics", "/grader/rubric_grading/statistics", null ]
             ] ],
             [ "Managing Office Hours", "/grader/queue", null ],
-            [ "Resolving a Version Conflict", "/grader/resolving_version_conflict", null ]
+            [ "Grader Version Conflict", "/grader/grader_version_conflict", null ]
         ] ],
         [ "Instructor", "/instructor", [
             [ "Overview", "/instructor", null ],
