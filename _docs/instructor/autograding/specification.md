@@ -79,9 +79,67 @@ executables.
   These resources can be for the overall assignment configuration, or
   per test case.
 
+* **field:** ``"required_capabilities"``  
+  **type:** _string_
+  **default value:** ``"default"``
+
+  _Helps define what machine this gradeable should run on. Each machine has a certain set of capabilities, so defining this properly will improve grading speed and reduce errors._
+
+* **field:** ``"autograding_method"``  
+  **type:** _string_
+  **default value:** ``"jailed_sandbox"``
+
+  _Defines how Submitty will grade this gradeable. Most commonly changed to ``"docker"`` for grading through Docker._
 
 
+* **field:** ``"container options"``  
+  **type:** _string_
+  **default value:** ``"jailed_sandbox"``
 
+  _Defines how Submitty will grade this gradeable. Most commonly changed to ``"docker"`` for grading through Docker._
+
+* **field:** ``"autograding"``  
+  **type:** _associative array / mapping from string to array_
+  
+   _These fields define how files are moved through the autograding process._
+
+   * **field:** ``"compilation_to_runner"``  
+     **type:** _array of strings_
+
+   * **field:** ``"compilation_to_validation"``  
+     **type:** _array of strings_
+
+   * **field:** ``"submission_to_compilation"``  
+     **type:** _array of strings_
+
+   * **field:** ``"submission_to_runner"``  
+     **type:** _array of strings_
+
+   * **field:** ``"submission_to_validation"``  
+     **type:** _array of strings_
+
+   * **field:** ``"work_to_details"``  
+     **type:** _array of strings_
+
+   * **field:** ``"use_checkout_subdirectory"``  
+     **type:** _string_
+
+* **field:** ``"container_options"``  
+  **type:** _associative array / mapping from string to object_
+
+   * **field:** ``"container_image"``  
+     **type:** _string_
+
+     _Set this field when using Docker grading to specify which image you would like to use for all testcases by default._
+
+   * **field:** ``"number_of_ports"``  
+     **type:** _integer_
+
+   * **field:** ``"single_port_per_container"``  
+     **type:** _boolean_
+
+   * **field:** ``"use_router"``  
+     **type:** _boolean_
 
 * **field:** ``"allow_system_calls"``  
   **type:** _array of strings_  
@@ -157,11 +215,38 @@ executables.
   be executed during either the compilation or execution phases of
   automated grading._
 
+* **field:** ``"containers"``  
+  **type:** _array of objects_  
+  **REQUIRED** for ``"compilation"`` and ``"execution"`` testcases
+  if not using ``"command"``
+
+  _Specifies Docker containers for this testcase and what will be run in each of them. Each container is specified by an object with no key that contains the following fields._
+
+   * **field:** ``"commands"``  
+     **type:** _string_ -or- _array of strings_
+
+   * **field:** ``"container_name"``  
+     **type:** _string_
+
+   * **field:** ``"container_image"``  
+     **type:** _string_
+
+     _Set this field when using Docker grading to specify which image you would like to use for a single test case._
+
+   * **field:** ``"number_of_ports"``  
+     **type:** _integer_
+
+   * **field:** ``"outgoing_connections"``  
+     **type:** _array_
+
+   * **field:** ``"server"``  
+     **type:** _boolean_
+
 
 * **field:** ``"resource_limits"``  
   **type:** _associative array / mapping from string to integer_
 
-  _NOTE: See details for assignment level description above.
+  _NOTE: See details for assignment level description above._
 
 
 * **field:** ``"validation"``  
