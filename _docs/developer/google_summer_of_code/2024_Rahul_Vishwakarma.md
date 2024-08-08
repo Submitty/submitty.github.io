@@ -10,13 +10,11 @@ Submitty is an open source course management, assignment submission, exam and gr
 The primary goals for this project include the expansion of our automated testing of the TA Grading pages and to patch bugs uncovered by this improved testing. The project may be expanded in scope to additionally propose and execute small or modest user interface revisions that enhance the TA experience, especially for graders who are new to the interface and grading process.
 
 ## About My Work 
-My first PR in submitty is regarding grade inquiry test which got closed after some time when i raised pr for it because someone is already working on it, later i take the pr reason being that guy didn't complepted the work. So, basically my aim is to expansion of cypress testing for the TA Grading Section. And try to fix the bug and issue what i get during the testing and some other issue too. So i have done alot of testing in Submitty as GSoC contributor with the javascript and cypress tool till now.
+My first PR in Submitty is regarding the grade inquiry test which got closed after I raised pr for it because someone was already working on it, later I took the pr because the guy didn’t complete the work. So, I aim to expand cypress testing for the TA Grading Section. And try to fix the bugs and issues that I get during the testing and some other issues too. So I have done a lot of testing in Submitty as a GSoC contributor with the javascript and cypress tool till now.
 
 ## Visual Regression Testing 
-For the visual testing with the cypress, we used the [cypress-image-diff](https://github.com/haim-io/cypress-image-diff) plugins so basically it uses [pixelmatch](https://github.com/mapbox/pixelmatch) for the comparsion of images based on what we provide the image in baseline folder, pixelmatch is simplest and fastest JavaScript pixel-level image comparison library and it relies on the cypress for taking the screenshots.
-<br>
-We used the visual regression testing tool for testing the <b>Markdowns</b> and <b>Mermaid</b> flowcharts.
-
+For the visual testing with Cypress, we used the [cypress-image-diff](https://github.com/haim-io/cypress-image-diff) plugins it uses pixelmatch for the comparison of images based on what we provide the image in the baseline folder, [pixelmatch](https://github.com/mapbox/pixelmatch) is the simplest and fastest JavaScript pixel-level image comparison library and it relies on the cypress for taking the screenshots. 
+I used the visual regression testing tool for testing the <b>Markdowns </b> and <b> Mermaid </b> flowcharts.
 
 ### Main PR's
 * [Add tests for grade override](https://github.com/Submitty/Submitty/pull/10697)
@@ -45,3 +43,13 @@ We used the visual regression testing tool for testing the <b>Markdowns</b> and 
 * [Cypress grade inquiries test](https://github.com/Submitty/Submitty/pull/10235)
 * [Add cypress test for Rainbow Grading](https://github.com/Submitty/Submitty/pull/10255)
 * [Implement Image Diff For Markdown](https://github.com/Submitty/Submitty/pull/10260)
+
+
+## Overview
+So, this has been the best experience of my life. Whenever I will think about open source Submitty will come first. I learned a lot of things from this organization technical and non-technical. I would like to thank <b>Cameron, Barb, William</b>, and other fellow GSoC and RPI contributors for supporting me. Every day(Monday to Friday) Barb leads an hour-long meeting to discuss the progress of GSoC and RPI contributors. Every Thursday, One-on-One interaction with Cameron through Zoom Call to discuss progress, new ideas, and issues regarding opened pr. At the last, it was great experience for me to working in a such a big team i never had work with such a big team.
+
+For any inquiries, please feel free to contact me at [rahulvs2809@gmail.com](mailto:rahulvs2809@gmail.com)
+
+Thank You Submitty,
+
+[Rahul Vishwakarma](https://www.linkedin.com/in/rahul-vishwakarma-553874256/)
