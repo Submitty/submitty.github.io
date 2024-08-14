@@ -38,11 +38,7 @@ These instructions are intended to be followed after [configuring the main virtu
    Do not use the --provider flag with this command, since it will conflict with the
    provider of the main virtual machine.
 
-7. Once all the workers are fully set up and running, `vagrant ssh` into the main virtual machine and run:
-   ```
-   refresh_vagrant_workers
-   ```
-
+7. Once all the workers are fully set up and running, `vagrant ssh` into the main virtual machine and do a `submitty_install`
 ---
 
 ## Connecting to the Worker Machine
