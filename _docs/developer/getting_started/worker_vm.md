@@ -43,8 +43,8 @@ machines* in addition to your primary vagrant virtual machine.
 
    _NOTE: Running a socket command while a worker machine is running can detach the
    process, making the VM inaccessible to vagrant. If this happens and you are unable
-   to `vagrant workers halt`, then you may run `pkill -15 -f qemu-system-` to halt
-   the worker machine._
+   to `vagrant workers halt`, then you may run `pkill -15 -f qemu-system-` to kill
+   all virtual machines running on your computer (including the main Submitty VM)._
 
 6. Now you can create the worker machine(s) with:
    ```
