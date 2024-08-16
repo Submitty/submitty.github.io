@@ -53,29 +53,16 @@ machines* in addition to your primary vagrant virtual machine.
 
    When this is finished, you should see the Submitty duck ASCII art for each new worker machine.
 
-6. Verify that all expected machines are running
+6. You can verify that all the worker machines are running with:
    ```
-   vagrant global-status
-   ```
-
-   Which should print out a line for the primary machine, and an additional line for each worker machine:
-
-   ```
-   id       name         provider  state     directory                                    
-   ------------------------------------------------------------------------------------
-   abab893  ubuntu-22.04 qemu      running   /SOMETHING/GIT_CHECKOUT/Submitty 
-   0fe6810  worker-1     qemu      running   /SOMETHING/GIT_CHECKOUT/Submitty 
+   vagrant workers status
    ```
 
-
-7. Connect to the primary machine and complete the
-
-   NOTE: This is mirroring the manual connection done on the production machine
-
-   http://localhost:4000/sysadmin/installation/worker_installation
-
-
-  `vagrant ssh` into the main virtual machine and do a `submitty_install`
+7. `vagrant ssh` into the main virtual machine and run:
+   ```
+   refresh_vagrant_workers   # (runs python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/bin/refresh_vagrant_workers.py)
+   submitty_install
+   ```
 
 ---
 
