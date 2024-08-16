@@ -11,34 +11,71 @@ machines* in addition to your primary vagrant virtual machine.
 
 ## Automated Worker Installation
 
-These instructions are intended to be followed after [configuring the main virtual machine](/developer/getting_started/vm_install_using_vagrant).
+1. First set up your main/primary machine by following the normal
+   [VM Install using Vagrant](/developer/getting_started/vm_install_using_vagrant) instructions.
 
-1. Ensure you have [Python 3](https://www.python.org/downloads/) installed on your machine.
-   `python3 --version`
+2. Ensure you have [Python 3](https://www.python.org/downloads/) installed on your machinem, run:
+   ```
+   python3 --version
+   ```
 
-2. Generate configuration for the worker machine(s).
+3. Generate configuration for the worker machine(s).
    ```
    vagrant workers generate
    ```
-   For multiple workers, append the `-n` flag. (ex. `-n 3` for 3 machines).
-
-3. If you are on MacOS running QEMU, make sure to restart the network socket.
-   ```
-   vagrant workers socket restart
-   ```
-   If the VM runs into errors when attempting to reach the internet, try starting the socket
-   in public mode. (`vagrant workers socket restart --public`)
    
-   __NOTE__: Never interact with the socket while a worker machine is running. This can make the machine inaccessible.
+   For multiple workers, append the `-n` flag. (ex. `-n 3` for 3 machines).
+   ```
+   vagrant workers generate -n 3
+   ```
 
-4. Now you can create the worker machine(s) with:
+   _NOTE: This will create the vagrant configuration file: `.vagrant/workers.json`._
+
+
+4. If you are on MacOS running QEMU, restart the network socket in public mode:
+   ```
+   vagrant workers socket restart --public
+   ```
+   _NOTE: Using the `--public` flag will make your worker VMs accessible to anyone
+   on your local network, which may be a modest security concern.
+   We suggest this to minimize possibility of errors while creating the
+   worker machines and will revert this in a later step._
+
+   __NOTE__: Never interact with the socket while a worker machine is running.
+   This can make the machine inaccessible.
+
+5. Now you can create the worker machine(s) with:
    ```
    vagrant workers up
    ```
-   Do not use the --provider flag with this command, since it will conflict with the
-   provider of the main virtual machine.
+   _NOTE: Do not use the --provider flag with this command, since it will conflict with the
+   provider of the main virtual machine._
 
-5. Once all the workers are fully set up and running, `vagrant ssh` into the main virtual machine and do a `submitty_install`
+   When this is finished, you should see the Submitty duck ASCII art for each new worker machine.
+
+6. Verify that all expected machines are running
+   ```
+   vagrant global-status
+   ```
+
+   Which should print out a line for the primary machine, and an additional line for each worker machine:
+
+   ```
+   id       name         provider  state     directory                                    
+   ------------------------------------------------------------------------------------
+   abab893  ubuntu-22.04 qemu      running   /SOMETHING/GIT_CHECKOUT/Submitty 
+   0fe6810  worker-1     qemu      running   /SOMETHING/GIT_CHECKOUT/Submitty 
+   ```
+
+
+7. Connect to the primary machine and complete the
+
+   NOTE: This is mirroring the manual connection done on the production machine
+
+   http://localhost:4000/sysadmin/installation/worker_installation
+
+
+  `vagrant ssh` into the main virtual machine and do a `submitty_install`
 
 ---
 
