@@ -31,14 +31,15 @@ These instructions are intended to be followed after [configuring the main virtu
    
    __NOTE__: Never interact with the socket while a worker machine is running. This can make the machine inaccessible.
 
-6. Now you can create the worker machine(s) with:
+4. Now you can create the worker machine(s) with:
    ```
    vagrant workers up
    ```
    Do not use the --provider flag with this command, since it will conflict with the
    provider of the main virtual machine.
 
-7. Once all the workers are fully set up and running, `vagrant ssh` into the main virtual machine and do a `submitty_install`
+5. Once all the workers are fully set up and running, `vagrant ssh` into the main virtual machine and do a `submitty_install`
+
 ---
 
 ## Connecting to the Worker Machine
