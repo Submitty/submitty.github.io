@@ -19,12 +19,12 @@ machines* in addition to your primary vagrant virtual machine.
    python3 --version
    ```
 
-3. Generate configuration for the worker machine(s).
+3. To generate configuration for a worker machine, run:
    ```
    vagrant workers generate
    ```
    
-   For multiple workers, append the `-n` flag. (ex. `-n 3` for 3 machines).
+   If instead you need multiple workers, append the `-n` flag, ex. for 3 machines:
    ```
    vagrant workers generate -n 3
    ```
@@ -41,10 +41,12 @@ machines* in addition to your primary vagrant virtual machine.
    We suggest this to minimize possibility of errors while creating the
    worker machines and will revert this in a later step._
 
-   __NOTE__: Never interact with the socket while a worker machine is running.
-   This can make the machine inaccessible.
+   _NOTE: Running a socket command while a worker machine is running can detach the
+   process, making the VM inaccessible to vagrant. If this happens and you are unable
+   to `vagrant workers halt`, then you may run `pkill -15 -f qemu-system-` to halt
+   the worker machine._
 
-5. Now you can create the worker machine(s) with:
+6. Now you can create the worker machine(s) with:
    ```
    vagrant workers up
    ```
@@ -53,16 +55,26 @@ machines* in addition to your primary vagrant virtual machine.
 
    When this is finished, you should see the Submitty duck ASCII art for each new worker machine.
 
-6. You can verify that all the worker machines are running with:
+7. You can verify that all the worker machines are running with:
    ```
    vagrant workers status
    ```
 
-7. `vagrant ssh` into the main virtual machine and run:
+8. `vagrant ssh` into the main virtual machine and run:
    ```
    refresh_vagrant_workers   # (runs python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/bin/refresh_vagrant_workers.py)
    submitty_install
    ```
+
+9. To stop the worker machines, you can run:
+   ```
+   vagrant workers halt
+   vagrant workers socket stop
+   ```
+
+   _For MacOS QEMU users: Once the virtual machine(s) are halted, if you would like to restart under
+   private networking, you may do so by omitting the `--public` flag from the `vagrant workers socket start` command._
+
 
 ---
 
