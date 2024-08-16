@@ -11,9 +11,9 @@ My work includes, but is not limited to, the following items:
 #### Features Implemented
  - Adjusting final grade cutoffs (PR [#10518](https://github.com/Submitty/Submitty/pull/10518))
  - Manual grading of specific students (PR [#10653](https://github.com/Submitty/Submitty/pull/10653))
-
+   ![FinalAndManualGrades](../../../images/RCOS_report/2024_Zachary_Niles_Peretz/FinalGradeCutoffsAndManualGrading.png)
  - Grading assignments by configurable percents instead of by score (PR [#10763](https://github.com/Submitty/Submitty/pull/10763))
-
+   ![FinalAndManualGrades](../../../images/RCOS_report/2024_Zachary_Niles_Peretz/PerGradeablePercents.png)
  - Setting automatic academic performance warning benchmarks (PR [#10859](https://github.com/Submitty/Submitty/pull/10859))
 #### Improvements
  - Testing Web-Based Customization functionality (PR [#10726](https://github.com/Submitty/Submitty/pull/10726))
@@ -29,5 +29,5 @@ My work includes, but is not limited to, the following items:
 
 ## Office Hours Queue
  - Using switches instead of buttons for notifications (PR [#10564](https://github.com/Submitty/Submitty/pull/10564))
-
+   ![FinalAndManualGrades](../../../images/RCOS_report/2024_Zachary_Niles_Peretz/NotificationSwitches.png)
  - Refactoring alert noise and replacing audio something more in line with Submitty’s theme (PR [#10555](https://github.com/Submitty/Submitty/pull/10555))
