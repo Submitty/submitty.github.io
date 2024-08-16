@@ -48,6 +48,7 @@ var NAVTREE =
                 [ "Automated Testing", "/student/submission/automated_testing", null ],
                 [ "Late Days & Extensions", "/student/submission/late_days", null ],
                 [ "Managing Versions", "/student/submission/managing_versions", null ],
+                [ "Submission Version Conflict", "/student/submission/submission_version_conflict", null],
                 [ "Team Assignments", "/student/submission/team_assignments", null ]
             ] ],
             [ "Grades", "/student/grades/index", [
@@ -75,7 +76,7 @@ var NAVTREE =
                 [ "Statistics", "/grader/rubric_grading/statistics", null ]
             ] ],
             [ "Managing Office Hours", "/grader/queue", null ],
-            [ "Resolving a Version Conflict", "/grader/resolving_version_conflict", null ]
+            [ "Grader Version Conflict", "/grader/grader_version_conflict", null ]
         ] ],
         [ "Instructor", "/instructor", [
             [ "Overview", "/instructor", null ],
@@ -195,9 +196,7 @@ var NAVTREE =
                 [ "Review a Pull Request", "/developer/getting_started/review_a_pull_request", null ],
                 [ "Commit to PR from Fork", "/developer/getting_started/commit_to_PR_from_fork", null ],
                 [ "Edit Submitty Documentation", "/developer/getting_started/edit_submitty_documentation", null ],
-                [ "VM Install using Vagrant", "/developer/getting_started/vm_install_using_vagrant", [
-                    [ "Vagrant QEMU on Apple Silicon", "/developer/getting_started/vm_install_using_vagrant_apple_silicon", null ]
-                ] ],
+                [ "VM Install using Vagrant", "/developer/getting_started/vm_install_using_vagrant", null ],
                 [ "Advanced Setup", "/developer/getting_started/phpstorm", [
                     [ "PhpStorm Setup Instructions", "/developer/getting_started/phpstorm", null ],
                     [ "Xdebug Setup Instructions", "/developer/getting_started/xdebug", null ],
@@ -271,6 +270,12 @@ var NAVTREE =
             ] ],
             [ "Rensselaer Center for Open Source", "/developer/rensselaer_center_for_open_source/moorthy", [
                 [ "Moorthy", "/developer/rensselaer_center_for_open_source/moorthy", null ],
+                [ "2024 Dorian Bilelis",    "/developer/rensselaer_center_for_open_source/2024_Dorian_Bilelis", null ],
+                [ "2024 Jaeseok Kang",    "/developer/rensselaer_center_for_open_source/2024_Jaeseok_Kang", null ],
+                [ "2024 Michael Papadopoulos",    "/developer/rensselaer_center_for_open_source/2024_Michael_Papadopoulos", null ],
+                [ "2024 William Powe",    "/developer/rensselaer_center_for_open_source/2024_William_Powe", null ],
+                [ "2024 Zachary Niles Peretz",    "/developer/rensselaer_center_for_open_source/2024_Zachary_Niles_Peretz", null ],
+                [ "2024 Zheyu Deng",    "/developer/rensselaer_center_for_open_source/2024_Zheyu_Deng", null ],
                 [ "2023 Jaeseok Kang",    "/developer/rensselaer_center_for_open_source/2023_Jaeseok_Kang", null ],
                 [ "2023 Mahi Pasarkar",    "/developer/rensselaer_center_for_open_source/2023_Mahi_Pasarkar", null ],
                 [ "2023 Nia Heermance",    "/developer/rensselaer_center_for_open_source/2023_Nia_Heermance", null ],
@@ -290,6 +295,10 @@ var NAVTREE =
             ] ],
             [ "Google Summer of Code", "/developer/google_summer_of_code/index", [
                 [ "Overview","/developer/google_summer_of_code/index", null ],
+                [ "2024 Sahil Suman", "/developer/google_summer_of_code/2024_Sahil_Suman", null ],
+                [ "2024 Rahul Vishwakarma", "/developer/google_summer_of_code/2024_Rahul_Vishwakarma", null ],
+                [ "2024 Sophia Oliinik", "/developer/google_summer_of_code/2024_Sophia_Oliinik", null ],
+                [ "2024 Nithish Reddy Banda", "/developer/google_summer_of_code/2024_Nithish_Reddy_Banda", null ],
                 [ "2023 Cameron Peterson", "/developer/google_summer_of_code/2023_Cameron_Peterson", null ],
                 [ "2023 Musaab Imran", "/developer/google_summer_of_code/2023_Musaab_Imran", null ],
                 [ "2023 Saumya Borwankar", "/developer/google_summer_of_code/2023_Saumya_Borwankar", null ],
