@@ -12,6 +12,9 @@ The primary goals for this project include the expansion of our automated testin
 ## About My Work 
 My first PR in Submitty is regarding the grade inquiry test which got closed after I raised pr for it because someone was already working on it, later I took the pr because the guy didn’t complete the work. So, I aim to expand cypress testing for the TA Grading Section. And try to fix the bugs and issues that I get during the testing and some other issues too. So I have done a lot of testing in Submitty as a GSoC contributor with the javascript and cypress tool till now.
 
+Most of the time, i spent on the Rubric Grading Interface for adding test to it and fixes the some bugs by the way Rubric Grading Interface is customizable layout with a number of essential and helpful panels. Depending on the assignment configuration and manual grading tasks, the grader can customize the display, arrangement, and dimensions of these panels([more info](https://submitty.org/grader/rubric_grading/index#customizable-grading-panels)). Sections which does not had much tests like TA Grading, Disscussion Forum, Notebook Section, Peer Grading, File and Directory section later i added possible test for it.
+
+
 ## Visual Regression Testing 
 For the visual testing with Cypress, we used the [cypress-image-diff](https://github.com/haim-io/cypress-image-diff) plugins it uses pixelmatch for the comparison of images based on what we provide the image in the baseline folder, [pixelmatch](https://github.com/mapbox/pixelmatch) is the simplest and fastest JavaScript pixel-level image comparison library and it relies on the cypress for taking the screenshots. 
 I used the visual regression testing tool for testing the <b>Markdowns </b> and <b> Mermaid </b> flowcharts.
@@ -26,7 +29,7 @@ I used the visual regression testing tool for testing the <b>Markdowns </b> an
 * [Added Test for Discussion Post Panel](https://github.com/Submitty/Submitty/pull/10536)
 * [Forum Image attachment](https://github.com/Submitty/Submitty/pull/10348)
 * [Added remaining test button in pdf](https://github.com/Submitty/Submitty/pull/10532)
-*  [Cycling Grader View](https://github.com/Submitty/Submitty/pull/10333)
+* [Cycling Grader View](https://github.com/Submitty/Submitty/pull/10333)
 * [Testing TA Grading hotkeys](https://github.com/Submitty/Submitty/pull/10504)
 * [Notebook Builder And Panel](https://github.com/Submitty/Submitty/pull/10766)
 * [Rubric Grading Interface](https://github.com/Submitty/Submitty/pull/10755)
