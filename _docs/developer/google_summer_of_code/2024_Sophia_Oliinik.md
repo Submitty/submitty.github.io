@@ -19,26 +19,26 @@ Below are the pull requests I worked on this summer. The primary focus areas inc
     * This was one of the first additions I brought to Submitty. It added a feature to the Rainbow Grades gradebook page that implemented a hover text box for students that had a "bad status" on a homework. This brings more attention that the student can look into why they have a bad status on the assignment, and it brings convenience for instructors in their larger gradebooks to see who has a bad status and on what assignment with just hovering their mouse over the cell. 
 
 - [#81](https://github.com/Submitty/RainbowGrades/pull/81) [Feature:RainbowGrades] Adding link to gradeable title
-    * Another implementation in the Rainbow Grades repository where I added a feature to the Rainbow Grades gradebook page that added a link in the gradeable titles. This was added to only student gradebooks, and was a feature that will bring convenience to students when they are viewing their Rainbow Grades grade report. Now, when the student sees their grade and wants to see the details of they they recieved that grade, they can click on the title on the grade report, and they are taken to that page. 
+    * This pull request is a work in progress. Another implementation in the Rainbow Grades repository where I added a feature to the Rainbow Grades gradebook page that added a link in the gradeable titles. This is a feature that will bring convenience to students when they are viewing their Rainbow Grades grade report. Now, when the student sees their grade and wants to see the details of they they recieved that grade, they can click on the title on the grade report, and they are taken to that page. 
 
 - [#10687](https://github.com/Submitty/Submitty/pull/10687) [Feature:TAGrading] Manual Grading Histogram
-    * The statistics page had tabs and data about total scores, autograding scores, and component scores, but not of manual grading scores. In this PR I added a page with a histogram of just manual grades with its data along the bottom of the histogram screen. This was a good way to learn about how data is stored.
+    * The statistics page had tabs and data about total scores, autograding scores, and component scores, but not of manual grading scores. In this pull request I added a page with a histogram of just manual grades with its data along the bottom of the histogram screen. This was a good way to learn about how data is stored.
 
 - [#617](https://github.com/Submitty/submitty.github.io/pull/617) [Documentation:TAGrading] Version conflict documentation
-    * This documentation PR was to update information about version conflicts. TA's and instructors would encounter version conflicts when students switched their active version to one that has not been graded. I added documentation about how resolve them.
+    * This documentation pull request was to update information about version conflicts. TA's and instructors would encounter version conflicts when students switched their active version to one that has not been graded. I added documentation about how resolve them.
 
 - [#623](https://github.com/Submitty/submitty.github.io/pull/623) [Documentation:TAGrading] Updated version conflict documentation
     * An addition was added that updated the process of resolving version conflicts. I added the needed instructions on how to use this new interface accordingly.
 
 
-### Bugfix PR's
-Both of these bugfix PR's were done before my summer with Submitty began. It was a good way to get introduced to the process of how the Submitty organization does pull requests from branches, and the format of titling and describing the PR. Here I updated a broken URL, and updated some spelling errors that a linter caught. 
+### Bugfix Pull Requests
+Both of these bugfix pull requests were done before my summer with Submitty began. It was a good way to get introduced to the process of how the Submitty organization does pull requests from branches, and the format of titling and describing the pull request. Here I updated a broken URL, and updated some spelling errors that a linter caught. 
 - [#10426](https://github.com/Submitty/Submitty/pull/10426) update rainbowgrades url
 - [#10427](https://github.com/Submitty/Submitty/pull/10427) fix some spelling errors
 
 
-### PR's reviewed
-Having this review processes this summer really taught me a lot as a new contributor to Submitty. In the beginning of the summer, I was able to review a few PR's where I learned what the process looked like for contributors, the system and syntax Submitty used, and the new additions that other contributors were adding. Below is a list of the PR's that I reviewed and tested through the summer:
+### Pull Requests Reviewed
+Having this review process this summer taught me a lot as a new contributor to Submitty. In the beginning of the summer, I was able to review a few pull requests where I learned what the process looked like for contributors, the system and syntax Submitty used, and the new additions that other contributors were adding. Below is a list of the pull requests that I reviewed and tested through the summer:
 - [#10519](https://github.com/Submitty/Submitty/pull/10518) final grade gui configuration
 - [#10615](https://github.com/Submitty/Submitty/pull/10615) markdown buttons exceeding width
 - [#10635](https://github.com/Submitty/Submitty/pull/10635) add a clear conflict button
