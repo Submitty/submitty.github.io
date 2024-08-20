@@ -9,7 +9,9 @@ Through this summer, I worked on my 2024 Google Summer of Code (GSoC) project ti
 
 ## Outside of programming
 In the initial weeks, I focused on understanding the Submitty codebase and the system's structure. Submitty has implemented an effective system for continuous integration and check-ins for summer contributors, facilitated by our daily meetings. These meetings provided an excellent opportunity to showcase work, receive second opinions, ask questions, and maintain accountability. Additionally, the meetings included demonstrations of our work and feedback from the team, which I utilized for a couple of my projects. This process was invaluable for identifying what worked and what needed improvement. Throughout the summer, I also received feedback from my mentor via video calls and messaging. These discussions addressed barriers I encountered and provided status updates, which were instrumental in my progress and learning while working on Submitty.
-
+Another aspect of this summer included writing issues on where Submitty can be improved. Below are the issues I wrote this summer: 
+- [#10864](https://github.com/Submitty/Submitty/issues/10864) Manual Grading Histogram: fix standard deviation
+- [#10877](https://github.com/Submitty/Submitty/issues/10877) Refactor for grading statistics/histogram pages
 
 
 ## Pull Request work:
@@ -30,12 +32,10 @@ Below are the pull requests I worked on this summer. The primary focus areas inc
 - [#623](https://github.com/Submitty/submitty.github.io/pull/623) [Documentation:TAGrading] Updated version conflict documentation
     * An addition was added that updated the process of resolving version conflicts. I added the needed instructions on how to use this new interface accordingly.
 
-
 ### Bugfix Pull Requests
 Both of these bugfix pull requests were done before my summer with Submitty began. It was a good way to get introduced to the process of how the Submitty organization does pull requests from branches, and the format of titling and describing the pull request. Here I updated a broken URL, and updated some spelling errors that a linter caught. 
 - [#10426](https://github.com/Submitty/Submitty/pull/10426) update rainbowgrades url
 - [#10427](https://github.com/Submitty/Submitty/pull/10427) fix some spelling errors
-
 
 ### Pull Requests Reviewed
 Having this review process this summer taught me a lot as a new contributor to Submitty. In the beginning of the summer, I was able to review a few pull requests where I learned what the process looked like for contributors, the system and syntax Submitty used, and the new additions that other contributors were adding. Below is a list of the pull requests that I reviewed and tested through the summer:
@@ -53,6 +53,7 @@ Having this review process this summer taught me a lot as a new contributor to S
 - [#56](https://github.com/Submitty/RainbowGrades/pull/56) display rainbowgrades version
 - [#10763](https://github.com/Submitty/Submitty/pull/10763) add gradeable percents to GUI
 - [#10859](https://github.com/Submitty/Submitty/pull/10859) add performance warnings to display
+
 
 
 
