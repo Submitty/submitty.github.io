@@ -5,8 +5,10 @@ title: Self Account Creation
 
 ### Enable Self Account Creation
 
-Currently the only way to enable users to create their own accounts is to manually edit the submitty.json configuration file. The default location for this
-file is `/usr/local/submitty/config/submitty.json`. By default, `self_account_creation_allowed` is set to `false`. To enable it, change this to `true`. 
+There are two steps to enable self account creation, Firstly you have to manually edit the submitty.json configuration file. The default location for this
+file is `/usr/local/submitty/config/submitty.json`. By default, `self_account_creation_allowed` is set to `false`. To enable it, change this to `true`. Secondly,
+you have to be using DatabaseAuthentication. To change authentication types, either re-run CONFIGURE_SUBMITTY.py or edit /usr/local/submitty/config/authentication.json and change the authentication method to any of the methods. You should be able to leave all other settings to the default.
+ *Warning* This will disallow all users who are not in the database from being able to login, so this should only be used if you are only using database authentication. 
 
 ### Email and User ID Requirements
 
