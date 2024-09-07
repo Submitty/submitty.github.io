@@ -38,7 +38,7 @@ the installation process.
    * Open **System Settings** and navigate to **Sharing**
    * Turn on **File Sharing** and go to options
    * Check "Share files and folders using SMB" 
-   ![img.png](img.png)
+   ![SMB_File_Sharing_Process.png](SMB_File_Sharing_Process.png)
    * click on the i button next to the option "File Sharing"
    * Check the box next to your username
    * Click Done
