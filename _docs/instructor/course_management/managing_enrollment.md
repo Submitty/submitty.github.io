@@ -43,12 +43,11 @@ late, or if the feed is not available for your course.
 ### Self Registration
 Submitty allows users to register for courses where specified by the Course Settings. ***This allows any user who has access to Submitty to register.*** 
 
-Currently the only option for self registration allows any users to automatically join the course upon registering. In the future, we will add a
-self-registration mode where the user requests to join the course. The instructor(s) will be able to allow or deny users from joining the course. 
+Currently the only option for self registration allows any users to automatically join the course upon registering. In the future, we will add a self-registration mode where the user requests to join the course. The instructor(s) will be able to allow or deny users from joining the course. 
 
 Once the user registers for the course, the instructor(s) will receive an email with the user's user_id and the course they registered for. 
 
-#### Enable Self Registration
+##### Enable Self Registration
 **Before you enable Self Registration, you must have at least one registration section.**
 1. Navigate to the `Course Settings` page.
 2. Scroll all the way down to the `Danger Zone`
