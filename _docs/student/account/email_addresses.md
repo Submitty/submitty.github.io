@@ -7,7 +7,7 @@ title: Email Address(es)
 
 When your Submitty account is created, your primary email address will
 be specified by your instructor or system administrator.  This will
-typically be your university / school email qaddress.
+typically be your university / school email address.
 
 You can view this email on your "My Profile" page.  However, you cannot
 directly edit this email address.  If there is an error with this
