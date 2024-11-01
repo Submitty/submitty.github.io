@@ -1,2 +1,2 @@
-{% assign feature_counter = feature_counter | plus : 1 %} <button style="background-color:#ffffff;border:none;outline:none;" onclick='return toggle_display("mytag{{feature_counter}}");' href="#"><i class="fas fa-info-circle" style="font-size:25px;color:#316498;"></i></button>
-<span markdown="0" id="mytag{{feature_counter}}" style="display: none; background-color:#e6f1f7; color:#666666;">{{ include.text }}</span>
+{% assign feature_counter = feature_counter | plus : 1 %} <button style="background-color:transparent;border:none;outline:none;" onclick='return toggle_display("mytag{{feature_counter}}");' href="#"><i class="fas fa-info-circle" style="font-size:25px;color:#316498;"></i></button>
+<span markdown="0" id="mytag{{feature_counter}}" style="display: none; background-color:#31649822;">{{ include.text }}</span>

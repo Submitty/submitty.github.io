@@ -70,8 +70,8 @@ _Note: Click on the <u>links</u> and <i class="fas fa-info-circle" style="font-s
 * **[Integrated discussion forum](/student/communication/forum)**
     {% include feature_text.html
         text="Students prefer a single website and login for all course activities." %}
-  * Supports a variety of course learning activities <button style="background-color:#ffffff;border:none;outline:none;" onclick='return toggle_display("myforumtag");' href="#"><i class="fas fa-info-circle" style="font-size:25px;color:#316498;"></i></button>
-    <div markdown="0" id="myforumtag" style="display: none; background-color:#e6f1f7; color:#666666;">
+  * Supports a variety of course learning activities <button style="background-color:transparent;border:none;outline:none;" onclick='return toggle_display("myforumtag");' href="#"><i class="fas fa-info-circle" style="font-size:25px;color:#316498;"></i></button>
+    <div markdown="0" id="myforumtag" style="display: none; background-color:#31649822;">
     <ul>
     <li><em>General and Remote Learning Suggestions:</em></li>
     <ul>
@@ -105,8 +105,8 @@ _Note: Click on the <u>links</u> and <i class="fas fa-info-circle" style="font-s
 &nbsp;
 
 
-* **[Peer grading](/instructor/peer_grading)** <button style="background-color:#ffffff;border:none;outline:none;" onclick='return toggle_display("mypeertag");' href="#"><i class="fas fa-info-circle" style="font-size:25px;color:#316498;"></i></button>
-    <div markdown="0" id="mypeertag" style="display: none; background-color:#e6f1f7; color:#666666;"><ul>
+* **[Peer grading](/instructor/peer_grading)** <button style="background-color:transparent;border:none;outline:none;" onclick='return toggle_display("mypeertag");' href="#"><i class="fas fa-info-circle" style="font-size:25px;color:#316498;"></i></button>
+    <div markdown="0" id="mypeertag" style="display: none; background-color:#31649822;"><ul>
     <li><em>General and Remote Learning Suggestions:</em></li>
     <ul>
     <li>Collect written feedback from classmates during synchronous video presentations.</li>

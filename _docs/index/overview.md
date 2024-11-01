@@ -22,7 +22,7 @@ Submitty.
 
 Please [Contact Us](/contact) if you have questions, bug reports, or feature requests.
 
-<center>
+<center style="background-color:white;border-radius:10px;">
 <a href="https://rpi.edu"><img src="/images/RPI_seal_padding.png" width="150px"></a>
 &nbsp;&nbsp;&nbsp;
 <a href="https://rcos.io"><img src="/images/RCOS_padding.png" width="300px"></a>

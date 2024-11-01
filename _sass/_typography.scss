@@ -251,3 +251,41 @@ kbd {
 		font-size: 1.8rem;
 	}
 }
+
+//Dark Mode Adjustments
+.dark-mode body {
+	color: #e0e0e0; /* Dark mode text color */
+}
+
+.dark-mode h1, 
+.dark-mode h2, 
+.dark-mode h3, 
+.dark-mode h4, 
+.dark-mode h5, 
+.dark-mode h6 {
+	color: #ffffff; /* Dark mode heading color */
+}
+
+.dark-mode a {
+	color: #81c0ff; /* Dark mode link color */
+}
+
+.dark-mode a:hover {
+	color: #72a8df; /* Dark mode Hover link color */
+}
+
+.dark-mode hr {
+	border-top: #333 1px solid; /* Dark mode horizontal rule color */
+}
+
+.dark-mode mark {
+	background-color: #444444; /* Dark mode highlight color */
+	color: #ffffff;
+}
+
+.dark-mode kbd {
+	color: #e0e0e0; /* Dark mode keyboard key text color */
+	background: #333333; /* Dark mode keyboard key background */
+	border-color: #666666;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 0 0 #222 inset;
+}

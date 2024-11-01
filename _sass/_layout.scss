@@ -7,7 +7,7 @@ body {
 	height: auto;
 	overflow-x: hidden;
 	background-color: $body-background-color;
-
+	
 	&.nav-open {
 		overflow: hidden;
 
@@ -67,6 +67,51 @@ body {
 			background-color: $content-background-color;
 		}
 	}
+	#dark-mode-toggle {
+		input {
+			opacity: 0;
+			position: absolute;
+		}
+		i{
+			font-size: 1.2em;
+		}
+		label {
+			width: 3.4em; 
+			height: 1.5em; 
+			border-radius: 5em;
+			border: 2px solid #c0c0c0;
+			position: relative;
+			padding: 0.25em; 
+			cursor: pointer;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background-color: white;
+			transition: background-color 250ms;
+		}
+		input:checked ~ label {
+			background-color: #374151;
+		  }
+		.knob {
+			width: 1.4em; 
+			height: 1.4em;
+			position: absolute;
+			left:60%;
+			top: 50%;
+			background-color: #ffeccf;
+			box-shadow: inset 0px 0px 0px 0.16em #ffbb52;
+			transition: background-color 250ms, border-color ;
+			border-radius: 50%;
+			transition:background-color 250ms, border-color 250ms, transform 200ms linear;
+			transform: translateY(-50%); 
+		}
+	
+		input:checked + label .knob {
+			transform:translateY(-50%) translateX(-2.1em);
+			background-color: #485367;
+  			box-shadow: inset 0px 0px 0px 0.16em white;	
+		}
+	}
 }
 
 .main-nav{
@@ -84,6 +129,14 @@ body {
 		height: 100vh;
 		overflow-y: scroll;
 	}
+}
+//Switch Between Dark & White Logo
+.submitty-logo-white,
+.dark-mode .submitty-logo{
+	display: none;
+}
+.dark-mode .submitty-logo-white{
+	display: inline;
 }
 
 header {
@@ -121,7 +174,7 @@ header {
 		@include display-flex();
 		@include flex-direction(row);
 		@include align-items(center);
-		border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+		border-bottom: 1px solid $nav-border-color;
 		
 		a {
 			display: block;
@@ -410,12 +463,14 @@ h4 svg {
 	width: 100%;
 	box-sizing: border-box;
 	border: 0;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+	border-bottom: 1px solid $nav-border-color;
 	border-left: 5px solid transparent;
 	font-size: 1.5rem;
 	font-weight: 600;
 	line-height: 1.8;
-
+	background-color: $brand-colour;
+	color: $content-color;
+	
 	&:focus {
 		outline: none;
 		border-left-color: $brand-colour;

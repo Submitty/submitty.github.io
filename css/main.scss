@@ -3,17 +3,39 @@ layout: null
 sitemap: false
 ---
 
+:root {
+  --body-background-color: #FFFFFF;
+  --content-color: #222;
+  --content-background-color: #fff;
+  --brand-colour: #f6fbfe;
+  --brand-colour-light: mix(#f6fbfe, #fff, 10%);
+  --nav-tree-arrow: #000;
+  --nav-border-color: rgba(0, 0, 0, 0.15);
+}
+
+.dark-mode {
+  --body-background-color: #1e1f20;
+  --content-color: #f5f5f5;
+  --content-background-color: #1e1f20;
+  --brand-colour: #1d1f20;
+  --brand-colour-light: mix(#0c0a0a, #ff0303, 10%);
+  --nav-tree-arrow: #abcde9;
+  --nav-border-color: rgba(141, 141, 141, 0.75);
+}
+
 // $body-background-color: #2B2E31; // original
-$body-background-color: #FFFFFF;
+$body-background-color: var(--body-background-color);
 
 $content-max-width: 800px;
-$content-color: #222;
-$content-background-color: #fff;
-
+$content-color: var(--content-color);
+$content-background-color: var(--content-background-color);
 //$brand-colour: #3583d6;
 //$brand-colour: #ADD5FF;
-$brand-colour: #f6fbfe;
-$brand-colour-light: mix($brand-colour, $content-background-color, 10%);
+$brand-colour: var(--brand-colour);
+//mix($brand-colour, $content-background-color, 10%);
+$brand-colour-light: var(--brand-colour-light);
+$nav-tree-arrow: var(--nav-tree-arrow);
+$nav-border-color: var(--nav-border-color);
 
 $nav-header-background-color: $brand-colour;
 //$nav-header-height: 60px;
@@ -33,6 +55,7 @@ $full-width-break: $nav-width + ($space * 4) + $content-max-width;
 @import "code";
 @import "tables";
 @import "layout";
+@import "navtree";
 
 header.main-nav > ul {
   margin-bottom: 30px;

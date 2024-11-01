@@ -11,6 +11,13 @@ pre, code, tt {
 	color: #393318;
 	border-radius: 2px;
 }
+//Darkmode Adjustments
+.dark-mode pre,
+.dark-mode code,
+.dark-mode tt {
+	background-color: #2e2e2e;
+	color: #dfdfdf;
+}
 
 pre {
 	box-sizing: border-box;

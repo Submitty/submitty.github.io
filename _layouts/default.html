@@ -14,7 +14,7 @@
         <!--<link rel="icon" type="image/png" href="{{ site.baseurl }}/img/favicon.png">-->
 
         <script type="text/javascript" src="/jquery.js"></script>
-        <link href="/navtree.css" rel="stylesheet" type="text/css"/>
+        <!-- <link href="/navtree.css" rel="stylesheet" type="text/css"/> -->
         <script type="text/javascript" src="/navtreedata.js"></script>
         <script type="text/javascript" src="/navtree.js"></script>
         
@@ -39,6 +39,33 @@
             </script>
         {% endif %}
         <script type="text/javascript" src="{{ site.baseurl }}/scripts/main.js" defer></script>
+        <script>
+            var toggleCheckbox;
+            function applyDarkModePreference() {
+                const isDarkMode = localStorage.getItem('dark-mode') === 'true';
+                document.body.classList.toggle('dark-mode', isDarkMode);
+                toggleCheckbox.checked=isDarkMode;
+            }
+            // Toggle dark mode and save preference
+            function toggleDarkMode() {
+                const isDarkMode = document.body.classList.toggle('dark-mode');
+                localStorage.setItem('dark-mode', isDarkMode);
+                toggleCheckbox.checked=isDarkMode;
+            }
+            // Initialize theme on page load
+            document.addEventListener('DOMContentLoaded', function() {
+            toggleCheckbox=document.getElementById('dark-mode-checkbox');
+            applyDarkModePreference();
+            toggleCheckbox.addEventListener('change',toggleDarkMode);
+            document.getElementById('dark-mode-toggle').addEventListener('keydown',  (event) =>{
+                if (event.key === ' ' || event.key === 'Enter') {
+                    event.preventDefault();
+                    toggleDarkMode();
+                }
+            });
+         
+            });
+        </script>
     </head>
 
     <body>
@@ -48,7 +75,8 @@
               <button type="button" class="open-nav" id="open-nav">
                   <i class="fas fa-bars" style="color: #bbbbbb; font-size: 5.5em;"></i>
                 </button>
-                <a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/submitty_logo.png" alt="{{ site.title }} logo"></a>
+                <a href="{{ site.baseurl }}/" class="submitty-logo"><img src="{{ site.baseurl }}/images/submitty_logo.png"  alt="{{ site.title }} logo"></a>
+                <a href="{{ site.baseurl }}/" class="submitty-logo-white" ><img src="{{ site.baseurl }}/images/submitty_logo_white.png" alt="{{ site.title }} Dark logo"></a>
                 <!--{{ site.title }}-->
             </h1>
             <form action="{{ site.baseurl }}/search/" method="get">
@@ -82,5 +110,13 @@
                 </div>
             </footer>
         </section>
+        <label id="dark-mode-toggle" style="position: fixed; bottom: 1rem; right: 1rem;" tabindex="0" aria-pressed="false">
+            <input aria-hidden="true" id="dark-mode-checkbox" type="checkbox" name="dark-mode-checkbox">
+            <label for="dark-mode-checkbox">
+              <i class="far fa-sun" style="color: #ffda76;"></i>
+              <i class="far fa-moon" style="color: #e2e2e2;"></i>
+              <span class="knob"></span>
+            </label>
+        </label>
     </body>
 </html>
