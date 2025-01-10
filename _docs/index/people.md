@@ -10,6 +10,44 @@ redirect_from:
 
 ---
 
+## 2024 Fall Developers
+
+![](/images/people/2024_fall.png)
+
+Yanli Wang,
+Zachary Niles Peretz,
+Jaeseok Kang,
+Zheyu Deng,
+Tate Whiteberg,
+Itamar Oren-naftalovich,
+Williams Chen,
+William Allen,
+Tony Fausto,
+Kush Raval,
+Ryan Varughese, and
+Alex Lavallee
+
+
+---
+
+## 2024 Summer Developers
+
+![](/images/people/2024_summer.png)
+
+Barb Cutler,
+Sátvik Karanam,
+Zheyu Deng,
+William Powe,
+Zachary Niles Peretz,
+William Allen,
+Dorian Bilelis,
+Michael Papadopoulos,
+Williams Chen, and
+Jaeseok Kang
+
+
+---
+
 ## 2024 Spring Developers
 
 ![](/images/people/2024_spring.png)
@@ -28,7 +66,7 @@ James Fitzgerald,
 Viane Matsibekker,
 Jaeseok Kang,
 Hanson Gu,
-Zheyu Deng,
+Zheyu Deng, and
 Junyi Wu
 
 ---
@@ -53,7 +91,7 @@ Rita Lei,
 William Allen,
 Nia Heermance,
 Viane Matsibekker,
-Zheyu Deng, 
+Zheyu Deng, and
 Yanli Wang
 
 ![](/images/people/2023_fall_presentation.png)
@@ -77,7 +115,7 @@ Zheyu Deng,
 Anson Decker,
 Chris Reed,
 William Allen,
-Youssef Hassan,
+Youssef Hassan, and
 Nia Heermance
 
 
@@ -94,7 +132,7 @@ Sátvik Karanam,
 Youssef Hassan,
 William Allen,
 Viane Matsibekker,
-Chris Reed,
+Chris Reed, and
 Barb Cutler
 
 ---
@@ -118,7 +156,7 @@ Sátvik Karanam,
 Jenay Barela,
 Jason Chen,
 Yanli Wang,
-Bairong Zhang,
+Bairong Zhang, and
 Hanson Gu
 
 
@@ -129,7 +167,7 @@ Hanson Gu
 
 ![](/images/people/2022_summer.png)
 
-Jiarui (Jerry) Lu, Matthew Bonnecaze, Thomas Kozlowski, Bowen (Evan) Shi, Chris Reed, William Allen
+Jiarui (Jerry) Lu, Matthew Bonnecaze, Thomas Kozlowski, Bowen (Evan) Shi, Chris Reed, and William Allen
 
 ---
 
@@ -137,7 +175,7 @@ Jiarui (Jerry) Lu, Matthew Bonnecaze, Thomas Kozlowski, Bowen (Evan) Shi, Chris 
 
 ![](/images/people/2021_summer_fall.png)
 
-Miles Ednie, Henrik Lam, Stephanie Li, Javier Portorreal, Eddie Krystowki, Chris Reed, Ben Kelly, Jenay Barela, Shelly Belsky, William Allen, Jensen Li
+Miles Ednie, Henrik Lam, Stephanie Li, Javier Portorreal, Eddie Krystowki, Chris Reed, Ben Kelly, Jenay Barela, Shelly Belsky, William Allen, and Jensen Li
 
 ---
 
@@ -145,7 +183,7 @@ Miles Ednie, Henrik Lam, Stephanie Li, Javier Portorreal, Eddie Krystowki, Chris
 
 ![](/images/people/2019_summer.jpeg)
 
-Kevin McKinney, Alexa Orosz, Jacob McKnight, Maya Tung, Saketh Dargula, Shail Patel, Evan Maicus and Barb Cutler
+Kevin McKinney, Alexa Orosz, Jacob McKnight, Maya Tung, Saketh Dargula, Shail Patel, Evan Maicus, and Barb Cutler
 
 ---
 
