@@ -71,14 +71,14 @@ Be sure to read the [Suggestions for New Developers](/developer/getting_started/
       * `Forum`,   
       * `Notifications` (includes email and grade inquiries),  
       * `TAGrading` (includes PDF annotation, peer grading),  
-      * `InstructorUI` (includes course and gradeable configuration),  
-      * `SubminiPolls`,  
-      * `HelpQueue`,  
+      * `InstructorUI` (includes course and gradeable configuration),
+      * `StudentUI` (includes all non-categorized student UI),
       * `CourseMaterials`,  
       * `Plagiarism`,  
       * `RainbowGrades`,  
       * `Calendar`,  
       * `System` (includes installation, migrations, vagrant),
+      * `Testing`,
       * `Developer`, or
       * `API`
 
