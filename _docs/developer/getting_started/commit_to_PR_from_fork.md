@@ -40,7 +40,15 @@ The instructions below are for command line use of git.
     ```
 
     Additionally, find the name of the fork on the fork's page on Github.  
-    The `fork_name` may simply be `Submitty`, or the author may have chosen to another name.
+    The `fork_name` may simply be `Submitty`, or the author may have chosen another name.
+
+    Note: make sure your git credentials are set before pulling or pushing to a forked 
+    repo. You can do this with the following commands. Use the `--global` flag if you 
+    want to set this outside of just Submitty.
+    ```
+    git config user.name "Your Name"
+    git config user.email "Your Email"
+    ```
     
 
 3.  Next, make a local branch on your computer in your working repository
@@ -65,13 +73,6 @@ The instructions below are for command line use of git.
     and review the PR and make code edits and new commits to your
     local branch as needed.
 
-    Note: make sure your git credentials are set before pulling or pushing to a forked 
-    branch. You can do this with the following commands. Use the --global flag if you 
-    want to set this outside of just Submitty.
-    '''
-    git config user.name "Your Name"
-    git config user.email "Your Email"
-    '''
 
 
 5.  In order to push the changes to the contributor's fork (and the PR
