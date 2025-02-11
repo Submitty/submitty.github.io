@@ -40,13 +40,14 @@ developers.
 1. **Interactive User Interfaces With Vue.js**
 
    Submitty primarily uses server-side rendering via Twig. jQuery is
-   used extensively throughout the site to add interactivity, but it is
-   insufficient for the most complex pages.  Instead, we think Vue.js is
-   a better path forward for pages such as the TA grading interface,
-   discussion forum, office hours queue, and rainbow grades customization
-   interface.  The goal of this project is to build the foundation needed
-   for future development efforts involving the use of Vue.js within
-   Submitty's codebase.
+   used extensively throughout the site to add interactivity, but it
+   is insufficient for the most complex pages.  Instead, we think
+   Vue.js is a better path forward for pages such as the TA grading
+   interface, discussion forum, office hours queue, and rainbow grades
+   customization interface.  The goal of this project is to explore
+   how we can add and improve interactivity to specific pages and
+   support future development efforts involving the use of Vue.js
+   within Submitty's codebase.
 
    _Expected Outcomes_: This project is flexible in both scope and size.
    A successful proposal should include detailed information about the
@@ -57,14 +58,15 @@ developers.
    experience architecting a key part of a large project, and grow their
    knowledge of modern web frameworks.
 
+   [Ongoing Work to Incorporate Vue.js](https://github.com/Submitty/Submitty/pulls?q=is%3Apr+vue+is%3Aclosed+)  
+   [Open Issues related to Vue.js](https://github.com/Submitty/Submitty/issues?q=is%3Aissue%20state%3Aopen%20vue%20)
+
    _Skills & Experience Required_: Moderate to advanced programming
    skills, preferably with experience using modern client-side web
-   frameworks. This project
+   frameworks. 
 
-   _Possible Mentors_: Barb Cutler, William Allen
-
-   _GSoC Project Size_: 175 or 350 hours
-
+   _Possible Mentors_: William Allen, Shail Patel, Chris Reed, Barb Cutler  
+   _GSoC Project Size_: 175 or 350 hours  
    _Difficulty Level_:  medium to challenging
 
    &nbsp;
@@ -81,7 +83,11 @@ developers.
    tested by automated unit and end-to-end (Cypress) regression testing.
 
    [Open Issues related to TA Grading](https://github.com/Submitty/Submitty/issues?q=is%3Aopen+is%3Aissue+label%3A%22TA+Grading+%2F+TA+UI%22)  
-   [Open Issues related to Sample Data](https://github.com/Submitty/Submitty/issues?q=is%3Aopen+is%3Aissue+label%3A%22Sample+Data%22)
+   [Open Issues related to Sample Data](https://github.com/Submitty/Submitty/issues?q=is%3Aopen+is%3Aissue+label%3A%22Sample+Data%22)  
+   [Prior GSoC Project: Cameron Peterson](https://submitty.org/developer/google_summer_of_code/2023_Cameron_Peterson)  
+   [Prior GSoC Project: Rahul Vishwakarma](https://submitty.org/developer/google_summer_of_code/2024_Rahul_Vishwakarma)
+
+   _Note: This project may be combined with the previous project idea._
 
    _Expected Outcomes_: The primary goals for this project include the
    expansion of our automated testing of the TA Grading pages and to
@@ -97,10 +103,8 @@ developers.
    teaching assistant with grading experience design will be
    beneficial.
 
-   _Possible Mentors_: William Allen, Cameron Peterson, Barb Cutler
-
-   _GSoC Project Size_: 90 or 175 hours
-
+   _Possible Mentors_: William Allen, Cameron Peterson, Barb Cutler  
+   _GSoC Project Size_: 90 or 175 hours  
    _Difficulty Level_: introductory to medium
 
    &nbsp;    
@@ -110,7 +114,7 @@ developers.
 
    [Overview of Rubric Grading Interface](/grader/rubric_grading/index)
 
-   _Note: This project may be combined with the previous project idea._
+   _Note: This project may be combined with one of the previous project ideas._
 
    The Manual/TA rubric grading interface is elaborate,
    highly-featured, and customizable; however, the performance of
@@ -141,10 +145,8 @@ developers.
    and and having served as a teaching assistant with grading
    experience design is beneficial but not required.
 
-   _Possible Mentors_: William Allen, Barb Cutler
-
-   _GSoC Project Size_: 175 or 350 hours
-
+   _Possible Mentors_: William Allen, Barb Cutler  
+   _GSoC Project Size_: 175 or 350 hours  
    _Difficulty Level_: medium to challenging
 
    &nbsp;
@@ -176,7 +178,8 @@ developers.
    in compiled languages.
 
    [Open Issues related to Autograding](https://github.com/Submitty/Submitty/labels/Autograding)  
-   [Open Issues related to Notebook / Notebook Builder](https://github.com/Submitty/Submitty/issues?q=is%3Aopen+is%3Aissue+label%3A%22Notebook+%2F+Notebook+Builder%22)
+   [Open Issues related to Notebook / Notebook Builder](https://github.com/Submitty/Submitty/issues?q=is%3Aopen+is%3Aissue+label%3A%22Notebook+%2F+Notebook+Builder%22)  
+   [Prior GSoC Project: Sahil Suman](https://submitty.org/developer/google_summer_of_code/2024_Sahil_Suman)
 
    _Expected Outcomes_: The primary focus of the project is the
    revision and expansion of the Notebook Builder UI to increase the
@@ -194,10 +197,8 @@ developers.
    instructor with experience in programming assignment design will be
    beneficial but not required.
 
-   _Possible Mentors_: Barb Cutler, Chris Reed
-
-   _GSoC Project Size_: 90 or 175 or 350 hours
-
+   _Possible Mentors_: Barb Cutler, Chris Reed  
+   _GSoC Project Size_: 90 or 175 or 350 hours  
    _Difficulty Level_: introductory or medium
 
    &nbsp;    
@@ -250,10 +251,8 @@ developers.
    Having served as a teaching assistant or instructor with experience
    in programming assignment design will be beneficial.
 
-   _Possible Mentors_: Shail Patel, Chris Reed, Barb Cutler
-
-   _GSoC Project Size_: 175 or 350 hours
-
+   _Possible Mentors_: Shail Patel, Chris Reed, Barb Cutler  
+   _GSoC Project Size_: 175 or 350 hours  
    _Difficulty Level_: medium to challenging
 
    &nbsp;
@@ -315,10 +314,8 @@ developers.
    large course with manual grading experience design will be
    beneficial.
    
-   _Possible Mentors_: Barb Cutler, William Allen
-
-   _GSoC Project Size_: 175 or 350 hours
-
+   _Possible Mentors_: Barb Cutler, William Allen  
+   _GSoC Project Size_: 175 or 350 hours  
    _Difficulty Level_:  medium to challenging
 
    &nbsp;
@@ -338,10 +335,8 @@ developers.
    willingness to learn web and database development, and additional
    specific skills as appropriate.
    
-   _Possible Mentors_: Barb Cutler, Matthew Peveler, Shail Patel,  William Allen, Chris Reed, Preston Carman
-
-   _GSoC Project Size_: 90 or 175 or 350 hours
-
+   _Possible Mentors_: Barb Cutler, William Allen, Shail Patel, Cameron Peterson, Chris Reed, Matthew Peveler, Preston Carman  
+   _GSoC Project Size_: 90 or 175 or 350 hours  
    _Difficulty Level_:  introductory to medium to challenging
    
 &nbsp;    
