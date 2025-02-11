@@ -84,8 +84,8 @@ developers.
 
    [Open Issues related to TA Grading](https://github.com/Submitty/Submitty/issues?q=is%3Aopen+is%3Aissue+label%3A%22TA+Grading+%2F+TA+UI%22)  
    [Open Issues related to Sample Data](https://github.com/Submitty/Submitty/issues?q=is%3Aopen+is%3Aissue+label%3A%22Sample+Data%22)  
-   [Prior GSoC Project: Cameron Peterson](https://submitty.org/developer/google_summer_of_code/2023_Cameron_Peterson)  
-   [Prior GSoC Project: Rahul Vishwakarma](https://submitty.org/developer/google_summer_of_code/2024_Rahul_Vishwakarma)
+   [Related Prior GSoC Project: Cameron Peterson](/developer/google_summer_of_code/2023_Cameron_Peterson)  
+   [Related Prior GSoC Project: Rahul Vishwakarma](/developer/google_summer_of_code/2024_Rahul_Vishwakarma)
 
    _Note: This project may be combined with the previous project idea._
 
@@ -179,7 +179,7 @@ developers.
 
    [Open Issues related to Autograding](https://github.com/Submitty/Submitty/labels/Autograding)  
    [Open Issues related to Notebook / Notebook Builder](https://github.com/Submitty/Submitty/issues?q=is%3Aopen+is%3Aissue+label%3A%22Notebook+%2F+Notebook+Builder%22)  
-   [Prior GSoC Project: Sahil Suman](https://submitty.org/developer/google_summer_of_code/2024_Sahil_Suman)
+   [Related Prior GSoC Project: Sahil Suman](/developer/google_summer_of_code/2024_Sahil_Suman)
 
    _Expected Outcomes_: The primary focus of the project is the
    revision and expansion of the Notebook Builder UI to increase the
@@ -217,7 +217,7 @@ developers.
    [Assignment Autograding Configuration Instructions](/instructor/autograding/specification)  
    [Submitty Autograding Tutorial Examples](https://github.com/Submitty/Tutorial)  
    [Additional Autograding Examples](https://github.com/Submitty/Submitty/tree/master/more_autograding_examples)  
-   [Prior GSoC Project: Drumil Patel](/developer/google_summer_of_code/2019_DrumilPatel)  
+   [Related Prior GSoC Project: Drumil Patel](/developer/google_summer_of_code/2019_DrumilPatel)  
    
    We would like to reduce the learning curve for new instructors and
    provide more tutorial examples of autograding for instructors
@@ -232,7 +232,8 @@ developers.
    [Open Issues related to Docker Image Autograding](https://github.com/Submitty/Submitty/issues?q=label%3A%22Docker+Container+Autograding%22+)  
    [Docker Images for Autograding Common Programming Languages](https://github.com/Submitty/DockerImages/tree/main)  
    [Example Custom Docker Images University ](https://github.com/Submitty/DockerImagesRPI/tree/main/dockerfiles)  
-   [Sample Java Assignments](/instructor/autograding/sample_assignments)
+   [Sample Java Assignments](/instructor/autograding/sample_assignments)  
+   [Related Prior GSoC Project: Nithish Reddy Banda](/developer/google_summer_of_code/2024_Nithish_Reddy_Banda)
 
    _Expected Outcomes_: The project should begin with a review and
    organization of existing sample and tutorial assignments and
