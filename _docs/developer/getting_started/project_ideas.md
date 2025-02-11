@@ -37,7 +37,41 @@ developers.
 &nbsp;    
   
 
-1. **Expand Testing of the Manual/TA Rubric Grading Interface**
+1. **Interactive User Interfaces With Vue.js**
+
+   Submitty primarily uses server-side rendering via Twig. jQuery is
+   used extensively throughout the site to add interactivity, but it is
+   insufficient for the most complex pages.  Instead, we think Vue.js is
+   a better path forward for pages such as the TA grading interface,
+   discussion forum, office hours queue, and rainbow grades customization
+   interface.  The goal of this project is to build the foundation needed
+   for future development efforts involving the use of Vue.js within
+   Submitty's codebase.
+
+   _Expected Outcomes_: This project is flexible in both scope and size.
+   A successful proposal should include detailed information about the
+   specific pages and components to be converted, including time estimates
+   for the proposed conversion projects and common core logic improvements.
+   Participants will gain a better understanding of the challenges involved
+   in introducing new technologies to a large existing codebase, gain
+   experience architecting a key part of a large project, and grow their
+   knowledge of modern web frameworks.
+
+   _Skills & Experience Required_: Moderate to advanced programming
+   skills, preferably with experience using modern client-side web
+   frameworks. This project
+
+   _Possible Mentors_: Barb Cutler, William Allen
+
+   _GSoC Project Size_: 175 or 350 hours
+
+   _Difficulty Level_:  medium to challenging
+
+   &nbsp;
+
+
+
+2. **Expand Testing of the Manual/TA Rubric Grading Interface**
 
    [Overview of Rubric Grading Interface](/grader/rubric_grading/index)
 
@@ -72,7 +106,7 @@ developers.
    &nbsp;    
 
 
-2. **Refactor and Performance Improvements for the Manual/TA Rubric Grading Interface**
+3. **Refactor and Performance Improvements for the Manual/TA Rubric Grading Interface**
 
    [Overview of Rubric Grading Interface](/grader/rubric_grading/index)
 
@@ -116,7 +150,7 @@ developers.
    &nbsp;
 
 
-3. **Notebook Builder: UI To Streamline Instructor Configuration of Automated Grading**
+4. **Notebook Builder: UI To Streamline Instructor Configuration of Automated Grading**
 
    Our system for automated testing and grading of student work is
    very powerful, but the configuration process that instructors must
@@ -168,7 +202,7 @@ developers.
 
    &nbsp;    
 
-4. **Expansion of Examples and Documentation of Intermediate and Advanced Autograding Features**
+5. **Expansion of Examples and Documentation of Intermediate and Advanced Autograding Features**
 
    _Note: This project is related to previous project idea but is a distinct project._
 
@@ -226,7 +260,7 @@ developers.
         
 
 
-5. **AI/ML to Enhance and Streamline Manual / TA Grading**
+6. **AI/ML to Enhance and Streamline Manual / TA Grading**
 
    The use of a unified and retroactively editable rubric for
    manual/TA grading can ensure consistency when grading large
@@ -289,37 +323,6 @@ developers.
 
    &nbsp;
 
-6. **Interactive User Interfaces With Vue.js**
-
-   Submitty primarily uses server-side rendering via Twig. jQuery is
-   used extensively throughout the site to add interactivity, but it is
-   insufficient for the most complex pages.  Instead, we think Vue.js is
-   a better path forward for pages such as the TA grading interface,
-   discussion forum, office hours queue, and rainbow grades customization
-   interface.  The goal of this project is to build the foundation needed
-   for future development efforts involving the use of Vue.js within
-   Submitty's codebase.
-
-   _Expected Outcomes_: This project is flexible in both scope and size.
-   A successful proposal should include detailed information about the
-   specific pages and components to be converted, including time estimates
-   for the proposed conversion projects and common core logic improvements.
-   Participants will gain a better understanding of the challenges involved
-   in introducing new technologies to a large existing codebase, gain
-   experience architecting a key part of a large project, and grow their
-   knowledge of modern web frameworks.
-
-   _Skills & Experience Required_: Moderate to advanced programming
-   skills, preferably with experience using modern client-side web
-   frameworks. This project
-
-   _Possible Mentors_: Barb Cutler, William Allen
-
-   _GSoC Project Size_: 175 or 350 hours
-
-   _Difficulty Level_:  medium to challenging
-
-   &nbsp;
 
 7. **Other Topics**
 
