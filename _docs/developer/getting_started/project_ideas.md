@@ -6,25 +6,22 @@ redirect_from:
 ---
 
 [comment]: <> Submitty has been a participating organization of
-[comment]: <> [Google Summer of Code](https://summerofcode.withgoogle.com/)
-[comment]: <> for five successful seasons.
 
-We are thrilled to announce that Submitty has been accepted to [Google
-Summer of Code (GSoC) 2024](https://summerofcode.withgoogle.com/).
-See [Submitty GSoC Application &
-Reports](/developer/google_summer_of_code/index) for more information
-about the application process and to read reports from Submitty GSoC
-contributors in past summers.
+Submitty has been a participating organization of
+[Google Summer of Code](https://summerofcode.withgoogle.com/)
+for six successful seasons.
 
-[comment]: <> We have applied for selection for
-[comment]: <> Summer 2024 and our Project Ideas list below has been updated.  The
-[comment]: <> organizations selected for Summer 2024 Google Summer of Code will be
-[comment]: <> announced in late February.
+[comment]: <> We are thrilled to announce that Submitty has been accepted to [Google
+[comment]: <> Summer of Code (GSoC) 2024](https://summerofcode.withgoogle.com/).
+[comment]: <> See [Submitty GSoC Application &
+[comment]: <> Reports](/developer/google_summer_of_code/index) for more information
+[comment]: <> about the application process and to read reports from Submitty GSoC
+[comment]: <> contributors in past summers.
 
-[comment]: <> _NOTE: The organizations selected for Summer 2023 Google Summer of
-[comment]: <>   Code will be announced in late February.  The instructions below
-[comment]: <>    are from 2022 and will be updated if Submitty is accepted!_
-
+We have applied for selection for
+Summer 2025 and our Project Ideas list below has been updated.  The
+organizations selected for Summer 2025 Google Summer of Code will be
+announced in late February.
 
 The project ideas listed below target a variety of different topics
 and require different levels of prior experience.  The scope of these
@@ -68,7 +65,7 @@ developers.
    teaching assistant with grading experience design will be
    beneficial.
 
-   _Possible Mentors_: William Allen, Nia Heermance, Barb Cutler
+   _Possible Mentors_: William Allen, Cameron Peterson, Barb Cutler
 
    _GSoC Project Size_: 90 or 175 hours
 
@@ -112,7 +109,7 @@ developers.
    and and having served as a teaching assistant with grading
    experience design is beneficial but not required.
 
-   _Possible Mentors_: Nia Heermance, William Allen, Barb Cutler
+   _Possible Mentors_: William Allen, Barb Cutler
 
    _GSoC Project Size_: 175 or 350 hours
 
@@ -221,7 +218,7 @@ developers.
    Having served as a teaching assistant or instructor with experience
    in programming assignment design will be beneficial.
 
-   _Possible Mentors_: Chris Reed, Barb Cutler
+   _Possible Mentors_: Shail Patel, Chris Reed, Barb Cutler
 
    _GSoC Project Size_: 175 or 350 hours
 
@@ -285,7 +282,7 @@ developers.
    large course with manual grading experience design will be
    beneficial.
    
-   _Possible Mentors_: Barb Cutler, William Allen, Nia Heermance
+   _Possible Mentors_: Barb Cutler, William Allen
 
    _GSoC Project Size_: 175 or 350 hours
 
@@ -307,7 +304,7 @@ developers.
    willingness to learn web and database development, and additional
    specific skills as appropriate.
    
-   _Possible Mentors_: Barb Cutler, Matthew Peveler, Shail Patel,  William Allen, Chris Reed, Nia Heermance, Preston Carman
+   _Possible Mentors_: Barb Cutler, Matthew Peveler, Shail Patel,  William Allen, Chris Reed, Preston Carman
 
    _GSoC Project Size_: 90 or 175 or 350 hours
 
