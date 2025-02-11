@@ -5,22 +5,32 @@ redirect_from:
   - /developer/google_summer_of_code
 ---
 
-
-We are thrilled to announce that Submitty has been accepted to [Google
-Summer of Code (GSoC) 2024](https://summerofcode.withgoogle.com/).
+Submitty has applied for acceptance to 
+[Google
+Summer of Code (GSoC) 2025](https://summerofcode.withgoogle.com/).
 Project reports from participants in previous summers are linked
 below.
+
+
+[comment]: <> We are thrilled to announce that Submitty has been accepted to [Google
+[comment]: <> Summer of Code (GSoC) 2024](https://summerofcode.withgoogle.com/).
+[comment]: <> Project reports from participants in previous summers are linked
+[comment]: <> below.
+
+
 
 <center>
 <a href="https://summerofcode.withgoogle.com"><img src="/images/GSoC-Vertical.png" width="250px"></a>
 </center>
 
 [comment]: <> _NOTE: The organizations selected for Summer 2024 Google Summer of
-[comment]: <> Code will be announced in late February.  The instructions below
-[comment]: <> are from 2023 and will be updated if Submitty is accepted!_
+
+_NOTE: The organizations selected for Summer 2025 Google Summer of
+Code will be announced in late February.  The instructions below
+are from 2024 and will be updated if Submitty is accepted!_
 
 
-## How to Apply to Submitty for Google Summer of Code 2024
+## How to Apply to Submitty for Google Summer of Code 2025
 
 1. Read the GSOC information for contributors to confirm your eligibility:  
 
@@ -61,33 +71,70 @@ below.
    test this feature on your development VM. Inspect the relevant
    system files and database contents.
 
-8. Submit a pull request to solve an open issue.  
+   _NOTE:  More recent issues in the Submitty Github database tagged "Awaiting Triage"
+   have not yet been reviewed by the Submitty Project administrators.
+   These details of these bug reports and feature requests may need editing and revision
+   to confirm they meet with the long-term needs and goals of the Submitty project.
+   Before starting to work on one of these issues, we recommend you check with the
+   project team by creating a new discussion thread about the issue on our [Zulip server](/contact)._
+
+7. Submit a pull request to solve an open issue.  
    [https://submitty.org/developer/getting_started/make_a_pull_request](/developer/getting_started/make_a_pull_request)
    
-9. Help test and review [open pull requests](https://github.com/Submitty/Submitty/pulls) contributed by other developers.
+8. Help test and review [open pull requests](https://github.com/Submitty/Submitty/pulls) contributed by other developers.
    [https://submitty.org/developer/getting_started/review_a_pull_request](/developer/getting_started/review_a_pull_request)
+
+   NOTE: We always have a large number of _work-in-progress_ pull
+   requests from both new and experienced developers.  Prospective
+   developers with any level of experience are welcome and needed to
+   help review these PRs.  Contributing to the review process is
+   beneficial to everyone.
+
+9. Begin work on your GSoC Project application. We recommend
+    prospective contributors focus on one of our suggested projects
+    from the [project ideas](/developer/getting_started/project_ideas)
+    list. Successful applicants will be able to expand and enhance the
+    proposed project idea with a timeline of design and implementation
+    milestones, and will demonstrate curiosity and motivation for the
+    topic.
+
+10. Download and complete the
+    [Submitty GSoC Applicant Template](/developer/google_summer_of_code/applicant_template).
    
-10. Prepare your application. We recommend prospective contributors focus on one
-   of our suggested projects from the [project ideas](/developer/getting_started/project_ideas) list. Successful
-   applicants will be able to expand and enhance the proposed project idea
-   with a timeline of design and implementation milestones, and will
-   demonstrate curiosity and motivation for the topic.  
+    You will document your skills, relevant coursework, non-course experience, and future
+    career goals that qualify you to work on this project.
 
-11. Document your skills, relevant coursework, non-course experience, and future
-   career goals that qualify you to work on this project.
+    The template will also ask for your approximate schedule for the
+    summer: start date, end date, and number of hours of work per week.
+    And a description of any classes, employment, or other time
+    commitments during that time period.  
 
-12. Include your approximate schedule for the summer: start date, end date,
-   and number of hours of work per week.  Also, describe any
-   classes, employment, or other time commitments during that time period.
+    Most importantly, you will summarize your engagement with the
+    Submitty project team during the application period.  This includes
+    participation in public discussions on our [Zulip server](/contact),
+    authoring of new pull requests (both in progress and merged), and
+    detailed and constructive reviews of PRs from other developers.
 
-12. The application window for Google Summer of Code closes on April 2th, 2024 at 18:00 UTC.
+
+11. The application window for Google Summer of Code closes on April 8th, 2025 at 18:00 UTC.
    Please carefully read all of the program requirements.  
    
-     * [Google Summer of Code 2024 Timeline](https://developers.google.com/open-source/gsoc/timeline)  
+     * [Google Summer of Code 2025 Timeline](https://developers.google.com/open-source/gsoc/timeline)  
 
      * [https://summerofcode.withgoogle.com/](https://summerofcode.withgoogle.com/)  
 
 &nbsp;  
+
+
+## Google Summer of Code 2024
+
+* [Streamlining the Notebook Builder UI for Automated Grading by Sahil Suman](/developer/google_summer_of_code/2024_Sahil_Suman)
+
+* [Automated Testing of TA Grading Pages by Rahul Vishwakarma](/developer/google_summer_of_code/2024_Rahul_Vishwakarma)
+
+* [Enhancing User Interface for Viewing Grades by Sophia Oliinik](/developer/google_summer_of_code/2024_Sophia_Oliinik)
+
+* [Docker Containers in support of Multi-Language Autograding by Nithish Reddy Banda](/developer/google_summer_of_code/2024_Nithish_Reddy_Banda)
 
 
 
