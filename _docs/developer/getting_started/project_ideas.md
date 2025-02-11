@@ -5,11 +5,6 @@ redirect_from:
   - /developer/project_ideas
 ---
 
-[comment]: <> Submitty has been a participating organization of
-
-Submitty has been a participating organization of
-[Google Summer of Code](https://summerofcode.withgoogle.com/)
-for six successful seasons.
 
 [comment]: <> We are thrilled to announce that Submitty has been accepted to [Google
 [comment]: <> Summer of Code (GSoC) 2024](https://summerofcode.withgoogle.com/).
@@ -18,10 +13,13 @@ for six successful seasons.
 [comment]: <> about the application process and to read reports from Submitty GSoC
 [comment]: <> contributors in past summers.
 
-We have applied for selection for
-Summer 2025 and our Project Ideas list below has been updated.  The
-organizations selected for Summer 2025 Google Summer of Code will be
-announced in late February.
+Submitty has been a participating organization of [Google Summer of
+Code](https://summerofcode.withgoogle.com/) for six successful
+seasons.  [We have applied for selection for Summer 2025](/developer/google_summer_of_code/index)
+and our
+Project Ideas list below has been updated.  The organizations selected
+for Summer 2025 Google Summer of Code will be announced in late
+February.
 
 The project ideas listed below target a variety of different topics
 and require different levels of prior experience.  The scope of these
