@@ -14,7 +14,7 @@ machines* in addition to your primary vagrant virtual machine.
 1. First set up your main/primary machine by following the normal
    [VM Install using Vagrant](/developer/getting_started/vm_install_using_vagrant) instructions.
 
-2. Ensure you have [Python 3](https://www.python.org/downloads/) installed on your machinem, run:
+2. Ensure you have [Python 3](https://www.python.org/downloads/) installed on your machine, run:
    ```
    python3 --version
    ```
