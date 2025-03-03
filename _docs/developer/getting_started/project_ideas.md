@@ -7,19 +7,19 @@ redirect_from:
 
 
 [comment]: <> We are thrilled to announce that Submitty has been accepted to [Google
-[comment]: <> Summer of Code (GSoC) 2024](https://summerofcode.withgoogle.com/).
+[comment]: <> Summer of Code (GSoC) 20XX](https://summerofcode.withgoogle.com/).
 [comment]: <> See [Submitty GSoC Application &
 [comment]: <> Reports](/developer/google_summer_of_code/index) for more information
 [comment]: <> about the application process and to read reports from Submitty GSoC
 [comment]: <> contributors in past summers.
 
-Submitty has been a participating organization of [Google Summer of
-Code](https://summerofcode.withgoogle.com/) for six successful
-seasons.  [We have applied for selection for Summer 2025](/developer/google_summer_of_code/index)
-and our
-Project Ideas list below has been updated.  The organizations selected
-for Summer 2025 Google Summer of Code will be announced in late
-February.
+[comment]: <> Submitty has been a participating organization of [Google Summer of
+[comment]: <> Code](https://summerofcode.withgoogle.com/) for six successful
+[comment]: <> seasons.  [We have applied for selection for Summer 20XX](/developer/google_summer_of_code/index)
+[comment]: <> and our
+[comment]: <> Project Ideas list below has been updated.  The organizations selected
+[comment]: <> for Summer 20XX Google Summer of Code will be announced in late
+[comment]: <> February.
 
 The project ideas listed below target a variety of different topics
 and require different levels of prior experience.  The scope of these
