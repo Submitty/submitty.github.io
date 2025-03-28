@@ -35,6 +35,11 @@ If you don't see a specific course on the list, contact the instructor
 or teaching staff for the course or system administrator for your
 school or department.
 
+Some courses may be 'Available for Self Registration'. These courses you can register
+for without the instructor adding you. To join the course, click on the button for the course,
+and in click on the button titled 'Register'. This will alert the instructor that you have joined the course.
+They can still remove you from the course, however they don't have to add you. 
+
 
 
 ## My Profile
