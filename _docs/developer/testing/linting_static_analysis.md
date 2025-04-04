@@ -126,9 +126,13 @@ submitty_test php-lint --memory-limit 2G
 
 ## JavaScript Linting
 
-The frontend JavaScript code Submitty uses is linted using [eslint](https://eslint.org/).
+The frontend JavaScript code Submitty uses is linted using [eslint](https://eslint.org/). As with the PHP linter, `submitty_test` can be used as an alias for the `SUBMITTY_TEST.sh` script.
 
-You can run eslint on your host system or on vagrant by navigating into the `site/`
+```bash
+submitty_test js-lint
+```
+
+Alternatively, you can run eslint on your host system or on vagrant by navigating into the `site/`
 directory and running:
 
 ```bash
@@ -152,9 +156,13 @@ See also: [JavaScript Style Guide](/developer/coding_style_guide/javascript)
 
 ## CSS Linting
 
-CSS is linted using [stylelint](https://stylelint.io/) in Submitty to enforce a consistent code style.
+CSS is linted using [stylelint](https://stylelint.io/) in Submitty to enforce a consistent code style. As with the PHP linter, `submitty_test` can be used as an alias for the `SUBMITTY_TEST.sh` script.
 
-You can run stylelint on your host system or on vagrant by navigating into the `site/`
+```bash
+submitty_test css-lint
+```
+
+Alternatively, you can run stylelint on your host system or on vagrant by navigating into the `site/`
 directory and running:
 
 ```bash
