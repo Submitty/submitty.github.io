@@ -9,7 +9,7 @@ _NOTE:  This is a work-in-progress._
 
 ### Enable viewing of Rainbow Grades
 
-Before beginning, you must enable viewing of rainbow grades:
+Before beginning, you must enable viewing of Rainbow Grades:
 
 1. Navigate to the ```Course Settings``` page for your course.
 2. Check the checkbox next to ```Display Rainbow Grades Summary```.
