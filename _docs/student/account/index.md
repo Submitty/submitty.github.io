@@ -17,6 +17,9 @@ authenticating/accessing the page, double check the URL and your
 username and password, and contact the instructor, TA, or system
 administrator as appropriate.
 
+### Self Account Creation
+
+If your school allows for users to create their own accounts, follow [these instructions](/student/self_account_creation)
 
 ## My Courses
 
