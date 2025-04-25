@@ -214,6 +214,7 @@ var NAVTREE =
                 [ "Localization / Language Support", "/developer/development_instructions/localization", null ],
                 [ "Continuous Integration Testing", "/developer/testing/index", [
                     [ "Overview", "/developer/testing/index", null ],
+                    ["External Contributors", "/developer/testing/external_contributors", null],
                     [ "Installing PHP", "/developer/testing/install_php", null ],
                     [ "Linting / Static Analysis", "/developer/testing/linting_static_analysis", null ],
                     [ "Python Unit Tests", "/developer/testing/python_unit_tests", null ],
