@@ -1,5 +1,6 @@
 ---
 title: External Contributors
+category: Developer > Development Instructions > Continuous Integration Testing
 ---
 
 To run all Submitty workflows on a forked repository, you must manually trigger the workflow. This is because GitHub Actions do not run on forked repositories by default. One of the people in the Submitty organization must manually trigger the workflow for you. To avoid this, you can trust the workflow in your forked repository. This will allow GitHub Actions to run on your forked repository without manual intervention.

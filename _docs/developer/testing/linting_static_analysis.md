@@ -1,5 +1,6 @@
 ---
 title: Linting / Static Analysis
+category: Developer > Development Instructions > Continuous Integration Testing
 ---
 
 To ensure the [Coding Standards](/developer/coding_style_guide) of Submitty, we use a mixture
