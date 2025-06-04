@@ -47,7 +47,7 @@ redirect_from:
 
   ```
   tail -n 50 /var/local/submitty/site_errors/<TODAYS_DATE>.log
-  ``` 
+  ```  
 
 
 * Look for errors in the apache log:
