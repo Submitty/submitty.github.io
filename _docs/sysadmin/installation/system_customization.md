@@ -30,7 +30,7 @@ You may want to back up more of `/var/local/submitty` to save configurations and
 
 To ensure the reliability of the various Submitty services, such as the WebSocket server, their health status is monitored and restarted hourly via the [sbin/repair_services.sh](https://github.com/Submitty/Submitty/blob/master/sbin/repair_services.sh) script run by the submitty_daemon user. This script leverages `systemctl` along with various health-check utility scripts to verify the active state of these core services, triggering a restart if an inactive state is detected.
 
-Service failures can occur for various reasons, including unhandled exceptions, memory leaks, port binding issues, or OS-level disruptions such as resource exhaustion. All failures are logged with their relevant timestamp, source, and last output within the `/var/logs/services` directory for the given day in the format `YYYYMMDD.txt`.
+Service failures can occur for various reasons, including unhandled exceptions, memory leaks, port binding issues, or OS-level disruptions such as resource exhaustion. All failures are logged with their relevant timestamp, source, and last output within the `/var/log/services` directory for the given day in the format `YYYYMMDD.txt`.
 
 To disable this auto-repair mechanism, comment out the relevant line in the source `.setup/submitty_crontab` file within your repository. Since the crontab is auto-generated during installation, any changes must be followed by a re-run of `submitty_install` to persist them.
 

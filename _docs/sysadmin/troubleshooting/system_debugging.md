@@ -47,7 +47,7 @@ redirect_from:
 
   ```
   tail -n 50 /var/local/submitty/site_errors/<TODAYS_DATE>.log
-  ```  
+  ```
 
 
 * Look for errors in the apache log:
@@ -61,6 +61,15 @@ redirect_from:
   ```
   /var/log/nginx/error.log
   ```
+
+* Look for errors in the daily service outage log
+
+  ```
+  /var/log/services/YYYYMMDD.txt
+  ```
+
+
+
 
 * Check the SSL keys / certificates for apache & nginx.
   Look for ssl key & certificate files specified in the enabled
