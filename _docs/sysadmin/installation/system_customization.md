@@ -44,7 +44,7 @@ submitty_install
 
 _Note: This mechanism should only be disabled with caution in production environments._
 
-The `submitty_daemon` user runs a variety of other scripts, such as [sbin/send_email.py](https://github.com/Submitty/Submitty/blob/master/sbin/send_email.py) to send pending emails every minute.  Console output from these scripts can be emailed to a sysadmin to help ensure that errors can be reported and addressed.
+The `submitty_daemon` user runs a variety of other scripts, such as [sbin/send_email.py](https://github.com/Submitty/Submitty/blob/master/sbin/send_email.py) to send pending emails every minute. Console output from these scripts can be emailed to a sysadmin to help ensure that errors can be reported and addressed.
 
 The first line of the relevant script should be set as `MAILTO=` with a valid email address, as shown below.
 ```
