@@ -125,6 +125,7 @@ var NAVTREE =
                 [ "Phases of Autograding", "/instructor/autograding/phases", null ],
                 [ "Autograding Specification", "/instructor/autograding/specification", null ],
                 [ "Distributed / Networked Applications", "/instructor/autograding/networking", null ],
+                [ "System Call Filtering", "/instructor/autograding/system_call_filtering", null ],
                 [ "Graphics Applications", "/instructor/autograding/graphics", null ],
                 [ "Validation", "/instructor/autograding/validation", null ],
                 [ "Batch Regrade Submissions", "/instructor/autograding/batch_regrade", null ],
