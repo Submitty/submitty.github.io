@@ -29,12 +29,22 @@ The current categories and lists of calls within each category can be
 inspected in the Submitty source code:  
 [grading/system_call_categories.cpp](https://github.com/Submitty/Submitty/blob/main/grading/system_call_categories.cpp)
 
+When an gradeable autograding configuration is built, we detect the
+programs that will be run and attempt to automatically select an
+appropriate list of system call categories to allow by default.
+Hopefully, for common programming languages and most typical
+autograding tasks, this default category list is suitable and the
+autograding configuration written by the instructor does not need to
+adjust or override these settings.  But in cases where these defaults
+are not sufficient, the instructor can override these default
+settings.
+
 
 ### What system calls are used by a specific program?
 
 The GNU/Linux [strace](https://strace.io/) utility can be used to
 collect all system calls made in a run of a program.  First, install
-strace on your machine.
+strace on your machine:
 
 ```
 sudo apt-get install strace
@@ -109,14 +119,13 @@ You can just copy paste that into your `config.json` either at the
 global level, or per test case.
 
 Alternately, you can simply enable all system calls that are in
-*restricted* category:
+a *restricted* Submitty system call category:
 
 ```
 "allow_system_calls" : [ "ALLOW_ALL_RESTRICTED_SYSTEM_CALLS" ],
 ```
 
 Again, this can be set at the global level or per-test case.
-
 
 An example autograding configuration using the `"allow_system_calls"`
 syntax is here:
@@ -150,3 +159,7 @@ assignment instructions and confirm they have followed detailed
 instructions about resources and techniques that are allowed.  Only
 the instructor for the course can modify the list of system calls that
 are allowed for autograding that assignment.
+
+
+See also:
+[Autograding Configuration Structure](/instructor/autograding/structure)
