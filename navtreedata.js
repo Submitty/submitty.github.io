@@ -125,6 +125,7 @@ var NAVTREE =
                 [ "Phases of Autograding", "/instructor/autograding/phases", null ],
                 [ "Autograding Specification", "/instructor/autograding/specification", null ],
                 [ "Distributed / Networked Applications", "/instructor/autograding/networking", null ],
+                [ "System Call Filtering", "/instructor/autograding/system_call_filtering", null ],
                 [ "Graphics Applications", "/instructor/autograding/graphics", null ],
                 [ "Validation", "/instructor/autograding/validation", null ],
                 [ "Batch Regrade Submissions", "/instructor/autograding/batch_regrade", null ],
@@ -214,6 +215,7 @@ var NAVTREE =
                 [ "Localization / Language Support", "/developer/development_instructions/localization", null ],
                 [ "Continuous Integration Testing", "/developer/testing/index", [
                     [ "Overview", "/developer/testing/index", null ],
+                    ["External Contributors", "/developer/testing/external_contributors", null],
                     [ "Installing PHP", "/developer/testing/install_php", null ],
                     [ "Linting / Static Analysis", "/developer/testing/linting_static_analysis", null ],
                     [ "Python Unit Tests", "/developer/testing/python_unit_tests", null ],

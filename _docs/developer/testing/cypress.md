@@ -1,5 +1,6 @@
 ---
 title: End-to-End testing with Cypress
+category: Developer > Development Instructions > Continuous Integration Testing
 ---
 
 The _End-to-End Testing_ (e2e) suite utilizes [Cypress](https://www.cypress.io/),

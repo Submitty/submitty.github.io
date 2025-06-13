@@ -88,7 +88,7 @@ Four digit year, one or two digit month, two digit day, two digit hour, minute, 
 #### Other
 * ta_grading -- If the TA will grade any/all of the assignments (Default false)
 * discussion_thread_id -- The thread ID if using forums (Default none)
-* syllabus_bucket -- (Default "Homework")
+* syllabus_bucket -- (Default "homework")
 #### All variables
 ```json
 {
@@ -110,7 +110,7 @@ Four digit year, one or two digit month, two digit day, two digit hour, minute, 
   "grade_inquiry_per_component_allowed": false,
   "ta_grading": false,
   "discussion_thread_id": "thread_id",
-  "syllabus_bucket": "Homework",
+  "syllabus_bucket": "homework",
   "dates": {
     "ta_view_start_date": "2024-1-10 23:59:59",
     "submission_open_date": "2024-1-10 23:59:59",
@@ -135,7 +135,7 @@ Four digit year, one or two digit month, two digit day, two digit hour, minute, 
   "id": "hw-bulk-upload",
   "type": "Electronic File",
   "bulk_upload": true,
-  "syllabus_bucket": "Homework"
+  "syllabus_bucket": "homework"
 }
 ```
 #### Sample Checkpoints Template
@@ -144,7 +144,7 @@ Four digit year, one or two digit month, two digit day, two digit hour, minute, 
   "title": "Checkpoints Gradeable",
   "id": "hw-checkpoints",
   "type": "Checkpoints",
-  "syllabus_bucket": "Homework"
+  "syllabus_bucket": "homework"
 }
 ```
 #### Sample VCS Template
@@ -153,7 +153,7 @@ Four digit year, one or two digit month, two digit day, two digit hour, minute, 
   "title": "VCS Gradeable",
   "id": "hw-vcs",
   "type": "Electronic File",
-  "syllabus_bucket": "Homework",
+  "syllabus_bucket": "homework",
   "vcs": {
     "repository_type": "submitty-hosted",
     "vcs_path": "http://localhost:1511/path/to/repository",

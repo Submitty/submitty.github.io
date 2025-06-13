@@ -1,5 +1,6 @@
 ---
-title: Testing
+title: Continuous Integration Testing
+category: Developer > Development Instructions
 ---
 
 To verify expected behavior of Submitty, we use

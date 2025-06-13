@@ -24,7 +24,7 @@ The display field specifies what will be shown in the output HTML and individual
 It can contain the following:
 
 * ``"instructor_notes"``: Shows notes for early warnings, plagiarism, etc. only to the instructor
-* ``"grade_summary"``: Shows the overall score and score for each syllabus bucket (e.g. Homework)
+* ``"grade_summary"``: Shows the overall score and score for each syllabus bucket (e.g. homework)
 * ``"grade_details"``: Shows the score for each gradeable
 * ``"section"``: Show the students' registration section.
 * ``"messages"``: Show a text message at the top of the page.

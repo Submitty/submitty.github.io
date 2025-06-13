@@ -1,5 +1,6 @@
 ---
 title: PHP Unit Tests
+category: Developer > Development Instructions > Continuous Integration Testing
 ---
 
 To validate the unit behavior of the site code, we utilize 

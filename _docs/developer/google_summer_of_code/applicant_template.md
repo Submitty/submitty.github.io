@@ -3,13 +3,13 @@ title: Applicant Template
 category: Developer > Google Summer of Code
 ---
 
-**NOTE: The 2025 Submitty GSoC Template will be available for download
-  when Google announces the organizations accepted for Google Summer
-  of Code 2025.**
+[comment]: <> **NOTE: The 20XX Submitty GSoC Template will be available for download
+[comment]: <>   when Google announces the organizations accepted for Google Summer
+[comment]: <>   of Code 20XX.**
 
 To ensure that the Submitty Org Admins and Mentors have all of the
 information about your ideas, project plan, and availability for
-Google Summer of Code 2025, we ask you to use the Submitty Applicant
+Google Summer of Code 20XX, we ask you to use the Submitty Applicant
 Template.
 
 The template will include:

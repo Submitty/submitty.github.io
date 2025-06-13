@@ -250,6 +250,15 @@ these changes.
   missing the hundreds of sample student submissions present in the
   full installation.
 
+  You can append the `--test_only_grading` flag to the above command to
+  more closely mimic the version that is on the Cypress CI.
+
+  If you only need a certain courses, you can append each course name to
+  the above command to only create the courses you want.
+
+  _NOTE: If you mistype a course, that course will not be created. If you
+  only have mistyped courses, then no courses gets created._
+
 
   NOTE: This command will also have to be run twice a year on July 1st and January 1st when the test semester will change from fall to spring or vice versa.
 

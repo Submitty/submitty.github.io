@@ -1,5 +1,6 @@
 ---
 title: Python Unit Tests
+category: Developer > Development Instructions > Continuous Integration Testing
 ---
 
 The following Python modules of Submitty are unit tested:

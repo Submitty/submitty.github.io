@@ -146,11 +146,8 @@ executables.
 
   The instructor can also override / customize the default
   restrictions on use of system calls within the student code by
-  whitelisting additional categories of system calls:
-  [grading/system_call_categories.cpp][grading/system_call_categories.cpp]
-  [grading/seccomp_functions.cpp][grading/seccomp_functions.cpp]
-
-  _FIXME: UPDATE & DOCUMENT_
+  allowing additional categories of system calls.  
+  *See also:* [System Call Filtering](/instructor/autograding/system_call_filtering)
 
 
 

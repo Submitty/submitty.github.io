@@ -1,5 +1,6 @@
 ---
 title: Install PHP
+category: Developer > Development Instructions > Continuous Integration Testing
 ---
 
 In order to run the PHP Linter, Static Analysis, and PHPUnit tests locally 

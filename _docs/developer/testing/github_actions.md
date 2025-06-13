@@ -1,5 +1,6 @@
 ---
 title: GitHub Actions
+category: Developer > Development Instructions > Continuous Integration Testing
 ---
 
 We utilize [GitHub actions](https://docs.github.com/en/actions) to enable *continuous integration*
