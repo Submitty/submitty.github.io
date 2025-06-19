@@ -170,6 +170,8 @@ In the drag and drop box, upload the bulk exam PDF. You may submit
 more than one PDF at once, but the box's maximum total size is 100Mb
 (see note above about the Ubuntu/Apache/php-fpm limits).
 
+Filenames should not contain characters such as (' , " , < , > , \ ) or spaces.
+
 On submit, the bulk PDF is uploaded to the course's
 `/uploads/bulk_pdf/gradeable_id` folder and the split PDF items to
 `/uploads/split_pdf/gradeable_id` folder.
