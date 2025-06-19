@@ -7,28 +7,29 @@ redirect_from:
 
 _NOTE:  This is a work-in-progress._
 
-### Enable viewing of rainbow grades
+### Enable viewing of Rainbow Grades
 
-Before beginning you must enable viewing of rainbow grades:
+Before beginning, you must enable viewing of Rainbow Grades:
 
-1. Navigate to the ```Course Settings``` page for your course
-1. Check the checkbox next to ```Display Rainbow Grades Summary```
+1. Navigate to the ```Course Settings``` page for your course.
+2. Check the checkbox next to ```Display Rainbow Grades Summary```.
 
-This will enable the ```Rainbow Grades``` tab on the navigation bar.  Currently there are no grades to view but that will be handled in the next step.
+This will enable the ```Rainbow Grades``` tab on the navigation bar.  Currently, there are no grades to view, but that will be handled in the next step.
 
-### Customize what to show
+### Customize Rainbow Grades
 
-1. Navigate to the ```Grade Reports``` page for your course
-1. Press the ```Web-Based Rainbow Grades Generation``` button.
-1. Using the form, customize rainbow grades how you see fit.
-1. Press the ```Save Changes``` button at the top of the form
+1. Navigate to the ```Grades Configuration``` page for your course.
+2. Using the form, customize Rainbow Grades how you see fit, or upload a manual JSON file.
+   1. Some customization options will not appear unless a corresponding checkbox under ```Display``` is checked.
+3. Press the ```Generate Grade Summaries``` button at the top of the form.
+4. Press the ```Build``` button at the top of the form.
 
 Every time you save changes using this form, rainbow grades will be automatically updated.
 
-### Automatic nightly build
+### Automatic Nightly Build
 
-In your course settings page you may see an Automatic Rainbow Grades generation checkbox.  This setting allows your 
-rainbow grades to be automatically rebuilt every night at a time determined by your system administrator.  If you do not
+In your ```Course Settings``` page, you may see an Automatic Rainbow Grades generation checkbox.  This setting allows your 
+Rainbow Grades to be automatically rebuilt every night at a time determined by your system administrator.  If you do not
 see this option then the system administrator has not configured it.
 
 ### Troubleshooting
@@ -44,5 +45,5 @@ of the rainbow grades web interface, you must manually generate grade summaries 
 tab and pressing the ```Generate Grade Summaries``` button.  Rainbow Grades uses this data to generate it's tables, 
 therefore Rainbow Grades will only be as recent as grade summaries.
 
-When submitty is properly configured and you do not see this message, there is no need to manually generate grade 
+When Submitty is properly configured and you do not see this message, there is no need to manually generate grade 
 summaries.

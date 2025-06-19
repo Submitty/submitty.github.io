@@ -278,7 +278,7 @@ Below is the list of parameters downloaded. VCS and Team Gradeable are only down
   "grade_inquiry_per_component_allowed": false,
   "ta_grading": false,
   "discussion_thread_id": "thread_id",
-  "syllabus_bucket": "Homework",
+  "syllabus_bucket": "homework",
   "autograding_config_path": "path/to/config",
   "dates": {
     "ta_view_start_date": "2024-1-10 23:59:59.00",

@@ -9,6 +9,7 @@ category: Developer > Development Troubleshooting
    Having the VM's terminal GUI open can seem to keep it awake for communication. While developing on Submitty,
    this "Show" terminal option can sometimes lead to the VM being faster with loads, so it may be worth having the GUI
    open even after your vagrant up.
+  * If the VM environment becomes stuck on any command for more than three minutes, opening the VM's terminal GUI may prompt it to continue. Keeping the terminal open is generally a good idea.
 
 * If your install seems to randomly freeze during `vagrant up` 
 with no explanation, then there are a couple of things that may be going wrong:
