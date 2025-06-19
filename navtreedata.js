@@ -58,6 +58,7 @@ var NAVTREE =
             ] ],
             [ "Communication", "/student/communication/forum", [
                 [ "Discussion Forum", "/student/communication/forum", null ],
+                [ "Live Chat", "/student/communication/live_chat", null ],
                 [ "Office Hours Queue", "/student/communication/office_hours_queue", null ],
                 [ "Writing Markdown", "/student/communication/markdown", null ]
             ] ]
@@ -83,6 +84,7 @@ var NAVTREE =
             [ "Course Settings", "/instructor/course_settings/index", [
                 [ "Overview", "/instructor/course_settings/index", null ],
                 [ "Discussion Forum", "/instructor/course_settings/forum", null ],
+                [ "Live Chat", "/instructor/course_settings/live_chat", null ],
                 [ "Submini Polling", "/instructor/course_settings/submini_polls", null ],
                 [ "Office Hours Queue", "/instructor/course_settings/queue", null ],
                 [ "Grade Inquiries", "/instructor/course_settings/grade_inquiries", null ],
