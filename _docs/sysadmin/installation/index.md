@@ -196,6 +196,38 @@ You can use these [instructions](/sysadmin/installation/ansible).
    cp submitty.cer submitty.pem
    cat chain.cer >> submitty.pem
    ```
+       #### Configure Websocket Port
+
+    Submitty allows you to configure the websocket server to use a custom port. To do this:
+    
+    Open the Submitty configuration file:
+    
+       bash
+       /usr/local/submitty/config/submitty.json```
+    
+     Add or modify the websocket_port field, for example:
+       
+       "websocket_port": 9001
+       ```
+     The websocket server will default to port 8443 if this value is not set.
+       Update the proxy_pass directive in your NGINX configuration 
+       ```(/etc/nginx/sites-available/submitty.conf)``` to match the new port:
+   ```
+   location /ws {
+    proxy_pass http://127.0.0.1:9001; # Updated port here
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "Upgrade";
+    proxy_set_header Host $host;
+    }
+    ```
+    
+    Restart NGINX for the changes to take effect:
+    
+       ```
+       sudo systemctl restart nginx
+       ```
+
 
 7. We recommend that you should leave the PostgreSQL setup unless you know what
    you're doing. If you are running PostgreSQL on the same server as Submitty,

@@ -1,6 +1,6 @@
 ---
 title: Autograding Tests
-category: Developer
+category: Developer > Development Instructions > Continuous Integration Testing
 ---
 
 _NOTE: Currently, these tests can only be run from within Vagrant._

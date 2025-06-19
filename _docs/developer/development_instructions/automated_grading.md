@@ -133,6 +133,16 @@ To do this:
    sudo systemctl stop submitty_autograding_worker
    ```
 
+   You can confirm that these jobs are no longer running:
+   ```
+   ps -ef | grep submitty_auto
+   ```
+
+   If the jobs did not all stop, you can run:
+   ```
+   ps -ef | grep submitty_auto | grep -v grep | awk '{print $2}' | xargs kill -9
+   ```
+
 2. Now, as the `submitty_daemon` user, from the primary machine, run the
    shipper manager and watch the output.
 

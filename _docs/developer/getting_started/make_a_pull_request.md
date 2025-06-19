@@ -114,7 +114,7 @@ Be sure to read the [Suggestions for New Developers](/developer/getting_started/
       See also: [Installation Version Notes](/sysadmin/installation/version_notes)
 
     * To help ensure a title follows our standards, we utilize a
-    [GitHub workflow](https://github.com/Submitty/Submitty/blob/master/.github/workflows/pr_title.yml)
+    [GitHub workflow](https://github.com/Submitty/Submitty/blob/main/.github/workflows/pr_title_check.yml)
     for validation. Updating your PR title will immediately re-run the workflow, allowing you to edit 
     it till it does pass validation.
 

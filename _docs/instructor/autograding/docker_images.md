@@ -1,5 +1,5 @@
 ---
-title: Custom Docker Imagegs
+title: Custom Docker Images
 category: Instructor > Autograding
 ---
 

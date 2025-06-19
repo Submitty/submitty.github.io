@@ -53,12 +53,13 @@ _Note: These instructions should be run under root/sudo._
 
 
 6. Add the submitty user to the ```submitty_daemon```, ```submitty_daemonphp```, and ```docker```
-   groups.
+   groups.  And add the ```submitty_daemon``` user to the ```docker``` group.
 
    ```
    sudo usermod -a -G submitty_daemon YOUR_SUBMITTY_USER
    sudo usermod -a -G submitty_daemonphp YOUR_SUBMITTY_USER
    sudo usermod -a -G docker YOUR_SUBMITTY_USER
+   sudo usermod -a -G docker submitty_daemon
    ```
 
 7. Next, we must set up an ssh key so that submitty_daemon user on the primary
