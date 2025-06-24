@@ -6,14 +6,25 @@ category: Developer > Development Instructions > Continuous Integration Testing
 To validate the unit behavior of the site code, we utilize 
 [phpunit](https://phpunit.readthedocs.io/en/latest). 
 
+### Dependencies
+
+Before running PHP Unit Tests, you must install the required dependencies. You may either run your tests locally or inside the VM:
+
+##### Inside the Vagrant VM
+
+1. Install [Composer](https://getcomposer.org/download/) through the command-line installation copy-paste.
+2. `cd` to `/usr/local/submitty/GIT_CHECKOUT/Submitty/site/`
+3. run  `composer update`
+
+*Please be aware that many unit tests will not work inside the VM. It is suggested that you run tests individually.*
+
+##### On Your Local Machine
 
 ### Running PHP Unit Tests
 
-*You will need PHP installed on your host system first, see [Installing PHP](/developer/testing/install_php)*
+*If you are running on WSL and are seeing errors, remove `php` from the following commands.*
 
-To run the PHP unit test suite locally, `cd` to the `Submitty/site` directory and type:
-
-If you are running on WSL and are seeing errors, remove "`php`" from the following commands.
+To run the PHP unit test suite locally, `cd` to `/usr/local/submitty/GIT_CHECKOUT/Submitty/site/` and type:
 
 ```
 php vendor/bin/phpunit
