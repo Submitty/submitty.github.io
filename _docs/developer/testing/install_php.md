@@ -23,6 +23,10 @@ If you are missing extensions you can install them with `PECL` which will be
 installed automatically with PHP, but you should have everything required by 
 default.
 
+### Windows
+
+Download [php 8.1](https://windows.php.net/download/) as a zip file under the thread safe category. Then extract the contents of the zip to a folder, and add the path to that folder to your path system variable. It's suggested that one extracts the contents of the zip to a folder called `php`, which can be put at `C:\php` for simplicity. You can then add `C:\php` to your path system environment variable.
+
 ------------- 
 
 Verify you have PHP installed correctly, submitty requires a version greater than 7.0

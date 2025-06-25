@@ -13,12 +13,27 @@ Before running PHP Unit Tests, you must install the required dependencies. You m
 ##### Inside the Vagrant VM
 
 1. Install [Composer](https://getcomposer.org/download/) through the command-line installation copy-paste.
-2. `cd` to `/usr/local/submitty/GIT_CHECKOUT/Submitty/site/`
+2. `cd` to `/usr/local/submitty/GIT_CHECKOUT/Submitty/site/`.
 3. run  `composer update`
 
 *Please be aware that many unit tests will not work inside the VM. It is suggested that you run tests individually.*
 
-##### On Your Local Machine
+##### On Mac
+
+1. Install [Composer](https://getcomposer.org/download/) using brew.
+2. `cd` to your `Submitty/site/` folder.
+3. run `composer install`
+
+##### On Windows (Not Suggested)
+
+1. Navigate to your php folder, and open the php configuration settings file.
+2. Ctrl-F and uncomment the line labelled `extension=fileinfo` (remove the semi-colon). Do the same for the line labelled `extension=sodium`.
+3. Install [Composer](https://getcomposer.org/download/), click the link labelled Composer-Setup.exe.
+4. Restart your terminal.
+5. `cd` to your `Submitty/site/` folder.
+6. Run `composer update`. If you are getting timeout errors, try using a VPN.
+
+*This is not a good way to run unit tests because many file paths will be broken. Like with the vagrant VM, it is suggested that you run tests individually.*
 
 ### Running PHP Unit Tests
 
