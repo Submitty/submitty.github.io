@@ -69,6 +69,7 @@ Be sure to read the [Suggestions for New Developers](/developer/getting_started/
       * `Submission` (includes bulk uploads, teams, late days, notebook gradeables, and other student features),
       * `Autograding` (includes router, container/docker),
       * `Forum`,   
+      * `LiveChat`,  
       * `Notifications` (includes email and grade inquiries),  
       * `TAGrading` (includes PDF annotation, peer grading),  
       * `InstructorUI` (includes course and gradeable configuration),  
