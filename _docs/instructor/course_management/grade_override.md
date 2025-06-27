@@ -68,7 +68,7 @@ any) and detailed rubric manual grading feedback (if any).  The
 overridden score will be visible only from
 [Rainbow Grades](/instructor/course_settings/rainbow_grades/index).
 
-![](/images/studentOverriden.png)
+![](/images/studentOverridden.png)
 
 
 ### Grader View
