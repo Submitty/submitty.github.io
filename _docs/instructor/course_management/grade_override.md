@@ -77,7 +77,7 @@ When a grader interacts with the grading details page for a gradeable
 that has overridden grades for one or more students, the button from
 the index page will be labeled "Overridden".
 
-![](/images/TAOverriden1.png)
+![](/images/TAOverridden1.png)
 
 If the grader selects the grading page for a student that has been
 overridden the page is highlighted in yellow as an alert.  The grader
@@ -87,4 +87,4 @@ be available to the student (see above).  But these scores will not be
 used in calculating the students overall course grade in
 [Rainbow Grades](/instructor/course_settings/rainbow_grades/index).
 
-![](/images/TAOverriden2.png)
+![](/images/TAOverridden2.png)
