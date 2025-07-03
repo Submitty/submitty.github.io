@@ -6,21 +6,19 @@ category: Developer > Development Instructions > Continuous Integration Testing
 To validate the unit behavior of the site code, we utilize 
 [phpunit](https://phpunit.readthedocs.io/en/latest). 
 
-### Dependencies
-
-Before running PHP Unit Tests, you must install the required dependencies:
-
-1. Install [Composer](https://getcomposer.org/download/) through the command-line installation copy-paste.
-2. `cd` to `/usr/local/submitty/GIT_CHECKOUT/Submitty/site/`.
-3. run  `composer update`
-
-*If tests are failing on main, you may need to run `apt install php-sqlite3`, especially if you haven't vagrant upped from scratch in a while.*
+*If tests are failing for you even on main, you may need to run `apt install php-sqlite3`, especially if you haven't vagrant upped from scratch in a while.*
 
 ### Running PHP Unit Tests
 
 *If you are running on WSL and are seeing errors, remove `php` from the following commands.*
 
-To run the PHP unit test suite locally, `cd` to `/usr/local/submitty/GIT_CHECKOUT/Submitty/site/` and type:
+To run the PHP unit test suite in VM use the alias
+
+```
+submitty_test php-unit
+```
+
+or
 
 ```
 sudo -u submitty_php php vendor/bin/phpunit
@@ -28,21 +26,21 @@ sudo -u submitty_php php vendor/bin/phpunit
 
 To run just an individual class or test, you can use the `--filter` flag on PHPUnit.
 For example, to run the function `testInvalidProperty` would be
-`php vendor/bin/phpunit --filter testInvalidProperty` and running all
+`sudo -u submitty_php php vendor/bin/phpunit --filter testInvalidProperty` and running all
 of `AccessControlTester` would be
 `php vendor/bin/phpunit--filter AccessControlTester`. Be aware, filter
 can match against partial strings, so if you have two tests `testFoo` and `testFooBar`,
 running `--filter testFoo` will run them both. Alternatively, you can also directly run
 `phpunit` against a specific class by passing the path to the test class directly to
 `phpunit`, for example
-`php vendor/bin/phpunit tests/app/authentication/DatabaseAuthenticationTester.php` will run
+`sudo -u submitty_php php vendor/bin/phpunit tests/app/authentication/DatabaseAuthenticationTester.php` will run
 only the test methods in `DatabaseAuthenticationTester.php`.
 
 The two concepts above can be combined to run a specific test function in a specific
 class by doing:
 
 ```bash
-vendor/bin/phpunit --filter testFunction tests/app/path/to/TestClass.php
+sudo -u submitty_php php vendor/bin/phpunit --filter testFunction tests/app/path/to/TestClass.php
 ```
 
 You can pass in the `--debug` flag when using PHPUnit to see PHP output, this can be
