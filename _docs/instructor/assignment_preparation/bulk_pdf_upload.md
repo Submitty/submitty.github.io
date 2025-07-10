@@ -253,3 +253,39 @@ submission page.
 
 
 See also: [Personalized Exams](/instructor/personalized_exams)
+
+## Redactions
+
+When you upload a bulk PDF, you may want to redact certain information from the students' submissions. Submitty allows you to prepare redactions for the bulk PDF uploads. These redactions will be shown to limited access graders, and along with blinded grading, will help maintain student privacy.
+
+### Preparing Redactions
+To prepare for redactions, you must first create a redactions JSON file. This file should contain the pages and coordinates of the areas you want to redact. The format of the JSON file is as follows where coordinates are in the range of 0 to 1, representing a percentage of the page dimensions:
+
+```json
+[
+  {
+    "page": 1,
+    "x1": 0.25,
+    "y1": 0.25,
+    "x2": 0.75,
+    "y2": 0.75
+  },
+  {
+    "page": 2,
+    "x1": 0.1,
+    "y1": 0.1,
+    "x2": 0.9,
+    "y2": 0.9
+  }
+]
+```
+
+In order to be able to turn on redactions for the gradeable, you must turn on "Are student submissions/uploads a single file PDF with a fixed/prescribed format?" in the "Rubric" tab. This will allow you to upload new redactions json files.
+
+![Redactions Preparation](/images/start_redactions.png){:width="600px"}
+
+### Viewing Redactions
+
+Once you have prepared the redactions JSON file, either start a bulk upload or view an existing bulk upload submission. You will see boxes on the PDF that represent the redactions you have prepared. These boxes will be shown to limited access graders, and they will not be able to see the content within these redacted areas.
+
+![Redactions Viewing](/images/redacted.png){:width="400px"}
