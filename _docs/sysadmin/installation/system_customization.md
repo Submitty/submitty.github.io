@@ -39,7 +39,7 @@ To disable this auto-repair mechanism, comment out the relevant line in the sour
 # 0 * * * * submitty_daemon   sudo /usr/local/submitty/sbin/repair_services.sh
 
 # Then re-apply the configuration:
-submitty_install
+$ submitty_install
 ```
 
 _Note: This mechanism should only be disabled with caution in production environments._

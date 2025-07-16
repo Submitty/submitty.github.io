@@ -65,7 +65,7 @@ redirect_from:
 * Look for errors in the daily service outage log
 
   ```
-  /var/log/services/YYYYMMDD.txt
+  /var/local/submitty/logs/services/YYYYMMDD.txt
   ```
 
 * Check the SSL keys / certificates for apache & nginx.
