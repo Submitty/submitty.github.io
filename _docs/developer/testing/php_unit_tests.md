@@ -6,7 +6,6 @@ category: Developer > Development Instructions > Continuous Integration Testing
 To validate the unit behavior of the site code, we utilize 
 [phpunit](https://phpunit.readthedocs.io/en/latest). 
 
-*If tests are failing for you even on main, you may need to run `apt install php-sqlite3`, especially if you haven't vagrant upped from scratch in a while.*
 
 ### Running PHP Unit Tests
 
