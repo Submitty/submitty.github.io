@@ -60,17 +60,22 @@ function toggle_display(id) {
 
 function changeMode() {
   const toggle = document.getElementById('dark-mode-toggle');
-  let saved = localStorage.getItem('site_mode') || 'light';
+  const logo   = document.getElementById('site-logo');
+  let   saved  = localStorage.getItem('site_mode') || 'light';
 
   if (saved !== 'dark') {
     saved = 'dark';
-    toggle.innerHTML = 'Toggle Light Mode';
-    console.log('Setting dark mode');
+    toggle.textContent = 'Toggle Light Mode';
   }
   else {
     saved = 'light';
-    toggle.innerHTML = 'Toggle Dark Mode';
-    console.log('Setting light mode');
+    toggle.textContent = 'Toggle Dark Mode';
+  }
+
+  if (logo) {
+    logo.src = (saved === 'dark')
+      ? logo.dataset.dark
+      : logo.dataset.light;
   }
 
   localStorage.setItem('site_mode', saved);
@@ -81,8 +86,15 @@ window.addEventListener('DOMContentLoaded', () => {
   const html   = document.documentElement;
   const toggle = document.getElementById('dark-mode-toggle');
   const saved  = localStorage.getItem('site_mode') || 'light';
+  const logo   = document.getElementById('site-logo');
 
   html.setAttribute('data-theme', saved);
   toggle.textContent = saved === 'dark' ? 'Light Mode' : 'Dark Mode';
+
+  if (logo) {
+    logo.src = (saved === 'dark')
+      ? logo.dataset.dark
+      : logo.dataset.light;
+  }
 });
 

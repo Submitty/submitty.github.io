@@ -58,7 +58,15 @@
               <button type="button" class="open-nav" id="open-nav">
                   <i class="fas fa-bars" style="color: #bbbbbb; font-size: 5.5em;"></i>
                 </button>
-                <a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/submitty_logo.png" alt="{{ site.title }} logo"></a>
+                <a href="{{ site.baseurl }}/" class="logo-link">
+                <img
+                    id="site-logo"
+                    src="{{ site.baseurl }}/images/submitty_logo.png"
+                    data-light="{{ site.baseurl }}/images/submitty_logo.png"
+                    data-dark="{{ site.baseurl }}/images/submitty_logo_white.png"
+                    alt="{{ site.title }} logo"
+                >
+                </a>
                 <!--{{ site.title }}-->
             </h1>
             <form action="{{ site.baseurl }}/search/" method="get">

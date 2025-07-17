@@ -21,6 +21,7 @@ $full-width-break: $nav-width + ($space * 4) + $content-max-width;
 @import "code";
 @import "tables";
 @import "layout";
+@import "dark-mode";
 
 header.main-nav > ul {
   margin-bottom: 30px;

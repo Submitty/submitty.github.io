@@ -1,0 +1,48 @@
+@import "colors";
+
+:root[data-theme="dark"] {
+    body {
+        background-color: var(--body-bg);
+    }
+
+    header {
+        background-color: var(--nav-bg);
+    }
+
+    a {
+        color: var(--content-color);
+    }
+
+    h2 {
+        color: var(--content-color);
+    }
+
+    h3 {
+        color: var(--content-color);
+    }
+
+    #nav-tree .selected {
+        background-color: #535353;
+    }
+
+    #nav-tree .selected a {
+        color: var(--content-color);
+    }
+
+    .arrow {
+        color: var(--content-color);
+    }
+
+    #search-input {
+        background-color: #535353;
+        color: var(--content-color);
+    }
+}
+
+*,
+*::before,
+*::after {
+  transition:
+    color  200ms ease-in-out,
+    background-color 200ms ease-in-out;
+}

@@ -8,7 +8,6 @@ input::-ms-reveal {
 body {
 	height: auto;
 	overflow-x: hidden;
-	background-color: var(--body-bg);
 
 	&.nav-open {
 		overflow: hidden;
@@ -27,7 +26,6 @@ body {
 
 	&::before {
 		content: "";
-		background-color: var(--body-bg);
 		position: fixed;
 		top: 0;
 		right: 0;
@@ -55,7 +53,6 @@ body {
 		&::after {
 			left: 0;
 			width: $nav-width;
-			background-color: var(--nav-bg);
 		}
 
 		#search-input,
@@ -66,7 +63,6 @@ body {
 		&::before {
 			left: $nav-width;
 			right: 0;
-			background-color: var(--content-bg);
 		}
 	}
 }
@@ -100,7 +96,6 @@ header {
 	right: 0;
 	overflow-x: hidden;
 	z-index: 1;
-	background-color: var(--nav-bg);
 
 	ul {
 		list-style-type: none;
@@ -112,7 +107,6 @@ header {
 		padding: $emblem-vertical-padding $emblem-horizontal-padding;
 		//height: $nav-header-height;
 		box-sizing: border-box;
-		background-color: var(--brand-color);
 		color: var(--content-color);
 		margin: 0;
 		font-size: 1.7rem;
@@ -181,7 +175,6 @@ header {
 
 .content {
 	position: relative;
-	background-color: var(--content-bg);
 	color: var(--content-color);
 
 	h3::before {
@@ -352,8 +345,6 @@ h3 + .warning {
 
 
 h4 code {
-	background: var(--nav-bg);
-	color: var(--content-color);
 	background-color: transparent;
 	font-weight: 700;
 	padding: 0;
