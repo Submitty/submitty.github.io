@@ -57,3 +57,32 @@ function toggle_display(id) {
     }
     return false;
 }
+
+function changeMode() {
+  const toggle = document.getElementById('dark-mode-toggle');
+  let saved = localStorage.getItem('site_mode') || 'light';
+
+  if (saved !== 'dark') {
+    saved = 'dark';
+    toggle.innerHTML = 'Toggle Light Mode';
+    console.log('Setting dark mode');
+  }
+  else {
+    saved = 'light';
+    toggle.innerHTML = 'Toggle Dark Mode';
+    console.log('Setting light mode');
+  }
+
+  localStorage.setItem('site_mode', saved);
+  document.documentElement.setAttribute('data-theme', saved);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const html   = document.documentElement;
+  const toggle = document.getElementById('dark-mode-toggle');
+  const saved  = localStorage.getItem('site_mode') || 'light';
+
+  html.setAttribute('data-theme', saved);
+  toggle.textContent = saved === 'dark' ? 'Light Mode' : 'Dark Mode';
+});
+

@@ -1,0 +1,22 @@
+// _sass/_colors.scss
+
+// Light theme tokens
+:root {
+  --body-bg:          #ffffff;
+  --content-bg:       #ffffff;
+  --content-color:    #222222;
+  --nav-bg:           #f6fbfe;
+  --nav-text:         #666666;
+  --brand-color:       #f6fbfe;
+  /* …add any others you need… */
+}
+
+// Dark theme overrides
+:root[data-theme="dark"] {
+  --body-bg:          #121212;
+  --content-bg:       #1e1e1e;
+  --content-color:    #eeeeee;
+  --nav-bg:           #191919;
+  --nav-text:         #cccccc;
+  --brand-color:      #000000;
+}
