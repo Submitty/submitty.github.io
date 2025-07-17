@@ -8,7 +8,7 @@ you will need to have PHP installed on your host machine first.
 
 ### Linux & WSL:
 
-*If you're distro cannot find the correct package or installs the wrong version you may have to specify php7.0 in each package name*
+*If you're distro cannot find the correct package or installs the wrong version you may have to specify php8.1 in each package name*
 
 ```bash
 sudo apt-get update
