@@ -15,7 +15,8 @@ body {
 		nav,
 		header > form,
 		header > ul,
-                div#nav-tree {
+        div#nav-tree,
+		.dark-mode-container {
 			display: block;
 		}
 
@@ -229,7 +230,8 @@ header {
 nav,
 header > form,
 header > ul,
-div#nav-tree {
+div#nav-tree,
+.dark-mode-container {
 	display: none;
 
 	@media (min-width: $mobile-break) {

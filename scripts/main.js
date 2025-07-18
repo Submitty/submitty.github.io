@@ -58,43 +58,32 @@ function toggle_display(id) {
     return false;
 }
 
-function changeMode() {
+// In your main.js (replace the old `const slider = ...` logic with:)
+document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.getElementById('dark-mode-toggle');
   const logo   = document.getElementById('site-logo');
-  let   saved  = localStorage.getItem('site_mode') || 'light';
-
-  if (saved !== 'dark') {
-    saved = 'dark';
-    toggle.textContent = 'Toggle Light Mode';
-  }
-  else {
-    saved = 'light';
-    toggle.textContent = 'Toggle Dark Mode';
-  }
-
-  if (logo) {
-    logo.src = (saved === 'dark')
-      ? logo.dataset.dark
-      : logo.dataset.light;
-  }
-
-  localStorage.setItem('site_mode', saved);
-  document.documentElement.setAttribute('data-theme', saved);
-}
-
-window.addEventListener('DOMContentLoaded', () => {
-  const html   = document.documentElement;
-  const toggle = document.getElementById('dark-mode-toggle');
+  const icon   = document.getElementById('dark-mode-icon');
   const saved  = localStorage.getItem('site_mode') || 'light';
-  const logo   = document.getElementById('site-logo');
 
-  html.setAttribute('data-theme', saved);
-  toggle.textContent = saved === 'dark' ? 'Light Mode' : 'Dark Mode';
+  document.documentElement.setAttribute('data-theme', saved);
+  if (logo) logo.src = saved === 'dark'
+    ? logo.dataset.dark
+    : logo.dataset.light;
+  if (icon) icon.src = saved === 'dark'
+    ? icon.dataset.dark
+    : icon.dataset.light;
+  toggle.checked = (saved === 'dark');
 
-  if (logo) {
-    logo.src = (saved === 'dark')
+  toggle.addEventListener('change', () => {
+    const mode = toggle.checked ? 'dark' : 'light';
+    localStorage.setItem('site_mode', mode);
+    document.documentElement.setAttribute('data-theme', mode);
+    if (logo) logo.src = mode === 'dark'
       ? logo.dataset.dark
       : logo.dataset.light;
-  }
+    if (icon) icon.src = mode === 'dark'
+      ? icon.dataset.dark
+      : icon.dataset.light;
+  });
 });
 

@@ -1,42 +1,83 @@
+// This page overrides all of the existing colors on the site with
+// dynamic CSS variables.
+
 @import "colors";
 
-:root[data-theme="dark"] {
-    body {
-        background-color: var(--body-bg);
-    }
+body {
+    background-color: var(--body-bg);
+}
 
-    header {
-        background-color: var(--nav-bg);
-    }
+header.main-nav {
+    background-color: var(--nav-bg);
+    display: flex;
+    flex-direction: column;
+}
 
-    a {
-        color: var(--content-color);
-    }
+a {
+    color: var(--link-color);
+}
 
-    h2 {
-        color: var(--content-color);
-    }
+a:hover {
+    color: var(--standard-black) !important;
+}
 
-    h3 {
-        color: var(--content-color);
-    }
+.page-header h2 {
+    color: var(--page-header);
+}
 
-    #nav-tree .selected {
-        background-color: #535353;
-    }
+h2 {
+    color: var(--content-color);
+}
 
-    #nav-tree .selected a {
-        color: var(--content-color);
-    }
+h3 {
+    color: var(--content-color);
+}
 
-    .arrow {
-        color: var(--content-color);
-    }
+h4 {
+    color: var(--content-color);
+}
 
-    #search-input {
-        background-color: #535353;
-        color: var(--content-color);
-    }
+#nav-tree .selected {
+    background-color: var(--nav-selected) !important;
+}
+
+#nav-tree .selected a {
+    color: var(--content-color) !important;
+    text-shadow: none !important;
+    font-weight: bold;
+}
+
+.arrow {
+    color: var(--content-color) !important;
+}
+
+#search-input {
+    background-color: var(--content-bg);
+    color: var(--content-color);
+}
+
+// Inline code snippets, such as on the Contact Us page
+pre, code, tt {
+    background-color: var(--inline-code-bg);
+    color: var(--inline-code-color);
+}
+
+button {
+    background-color: transparent !important;
+}
+
+tr {
+	border-bottom: 1px solid #EEE;
+
+	&:nth-child(even) {
+		background: var(--even-table);
+	}
+}
+
+span[id^="mytag"] {
+    background-color: var(--inline-code-bg) !important;
+    color: var(--inline-code-color) !important;
+    padding: 10px;
 }
 
 *,
@@ -45,4 +86,57 @@
   transition:
     color  200ms ease-in-out,
     background-color 200ms ease-in-out;
+}
+
+.dark-mode-container {
+  margin-top: auto;
+  margin-bottom: 20px;
+  align-self: center;
+}
+
+.dark-mode-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+  margin-bottom: 20px;
+  align-self: center;
+}
+
+.dark-mode-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.dark-mode-switch .slider {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  background-color: var(--toggle-track);
+  border-radius: 34px;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode-switch .slider img {
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: var(--toggle-thumb);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  user-select: none;
+  -webkit-user-drag: none;
+  display: none;
+}
+
+.dark-mode-switch .slider img[src] {
+  display: block;
+}
+
+.dark-mode-switch input:checked + .slider img {
+  transform: translateX(22px);
 }
