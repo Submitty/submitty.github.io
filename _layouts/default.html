@@ -7,7 +7,6 @@
         <meta name="generator" content="Jekyll v{{ jekyll.version }}">
 
         <script>
-        document.addEventListener('DOMContentLoaded', () => {
             const m = localStorage.getItem('site_mode') || 'light';
             document.documentElement.setAttribute('data-theme', m);
             const logo = document.getElementById('site-logo');
@@ -16,7 +15,6 @@
                 ? logo.dataset.dark
                 : logo.dataset.light;
             }
-        });
         </script>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Open+Sans:400,400italic,600,600italic,700,700italic|Inconsolata:400,700">
@@ -87,11 +85,11 @@
             </script>
             <div class="dark-mode-container mobile-invisible mobile-toggle">
                 <label class="dark-mode-switch">
-                    <input type="checkbox" id="dark-mode-toggle" />
+                <input type="checkbox" id="dark-mode-toggle" />
                     <span class="slider">
-                        <!-- actual image instead of pseudo-element -->
                         <img
                         id="dark-mode-icon"
+                        src="/images/sun_black.png"
                         data-light="/images/sun_black.png"
                         data-dark="/images/moon_white.png"
                         alt="mode icon"
