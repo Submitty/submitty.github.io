@@ -1,3 +1,5 @@
+@import "colors";
+
 input::-ms-clear,
 input::-ms-reveal {
 	display: none !important;
@@ -6,7 +8,6 @@ input::-ms-reveal {
 body {
 	height: auto;
 	overflow-x: hidden;
-	background-color: $body-background-color;
 
 	&.nav-open {
 		overflow: hidden;
@@ -14,7 +15,8 @@ body {
 		nav,
 		header > form,
 		header > ul,
-                div#nav-tree {
+        div#nav-tree,
+		.dark-mode-container {
 			display: block;
 		}
 
@@ -25,7 +27,6 @@ body {
 
 	&::before {
 		content: "";
-		background-color: $content-background-color;
 		position: fixed;
 		top: 0;
 		right: 0;
@@ -53,7 +54,6 @@ body {
 		&::after {
 			left: 0;
 			width: $nav-width;
-			background-color: $nav-background-color;
 		}
 
 		#search-input,
@@ -64,7 +64,6 @@ body {
 		&::before {
 			left: $nav-width;
 			right: 0;
-			background-color: $content-background-color;
 		}
 	}
 }
@@ -98,7 +97,6 @@ header {
 	right: 0;
 	overflow-x: hidden;
 	z-index: 1;
-	background-color: $nav-background-color;
 
 	ul {
 		list-style-type: none;
@@ -110,8 +108,7 @@ header {
 		padding: $emblem-vertical-padding $emblem-horizontal-padding;
 		//height: $nav-header-height;
 		box-sizing: border-box;
-		background-color: $brand-colour;
-		color: #FFF;
+		color: var(--content-color);
 		margin: 0;
 		font-size: 1.7rem;
 		line-height: 0.8;
@@ -141,7 +138,7 @@ header {
 	}
 
 	.open-nav {
-	        background-color: transparent;
+	    background-color: transparent;
 		background-size: 100%;
 		width: $emblem-size;
 		height: $emblem-size;
@@ -179,8 +176,7 @@ header {
 
 .content {
 	position: relative;
-	background-color: $content-background-color;
-	color: $content-color;
+	color: var(--content-color);
 
 	h3::before {
 		content: "";
@@ -234,7 +230,8 @@ header {
 nav,
 header > form,
 header > ul,
-div#nav-tree {
+div#nav-tree,
+.dark-mode-container {
 	display: none;
 
 	@media (min-width: $mobile-break) {
@@ -350,8 +347,6 @@ h3 + .warning {
 
 
 h4 code {
-	background: $nav-background-color;
-	color: $content-color;
 	background-color: transparent;
 	font-weight: 700;
 	padding: 0;
@@ -378,7 +373,7 @@ h4 svg {
 	position: absolute;
 	top: 5px;
 	line-height: 1;
-	color: $brand-colour;
+	color: var(--brand-color);
 	padding-left: 5px;
 }
 
@@ -418,7 +413,7 @@ h4 svg {
 
 	&:focus {
 		outline: none;
-		border-left-color: $brand-colour;
+		border-left-color: var(--brand-color);
 	}
 }
 
@@ -446,7 +441,7 @@ h4 svg {
 	font-weight: bold;
 
 	&.major {
-		background: $brand-colour;
+		background: var(--brand-color);
 		color: #fff;
 	}
 }
@@ -456,8 +451,8 @@ blockquote {
 	padding: 10px 15px;
 	margin-left: -15px;
 	margin-right: -10px;
-	background-color: $brand-colour-light;
-	border-color: $brand-colour;
+	background-color: var(--brand-color);
+	border-color: var(--brand-color);
 
 	p:last-child {
 		margin-bottom: 0;

@@ -1,0 +1,41 @@
+// _sass/_colors.scss
+
+// Light theme tokens
+:root {
+  --body-bg:           #ffffff;
+  --content-bg:        #ffffff;
+  --link-color:        #4A4A4A;
+  --standard-black:    #000000;
+  --content-color:     #222222;
+  --nav-bg:            #f6fbfe;
+  --nav-text:          #666666;
+  --nav-selected:      #d9edf7;
+  --brand-color:       #f6fbfe;
+  --page-header:       #888888;  
+  --inline-code-color: #393318;
+  --inline-code-bg:    #F0F0F0;
+  --even-table:        #FCFCFC;
+
+  --toggle-thumb: #ffffff;
+  --toggle-track: #ccc;
+}
+
+// Dark theme overrides
+:root[data-theme="dark"] {
+  --body-bg:           #36393f;
+  --content-bg:        #36393f;
+  --link-color:        #bbbbbb;
+  --standard-black:    #ffffff;
+  --content-color:     #ffffff;
+  --nav-bg:            #202225;
+  --nav-text:          #cccccc;
+  --nav-selected:      #535353;
+  --brand-color:       #000000;
+  --page-header:       #999999;
+  --inline-code-color: #FFFFFF;
+  --inline-code-bg:    #535353;
+  --even-table:        #2f3137;
+
+  --toggle-thumb: #000000;
+  --toggle-track:  #4d4d4d;
+}
