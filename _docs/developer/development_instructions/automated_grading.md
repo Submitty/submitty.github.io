@@ -118,11 +118,13 @@ number:
 
 ---
 
-## Debugging 
+## Debugging
 
 To debug new features for autograding, it can be helpful to run
 `submitty_autograding_shipper.py` and `submitty_autograding_worker.py`
 interactively and inspect the output.
+
+_NOTE: A cron job runs hourly to detect autograding shipper outages on the primary machine. To avoid interference during debugging, this job should be disabled before proceeding. See [Capture Cron Error Messages](/sysadmin/installation/system_customization#capture-cron-error-messages) for instructions on disabling the script._
 
 To do this:
 

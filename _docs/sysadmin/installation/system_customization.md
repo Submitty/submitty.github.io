@@ -28,10 +28,25 @@ You may want to back up more of `/var/local/submitty` to save configurations and
 
 ## Capture cron error messages
 
-The `submitty_daemon` user runs the [sbin/send_email.py](https://github.com/Submitty/Submitty/blob/master/sbin/send_email.py)
-script.  Console output from this script can be emailed to a sysadmin to help ensure that errors can be reported and addressed.
+To ensure the reliability of the various Submitty services, such as the WebSocket server, their health status is monitored and restarted hourly via the [sbin/repair_services.sh](https://github.com/Submitty/Submitty/blob/master/sbin/repair_services.sh) script run by the `submitty_daemon` user. This script leverages `systemctl` along with various health-check utility scripts to verify the active state of these services, triggering a restart if an inactive state is detected.
 
-The first line should be set as `MAILTO=` with a valid email address.  For example:
+Service failures can occur for various reasons, including unhandled exceptions, memory leaks, port binding issues, or OS-level disruptions such as resource exhaustion. All failures are logged with their relevant timestamp, source, and last output within the `/var/log/services` directory for the given day in the format `YYYYMMDD.txt`.
+
+To disable this auto-repair mechanism, comment out the relevant line in the source `.setup/submitty_crontab` file within your repository. Since the crontab is auto-generated during installation, any changes must be followed by a re-run of `submitty_install` to persist them.
+
+```bash
+# In .setup/submitty_crontab, comment out the repair_services.sh line:
+# 0 * * * * submitty_daemon   sudo /usr/local/submitty/sbin/repair_services.sh
+
+# Then re-apply the configuration:
+$ submitty_install
+```
+
+_Note: This mechanism should only be disabled with caution in production environments._
+
+The `submitty_daemon` user runs a variety of other scripts, such as [sbin/send_email.py](https://github.com/Submitty/Submitty/blob/master/sbin/send_email.py) to send pending emails every minute. Console output from these scripts can be emailed to a sysadmin to help ensure that errors can be reported and addressed.
+
+The first line of the relevant script should be set as `MAILTO=` with a valid email address, as shown below.
 ```
 MAILTO=sysadmins@lists.myuniversity.edu
 * * * * * python3 /usr/local/submitty/sbin/send_email.py
