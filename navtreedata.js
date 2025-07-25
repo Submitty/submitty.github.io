@@ -154,6 +154,7 @@ var NAVTREE =
                 [ "Ansible Server Installation", "/sysadmin/installation/ansible", null ],
                 [ "Version Notes", "/sysadmin/installation/version_notes/index", [
                     [ "Overview", "/sysadmin/installation/version_notes/index", null],
+                    [ "v25.07.01", "/sysadmin/installation/version_notes/v25.07.01", null ],
                     [ "v23.12.02", "/sysadmin/installation/version_notes/v23.12.02", null ],
                     [ "v23.07.00", "/sysadmin/installation/version_notes/v23.07.00", null ],
                     [ "v23.03.01", "/sysadmin/installation/version_notes/v23.03.01", null ],
