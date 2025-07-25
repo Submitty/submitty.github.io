@@ -1,5 +1,6 @@
 ---
 title: Linting / Static Analysis
+category: Developer > Development Instructions > Continuous Integration Testing
 ---
 
 To ensure the [Coding Standards](/developer/coding_style_guide) of Submitty, we use a mixture
@@ -57,7 +58,7 @@ The following instructions were tested for Windows:
 
 1. First, you will need PHP installed on your host system first. See [Installing PHP](/developer/testing/install_php)*
 
-2. Next, you will need [Composer](https://getcomposer.org/doc/00-intro.md) installed on your host system as well.
+2. Next, you will need [Composer](https://getcomposer.org/download/) installed on your host system as well.
 	During this install, you will need to change settings in a php.ini file. Change the settings the prompt recommends.
 
 3. Run ``composer global require slevomat/coding-standard`` and ``composer global require "squizlabs/php_codesniffer=*"`` inside your terminal.
@@ -126,9 +127,13 @@ submitty_test php-lint --memory-limit 2G
 
 ## JavaScript Linting
 
-The frontend JavaScript code Submitty uses is linted using [eslint](https://eslint.org/).
+The frontend JavaScript code Submitty uses is linted using [eslint](https://eslint.org/). As with the PHP linter, `submitty_test` can be used as an alias for the `SUBMITTY_TEST.sh` script.
 
-You can run eslint on your host system or on vagrant by navigating into the `site/`
+```bash
+submitty_test js-lint
+```
+
+Alternatively, you can run eslint on your host system or on vagrant by navigating into the `site/`
 directory and running:
 
 ```bash
@@ -152,9 +157,13 @@ See also: [JavaScript Style Guide](/developer/coding_style_guide/javascript)
 
 ## CSS Linting
 
-CSS is linted using [stylelint](https://stylelint.io/) in Submitty to enforce a consistent code style.
+CSS is linted using [stylelint](https://stylelint.io/) in Submitty to enforce a consistent code style. As with the PHP linter, `submitty_test` can be used as an alias for the `SUBMITTY_TEST.sh` script.
 
-You can run stylelint on your host system or on vagrant by navigating into the `site/`
+```bash
+submitty_test css-lint
+```
+
+Alternatively, you can run stylelint on your host system or on vagrant by navigating into the `site/`
 directory and running:
 
 ```bash

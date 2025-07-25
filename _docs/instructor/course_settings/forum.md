@@ -10,7 +10,7 @@ See also [Student -- Communication -- Discussion Forum](/student/communication/f
 
 ## Enabling the Discussion Forum
 
-To enable the Discussion Forum for a course, an instructor user must
+To enable the Discussion Forum for a course, an instructor user
 should select the "Course Settings" page from the left sidebar, and
 then click the checkbox next to "Enable Discussion Forum".  This will
 add the "Discussion Forum" page to the left sidebar for both students
@@ -29,9 +29,7 @@ communication between students and the teaching staff.
    thumbtack to indicate their importance.
 
    Instructors can also choose to send the announcement as a Submitty
-   system email to all members of the course, if [ ]() 
-
-also by email, if [configured on the server](/sysadmin/email_configuration).
+   system email to all members of the course if [configured to do so on the server](/sysadmin/email_configuration).
 
 * **Post Edit History** users have the ability to edit their
    post. Members of the teaching staff have the ability to view each

@@ -7,7 +7,7 @@ end
 
 gem 'wdm', '>= 0.1.1' if Gem.win_platform?
 
-gem "webrick", "~> 1.8"
+gem "webrick", "~> 1.9"
 
 gem 'html-proofer', "~> 3.19.4"
 
