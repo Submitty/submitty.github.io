@@ -1,5 +1,6 @@
 ---
 title: PHP Unit Tests
+category: Developer > Development Instructions > Continuous Integration Testing
 ---
 
 To validate the unit behavior of the site code, we utilize 
@@ -8,33 +9,37 @@ To validate the unit behavior of the site code, we utilize
 
 ### Running PHP Unit Tests
 
-*You will need PHP installed on your host system first, see [Installing PHP](/developer/testing/install_php)*
+*If you are running on WSL and are seeing errors, remove `php` from the following commands.*
 
-To run the PHP unit test suite locally, `cd` to the `Submitty/site` directory and type:
-
-If you are running on WSL and are seeing errors, remove "`php`" from the following commands.
+To run the PHP unit test suite in VM use the alias
 
 ```
-php vendor/bin/phpunit
+submitty_test php-unit
+```
+
+or
+
+```
+sudo -u submitty_php php vendor/bin/phpunit
 ```
 
 To run just an individual class or test, you can use the `--filter` flag on PHPUnit.
 For example, to run the function `testInvalidProperty` would be
-`php vendor/bin/phpunit --filter testInvalidProperty` and running all
+`sudo -u submitty_php php vendor/bin/phpunit --filter testInvalidProperty` and running all
 of `AccessControlTester` would be
 `php vendor/bin/phpunit--filter AccessControlTester`. Be aware, filter
 can match against partial strings, so if you have two tests `testFoo` and `testFooBar`,
 running `--filter testFoo` will run them both. Alternatively, you can also directly run
 `phpunit` against a specific class by passing the path to the test class directly to
 `phpunit`, for example
-`php vendor/bin/phpunit tests/app/authentication/DatabaseAuthenticationTester.php` will run
+`sudo -u submitty_php php vendor/bin/phpunit tests/app/authentication/DatabaseAuthenticationTester.php` will run
 only the test methods in `DatabaseAuthenticationTester.php`.
 
 The two concepts above can be combined to run a specific test function in a specific
 class by doing:
 
 ```bash
-vendor/bin/phpunit --filter testFunction tests/app/path/to/TestClass.php
+sudo -u submitty_php php vendor/bin/phpunit --filter testFunction tests/app/path/to/TestClass.php
 ```
 
 You can pass in the `--debug` flag when using PHPUnit to see PHP output, this can be

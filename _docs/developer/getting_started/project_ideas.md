@@ -5,26 +5,21 @@ redirect_from:
   - /developer/project_ideas
 ---
 
-[comment]: <> Submitty has been a participating organization of
-[comment]: <> [Google Summer of Code](https://summerofcode.withgoogle.com/)
-[comment]: <> for five successful seasons.
 
-We are thrilled to announce that Submitty has been accepted to [Google
-Summer of Code (GSoC) 2024](https://summerofcode.withgoogle.com/).
-See [Submitty GSoC Application &
-Reports](/developer/google_summer_of_code/index) for more information
-about the application process and to read reports from Submitty GSoC
-contributors in past summers.
+[comment]: <> We are thrilled to announce that Submitty has been accepted to [Google
+[comment]: <> Summer of Code (GSoC) 20XX](https://summerofcode.withgoogle.com/).
+[comment]: <> See [Submitty GSoC Application &
+[comment]: <> Reports](/developer/google_summer_of_code/index) for more information
+[comment]: <> about the application process and to read reports from Submitty GSoC
+[comment]: <> contributors in past summers.
 
-[comment]: <> We have applied for selection for
-[comment]: <> Summer 2024 and our Project Ideas list below has been updated.  The
-[comment]: <> organizations selected for Summer 2024 Google Summer of Code will be
-[comment]: <> announced in late February.
-
-[comment]: <> _NOTE: The organizations selected for Summer 2023 Google Summer of
-[comment]: <>   Code will be announced in late February.  The instructions below
-[comment]: <>    are from 2022 and will be updated if Submitty is accepted!_
-
+[comment]: <> Submitty has been a participating organization of [Google Summer of
+[comment]: <> Code](https://summerofcode.withgoogle.com/) for six successful
+[comment]: <> seasons.  [We have applied for selection for Summer 20XX](/developer/google_summer_of_code/index)
+[comment]: <> and our
+[comment]: <> Project Ideas list below has been updated.  The organizations selected
+[comment]: <> for Summer 20XX Google Summer of Code will be announced in late
+[comment]: <> February.
 
 The project ideas listed below target a variety of different topics
 and require different levels of prior experience.  The scope of these
@@ -42,7 +37,43 @@ developers.
 &nbsp;    
   
 
-1. **Expand Testing of the Manual/TA Rubric Grading Interface**
+1. **Interactive User Interfaces With Vue.js**
+
+   Submitty primarily uses server-side rendering via Twig. jQuery is
+   used extensively throughout the site to add interactivity, but it
+   is insufficient for the most complex pages.  Instead, we think
+   Vue.js is a better path forward for pages such as the TA grading
+   interface, discussion forum, office hours queue, and rainbow grades
+   customization interface.  The goal of this project is to explore
+   how we can add and improve interactivity to specific pages and
+   support future development efforts involving the use of Vue.js
+   within Submitty's codebase.
+
+   _Expected Outcomes_: This project is flexible in both scope and size.
+   A successful proposal should include detailed information about the
+   specific pages and components to be converted, including time estimates
+   for the proposed conversion projects and common core logic improvements.
+   Participants will gain a better understanding of the challenges involved
+   in introducing new technologies to a large existing codebase, gain
+   experience architecting a key part of a large project, and grow their
+   knowledge of modern web frameworks.
+
+   [Ongoing Work to Incorporate Vue.js](https://github.com/Submitty/Submitty/pulls?q=is%3Apr+vue+is%3Aclosed+)  
+   [Open Issues related to Vue.js](https://github.com/Submitty/Submitty/issues?q=is%3Aissue%20state%3Aopen%20vue%20)
+
+   _Skills & Experience Required_: Moderate to advanced programming
+   skills, preferably with experience using modern client-side web
+   frameworks. 
+
+   _Possible Mentors_: William Allen, Shail Patel, Chris Reed, Barb Cutler  
+   _GSoC Project Size_: 175 or 350 hours  
+   _Difficulty Level_:  medium to challenging
+
+   &nbsp;
+
+
+
+2. **Expand Testing of the Manual/TA Rubric Grading Interface**
 
    [Overview of Rubric Grading Interface](/grader/rubric_grading/index)
 
@@ -52,7 +83,11 @@ developers.
    tested by automated unit and end-to-end (Cypress) regression testing.
 
    [Open Issues related to TA Grading](https://github.com/Submitty/Submitty/issues?q=is%3Aopen+is%3Aissue+label%3A%22TA+Grading+%2F+TA+UI%22)  
-   [Open Issues related to Sample Data](https://github.com/Submitty/Submitty/issues?q=is%3Aopen+is%3Aissue+label%3A%22Sample+Data%22)
+   [Open Issues related to Sample Data](https://github.com/Submitty/Submitty/issues?q=is%3Aopen+is%3Aissue+label%3A%22Sample+Data%22)  
+   [Related Prior GSoC Project: Cameron Peterson](/developer/google_summer_of_code/2023_Cameron_Peterson)  
+   [Related Prior GSoC Project: Rahul Vishwakarma](/developer/google_summer_of_code/2024_Rahul_Vishwakarma)
+
+   _Note: This project may be combined with the previous project idea._
 
    _Expected Outcomes_: The primary goals for this project include the
    expansion of our automated testing of the TA Grading pages and to
@@ -68,20 +103,18 @@ developers.
    teaching assistant with grading experience design will be
    beneficial.
 
-   _Possible Mentors_: William Allen, Nia Heermance, Barb Cutler
-
-   _GSoC Project Size_: 90 or 175 hours
-
+   _Possible Mentors_: William Allen, Cameron Peterson, Barb Cutler  
+   _GSoC Project Size_: 90 or 175 hours  
    _Difficulty Level_: introductory to medium
 
    &nbsp;    
 
 
-2. **Refactor and Performance Improvements for the Manual/TA Rubric Grading Interface**
+3. **Refactor and Performance Improvements for the Manual/TA Rubric Grading Interface**
 
    [Overview of Rubric Grading Interface](/grader/rubric_grading/index)
 
-   _Note: This project may be combined with the previous project idea._
+   _Note: This project may be combined with one of the previous project ideas._
 
    The Manual/TA rubric grading interface is elaborate,
    highly-featured, and customizable; however, the performance of
@@ -112,16 +145,14 @@ developers.
    and and having served as a teaching assistant with grading
    experience design is beneficial but not required.
 
-   _Possible Mentors_: Nia Heermance, William Allen, Barb Cutler
-
-   _GSoC Project Size_: 175 or 350 hours
-
+   _Possible Mentors_: William Allen, Barb Cutler  
+   _GSoC Project Size_: 175 or 350 hours  
    _Difficulty Level_: medium to challenging
 
    &nbsp;
 
 
-3. **Notebook Builder: UI To Streamline Instructor Configuration of Automated Grading**
+4. **Notebook Builder: UI To Streamline Instructor Configuration of Automated Grading**
 
    Our system for automated testing and grading of student work is
    very powerful, but the configuration process that instructors must
@@ -147,7 +178,8 @@ developers.
    in compiled languages.
 
    [Open Issues related to Autograding](https://github.com/Submitty/Submitty/labels/Autograding)  
-   [Open Issues related to Notebook / Notebook Builder](https://github.com/Submitty/Submitty/issues?q=is%3Aopen+is%3Aissue+label%3A%22Notebook+%2F+Notebook+Builder%22)
+   [Open Issues related to Notebook / Notebook Builder](https://github.com/Submitty/Submitty/issues?q=is%3Aopen+is%3Aissue+label%3A%22Notebook+%2F+Notebook+Builder%22)  
+   [Related Prior GSoC Project: Sahil Suman](/developer/google_summer_of_code/2024_Sahil_Suman)
 
    _Expected Outcomes_: The primary focus of the project is the
    revision and expansion of the Notebook Builder UI to increase the
@@ -165,15 +197,13 @@ developers.
    instructor with experience in programming assignment design will be
    beneficial but not required.
 
-   _Possible Mentors_: Barb Cutler, Chris Reed
-
-   _GSoC Project Size_: 90 or 175 or 350 hours
-
+   _Possible Mentors_: Barb Cutler, Chris Reed  
+   _GSoC Project Size_: 90 or 175 or 350 hours  
    _Difficulty Level_: introductory or medium
 
    &nbsp;    
 
-4. **Expansion of Examples and Documentation of Intermediate and Advanced Autograding Features**
+5. **Expansion of Examples and Documentation of Intermediate and Advanced Autograding Features**
 
    _Note: This project is related to previous project idea but is a distinct project._
 
@@ -187,7 +217,7 @@ developers.
    [Assignment Autograding Configuration Instructions](/instructor/autograding/specification)  
    [Submitty Autograding Tutorial Examples](https://github.com/Submitty/Tutorial)  
    [Additional Autograding Examples](https://github.com/Submitty/Submitty/tree/master/more_autograding_examples)  
-   [Prior GSoC Project: Drumil Patel](/developer/google_summer_of_code/2019_DrumilPatel)  
+   [Related Prior GSoC Project: Drumil Patel](/developer/google_summer_of_code/2019_DrumilPatel)  
    
    We would like to reduce the learning curve for new instructors and
    provide more tutorial examples of autograding for instructors
@@ -202,7 +232,8 @@ developers.
    [Open Issues related to Docker Image Autograding](https://github.com/Submitty/Submitty/issues?q=label%3A%22Docker+Container+Autograding%22+)  
    [Docker Images for Autograding Common Programming Languages](https://github.com/Submitty/DockerImages/tree/main)  
    [Example Custom Docker Images University ](https://github.com/Submitty/DockerImagesRPI/tree/main/dockerfiles)  
-   [Sample Java Assignments](/instructor/autograding/sample_assignments)
+   [Sample Java Assignments](/instructor/autograding/sample_assignments)  
+   [Related Prior GSoC Project: Nithish Reddy Banda](/developer/google_summer_of_code/2024_Nithish_Reddy_Banda)
 
    _Expected Outcomes_: The project should begin with a review and
    organization of existing sample and tutorial assignments and
@@ -221,16 +252,15 @@ developers.
    Having served as a teaching assistant or instructor with experience
    in programming assignment design will be beneficial.
 
-   _Possible Mentors_: Chris Reed, Barb Cutler
-
-   _GSoC Project Size_: 175 or 350 hours
-
+   _Possible Mentors_: Shail Patel, Chris Reed, Barb Cutler  
+   _GSoC Project Size_: 175 or 350 hours  
    _Difficulty Level_: medium to challenging
 
    &nbsp;
         
 
-5. **AI/ML to Enhance and Steamline Manual / TA Grading**
+
+6. **AI/ML to Enhance and Streamline Manual / TA Grading**
 
    The use of a unified and retroactively editable rubric for
    manual/TA grading can ensure consistency when grading large
@@ -285,15 +315,14 @@ developers.
    large course with manual grading experience design will be
    beneficial.
    
-   _Possible Mentors_: Barb Cutler, William Allen, Nia Heermance
-
-   _GSoC Project Size_: 175 or 350 hours
-
+   _Possible Mentors_: Barb Cutler, William Allen  
+   _GSoC Project Size_: 175 or 350 hours  
    _Difficulty Level_:  medium to challenging
 
-   &nbsp;    
+   &nbsp;
 
-6. **Other Topics**
+
+7. **Other Topics**
 
    The Submitty team welcomes GSoC project proposals on other topics
    related to items in our GitHub issue tracker.  A successful
@@ -307,10 +336,8 @@ developers.
    willingness to learn web and database development, and additional
    specific skills as appropriate.
    
-   _Possible Mentors_: Barb Cutler, Matthew Peveler, Shail Patel,  William Allen, Chris Reed, Nia Heermance, Preston Carman
-
-   _GSoC Project Size_: 90 or 175 or 350 hours
-
+   _Possible Mentors_: Barb Cutler, William Allen, Shail Patel, Cameron Peterson, Chris Reed, Matthew Peveler, Preston Carman  
+   _GSoC Project Size_: 90 or 175 or 350 hours  
    _Difficulty Level_:  introductory to medium to challenging
    
 &nbsp;    

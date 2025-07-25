@@ -62,6 +62,12 @@ redirect_from:
   /var/log/nginx/error.log
   ```
 
+* Look for errors in the daily service outage log
+
+  ```
+  /var/local/submitty/logs/services/YYYYMMDD.txt
+  ```
+
 * Check the SSL keys / certificates for apache & nginx.
   Look for ssl key & certificate files specified in the enabled
   `.conf` files for apache & nginx:

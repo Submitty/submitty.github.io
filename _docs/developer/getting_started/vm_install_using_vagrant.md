@@ -121,9 +121,10 @@ M-Series ARM MacOS machines.*
    * You will need:     
       * [Ruby](https://www.ruby-lang.org/en/downloads)  
       * [Git](https://git-scm.com/downloads)  
-      * [Vagrant](https://www.vagrantup.com)  
+      * [Vagrant](https://developer.hashicorp.com/vagrant/install)
       * *M-SERIES ARM MacOS:* [QEMU](https://www.qemu.org)  
-      * *EVERYONE ELSE:* [VirtualBox](https://www.virtualbox.org/wiki/Download_Old_Builds_6_1)  
+      * *EVERYONE ELSE:* [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+          * Ensure VirtualBox version is compatible with Vagrant.
    
    
    * **MacOS**  
@@ -145,8 +146,8 @@ M-Series ARM MacOS machines.*
       ```
 
    * **Windows**  
-      *You can just go to the respective sites and download the necessary binaries.*
-
+      Download the latest Vagrant AMD64 binary for windows.
+      *As of Vagrant version 2.4.7, Virtualbox 7.1.10 is compatible.*
 
    * **Ubuntu/Debian**
 
