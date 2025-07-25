@@ -58,6 +58,7 @@ var NAVTREE =
             ] ],
             [ "Communication", "/student/communication/forum", [
                 [ "Discussion Forum", "/student/communication/forum", null ],
+                [ "Live Chat", "/student/communication/live_chat", null ],
                 [ "Office Hours Queue", "/student/communication/office_hours_queue", null ],
                 [ "Writing Markdown", "/student/communication/markdown", null ]
             ] ]
@@ -83,6 +84,7 @@ var NAVTREE =
             [ "Course Settings", "/instructor/course_settings/index", [
                 [ "Overview", "/instructor/course_settings/index", null ],
                 [ "Discussion Forum", "/instructor/course_settings/forum", null ],
+                [ "Live Chat", "/instructor/course_settings/live_chat", null ],
                 [ "Submini Polling", "/instructor/course_settings/submini_polls", null ],
                 [ "Office Hours Queue", "/instructor/course_settings/queue", null ],
                 [ "Grade Inquiries", "/instructor/course_settings/grade_inquiries", null ],
@@ -125,10 +127,12 @@ var NAVTREE =
                 [ "Phases of Autograding", "/instructor/autograding/phases", null ],
                 [ "Autograding Specification", "/instructor/autograding/specification", null ],
                 [ "Distributed / Networked Applications", "/instructor/autograding/networking", null ],
+                [ "System Call Filtering", "/instructor/autograding/system_call_filtering", null ],
                 [ "Graphics Applications", "/instructor/autograding/graphics", null ],
                 [ "Validation", "/instructor/autograding/validation", null ],
                 [ "Batch Regrade Submissions", "/instructor/autograding/batch_regrade", null ],
                 [ "Sample Assignments", "/instructor/autograding/sample_assignments", null ],
+                [ "Hidden Testcase Examples", "/instructor/autograding/hidden_testcase_examples", null ],
                 [ "Docker Images", "/instructor/autograding/docker_images", null ],
                 [ "Docker UI", "/instructor/autograding/docker_ui", null ],
                 [ "Static Analysis", "/instructor/autograding/static_analysis/index", [
@@ -272,6 +276,12 @@ var NAVTREE =
             ] ],
             [ "Rensselaer Center for Open Source", "/developer/rensselaer_center_for_open_source/moorthy", [
                 [ "Moorthy", "/developer/rensselaer_center_for_open_source/moorthy", null ],
+                [ "2025 Williams Chen",    "/developer/rensselaer_center_for_open_source/2025_Williams_Chen", null ],
+                [ "2025 Jeffrey Cordero",    "/developer/rensselaer_center_for_open_source/2025_Jeffrey_Cordero", null ],
+                [ "2025 Alexander Lavallee",    "/developer/rensselaer_center_for_open_source/2025_Alexander_Lavallee", null ],
+                [ "2025 Justin Manion",    "/developer/rensselaer_center_for_open_source/2025_Justin_Manion", null ],
+                [ "2025 Giancarlo Martinelli",    "/developer/rensselaer_center_for_open_source/2025_Giancarlo_Martinelli", null ],
+                [ "2025 Christopher Poon",    "/developer/rensselaer_center_for_open_source/2025_Christopher_Poon", null ],
                 [ "2024 Dorian Bilelis",    "/developer/rensselaer_center_for_open_source/2024_Dorian_Bilelis", null ],
                 [ "2024 Jaeseok Kang",    "/developer/rensselaer_center_for_open_source/2024_Jaeseok_Kang", null ],
                 [ "2024 Michael Papadopoulos",    "/developer/rensselaer_center_for_open_source/2024_Michael_Papadopoulos", null ],
