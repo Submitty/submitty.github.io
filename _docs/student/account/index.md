@@ -11,11 +11,20 @@ favorite web browser.
 
 ![](/images/Login.png)
 
-Have your login credentials ready.  (Again, your instructor should
-provide this information.)  If you have trouble
+Have your login credentials ready.  Again, your instructor or
+university should provide this information.  If you have trouble
 authenticating/accessing the page, double check the URL and your
 username and password, and contact the instructor, TA, or system
 administrator as appropriate.
+
+If your school allows for users to create their own accounts, your
+login page will include a button "New to Submitty? Sign up now!".
+
+![](/images/Login_self_account_creation.png)
+
+Click that button and follow the instructions to specify your email address,
+given name, family name, and choose your Submitty User ID and Password.
+
 
 
 ## My Courses

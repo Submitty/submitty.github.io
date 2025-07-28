@@ -179,6 +179,7 @@ var NAVTREE =
                 [ "Course Creation", "/sysadmin/configuration/course_creation", null ],
                 [ "Ansible Course Creation", "/sysadmin/configuration/ansible_course_creation", null ],
                 [ "Setting up Version Control", "/sysadmin/configuration/version_control", null ],
+                [ "Self Account Creation", "/sysadmin/configuration/self_account_creation", null ],
                 [ "SAML Authentication", "/sysadmin/configuration/saml_authentication", null ],
                 [ "Email Configuration", "/sysadmin/configuration/email_configuration", null ],
                 [ "Registration Feed", "/sysadmin/configuration/registration_feed", null ],
