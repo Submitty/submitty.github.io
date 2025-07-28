@@ -611,3 +611,15 @@ please follow the step below:
 The script should automatically handle the upgrading and issuing a self-signed
 certificate.  If your browser complains about the security, please head to
 [WebSocket](/developer/developing_the_php_site/websocket).
+
+---
+
+## Increasing VM Resources
+If you find that the VM is running slowly, you can increase the resources allocated to it. By default the VM is allocated 2GB of RAM and 2 CPUs. You can increase these values by setting the `VM_MEMORY` and `VM_CPUS` environment variables before running `vagrant up`. For example, to allocate 4GB of RAM and 4 CPUs, you can run:
+
+```sh
+export VM_MEMORY=4096
+export VM_CPUS=4
+vagrant up
+```
+If your system has 8GB of RAM it is recommended to set `VM_MEMORY` to 4096 (4GB) and `VM_CPUS` to 2 or 4. If your system has more RAM, you can increase these values further, but be careful not to allocate too much RAM as it may cause your host system to become unresponsive.
