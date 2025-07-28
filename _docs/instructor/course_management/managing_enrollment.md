@@ -54,6 +54,10 @@ Once the user registers for the course, the instructor(s) will receive an email 
 3. Check the checkbox for `Enable Self Registration`.
 4. (Optional) Select the default section you want users to be added to. This defaults to the first section. This can also be edited in the `Manage Sections` page.
 
+A related feature allows new users to make an account on your server.  
+See also [System Administrator instructions to enable Self Account Creation](/sysadmin/configuration/self_account_creation)
+
+
 ### Add students one-at-a-time
 
 1.  Instructors can add students to their course from the "Students"
