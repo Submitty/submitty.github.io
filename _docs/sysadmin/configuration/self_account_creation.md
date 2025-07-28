@@ -15,8 +15,8 @@ See also [Managing Enrollment](/instructor/course_management/managing_enrollment
 
 ### Enable Self Account Creation
 
-To enable self account creation, manually edit the
-`/usr/locl/submitty/config/submitty.json` configuration file. By
+To enable self account creation if you already have a Submitty instance setup, manually edit the
+`/usr/local/submitty/config/submitty.json` configuration file. By
 default, `user_create_account` is set to `false`. To enable it, change
 this to `true`.  You will also need to add configuration settings for
 `"user_id_requirements"`:
@@ -53,7 +53,7 @@ this to `true`.  You will also need to add configuration settings for
 * If `require_name` is true, then the `user_id` must start with and contain a
 certain amount of characters from the given name and/or family name.
 
-* If the user does not have the character amount for the given part of the name, then !add fix!
+* If the user does not have the character amount for the given part of the name, it will accept shorter usernames. (e.g. James Wo -> woja, and James Joseph -> joseja)
 
 * `given_first` determines whether the given name or family name must come first. (e.g. Test User -> userte vs teuser)
 
