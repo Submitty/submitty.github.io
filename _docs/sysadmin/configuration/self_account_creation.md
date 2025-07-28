@@ -1,29 +1,31 @@
 ---
-category: Student > Courses & Profile
+category: System Administrator > Configuration & Administration
 title: Self Account Creation
 ---
 
+The feature of User Account Creation (a.k.a. Self Account Creation) is
+only available on systems that use DatabaseAuthentication.
+
+To change authentication types, either re-run `CONFIGURE_SUBMITTY.py`
+or manually edit `/usr/local/submitty/config/authentication.json` and
+change the authentication method to `DatabaseAuthentication`.
+
+See also [Managing Enrollment](/instructor/course_management/managing_enrollment)
+
+
 ### Enable Self Account Creation
 
-There are two steps to enable self account creation, Firstly you have to manually edit the submitty.json configuration file. The default location for this
-file is `/usr/local/submitty/config/submitty.json`. By default, `self_account_creation_allowed` is set to `false`. To enable it, change this to `true`. Secondly,
-you have to be using DatabaseAuthentication. To change authentication types, either re-run CONFIGURE_SUBMITTY.py or edit /usr/local/submitty/config/authentication.json and change the authentication method to any of the methods. You should be able to leave all other settings to the default.
- *Warning* This will disallow all users who are not in the database from being able to login, so this should only be used if you are only using database authentication. 
+To enable self account creation, manually edit the
+`/usr/locl/submitty/config/submitty.json` configuration file. By
+default, `user_create_account` is set to `false`. To enable it, change
+this to `true`.  You will also need to add configuration settings for
+`"user_id_requirements"`:
 
-### Email and User ID Requirements
-
-Below are the current accepted requirements for user_ids. 
-* If `all` is set to `true`, then `length` parameters are the only parameters checked. 
-
-* If `require_name` is true, then the user_id must start with and contain a certain amount of characters from the given name and/or family name. 
-
-* If the user does not have the character amount for the given part of the name, then !add fix!
-
-* `given_first` determines whether the given name or family name must come first. (e.g. Test User -> userte vs teuser)
 
 ```json
+"user_create_account": true,
 "user_id_requirements": {
-    "all": true,
+    "any_user_id": true,
     "require_name": false,
     "min_length": 6,
     "max_length": 25,
@@ -37,13 +39,21 @@ Below are the current accepted requirements for user_ids.
       "whole_email": false,
       "whole_prefix": false,
       "prefix_count": 6
-    }
+    },
+    "accepted_emails": [
+      "gmail.com"
+    ]
 }
 ```
 
-```json
-"accepted_emails": {
-    "gmail.com": true,
-    "rpi.edu": true
-}
-```
+
+### Email and User ID Requirements
+
+
+* If `require_name` is true, then the `user_id` must start with and contain a
+certain amount of characters from the given name and/or family name.
+
+* If the user does not have the character amount for the given part of the name, then !add fix!
+
+* `given_first` determines whether the given name or family name must come first. (e.g. Test User -> userte vs teuser)
+
