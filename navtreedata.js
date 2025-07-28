@@ -154,6 +154,7 @@ var NAVTREE =
                 [ "Ansible Server Installation", "/sysadmin/installation/ansible", null ],
                 [ "Version Notes", "/sysadmin/installation/version_notes/index", [
                     [ "Overview", "/sysadmin/installation/version_notes/index", null],
+                    [ "v25.07.01", "/sysadmin/installation/version_notes/v25.07.01", null ],
                     [ "v23.12.02", "/sysadmin/installation/version_notes/v23.12.02", null ],
                     [ "v23.07.00", "/sysadmin/installation/version_notes/v23.07.00", null ],
                     [ "v23.03.01", "/sysadmin/installation/version_notes/v23.03.01", null ],
@@ -275,6 +276,12 @@ var NAVTREE =
             ] ],
             [ "Rensselaer Center for Open Source", "/developer/rensselaer_center_for_open_source/moorthy", [
                 [ "Moorthy", "/developer/rensselaer_center_for_open_source/moorthy", null ],
+                [ "2025 Williams Chen",    "/developer/rensselaer_center_for_open_source/2025_Williams_Chen", null ],
+                [ "2025 Jeffrey Cordero",    "/developer/rensselaer_center_for_open_source/2025_Jeffrey_Cordero", null ],
+                [ "2025 Alexander Lavallee",    "/developer/rensselaer_center_for_open_source/2025_Alexander_Lavallee", null ],
+                [ "2025 Justin Manion",    "/developer/rensselaer_center_for_open_source/2025_Justin_Manion", null ],
+                [ "2025 Giancarlo Martinelli",    "/developer/rensselaer_center_for_open_source/2025_Giancarlo_Martinelli", null ],
+                [ "2025 Christopher Poon",    "/developer/rensselaer_center_for_open_source/2025_Christopher_Poon", null ],
                 [ "2024 Dorian Bilelis",    "/developer/rensselaer_center_for_open_source/2024_Dorian_Bilelis", null ],
                 [ "2024 Jaeseok Kang",    "/developer/rensselaer_center_for_open_source/2024_Jaeseok_Kang", null ],
                 [ "2024 Michael Papadopoulos",    "/developer/rensselaer_center_for_open_source/2024_Michael_Papadopoulos", null ],

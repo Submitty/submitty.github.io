@@ -11,36 +11,70 @@ machines* in addition to your primary vagrant virtual machine.
 
 ## Automated Worker Installation
 
-These steps will create a worker machine alongside the normal Submitty machine.
-1. Make sure to destroy any existing vagrant machines with 
-```
-vagrant destroy
-```
+1. First set up your main/primary machine by following the normal
+   [VM Install using Vagrant](/developer/getting_started/vm_install_using_vagrant) instructions.
 
-2. Ensure you have [Python 3](https://www.python.org/downloads/) installed on your machine
-
-3. Generate configuration for the desired number of worker machines
+2. Ensure you have [Python 3](https://www.python.org/downloads/) installed on your machine, run:
    ```
-   python3 generate_workers.py [-n NUM] [--ip-range IP_RANGE] [--base-port PORT]
-   ```
-   This will create or update a configuration file stored at `.vagrant/workers.json`.
-   Now you can create the virtual machines with:
-   ```
-   vagrant up
+   python3 --version
    ```
 
-   If you happen to encounter error messages regarding IP addresses or port conflicts, you can manually edit the `workers.json` file as needed.
-
-   __NOTE__: Do not edit the `workers.json` configuration file or run the aforementioned python script if there are any existing vagrant machines in your project. This can result in the existing VMs continuing to run in the background or storing their data with no clean way to remove them.
-
-4. To delete the worker machines and revert to a normal development setup, you can first run
+3. To generate configuration for a worker machine, run:
    ```
-   vagrant destroy
+   vagrant workers generate
    ```
-   And confirm to delete all the existing virtual machines.
+   
+   If instead you need multiple workers, append the `-n` flag, ex. for 3 machines:
+   ```
+   vagrant workers generate -n 3
+   ```
 
-   Next, you can delete the `workers.json` file, which will remove the worker configuration from your project.
-   The next `vagrant up` should only create the primary development virtual machine without any workers.
+   _NOTE: This will create the vagrant configuration file: `.vagrant/workers.json`._
+
+
+4. If you are on MacOS running QEMU, restart the network socket in public mode:
+   ```
+   vagrant workers socket restart --public
+   ```
+   _NOTE: Using the `--public` flag will make your worker VMs accessible to anyone
+   on your local network, which may be a modest security concern.
+   We suggest this to minimize possibility of errors while creating the
+   worker machines and will revert this in a later step._
+
+   _NOTE: Running a socket command while a worker machine is running can detach the
+   process, making the VM inaccessible to vagrant. If this happens and you are unable
+   to `vagrant workers halt`, then you may run `pkill -15 -f qemu-system-` to kill
+   all virtual machines running on your computer (including the main Submitty VM)._
+
+6. Now you can create the worker machine(s) with:
+   ```
+   vagrant workers up
+   ```
+   _NOTE: Do not use the --provider flag with this command, since it will conflict with the
+   provider of the main virtual machine._
+
+   When this is finished, you should see the Submitty duck ASCII art for each new worker machine.
+
+7. You can verify that all the worker machines are running with:
+   ```
+   vagrant workers status
+   ```
+
+8. `vagrant ssh` into the main virtual machine and run:
+   ```
+   refresh_vagrant_workers   # (runs python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/bin/refresh_vagrant_workers.py)
+   submitty_install
+   ```
+
+9. To stop the worker machines, you can run:
+   ```
+   vagrant workers halt
+   vagrant workers socket stop
+   ```
+
+   _For MacOS QEMU users: Once the virtual machine(s) are halted, if you would like to restart under
+   private networking, you may do so by omitting the `--public` flag from the `vagrant workers socket start` command._
+
 
 ---
 
@@ -50,14 +84,15 @@ If you would like to ensure the worker is functioning properly, or enter the wor
 
 To connect to a worker machine through SSH, run:
 ```
-vagrant ssh <worker-name>
+vagrant workers ssh <worker-name>
 ```
 
 If you want to test the connection between the primary VM and a worker, you can first `vagrant ssh` into the primary machine and then run this command to SSH into the worker from there:
 ```
-su submitty_daemon -c ssh submitty@<ip-address>
+su submitty_daemon -c ssh <worker-name>
 ```
-The IP address of the worker machine will be indicated in the `.vagrant/workers.json` file.
+
+The list of worker names can be displayed with `vagrant workers status`.
 
 __NOTE__: Depending on the performance of your computer and the size of the autograding queue passed to the worker, the SSH command may hang for some time.
 
