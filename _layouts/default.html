@@ -6,6 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="generator" content="Jekyll v{{ jekyll.version }}">
 
+        <script>
+            const m = localStorage.getItem('site_mode') || 'light';
+            document.documentElement.setAttribute('data-theme', m);
+            const logo = document.getElementById('site-logo');
+            if (logo) {
+            logo.src = m === 'dark'
+                ? logo.dataset.dark
+                : logo.dataset.light;
+            }
+        </script>
+
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Open+Sans:400,400italic,600,600italic,700,700italic|Inconsolata:400,700">
         <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
         <link rel="apple-touch-icon" href="{{ site.baseurl }}/apple-touch-icon.png">
@@ -48,7 +59,15 @@
               <button type="button" class="open-nav" id="open-nav">
                   <i class="fas fa-bars" style="color: #bbbbbb; font-size: 5.5em;"></i>
                 </button>
-                <a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/submitty_logo.png" alt="{{ site.title }} logo"></a>
+                <a href="{{ site.baseurl }}/" class="logo-link">
+                <img
+                    id="site-logo"
+                    src="{{ site.baseurl }}/images/submitty_logo.png"
+                    data-light="{{ site.baseurl }}/images/submitty_logo.png"
+                    data-dark="{{ site.baseurl }}/images/submitty_logo_white.png"
+                    alt="{{ site.title }} logo"
+                >
+                </a>
                 <!--{{ site.title }}-->
             </h1>
             <form action="{{ site.baseurl }}/search/" method="get">
@@ -56,8 +75,7 @@
                 <input type="submit" value="Search" style="display: none;">
             </form>
             <div id="nav-tree" class="menus medbg noxscroll mobile-invisible mobile-toggle">
-              <div id="nav-tree-contents" class="medbg noxscroll mobile-invisible mobile-toggle">
-              </div>
+              <div id="nav-tree-contents" class="medbg noxscroll mobile-invisible mobile-toggle"></div>
               <div>&nbsp;</div>
             </div>
             <script type="text/javascript">
@@ -65,6 +83,20 @@
               $(document).ready(function(){initNavTree('{{page.url}}',''); });
               /* @license-end */
             </script>
+            <div class="dark-mode-container mobile-invisible mobile-toggle">
+                <label class="dark-mode-switch">
+                <input type="checkbox" id="dark-mode-toggle" />
+                    <span class="slider">
+                        <img
+                        id="dark-mode-icon"
+                        src="/images/sun_black.png"
+                        data-light="/images/sun_black.png"
+                        data-dark="/images/moon_white.png"
+                        alt="mode icon"
+                        />
+                    </span>
+                </label>
+            </div>
         </header>
         <section class="main">
             <div class="page-header">
