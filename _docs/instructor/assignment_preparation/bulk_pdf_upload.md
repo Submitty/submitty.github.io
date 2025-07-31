@@ -307,4 +307,3 @@ right corners of each rectangle, where (0,0) is the upper left and
   }
 ]
 ```
-
