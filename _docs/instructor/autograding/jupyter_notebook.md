@@ -115,8 +115,10 @@ The following configuration can be found on the [Submitty GitHub](https://github
         }
       ]
     }
+  ]
 }
 ```
+
 ### Required Fields
 
 For autograding Jupyter Notebooks, the following fields must be included in your autograding configuration.
