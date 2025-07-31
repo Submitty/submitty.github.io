@@ -5,10 +5,17 @@ redirect_from:
   - /instructor/bulk_pdf_upload
 ---
 
-Submitty supports instructor upload of bulk PDF files to then be divided into individual assignment PDFs and assigned to students.
+Submitty supports instructor upload of bulk (multiple students) scanned PDF files
+to then be divided into individual assignment PDFs and assigned to students.
 
-If there is TA grading, questions can also be assigned page numbers by either instructor or student. In the TA grading interface, clicking on a question will open the corresponding page in the PDF.
+If there is TA/manual grading, rubric questions can also be assigned
+page numbers by either instructor or student. In the TA grading interface,
+clicking on a question will open the corresponding page in the PDF.
 
+To support anonymized manual grading, the instructor can also specify
+that portions of one or more pages of each individual student PDF
+containing the students name or other identifying information be
+redacted from view by the graders.
 
 
 ### Preparing the Exams for Scanning
@@ -24,7 +31,7 @@ If there is TA grading, questions can also be assigned page numbers by either in
 * Make most stacks the exact same count, and make sure the person
   working the scanner knows how many pages to expect per pack (e.g. 98
   pages or 140 pages).  The scanner person should check the page count
-  after each scan and try to catch problems early.
+  after each scan and try to catch problems early. 
 
 * Use scissors to cut the staple corner off the exams.  *IMPORTANT:
   Carefully cut off the smallest amount of paper with the staple.  If
@@ -234,6 +241,8 @@ match the expected page count will be highlighted in red.
 
 ![Bulk upload submission](/images/bulkupload_labeling.png){:width="600px"}
 
+<!--
+
 ### Automatic Student ID Number Detection (*Work in progress!*)
 
 *Note: This feature is currently [feature flagged](/developer/developing_the_php_site/feature_flags) the "submitty_ocr" flag must be set to true in your course config.json*
@@ -251,15 +260,34 @@ submission page.
 
 ![Bulk upload submission with OCR enabled](/images/bulkuploadsubmission_ocr.png)
 
-
 See also: [Personalized Exams](/instructor/personalized_exams)
+-->
 
-## Redactions
 
-When you upload a bulk PDF, you may want to redact certain information from the students' submissions. Submitty allows you to prepare redactions for the bulk PDF uploads. These redactions will be shown to limited access graders, and along with blinded grading, will help maintain student privacy.
+## Page Redactions for Anonymized Grading
 
-### Preparing Redactions
-To prepare for redactions, you must first create a redactions JSON file. This file should contain the pages and coordinates of the areas you want to redact. The format of the JSON file is as follows where coordinates are in the range of 0 to 1, representing a percentage of the page dimensions:
+The instructor can specify the redaction of portions of one or more
+pages of each student's PDF that contain their name or other
+personally identifying information.  The original unredacted PDF is
+saved on the server, but Submitty also prepares .png images of each
+page of the PDF with the specified areas redacted (covered with a grey
+checkerboard pattern).  When the grader is in blinded or anonymous
+mode, the redacted .png file will be displayed.
+
+
+To enable page redactions, enter the "Edit Gradeable" menu, make sure
+you have enabled "Manual Grading", then click on the "Rubric" panel,
+and click "yes" for "Are student submissions/uploads a single file PDF
+with a fixed/prescribed format?"
+
+![Redactions Preparation](/images/start_redactions.png){:width="600px"}
+
+
+Here is a sample of the JSON format for the page redactions.  This
+sample places a rectangle on the first and second pages of the
+document.  The (x,y) coordinates specify the upper left and lower
+right corners of each rectangle, where (0,0) is the upper left and
+(1,1) is the lower right corner.
 
 ```json
 [
@@ -280,12 +308,3 @@ To prepare for redactions, you must first create a redactions JSON file. This fi
 ]
 ```
 
-In order to be able to turn on redactions for the gradeable, you must turn on "Are student submissions/uploads a single file PDF with a fixed/prescribed format?" in the "Rubric" tab. This will allow you to upload new redactions json files.
-
-![Redactions Preparation](/images/start_redactions.png){:width="600px"}
-
-### Viewing Redactions
-
-Once you have prepared the redactions JSON file, either start a bulk upload or view an existing bulk upload submission. You will see boxes on the PDF that represent the redactions you have prepared. These boxes will be shown to limited access graders, and they will not be able to see the content within these redacted areas.
-
-![Redactions Viewing](/images/redacted.png){:width="400px"}
