@@ -5,13 +5,21 @@ redirect_from:
   - /instructor/bulk_pdf_upload
 ---
 
-Submitty supports instructor upload of bulk PDF files to then be divided into individual assignment PDFs and assigned to students.
+Submitty supports instructor upload of bulk (multiple students) scanned PDF files
+to then be divided into individual assignment PDFs and assigned to students.
 
-If there is TA grading, questions can also be assigned page numbers by either instructor or student. In the TA grading interface, clicking on a question will open the corresponding page in the PDF.
+If there is TA/manual grading, rubric questions can also be assigned
+page numbers by either instructor or student. In the TA grading interface,
+clicking on a question will open the corresponding page in the PDF.
 
+To support anonymized manual grading, the instructor can also specify
+that portions of one or more pages of each individual student PDF
+containing the students name or other identifying information be
+redacted from view by the graders.
 
+---
 
-### Preparing the Exams for Scanning
+## Preparing the Exams for Scanning
 
 * If you notice a student has extra pages or missing pages, or the
   exam is rather crumpled, set them to the side for individual
@@ -24,7 +32,7 @@ If there is TA grading, questions can also be assigned page numbers by either in
 * Make most stacks the exact same count, and make sure the person
   working the scanner knows how many pages to expect per pack (e.g. 98
   pages or 140 pages).  The scanner person should check the page count
-  after each scan and try to catch problems early.
+  after each scan and try to catch problems early. 
 
 * Use scissors to cut the staple corner off the exams.  *IMPORTANT:
   Carefully cut off the smallest amount of paper with the staple.  If
@@ -45,7 +53,7 @@ If there is TA grading, questions can also be assigned page numbers by either in
   every page.
 
 
-### Tips for Scanning
+## Tips for Scanning
 
 Explore the options / settings on your scanner.  Things to check:
 
@@ -73,7 +81,7 @@ Explore the options / settings on your scanner.  Things to check:
 
 
 
-#### Scanning with the ScanSnap iX500 on Linux
+## Scanning with the ScanSnap iX500 on Linux
 
 We use the portable ScanSnap iX500 for scanning our exams. This works with
 [SANE](http://www.sane-project.org/) out of the box; a variety of of
@@ -109,7 +117,9 @@ balloons pretty quickly and required clearing that out every few times
 a PDF was exported.
 
 
-### Creating the New Gradeable for Bulk PDF Upload
+---
+
+## Creating the New Gradeable for Bulk PDF Upload
 
 Click "New Gradeable" from the left sidebar and fill out the form.  Be
 sure to select the Gradeable Type: "TA/Instructor will (bulk) upload
@@ -134,8 +144,9 @@ downloadable) when the scores from manual grading are released.  You
 can modify this setting from the "Submissions/Autograding" tab.
 
 
+---
 
-### Manual Rubric Preparation and Page Correspondence
+## Manual Rubric Preparation and Page Correspondence
 
 You will presumably be grading this assignment manually -- by TA or
 instructor.  If the assignment is formatted with problems on
@@ -150,8 +161,9 @@ within the document, you can request that they specify the page
 assignment when they upload the file.
 
 
+---
 
-### Bulk PDF Upload
+## Bulk PDF Upload
 
 On the gradeable submission page, the instructor has three options:
 Normal Submission, Make Submission for a Student, and Bulk Upload. For
@@ -182,7 +194,7 @@ After the page reloads, another section on the page will appear called
 
 
 
-### Associating PDFs with Students in your Course
+## Associating PDFs with Students in your Course
 
 The "Unassigned PDF Uploads" section contains all items within the
 `/uploads/split_pdf/gradeable_id` folder.
@@ -199,8 +211,9 @@ Once submitted, the split PDF item is moved from
 
 
 
+---
 
-### Automatic Association of PDFs using Customized Exams with QR Codes
+## Automatic Association of PDFs using Customized Exams with QR Codes
 
 Alternatively, if you have included a QR code on the coversheet of
 every exam packet, the system can separate or split your large bulk
@@ -234,22 +247,49 @@ match the expected page count will be highlighted in red.
 
 ![Bulk upload submission](/images/bulkupload_labeling.png){:width="600px"}
 
-### Automatic Student ID Number Detection (*Work in progress!*)
 
-*Note: This feature is currently [feature flagged](/developer/developing_the_php_site/feature_flags) the "submitty_ocr" flag must be set to true in your course config.json*
+---
 
-Instead of associating student IDs with QR codes you can provide 
-a space for students to write their student ID number in. This 
-will require placing a QR code to detect the region to scan.
+## Page Redactions for Anonymized Grading
 
-*Note: QRs must be placed to the left of the digit entry box and must be taller than the box*
-
-The QR code and digit entry box can be placed anywhere on the packet cover sheet and will be automatically located and scanned, currently you cannot have any other print to the right of the digit entry box.
-
-To use this function select the 'Detect Student ID's' box on the 
-submission page.
-
-![Bulk upload submission with OCR enabled](/images/bulkuploadsubmission_ocr.png)
+The instructor can specify the redaction of portions of one or more
+pages of each student's PDF that contain their name or other
+personally identifying information.  The original unredacted PDF is
+saved on the server, but Submitty also prepares .png images of each
+page of the PDF with the specified areas redacted (covered with a grey
+checkerboard pattern).  When the grader is in blinded or anonymous
+mode, the redacted .png file will be displayed.
 
 
-See also: [Personalized Exams](/instructor/personalized_exams)
+To enable page redactions, enter the "Edit Gradeable" menu, make sure
+you have enabled "Manual Grading", then click on the "Rubric" panel,
+and click "yes" for "Are student submissions/uploads a single file PDF
+with a fixed/prescribed format?"
+
+![Redactions Preparation](/images/start_redactions.png){:width="600px"}
+
+
+Here is a sample of the JSON format for the page redactions.  This
+sample places a rectangle on the first and second pages of the
+document.  The (x,y) coordinates specify the upper left and lower
+right corners of each rectangle, where (0,0) is the upper left and
+(1,1) is the lower right corner.
+
+```json
+[
+  {
+    "page": 1,
+    "x1": 0.25,
+    "y1": 0.25,
+    "x2": 0.75,
+    "y2": 0.75
+  },
+  {
+    "page": 2,
+    "x1": 0.1,
+    "y1": 0.1,
+    "x2": 0.9,
+    "y2": 0.9
+  }
+]
+```
