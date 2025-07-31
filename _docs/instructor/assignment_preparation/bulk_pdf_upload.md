@@ -17,8 +17,9 @@ that portions of one or more pages of each individual student PDF
 containing the students name or other identifying information be
 redacted from view by the graders.
 
+---
 
-### Preparing the Exams for Scanning
+## Preparing the Exams for Scanning
 
 * If you notice a student has extra pages or missing pages, or the
   exam is rather crumpled, set them to the side for individual
@@ -52,7 +53,7 @@ redacted from view by the graders.
   every page.
 
 
-### Tips for Scanning
+## Tips for Scanning
 
 Explore the options / settings on your scanner.  Things to check:
 
@@ -80,7 +81,7 @@ Explore the options / settings on your scanner.  Things to check:
 
 
 
-#### Scanning with the ScanSnap iX500 on Linux
+## Scanning with the ScanSnap iX500 on Linux
 
 We use the portable ScanSnap iX500 for scanning our exams. This works with
 [SANE](http://www.sane-project.org/) out of the box; a variety of of
@@ -116,7 +117,9 @@ balloons pretty quickly and required clearing that out every few times
 a PDF was exported.
 
 
-### Creating the New Gradeable for Bulk PDF Upload
+---
+
+## Creating the New Gradeable for Bulk PDF Upload
 
 Click "New Gradeable" from the left sidebar and fill out the form.  Be
 sure to select the Gradeable Type: "TA/Instructor will (bulk) upload
@@ -141,8 +144,9 @@ downloadable) when the scores from manual grading are released.  You
 can modify this setting from the "Submissions/Autograding" tab.
 
 
+---
 
-### Manual Rubric Preparation and Page Correspondence
+## Manual Rubric Preparation and Page Correspondence
 
 You will presumably be grading this assignment manually -- by TA or
 instructor.  If the assignment is formatted with problems on
@@ -157,8 +161,9 @@ within the document, you can request that they specify the page
 assignment when they upload the file.
 
 
+---
 
-### Bulk PDF Upload
+## Bulk PDF Upload
 
 On the gradeable submission page, the instructor has three options:
 Normal Submission, Make Submission for a Student, and Bulk Upload. For
@@ -189,7 +194,7 @@ After the page reloads, another section on the page will appear called
 
 
 
-### Associating PDFs with Students in your Course
+## Associating PDFs with Students in your Course
 
 The "Unassigned PDF Uploads" section contains all items within the
 `/uploads/split_pdf/gradeable_id` folder.
@@ -206,8 +211,9 @@ Once submitted, the split PDF item is moved from
 
 
 
+---
 
-### Automatic Association of PDFs using Customized Exams with QR Codes
+## Automatic Association of PDFs using Customized Exams with QR Codes
 
 Alternatively, if you have included a QR code on the coversheet of
 every exam packet, the system can separate or split your large bulk
@@ -241,28 +247,8 @@ match the expected page count will be highlighted in red.
 
 ![Bulk upload submission](/images/bulkupload_labeling.png){:width="600px"}
 
-<!--
 
-### Automatic Student ID Number Detection (*Work in progress!*)
-
-*Note: This feature is currently [feature flagged](/developer/developing_the_php_site/feature_flags) the "submitty_ocr" flag must be set to true in your course config.json*
-
-Instead of associating student IDs with QR codes you can provide 
-a space for students to write their student ID number in. This 
-will require placing a QR code to detect the region to scan.
-
-*Note: QRs must be placed to the left of the digit entry box and must be taller than the box*
-
-The QR code and digit entry box can be placed anywhere on the packet cover sheet and will be automatically located and scanned, currently you cannot have any other print to the right of the digit entry box.
-
-To use this function select the 'Detect Student ID's' box on the 
-submission page.
-
-![Bulk upload submission with OCR enabled](/images/bulkuploadsubmission_ocr.png)
-
-See also: [Personalized Exams](/instructor/personalized_exams)
--->
-
+---
 
 ## Page Redactions for Anonymized Grading
 
