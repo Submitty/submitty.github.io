@@ -31,7 +31,7 @@ To mitigate this, I designed and integrated a JSON Web Token (JWT)–based autho
 
 Additionally, I established the first Websocket end-to-end test suite for the Discussion Forum ([#11873](https://github.com/Submitty/Submitty/pull/11873)), which relies heavily on WebSocket communication, to set the foundation for catching potential protocol-level issues in the future. Building on that to verify the correctness of the authorization system above, I developed a comprehensive testing strategy, including PHP unit tests for backend logic and updating existing Cypress tests to verify that required WebSocket connections for authorized pages were successful.
 
-<div style="text-align: center; max-width: 90%; margin: auto;">
+<div style="text-align: center; max-width: 100%; margin: auto;">
   <img src="../../../images/RCOS_report/2025_Jeffrey_Cordero/cypress-websocket-testing-example.png" alt="Cypress WebSocket Testing" />
 </div>
 
@@ -55,7 +55,7 @@ Update your email notification settings for this course here: http://localhost:1
 
 To support these new features and enhance overall system reliability, I built a dedicated Cypress testing suite for emails  ([#11878](https://github.com/Submitty/Submitty/pull/11878)) and notification preferences ([#11913](https://github.com/Submitty/Submitty/pull/11913)). These tests verify the functionality of the user settings page, email status page, and key user interactions, establishing a solid foundation for future notification-related testing.
 
-<div style="text-align: center; max-width: 90%; margin: auto;">
+<div style="text-align: center; max-width: 100%; margin: auto;">
   <img src="../../../images/RCOS_report/2025_Jeffrey_Cordero/cypress-notifications-testing-example.png" alt="Cypress Notification Testing" />
 </div>
 
@@ -71,9 +71,9 @@ Successfully completed the Rainbow Grades build process for f25.sample - {'statu
 Successfully generated grade summaries for f25.sample
 ```
 
-```
-TODO: example updated @2AM pic
-```
+<div style="text-align: center; max-width: 100%; margin: auto;">
+  <img src="../../../images/RCOS_report/2025_Jeffrey_Cordero/rainbow-grades-nightly-build.png" alt="Cypress Notification Testing" />
+</div>
 
 
 ### Codebase Modernization & System Reliability
