@@ -32,7 +32,7 @@ To mitigate this, I designed and integrated a JSON Web Token (JWT)–based autho
 To validate the implementation, I first established a Cypress end-to-end testing foundation through the Discussion Forum pages ([#11873](https://github.com/Submitty/Submitty/pull/11873)), which rely heavily on WebSocket communication. Building on that, I developed a comprehensive testing strategy, including PHP unit tests for backend logic and full-stack Cypress tests to verify the correctness of the authorization flow and catch potential protocol-level issues, such as directly validating WebSocket message producers and handlers.
 
 ```
-<cypress testing image>
+TODO: example cypress image #1
 ```
 
 
@@ -55,20 +55,27 @@ Update your email notification settings for this course here: http://localhost:1
 
 To support these new features and enhance overall system reliability, I built a dedicated Cypress testing suite for emails  ([#11878](https://github.com/Submitty/Submitty/pull/11878)) and notification preferences ([#11913](https://github.com/Submitty/Submitty/pull/11913)). These tests verify the functionality of the user settings page, email status page, and key user interactions, establishing a solid foundation for future notification-related testing.
 
-```
-<cypress testing image>
-```
+
+![Cypress Test Example #2](../../../images/RCOS_report/2025_Jeffrey_Cordero/cypress-notifications-testing-example.png)
 
 ### Rainbow Grades Nightly Build
 
 I resolved a key issue with the Rainbow Grades summary page, where student grade reports could become stale and outdated unless manually refreshed by an instructor. To eliminate this manual step, I augmented the nightly grade summaries generation script to automatically update the Rainbow Grades customization file and submit the build process before generating new summaries for active courses ([#11496](https://github.com/Submitty/Submitty/pull/11496)). As a result, students now have uninterrupted access to up-to-date grade reports daily.
 
+```bash
+$ python3 sbin/generate_grade_summaries.py f25 sample submitty_daemon
+Successfully selected the manual customization for f25.sample
+Successfully submitted the Rainbow Grades build process for f25.sample
+Successfully completed the Rainbow Grades build process for f25.sample - {'status': 'success', 'data': '...'}
+Successfully generated grade summaries for f25.sample
+```
 
 ```
-example updated @2AM pic
+TODO: example updated @2AM pic
 ```
 
-### Codebase Modernization & System Reliability
+
+### Codebase Modernization
 
 I led multiple initiatives to modernize the codebase and strengthen the platform’s operational stability. I integrated `vue-tsc` into the frontend build process ([#11868](https://github.com/Submitty/Submitty/pull/11868)), introducing strict TypeScript type-checking that allows the CI/CD pipeline to catch type errors before they reach production, which is an essential safeguard when reviewing type-dependent dependency updates. I also managed and debugged several critical library upgrades, including major version bumps for packages like `pdfjs-dist` ([#11013](https://github.com/Submitty/Submitty/pull/11013))and `mermaid` ([#11769](https://github.com/Submitty/Submitty/pull/11769), [#11829](https://github.com/Submitty/Submitty/pull/11829)), implementing targeted workarounds for breaking changes to maintain system security and runtime stability.
 
@@ -76,6 +83,5 @@ Beyond implementation, I played a key role in system design discussions and code
 
 Additionally, to improve system resilience, I enhanced the hourly system-repair cron job, which restores core services such as the WebSocket server, to automatically recover the autograding infrastructure after a server outage, intelligently repairing all local and remote components.
 
-```
-example dependabot or cron image
-```
+
+![Codebase Modernization](../../../images/RCOS_report/2025_Jeffrey_Cordero/system-modernization.png)
