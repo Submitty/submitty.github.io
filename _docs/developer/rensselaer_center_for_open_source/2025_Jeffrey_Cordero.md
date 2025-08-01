@@ -32,7 +32,7 @@ To mitigate this, I designed and integrated a JSON Web Token (JWT)–based autho
 To validate the implementation, I first established a Cypress end-to-end testing foundation through the Discussion Forum pages ([#11873](https://github.com/Submitty/Submitty/pull/11873)), which rely heavily on WebSocket communication. Building on that, I developed a comprehensive testing strategy, including PHP unit tests for backend logic and full-stack Cypress tests to verify the correctness of the authorization flow and catch potential protocol-level issues, such as directly validating WebSocket message producers and handlers.
 
 ```
-<img>
+<cypress testing image>
 ```
 
 
@@ -53,9 +53,29 @@ Please refer to the course syllabus for contact information for your teaching st
 Update your email notification settings for this course here: http://localhost:1511/courses/s25/sample/notifications/settings
 ```
 
-To support these new features and enhance overall system reliability, I built a dedicated Cypress testing suites for emails  ([#11878](https://github.com/Submitty/Submitty/pull/11878)) and notification preferences ([#11913](https://github.com/Submitty/Submitty/pull/11913)). These tests verifies the functionality of the user settings page, email status page, and key user interactions, establishing a solid foundation for future notification-related testing.
+To support these new features and enhance overall system reliability, I built a dedicated Cypress testing suite for emails  ([#11878](https://github.com/Submitty/Submitty/pull/11878)) and notification preferences ([#11913](https://github.com/Submitty/Submitty/pull/11913)). These tests verify the functionality of the user settings page, email status page, and key user interactions, establishing a solid foundation for future notification-related testing.
 
 ```
 <cypress testing image>
 ```
 
+### Rainbow Grades Nightly Build
+
+I resolved a key issue with the Rainbow Grades summary page, where student grade reports could become stale and outdated unless manually refreshed by an instructor. To eliminate this manual step, I augmented the nightly grade summaries generation script to automatically update the Rainbow Grades customization file and submit the build process before generating new summaries for active courses ([#11496](https://github.com/Submitty/Submitty/pull/11496)). As a result, students now have uninterrupted access to up-to-date grade reports daily.
+
+
+```
+example updated @2AM pic
+```
+
+### Codebase Modernization & System Reliability
+
+I led multiple initiatives to modernize the codebase and strengthen the platform’s operational stability. I integrated `vue-tsc` into the frontend build process ([#11868](https://github.com/Submitty/Submitty/pull/11868)), introducing strict TypeScript type-checking that allows the CI/CD pipeline to catch type errors before they reach production, which is an essential safeguard when reviewing type-dependent dependency updates. I also managed and debugged several critical library upgrades, including major version bumps for packages like `pdfjs-dist` ([#11013](https://github.com/Submitty/Submitty/pull/11013))and `mermaid` ([#11769](https://github.com/Submitty/Submitty/pull/11769), [#11829](https://github.com/Submitty/Submitty/pull/11829)), implementing targeted workarounds for breaking changes to maintain system security and runtime stability.
+
+Beyond implementation, I played a key role in system design discussions and code reviews for high-impact pull requests, including infrastructure upgrades, Vue.js migrations, and backend refactors. I provided architectural insight and hands-on testing for breaking dependency updates, such as major version bumps, QEMU-based Vagrant modifications, and Docker environment overhauls. My reviews focused on maintaining code quality, ensuring reliable integration of dependencies, and promoting sustainable engineering practices that support long-term system stability and developer efficiency.
+
+Additionally, to improve system resilience, I enhanced the hourly system-repair cron job, which restores core services such as the WebSocket server, to automatically recover the autograding infrastructure after a server outage, intelligently repairing all local and remote components.
+
+```
+example dependabot or cron image
+```
