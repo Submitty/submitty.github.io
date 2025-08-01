@@ -7,11 +7,11 @@ category: Developer > Rensselaer Center for Open Source (RCOS) > Summer 2025
 
 Over the ten weeks, I was a key contributor to the large-scale open-source academic platform, focusing on major feature development, infrastructure modernization, security enhancements, and UI/UX improvements. I authored or contributed to 24 pull requests, reviewed 82 pull requests, and created 6 issues, many of which were resolved or are part of ongoing efforts such as end-to-end notification testing ([#11908](https://github.com/Submitty/Submitty/issues/11908)) and rate limiting ([#11721](https://github.com/Submitty/Submitty/issues/11721)).
 
-My contributions spanned the full technology stack, including the frontend (HTML/CSS, JavaScript/TypeScript, Twig, Vue.js), backend (PHP), build systems (Bash), autograding infrastructure (Python, C++), and system testing (Cypress).
+My contributions spanned the full tech stack, including the frontend (HTML/CSS, JavaScript/TypeScript, Twig, Vue.js), backend (PHP), build systems (Bash), autograding infrastructure (Python, C++), and system testing (Cypress).
 
 ### WebSocket Security & Testing
 
-I worked on addressing a critical security flaw in the platform's WebSocket server by implementing a token-based authorization system ([#11634](https://github.com/Submitty/Submitty/pull/11634)). Previously, any user with a direct URL and valid login credentials could access any WebSocket page they were not authorized to view, posing a significant security risk, especially for features like Grade Inquiry.
+I worked on addressing a critical security flaw in the platform's WebSocket server by implementing a token-based authorization system ([#11634](https://github.com/Submitty/Submitty/pull/11634)). Previously, any user with a direct URL and valid login credentials could access any WebSocket page they were not authorized to view, posing a considerable security risk, especially for features like Grade Inquiry.
 
 To mitigate this, I designed and integrated a JSON Web Token (JWT)–based authorization layer. The web server now generates short-lived, multi-use tokens that grant access only to specific WebSocket pages. Each token explicitly scopes access per page, ensuring that all WebSocket connections are properly authenticated and secure. Authorized pages are valid for five minutes, and stale entries are discarded using a sliding window mechanism to maintain a minimal, up-to-date permission set.
 
@@ -29,11 +29,11 @@ To mitigate this, I designed and integrated a JSON Web Token (JWT)–based autho
 }
 ```
 
-To validate the implementation, I first established a Cypress end-to-end testing foundation through the Discussion Forum pages ([#11873](https://github.com/Submitty/Submitty/pull/11873)), which rely heavily on WebSocket communication. Building on that, I developed a comprehensive testing strategy, including PHP unit tests for backend logic and full-stack Cypress tests to verify the correctness of the authorization flow and catch potential protocol-level issues, such as directly validating WebSocket message producers and handlers.
+Additionally, I established the first Websocket end-to-end test suite for the Discussion Forum ([#11873](https://github.com/Submitty/Submitty/pull/11873)), which relies heavily on WebSocket communication, to set the foundation for catching potential protocol-level issues in the future. Building on that to verify the correctness of the authorization system above, I developed a comprehensive testing strategy, including PHP unit tests for backend logic and updating existing Cypress tests to verify that required WebSocket connections for authorized pages were successful.
 
-```
-TODO: example cypress image #1
-```
+<div style="text-align: center; max-width: 90%; margin: auto;">
+  <img src="../../../images/RCOS_report/2025_Jeffrey_Cordero/cypress-websocket-testing-example.png" alt="Cypress WebSocket Testing" />
+</div>
 
 
 ### Notification System Enhancements
@@ -55,7 +55,7 @@ Update your email notification settings for this course here: http://localhost:1
 
 To support these new features and enhance overall system reliability, I built a dedicated Cypress testing suite for emails  ([#11878](https://github.com/Submitty/Submitty/pull/11878)) and notification preferences ([#11913](https://github.com/Submitty/Submitty/pull/11913)). These tests verify the functionality of the user settings page, email status page, and key user interactions, establishing a solid foundation for future notification-related testing.
 
-<div style="text-align: center;">
+<div style="text-align: center; max-width: 90%; margin: auto;">
   <img src="../../../images/RCOS_report/2025_Jeffrey_Cordero/cypress-notifications-testing-example.png" alt="Cypress Notification Testing" />
 </div>
 
@@ -76,14 +76,10 @@ TODO: example updated @2AM pic
 ```
 
 
-### Codebase Modernization
+### Codebase Modernization & System Reliability
 
-I led multiple initiatives to modernize the codebase and strengthen the platform’s operational stability. I integrated `vue-tsc` into the frontend build process ([#11868](https://github.com/Submitty/Submitty/pull/11868)), introducing strict TypeScript type-checking that allows the CI/CD pipeline to catch type errors before they reach production, which is an essential safeguard when reviewing type-dependent dependency updates. I also managed and debugged several critical library upgrades, including major version bumps for packages like `pdfjs-dist` ([#11013](https://github.com/Submitty/Submitty/pull/11013))and `mermaid` ([#11769](https://github.com/Submitty/Submitty/pull/11769), [#11829](https://github.com/Submitty/Submitty/pull/11829)), implementing targeted workarounds for breaking changes to maintain system security and runtime stability.
+I led multiple initiatives to modernize the codebase and strengthen the platform’s operational stability. I integrated `vue-tsc` into the frontend build process ([#11868](https://github.com/Submitty/Submitty/pull/11868)), introducing strict TypeScript type-checking that allows the CI/CD pipeline to catch type errors before they reach production, which is an essential safeguard when reviewing type-related dependency updates. I also managed and debugged several critical library upgrades, including major version bumps for packages like `pdfjs-dist` ([#11013](https://github.com/Submitty/Submitty/pull/11013)) and `mermaid` ([#11769](https://github.com/Submitty/Submitty/pull/11769), [#11829](https://github.com/Submitty/Submitty/pull/11829)), implementing targeted workarounds for breaking changes to maintain system security and runtime stability.
 
-Beyond implementation, I played a key role in system design discussions and code reviews for high-impact pull requests, including infrastructure upgrades, Vue.js migrations, and backend refactors. I provided architectural insight and hands-on testing for breaking dependency updates, such as major version bumps, QEMU-based Vagrant modifications, and Docker environment overhauls. My reviews focused on maintaining code quality, ensuring reliable integration of dependencies, and promoting sustainable engineering practices that support long-term system stability and developer efficiency.
+Beyond implementation, I played a key role in system design discussions and code reviews for high-impact pull requests, including infrastructure upgrades, Vue.js migrations, and backend refactors. My reviews focused on maintaining code quality, ensuring reliable integration of dependencies, and promoting sustainable engineering practices that support long-term system stability and developer efficiency.
 
-Additionally, to improve system resilience, I enhanced the hourly system-repair cron job, which restores core services such as the WebSocket server, to automatically recover the autograding infrastructure after a server outage, intelligently repairing all local and remote components.
-
-<div style="text-align: center;">
-  <img src="../../../images/RCOS_report/2025_Jeffrey_Cordero/system-modernization.png" alt="Codebase Modernization" />
-</div>
+Additionally, to improve system resilience, I enhanced the hourly system-repair cron job, which restores core services such as the WebSocket server, to automatically recover the autograding infrastructure after a server outage, intelligently repairing all local and remote components ([#11707](https://github.com/Submitty/Submitty/pull/11707)).
