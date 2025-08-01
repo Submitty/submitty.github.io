@@ -55,8 +55,9 @@ Update your email notification settings for this course here: http://localhost:1
 
 To support these new features and enhance overall system reliability, I built a dedicated Cypress testing suite for emails  ([#11878](https://github.com/Submitty/Submitty/pull/11878)) and notification preferences ([#11913](https://github.com/Submitty/Submitty/pull/11913)). These tests verify the functionality of the user settings page, email status page, and key user interactions, establishing a solid foundation for future notification-related testing.
 
-
-![Cypress Test Example #2](../../../images/RCOS_report/2025_Jeffrey_Cordero/cypress-notifications-testing-example.png)
+<div style="text-align: center;">
+  <img src="../../../images/RCOS_report/2025_Jeffrey_Cordero/cypress-notifications-testing-example.png" alt="Cypress Notification Testing" />
+</div>
 
 ### Rainbow Grades Nightly Build
 
@@ -83,5 +84,6 @@ Beyond implementation, I played a key role in system design discussions and code
 
 Additionally, to improve system resilience, I enhanced the hourly system-repair cron job, which restores core services such as the WebSocket server, to automatically recover the autograding infrastructure after a server outage, intelligently repairing all local and remote components.
 
-
-![Codebase Modernization](../../../images/RCOS_report/2025_Jeffrey_Cordero/system-modernization.png)
+<div style="text-align: center;">
+  <img src="../../../images/RCOS_report/2025_Jeffrey_Cordero/system-modernization.png" alt="Codebase Modernization" />
+</div>
