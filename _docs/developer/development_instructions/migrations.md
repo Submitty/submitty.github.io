@@ -24,7 +24,7 @@ own unique list of migrations. They are:
 * course
 
 Where `system` migrations should deal mainly with package installation/changes,
-system changes, new dependencies, etc. `master` migrations deal with changes to the master Submitty
+system changes, new dependencies, etc. `master` migrations deals with changes to the master Submitty
 database. `course` migrations are applied individually to each course
 detected in `/var/local/submitty/courses` and can be used to adjust the
 courses' DB, config files, etc.
