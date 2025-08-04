@@ -3,8 +3,6 @@ title: Jeffrey Cordero
 category: Developer > Rensselaer Center for Open Source (RCOS) > Summer 2025
 ---
 
-### Summary
-
 During my time this summer with Submitty, I contributed to the large-scale open-source academic platform, focusing on full-stack development, infrastructure modernization, and system security. This experience deepened my technical skills across frontend and backend technologies while expanding my understanding of systems design, type safety, and automated testing.
 
 Beyond implementation work, I gained valuable experience in collaborative development by engaging in design discussions, reviewing code at scale, and helping shape practices that prioritize maintainability and reliability. These efforts strengthened my ability to think critically about long-term engineering impact in a complex, highly impactful codebase. The following sections highlight some of the most rewarding features I had the opportunity to work on this summer.
