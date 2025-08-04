@@ -3,4 +3,37 @@ title: Giancarlo Martinelli
 category: Developer > Rensselaer Center for Open Source (RCOS) > Summer 2025
 ---
 
-coming soon
+This summer I primarily worked on two new Submitty features, live chat and image annotation.
+
+## Live Chat
+
+Going into the summer, Live Chat was functional but needed security updates and some style fixes, so the first thing I did when starting work on Submitty was move the websocket from the client to the server, updated the style of the Live Chat, and added websocket chatroom enables and disables:
+
+[Insert GIF Examples Here]
+
+Add this and maybe Vue refactor if I finish it
+https://github.com/Submitty/Submitty/pull/11854
+
+Additionally, I wrote end to end tests for the new feature, including a proof of concept for end to end websocket testing using Cypress, which we previously thought might require a different testing library. This was done with the immense help of Jeffrey Cordero (link to his page) who implemented this new testing pattern for many other features this summer.
+
+[Insert testing run through gif or image here]
+
+
+
+## Image Annotation
+
+During the summer one of our group's main goals was to get the number of open pull requests down to 0 by the end of the summer. One large thing preventing that were our open dependency PRs, one of which was a double dependency of PDF annotator and PDF rendering. While I was able to update the PDF rendering dependency with some help from the other members we were unable to update our PDF annotator dependency because the package was maintained solely by Submitty, and wasn't even working in its most recent release. That realization led to the decision to remove the PDF annotation feature in favor of an image annotation feature. This coincided well with the addition of bulk upload, which turns large PDFs into a series of images. The idea is that in the future we'll stitch these images back together into a PDF-like format. As part of that I wrote a new image annotation implementation using a library markerJS (link to markerJS site) which works really well as a plug-and-play solution to the problem. The relative age of our tech stack made this a little more difficult but I was eventually able to implement image annotation:
+
+[Insert GIF Examples Here]
+
+## Urgent Bugfixes
+
+https://github.com/Submitty/Submitty/pull/11909
+https://github.com/Submitty/Submitty/pull/11854
+
+## Other to Mention
+
+https://github.com/Submitty/Submitty/pull/11597
+
+Include documentation updates here maybe.
+
