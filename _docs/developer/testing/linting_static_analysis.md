@@ -137,13 +137,13 @@ Alternatively, you can run eslint on your host system or on vagrant by navigatin
 directory and running:
 
 ```bash
-npm run eslint
+npx eslint
 ```
 
 To have eslint attempt to automatically fix any detected problems:
 
 ```bash
-npm run eslint:fix
+npx eslint:fix
 ```
 
 If you wish to lint or fix a specific file, you will need to run the eslint executable directly,
