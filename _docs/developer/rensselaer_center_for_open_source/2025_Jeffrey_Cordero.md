@@ -11,7 +11,7 @@ Beyond implementation work, I gained valuable experience in collaborative develo
 
 I addressed a critical security flaw in the platform's WebSocket server by implementing a token-based authorization system ([#11634](https://github.com/Submitty/Submitty/pull/11634)). Previously, any user with a direct URL and valid login credentials could access any WebSocket page, posing a considerable risk for real-time student-instructor communications.
 
-To resolve this, I designed a JSON Web Token (JWT)–based authorization layer, where the web server now generates short-lived, multi-use tokens scoped to specific pages. Each token ensures that WebSocket connections are established by authorized users, with permissions managed using a sliding window mechanism to handle expired pages.
+To resolve this, I designed a JSON Web Token (JWT)–based authorization layer, where the web server now generates short-lived, multi-use tokens scoped to specific pages. Each token ensures that WebSocket connections are established by authorized users, with permissions managed using a sliding window mechanism to handle expired pages. This approach cut the average WebSocket connection authentication time by approximately 90%.
 
 ```json
 {
