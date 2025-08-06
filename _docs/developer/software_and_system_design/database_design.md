@@ -34,10 +34,10 @@ Note: To add the Submitty server to pgAdmin, follow the [pgAdmin setup instructi
 
 ## Entity-Relation Diagrams
 
-   1. Submitty Database (updated 2019-06-05, see [code for most recent](https://github.com/Submitty/Submitty/blob/master/migration/migrator/data/submitty_db.sql)):
+   1. Submitty Database (updated 2025-08-02, see [code for most recent](https://github.com/Submitty/Submitty/blob/master/migration/migrator/data/submitty_db.sql)):
       ![Database Entity Graph](/images/database_entity_graph.png)
 
-   2. Courses Tables (updated 2019-06-05, see [code for most recent](https://github.com/Submitty/Submitty/blob/master/migration/migrator/data/course_tables.sql)):
+   2. Courses Tables (updated 2025-08-02, see [code for most recent](https://github.com/Submitty/Submitty/blob/master/migration/migrator/data/course_tables.sql)):
       ![Database Entity Graph](/images/database_course_entity_graph.png)
 
    Diagram generated using [DataGrip](https://www.jetbrains.com/datagrip/), by
