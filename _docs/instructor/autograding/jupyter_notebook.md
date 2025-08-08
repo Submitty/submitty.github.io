@@ -27,7 +27,7 @@ For autograding Jupyter Notebooks, the following fields must be included in your
 }
 ```
 
-The method for allowing certain system calls in can be found in [System Call Filtering](/instructor/autograding/system_call_filtering).
+The method for allowing certain system calls can be found in [System Call Filtering](/instructor/autograding/system_call_filtering).
 You may also need to pass in resource limit values or a max submission size.
 
 ```json
