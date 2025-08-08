@@ -55,6 +55,7 @@ Allows users who pull from Submitty's private autograding directory to use the g
 **Directory Editing Permission Controls (PR pending)** - 
 Before I can create the above PR, there is a security vulnerability that needs to be addressed. Currently, there are no checks to ensure that the user pulling from the repository owns the file. This means that anyone with SSH access would be able to edit any autograding configuration (even live ones!).
 
+![alt text](image-2.png)
 
 ### Dark Mode Toggle for the Documentation Site
 [PR#691](https://github.com/Submitty/submitty.github.io/pull/691)  
