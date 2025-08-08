@@ -5,119 +5,7 @@ category: Instructor > Autograding
 
 ### Example Configuration
 
-The following configuration can be found on the [Submitty GitHub](https://github.com/Submitty/Submitty/tree/main/more_autograding_examples/jupyter_notebook_autograding).
-
-```json
-{
-  "autograding" : {
-        "submission_to_runner" : [  "*.ipynb", "*.png" ],
-        "work_to_details" : [ "**/*.ipynb", "**/*.png", "**/*.txt", "**/*.err" ]
-    },
-  "autograding_method": "docker",
-  "resource_limits" : {
-    "RLIMIT_NPROC" : 32,
-    "RLIMIT_FSIZE": 20971520 // 20 MB
-  },
-  "max_submission_size": 10485760, // 10 MB
-  "container_options": {
-    "container_image": "submitty/jupyter:latest"
-  },
-  "allow_system_calls": [
-    "COMMUNICATIONS_AND_NETWORKING_INTERPROCESS_COMMUNICATION",
-    "COMMUNICATIONS_AND_NETWORKING_KILL",
-    "COMMUNICATIONS_AND_NETWORKING_SIGNALS",
-    "COMMUNICATIONS_AND_NETWORKING_SOCKETS",
-    "COMMUNICATIONS_AND_NETWORKING_SOCKETS_MINIMAL",
-    "FILE_MANAGEMENT_MOVE_DELETE_RENAME_FILE_DIRECTORY",
-    "FILE_MANAGEMENT_RARE",
-    "PROCESS_CONTROL_ADVANCED",
-    "PROCESS_CONTROL_NEW_PROCESS_THREAD",
-    "PROCESS_CONTROL_MEMORY_ADVANCED",
-    "PROCESS_CONTROL_SYNCHRONIZATION",
-    "PROCESS_CONTROL_SCHEDULING",
-    "FILE_MANAGEMENT_PERMISSIONS",
-    "UNKNOWN"
-  ],
-  "testcases": [
-    {
-      "title": "Executes successfully",
-      // Although wildcard is used, the grader will only expect one notebook file. Use if filename cannot be determined.
-      "command": "jupyter_notebook_grader -i *.ipynb -o executed.ipynb",
-      "points": 1,
-      "validation": [
-        {
-          "method": "fileExists",
-          "actual_file": "executed.ipynb",
-          "show_actual" : "always",
-          "show_message" : "always"
-        }
-      ]
-    },
-    {
-      "pre_commands" : [
-        {
-          "command" : "cp",
-          "testcase" : "test01",
-          "source" : "cell1*.*",
-          "destination" : "./"
-        }
-      ], 
-      "title": "STDOUT",
-      "points": 1,
-      "validation": [
-        {
-          "method": "diff",
-          "actual_file": "cell1_stdout.txt",
-          "expected_string" : "hello world!"
-        },
-        {
-          "method" : "warnIfEmpty",
-		      "actual_file" : "cell1_stderr.txt",
-		      "show_actual" : "always",
-          "deduction" : 0.0
-        },
-        {
-          "method" : "warnIfEmpty",
-		      "actual_file" : "cell1_source.txt",
-		      "show_actual" : "always",
-          "deduction" : 0.0
-        },
-        {
-          "method" : "errorIfNotEmpty",
-		      "actual_file" : "cell1.err",
-		      "show_actual" : "always",
-          "deduction" : 0.0
-        }
-      ]
-    },
-    {
-      "pre_commands" : [
-        {
-          "command" : "cp",
-          "testcase" : "test01",
-          "source" : "cell2*.*",
-          "destination" : "./"
-        }
-      ], 
-      "title": "Markdown",
-      "points": 1,
-      "validation": [
-        {
-          "method": "diff",
-          "actual_file": "cell2.txt",
-          "expected_string" : "## 2. Create IPython images with the given \"one.png\" and \"two.png\".\nUse `from IPython.display import Image`"
-        },
-        {
-          "method" : "errorIfNotEmpty",
-		      "actual_file" : "cell2.err",
-		      "show_actual" : "always",
-          "deduction" : 0.0
-        }
-      ]
-    }
-  ]
-}
-```
+Example Jupyter Notebook autograding configurations can be found on the [Submitty GitHub](https://github.com/Submitty/Submitty/tree/main/more_autograding_examples).
 
 ### Required Fields
 
@@ -126,37 +14,25 @@ For autograding Jupyter Notebooks, the following fields must be included in your
 ```json
 {
   "autograding" : {
-        "submission_to_runner" : [  "*.ipynb", "*.png" ],
-        "work_to_details" : [ "**/*.ipynb", "**/*.png", "**/*.txt", "**/*.err" ]
+        "submission_to_runner" : [ ... ],
+        "work_to_details" : [ ... ]
     },
   "autograding_method": "docker",
   "container_options": {
-    "container_image": "submitty/jupyter:latest"
+    "container_image": "..."
   },
   "allow_system_calls": [
-    "COMMUNICATIONS_AND_NETWORKING_INTERPROCESS_COMMUNICATION",
-    "COMMUNICATIONS_AND_NETWORKING_KILL",
-    "COMMUNICATIONS_AND_NETWORKING_SIGNALS",
-    "COMMUNICATIONS_AND_NETWORKING_SOCKETS",
-    "COMMUNICATIONS_AND_NETWORKING_SOCKETS_MINIMAL",
-    "FILE_MANAGEMENT_MOVE_DELETE_RENAME_FILE_DIRECTORY",
-    "FILE_MANAGEMENT_RARE",
-    "PROCESS_CONTROL_ADVANCED",
-    "PROCESS_CONTROL_NEW_PROCESS_THREAD",
-    "PROCESS_CONTROL_MEMORY_ADVANCED",
-    "PROCESS_CONTROL_SYNCHRONIZATION",
-    "PROCESS_CONTROL_SCHEDULING",
-    "FILE_MANAGEMENT_PERMISSIONS",
-    "UNKNOWN"
+    ...
   ]
 }
 ```
 
+The method for allowing certain system calls in can be found in [System Call Filtering](system_call_filtering.md).
 You may also need to pass in resource limit values or a max submission size.
 
 ```json
 "resource_limits" : {
-    "RLIMIT_NPROC" : 32, // 
+    "RLIMIT_NPROC" : 32,
     "RLIMIT_FSIZE": 20971520 // 20 MB
   },
 "max_submission_size": 10485760, // 10 MB
