@@ -113,7 +113,7 @@ Then use the standard markdown syntax show below:
     ```
 
 * **Equations**  
-    To add an equation, use dollar signs or `\(` and `\)` to enclose the equation. For example:
+    To add an equation using LaTeX, use dollar signs or `\(` and `\)` to enclose the equation. For example:
 
     ```
     $E = mc^2$
