@@ -3,11 +3,11 @@ title: Christopher Poon
 category: Developer > Rensselaer Center for Open Source (RCOS) > Summer 2025
 ---
 
-During the summer, I focused on significantly expanding Submitty's quantum computing capabilities and strengthening its core autograding infrastructure. My primary achievement was engineering a secure and robust system for autograding Jupyter Notebooks, a critical feature for modern computational courses. Additionally, I enhanced platform stability and instructor experience by resolving outstanding issues and refactoring key Docker functionalities. My contributions are reflected in over 25 pull requests and more than 20 peer reviews.
+As a first-time Submitty developer, I focused on significantly expanding its quantum computing capabilities and strengthening its core autograding infrastructure. My primary achievement was engineering a secure and robust system for autograding Jupyter Notebooks, a critical feature for modern computational courses. Additionally, I enhanced platform stability and instructor experience by resolving outstanding issues and refactoring key Docker functionalities. My contributions are reflected in over 25 pull requests and more than 20 peer reviews.
 
 ### Quantum Computing Integration
 
-This term, I built upon Submitty's existing quantum computing foundation to support more advanced, interactive coursework. I began development of new course content, including a foundational prerequisite course designed to onboard students with the necessary background in linear algebra, complex numbers, and core principles of quantum physics. Building on that, I designed a hands-on lab for Simon's algorithm to demonstrate one of the first known exponential speedups over classical computation. To ensure compatibility with modern tools, I upgraded the Qiskit Docker image to version 2.0.1.
+This term, I built upon Submitty's existing quantum computing foundation to support more advanced, interactive coursework. I began development of new course content, including a foundational prerequisite course designed to onboard students with the necessary background in linear algebra, complex numbers, and core principles of quantum physics. Building on that, I designed a hands-on lab for Simon's algorithm to demonstrate one of the first known exponential speedups over classical computation. To ensure compatibility with modern tools, I upgraded the Qiskit Docker image to version 2.0.1. I also began work autograding quantum teleportation across a network.
 
 ![](../../../images/RCOS_report/2025_Christopher_Poon/simons.png)
 
@@ -33,10 +33,10 @@ On the backend, I extended Docker functionality by adding build-time error detec
 
 ### Miscellaneous & Future Work
 
-In addition to working on integrating quantum computing with Submitty, I contributed to a range of platform improvements and participated in code reviews to support Submitty development.
+In addition to working on integrating quantum computing with Submitty, I contributed to a range of platform improvements and participated in code reviews to maintain project quality.
 
-Future work in terms of quantum computing integration can be made in the following areas:
+Next steps for quantum computing integration include:
 
-- Additional prerequisite course + course material
-- Internal Jupyter autograding integration instead of script usage
-- Support for running student circuits with a Submitty IBM account
+- Expanding both prerequisite course content and prospective course labs and homeworks
+- Embedding Jupyter autograding natively into Submitty (removing reliance on scripts)
+- Enabling student quantum circuits to run via a Submitty-managed IBM Quantum account
