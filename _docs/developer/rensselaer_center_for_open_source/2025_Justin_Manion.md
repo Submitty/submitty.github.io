@@ -46,7 +46,7 @@ Added toggles for line numbers and tab size.
 **Download Config as ZIP ([PR#11973](https://github.com/Submitty/Submitty/pull/11973))** -
 Added the ability to download the entire config directory as a ZIP archive for backup or transfer. This allows users to save edits they made on the site editor for future use.
 
-**Design & UX Polish (PR pending)** - 
+**Design & UX Polish ([PR#11991](https://github.com/Submitty/Submitty/pull/11991))** - 
 Refined visual layout and interactions to feel intuitive and consistent with the rest of Submitty. This will include binary file error handling, highlighting selected files, tool tips, and preventing full page reload when something is saved, added, or deleted.
 
 **Edit Directory File (PR pending)** - 
