@@ -3,11 +3,11 @@ title: Justin Manion
 category: Developer > Rensselaer Center for Open Source (RCOS) > Summer 2025
 ---
 
-[View my commits here](https://github.com/Submitty/Submitty/commits?author=JManion32)
+[View my commits](https://github.com/Submitty/Submitty/commits?author=JManion32)
 
-**50** pull requests reviewed  
-**24** pull requests created  
-**14** pull requests taken over and merged
+**51** pull requests reviewed  
+**26** pull requests created  
+**17** pull requests taken over and merged
 
 Spending Summer 2025 as a full time Submitty developer was a unique and incredibly rewarding experience! Here are some of the features I worked on:
 ### Displaying all Notifications on the Home Page
@@ -46,8 +46,8 @@ Added toggles for line numbers and tab size.
 **Download Config as ZIP ([PR#11973](https://github.com/Submitty/Submitty/pull/11973))** -
 Added the ability to download the entire config directory as a ZIP archive for backup or transfer. This allows users to save edits they made on the site editor for future use.
 
-**Design & UX Polish ([PR#11991](https://github.com/Submitty/Submitty/pull/11991))** - 
-Refined visual layout and interactions to feel intuitive and consistent with the rest of Submitty. This will include binary file error handling, highlighting selected files, tool tips, and preventing full page reload when something is saved, added, or deleted.
+**Design & UX Polish ([PR#11991](https://github.com/Submitty/Submitty/pull/11991) and [PR#12003](https://github.com/Submitty/Submitty/pull/12003))** - 
+Refined visual layout and interactions to feel intuitive and consistent with the rest of Submitty. Changes include highlighting selected files, adding tool tips to the customize toggles, making switch between text files smooth, ensuring correct file order (root-level directories first, then root-level files), and improving overall spacing.
 
 **Edit Directory File (PR pending)** - 
 Allows users who pull from Submitty's private autograding directory to use the gradeable config editor.
