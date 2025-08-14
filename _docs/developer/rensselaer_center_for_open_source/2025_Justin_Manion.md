@@ -6,7 +6,7 @@ category: Developer > Rensselaer Center for Open Source (RCOS) > Summer 2025
 [View my commits](https://github.com/Submitty/Submitty/commits?author=JManion32)
 
 **51** pull requests reviewed  
-**26** pull requests created  
+**27** pull requests created  
 **17** pull requests taken over and merged
 
 Spending Summer 2025 as a full time Submitty developer was a unique and incredibly rewarding experience! Here are some of the features I worked on:
