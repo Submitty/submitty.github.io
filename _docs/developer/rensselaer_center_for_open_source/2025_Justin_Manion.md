@@ -49,11 +49,14 @@ Added the ability to download the entire config directory as a ZIP archive for b
 **Design & UX Polish ([PR#11991](https://github.com/Submitty/Submitty/pull/11991) and [PR#12003](https://github.com/Submitty/Submitty/pull/12003))** - 
 Refined visual layout and interactions to feel intuitive and consistent with the rest of Submitty. Changes include highlighting selected files, adding tool tips to the customize toggles, making switch between text files smooth, ensuring correct file order (root-level directories first, then root-level files), and improving overall spacing.
 
-**Edit Directory File (PR pending)** - 
+**Edit Directory File (Coming Soon)** - 
 Allows users who pull from Submitty's private autograding directory to use the gradeable config editor.
 
-**Directory Editing Permission Controls (PR pending)** - 
+**Directory Editing Permission Controls (Coming Soon)** - 
 Before I can create the above PR, there is a security vulnerability that needs to be addressed. Currently, there are no checks to ensure that the user pulling from the repository owns the file. This means that anyone with SSH access would be able to edit any autograding configuration (even live ones!).
+
+**Documentation ([PR#707]([https://github.com/Submitty/Submitty/pull/11991](https://github.com/Submitty/submitty.github.io/pull/707))** - 
+View documentation page [here](https://submitty.org/instructor/assignment_configuration/configuration_editor).
 
 ![alt text](image-2.png)
 
