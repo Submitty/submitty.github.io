@@ -6,12 +6,12 @@ category: Developer > Rensselaer Center for Open Source (RCOS) > Summer 2025
 [View my commits](https://github.com/Submitty/Submitty/commits?author=JManion32)
 
 **51** pull requests reviewed  
-**27** pull requests created  
-**17** pull requests taken over and merged
+**28** pull requests created  
+**16** pull requests taken over and merged
 
 Spending Summer 2025 as a full time Submitty developer was a unique and incredibly rewarding experience! Here are some of the features I worked on:
 ### Displaying all Notifications on the Home Page
-[PR#11914](https://github.com/Submitty/Submitty/pull/11914)  
+[PR#11914](https://github.com/Submitty/Submitty/pull/11914) and [PR#12007](https://github.com/Submitty/Submitty/pull/12007))** 
 Submitty previously only displayed notifications on a per-course basis, meaning users had to visit each individual course to view or mark notifications as read. As we’ve added more advanced notification features, this limitation became increasingly cumbersome, especially for users in multiple courses. On top of that, the home page itself felt bare, with lots of unused space.
 
 **Design Process**  
