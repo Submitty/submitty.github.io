@@ -55,7 +55,7 @@ Allows users who pull from Submitty's private autograding directory to use the g
 **Directory Editing Permission Controls (Coming Soon)** - 
 Before I can create the above PR, there is a security vulnerability that needs to be addressed. Currently, there are no checks to ensure that the user pulling from the repository owns the file. This means that anyone with SSH access would be able to edit any autograding configuration (even live ones!).
 
-**Documentation ([PR#707]([https://github.com/Submitty/Submitty/pull/11991](https://github.com/Submitty/submitty.github.io/pull/707))** - 
+**Documentation ([PR#707](https://github.com/Submitty/submitty.github.io/pull/707))** - 
 View documentation page [here](https://submitty.org/instructor/assignment_configuration/configuration_editor).
 
 ![alt text](image-2.png)
