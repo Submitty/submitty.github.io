@@ -136,6 +136,7 @@ var NAVTREE =
                 [ "Hidden Testcase Examples", "/instructor/autograding/hidden_testcase_examples", null ],
                 [ "Docker Images", "/instructor/autograding/docker_images", null ],
                 [ "Docker UI", "/instructor/autograding/docker_ui", null ],
+                [ "Jupyter Notebook", "/instructor/autograding/jupyter_notebook", null ],
                 [ "Static Analysis", "/instructor/autograding/static_analysis/index", [
                     [ "Overview", "/instructor/autograding/static_analysis/index", null ],
                     [ "Count", "/instructor/autograding/static_analysis/count", null ],
