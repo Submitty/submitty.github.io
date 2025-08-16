@@ -6,13 +6,14 @@ category: Developer > Rensselaer Center for Open Source (RCOS) > Summer 2025
 [View my commits](https://github.com/Submitty/Submitty/commits?author=JManion32)
 
 **51** pull requests reviewed  
-**28** pull requests created  
+**29** pull requests created  
 **16** pull requests taken over and merged
 
 Spending Summer 2025 as a full time Submitty developer was a unique and incredibly rewarding experience! Here are some of the features I worked on:
 ### Displaying all Notifications on the Home Page
-[PR#11914](https://github.com/Submitty/Submitty/pull/11914) and [PR#12007](https://github.com/Submitty/Submitty/pull/12007))** 
 Submitty previously only displayed notifications on a per-course basis, meaning users had to visit each individual course to view or mark notifications as read. As we’ve added more advanced notification features, this limitation became increasingly cumbersome, especially for users in multiple courses. On top of that, the home page itself felt bare, with lots of unused space.
+
+#### Initial PR ([#11914](https://github.com/Submitty/Submitty/pull/11914))
 
 **Design Process**  
 Since this feature is now front and center on the site, thoughtful UI/UX design was essential. We started with whiteboard sketches to explore layout ideas, then moved to Figma to create a polished mockup for feedback and iteration. Throughout development, I regularly demoed progress to the group to gather input and refine both functionality and design.
@@ -25,6 +26,12 @@ The main challenge was efficiently aggregating notifications from multiple cours
 - Creating a new database index on `created_at` and `to_user_id`, reducing the time complexity from **O(courses × notifications)** to **O(courses)**
 
 This update not only streamlines how users interact with notifications, but also transforms the homepage into a more dynamic and informative landing experience. Looking ahead, I hope to expand this space further by adding upcoming gradeables, grade summaries, and other personalized insights to evolve the homepage into a true dashboard.
+
+#### Mark as Seen ([#12007](https://github.com/Submitty/Submitty/pull/12007))
+
+
+#### Improve Interactivity ([#12012](https://github.com/Submitty/Submitty/pull/12012))
+
 
 <img width="3838" height="2016" alt="image" src="https://github.com/user-attachments/assets/2e815a40-f2c4-4a68-841d-65761030dbc1" />
 
@@ -50,10 +57,7 @@ Added the ability to download the entire config directory as a ZIP archive for b
 Refined visual layout and interactions to feel intuitive and consistent with the rest of Submitty. Changes include highlighting selected files, adding tool tips to the customize toggles, making switch between text files smooth, ensuring correct file order (root-level directories first, then root-level files), and improving overall spacing.
 
 **Edit Directory File (Coming Soon)** - 
-Allows users who pull from Submitty's private autograding directory to use the gradeable config editor.
-
-**Directory Editing Permission Controls (Coming Soon)** - 
-Before I can create the above PR, there is a security vulnerability that needs to be addressed. Currently, there are no checks to ensure that the user pulling from the repository owns the file. This means that anyone with SSH access would be able to edit any autograding configuration (even live ones!).
+Allows users who pull from Submitty's private course repository to use the gradeable config editor. Before I can create this, there is a security vulnerability that must to be addressed. Currently, there are no checks to ensure that the user pulling from the repository owns the file. This means that anyone with SSH access would be able to edit any autograding configuration on the web app.
 
 **Documentation ([PR#707](https://github.com/Submitty/submitty.github.io/pull/707))** - 
 View documentation page [here](https://submitty.org/instructor/assignment_configuration/configuration_editor).
