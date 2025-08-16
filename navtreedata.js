@@ -119,6 +119,7 @@ var NAVTREE =
             ] ],
             [ "Assignment Configuration", "/instructor/assignment_configuration/configuration_path", [
                 [ "Configuration Path","/instructor/assignment_configuration/configuration_path", null],
+                [ "Configuration Editor", "/instructor/assignment_configuration/configuration_editor", null ],
                 [ "Notebook", "/instructor/assignment_configuration/notebook", null ]
             ] ],
             [ "Autograding", "/instructor/autograding/directory_structure", [
