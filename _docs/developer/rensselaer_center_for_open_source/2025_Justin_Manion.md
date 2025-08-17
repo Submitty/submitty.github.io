@@ -71,7 +71,7 @@ Allows users who pull from Submitty's private course repository to use the grade
 **Documentation ([PR#707](https://github.com/Submitty/submitty.github.io/pull/707))**  
 View documentation page [here](https://submitty.org/instructor/assignment_configuration/configuration_editor).
 
-![alt text](image-2.png)
+![](/images/gradeable_config_editor.png)
 
 ### Dark Mode Toggle for the Documentation Site
 [PR#691](https://github.com/Submitty/submitty.github.io/pull/691)  
