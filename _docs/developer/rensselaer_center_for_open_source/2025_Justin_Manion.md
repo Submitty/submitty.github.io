@@ -38,7 +38,7 @@ Each element also underlines on hover. This design is inspired by GitHub Actions
 <img width="1840" height="258" alt="image" src="https://github.com/user-attachments/assets/7c5d0a86-1e7a-4664-80d3-c6eb392999be" />
 
 #### The Final Product
-<img width="3838" height="2016" alt="image" src="https://github.com/user-attachments/assets/2e815a40-f2c4-4a68-841d-65761030dbc1" />
+![](/images/home_page_notifications.png)
 
 This update not only streamlines how users interact with notifications, but also transforms the homepage into a more dynamic and informative landing experience. Looking ahead, 
 I hope to expand this space further by adding upcoming gradeables, grade summaries, and other personalized insights to evolve the homepage into a true dashboard.
