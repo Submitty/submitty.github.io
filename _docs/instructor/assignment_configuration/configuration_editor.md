@@ -24,8 +24,6 @@ The text editor uses CodeMirror to enhance the editing experience. Use the butto
 1. Toggle line number visibility.
 2. Switch the tab size between 2 and 4 spaces.
 
-![](/images/instructor/assignment_configuration/config_editor_customization.png)
-
 ---
 
 _Note: This feature is only available for uploaded configurations. It does not yet support configurations pulled from the private courses repository._
