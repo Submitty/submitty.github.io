@@ -32,7 +32,7 @@ redirect_from:
 * Look for errors about sockets in:
 
   ```
-  tail -n 50 /var/local/submitty/socket_errors/<TODAYS_DATE>.log
+  tail -n 50 /var/local/submitty/logs/socket_errors/<TODAYS_DATE>.log
   ```
 
 
@@ -46,7 +46,7 @@ redirect_from:
 * Look in the Submitty site_errors log:
 
   ```
-  tail -n 50 /var/local/submitty/site_errors/<TODAYS_DATE>.log
+  tail -n 50 /var/local/submitty/logs/site_errors/<TODAYS_DATE>.log
   ```  
 
 
