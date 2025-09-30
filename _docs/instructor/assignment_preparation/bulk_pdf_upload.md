@@ -79,13 +79,68 @@ Explore the options / settings on your scanner.  Things to check:
   orderly upload to Submitty.
 
 
+## Scanning with the ScanSnap from Ricoh
+
+The <a href="https://www.pfu-us.ricoh.com/scanners/scansnap">Ricoh
+ScanSnap portable scanner</a> is affordable, convenient, fast, and
+robust.  We have used models from iX500 to iX1600 -- the software and
+interface is similar through different model numbers.
+
+### ScanSnap Settings on Windows
+
+Here's how to set our recommended scanner confiurations using the Windows ScanSnap software.
+
+1. Plug the scanner into your laptop using a USB connection.
+
+2. Open the ScanSnap the scanner.  And press the "Scan" button in the top left corner.
+
+    ![](/images/scanning/scansnap_windows_00.png){:width="600px"}
+
+3. Now edit your profile by selecting the small pencil icon in the upper right corner.
+
+    ![](/images/scanning/scansnap_windows_01.png){:width="600px"}
+
+4. Halfway down the page is an option for "Detailed Setttings", click that.
+
+    ![](/images/scanning/scansnap_windows_02.png){:width="600px"}
+
+5. On the detailed settings page you can select
+
+    * "Greyscale" -- It is important not to chose "Black & White" as
+      this will clamp all pixels to pure white or black and lightly
+      written pencil marks often become illegible.  Only choose
+      "Color" scanning if your exam actually requires grading in full
+      color.
+
+    * "Duplex" -- this will scan both the front and back of each page.
+      Even if you printed your exam single-sided, students may have
+      written answers on the backside of one or more pages.  We
+      recommend scanning both sides.
+
+    * "Best" -- you'll want to scan at a reasonably high resolution to
+      capture students who write rather small.
+
+    * Turn on "Do not Rotate" -- the software will attempt to detect
+      rotated pages and rotate the page 180 degrees, but it seems to
+      have many false positive detections.  We recommend turning this
+      setting off, and just being more careful when loading the paper
+      into the scanner.
+
+    * Turn off "Blank Page Removal" -- the software will also attempt
+      to detect and remove pages with very little data.  This option
+      is also inconsistent, and can leave you with different numbers
+      of scanned pages per student, which will break assumptions about
+      specific exam problems being on specific page numbers.
+
+     ![](/images/scanning/scansnap_windows_03.png){:width="600px"}
 
 
-## Scanning with the ScanSnap iX500 on Linux
 
-We use the portable ScanSnap iX500 for scanning our exams. This works with
-[SANE](http://www.sane-project.org/) out of the box; a variety of of
-front-ends for SANE exist that work well with this
+### ScanSnap Settings on Linux
+
+For Linux, we use the [SANE](http://www.sane-project.org/) software
+out of the box; a variety of of front-ends for SANE exist that work
+well with this
 scanner. [Simple-scan](https://github.com/GNOME/simple-scan) works
 fairly well - you will need to make sure to select the scanner in its
 preferences and set it to scan 'Both' sides of each page; you can then
