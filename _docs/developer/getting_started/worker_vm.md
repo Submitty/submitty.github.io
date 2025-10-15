@@ -31,22 +31,7 @@ machines* in addition to your primary vagrant virtual machine.
 
    _NOTE: This will create the vagrant configuration file: `.vagrant/workers.json`._
 
-
-4. If you are on MacOS running QEMU, restart the network socket in public mode:
-   ```
-   vagrant workers socket restart --public
-   ```
-   _NOTE: Using the `--public` flag will make your worker VMs accessible to anyone
-   on your local network, which may be a modest security concern.
-   We suggest this to minimize possibility of errors while creating the
-   worker machines and will revert this in a later step._
-
-   _NOTE: Running a socket command while a worker machine is running can detach the
-   process, making the VM inaccessible to vagrant. If this happens and you are unable
-   to `vagrant workers halt`, then you may run `pkill -15 -f qemu-system-` to kill
-   all virtual machines running on your computer (including the main Submitty VM)._
-
-6. Now you can create the worker machine(s) with:
+4. Now you can create the worker machine(s) with:
    ```
    vagrant workers up
    ```
@@ -55,25 +40,22 @@ machines* in addition to your primary vagrant virtual machine.
 
    When this is finished, you should see the Submitty duck ASCII art for each new worker machine.
 
-7. You can verify that all the worker machines are running with:
+5. You can verify that all the worker machines are running with:
    ```
    vagrant workers status
    ```
 
-8. `vagrant ssh` into the main virtual machine and run:
+6. `vagrant ssh` into the main virtual machine and run:
    ```
    refresh_vagrant_workers   # (runs python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/bin/refresh_vagrant_workers.py)
    submitty_install
    ```
 
-9. To stop the worker machines, you can run:
+7. To stop the worker machines, you can run:
    ```
    vagrant workers halt
    vagrant workers socket stop
    ```
-
-   _For MacOS QEMU users: Once the virtual machine(s) are halted, if you would like to restart under
-   private networking, you may do so by omitting the `--public` flag from the `vagrant workers socket start` command._
 
 
 ---
