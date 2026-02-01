@@ -162,7 +162,7 @@ By default, PHP only allows 20 files to be uploaded at a time.
 This limit is probably sufficient, but to change this limit, edit:
 
 ```
-/etc/php/8.1/fpm/php.ini
+/etc/php/8.2/fpm/php.ini
 ```
 
 and modify the variable:
@@ -174,7 +174,7 @@ max_file_uploads = 20
 
 Then restart PHP
 ```
-systemctl reload php8.1-fpm
+systemctl reload php8.2-fpm
 ```
 
 ## Allowing Large Student File Upload Submissions
@@ -187,7 +187,7 @@ value, view/edit this file:
 
 
 ```
-/etc/php/8.1/fpm/php.ini
+/etc/php/8.2/fpm/php.ini
 ```
 
 _Note: Depending on your version of Ubuntu, your version of php fpm will be different._
@@ -207,14 +207,14 @@ And restart apache:
 
 ```
 sudo systemctl restart apache2.service
-sudo systemctl restart php8.1-fpm.service
+sudo systemctl restart php8.2-fpm.service
 ```
 
 and/or
 
 ```
 sudo service apache2 restart
-sudo service php8.1-fpm restart
+sudo service php8.2-fpm restart
 ```
 
 _Note: Depending on your version of Ubuntu, your version of php fpm will be different._
@@ -229,7 +229,7 @@ in the `config.json`, for example:
 ```
 
 If you are having difficulty with student upload size, you can modify the
-following in `/etc/php/8.1/fpm/php.ini`:
+following in `/etc/php/8.2/fpm/php.ini`:
 
 ```
 memory_limit
@@ -245,7 +245,7 @@ students are using the system at once.
 ## Tune the performance of the website to handle a large number of users
 
 
-Reading the PHP memory limit from `/etc/php/8.1/fpm/php.ini`
+Reading the PHP memory limit from `/etc/php/8.2/fpm/php.ini`
 
 ```
 memory_limit = <MEMORY LIMIT>
@@ -262,14 +262,14 @@ restart apache and php-fpm:
 
 ```
 sudo systemctl restart apache2.service
-sudo systemctl restart php8.1-fpm.service
+sudo systemctl restart php8.2-fpm.service
 ```
 
 
 #### PHP-FPM settings using the static process manager
 
 
-Adjust the following settings in `/etc/php/8.1/fpm/pool.d/submitty.conf`.
+Adjust the following settings in `/etc/php/8.2/fpm/pool.d/submitty.conf`.
 
 We have found that the following settings work well for a production
 server with approximately 2000 students.  The commented out line is
@@ -292,7 +292,7 @@ can be used to calculate a `pm.max_children` value for your server
 #### PHP-FPM settings using the dynamic process manager
 
 
-Adjust the following settings in `/etc/php/8.1/fpm/pool.d/submitty.conf`.
+Adjust the following settings in `/etc/php/8.2/fpm/pool.d/submitty.conf`.
 
 The commented out line is the default value.  Please read the documentation
 to determine values that are appropriate for your own system.
