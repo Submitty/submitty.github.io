@@ -52,7 +52,7 @@ configurations and automate the term creation process in Submitty.
    Once you have your certificate and key, place them in the appropriate directory (usually
    `/etc/ssl/certs/` for the certificate and `/etc/ssl/private/` for the key). 
 
-   Then, add the location to your certificate and key files to the corresponding fields in the defaults file, such as:
+   Then, add the location to your certificate and key files to the corresponding fields in the submitty_install playbook, such as:
 
    ```
    submitty_install_ssl_cert_file: /etc/ssl/certs/submitty.pem
