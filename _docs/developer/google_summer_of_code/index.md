@@ -27,6 +27,17 @@ redirect_from:
 [comment]: <> [Google Summer of Code Application](/developer/google_summer_of_code/GSoC_application)
 
 
+----
+
+
+_Submitty has applied for acceptance to [Google Summer of Code (GSoC) 2026](https://summerofcode.withgoogle.com/).
+Project reports from participants in previous summers are linked below.  The organizations selected for Summer
+2026 Google Summer of Code will be announced in
+[late February](https://developers.google.com/open-source/gsoc/timeline)._
+
+---
+
+
 ## Google Summer of Code 2024
 
 * [Streamlining the Notebook Builder UI for Automated Grading by Sahil Suman](/developer/google_summer_of_code/2024_Sahil_Suman)
