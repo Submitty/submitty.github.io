@@ -24,7 +24,7 @@ redirect_from:
 [comment]: <> are from 20XX and will be updated if Submitty is accepted!_
 
 
-[comment]: <> [Google Summer of Code Application](/developer/google_summer_of_code/GSoC_application)
+
 
 
 ----
@@ -34,6 +34,10 @@ _Submitty has applied for acceptance to [Google Summer of Code (GSoC) 2026](http
 Project reports from participants in previous summers are linked below.  The organizations selected for Summer
 2026 Google Summer of Code will be announced in
 [late February](https://developers.google.com/open-source/gsoc/timeline)._
+
+
+_[How to Apply to Submitty for Google Summer of Code 2026](/developer/google_summer_of_code/GSoC_application)_
+
 
 ---
 
