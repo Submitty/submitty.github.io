@@ -21,17 +21,35 @@ redirect_from:
 [comment]: <> for Summer 20XX Google Summer of Code will be announced in late
 [comment]: <> February.
 
+
+---
+
+_Submitty has been a participating organization of
+[Google Summer of Code](/developer/google_summer_of_code/index)
+for six successful
+seasons.  We have applied for selection for
+[GSoC Summer 2026](https://summerofcode.withgoogle.com/)
+and our Project Ideas
+list below has been updated.  The organizations selected for Summer
+2026 Google Summer of Code will be announced in
+[late February](https://developers.google.com/open-source/gsoc/timeline)._
+
+---
+
 The project ideas listed below target a variety of different topics
 and require different levels of prior experience.  The scope of these
 projects varies, and may require different overall time commitments
 (varying full-time-work-equivalent from 1 month to 3 months).  We are
 also interested in project proposals based on other topics from our
-list of open bugs and feature requests.  Submit questions or comments
-on specific issues through our [Submitty GitHub Issue
-Tracker](https://github.com/Submitty/Submitty/issues) and
-join
-our [Zulip server](/contact) to meet the Submitty mentors and other new
-developers.
+list of open bugs and feature requests.
+
+Prospective Submitty contributers are encouraged to
+join our
+[Zulip server](/contact) to meet the Submitty mentors and other new
+developers.  You may also submit questions or comments
+on specific issues through our
+[Submitty GitHub Issue Tracker](https://github.com/Submitty/Submitty/issues).
+
 
 
 &nbsp;    
@@ -41,8 +59,9 @@ developers.
 
    Submitty primarily uses server-side rendering via Twig. jQuery is
    used extensively throughout the site to add interactivity, but it
-   is insufficient for the most complex pages.  Instead, we think
-   Vue.js is a better path forward for pages such as the TA grading
+   is insufficient for the most complex pages.  Instead, we we are moving
+   forward with a redesign and refactor to
+   [Vue.js](https://vuejs.org/) for pages such as the TA grading
    interface, discussion forum, office hours queue, and rainbow grades
    customization interface.  The goal of this project is to explore
    how we can add and improve interactivity to specific pages and
@@ -58,14 +77,14 @@ developers.
    experience architecting a key part of a large project, and grow their
    knowledge of modern web frameworks.
 
-   [Ongoing Work to Incorporate Vue.js](https://github.com/Submitty/Submitty/pulls?q=is%3Apr+vue+is%3Aclosed+)  
+   [Recent & Ongoing Work to Incorporate Vue.js](https://github.com/Submitty/Submitty/pulls?q=is%3Apr+vue)  
    [Open Issues related to Vue.js](https://github.com/Submitty/Submitty/issues?q=is%3Aissue%20state%3Aopen%20vue%20)
 
    _Skills & Experience Required_: Moderate to advanced programming
    skills, preferably with experience using modern client-side web
    frameworks. 
 
-   _Possible Mentors_: William Allen, Shail Patel, Chris Reed, Barb Cutler  
+   _Possible Mentors_: Justin Manion, William Allen, Chris Reed, Barb Cutler  
    _GSoC Project Size_: 175 or 350 hours  
    _Difficulty Level_:  medium to challenging
 
@@ -79,15 +98,23 @@ developers.
 
    Our TA grading interface is elaborate, highly-featured, and
    customizable.  However, the interface is visually overwhelming to
-   new graders and some of our TA grading features are not adequately
-   tested by automated unit and end-to-end (Cypress) regression testing.
+   new graders and new instructors.  We would like to simplify the
+   default environment configuration and improve the on-page
+   documentation to make Submitty more intuitive for new users.
+   
+   Furthermore, some of our TA grading features are not adequately
+   tested by automated unit and end-to-end (Cypress) regression
+   testing.  Our development environment includes a large variety of
+   synthetic data for testing, but the coverage of that data for our
+   large and growing feature set is incomplete.  The scripts to
+   randomly generate this synthetic data should be refactored to allow
+   for more flexibility and control to ensure we can adequately test
+   all new and existing functionality.
 
    [Open Issues related to TA Grading](https://github.com/Submitty/Submitty/issues?q=is%3Aopen+is%3Aissue+label%3A%22TA+Grading+%2F+TA+UI%22)  
-   [Open Issues related to Sample Data](https://github.com/Submitty/Submitty/issues?q=is%3Aopen+is%3Aissue+label%3A%22Sample+Data%22)  
+   [Open Issues related to Synthetic Sample Data](https://github.com/Submitty/Submitty/issues?q=is%3Aopen+is%3Aissue+label%3A%22Sample+Data%22)  
    [Related Prior GSoC Project: Cameron Peterson](/developer/google_summer_of_code/2023_Cameron_Peterson)  
    [Related Prior GSoC Project: Rahul Vishwakarma](/developer/google_summer_of_code/2024_Rahul_Vishwakarma)
-
-   _Note: This project may be combined with the previous project idea._
 
    _Expected Outcomes_: The primary goals for this project include the
    expansion of our automated testing of the TA Grading pages and to
@@ -114,17 +141,25 @@ developers.
 
    [Overview of Rubric Grading Interface](/grader/rubric_grading/index)
 
-   _Note: This project may be combined with one of the previous project ideas._
-
    The Manual/TA rubric grading interface is elaborate,
    highly-featured, and customizable; however, the performance of
    these webpages is problematic for large courses due to inefficient
    database queries and server communication delays to load data that
    could/should be asynchronous.  The manual/TA rubric pages could
-   benefit from a significant technology refactor to use Vue/Vite, for
-   example.
+   benefit from a significant technology refactor to use
+   [Vue.js](https://vuejs.org/), for example.
 
-   [Open Issues related to TA Grading](https://github.com/Submitty/Submitty/issues?q=is%3Aopen+is%3Aissue+label%3A%22TA+Grading+%2F+TA+UI%22)
+   We also have quality of life and efficiency feature requests for
+   _power user_ graders and instructors teaching large enrollment
+   courses with a sizeable team of teaching assistants and graders.
+   Some of the advanced features include: Automated redaction of
+   student names to facilitate anonymized grading, dynamic indicators
+   to show when another grader is actively viewing/grading this
+   student, and streamlining grading by showing individual pages of a
+   student exam rather than the entire .pdf.
+
+   [Open Issues related to TA Grading](https://github.com/Submitty/Submitty/issues?q=is%3Aopen+is%3Aissue+label%3A%22TA+Grading+%2F+TA+UI%22)  
+   [Related Prior RCOS Project: Alexander Lavallee](/developer/rensselaer_center_for_open_source/2025_Alexander_Lavallee)
 
    _Expected Outcomes_: This project would first prepare a detailed
    software design plan for an organized, multi-stage incremental
@@ -142,7 +177,7 @@ developers.
    _Skills & Experience Required_: Web and database development
    experience and general software design and implementation
    experience.  Experience with end-to-end automated testing (Cypress)
-   and and having served as a teaching assistant with grading
+   and having served as a teaching assistant with grading
    experience design is beneficial but not required.
 
    _Possible Mentors_: William Allen, Barb Cutler  
@@ -157,16 +192,16 @@ developers.
    Our system for automated testing and grading of student work is
    very powerful, but the configuration process that instructors must
    navigate is complex and time-consuming.  While we provide a number
-   of examples, the number of choices for development of an
-   autograding configuration is overwhelming.  The primary method for
-   creating an autograding configuration is to prepare a `config.json`
-   file (and any necessary additional files) and upload or store these
-   files on the server file system.  We have a prototype Web GUI
-   interface we call the "Notebook Builder" but the current state of
-   the feature is undocumented and functionality is limited.  We
-   would like to improve and expand this feature to facilitate
-   instructor creation of basic and moderate complexity autograding
-   configurations.
+   of illustrative examples, the development of a new autograding
+   configuration is overwhelming -- even for an instructor with prior
+   experience.  The primary method for creating an autograding
+   configuration is to prepare a `config.json` file (and any necessary
+   additional files) and upload or store these files on the server
+   file system.  We have a prototype Web GUI interface we call the
+   "Notebook Builder" but the current state of the feature is
+   undocumented and functionality is limited.  We would like to
+   improve and expand this feature to facilitate instructor creation
+   of basic and moderate complexity autograding configurations.
 
    [Assignment Autograding Configuration Instructions](/instructor/autograding/specification)  
    [Notebook Assignment Configuration](/instructor/assignment_configuration/notebook)  
@@ -179,7 +214,8 @@ developers.
 
    [Open Issues related to Autograding](https://github.com/Submitty/Submitty/labels/Autograding)  
    [Open Issues related to Notebook / Notebook Builder](https://github.com/Submitty/Submitty/issues?q=is%3Aopen+is%3Aissue+label%3A%22Notebook+%2F+Notebook+Builder%22)  
-   [Related Prior GSoC Project: Sahil Suman](/developer/google_summer_of_code/2024_Sahil_Suman)
+   [Related Prior GSoC Project: Sahil Suman](/developer/google_summer_of_code/2024_Sahil_Suman)  
+   [Related Prior RCOS Project: Justin Manion](/developer/rensselaer_center_for_open_source/2025_Justin_Manion)
 
    _Expected Outcomes_: The primary focus of the project is the
    revision and expansion of the Notebook Builder UI to increase the
@@ -197,15 +233,13 @@ developers.
    instructor with experience in programming assignment design will be
    beneficial but not required.
 
-   _Possible Mentors_: Barb Cutler, Chris Reed  
+   _Possible Mentors_: Justin Manion, Barb Cutler, Chris Reed  
    _GSoC Project Size_: 90 or 175 or 350 hours  
    _Difficulty Level_: introductory or medium
 
    &nbsp;    
 
 5. **Expansion of Examples and Documentation of Intermediate and Advanced Autograding Features**
-
-   _Note: This project is related to previous project idea but is a distinct project._
 
    Our system for automated testing and automated grading of student
    work is very powerful and highly-customizable, but the
@@ -252,7 +286,7 @@ developers.
    Having served as a teaching assistant or instructor with experience
    in programming assignment design will be beneficial.
 
-   _Possible Mentors_: Shail Patel, Chris Reed, Barb Cutler  
+   _Possible Mentors_: Chris Reed, Barb Cutler  
    _GSoC Project Size_: 175 or 350 hours  
    _Difficulty Level_: medium to challenging
 
@@ -325,9 +359,11 @@ developers.
 7. **Other Topics**
 
    The Submitty team welcomes GSoC project proposals on other topics
-   related to items in our GitHub issue tracker.  A successful
-   application would select one or more issues of moderate scope
-   proportional to the applicant's time commitment and prior
+   requested by our student, TA, and instructor users.  We track
+   requests for new features in our
+   [Submitty GitHub Issue Tracker](https://github.com/Submitty/Submitty/issues).  A
+   successful application would select one or more issues of moderate
+   scope proportional to the applicant's time commitment and prior
    experience.  Be sure to join our [Zulip server](/contact) to meet
    the Submitty mentors and other new developers and discuss your
    interests and project plans.
@@ -336,7 +372,7 @@ developers.
    willingness to learn web and database development, and additional
    specific skills as appropriate.
    
-   _Possible Mentors_: Barb Cutler, William Allen, Shail Patel, Cameron Peterson, Chris Reed, Matthew Peveler, Preston Carman  
+   _Possible Mentors_: Barb Cutler, William Allen, Justin Manion, Cameron Peterson, Chris Reed, Shail Patel, Matthew Peveler, Preston Carman  
    _GSoC Project Size_: 90 or 175 or 350 hours  
    _Difficulty Level_:  introductory to medium to challenging
    
@@ -344,14 +380,16 @@ developers.
 
 See also:
 
+* [Suggestions for New Developers](/developer)
+
+* [Contact Us on Zulip](/contact)
+
 * [Submitty GitHub Issue Tracker](https://github.com/Submitty/Submitty/issues)
 
-* [Developer](/developer) pages
+* [How to Review a Pull Request](/developer/getting_started/review_a_pull_request)
 
-* [Review a Pull Request](/developer/getting_started/review_a_pull_request)
+* [How to Make a Pull Request](/developer/getting_started/make_a_pull_request)
 
-* [Make a Pull Request](/developer/getting_started/make_a_pull_request)
-
-* [Edit Submitty Documentation](/developer/getting_started/edit_submitty_documentation)
+* [How to Edit Submitty Documentation](/developer/getting_started/edit_submitty_documentation)
 
 
