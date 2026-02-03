@@ -10,6 +10,38 @@ redirect_from:
 
 ---
 
+## 2025 Summer Developers
+
+![](/images/people/2025_summer.png)
+
+Christopher Poon,
+Jeffrey Cordero,
+Giancarlo Martinelli,
+Williams Chen,
+Alex Lavallee,
+Justin Manion, and
+William Allen.
+
+---
+
+## 2025 Spring Developers
+
+![](/images/people/2025_spring.png)
+
+Giancarlo Martinelli,
+Jeffrey Cordero,
+Alex Lavallee,
+Zheyu Deng,
+Yichang Lin,
+Zachary Niles Peretz,
+Garrett Gee,
+Max Dyer,
+Viane Matsibekker,
+Justin Manion, and
+Rafiuzzaman Khan.
+
+---
+
 ## 2024 Fall Developers
 
 ![](/images/people/2024_fall.png)
