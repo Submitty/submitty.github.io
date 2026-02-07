@@ -15,9 +15,9 @@ Join our Community Discussion on Zulip:
 ## Setting Up
 
 * Submitty primarily uses the following languages/frameworks: 
-[PHP](developer/software_and_system_design/coding_style_guide/php), 
+[PHP](/developer/software_and_system_design/coding_style_guide/php), 
 [Twig](/developer/developing_the_php_site/view#rendering-the-user-page-with-twig), 
-[JavaScript](developer/software_and_system_design/coding_style_guide/javascript),
+[JavaScript](/developer/software_and_system_design/coding_style_guide/javascript),
 [TypeScript](/developer/developing_the_php_site/javascript#typescript), 
 [Vue](/developer/developing_the_php_site/view#another-option-rendering-with-vue), 
 [PostgreSQL](/developer/software_and_system_design/database_design), 
