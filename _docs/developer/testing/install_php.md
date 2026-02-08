@@ -8,12 +8,20 @@ you will need to have PHP installed on your host machine first.
 
 ### Linux & WSL:
 
-*If you're distro cannot find the correct package or installs the wrong version you may have to specify php8.1 in each package name*
+*If you're distro cannot find the correct package or installs the wrong version you may have to specify php8.2 in each package name*
 
 ```bash
 sudo apt-get update
 sudo apt-get install -y php php-curl php-xml php-mbstring 
 ```
+
+*You may need to install the PHP PPA for certain versions of PHP*
+
+```bash
+sudo add-apt-repository ppa:ondrej/php
+sudo apt update
+```
+
 ### MacOS
 
 ```bash
@@ -25,11 +33,11 @@ default.
 
 ### Windows
 
-Download [php 8.1](https://windows.php.net/download/) as a zip file under the thread safe category. Then extract the contents of the zip to a folder, and add the path to that folder to your path system variable. It's suggested that one extracts the contents of the zip to a folder called `php`, which can be put at `C:\php` for simplicity. You can then add `C:\php` to your path system environment variable.
+Download [php 8.2](https://windows.php.net/download/) as a zip file under the thread safe category. Then extract the contents of the zip to a folder, and add the path to that folder to your path system variable. It's suggested that one extracts the contents of the zip to a folder called `php`, which can be put at `C:\php` for simplicity. You can then add `C:\php` to your path system environment variable.
 
 ------------- 
 
-Verify you have PHP installed correctly, submitty requires a version greater than 7.0
+Verify you have PHP installed correctly, submitty requires at least version 8.2
 
 ```bash
 php -v

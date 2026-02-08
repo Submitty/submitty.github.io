@@ -75,7 +75,7 @@ You can use these [instructions](/sysadmin/installation/ansible).
 4. Edit PHP Settings
 
    We recommend for security that you modify your PHP installation and disable certain PHP functions.
-   To do this, edit `/etc/php/8.1/fpm/php.ini`  and find the entry for `disable_functions` and make sure the list of
+   To do this, edit `/etc/php/8.2/fpm/php.ini`  and find the entry for `disable_functions` and make sure the list of
    disabled functions contains:
 
    ```
