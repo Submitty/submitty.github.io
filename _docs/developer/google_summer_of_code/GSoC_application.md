@@ -33,17 +33,21 @@ _See also: [Reports from previous Google Summer of Code participants](/developer
 
 5. Join our Zulip server to ask questions and meet other new developers:   
    [https://submitty.org/contact](/contact)
-   
+
+   Please use the "Google Summer of Code 2026" channel to introduce yourself, engage with other
+   prospective GSoC Applicants, ask technical questions, and help review and assist other
+   developers as they also become familiar with the Submitty code base and development process.
+
    Ask specific technical questions about the Submitty system and open
    issues and help answer technical questions from other new developers if
    you think you can help.  Your engagement in the community discussion
    during the application period (both asking and answering questions) will 
    be taken into account as we evaluate your application.
 
-   NOTE: The Submitty mentors for Google Summer of Code are on our
+   __NOTE: The Submitty mentors for Google Summer of Code are on our
    Zulip server.  Please communicate through the public channels/streams and
    do not direct message (DM) / private message any mentors. 
-   Mentors will generally not respond to private messages.
+   Mentors will generally not respond to private messages.__
 
 6. New developers should start with an issue labeled "Good First Issue".
    To understand the existing functionality/bug, reproduce and test this feature on your development VM.
