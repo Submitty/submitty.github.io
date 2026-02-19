@@ -21,20 +21,30 @@ redirect_from:
 [comment]: <> for Summer 20XX Google Summer of Code will be announced in late
 [comment]: <> February.
 
+---
+
+[comment]:_Submitty has been a participating organization of
+[comment]:[Google Summer of Code](/developer/google_summer_of_code/index)
+[comment]:for six successful
+[comment]:seasons.  We have applied for selection for
+[comment]:[GSoC Summer 2026](https://summerofcode.withgoogle.com/)
+[comment]:and our Project Ideas
+[comment]:list below has been updated.  The organizations selected for Summer
+[comment]:2026 Google Summer of Code will be announced in
+[comment]:[late February](https://developers.google.com/open-source/gsoc/timeline)._
+
+----
+
+
+__We are thrilled to announce that Submitty has been accepted <br>to [Google
+Summer of Code (GSoC) 2026](https://summerofcode.withgoogle.com/).__
+
+_See also: [How to Apply to Submitty for Google Summer of Code 2026](/developer/google_summer_of_code/GSoC_application)_
+
 
 ---
 
-_Submitty has been a participating organization of
-[Google Summer of Code](/developer/google_summer_of_code/index)
-for six successful
-seasons.  We have applied for selection for
-[GSoC Summer 2026](https://summerofcode.withgoogle.com/)
-and our Project Ideas
-list below has been updated.  The organizations selected for Summer
-2026 Google Summer of Code will be announced in
-[late February](https://developers.google.com/open-source/gsoc/timeline)._
 
----
 
 The project ideas listed below target a variety of different topics
 and require different levels of prior experience.  The scope of these
