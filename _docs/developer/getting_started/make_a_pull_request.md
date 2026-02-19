@@ -35,12 +35,17 @@ Be sure to read the [Suggestions for New Developers](/developer/getting_started/
    PRs can be made from either type of branch.
 
 
-3. Before submitting a PR or updating an existing PR, you should make
+3. Please note our policy on the [Usage of Generative AI / LLMs](https://github.com/Submitty/Submitty/blob/main/CONTRIBUTING.md).
+
+   Pull requests that do not adhere to these guidelines may be closed by the Submitty administrators.
+
+
+4. Before submitting a PR or updating an existing PR, you should make
    sure your code follows our [Style Guide](/developer/coding_style_guide)
    and passes the relevant [tests](/developer/testing).
 
 
-4. The PR title should be useful and descriptive.
+5. The PR title should be useful and descriptive.
 
     * Titles of PR, Issues, and commits should be <= 50 characters. 
 
@@ -119,7 +124,7 @@ Be sure to read the [Suggestions for New Developers](/developer/getting_started/
     it till it does pass validation.
 
 
-4. The body of the PR should describe the purpose of the PR.
+6. The body of the PR should describe the purpose of the PR.
 
      * When merged, this PR body will be part of the documentation for
        the

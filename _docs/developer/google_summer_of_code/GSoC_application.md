@@ -1,14 +1,15 @@
 ---
-title: GSoC Application
+title: GSoC Application Process
 category: Developer > Google Summer of Code 
 ---
 
 
 ---
 
-_Submitty has applied for acceptance to [Google Summer of Code (GSoC) 2026](https://summerofcode.withgoogle.com/).
-The organizations selected for Summer 2026 Google Summer of Code will be announced in
-[late February](https://developers.google.com/open-source/gsoc/timeline)._
+__We are thrilled to announce that Submitty has been accepted <br> to [Google
+Summer of Code (GSoC) 2026](https://summerofcode.withgoogle.com/)!__
+
+_See also: [Reports from previous Google Summer of Code participants](/developer/google_summer_of_code/index)_
 
 ---
 
@@ -61,6 +62,8 @@ The organizations selected for Summer 2026 Google Summer of Code will be announc
 
 7. Submit a pull request to solve an open issue.  
    [https://submitty.org/developer/getting_started/make_a_pull_request](/developer/getting_started/make_a_pull_request)  
+
+   Please note our policy on the [Usage of Generative AI / LLMs](https://github.com/Submitty/Submitty/blob/main/CONTRIBUTING.md)
 
 8. Help test and review [open pull requests](https://github.com/Submitty/Submitty/pulls) contributed by other developers.
    [https://submitty.org/developer/getting_started/review_a_pull_request](/developer/getting_started/review_a_pull_request)
