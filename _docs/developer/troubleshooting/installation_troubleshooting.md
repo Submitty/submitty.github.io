@@ -190,7 +190,7 @@ References and useful links: [https://gist.github.com/pjdietz/5768124](https://g
 
 ## SSH connection was unexpectedly closed
 
-* If you see an error similar to on ARM64 Machine (Apple Silicon):
+* If you see an error similar to:
 
   ```
   The SSH connection was unexpectedly closed by the remote end. This
@@ -219,19 +219,10 @@ References and useful links: [https://gist.github.com/pjdietz/5768124](https://g
   vagrant box update
   ```
 
-* Verify qemu is install correctly
-
-  * Firstly, use this command will display the installed version of QEMU for ARM64. 
-    ```
-    qemu-system-aarch64 --version
-    ```
-      
-  * Secondly, Verify that the QEMU binary for ARM64 is accessible in your system's PATH by running:
-    ```
-    which qemu-system-aarch64
-    ```
-
-    *Note: This command will display the path to the QEMU ARM64 binary (e.g., /opt/homebrew/bin/qemu-system-aarch64)
+* Verify Virtualbox is install correctly
+  ```
+  VirtualBox -h
+  ```
 
 * Verify Vagrant Installation
   ```
@@ -262,9 +253,9 @@ References and useful links: [https://gist.github.com/pjdietz/5768124](https://g
   vagrant destroy
   ```
 
-* Boots up a new Vagrant environment using the QEMU provider
+* Boots up a new Vagrant environment
   ```
-  vagrant up --provider=qemu
+  vagrant up --provider=virtualbox
   ```
 
 ---
