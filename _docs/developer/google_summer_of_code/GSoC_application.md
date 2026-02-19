@@ -1,14 +1,15 @@
 ---
-title: GSoC Application
+title: GSoC Application Process
 category: Developer > Google Summer of Code 
 ---
 
 
 ---
 
-_Submitty has applied for acceptance to [Google Summer of Code (GSoC) 2026](https://summerofcode.withgoogle.com/).
-The organizations selected for Summer 2026 Google Summer of Code will be announced in
-[late February](https://developers.google.com/open-source/gsoc/timeline)._
+__We are thrilled to announce that Submitty has been accepted <br> to [Google
+Summer of Code (GSoC) 2026](https://summerofcode.withgoogle.com/)!__
+
+_See also: [Reports from previous Google Summer of Code participants](/developer/google_summer_of_code/index)_
 
 ---
 
@@ -32,17 +33,21 @@ The organizations selected for Summer 2026 Google Summer of Code will be announc
 
 5. Join our Zulip server to ask questions and meet other new developers:   
    [https://submitty.org/contact](/contact)
-   
+
+   Please use the "Google Summer of Code 2026" channel to introduce yourself, engage with other
+   prospective GSoC Applicants, ask technical questions, and help review and assist other
+   developers as they also become familiar with the Submitty code base and development process.
+
    Ask specific technical questions about the Submitty system and open
    issues and help answer technical questions from other new developers if
    you think you can help.  Your engagement in the community discussion
    during the application period (both asking and answering questions) will 
    be taken into account as we evaluate your application.
 
-   NOTE: The Submitty mentors for Google Summer of Code are on our
+   __NOTE: The Submitty mentors for Google Summer of Code are on our
    Zulip server.  Please communicate through the public channels/streams and
    do not direct message (DM) / private message any mentors. 
-   Mentors will generally not respond to private messages.
+   Mentors will generally not respond to private messages.__
 
 6. New developers should start with an issue labeled "Good First Issue".
    To understand the existing functionality/bug, reproduce and test this feature on your development VM.
@@ -61,6 +66,8 @@ The organizations selected for Summer 2026 Google Summer of Code will be announc
 
 7. Submit a pull request to solve an open issue.  
    [https://submitty.org/developer/getting_started/make_a_pull_request](/developer/getting_started/make_a_pull_request)  
+
+   Please note our policy on the [Usage of Generative AI / LLMs](https://github.com/Submitty/Submitty/blob/main/CONTRIBUTING.md)
 
 8. Help test and review [open pull requests](https://github.com/Submitty/Submitty/pulls) contributed by other developers.
    [https://submitty.org/developer/getting_started/review_a_pull_request](/developer/getting_started/review_a_pull_request)
