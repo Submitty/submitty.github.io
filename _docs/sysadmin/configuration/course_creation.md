@@ -60,7 +60,7 @@ you can follow these [instructions](ansible_course_creation) to create a course 
    need to restart fpm to ensure that the webpage sees the change:_
 
    ```
-   sudo service php8.1-fpm restart
+   sudo service php8.2-fpm restart
    ```
 
    _Note: Depending on your version of Ubuntu, your version of php fpm will be different._
@@ -122,7 +122,7 @@ you can follow these [instructions](ansible_course_creation) to create a course 
 
    _Note: You will sometimes need to restart PHP-FPM after adding a course._
    ```
-   sudo service php8.1-fpm restart
+   sudo service php8.2-fpm restart
    ```
 
 
