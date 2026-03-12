@@ -30,10 +30,7 @@ First, the Submitty server must be configured to send email:
    (currently set to send a maximum of 100 email messages per minute).   
 
 
-2. Run `sudo python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/CONFIGURE_SUBMITTY.py` and enter each email field.
-
-   `/usr/local/submitty/config/email.json` should now contain:
-
+2. Edit `/usr/local/submitty/config/email.json`, and add your specific values.
     ```
     {
       "email_enabled": true,

@@ -207,16 +207,9 @@ autograding configuration, you'll probably need to:
 ## System Re-Configuration
 
 If recent development changes include modifications to files affecting
-the system installation process (e.g., changes to
-`CONFIGURE_SUBMITTY.py`, `install_system.sh`, `Vagrantfile`), you will
+the system installation process (e.g., changes to `install_system.sh` or `Vagrantfile`), you will
 need to either re-provision or re-build your VM from scratch to test
 these changes.
-
-* To re-run the initial configuration step of Submitty, use this command:
-
-  ```
-  sudo python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/CONFIGURE_SUBMITTY.py
-  ```
 
 * To update existing databases:
 
