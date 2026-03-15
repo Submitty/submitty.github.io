@@ -374,9 +374,9 @@ Refer to [this](/student/communication/markdown) to learn more about markdown.
 
 ## Preserving your changes on system re-installation
 
-you can prevent your changes from being overwritten from a system re-install by entering paths into a JSON file.
+You can prevent your changes from being overwritten from a system re-install by entering paths into a JSON file.
 
-the JSON file will be generated at `/usr/local/submitty/config/preserve_files_list.json`
+The JSON file will be generated at `CONFIG_DIR/preserve_file_list.json` which is most likely `/usr/local/submitty/config/preserve_files_list.json`
 
 the format will be as follows:  
 
@@ -388,6 +388,7 @@ the format will be as follows:
   ]
 ```
 
+These files will be preserved when INSTALL_SUBMITTY.sh is run on the system. 
 
 ## Changing the multi-processing module of Apache2, Enabling HTTP2
 
