@@ -100,7 +100,7 @@ However, these instructions will focus on Ubuntu server 20.04 which provides PHP
 
 1. If they haven't already been installed, install PHP and the required extensions.
 ```bash
-$ sudo apt-get install php php-pgsql
+$ sudo apt-get install php8.2 php8.2-pgsql
 ```
 2. Ensure the extensions are active.
 ```bash
