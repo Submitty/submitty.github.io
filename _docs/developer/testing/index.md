@@ -66,7 +66,7 @@ pecl install xdebug
 For Ubuntu:
 
 ```bash
-sudo apt-get install php-cli php-mbstring php-xml php-xdebug php-curl php-zip php-sqlite3 composer
+sudo apt-get install php8.2-cli php8.2-mbstring php8.2-xml php8.2-xdebug php8.2-curl php8.2-zip php8.2-sqlite3 composer
 sudo apt-get install python3 python3-pip
 ```
 

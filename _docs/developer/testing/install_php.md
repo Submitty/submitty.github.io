@@ -12,7 +12,7 @@ you will need to have PHP installed on your host machine first.
 
 ```bash
 sudo apt-get update
-sudo apt-get install -y php php-curl php-xml php-mbstring 
+sudo apt-get install -y php8.2 php8.2-cli php8.2-curl php8.2-xml php8.2-mbstring 
 ```
 
 *You may need to install the PHP PPA for certain versions of PHP*
