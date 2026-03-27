@@ -25,7 +25,7 @@ In this case, an instructor can use the Submit All with Placeholder feature to e
    near the top of the Bulk Upload section alongside the other submission modes.
 
 4. **Click "Submit Placeholder for Every Student":** This will actually submit the pdf
-   placeholders for every student on the gradeable. After confirming, a message will appear at the top of the screen confirming the successful number of submissions made. 
+   placeholders for every student on the gradeable. After confirming, a message will appear at the top of the screen displaying the successful number of submissions made. 
    ![](/images/instructor/assignment_preparation/submissionless_grading.png){:width="800px"}
 
 
