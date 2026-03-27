@@ -9,7 +9,7 @@ The **Submissionless Grading** feature is a utility within the Bulk Upload instr
 
 An example of when this would be useful is for an assignment (like a presentation) where students do not have anything to submit to Submitty, but the instructor still wishes to grade them through Submitty.
 
-In this case, an instructor can use the Submissionless Grading feature to enable rubric grading for all students. 
+In this case, an instructor can use the **Submissionless Grading** feature to enable rubric grading for all students. 
 
 ---
 
