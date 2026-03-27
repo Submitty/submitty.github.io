@@ -1,13 +1,12 @@
 ---
 category: Instructor > Assignment Preparation
-title: Submit All with Placeholder
+title: Submissionless Grading
 redirect_from:
   - /instructor/bulk_pdf_placeholders
 ---
 
-The **Submit All with Placeholder** feature is a utility within the Bulk PDF 
-Upload interface. It allows instructors to automatically submit an empty 
-"placeholder" submission for every active student on a specific gradeable. 
+The **Submissionless Grading** feature is a utility within the Bulk PDF 
+Upload instructor submission interface. It allows instructors to automatically submit an empty "placeholder" pdf submission for every active student on a specific gradeable. 
 
 An example of when this would be useful is for an assignment (like a presentation) where students do not have anything to submit to Submitty, but the instructor still wishes to grade them through Submitty.
 
@@ -23,9 +22,13 @@ In this case, an instructor can use the Submit All with Placeholder feature to e
 2. **Access the Submission Page:** Navigate to the gradeable's submission 
    page and click the **Bulk Upload** tab.
 
-3. **Click "Submit All with Placeholder":** This button is located 
-   near the top of the Bulk Upload section alongside the other submission modes. 
-   ![](/images/instructor/assignment_preparation/placeholder_submissions.png){:width="800px"}
+3. **Click "Submissionless Grading":** This button is located 
+   near the top of the Bulk Upload section alongside the other submission modes.
+
+4. **Click "Submit Placeholder for Every Student":** This will actually submit the pdf
+   placeholders for every student on the gradeable. After confirming, a message will appear at the top of the screen confirming the successful number of submissions made. 
+   ![](/images/instructor/assignment_preparation/submissionless_grading.png){:width="800px"}
+
 
 > **Important:** This action **will** create 
 > a new submission for all students on the gradeable. It will appear as the student's
