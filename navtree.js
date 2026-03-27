@@ -194,7 +194,9 @@ function newNode(o, po, text, link, childrenData, lastNode)
   node.itemDiv.className = "item";
 
   node.itemDiv.style.cursor = "pointer";
-  node.itemDiv.onclick = function() {
+  node.itemDiv.onclick = function(e) {
+    if (e.target.classList.contains('arrow') || 
+        e.target.closest('.arrow')) return;
     var a = node.itemDiv.querySelector("a");
     if (a) a.click();
   };
