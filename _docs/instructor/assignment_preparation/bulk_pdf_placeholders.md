@@ -6,7 +6,7 @@ redirect_from:
 ---
 
 The **Submit All with Placeholder** feature is a utility within the Bulk PDF 
-Upload interface. It allows instructors to automatically create an empty 
+Upload interface. It allows instructors to automatically submit an empty 
 "placeholder" submission for every active student on a specific gradeable. 
 
 An example of when this would be useful is for an assignment (like a presentation) where students do not have anything to submit to Submitty, but the instructor still wishes to grade them through Submitty.
