@@ -193,6 +193,12 @@ function newNode(o, po, text, link, childrenData, lastNode)
   node.itemDiv = document.createElement("div");
   node.itemDiv.className = "item";
 
+  node.itemDiv.style.cursor = "pointer";
+  node.itemDiv.onclick = function() {
+    var a = node.itemDiv.querySelector("a");
+    if (a) a.click();
+  };
+
   node.labelSpan = document.createElement("span");
   node.labelSpan.className = "label";
 
