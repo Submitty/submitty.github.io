@@ -5,8 +5,7 @@ redirect_from:
   - /instructor/bulk_pdf_placeholders
 ---
 
-The **Submissionless Grading** feature is a utility within the Bulk PDF 
-Upload instructor submission interface. It allows instructors to automatically submit an empty "placeholder" pdf submission for every active student on a specific gradeable. 
+The **Submissionless Grading** feature is a utility within the Bulk Upload instructor submission interface. It allows instructors to automatically submit an empty "placeholder" pdf submission for every active student on a specific gradeable. 
 
 An example of when this would be useful is for an assignment (like a presentation) where students do not have anything to submit to Submitty, but the instructor still wishes to grade them through Submitty.
 
