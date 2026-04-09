@@ -28,10 +28,10 @@ In this case, an instructor can use the **No File Rubric Grading** feature to en
    placeholders for every student on the gradeable. After confirming, a message will appear at the top of the screen displaying the successful number of submissions made.  
    ![](/images/instructor/assignment_preparation/no_file_rubric_grading.png){:width="800px"}
 
-> **Important:** This action **will** create 
-> a new submission for all students on the gradeable. It will appear as the student's
-> active version within the grading view and on the database. It will not erase any 
-> previous submissions.
+**Important:** This action **will** create 
+a new submission for all students on the gradeable. It will appear as the student's
+active version within the grading view and on the database. It will not erase any 
+previous submissions.
 
 ---
 
