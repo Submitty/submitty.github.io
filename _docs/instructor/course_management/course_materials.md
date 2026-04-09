@@ -30,9 +30,11 @@ Materials" label in the navigation bar.
     ![](/images/course_materials_option_subdir.png)  
 
 * Note: The total size of all files uploaded at one time must be less
-  than or equal to 10 mb or the value of the
+  than or equal to 100 mb or the value of the
   [upload file size limit](/sysadmin/installation/system_customization#allowing-large-student-file-upload-submissions)
-  for your server.
+  for your server, and the total size of all files stored in course materials must 
+  be less than 1 GB.
+
 
 
 
