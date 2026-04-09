@@ -215,6 +215,7 @@ var NAVTREE =
             ] ],
             [ "Development Instructions", "/developer/development_instructions/index", [
                 [ "Overview", "/developer/development_instructions/index", null ],
+                [ "Progressive Web App (PWA)", "/developer/development_instructions/pwa", null ],
                 [ "Sample Courses Data", "/developer/development_instructions/sample_data", null ],
                 [ "Migrations", "/developer/development_instructions/migrations", [
                     [ "Trigger Functions", "/developer/development_instructions/trigger_functions", null ]
