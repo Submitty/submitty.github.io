@@ -52,12 +52,11 @@ configurations and automate the term creation process in Submitty.
    Once you have your certificate and key, place them in the appropriate directory (usually
    `/etc/ssl/certs/` for the certificate and `/etc/ssl/private/` for the key). 
 
-   Then, update your server's SSL configuration file with the paths to your certificate and key.
-   The relevant lines might look something like this:
+   Then, add the location to your certificate and key files to the corresponding fields in the submitty_install playbook, such as:
 
    ```
-   SSLCertificateFile /etc/ssl/certs/mycert.pem
-   SSLCertificateKeyFile /etc/ssl/private/mykey.pem
+   submitty_install_ssl_cert_file: /etc/ssl/certs/submitty.pem
+   submitty_install_ssl_key_file: /etc/ssl/private/submitty.key
    ```
 
    Save your changes and proceed to run the Ansible script.

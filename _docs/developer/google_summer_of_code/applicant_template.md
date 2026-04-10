@@ -1,41 +1,91 @@
 ---
-title: Applicant Template
+title: GSoC Applicant Template
 category: Developer > Google Summer of Code
 ---
 
-[comment]: <> **NOTE: The 20XX Submitty GSoC Template will be available for download
-[comment]: <>   when Google announces the organizations accepted for Google Summer
-[comment]: <>   of Code 20XX.**
+
+__We are thrilled to announce that Submitty has been accepted <br> to [Google
+Summer of Code (GSoC) 2026](https://summerofcode.withgoogle.com/)!__
+
+_See also:_ [How to Apply to Submitty for Google Summer of Code 2026](/developer/google_summer_of_code/GSoC_application)
+
+_See also:_ [Reports from previous Google Summer of Code participants](/developer/google_summer_of_code/index)
 
 To ensure that the Submitty Org Admins and Mentors have all of the
 information about your ideas, project plan, and availability for
-Google Summer of Code 20XX, we ask you to use the Submitty Applicant
-Template.
+Google Summer of Code 2026, we ask you to please use the Submitty
+Applicant Template below.
 
-The template will include:
+---
 
-* Your skills, relevant coursework, non-course experience, and future
-  career goals that qualify you to work on this project.
 
-* Approximate schedule for the summer: start date, end date, and
-  number of hours of work per week.
+# Submitty GSoC 2026 Application
 
-* Description of any classes, employment, or other time commitments
-  during that time period.
 
-* Engagement with the Submitty project team during the application
-  period.  This includes participation in public discussions on our
-  [Zulip server](/contact): asking technical questions about issues
-  and work-in-progress PRs, helping other prospective applicants with
-  installation hiccups and development problems, etc.
+## Personal Information
 
-* Links to all GitHub pull requests to the Submitty organization and
-  their current status (submitted, reviewed, revised, approved,
-  merged).  _NOTE: significant/large pull requests take more time to
-  review for completeness and correctness.  It's ok if your work is
-  not merged before the GSoC application deadline._
+**Name:**  
 
-* Links to all Submitty PRs authored by other developers that you have
-  reviewed.  _NOTE: reviews should be thoughtful and substantive.  PR
-  reviews that simply comment "LGTM" are not as helpful._
+**Github ID:**  
 
+**Email address:**  
+
+**My skills, relevant coursework, and/or non-course experience that qualify me to work on this project:**  
+
+**My future career goals:**  
+
+<br>
+
+## Availability for Summer 2026
+
+**Start Date:**
+
+**End Date:**
+
+**My timezone:**
+
+**My typical weekly schedule & working hours for GSoC work period:**
+
+**Average number of working hours per week during GSoC work period:**
+
+**Approximate total number of working hours for GSoC 2026:**
+
+**Dates of vacations or other conflicts during the work period:**
+
+**Classes, other employment, or other time commitments during the work period:**
+
+<br>
+
+## Contributions & Engagement with Submitty Community:
+
+**Open Pull Requests (PRs):**
+
+**Merged Pull Requests (PRs):**
+
+**PRs authored by other developers that I reviewed and tested in detail:**
+
+**Existing bugs I found and reported with a Github Issue:**
+
+**Zulip conversations with other developers and GSoC mentors/admins:**
+
+**Video mentoring session to discuss a PR I authored:**<br>
+**Name of mentor/reviewer:**<br>
+**Date of Video mentoring session:**
+
+<br>
+
+## Project Information
+
+**Project Title:**
+
+**Project Size:**  (90 / 175 / 350) hours
+
+**Project Description:**
+
+**Project Deliverables:**
+
+**Project Timeline:**
+
+
+
+---

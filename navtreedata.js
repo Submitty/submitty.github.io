@@ -114,6 +114,7 @@ var NAVTREE =
                 [ "Submissions via Version Control", "/instructor/assignment_preparation/submission_version_control", null ],
                 [ "Team Assignments", "/instructor/assignment_preparation/team_assignments", null ],
                 [ "Bulk PDF Upload", "/instructor/assignment_preparation/bulk_pdf_upload", null ],
+                [ "No File Rubric Grading", "/instructor/assignment_preparation/no_file_rubric_grading", null],
                 [ "Personalized Exam", "/instructor/assignment_preparation/personalized_exams", null ],
                 [ "Upload Gradeable from JSON", "/instructor/assignment_preparation/upload_gradeable", null ],
             ] ],
@@ -156,6 +157,7 @@ var NAVTREE =
                 [ "Ansible Server Installation", "/sysadmin/installation/ansible", null ],
                 [ "Version Notes", "/sysadmin/installation/version_notes/index", [
                     [ "Overview", "/sysadmin/installation/version_notes/index", null],
+                    [ "v26.02.01", "/sysadmin/installation/version_notes/v26.02.01", null ],
                     [ "v25.07.01", "/sysadmin/installation/version_notes/v25.07.01", null ],
                     [ "v23.12.02", "/sysadmin/installation/version_notes/v23.12.02", null ],
                     [ "v23.07.00", "/sysadmin/installation/version_notes/v23.07.00", null ],
@@ -310,6 +312,8 @@ var NAVTREE =
             ] ],
             [ "Google Summer of Code", "/developer/google_summer_of_code/index", [
                 [ "Overview","/developer/google_summer_of_code/index", null ],
+                [ "GSoC Application Process", "/developer/google_summer_of_code/GSoC_application", null ],
+                [ "GSoC Application Template","/developer/google_summer_of_code/applicant_template", null ],
                 [ "2024 Sahil Suman", "/developer/google_summer_of_code/2024_Sahil_Suman", null ],
                 [ "2024 Rahul Vishwakarma", "/developer/google_summer_of_code/2024_Rahul_Vishwakarma", null ],
                 [ "2024 Sophia Oliinik", "/developer/google_summer_of_code/2024_Sophia_Oliinik", null ],

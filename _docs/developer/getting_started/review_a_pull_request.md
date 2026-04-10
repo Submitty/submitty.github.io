@@ -112,6 +112,10 @@ What do you need to do?
    hopefully, in short order, approving that the code be merged into
    the main branch.
 
+
+9. Please note our policy on the [Usage of Generative AI / LLMs](https://github.com/Submitty/Submitty/blob/main/CONTRIBUTING.md).
+
+
 ---
 
 See also [How to Make a Pull Request](make_a_pull_request).
