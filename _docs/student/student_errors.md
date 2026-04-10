@@ -8,11 +8,11 @@ title: Debugging Submitty Output
 
 Your code is not tested locally first, Submitty should be used as the
 final submission server, not as a debugger. Before submitting anything
-make sure that you are able to run your code locally without error.
+make sure that you are able to run your code locally without errors.
 In addition the instructor may decide to use hidden tests which still
 reveal the grade. Often these tests check corner cases and exactly what those
 could vary by your program but common cases to consider are positive, 
-negative, zero, and floating point values and how your code performs give
+negative, zero, and floating point values and how your code performs given
 unexpected but valid input.
 
 Often times there may be a missing punctuation or small typo in the output
@@ -45,21 +45,21 @@ perform operations slower than hashmaps or trees-like structures. If your code
 gets a kill signal and you are using specific data structures be sure you are
 using them correctly
 
-If you are using python, ineffeicant use of dictionaries, and sets can cause this error to occur.
+If you are using python, inefficient use of dictionaries, and sets can cause this error to occur.
 
 ![](/images/killSignal.png)
 
 ### Segmentation Fault
 
 For anyone who has ever programmed in a language with explicit memory management such as C/C++
-you are probably familiar with the infamous and seemingly unhelpful error know as Segmentation Fault.
+you are probably familiar with the infamous and seemingly unhelpful error known as Segmentation Fault.
 In short however a SegFault is the result of a memory access violation.
 
 This can occur for a number of reasons, first case we will look at is going out of bounds. 
 If while iterating over a list your index is out of the range of the list this can 
 result in a memory SegFault.
 
-Another possibly is when using pointers, if a pointer on the stack is initialzied to NULL
+Another possibility is when using pointers, if a pointer on the stack is initialzied to NULL
 or never initialized in the first place but you try to dereference it this is the same thing 
 as a NUllPointerException in Java and is a very common issue when dealing with pointers 
 which are commonly found when dealing with Tree structures and and linked lists.
@@ -70,6 +70,6 @@ but since submitty is a teaching tool lets assume the problems given are
 not so large that you run out of memory trying to solve it.  A common example 
 of this is infinite recursion. Make sure the base case is eventually called.
 
-There are other reasosn for SegFaults but these are very common examples.
+There are other reasons for SegFaults but these are very common examples.
 However what ever the reason DrMemory/Valgrind and gdb are excellent tools to 
 help with more advanced errors if print debugging isn't cutting it. 
