@@ -15,8 +15,7 @@ Machine (VM) on your computer and the VM will use the Ubuntu GNU/Linux
 operating system.
 
 ***NOTE:** We only officially support and test development using
-VirtualBox for AMD and Intel machines and QEMU for
-M-Series ARM MacOS machines.*
+VirtualBox.*
 
 ---
 
@@ -51,14 +50,7 @@ M-Series ARM MacOS machines.*
    platform and prevent VirtualBox from working correctly. It is recommended to not install
    or use WSL2 alongside VirtualBox for now.*
 
-5. If you're on an M-series ARM MacOS (e.g., M1, M2, M3),
-   you will be using QEMU with SMB file sharing.
-   To enable this, open **System Settings** and navigate to **General > Sharing**.
-   Press the (i) button next to **File Sharing**, and in the popup window
-   click "Options...". Then turn on "Share files and folders using SMB" and
-   check the box next to your name in the list below.
-
-6. The complete installation process could take an hour or more and 
+5. The complete installation process could take an hour or more and 
    will probably fail if paused or interrupted.  Make
    sure your internet connection is strong and consistent.  You'll
    probably want to plug in your laptop power cord.  Check your
@@ -122,23 +114,13 @@ M-Series ARM MacOS machines.*
       * [Ruby](https://www.ruby-lang.org/en/downloads)  
       * [Git](https://git-scm.com/downloads)  
       * [Vagrant](https://developer.hashicorp.com/vagrant/install)
-      * *M-SERIES ARM MacOS:* [QEMU](https://www.qemu.org)  
-      * *EVERYONE ELSE:* [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+      * [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
           * Ensure VirtualBox version is compatible with Vagrant.
    
    
    * **MacOS**  
       You can either go to respective sites and download the necessary binaries or
       install [Homebrew](http://brew.sh/), if you don't have it, and then:
-
-      If you have an M-series ARM Mac, run:
-      ```
-      brew install --cask vagrant
-      brew install qemu
-      vagrant plugin install vagrant-qemu
-      ```
-  
-      Or if you have an older Intel-based Mac, run:
 
       ```
       brew install --cask vagrant
@@ -243,9 +225,6 @@ M-Series ARM MacOS machines.*
 
 
    * **Build pre-packaged VM**
-
-     *NOTE: The pre-packaged Submitty VM is not (yet)
-     available for QEMU / M-Series ARM Mac machines.*
  
      If you are using VirtualBox as your provider, you will by default
      use a pre-packaged Submitty VM.  This will have all of Submitty
@@ -285,13 +264,8 @@ M-Series ARM MacOS machines.*
 
 
    * **Build from scratch**
-
-      * Using QEMU on an M-Series Arm MacOS, type:
-        ```
-        vagrant up --provider=qemu
-        ```
  
-      * On Linux or Intel-based Mac, type:
+      * On Linux or Mac, type:
         ```
         FROM_SCRATCH=1 vagrant up --provider=virtualbox
         ```
@@ -326,12 +300,7 @@ M-Series ARM MacOS machines.*
      creation of these sample submissions and their autograding and
      decrease the time to complete installation.
 
-     * On M-series ARM Mac:
-       ```
-       NO_SUBMISSIONS=1 vagrant up --provider=qemu
-       ```
-
-     * On Linux or Intel-based Mac:  
+     * On Linux or Mac:  
        ```
        NO_SUBMISSIONS=1 FROM_SCRATCH=1 vagrant up --provider=virtualbox
        ```
