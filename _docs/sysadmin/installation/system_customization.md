@@ -372,9 +372,9 @@ You can customize the login screen with markdown. By default, `# Login` is rende
 
 Refer to [this](/student/communication/markdown) to learn more about markdown.
 
-## Preserving your changes on system re-installation
+## Preserving system customization files on system re-installation
 
-You can prevent your changes from being overwritten from a system re-install by entering paths into a JSON file.
+To prevent your system customization files (e.g., your institute logo on the login screen logo or your custom oage footer) from being overwritten or deleted from a system re-install, add these files to the follow JSON file:
 
 The JSON file will be generated at `CONFIG_DIR/preserve_file_list.json` which is most likely `/usr/local/submitty/config/preserve_files_list.json`
 
