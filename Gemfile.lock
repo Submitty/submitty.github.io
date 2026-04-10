@@ -39,6 +39,7 @@ GEM
       logger
     faraday-net_http (3.1.1)
       net-http
+    ffi (1.17.2-aarch64-linux-gnu)
     ffi (1.17.2-arm64-darwin)
     ffi (1.17.2-x64-mingw-ucrt)
     ffi (1.17.2-x86_64-linux-gnu)
@@ -239,6 +240,8 @@ GEM
     mutex_m (0.2.0)
     net-http (0.4.1)
       uri
+    nokogiri (1.18.9-aarch64-linux-gnu)
+      racc (~> 1.4)
     nokogiri (1.18.9-arm64-darwin)
       racc (~> 1.4)
     nokogiri (1.18.9-x64-mingw-ucrt)
@@ -284,6 +287,7 @@ GEM
     yell (2.2.2)
 
 PLATFORMS
+  aarch64-linux-gnu
   arm64-darwin-22
   arm64-darwin-23
   arm64-darwin-24
