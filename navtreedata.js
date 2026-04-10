@@ -114,6 +114,7 @@ var NAVTREE =
                 [ "Submissions via Version Control", "/instructor/assignment_preparation/submission_version_control", null ],
                 [ "Team Assignments", "/instructor/assignment_preparation/team_assignments", null ],
                 [ "Bulk PDF Upload", "/instructor/assignment_preparation/bulk_pdf_upload", null ],
+                [ "No File Rubric Grading", "/instructor/assignment_preparation/no_file_rubric_grading", null],
                 [ "Personalized Exam", "/instructor/assignment_preparation/personalized_exams", null ],
                 [ "Upload Gradeable from JSON", "/instructor/assignment_preparation/upload_gradeable", null ],
             ] ],
