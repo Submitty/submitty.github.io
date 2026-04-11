@@ -20,6 +20,40 @@ For Bundler, depending on your system, you may need to also install the
 Ruby development headers (e.g. `ruby-dev`). On Ubuntu/Debian,
 for example, this would be accomplished by doing `sudo apt-get install ruby-dev`.
 
+
+### Docker Setup (Recommended)
+
+If you have [Docker](https://www.docker.com/) installed, you can skip
+the Ruby/Bundler prerequisites entirely:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Submitty/submitty.github.io.git
+   cd submitty.github.io
+   ```
+2. Start the development server:
+   ```bash
+   docker compose up
+   ```
+   The first run takes a few minutes to install dependencies. Subsequent
+   runs start in seconds.
+
+3. Visit [http://localhost:4000](http://localhost:4000) to view the site.
+   Changes to files will automatically trigger a rebuild and refresh your
+   browser.
+
+4. To stop the server, press `Ctrl+C` or run:
+   ```bash
+   docker compose down
+   ```
+   To run the link checker with Docker:
+   ```bash
+   docker compose exec docs bundle exec jekyll build
+   docker compose exec docs bundle exec htmlproofer ./_site --assume-extension --empty-alt-ignore --disable_external
+   ```
+If you prefer to set up Ruby natively, see the manual instructions below.
+
+
 ### Setup
 
 1. Clone the respository on your local machine, e.g.,
