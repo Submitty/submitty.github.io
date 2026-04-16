@@ -35,6 +35,17 @@ previous submissions.
 
 ---
 
+## Team Gradeables
+
+Instructions for using this feature with Team Gradeables:
+
+1. **Create the Teams:** You must manually create the teams for the students by navigating to grade > edit teams from the gradeables page. 
+2. **Submission:** Once teams have been set, you may use the feature. The popup will now inform you are submitting for teams, and the success banner will state the number of teams that were submitted for. 
+3. **All other aspects of the feature are the same as above.**
+![](/images/instructor/assignment_preparation/no_file_teams.png){:width="800px"}
+
+---
+
 ## Grading
 
 Once the submissions have been processed, they can be graded like any other student submission. They will be listed as a new version under the student's version status. Further uses of the function (while uneccessary) will simply increment the version number.
@@ -45,4 +56,3 @@ Once the submissions have been processed, they can be graded like any other stud
 
 Ensure you are logged in as an Instructor level user.  
 Full grading access is required to use this feature. 
-There is currently no Team gradeable functionality for this feature. 
