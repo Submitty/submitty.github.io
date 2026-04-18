@@ -104,25 +104,41 @@ See also [System Administrator instructions to enable Self Account Creation](/sy
 1.  Instructors can add students in bulk to their course from the
     "Manage Students" tab from the navigation bar of their course page.
 
-2.  Prepare a comma separated values file with 5-7 columns and no header row:
+2.  Prepare a comma separated values file as many columns as needed, and a single header row. The value in the header row determines how the data will be processed, and must be one of the following:
 
-    ```
-    username, first name, last name, email, registration section, preferred first name (optional), preferred last name (optional)
-    ```
+    * "User ID": The userid of the student, e.g. `tomsonj7`. MUST BE INCLUDED! Consists of lowercase letters 'a'-'z', digits '0'-'9', underscore '_', or hyphen '-'.
 
-    * Registration section can be custom, for example NULL or STAFF.
+    * "Given Name", "Family Name", "Preferred Given Name", and "Preferred Family Name": The students preferred or legal first and last name. Consists of a mix of lowercase letters, uppercase letters, accented letters, and some special characters (''', '`', '-', '.', '(', ')', or ' '). Only processed for new users, ignored for existing users.
 
-    You can also supply just the user_id and rest of the fields will be auto-fill with the existing user data.
+    * "Email", "Secondary Email": The students email address, e.g. `joe.student@gmail.com`. Consists of any valid email address. Only processed for new users, ignored for existing users.
 
-    <span style="color:grey">_TODO: IF USING DATABASE AUTHENTICATION, HOW DO WE SPECIFY THE PASSWORD?_</span>
+    * "UTC Offset", "Time Zone", and "Rotation Section": These labels are included for compatability with the 'Download Classlist' button. They are ignored when being processed. To adjust rotation sections, go to the 'Manage Sections' page on Submitty.
+
+    * "Registration Section": The registration section for the user, e.g. `2B`. Consists of up to 20 uppercase/lowercase letters 'A'-'Z'/'a'-'z', digits '0'-'9', underscores '_', or hyphens '-'.
+
+    * "Registration Sub-Section": The registration sub-section for the user, e.g. `team 7`. Consists of up to 20 uppercase/lowercase letters 'A'-'Z'/'a'-'z', digits '0'-'9', underscores '_', hyphens '-', or spaces ' '.
+
+    * "Password": On versions of Submitty with password-based authentication, this can set the password for new users. Cannot be empty. Ignored for existing users, and versions of Submitty that don't use password authentication, including `submitty.cs.rpi.edu`.
+
+    * "Group": The [permissions group](/sysadmin/troubleshooting/user_access_level#user-group-or-role) of the student. Must be:
+      * "1" or "Instructor"
+      * "2" or "Full Access Grader (Grad TA)"
+      * "3" or "Limited Access Grader (Mentor)"
+      * "4" or "Student"
+      * WARNING: Changed permissions are processed IMMEDIATLY! If you change you own permissions below "1" or "Instructor" you will lose access to this page and not be able to change back.
+
+    * "Registration Type": The type of registration within the course. Must be:
+      * "graded": most students
+      * "audit"
+      * "withdrawn"
+      * "staff": TAs and instructor
+
+    * "Autofill Data": If set, then any missing field for a user new to this course, but who already exists in Submitty's database, will be automatically pulled from the database. Must be "TRUE" or "FALSE". If the user is not found in Submitty's database, an error message will trigger.
+
 
 3.  Click on the "Upload Classlist" button in the upper right.  Select
     your prepared .csv file and press "Submit"
 
-
-4.  If your Submitty installation uses PAM authentication...
-
-    <span style="color:grey">_TODO: FILL IN INFORMATION ON HOW TO CREATE THE ACCOUNT_</span>
 
 
 ### Add graders by bulk file (.csv) upload
@@ -130,16 +146,10 @@ See also [System Administrator instructions to enable Self Account Creation](/sy
 1.  Instructors can add graders in bulk to their course from the
     "Manage Graders" tab from the navigation bar of their course page.
 
-2.  Prepare a comma separated values file with 5-8 columns and no header row:
+2.  Prepare a comma separated values file with as many columns as needed, labeled with a single header row. The format is the same as for [uploading students](/instructor/course_management/managing_enrollment#add-students-by-bulk-file-csv-upload), with the following changes:
 
-    ```
-    username, first name, last name, email, grader group, preferred first name (optional), preferred last name (optional), registration section (optional)
-    ```
-
-    * Registration section can be custom, for example NULL or STAFF.
-    * Grader group can be a number 1-4. For more information: see [User Group or Role](/sysadmin/troubleshooting/user_access_level#user-access-level) documentation
-
-    You can also supply just the username column, and rest of the fields will be auto-filled with the existing user data and a default value for grader-group as 'Limited Access Grader' (3) will be used.
+    * "Registration Section": Registration Section is a comma-separated list of sections the grader will grade, e.g. `"1,2,4"`. The sections should be split by commas only, and enclosed in quotation marks.
+    * "Registration Type": All users uploaded will be set to "staff", and the "Group" column will be ignored.
 
 3.  Click on the "Upload Graderlist" button in the upper right. Select your prepared .csv file and press "Submit"
 
