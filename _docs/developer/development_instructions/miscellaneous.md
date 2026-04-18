@@ -9,7 +9,7 @@ category: Developer > Development Instructions
 Our vagrant environment defaults to PAM authentication, but is also
 setup to easily use any of the other supported authentication methods.
 
-To switch, either re-run CONFIGURE_SUBMITTY.py or edit
+To switch, edit
 `/usr/local/submitty/config/authentication.json` and change the
 authentication method to any of the methods. You should be able
 to leave all other settings to the default.
@@ -28,7 +28,6 @@ For `LdapAuthentication`, the default settings are:
 
 When using DatabaseAuthentication, Submitty allows users to
 [change their password](/student/account/password) from the home screen.
-
 
 #### SAML
 

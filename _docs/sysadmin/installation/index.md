@@ -34,45 +34,87 @@ You can use these [instructions](/sysadmin/installation/ansible).
    synchronize `/etc/passwd`, `/etc/shadow`, `/etc/group`, and `/etc/gshadow` before installing
    the rest of Submitty to avoid mismatched UIDs and GIDs of the Submitty users.
 
-2. Run the bootstrap script:
+1. Install Submitty:
+   ### Option 1: Run the bootstrap script.
    ```
    bash -c "$(curl -s https://raw.githubusercontent.com/Submitty/Submitty/master/.setup/bootstrap.sh)"
    ```
+   This will generate a random password for the database users. You will still have to edit the config file(s) generated, but you will have to do so after Submitty has been installed.
 
-   or clone the git repository and run the installer (requires git and lsb-release to be installed):
+   ### Option 2: Clone the git repository and run the scripts manually (requires git and lsb-release to be installed):
+
+   Note: During installation, if you have pre-configured JSON config files, put them in `/usr/local/submitty/config/`. Otherwise, generate default configs that you can edit, and will be found in the same path.
 
    ```
    mkdir -p /usr/local/submitty/GIT_CHECKOUT
    git clone https://github.com/Submitty/Submitty.git /usr/local/submitty/GIT_CHECKOUT/Submitty
-   cd /usr/local/submitty/GIT_CHECKOUT/Submitty
+   cd /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup
+   python3 ./generate_configs.py
+   ```
+   Edit the config files to use your institutions specific values.
+   ```json
+   {
+      "submitty_install_dir": "/usr/local/submitty", // Installation dir (created in the steps above)
+      "submitty_repository": "/usr/local/submitty/GIT_CHECKOUT/Submitty", // Where Submitty is cloned
+      "submitty_data_dir": "/var/local/submitty", // Directory where Submitty courses are stored
+      "autograding_log_path": "/var/local/submitty/logs/autograding",
+      "sys_admin_email": "sysadmin@example.com", // Sysadmin email
+      "sys_admin_url": "https://example.com",
+      "site_log_path": "/var/local/submitty/logs",
+      "submission_url": "http://localhost:1511", // URL where students will submit homework
+      "vcs_url": "", // If using VCS, the URL where students students push to
+      "cgi_url": "http://localhost:1511/cgi-bin", // Should be the <submission_url>/cgi-bin
+      "websocket_port": 8443, // Only change if required
+      "institution_name": "", // Name of your institution (e.x. Rensselaer Polytechnic Institute)
+      "institution_homepage": "", // The homepage of your institution (e.x. rpi.edu)
+      "timezone": "America/New_York", // Your time zone TZ identifier
+      "default_locale": "en_US",
+      "duck_special_effects": false, // Allow special effects
+      "course_material_file_upload_limit_mb": "100",
+      // Allow users to create their own accounts (Only works with DatabaseAuthentication), see documentation for how to use
+      "user_create_account": false, 
+      "user_id_requirements": {
+         "any_user_id": true,
+         "require_name": false,
+         "min_length": 6,
+         "max_length": 25,
+         "name_requirements": {
+            "given_first": false,
+            "given_name": 2,
+            "family_name": 4
+         },
+         "require_email": false,
+         "email_requirements": {
+            "whole_email": false,
+            "whole_prefix": false,
+            "prefix_count": 6
+         },
+         "accepted_emails": [
+            "gmail.com"
+         ]
+      },
+      "worker": false // Is Submitty being run as a worker
+   }
+   ```
+   For switching authentication methods, edit
+   `<submitty_install_dir>/config/authentication.json` and change the
+   authentication method to any of the methods. You should be able
+   to leave all other settings to the default.
+
+
+   After you have edited the config files, run the install script.
+   ```
    bash ./.setup/install_system.sh
    ```
 
-   Note: During installation, you will be asked several questions by the
-   [CONFIGURE_SUBMITTY.py](https://github.com/Submitty/Submitty/blob/master/.setup/CONFIGURE_SUBMITTY.py)
-   script. Pressing enter will select the default option. These questions are:
-   1. **Database Host / Port**. If you already have your database server installed and set up, you
-   will most likely just specify `localhost` for the Database Host and
-   `5432` for the Database Port, or just `/var/run/postgresql` for
-   Database Host.
-   2. **Submitty Database User/Role and Password**. This is *not* a Linux user, just a user/role within the database server. If you don't already have a role for the submitty database user/role, the script will create that for you with the specified name & password.
-   3. **Timezone**. Pick from the list of [PHP timezones](https://www.php.net/manual/en/timezones.php).
-   4. **Main Site URL**.
-   5. **Version Control System (VCS) URL**. This is used mostly to allow students to submit their homework through private repositories hosted on the submitty server. See [Facilitating Student Submissions via GIT](/instructor/managing_git).
-   6. **Institution Name**.
-   7. **Authentication Method**. PAM and LDAP authentication requires the sysadmin to make accounts ahead of time for students and give them a password. Database authentication lets students create their own passwords.
-
-
-
-3. Run installations specific to your university.
+1. Run installations specific to your university.
    For example:  [RPI Computer Science specific installations](https://github.com/Submitty/Submitty/blob/master/.setup/distro_setup/ubuntu/rpi.sh)
 
    ```
    sudo bash /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/distro_setup/ubuntu/rpi.sh
    ```
 
-
-4. Edit PHP Settings
+1. Edit PHP Settings
 
    We recommend for security that you modify your PHP installation and disable certain PHP functions.
    To do this, edit `/etc/php/8.2/fpm/php.ini`  and find the entry for `disable_functions` and make sure the list of
@@ -84,7 +126,7 @@ You can use these [instructions](/sysadmin/installation/ansible).
 
    _Note: Depending on your version of Ubuntu, your version of php fpm will be different._
 
-5. Setup Apache
+1. Setup Apache
 
    To access Submitty's web interface, you will need to setup Apache for it.
    To help you along, we provide an annotated apache configuration for Submitty at
@@ -145,7 +187,7 @@ You can use these [instructions](/sysadmin/installation/ansible).
    At this point, you should be able to access the site by going to `your_domain`
    through a browser.
 
-6. Configure NGINX
+1. Configure NGINX
 
    Submitty uses a NGINX server to proxy the websocket server. By default
    the websocket server will run without HTTPS. If Apache is configured with
@@ -229,7 +271,7 @@ You can use these [instructions](/sysadmin/installation/ansible).
        ```
 
 
-7. We recommend that you should leave the PostgreSQL setup unless you know what
+1. We recommend that you should leave the PostgreSQL setup unless you know what
    you're doing. If you are running PostgreSQL on the same server as Submitty,
    we recommend using the UNIX socket, and to disable TCP if unused. By default,
    the socket is found at `/var/run/postgresql`, and disabling TCP is done through
@@ -239,19 +281,19 @@ You can use these [instructions](/sysadmin/installation/ansible).
    as it prevents anyone from attempting to get into the DB from the outside
    world. To disable TCP, you would comment out all the lines that start with `host`
    and `hostssl` in the `pg_hba.conf` file. Setting the socket to be used for
-   Submitty is done by running `.setup/CONFIGURE_SUBMITTY.py` and setting the
+   Submitty is done by editing `<submitty install dir>/config/database.json` and setting the
    database host to the socket (e.g. `/var/run/postgresql`).
 
    NOTES:
    - If you intend to run the [Student Registration Feed](/sysadmin/configuration/registration_feed), do not
      disable TCP.
 
-8. Test apache config with:  `apache2ctl -t`
+1. Test apache config with:  `apache2ctl -t`
 
    If everything looks ok, restart apache with:  `service apache2 restart'
 
 
-9. We suggest reviewing [Additional System Customizations](/sysadmin/installation/system_customization)
+1. We suggest reviewing [Additional System Customizations](/sysadmin/installation/system_customization)
     that might be appropriate for your installation.
 
 

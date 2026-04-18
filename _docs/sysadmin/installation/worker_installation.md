@@ -48,10 +48,6 @@ _Note: These instructions should be run under root/sudo._
    bash ./.setup/install_system.sh --worker
    ```
 
-   You will be asked to provide the name of your submitty user by the
-   [CONFIGURE_SUBMITTY.py script](https://github.com/Submitty/Submitty/blob/master/.setup/CONFIGURE_SUBMITTY.py).
-
-
 6. Add the submitty user to the ```submitty_daemon```, ```submitty_daemonphp```, and ```docker```
    groups.  And add the ```submitty_daemon``` user to the ```docker``` group.
 

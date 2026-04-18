@@ -6,8 +6,7 @@ title: Self Account Creation
 The feature of User Account Creation (a.k.a. Self Account Creation) is
 only available on systems that use DatabaseAuthentication.
 
-To change authentication types, either re-run `CONFIGURE_SUBMITTY.py`
-or manually edit `/usr/local/submitty/config/authentication.json` and
+To change authentication types, manually edit `/usr/local/submitty/config/authentication.json` and
 change the authentication method to `DatabaseAuthentication`.
 
 See also [Managing Enrollment](/instructor/course_management/managing_enrollment)
