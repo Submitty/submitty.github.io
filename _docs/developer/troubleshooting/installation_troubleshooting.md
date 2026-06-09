@@ -289,3 +289,38 @@ Some things to check:
   rm -rf /Users/MY_HOME_DIRECTORY/.vagrant.d/
   rm -rf /Users/MY_HOME_DIRECTORY/.gem/specs/rubygems.org%443/quick/Marshal.4.8/vagrant-vbguest-0.31.0.gemspec
   ```
+___
+
+## Troubleshooting Pre-Packaged VM
+
+Some issues with the pre-packaged VM can be fixed by installing a different version. Once you've installed a pre-packaged VM, it does not recieve version updates, so it can be a good idea to update the pre-packaged version periodically. To see your current VM version,
+run `vagrant up` and look at the output. You should see something like `==> ubuntu-22.04: Checking if box 'SubmittyBot/ubuntu22-dev' version '26.06.00.2606070357' is up to date...`. In this case `26.06.00.2606070357` is the version number.
+
+### Instructions for Changing the Pre-Packaged VM Version
+
+From your main Submitty repository, e.g. `<SOMETHING>/GIT_CHECKOUT/Submitty/`, run:
+
+``` 
+vagrant destroy
+```
+
+This will destroy your current VM and reset the Vagrant environment. 
+
+*Note: If you have more than one VM (perhaps by accident), you can see a list of VMs with the command* `vagrant global-status`. *VMs listed will be given a unique id. You can then run* `vagrant destroy 1a2b3c4d`. *Replace* `1a2b3c4d` *with the id of the VM you wish to destroy.*
+
+on Linux/MacOS, type:
+```
+PREBUILT_VERSION={version} vagrant up --provider=virtualbox
+```
+     
+or on Windows, type:
+```
+SET PREBUILT_VERSION={version} 
+vagrant up --provider=virtualbox
+```
+
+If you are importing a new version, it will take approximately 30 minutes to download.
+
+*The version must be only the numbers, not including the* `v` *in front, for example* `26.06.00.2606070357` *not* `v26.06.00.2606070357`.
+
+*Note: You can find pre-packaged Submitty VM versions on the [Hashicorp Vagrant Box Catalog](https://portal.cloud.hashicorp.com/vagrant/discover/SubmittyBot/ubuntu22-dev) by navigating to the 'Versions' tab in the sidebar. Make sure to follow the [Submitty installation instructions](/developer/getting_started/installation) when setting up your development environment.*
