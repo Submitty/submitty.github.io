@@ -323,4 +323,4 @@ If you are importing a new version, it will take approximately 30 minutes to dow
 
 *The version must be only the numbers, not including the* `v` *in front, for example* `26.06.00.2606070357` *not* `v26.06.00.2606070357`.
 
-*Note: You can find pre-packaged Submitty VM versions on the [Hashicorp Vagrant Box Catalog](https://portal.cloud.hashicorp.com/vagrant/discover/SubmittyBot/ubuntu22-dev) by navigating to the 'Versions' tab in the sidebar. Make sure to follow the [Submitty installation instructions](/developer/getting_started/installation) when setting up your development environment.*
+*Note: You can find pre-packaged Submitty VM versions on the [Hashicorp Vagrant Box Catalog](https://portal.cloud.hashicorp.com/vagrant/discover/SubmittyBot/ubuntu22-dev) by navigating to the 'Versions' tab in the sidebar. Make sure to follow the [Submitty installation instructions](/developer/getting_started/vm_install_using_vagrant) when setting up your development environment.*
