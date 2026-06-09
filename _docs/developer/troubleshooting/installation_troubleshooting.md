@@ -293,7 +293,7 @@ ___
 
 ## Troubleshooting Pre-Packaged VM
 
-Some issues with the pre-packaged VM can be fixed by installing a different version. Once you've installed a pre-packaged VM, it does not recieve version updates, so it can be a good idea to update the pre-packaged version periodically. To see your current VM version,
+Some issues with the pre-packaged VM can be fixed by installing a different version. Once you've installed a pre-packaged VM, it does not recieve version updates, so it can also be a good idea to update the pre-packaged version periodically. To see your current VM version,
 run `vagrant up` and look at the output. You should see something like `==> ubuntu-22.04: Checking if box 'SubmittyBot/ubuntu22-dev' version '26.06.00.2606070357' is up to date...`. In this case `26.06.00.2606070357` is the version number.
 
 ### Instructions for Changing the Pre-Packaged VM Version
