@@ -18,11 +18,12 @@ Make sure you have [`node.js`](https://www.nodejs.org/)  version 10 or higher in
 # from the site directory
 npm install
 ```
-*NOTE: If you encounter issues launching Cypress, run `npm update` from the site directory.*
 
 If you are on Linux, view [this page](https://docs.cypress.io/guides/getting-started/installing-cypress.html#Linux) to see what dependencies you may need to install additionally for Cypress.
 
 If you are on WSL and run into an error, make sure you installed `node.js` on your desktop (Program Files) and not inside your local Submitty repository.
+
+*Note: If you encounter issues launching Cypress, run* `npm update` *from the site directory.* 
 
 ## Cypress Test Runner
 
