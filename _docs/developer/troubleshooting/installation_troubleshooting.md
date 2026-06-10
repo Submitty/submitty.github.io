@@ -295,7 +295,7 @@ ___
 
 Some issues with the pre-packaged VM can be fixed by installing a different version. Once you've installed a pre-packaged VM, it does not recieve version updates, so it can also be a good idea to update the pre-packaged version periodically. To see your current VM version, run `vagrant box list` and look at the output. You should see something like `SubmittyBot/ubuntu22-dev (virtualbox, 26.06.00.2606070357, (amd64))`. In this case, `26.06.00.2606070357` is the version number.
 
-You may also see multiple versions of the VM. If you want to know what version the VM is using when you run `vagrant up`, follow these steps:
+After running `vagrant box list`, you may see multiple versions of the VM. If you want to know what version the VM is using when you run `vagrant up`, follow these steps:
 
 1. Run `vagrant up` and look at the output. 
 2. You should see something like `==> ubuntu-22.04: Checking if box 'SubmittyBot/ubuntu22-dev' version '26.06.00.2606070357' is up to date...`. 
@@ -315,7 +315,7 @@ This will download the newest version of the VM. It will take approximately 30 m
 
 ### Instructions for Specifying the Pre-Packaged VM Version
 
-These steps may be useful if you wish to roll your VM back or to upgrade to an intermediate version.
+These steps may be useful if you wish to roll your VM back or to upgrade to a version besides the newest available.
 
 From your main Submitty repository, e.g. `<SOMETHING>/GIT_CHECKOUT/Submitty/`, run:
 
