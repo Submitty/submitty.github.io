@@ -293,9 +293,29 @@ ___
 
 ## Troubleshooting Pre-Packaged VM
 
-Some issues with the pre-packaged VM can be fixed by installing a different version. Once you've installed a pre-packaged VM, it does not recieve version updates, so it can also be a good idea to update the pre-packaged version periodically. To see your current VM version, run `vagrant up` and look at the output. You should see something like `==> ubuntu-22.04: Checking if box 'SubmittyBot/ubuntu22-dev' version '26.06.00.2606070357' is up to date...`. In this case `26.06.00.2606070357` is the version number.
+Some issues with the pre-packaged VM can be fixed by installing a different version. Once you've installed a pre-packaged VM, it does not recieve version updates, so it can also be a good idea to update the pre-packaged version periodically. To see your current VM version, run `vagrant box list` and look at the output. You should see something like `SubmittyBot/ubuntu22-dev (virtualbox, 26.06.00.2606070357, (amd64))`. In this case, `26.06.00.2606070357` is the version number.
 
-### Instructions for Changing the Pre-Packaged VM Version
+You may also see multiple versions of the VM. If you want to know what version the VM is using when you run `vagrant up`, follow these steps:
+
+1. Run `vagrant up` and look at the output. 
+2. You should see something like `==> ubuntu-22.04: Checking if box 'SubmittyBot/ubuntu22-dev' version '26.06.00.2606070357' is up to date...`. 
+
+In this case, `26.06.00.2606070357` is the version number.
+
+If you have multiple versions of the VM, you can also run `vagrant box prune` to remove the old versions.
+
+### Instructions for Updating the Pre-Packaged VM Version
+From your main Submitty repository, e.g. `<SOMETHING>/GIT_CHECKOUT/Submitty/`, run:
+
+```
+vagrant box update
+```
+
+This will download the newest version of the VM. It will take approximately 30 minutes to download.
+
+### Instructions for Specifying the Pre-Packaged VM Version
+
+These steps may be useful if you wish to roll your VM back or to upgrade to an intermediate version.
 
 From your main Submitty repository, e.g. `<SOMETHING>/GIT_CHECKOUT/Submitty/`, run:
 
@@ -307,7 +327,7 @@ This will destroy your current VM and reset the Vagrant environment.
 
 *Note: If you have more than one VM (perhaps by accident), you can see a list of VMs with the command* `vagrant global-status`. *VMs listed will be given a unique id. You can then run* `vagrant destroy 1a2b3c4d`. *Replace* `1a2b3c4d` *with the id of the VM you wish to destroy.*
 
-on Linux/MacOS, type:
+Then, on Linux/MacOS, type:
 ```
 PREBUILT_VERSION={version} vagrant up --provider=virtualbox
 ```
@@ -322,4 +342,4 @@ If you are importing a new version, it will take approximately 30 minutes to dow
 
 *The version must be only the numbers, not including the* `v` *in front, for example* `26.06.00.2606070357` *not* `v26.06.00.2606070357`.
 
-*Note: You can find pre-packaged Submitty VM versions on the [Hashicorp Vagrant Box Catalog](https://portal.cloud.hashicorp.com/vagrant/discover/SubmittyBot/ubuntu22-dev) by navigating to the 'Versions' tab in the sidebar. Make sure to follow the [Submitty installation instructions](/developer/getting_started/vm_install_using_vagrant) when setting up your development environment.*
+*Note: You can find pre-packaged Submitty VM versions on the [Hashicorp Vagrant Box Catalog](https://portal.cloud.hashicorp.com/vagrant/discover/SubmittyBot/ubuntu22-dev) by navigating to the 'Versions' tab in the sidebar. Make sure to follow the [Submitty installation instructions](/developer/getting_started/vm_install_using_vagrant) when setting up your development environment. A complete list of Vagrant commands can be found here: [Hashicorp Vagrant CLI Docs](https://developer.hashicorp.com/vagrant/docs/cli).*
