@@ -41,6 +41,10 @@ h4 {
     background-color: var(--nav-selected) !important;
 }
 
+#nav-tree .item:not(.selected):hover {
+    background-color: var(--nav-hover) !important;
+}
+
 #nav-tree .selected a {
     color: var(--content-color) !important;
     text-shadow: none !important;
