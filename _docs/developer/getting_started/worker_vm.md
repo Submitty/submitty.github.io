@@ -92,6 +92,24 @@ __NOTE__: Depending on the performance of your computer and the size of the auto
 
 ---
 
+## Removing Worker Machine(s)
+
+If you would like to remove your worker machine(s), run:
+```
+vagrant workers destroy
+```
+For each worker machine, you will be prompted on whether you would like to remove it.
+
+Alternatively, you can also destroy worker machines individually using:
+```
+vagrant destroy 1a2b3c4d
+```
+Where `1a2b3c4d` is the id of the machine.
+
+_Note: You can find a list of all vagrant machines and their ids using `vagrant global-status` ._
+
+---
+
 ## Manual Worker Installation (VirtualBox)
 
 1. Open the Virtual Box application.
