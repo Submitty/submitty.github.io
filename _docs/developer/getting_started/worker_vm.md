@@ -35,6 +35,18 @@ machines* in addition to your primary vagrant virtual machine.
    ```
    vagrant workers up
    ```
+   Alternatively, if you are testing the worker install process, it may be helpful to install the worker machine(s) from scratch.
+
+   On Linux or Mac type:
+   ```
+   FROM_SCRATCH=1 vagrant workers up
+   ```
+   On Windows with `cmd` type:
+   ```
+   SET FROM_SCRATCH=1
+   vagrant workers up
+   ```
+
    _NOTE: Do not use the --provider flag with this command, since it will conflict with the
    provider of the main virtual machine._
 
