@@ -116,7 +116,7 @@ See also [System Administrator instructions to enable Self Account Creation](/sy
 
     * "Registration Section": The registration section for the user, e.g. `2B`. Consists of up to 20 uppercase/lowercase letters 'A'-'Z'/'a'-'z', digits '0'-'9', underscores '_', or hyphens '-'.
 
-    * "Registration Sub-Section": The registration sub-section for the user, e.g. `team 7`. Consists of up to 20 uppercase/lowercase letters 'A'-'Z'/'a'-'z', digits '0'-'9', underscores '_', hyphens '-', or spaces ' '.
+    * "Registration Subsection": The registration subsection for the user, e.g. `team 7`. Consists of up to 20 uppercase/lowercase letters 'A'-'Z'/'a'-'z', digits '0'-'9', underscores '_', hyphens '-', or spaces ' '.
 
     * "Password": On versions of Submitty with password-based authentication, this can set the password for new users. Cannot be empty. Ignored for existing users, and versions of Submitty that don't use password authentication, including `submitty.cs.rpi.edu`.
 
