@@ -97,7 +97,6 @@ Access control can be enforced easily via `#[AccessControl(...)]` annotation. Pl
 For example, the following route will only allow instructor access.
 
 ```php
-
 #[AccessControl(role: "INSTRUCTOR")]
 #[Route("/courses/{_semester}/{_course}/course_materials/modify_timestamp")]
 public function modifyCourseMaterialsFilePermission($filename, $checked)
