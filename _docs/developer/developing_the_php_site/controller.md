@@ -15,13 +15,12 @@ appropriate [View](view).
 A request to view the `UserDetails` page would first hit the
 `UserController`, which might look something like this:
 
-```PHP
+```php
 /**
-* Route to view the userDetailsPage.
-* @Route("/{_semester}/{_course}/show_user_details", methods={"GET"})
-* @AccessControl(role="INSTRUCTOR")
-**/
-
+ * Route to view the userDetailsPage.
+ */
+#[AccessControl(role="INSTRUCTOR")]
+#[Route("/{_semester}/{_course}/show_user_details", methods={"GET"})]
 public function userDetailsPage($user_id) {
    $user = $this->core->getQueries()->getUserFromId($user_id);
    if ($user) {
@@ -41,7 +40,7 @@ From the website, they can now make a request which routes to the
 `userDetails` page. Something like
 `f20/sample/show_user_details?user_id="aphacker"`
 
-Because we added `@AccessControl(role="INSTRUCTOR")`, only instructor
+Because we added `#[AccessControl(role="INSTRUCTOR")]`, only instructor
 level users can access this page.
 
 The `$user_id` parameter to our function is populated from the
@@ -86,9 +85,7 @@ annotation in the docstring for the controller class, like so:
 ```php
 use app\libraries\routers\Enabled;
 
-/**
- * @Enabled("forum")
- */
+#[Enabled(feature: "forum")]
 class ForumController {}
 ```
 
