@@ -1,4 +1,3 @@
-
 FROM ruby:3.2-slim
  
 # Install build dependencies required by native gem extensions (e.g., nokogiri)
@@ -20,7 +19,3 @@ RUN bundle install
 COPY . .
  
 EXPOSE 4000
- 
-# Serve the site, binding to 0.0.0.0 so it's accessible outside the container
-CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0", "--livereload"]
- 

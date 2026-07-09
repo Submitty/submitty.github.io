@@ -2,14 +2,22 @@ services:
   docs:
     build: .
     ports:
-      - "4000:4000"
-      - "35729:35729"
+      - "127.0.0.1:35729:35729"   # livereload port, bypasses nginx
+    expose:
+      - "4000"
     volumes:
       - .:/site
       - bundle_cache:/usr/local/bundle
     environment:
       - JEKYLL_ENV=development
     command: bundle exec jekyll serve --host 0.0.0.0 --livereload --force_polling
-
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "127.0.0.1:4000:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - docs
 volumes:
   bundle_cache:

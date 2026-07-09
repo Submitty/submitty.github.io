@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 
-Join our Community Discussion on Zulip:
+Join our Community Discussion on Zulip
 [Contact Us](/contact)
 
 ## Setting Up
