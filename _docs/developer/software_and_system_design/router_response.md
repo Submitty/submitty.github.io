@@ -19,10 +19,8 @@ like docstrings. You can think of PHP functions as endpoints that get
 mapped to different routes via the router.
 
 ```php
-/**
-* @Route("/courses/{_semester}/{_course}/gradeable/{gradeable_id}/team/new")
-*/
-public function createNewTeam($gradeable_id){
+#[Route("/courses/{_semester}/{_course}/gradeable/{gradeable_id}/team/new")]
+public function createNewTeam($gradeable_id) {...}
 ```
 
 Above is an example route that points to a function in the
@@ -50,10 +48,8 @@ after the base-name matters.
 Functions can have multiple parameters sent to them through a URL.
 
 ```php
-/**
-* @Route("/courses/{_semester}/{_course}/example_route/{var1}/{var2}/{var3}")
-*/
- public function example($var1, $var2, $var3){
+#[Route("/courses/{_semester}/{_course}/example_route/{var1}/{var2}/{var3}")]
+ public function example($var1, $var2, $var3) {...}
 ```
 
 #### Pattern Matching Route Variables
@@ -73,10 +69,8 @@ request body. By adding `methods={""}` after the URL in a route annotation you
 can make sure the router matches certain types of requests only.
 
 ```php
-/**
- * @Route("/courses/{_semester}/{_course}/course_materials/upload", methods={"POST"})
- */
-public function ajaxUploadCourseMaterialsFiles() {
+#[Route("/courses/{_semester}/{_course}/course_materials/upload", methods: ["POST"])]
+public function ajaxUploadCourseMaterialsFiles() {...}
 ```
 
 The router will automatically check all POST requests for valid 
@@ -94,11 +88,9 @@ A PHP function can have multiple routes point towards it. This is
 typically done for optional parameters and the API.
 
 ```php
- /**
- * @Route("/courses/{_semester}/{_course}/gradeable/{gradeable_id}")
- * @Route("/courses/{_semester}/{_course}/gradeable/{gradeable_id}/{gradeable_version}")
- */
- public function showHomeworkPage($gradeable_id, $gradeable_version = null){
+#[Route("/courses/{_semester}/{_course}/gradeable/{gradeable_id}")]
+#[Route("/courses/{_semester}/{_course}/gradeable/{gradeable_id}/{gradeable_version}", requirements: ["gradeable_version" => "\d+"])]
+ public function showHomeworkPage($gradeable_id, $gradeable_version = null) {...}
 ```
 
 The above example allows users to optionally include a
@@ -106,7 +98,7 @@ gradeable_version in the URL while still calling the same function.
 
 #### Access Control
 
-The router can also restrict certain users by pattern matching against the user's access group. This can be done by adding the "\@AccessControl" annotation and giving a specific role. The following roles can be used
+The router can also restrict certain users by pattern matching against the user's access group. This can be done by adding the `#[AccessControl(...)]` annotation and giving a specific role. The following roles can be used
 in this annotation:
 
 * INSTRUCTOR
@@ -115,11 +107,9 @@ in this annotation:
 * STUDENT
 
 ```php
-/**
- * @Route("/courses/{_semester}/{_course}/course_materials/edit", methods={"POST"})
- * @AccessControl(role="INSTRUCTOR")
- */
-public function ajaxEditCourseMaterialsFiles() {
+#[AccessControl(role: "INSTRUCTOR")]
+#[Route("/courses/{_semester}/{_course}/course_materials/edit", methods: ["POST"])]
+public function ajaxEditCourseMaterialsFiles(bool $flush = true) {...}
 ```
 
 The above example will allow only users with the role "instructor"
@@ -131,18 +121,16 @@ You can also perform access control by restricting users with certain
 permissions. This can be done by passing in the "permission" field within the access control annotation. 
 
 ```php
-/**
- * @Route(/example/access)
- * @AccessControl(permission="path.read.rainbow_grades")
- */
-public function examplePermissionAccess(){
+#[AccessControl(permission="path.read.rainbow_grades")]
+#[Route(/example/access)]
+public function examplePermissionAccess() {...}
 ```
 
 The above access will allow only users with permission to view the 
 rainbow grades directory. You can view the list of permissions under
 [Access.php](https://github.com/Submitty/Submitty/blob/master/site/app/libraries/routers/AccessControl.php)
 
-*Note* You can restrict users by permission and role at the same time by using both parameters : `@AccessControl(role="STUDENT", permission="gradeable.submit.everyone")`
+*Note* You can restrict users by permission and role at the same time by using both parameters : `#[AccessControl(role="STUDENT", permission="gradeable.submit.everyone")]`
 
 
 Certain controllers can have every function restricted to a certain
@@ -150,11 +138,8 @@ role, for example the controllers under `site/app/controllers/admin`.
 You can annotate access across an entire class at once to prevent writing the same thing over every function.
 
 ```php
-/**
- * Class AdminGradeableController
- * @AccessControl(role="INSTRUCTOR")
- */
-class AdminGradeableController extends AbstractController {
+#[AccessControl(role: "INSTRUCTOR")]
+class AdminGradeableController extends AbstractController {...}
 ```
 
 Every function within `AdminGradeableController.php` will share this
@@ -173,11 +158,9 @@ behave very similarly as well.
 
 API routes always start with `/api/`. The following are examples of valid API routes.
 
-```php
-/**
-* @Route("/api/courses/{_semester}/{_course}/users", methods={"GET"})
-* @Route("/api/courses", methods={"POST"})
-*/
+```plaintext
+#[Route("/api/courses/{_semester}/{_course}/users", methods={"GET"})]
+#[Route("/api/courses", methods={"POST"})]
 ```
 
 #### Different Response Types
@@ -198,12 +181,13 @@ The API is currently a work in progress. Submitty uses a RESTful API design and 
 
 ## The MultiResponse Object
 
-Here is a basic example of the multiResponse object:
+Here is a basic example of the MultiResponse object:
 ```php
 /**
-* @Route("/example/method", methods={"GET"})
-* @Route("/api/example/method", methods={"GET"})
-*/
+ * @return MultiResponse
+ */
+#[Route("/example/method", methods={"GET"})]
+#[Route("/api/example/method", methods={"GET"})]
 public function foo(){
     return new MultiResponse(
         JsonResponse::getSuccessResponse("It worked!"),
@@ -313,4 +297,4 @@ https://submitty.myuniversity.edu/home/gradeables/foo/bar
 
 ### Using the MultiResponse Object
 
-It is recommended you use the MultiResponse object for new controllers moving onwards 
+It is recommended you use the MultiResponse object for new controllers moving onwards.

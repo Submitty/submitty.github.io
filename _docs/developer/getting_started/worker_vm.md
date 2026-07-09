@@ -35,6 +35,18 @@ machines* in addition to your primary vagrant virtual machine.
    ```
    vagrant workers up
    ```
+   Alternatively, if you are testing the worker install process, it may be helpful to install the worker machine(s) from scratch.
+
+   On Linux or Mac type:
+   ```
+   FROM_SCRATCH=1 vagrant workers up
+   ```
+   On Windows with `cmd` type:
+   ```
+   SET FROM_SCRATCH=1
+   vagrant workers up
+   ```
+
    _NOTE: Do not use the --provider flag with this command, since it will conflict with the
    provider of the main virtual machine._
 
@@ -77,6 +89,24 @@ su submitty_daemon -c ssh <worker-name>
 The list of worker names can be displayed with `vagrant workers status`.
 
 __NOTE__: Depending on the performance of your computer and the size of the autograding queue passed to the worker, the SSH command may hang for some time.
+
+---
+
+## Removing Worker Machine(s)
+
+If you would like to remove your worker machine(s), run:
+```
+vagrant workers destroy
+```
+For each worker machine, you will be prompted on whether you would like to remove it.
+
+Alternatively, you can also destroy worker machines individually using:
+```
+vagrant destroy 1a2b3c4d
+```
+Where `1a2b3c4d` is the id of the machine.
+
+_Note: You can find a list of all vagrant machines and their ids using `vagrant global-status` ._
 
 ---
 

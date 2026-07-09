@@ -23,6 +23,8 @@ If you are on Linux, view [this page](https://docs.cypress.io/guides/getting-sta
 
 If you are on WSL and run into an error, make sure you installed `node.js` on your desktop (Program Files) and not inside your local Submitty repository.
 
+*Note: If you encounter issues launching Cypress, run* `npm update` *from the site directory.* 
+
 ## Cypress Test Runner
 
 You can open the test runner by navigating into `site/` and using the command:
