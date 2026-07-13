@@ -11,6 +11,8 @@ To report issues for this repository, please file them under the
 
 If you have [Docker](https://www.docker.com/) installed, you do not need to install Ruby or Bundler locally.
 
+### Setup
+
 1. Clone the repository:
    ```bash
    git clone https://github.com/Submitty/submitty.github.io.git
