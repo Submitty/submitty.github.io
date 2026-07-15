@@ -39,7 +39,7 @@ _Note: Click on the <u>links</u> and <i class="fas fa-info-circle" style="font-s
   * [detailed rubric grading](/grader/rubric_grading) of submitted materials
   * web interface for file access or bulk download
   * [assign sections of grading to different TAs](/instructor/assignment_preparation/index#grader-assignment-method)
-  * [digital PDF annotation](/grader/rubric_grading/pdf_annotation)
+  * [image annotation](/grader/rubric_grading/image_annotation)
   * grading progress indicator and [grade statistics & histogram](/grader/rubric_grading/statistics)
   * [retroactive rubric and point adjustment](/grader/rubric_grading/common_marks)
   * [grade inquiries](/student/grades/grade_inquiry) (clarifications/corrections of manual grading)

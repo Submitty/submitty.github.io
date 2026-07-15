@@ -1,6 +1,6 @@
 ---
 category: Grader > Rubric Grading
-title: PDF Annotation
+title: Image Annotation
 ---
 
 ## Overall Comment and PDF Annotations

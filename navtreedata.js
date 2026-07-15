@@ -71,7 +71,7 @@ var NAVTREE =
                 [ "Overview", "/grader/rubric_grading/index", null ],
                 [ "Rubric Components and Marks", "/grader/rubric_grading/rubric_components_and_marks", null ],
                 [ "Silent Regrade", "/grader/rubric_grading/silent_regrade", null ],
-                [ "PDF Annotation", "/grader/rubric_grading/pdf_annotation", null ],
+                [ "Image Annotation", "/grader/rubric_grading/image_annotation", null ],
                 [ "Sorting and Navigation", "/grader/rubric_grading/sorting_and_navigation", null ],
                 [ "Resolving a Grade Inquiry", "/grader/rubric_grading/grade_inquiry", null ],
                 [ "Statistics", "/grader/rubric_grading/statistics", null ]
