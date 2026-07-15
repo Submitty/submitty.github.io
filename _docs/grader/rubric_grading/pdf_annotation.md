@@ -15,4 +15,4 @@ the student's submission, such as the single-page JPGs made during a bulk-upload
 Annotations can be handwritten using a touchscreen, digital tablet, or mouse,
 or they can be typewritten in textboxes places on the image.
 
-![](/images/ta_grading/rubric_grading_pdf_annotation.png)
+![](/images/ta_grading/rubric_grading_image_annotation.png)
