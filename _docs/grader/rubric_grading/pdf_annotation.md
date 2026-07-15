@@ -16,8 +16,3 @@ Annotations can be handwritten using a touchscreen, digital tablet, or mouse,
 or they can be typewritten in textboxes places on the image.
 
 ![](/images/ta_grading/rubric_grading_pdf_annotation.png)
-
-## PDF Automatic Scrolling
-
-When grading a bulk-upload PDF submission, if there are page numbers assigned to the PDF and the rubric components then
-going between the prev / next student while having the rubric and file panels open (with a rubric component with a page number assigned to it open) will automatically open the PDF and scroll it to the associated page number in the file panel.
