@@ -1,5 +1,5 @@
 ---
-title: Elyssa_Sumendap
+title: Elyssa Sumendap
 category: Developer > Google Summer of Code 2026
 ---
 

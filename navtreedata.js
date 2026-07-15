@@ -319,7 +319,7 @@ var NAVTREE =
                 [ "Overview","/developer/google_summer_of_code/index", null ],
                 [ "GSoC Application Process", "/developer/google_summer_of_code/GSoC_application", null ],
                 [ "GSoC Application Template","/developer/google_summer_of_code/applicant_template", null ],
-                [ "2026 Garvit Khandelwal", "/developer/google_summer_of_code/2026_Garvit Khandelwal", null ],
+                [ "2026 Garvit Khandelwal", "/developer/google_summer_of_code/2026_Garvit_Khandelwal", null ],
                 [ "2026 Ansh Jindal", "/developer/google_summer_of_code/2026_Ansh_Jindal", null ],
                 [ "2026 Elyssa Sumendap", "/developer/google_summer_of_code/2026_Elyssa_Sumendap", null ],
                 [ "2024 Sahil Suman", "/developer/google_summer_of_code/2024_Sahil_Suman", null ],
