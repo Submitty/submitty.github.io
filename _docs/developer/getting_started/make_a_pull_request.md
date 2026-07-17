@@ -75,7 +75,7 @@ Be sure to read the [Suggestions for New Developers](/developer/getting_started/
       * `Autograding` (includes router, container/docker),
       * `Forum` (Includes Live Chat),  
       * `Notifications` (includes email and grade inquiries),  
-      * `TAGrading` (includes PDF annotation, peer grading),  
+      * `TAGrading` (includes image annotation, peer grading),  
       * `InstructorUI` (includes course and gradeable configuration),  
       * `SubminiPolls`,  
       * `HelpQueue`,  
