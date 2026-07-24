@@ -3,13 +3,13 @@ title: Nick Ciuica
 category: Developer > Rensselaer Center for Open Source (RCOS) > Summer 2026
 ---
 
-**21** pull requests reviewed
-**10** [pull requests created](https://github.com/Submitty/Submitty/commits?author=NicholasCiuica) (+ **3** [documentation pull requests](https://github.com/Submitty/submitty.github.io/commits?author=NicholasCiuica))
-**3** pull requests taken over and merged
+**21** pull requests reviewed  
+**10** [pull requests created](https://github.com/Submitty/Submitty/commits?author=NicholasCiuica) (+ **3** [documentation pull requests](https://github.com/Submitty/submitty.github.io/commits?author=NicholasCiuica))  
+**3** pull requests taken over and merged  
 
 My primary goals this summer were to improve the TA Grading interface and the Gradeable details pages. As a previous course mentor who used Submitty to grade assignments, I used my experience to implement bugfixes and new features that I would see myself using. See a list of my contributions below:
 
-### TA Grading Interface
+### TA Grading Interface:
 Consistent navbar layout
 #### Recentering the Grading Panel Navbar ([PR#12914](https://github.com/Submitty/Submitty/pull/12914))
 #### Fixing Student Name Display and Resizing ([PR#12946](https://github.com/Submitty/Submitty/pull/12946))
