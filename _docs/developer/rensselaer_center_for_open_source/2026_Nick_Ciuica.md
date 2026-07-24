@@ -7,14 +7,13 @@ category: Developer > Rensselaer Center for Open Source (RCOS) > Summer 2026
 **10** [pull requests created](https://github.com/Submitty/Submitty/commits?author=NicholasCiuica) (+ **3** [documentation pull requests](https://github.com/Submitty/submitty.github.io/commits?author=NicholasCiuica))
 **3** pull requests taken over and merged
 
-My primary goals this summer were to improve the TA Grading interface and the Gradeable details pages. As a previous course mentor who used Submitty to grade assignments, I used my experience to implement bugfixes and new features that I would see myself using.
+My primary goals this summer were to improve the TA Grading interface and the Gradeable details pages. As a previous course mentor who used Submitty to grade assignments, I used my experience to implement bugfixes and new features that I would see myself using. See a list of my contributions below:
 
 ### TA Grading Interface
 Consistent navbar layout
 #### Recentering the Grading Panel Navbar ([PR#12914](https://github.com/Submitty/Submitty/pull/12914))
-
- ([Bugfix:InstructorUI] Recentering Grading Panel Navbar)
-PR#12946 ([Bugfix:TAGrading] Student Name Resize)
+As a grader, it was very helpful to have the navbar of the grading interface in the same place as I moved from page to page grading multiple students' assignment, and so I noticed pretty quickly that its constant positioning got messed up. I fixed the navbar's css, and also added a window resize event on page load so that the top bar's dynamically-calculated layout sizes would be accurate on page load, without having to manually reload the page.
+#### Fixing Student Name Display and Resizing ([PR#12946](https://github.com/Submitty/Submitty/pull/12946))
 Auto-open submission browser feature:
 Picked up PR#12625 ([Bugfix:TAGrading] Auto-open single file)
 PR#12931 ([Feature:TAGrading] Persistent Auto-Open)
