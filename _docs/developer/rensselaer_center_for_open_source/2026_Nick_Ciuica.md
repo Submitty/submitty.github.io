@@ -7,7 +7,7 @@ category: Developer > Rensselaer Center for Open Source (RCOS) > Summer 2026
 **10** [pull requests created](https://github.com/Submitty/Submitty/commits?author=NicholasCiuica) (+ **3** [documentation pull requests](https://github.com/Submitty/submitty.github.io/commits?author=NicholasCiuica))
 **3** pull requests taken over and merged
 
-My primary goals this summer were to improve the TA Grading interface and the Gradeable details pages. I used my previous experience as a course mentor who used Submitty to implement bugfixes and new features that I would see myself using while grading. 
+My primary goals this summer were to improve the TA Grading interface and the Gradeable details pages. As a previous course mentor who used Submitty to grade assignments, I used my experience to implement bugfixes and new features that I would see myself using.
 
 ### TA Grading Interface
 Consistent navbar layout
