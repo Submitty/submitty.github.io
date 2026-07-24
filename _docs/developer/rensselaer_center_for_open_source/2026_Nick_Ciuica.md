@@ -14,10 +14,12 @@ Consistent navbar layout
 #### Recentering the Grading Panel Navbar ([PR#12914](https://github.com/Submitty/Submitty/pull/12914))
 #### Fixing Student Name Display and Resizing ([PR#12946](https://github.com/Submitty/Submitty/pull/12946))
 Auto-open submission browser feature:
-Picked up PR#12625 ([Bugfix:TAGrading] Auto-open single file)
-PR#12931 ([Feature:TAGrading] Persistent Auto-Open)
-Image annotation as a replacement for the removed PDF annotation feature:
-Picked up PR#11921 ([Feature:TAGrading] Add Image Annotation)
+#### Auto-Open Submissions with Single File ([PR#12625](https://github.com/Submitty/Submitty/pull/12625))
+I picked up this unfinished PR.
+#### Persistent Auto-Open Across Students ([PR#12931](https://github.com/Submitty/Submitty/pull/12931))
+I made this PR after starting work on ([PR#12625](https://github.com/Submitty/Submitty/pull/12625)) because I noticed some issues with the original auto-open feature while testing the new single-file auto-open functionality. In this PR I update how opened files are stored so they can be consistently reopened when moving from student to student in the grader interface.
+#### Adding Image Annotation ([PR#11921](https://github.com/Submitty/Submitty/pull/11921))
+I picked up this unfinished PR. I improved the styling of the buttons used for image annotation to be more contrasting and accessible in both light and dark modes. I also disabled grading interface keyboard shortcuts while annotating, as this caused issues when trying to type annotations. I thoroughly tested this PR and made a list of next issues regarding image annotation that need to be tackled.
 
 PRs related to Gradeable Details Page:
 Improvements to student data CSV upload:
