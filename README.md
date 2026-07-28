@@ -7,7 +7,40 @@ an open source course management, assignment submission, exam, and grading syste
 To report issues for this repository, please file them under the
 [Submitty/Submitty](https://github.com/Submitty/Submitty) repository.
 
-## Local Development
+## Local Development with Docker (Recommended)
+
+If you have [Docker](https://www.docker.com/) installed, you do not need to install Ruby or Bundler locally.
+
+### Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Submitty/submitty.github.io.git
+   cd submitty.github.io
+   ```
+2. Start the development container:
+   ```bash
+   docker compose up
+   ```
+   The first run will take a few minutes to install dependencies.
+
+3. Visit [http://localhost:4000](http://localhost:4000) to view the site.
+   Changes to files will automatically trigger a rebuild and refresh your
+   browser.
+
+4. To stop the development container, press `Ctrl+C` or run:
+   ```bash
+   docker compose down
+   ```
+### Running the link checker
+
+```bash
+docker compose exec site bundle exec jekyll build
+docker compose exec site bundle exec htmlproofer ./_site --assume-extension --empty-alt-ignore --disable_external
+```
+Alternatively, you can develop the site with Ruby and Bundler installed locally. See the instructions below for more information.
+
+## Local Development with Ruby
 
 ### Prerequisites
 
@@ -22,7 +55,7 @@ for example, this would be accomplished by doing `sudo apt-get install ruby-dev`
 
 ### Setup
 
-1. Clone the respository on your local machine, e.g.,
+1. Clone the repository on your local machine, e.g.,
 
    ```
    git clone https://github.com/Submitty/submitty.github.io.git
@@ -129,7 +162,7 @@ above structure. Currently, the site only supports three levels of nesting (sub-
 ## Forked from [Edition](https://github.com/CloudCannon/edition-jekyll-template)
 
 This repository was created via a fork of Edition, which is a product documentation theme for Jekyll created
-by by [CloudCannon](http://cloudcannon.com/), the Cloud CMS for Jekyll.
+by [CloudCannon](http://cloudcannon.com/), the Cloud CMS for Jekyll.
 
 
 

@@ -12,7 +12,7 @@ Submitty includes the ability for instructors to automatically generate rainbow 
 For this feature to work correctly:
 
 1. The ```<submitty install dir>/config/submitty_admin.json``` file must contain credentials for a submitty admin user. 
-Usually this file will be configured automatically as part of the inputs for the ```CONFIGURE_SUBMITTY.py``` script.  The 
+This file will be generated automatically as part of the inputs for the ```generate_configs.py``` script. You must edit that file to add your Submitty admin user. The 
 credentials in this file are for a submitty *course* user, not a *linux* user.
 
 1. The submitty admin user must exist as an instructor of the course for which the rainbow grades are going to be automatically
