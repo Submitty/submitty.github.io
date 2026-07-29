@@ -6,19 +6,21 @@ category: Developer > Rensselaer Center for Open Source (RCOS) > Summer 2026
 TODO: update numbers
 
 **21** pull requests reviewed  
-**10** [pull requests created](https://github.com/Submitty/Submitty/commits?author=NicholasCiuica) (+ **3** [documentation pull requests](https://github.com/Submitty/submitty.github.io/commits?author=NicholasCiuica))  
+**10** [pull requests created](https://github.com/Submitty/Submitty/commits?author=NicholasCiuica) (+ **2** [documentation pull requests](https://github.com/Submitty/submitty.github.io/commits?author=NicholasCiuica))  
 **3** pull requests taken over and merged  
 
-I'm very glad to have had the opportunity to work as a full-time Submitty developer over Summer 2026! My primary goals this summer were to improve the TA Grading interface and the Gradeable details pages. As a previous course mentor who used Submitty to grade assignments, I used my experience to implement bugfixes and new features that I would see myself using. See a list of my contributions below:
+I'm very glad to have spent my Summer 2026 working full-time as a Submitty developer! My primary goals this summer were to improve the TA Grading interface and the Gradeable details pages. As a previous course mentor who used Submitty to grade assignments, I used my experience to implement bugfixes and new features that I would see myself using. See a list of my contributions below:
 
 ### TA Grading Interface:
 
-#### Auto-Open Submissions with Single File ([PR#12625](https://github.com/Submitty/Submitty/pull/12625))
-I picked up this unfinished PR.
 #### Persistent Auto-Open Across Students ([PR#12931](https://github.com/Submitty/Submitty/pull/12931))
 I made this PR after starting work on ([PR#12625](https://github.com/Submitty/Submitty/pull/12625)) because I noticed some issues with the original auto-open feature while testing the new single-file auto-open functionality. In this PR I update how opened files are stored so they can be consistently reopened when moving from student to student in the grader interface.
+#### Auto-Open Submissions with Single File ([PR#12625](https://github.com/Submitty/Submitty/pull/12625))
+I picked up this PR and reworked the way student submission files around counted to ignore metafiles. I also added Cypress tests for this new feature.
 #### Adding Image Annotation ([PR#11921](https://github.com/Submitty/Submitty/pull/11921))
-I picked up this unfinished PR. I improved the styling of the buttons used for image annotation to be more contrasting and accessible in both light and dark modes. I also disabled grading interface keyboard shortcuts while annotating, as this caused issues when trying to type annotations. I thoroughly tested this PR and made a list of next issues regarding image annotation that need to be tackled.
+I picked up this old PR and improved the styling of the buttons used for image annotation to be more contrasting and accessible in both light and dark modes. I also disabled grading interface keyboard shortcuts while annotating, as this caused issues when trying to type annotations. I thoroughly tested this PR and identified areas of improvement to be tackled in future PRs.
+#### Remove Leftover PDF Annotation Code ([PR#13042](https://github.com/Submitty/Submitty/pull/13042))
+Since the PDF annotation functionality has been removed from Submitty for a while now, I wanted to clean up the code base to make it easier to extend and debug the annotation feature in the future. I removed leftover PDF annotation code for this feature and split/renamed/moved files to separate image annotation and pdf viewing logic.
 #### Recentering the Grading Panel Navbar ([PR#12914](https://github.com/Submitty/Submitty/pull/12914))
 #### Fixing Student Name Display and Resizing ([PR#12946](https://github.com/Submitty/Submitty/pull/12946))
 
@@ -33,6 +35,7 @@ The Gradeable Details table used to dynamically assign its striped rows using JS
 #### Removing Print Section Feature from Checkpoint Labs ([PR#13051](https://github.com/Submitty/Submitty/pull/13051))
 
 ### Other Contributions:
+
 #### Configurable Password Requirements ([PR#12455](https://github.com/Submitty/Submitty/pull/12455))
 I picked up this unfinished PR.
 #### Server-Side Validation for Course Code ([PR#12949](https://github.com/Submitty/Submitty/pull/12949))
@@ -43,9 +46,9 @@ PR#770 ([Documentation:TAGrading] Remove PDF Annotation), goes with PR#13042
 PR#771 ([Documentation:InstructorUI] Remove Print Lab), goes with PR#13051
 
 ### Reflection
-
-My contributions to Submitty started as picked-up PRs and frontend tweaks
-I gained valuable backend experience working on our move to using venv
+Working on Submitty this summer has been an invaluable experience. My contributions to Submitty started as picked-up PRs and frontend tweaks, but I quickly began working across multiple systems of Submitty, including making new CI tests and assisting in our move to using a virtual environment for our python scripts.
+Contributing to PRs daily and assisting in reviewing and testing has made me much more confident 
+Our fast-paced changes and our emphasis on teamwork and reviewing make me confident that this opportunity has been as valueable as a traditional internship.
 Made changes daily, fast-paced changes, reviewing/testing consistently
 Gained experience with Cypress, Vue, PHP, TS, jQuery, Twig, Python, Bash
 
