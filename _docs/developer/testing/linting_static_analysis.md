@@ -125,7 +125,7 @@ Run the script locally from the root of your cloned Submitty repository:
 
 On Windows, you may need to install Bash, then run the script like this:
 ```bash
-bash .setup/SUBMITTY_TEST.sh <command> [options]
+bash .setup\SUBMITTY_TEST.sh <command> [options]
 ```
 ***NOTE:** The instructions for installing Docker on your host machine can be found here: [Docker Docs/Get Started/Get Docker](https://docs.docker.com/get-started/get-docker/)*
 
