@@ -109,7 +109,7 @@ This script streamlines the process of linting and testing by performing the fol
 1. Builds a Docker image containing all the necessary linting/testing tools.
 2. Runs the specified command inside a container, with the root of the Submitty repository mounted.
 
-***Note:** The first time you run the script, the Docker container will take anywhere from 5 to 10 minutes to build.
+***NOTE:** The first time you run the script, the Docker container will take anywhere from 5 to 10 minutes to build.
 Subsequent runs of the script (and therefore builds), using Docker's cached build layers, should only take seconds.*
 
 ## Running Locally (Outside the VM)
@@ -127,6 +127,7 @@ On Windows, you may need to install Bash, then run the script like this:
 ```bash
 bash .setup/SUBMITTY_TEST.sh <command> [options]
 ```
+***NOTE:** The instructions for installing Docker on your host machine can be found here: [Docker Docs/Get Started/Get Docker](https://docs.docker.com/get-started/get-docker/)*
 
 ## Commands:
 - `phpcs`: Runs PHP CodeSniffer. [option: `--fix`]
