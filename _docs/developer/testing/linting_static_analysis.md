@@ -97,40 +97,79 @@ If you fix one of these errors, you would need to regenerate this file which can
 php vendor/bin/phpstan analyze app public/index.php socket/index.php --generate-baseline --memory-limit 2G
 ```
 The argument `--memory_limit 2G` is necessary when phpstan will otherwise not have enough memory
-to generate a new baseline. You can see how much memory phpstan has been using with the `-v` flag
+to generate a new baseline. You can see how much memory phpstan has been using with the `-v` flag.
 
-# Submitty Test Script for PHP Linting
+---
+
+# Submitty Test Script
 
 The `submitty_test` script is an alias for the `SUBMITTY_TEST.sh` script, similar to `submitty_install_site`. 
-This script streamlines the process of PHP linting by performing the following steps:
+This script streamlines the process of linting and testing by performing the following steps:
 
-1. Changes the directory to `GIT_CHECKOUT/Submitty/site`.
-2. Installs Composer if not already installed (skips if Composer is already installed).
-3. Executes the specified PHP linting command.
-4. Returns to the original directory.
+1. Builds a Docker image containing all the necessary linting/testing tools.
+2. Runs the specified command inside a container, with the root of the Submitty repository mounted.
+
+***Note:** The first time you run the script, the Docker container will take anywhere from 5 to 10 minutes to build.
+Subsequent runs of the script (and therefore builds), using Docker's cached build layers, should only take seconds.*
+
+## Running Locally (Outside the VM)
+
+The script can also be run directly on your host machine instead of inside the Vagrant VM, provided you have Docker installed.
+This is useful if you're frequently running `vagrant destroy` and `vagrant up`, since the Docker image and its cached build state
+will then live on your host rather than inside the VM, and you won't need to wait for a long Docker build as often.
+
+Run the script locally from the root of your cloned Submitty repository:
+```bash
+./.setup/SUBMITTY_TEST.sh <command> [options]
+```
+
+On Windows, you may need to install Bash, then run the script like this:
+```bash
+bash .setup/SUBMITTY_TEST.sh <command> [options]
+```
 
 ## Commands:
-
-- `phpcs`: Runs PHP CodeSniffer.
-- `phpstan`: Runs PHP static analysis.
-- `php-lint`: Runs both PHP CodeSniffer and PHPStan.
+- `phpcs`: Runs PHP CodeSniffer. [option: `--fix`]
+- `phpstan`: Runs PHP static analysis. [option: `--memory-limit <#>G`, `--generate-baseline`]
+- `php-lint`: Runs both PHP CodeSniffer and PHPStan (default options only).
+- `php-unit`: Runs PHP unit tests. [option: `--filter testFunctionName`, `--debug`]
+- `js-lint`: Runs eslint. [option: `--fix`]
+- `css-lint`: Runs stylelint. [option: `--fix`]
+- `py-flake8`: Runs flake8. [option: `/path/to/specific_file.py`]
+- `py-pylint`: Runs pylint. [option: `/path/to/specific_file.py`]
+- `py-lint`: Runs pylint & flake8. [option: `/path/to/specific_file.py`]
+- `py-unit`: Runs all Python unit tests except `migration`.
+- `py-unit-utils` / `py-unit-migration` / `py-unit-autograder` / `py-unit-daemon`: Runs the respective Python unit test suite. [option: module, class, function ...]
 
 ## Additional Arguments:
 
-The `submitty_test` script accepts additional arguments, such as `--memory_limit 2G`.
+The `submitty_test` script accepts additional arguments, such as `--memory-limit 2G` or `--fix`. Seen above are the additional arguments usable for each command.
 
-## Example Usage:
+## PHP Linting:
 
-```
+```bash
 submitty_test php-lint --memory-limit 2G
+submitty_test phpcs --fix
+submitty_test phpstan
 ```
+
+## PHP Unit Testing:
+
+```bash
+submitty_test php-unit
+submitty_test php-unit --filter testFunctionName
+submitty_test php-unit --debug
+```
+
+See also: [PHP Unit Tests](/developer/testing/php_unit_tests)
 
 ## JavaScript Linting
 
-The frontend JavaScript code Submitty uses is linted using [eslint](https://eslint.org/). As with the PHP linter, `submitty_test` can be used as an alias for the `SUBMITTY_TEST.sh` script.
+The frontend JavaScript code Submitty uses is linted using [eslint](https://eslint.org/). As with other languages, `submitty_test` can be used as an alias for the `SUBMITTY_TEST.sh` script.
 
 ```bash
 submitty_test js-lint
+submitty_test js-lint --fix
 ```
 
 Alternatively, you can run eslint on your host system or on vagrant by navigating into the `site/`
@@ -157,10 +196,11 @@ See also: [JavaScript Style Guide](/developer/coding_style_guide/javascript)
 
 ## CSS Linting
 
-CSS is linted using [stylelint](https://stylelint.io/) in Submitty to enforce a consistent code style. As with the PHP linter, `submitty_test` can be used as an alias for the `SUBMITTY_TEST.sh` script.
+CSS is linted using [stylelint](https://stylelint.io/) in Submitty to enforce a consistent code style. As with other languages, `submitty_test` can be used as an alias for the `SUBMITTY_TEST.sh` script.
 
 ```bash
 submitty_test css-lint
+submitty_test css-lint --fix
 ```
 
 Alternatively, you can run stylelint on your host system or on vagrant by navigating into the `site/`
@@ -177,3 +217,26 @@ npm run css-stylelint:fix
 ```
 
 See also: [CSS Style Guide](/developer/coding_style_guide/css)
+
+## Python Linting
+
+Python is linted using [flake8](https://flake8.pycqa.org/en/latest/) and [pylint](https://pylint.readthedocs.io/en/stable/) in Submitty. As with other languages, `submitty_test` can be used as an alias for the `SUBMITTY_TEST.sh` script.
+
+```bash
+submitty_test py-lint # option: /path/to/specific_file.py
+submitty_test py-flake8 # option: /path/to/specific_file.py
+submitty_test py-pylint # option: /path/to/specific_file.py
+```
+
+See also: [Python Style Guide](/developer/coding_style_guide/python)
+
+## Python Unit Testing
+
+```bash
+submitty_test py-unit # runs all unit tests except migration
+submitty_test py-unit-utils # option: module, class, function ...
+submitty_test py-unit-migration # option: module, class, function ...
+submitty_test py-unit-autograder # option: module, class, function ...
+submitty_test py-unit-daemon # option: module, class, function ...
+```
+See also: [Python Unit Tests](/developer/testing/python_unit_tests)
