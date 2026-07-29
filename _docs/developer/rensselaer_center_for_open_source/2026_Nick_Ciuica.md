@@ -3,11 +3,13 @@ title: Nick Ciuica
 category: Developer > Rensselaer Center for Open Source (RCOS) > Summer 2026
 ---
 
+TODO: update numbers
+
 **21** pull requests reviewed  
 **10** [pull requests created](https://github.com/Submitty/Submitty/commits?author=NicholasCiuica) (+ **3** [documentation pull requests](https://github.com/Submitty/submitty.github.io/commits?author=NicholasCiuica))  
 **3** pull requests taken over and merged  
 
-My primary goals this summer were to improve the TA Grading interface and the Gradeable details pages. As a previous course mentor who used Submitty to grade assignments, I used my experience to implement bugfixes and new features that I would see myself using. See a list of my contributions below:
+I'm very glad to have had the opportunity to work as a full-time Submitty developer over Summer 2026! My primary goals this summer were to improve the TA Grading interface and the Gradeable details pages. As a previous course mentor who used Submitty to grade assignments, I used my experience to implement bugfixes and new features that I would see myself using. See a list of my contributions below:
 
 ### TA Grading Interface:
 
@@ -39,3 +41,16 @@ PR#12898 ([Bugfix:System] Create Account Test Randomization Fix)
 Documentation:
 PR#770 ([Documentation:TAGrading] Remove PDF Annotation), goes with PR#13042
 PR#771 ([Documentation:InstructorUI] Remove Print Lab), goes with PR#13051
+
+### Reflection
+
+My contributions to Submitty started as picked-up PRs and frontend tweaks
+I gained valuable backend experience working on our move to using venv
+Made changes daily, fast-paced changes, reviewing/testing consistently
+Gained experience with Cypress, Vue, PHP, TS, jQuery, Twig, Python, Bash
+
+### Next Steps
+
+Here are some things I'd like to work on at Submitty past the summer:
+- *Assisting in Vue Refactor*
+- *Multisortable Columns*
