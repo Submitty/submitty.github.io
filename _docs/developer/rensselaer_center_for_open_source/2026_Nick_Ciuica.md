@@ -9,27 +9,30 @@ TODO: update numbers
 **10** [pull requests created](https://github.com/Submitty/Submitty/commits?author=NicholasCiuica) (+ **2** [documentation pull requests](https://github.com/Submitty/submitty.github.io/commits?author=NicholasCiuica))  
 **3** pull requests taken over and merged  
 
-I'm very glad to have spent my Summer 2026 working full-time as a Submitty developer! My primary goals this summer were to improve the TA Grading interface and the Gradeable details pages. As a previous course mentor who used Submitty to grade assignments, I used my experience to implement bugfixes and new features that I would see myself using. See a list of my contributions below:
+I'm very glad to have spent my Summer 2026 working full-time as a Submitty developer! Getting to work on this open-source project in a small team has taught me so much about the development process. My primary goals this summer were to improve the TA Grading interface and the Gradeable details pages. As a previous course mentor who used Submitty to grade assignments, I used my experience to implement bugfixes and new features that I would see myself using. See a list of my contributions below:
 
 ### TA Grading Interface:
 
-#### Persistent Auto-Open Across Students ([PR#12931](https://github.com/Submitty/Submitty/pull/12931))
-I made this PR after starting work on ([PR#12625](https://github.com/Submitty/Submitty/pull/12625)) because I noticed some issues with the original auto-open feature while testing the new single-file auto-open functionality. In this PR I update how opened files are stored so they can be consistently reopened when moving from student to student in the grader interface.
+#### Persistent File Auto-Open Across Student Submissions ([PR#12931](https://github.com/Submitty/Submitty/pull/12931))
+I updated how opened files in the submission browser are stored so they can be consistently reopened when moving from student to student in the grader interface. This feature now uses localStorage instead of cookies, since this is a frontend-only feature.
 #### Auto-Open Submissions with Single File ([PR#12625](https://github.com/Submitty/Submitty/pull/12625))
-I picked up this PR and reworked the way student submission files around counted to ignore metafiles. I also added Cypress tests for this new feature.
+I picked up this PR and reworked the way student submission files are counted to ignore metafiles, so that students with single files could be properly identified. I also added Cypress tests for this new feature.
+
 #### Adding Image Annotation ([PR#11921](https://github.com/Submitty/Submitty/pull/11921))
-I picked up this old PR and improved the styling of the buttons used for image annotation to be more contrasting and accessible in both light and dark modes. I also disabled grading interface keyboard shortcuts while annotating, as this caused issues when trying to type annotations. I thoroughly tested this PR and identified areas of improvement to be tackled in future PRs.
-#### Remove Leftover PDF Annotation Code ([PR#13042](https://github.com/Submitty/Submitty/pull/13042))
-Since the PDF annotation functionality has been removed from Submitty for a while now, I wanted to clean up the code base to make it easier to extend and debug the annotation feature in the future. I removed leftover PDF annotation code for this feature and split/renamed/moved files to separate image annotation and pdf viewing logic.
-#### Recentering the Grading Panel Navbar ([PR#12914](https://github.com/Submitty/Submitty/pull/12914))
-#### Fixing Student Name Display and Resizing ([PR#12946](https://github.com/Submitty/Submitty/pull/12946))
+I picked up this old PR and made finishing touches to it so it could be merged. Among other changes, I reduced code duplication in the logic to open and close the annotation window, and I improved the annotation toolbar styling to have higher visual contrast in light and dark modes. I thoroughly tested this PR and identified areas of improvement to be tackled in future PRs, see below.
+#### Remove Leftover PDF Annotation Code ([PR#13042](https://github.com/Submitty/Submitty/pull/13042)) & Remove jspdf Dependency ([PR#13098](https://github.com/Submitty/Submitty/pull/13098))
+Since the PDF annotation functionality has been removed from Submitty for a while now, I wanted to clean up the code base to make it easier to extend and debug the annotation feature in the future. I removed leftover PDF annotation code and split/renamed/moved files to separate image annotation and pdf viewing logic. I also removed a dependency we were using solely for PDF annotation.
+
+#### Recentering the Grading Panel Navbar ([PR#12914](https://github.com/Submitty/Submitty/pull/12914)) & Fixing Student Name Display and Resizing ([PR#12946](https://github.com/Submitty/Submitty/pull/12946))
+I reintroduced important styling behavior that the grading interface page had lost with recent changes to its CSS and layout.
 
 ### Gradeable Details Page:
 
 #### Consolidate Table Sorting Logic ([PR#12996](https://github.com/Submitty/Submitty/pull/12996))
-Before this PR, when adding sortable table columns, you had to write new sorting functions to manipulate the DOM and update the sort direction icons within the table header. This lead to multiple sorting functions with lots of repeating code but diverging implementations. This PR consolidated all sortable column logic into a Vue component, the SortableTableHeader, making it much easier to add new sortable columns. The old implementation of table sorting used cookies, but my refactor uses session storage since all of the table sorting is done on the frontend. I made an addition Vue component called the TableSortManager that currently enables persistent table sorting across page reloads, but in the future it can be extended to facilitate sorting by multiple columns.
+Before this PR, when adding sortable table columns, a developer would have to write their own sorting function to manipulate the DOM. This led to multiple sorting functions with lots of repeating code but diverging implementations. This PR consolidated all sortable column logic into a Vue component, the SortableTableHeader, making it much easier to add new sortable columns. I made an addition TableSortManager Vue component that currently enables persistent table sorting across page reloads, but in the future it can be extended to facilitate sorting by multiple columns.
 #### Fixing Table Row Highlight for Course Staff ([PR#13037](https://github.com/Submitty/Submitty/pull/13037))
 The Gradeable Details table used to dynamically assign its striped rows using JS on page load to account for toggleable withdrawn student rows, but this would override the CSS styling to highlight rows representing course staff. I removed the JS style assignment and replaced it with smarter CSS that skips over hidden withdrawn students when striping the table.
+
 #### Uploading CSVs with Zeroes to Numeric Gradeable ([PR#12972](https://github.com/Submitty/Submitty/pull/12972))
 #### Changes to CSV Upload/Download for Numeric Gradeable([PR#13007](https://github.com/Submitty/Submitty/pull/13007))
 #### Removing Print Section Feature from Checkpoint Labs ([PR#13051](https://github.com/Submitty/Submitty/pull/13051))
