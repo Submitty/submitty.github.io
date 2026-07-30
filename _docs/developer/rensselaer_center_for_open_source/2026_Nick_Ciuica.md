@@ -35,7 +35,9 @@ The Gradeable Details table used to dynamically assign its striped rows using JS
 
 #### Uploading CSVs with Zeroes to Numeric Gradeable ([PR#12972](https://github.com/Submitty/Submitty/pull/12972))
 #### Changes to CSV Upload/Download for Numeric Gradeable([PR#13007](https://github.com/Submitty/Submitty/pull/13007))
+I addressed bugs with the CSV upload and download features that were caused by recent changes to the Numeric Gradeable. I also recommended some wording changes to make the code and user-facing text more understandable.
 #### Removing Print Section Feature from Checkpoint Labs ([PR#13051](https://github.com/Submitty/Submitty/pull/13051))
+Since the Print Section feature is an old an unused feature, we decided to remove it to make Submitty easier to maintain.
 
 ### Other Contributions:
 
@@ -43,10 +45,12 @@ The Gradeable Details table used to dynamically assign its striped rows using JS
 I picked up this unfinished PR.
 #### Server-Side Validation for Course Code ([PR#12949](https://github.com/Submitty/Submitty/pull/12949))
 Cypress CI:
-PR#12898 ([Bugfix:System] Create Account Test Randomization Fix)
+#### Create Account Test Randomization Fix ([PR#12898](https://github.com/Submitty/Submitty/pull/12898))
 Documentation:
-PR#770 ([Documentation:TAGrading] Remove PDF Annotation), goes with PR#13042
-PR#771 ([Documentation:InstructorUI] Remove Print Lab), goes with PR#13051
+#### Remove PDF Annotation ([PR#770](https://github.com/Submitty/submitty.github.io/pull/770))
+goes with ([PR#13042](https://github.com/Submitty/Submitty/pull/13042))
+#### Remove Print Lab ([PR#771](https://github.com/Submitty/submitty.github.io/pull/771))
+goes with ([PR#13051](https://github.com/Submitty/Submitty/pull/13051))
 
 ### Reflection
 Working on Submitty this summer has been an invaluable experience. My contributions to Submitty started as picked-up PRs and frontend tweaks, but I quickly began working across multiple systems of Submitty, including making new CI tests and assisting in our move to using a virtual environment for our python scripts.
