@@ -32,6 +32,9 @@ I reintroduced important styling behavior that the grading interface page had lo
 Before this PR, when adding sortable table columns, a developer would have to write their own sorting function to manipulate the DOM. This led to multiple sorting functions with lots of repeating code but diverging implementations. This PR consolidated all sortable column logic into a Vue component, the SortableTableHeader, making it much easier to add new sortable columns. I made an addition TableSortManager Vue component that currently enables persistent table sorting across page reloads, but in the future it can be extended to facilitate sorting by multiple columns.
 #### Fixing Table Row Highlight for Course Staff ([PR#13037](https://github.com/Submitty/Submitty/pull/13037))
 The Gradeable Details table used to dynamically assign its striped rows using JS on page load to account for toggleable withdrawn student rows, but this would override the CSS styling to highlight rows representing course staff. I removed the JS style assignment and replaced it with smarter CSS that skips over hidden withdrawn students when striping the table.
+#### UI Design of Multisortable Columns (Under [Issue#12960](https://github.com/Submitty/Submitty/issues/12960))
+The ultimate goal of my table sorting PRs was to eventually make it easier to implement multisortable columns. While
+I was working on these PRs, I also iterated on potential UI designs for multisortable columns. I used Canva to make mockups, presented them during our daily group meetings, and implemented feedback as I went.
 
 #### Uploading CSVs with Zeroes to Numeric Gradeable ([PR#12972](https://github.com/Submitty/Submitty/pull/12972))
 #### Changes to CSV Upload/Download for Numeric Gradeable([PR#13007](https://github.com/Submitty/Submitty/pull/13007))
@@ -53,6 +56,12 @@ goes with ([PR#13042](https://github.com/Submitty/Submitty/pull/13042))
 goes with ([PR#13051](https://github.com/Submitty/Submitty/pull/13051))
 
 ### Reflection
+I have learned so much during my time working on Submitty.
+Our heavy emphasis on teamwork and reviewing allowed me to pick up new technologies quickly and begin making contributions across multiple of Submitty's systems.
+For example, I've gained experience writing CI tests, using virtual environments in python, work with View-Controller-Model architecture in PHP and Twig, and much more.
+
+In Submity's fast-paced, open-source environment, I've gained confidence in my skills as a software developer, tester, and engineer.
+
 Working on Submitty this summer has been an invaluable experience. My contributions to Submitty started as picked-up PRs and frontend tweaks, but I quickly began working across multiple systems of Submitty, including making new CI tests and assisting in our move to using a virtual environment for our python scripts.
 Contributing to PRs daily and assisting in reviewing and testing has made me much more confident 
 Our fast-paced changes and our emphasis on teamwork and reviewing make me confident that this opportunity has been as valueable as a traditional internship.
