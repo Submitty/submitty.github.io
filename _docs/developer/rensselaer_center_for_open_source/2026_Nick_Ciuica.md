@@ -5,8 +5,8 @@ category: Developer > Rensselaer Center for Open Source (RCOS) > Summer 2026
 
 TODO: update numbers
 
-**21** pull requests reviewed  
-**10** [pull requests created](https://github.com/Submitty/Submitty/commits?author=NicholasCiuica) (+ **2** [documentation pull requests](https://github.com/Submitty/submitty.github.io/commits?author=NicholasCiuica))  
+**28** pull requests reviewed  
+**12** [pull requests created](https://github.com/Submitty/Submitty/commits?author=NicholasCiuica) (+ **2** [documentation pull requests](https://github.com/Submitty/submitty.github.io/commits?author=NicholasCiuica))  
 **3** pull requests taken over and merged  
 
 I'm very glad to have spent my Summer 2026 working full-time as a Submitty developer! Getting to work on this open-source project in a small team has taught me so much about the development process. My primary goals this summer were to improve the TA Grading interface and the Gradeable details pages. As a previous course mentor who used Submitty to grade assignments, I used my experience to implement bugfixes and new features that I would see myself using. See a list of my contributions below:
@@ -20,10 +20,12 @@ I picked up this PR and reworked the way student submission files are counted to
 
 #### Adding Image Annotation ([PR#11921](https://github.com/Submitty/Submitty/pull/11921))
 I picked up this old PR and made finishing touches to it so it could be merged. Among other changes, I reduced code duplication in the logic to open and close the annotation window, and I improved the annotation toolbar styling to have higher visual contrast in light and dark modes. I thoroughly tested this PR and identified areas of improvement to be tackled in later PRs like the ones below.
-#### Remove Leftover PDF Annotation Code ([PR#13042](https://github.com/Submitty/Submitty/pull/13042)) & Remove jspdf Dependency ([PR#13098](https://github.com/Submitty/Submitty/pull/13098))
+#### Remove Leftover PDF Annotation Code ([PR#13042](https://github.com/Submitty/Submitty/pull/13042)) 
+#### & Remove jspdf Dependency ([PR#13098](https://github.com/Submitty/Submitty/pull/13098))
 Since the PDF annotation functionality has been removed from Submitty for a while now, I wanted to clean up the code base to make it easier to extend and debug the annotation feature in the future. I removed leftover PDF annotation code and split/renamed/moved files to separate image annotation and pdf viewing logic. I also removed a dependency we were using solely for PDF annotation.
 
-#### Recentering the Grading Panel Navbar ([PR#12914](https://github.com/Submitty/Submitty/pull/12914)) & Fixing Student Name Display and Resizing ([PR#12946](https://github.com/Submitty/Submitty/pull/12946))
+#### Recentering the Grading Panel Navbar ([PR#12914](https://github.com/Submitty/Submitty/pull/12914)) 
+#### & Fixing Student Name Display and Resizing ([PR#12946](https://github.com/Submitty/Submitty/pull/12946))
 I reintroduced important styling behavior that the grading interface page had lost with recent changes to its CSS and layout.
 
 ### Gradeable Details Page:
@@ -35,7 +37,8 @@ The Gradeable Details table used to dynamically add striped row styling using JS
 #### UI Design of Multisortable Columns (Under [Issue#12960](https://github.com/Submitty/Submitty/issues/12960))
 The ultimate goal of my table sorting PRs was to eventually make it easier to implement multisortable columns. While I was working on these PRs, I also iterated on potential UI designs for multisortable columns. I used Canva to make mockups, presented them during our daily group meetings, and implemented feedback as I went.
 
-#### Uploading CSVs with Zeroes to Numeric Gradeable ([PR#12972](https://github.com/Submitty/Submitty/pull/12972)) & Changes to CSV Upload/Download for Numeric Gradeable([PR#13007](https://github.com/Submitty/Submitty/pull/13007))
+#### Uploading CSVs with Zeroes to Numeric Gradeables ([PR#12972](https://github.com/Submitty/Submitty/pull/12972)) 
+#### & Changes to CSV Upload/Download ([PR#13007](https://github.com/Submitty/Submitty/pull/13007))
 I addressed bugs with the CSV upload and download features that were caused by recent changes to the Numeric Gradeable. I also recommended some wording changes to make the code and user-facing text more understandable.
 #### Removing Print Section Feature from Checkpoint Labs ([PR#13051](https://github.com/Submitty/Submitty/pull/13051))
 Since the Print Section feature is an old an unused feature, we decided to remove it to make Submitty easier to maintain.
@@ -50,10 +53,8 @@ Previously, if a superuser tried to make a new course using an invalid course co
 This PR makes the account creation CI test rerunnable so it's easier to use locally.
 
 Documentation PRs:
-#### Remove PDF Annotation ([PR#770](https://github.com/Submitty/submitty.github.io/pull/770))
-goes with ([PR#13042](https://github.com/Submitty/Submitty/pull/13042))
-#### Remove Print Lab ([PR#771](https://github.com/Submitty/submitty.github.io/pull/771))
-goes with ([PR#13051](https://github.com/Submitty/Submitty/pull/13051))
+#### Remove PDF Annotation ([PR#770](https://github.com/Submitty/submitty.github.io/pull/770)) (goes with [PR#13042](https://github.com/Submitty/Submitty/pull/13042))
+#### Remove Print Lab ([PR#771](https://github.com/Submitty/submitty.github.io/pull/771)) (goes with [PR#13051](https://github.com/Submitty/Submitty/pull/13051))
 
 ### Reflection
 
@@ -62,6 +63,6 @@ I have learned so much during my time working on Submitty. Our heavy emphasis on
 ### Next Steps
 
 Here are some things I'd like to work on at Submitty past the summer:
-- *Mentoring New Developers in the Fall:* Over the school year I would like to mentor new developers working on Submitty through RCOS. I hope to make the experience of learning Submitty's large codebase less daunting.
-- *Assisting in Vue Refactor:* The ongoing Vue refactor still requires a lot of work, and I would like to take what I learned about Vue this summer and assist, whether that means reviewing related PRs, teaching new developers about Vue best practices, or making small contributions myself.
-- *Multisortable Columns:* I never got to implementing this feature over the summer, but I laid the groundwork in my PR to consolidate table sorting logic. I hope to continue working on this and other table sorting/styling features, and I would also like to find new developers interested in assisting with this.
+- **Mentoring New Developers in the Fall:** Over the school year I would like to mentor new developers working on Submitty through RCOS. I hope to make the experience of learning Submitty's large codebase less daunting.
+- **Assisting in Vue Refactor:** The ongoing Vue refactor still requires a lot of work, and I would like to take what I learned about Vue this summer and assist, whether that means reviewing related PRs, teaching new developers about Vue best practices, or making small contributions myself.
+- **Multisortable Columns:** I never got to implementing this feature over the summer, but I laid the groundwork in my PR to consolidate table sorting logic. I hope to continue working on this and other table sorting/styling features, and I would also like to find new developers interested in assisting with this.
