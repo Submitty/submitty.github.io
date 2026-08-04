@@ -74,7 +74,8 @@ var NAVTREE =
                 [ "Image Annotation", "/grader/rubric_grading/image_annotation", null ],
                 [ "Sorting and Navigation", "/grader/rubric_grading/sorting_and_navigation", null ],
                 [ "Resolving a Grade Inquiry", "/grader/rubric_grading/grade_inquiry", null ],
-                [ "Statistics", "/grader/rubric_grading/statistics", null ]
+                [ "Statistics", "/grader/rubric_grading/statistics", null ],
+                [ "Cluster Grading", "/grader/rubric_grading/cluster_grading", null ]
             ] ],
             [ "Managing Office Hours", "/grader/queue", null ],
             [ "Grader Version Conflict", "/grader/grader_version_conflict", null ]
