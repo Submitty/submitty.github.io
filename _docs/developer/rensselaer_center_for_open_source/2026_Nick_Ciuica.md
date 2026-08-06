@@ -3,8 +3,8 @@ title: Nick Ciuica
 category: Developer > Rensselaer Center for Open Source (RCOS) > Summer 2026
 ---
 
-**31** pull requests reviewed  
-**15** pull requests created and merged (+ **3** documentation pull requests)  
+**40** [pull requests reviewed](https://github.com/Submitty/Submitty/pulls?q=is:pr+reviewed-by:NicholasCiuica)
+**15** [pull requests created and merged](https://github.com/Submitty/Submitty/pulls?q=is:pr+author:NicholasCiuica+is:merged+merged:%3C%3D2026-08-07+) (+ **3** documentation pull requests)  
 **3** pull requests taken over and merged  
 
 I'm very glad to have spent my Summer 2026 working full-time as a Submitty developer! Getting to work on this open-source project in a small team has taught me so much about the development process.
