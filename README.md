@@ -24,6 +24,9 @@ If you have [Docker](https://www.docker.com/) installed, you do not need to inst
    ```
    The first run will take a few minutes to install dependencies.
 
+   * _NOTE: If you're on Windows, we recommend running this step in a WSL terminal, 
+     as using Command Prompt has been known to cause issues._
+
 3. Visit [http://localhost:4000](http://localhost:4000) to view the site.
    Changes to files will automatically trigger a rebuild and refresh your
    browser.
