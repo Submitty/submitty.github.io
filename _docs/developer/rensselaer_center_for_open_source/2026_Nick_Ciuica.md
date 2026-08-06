@@ -6,10 +6,12 @@ category: Developer > Rensselaer Center for Open Source (RCOS) > Summer 2026
 TODO: update numbers
 
 **28** pull requests reviewed  
-**12** [pull requests created](https://github.com/Submitty/Submitty/commits?author=NicholasCiuica) (+ **2** [documentation pull requests](https://github.com/Submitty/submitty.github.io/commits?author=NicholasCiuica))  
+**12** [pull requests created and merged](https://github.com/Submitty/Submitty/commits?author=NicholasCiuica) (+ **2** [documentation pull requests](https://github.com/Submitty/submitty.github.io/commits?author=NicholasCiuica))  
 **3** pull requests taken over and merged  
 
-I'm very glad to have spent my Summer 2026 working full-time as a Submitty developer! Getting to work on this open-source project in a small team has taught me so much about the development process. My primary goals this summer were to improve the TA Grading interface and the Gradeable details pages. As a previous course mentor who used Submitty to grade assignments, I used my experience to implement bugfixes and new features that I would see myself using. See a list of my contributions below:
+I'm very glad to have spent my Summer 2026 working full-time as a Submitty developer! Getting to work on this open-source project in a small team has taught me so much about the development process. With every review and contribution I've gained more confidence in my skills as a software developer.
+
+My primary goals this summer were to improve the TA Grading interface and the Gradeable details pages. As a previous course mentor who used Submitty to grade assignments, I used my experience to implement bugfixes and new features that I would see myself using. See a list of my contributions below:
 
 ### TA Grading Interface:
 
@@ -31,7 +33,7 @@ I reintroduced important styling behavior that the grading interface page had lo
 ### Gradeable Details Page:
 
 #### Consolidate Table Sorting Logic ([PR#12996](https://github.com/Submitty/Submitty/pull/12996))
-Before this PR, when adding sortable table columns, a developer would have to write their own sorting function to manipulate the DOM. This led to multiple sorting functions with lots of repeating code but diverging implementations. This PR consolidated all sortable column logic into a Vue component, the SortableTableHeader, making it much easier to add new sortable columns. I made an addition TableSortManager Vue component that currently enables persistent table sorting across page reloads, but in the future it can be extended to facilitate sorting by multiple columns.
+Before this PR, when adding sortable table columns, a developer would have to write their own sorting function to manipulate the table's row order. This led to multiple sorting functions with lots of repeating code but diverging implementations. This PR consolidated all sortable column logic into a Vue component, the SortableTableHeader, making it much easier to add new sortable columns. I also added a TableSortManager Vue component that currently enables persistent table sorting across page reloads, but in the future can be extended to facilitate sorting by multiple columns.
 #### Fixing Table Row Highlight for Course Staff ([PR#13037](https://github.com/Submitty/Submitty/pull/13037))
 The Gradeable Details table used to dynamically add striped row styling using JS to account for toggleable rows, but this would override the CSS styling to highlight rows representing course staff. I removed the JS style assignment and replaced it with smarter CSS that skips over hidden withdrawn students when striping the table.
 #### UI Design of Multisortable Columns (Under [Issue#12960](https://github.com/Submitty/Submitty/issues/12960))
@@ -40,29 +42,35 @@ The ultimate goal of my table sorting PRs was to eventually make it easier to im
 #### Uploading CSVs with Zeroes to Numeric Gradeables ([PR#12972](https://github.com/Submitty/Submitty/pull/12972)) 
 #### & Changes to CSV Upload/Download ([PR#13007](https://github.com/Submitty/Submitty/pull/13007))
 I addressed bugs with the CSV upload and download features that were caused by recent changes to the Numeric Gradeable. I also recommended some wording changes to make the code and user-facing text more understandable.
-#### Removing Print Section Feature from Checkpoint Labs ([PR#13051](https://github.com/Submitty/Submitty/pull/13051))
-Since the Print Section feature is an old an unused feature, we decided to remove it to make Submitty easier to maintain.
 
 ### Other Contributions:
 
 #### Configurable Password Requirements ([PR#12455](https://github.com/Submitty/Submitty/pull/12455))
-I picked up this unfinished PR and debugged it so it'd be ready to merge. I also reworked and added to the Cypress CI tests in this PR to properly test password complexity requirements.
+I picked up this unfinished PR and added to the Cypress CI tests to properly test password complexity requirements. and debugged it so it'd be ready to merge. 
 #### Server-Side Validation for Course Code ([PR#12949](https://github.com/Submitty/Submitty/pull/12949))
-Previously, if a superuser tried to make a new course using an invalid course code, the process would silently fail while giving a success message. In this PR I added a server-side check to return an informative error instead.
+Previously, if a superuser tried to make a new course using an invalid course code, the process would silently fail while giving a success message. In this PR I added server-side validation that returns an informative error instead.
 #### Create Account Test Randomization Fix ([PR#12898](https://github.com/Submitty/Submitty/pull/12898))
 This PR makes the account creation CI test rerunnable so it's easier to use locally.
+#### Removing Print Section Feature from Checkpoint Labs ([PR#13051](https://github.com/Submitty/Submitty/pull/13051))
+Since the Print Section feature is old and unused, we decided to remove it to make Submitty easier to maintain.
 
-Documentation PRs:
-#### Remove PDF Annotation ([PR#770](https://github.com/Submitty/submitty.github.io/pull/770)) (goes with [PR#13042](https://github.com/Submitty/Submitty/pull/13042))
-#### Remove Print Lab ([PR#771](https://github.com/Submitty/submitty.github.io/pull/771)) (goes with [PR#13051](https://github.com/Submitty/Submitty/pull/13051))
+### Documentation PRs:
+
+#### Remove PDF Annotation ([PR#770](https://github.com/Submitty/submitty.github.io/pull/770))
+(goes with [PR#13042](https://github.com/Submitty/Submitty/pull/13042))
+#### Remove Print Lab ([PR#771](https://github.com/Submitty/submitty.github.io/pull/771))
+(goes with [PR#13051](https://github.com/Submitty/Submitty/pull/13051))
 
 ### Reflection
 
-I have learned so much during my time working on Submitty. Our heavy emphasis on teamwork and reviewing each others' PRs allowed me to pick up new technologies quickly and begin making contributions across multiple of Submitty's systems. For example, I've gained experience making Vue components with TypeScript, working with View-Controller-Model architecture in PHP and Twig, writing Cypress CI tests, using Python virtual environments, and much more. In Submitty's fast-paced, open-source environment, I've gained confidence in my skills as a software developer and tester.
+I have learned so much during my time working on Submitty. Our heavy emphasis on teamwork and reviewing each others' PRs allowed me to pick up new technologies quickly and begin making contributions across multiple of Submitty's systems. For example, I've gained experience making Vue components with TypeScript, working with View-Controller-Model architecture in PHP and Twig, writing Cypress CI tests, using Python virtual environments, and much more. 
+
+In Submitty's fast-paced, open-source environment, I've gained confidence in my skills as a software developer and tester. I feel my time here has prepared me well for a career in software development, just as well as any internship would have.
 
 ### Next Steps
 
 Here are some things I'd like to work on at Submitty past the summer:
-- **Mentoring New Developers in the Fall:** Over the school year I would like to mentor new developers working on Submitty through RCOS. I hope to make the experience of learning Submitty's large codebase less daunting.
-- **Assisting in Vue Refactor:** The ongoing Vue refactor still requires a lot of work, and I would like to take what I learned about Vue this summer and assist, whether that means reviewing related PRs, teaching new developers about Vue best practices, or making small contributions myself.
-- **Multisortable Columns:** I never got to implementing this feature over the summer, but I laid the groundwork in my PR to consolidate table sorting logic. I hope to continue working on this and other table sorting/styling features, and I would also like to find new developers interested in assisting with this.
+- **Mentoring New Developers in the Fall:** Over the school year I would like to mentor those joining the Submitty team through RCOS. I hope to make the experience of learning Submitty's large codebase less daunting for new developers.
+- **Assisting in Vue Refactor:** The ongoing Vue refactor still requires a lot of work, and I would like to take what I learned about Vue this summer and assist, whether that means reviewing related PRs, teaching new developers about Vue best practices, or making contributions myself.
+- **Further Improve Image Annotation:** There are a number of image annotation issues I've documented that I'd like to work on. I think annotations are a great supplement to grading, and I want to make this feature easier to use and more stable.
+- **Multisortable Columns:** I never got to implementing this feature over the summer, but I laid the groundwork in my PR to consolidate table sorting logic. I hope to continue working on this and other table sorting/styling features, and I would also like to mentor new developers interested in assisting with this.
