@@ -110,16 +110,7 @@ Please also see [Update GNU/Linux Server](update_server) and [Installation Versi
     will automatically call...
 
 
-5.  ```
-    sudo python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/CONFIGURE_SUBMITTY.py
-    ```
-
-    This script will ask you to interactively confirm some system
-    configuration settings.  Pressing `enter/return` at each prompt
-    will keep your current configurations.
-
-
-6.  Now your system state has been updated to early June 2018.
+5.  Now your system state has been updated to early June 2018.
 
     You're ready to continue with steps 2 & 3 in the previous section
     to automatically apply _migrations_ for Submitty changes from

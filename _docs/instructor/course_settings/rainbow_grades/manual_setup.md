@@ -21,7 +21,7 @@ redirect_from:
 
 
 2. In order to run RainbowGrades on your local machine, you'll need
-   to install `git`, `make`, `ssh`, `rsync`, `wget`, and `python3`.
+   to install `git`, `make`, `ssh`, `rsync`, `curl`, and `python3`.
 
 
 
