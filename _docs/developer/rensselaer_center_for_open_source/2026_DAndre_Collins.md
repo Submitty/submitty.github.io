@@ -39,6 +39,6 @@ Managing grades for large courses often requires instructors to work with spread
 
 
 The completed workflow allows instructors to download grading data, edit it in a spreadsheet, and upload the updated information back into Submitty. This reduces repetitive manual edits and makes managing large numeric gradeables more efficient.
-
+![alt text](image-5.png) ![alt text](image-6.png)
 ## Registration Date
 **Pull Request:** [#13101](https://github.com/Submitty/Submitty/pull/13101)
