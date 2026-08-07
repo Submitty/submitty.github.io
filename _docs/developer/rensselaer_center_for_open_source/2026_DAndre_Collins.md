@@ -6,8 +6,8 @@ category: Developer > Rensselaer Center for Open Source (RCOS) > Summer 2026
 Spending Summer 2026 as part of the Submitty team was an incredible experience that helped me grow both as a developer and as a collaborator. 
 Here are a few highlights from my summer:
 
-**45 pull requests reviewed**  
-**13 pull requests created**
+**38 pull requests reviewed**  
+**15 pull requests created**
 
 
 ## Custom Grading Sort
@@ -39,6 +39,9 @@ Managing grades for large courses often requires instructors to work with spread
 
 
 The completed workflow allows instructors to download grading data, edit it in a spreadsheet, and upload the updated information back into Submitty. This reduces repetitive manual edits and makes managing large numeric gradeables more efficient.
-![alt text](image-5.png) ![alt text](image-6.png)
+![alt text](image-9.png) ![alt text](image-8.png)
 ## Registration Date
 **Pull Request:** [#13101](https://github.com/Submitty/Submitty/pull/13101)
+
+Instructors previously had no way to see when a student registered for a course. This made it more difficult to verify when students joined a course or investigate enrollment related questions. I implemented support for storing and displaying each student's registration date within the instructor interface.
+![alt text](image-10.png)
