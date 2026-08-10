@@ -7,7 +7,7 @@ redirect_from:
 
 
 We provide scripts to prepare personalized exams for each student,
-facilitating randomized assigned seating, QR codes, and notes/crib sheets:
+facilitating randomized seating assignments, QR codes, and notes/crib sheets:
 
 
 * (Optional) Collect student left or right handedness.  
@@ -32,7 +32,7 @@ facilitating randomized assigned seating, QR codes, and notes/crib sheets:
     ```
 
 
-* Prepare a "blank" test as a .pdf file.  Be sure to empty space on
+* Prepare a "blank" test as a .pdf file.  Be sure to leave empty space on
   the first page to allow placment of the large box with student
   information and the QR code.
 
@@ -46,7 +46,7 @@ facilitating randomized assigned seating, QR codes, and notes/crib sheets:
   instructions to prepare personalized exams.
 
   Note that in addition to the QR code on the first page, the
-  student's name and email address is placed in the upper right corner
+  student's name and email address are placed in the upper right corner
   of all following pages.
 
   ![](/images/instructor/personalized_exam/personalized_page_1.png){:width="380px"}

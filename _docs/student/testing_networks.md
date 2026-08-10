@@ -9,7 +9,7 @@ title: Testing Networked Applications Locally
 We are currently hosting the docker images that will be used for grading on the
 [Docker Hub](https://hub.docker.com/u/submitty/).  
 
-You can can "pull" the most recent submitty images using the commands:  
+You can "pull" the most recent submitty images using the commands:  
 ```
 docker pull submitty/python:2.7
 docker pull submitty/python:3.6
@@ -34,7 +34,7 @@ docker create -i -t -v SOURCE_CODE_DIRECTORY:SOURCE_CODE_DIRECTORY -w SOURCE_COD
 ``-i`` boots the container in interactive mode, allowing submitty to pipe standard
 input to the containers.  
 
-``-t`` Allocates a pseudo-TTY so that you can interact with your container.  
+``-t`` allocates a pseudo-TTY so that you can interact with your container.  
 
 ``-v`` mounts a directory on the host machine so that output persists after the
 docker exits. ``SOURCE_CODE_DIRECTORY:SOURCE_CODE_DIRECTORY`` specifies first
@@ -61,7 +61,7 @@ Once you have created a few containers, you can create a network with this comma
 ```
 docker network create --driver bridge NETWORK_NAME
 ```
-Where you can specify your own network_name.
+You can specify your own network_name.
 
 Then, you can connect your containers to the network as follows:
 ```

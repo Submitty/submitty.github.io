@@ -10,6 +10,43 @@ redirect_from:
 
 ---
 
+
+## 2026 Spring Developers
+
+![](/images/people/2026_spring_poster.png)
+
+William Allen,
+Justin Manion,
+John Roy,
+Avi McGrady,
+Farhan Ikram,
+Andrew Confortini,
+Dage McNitt,
+Eli Schwartz,
+Christian Marinkovich,
+Emma Roy, and
+Ryan Koester
+
+
+
+
+![](/images/people/2026_spring_RCOS_presentation.png)
+
+Farhan Ikram,
+Avi McGrady,
+Eli Schwartz,
+Emma Roy, 
+Dage McNitt,
+Christian Marinkovich,
+John Roy,
+Andrew Confortini,
+Justin Manion,
+Evan Matsibekker, and
+Ryan Koester
+
+
+---
+
 ## 2025 Summer Developers
 
 ![](/images/people/2025_summer.png)

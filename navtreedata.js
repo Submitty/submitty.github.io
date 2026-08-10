@@ -71,10 +71,11 @@ var NAVTREE =
                 [ "Overview", "/grader/rubric_grading/index", null ],
                 [ "Rubric Components and Marks", "/grader/rubric_grading/rubric_components_and_marks", null ],
                 [ "Silent Regrade", "/grader/rubric_grading/silent_regrade", null ],
-                [ "PDF Annotation", "/grader/rubric_grading/pdf_annotation", null ],
+                [ "Image Annotation", "/grader/rubric_grading/image_annotation", null ],
                 [ "Sorting and Navigation", "/grader/rubric_grading/sorting_and_navigation", null ],
                 [ "Resolving a Grade Inquiry", "/grader/rubric_grading/grade_inquiry", null ],
-                [ "Statistics", "/grader/rubric_grading/statistics", null ]
+                [ "Statistics", "/grader/rubric_grading/statistics", null ],
+                [ "Cluster Grading", "/grader/rubric_grading/cluster_grading", null ]
             ] ],
             [ "Managing Office Hours", "/grader/queue", null ],
             [ "Grader Version Conflict", "/grader/grader_version_conflict", null ]
@@ -114,6 +115,7 @@ var NAVTREE =
                 [ "Submissions via Version Control", "/instructor/assignment_preparation/submission_version_control", null ],
                 [ "Team Assignments", "/instructor/assignment_preparation/team_assignments", null ],
                 [ "Bulk PDF Upload", "/instructor/assignment_preparation/bulk_pdf_upload", null ],
+                [ "No File Rubric Grading", "/instructor/assignment_preparation/no_file_rubric_grading", null],
                 [ "Personalized Exam", "/instructor/assignment_preparation/personalized_exams", null ],
                 [ "Upload Gradeable from JSON", "/instructor/assignment_preparation/upload_gradeable", null ],
             ] ],
@@ -280,6 +282,11 @@ var NAVTREE =
             ] ],
             [ "Rensselaer Center for Open Source", "/developer/rensselaer_center_for_open_source/moorthy", [
                 [ "Moorthy", "/developer/rensselaer_center_for_open_source/moorthy", null ],
+                [ "2026 Nick Ciuica",    "/developer/rensselaer_center_for_open_source/2026_Nick_Ciuica", null ],
+                [ "2026 D'Andre Collins",    "/developer/rensselaer_center_for_open_source/2026_DAndre_Collins", null ],
+                [ "2026 Matt Lifrieri",    "/developer/rensselaer_center_for_open_source/2026_Matt_Lifrieri", null ],
+                [ "2026 Dage McNitt",    "/developer/rensselaer_center_for_open_source/2026_Dage_McNitt", null ],
+                [ "2026 Emma Roy",    "/developer/rensselaer_center_for_open_source/2026_Emma_Roy", null ],
                 [ "2025 Williams Chen",    "/developer/rensselaer_center_for_open_source/2025_Williams_Chen", null ],
                 [ "2025 Jeffrey Cordero",    "/developer/rensselaer_center_for_open_source/2025_Jeffrey_Cordero", null ],
                 [ "2025 Alexander Lavallee",    "/developer/rensselaer_center_for_open_source/2025_Alexander_Lavallee", null ],
@@ -313,6 +320,9 @@ var NAVTREE =
                 [ "Overview","/developer/google_summer_of_code/index", null ],
                 [ "GSoC Application Process", "/developer/google_summer_of_code/GSoC_application", null ],
                 [ "GSoC Application Template","/developer/google_summer_of_code/applicant_template", null ],
+                [ "2026 Garvit Khandelwal", "/developer/google_summer_of_code/2026_Garvit_Khandelwal", null ],
+                [ "2026 Ansh Jindal", "/developer/google_summer_of_code/2026_Ansh_Jindal", null ],
+                [ "2026 Elyssa Sumendap", "/developer/google_summer_of_code/2026_Elyssa_Sumendap", null ],
                 [ "2024 Sahil Suman", "/developer/google_summer_of_code/2024_Sahil_Suman", null ],
                 [ "2024 Rahul Vishwakarma", "/developer/google_summer_of_code/2024_Rahul_Vishwakarma", null ],
                 [ "2024 Sophia Oliinik", "/developer/google_summer_of_code/2024_Sophia_Oliinik", null ],

@@ -30,44 +30,36 @@ While most routes in Submitty are specific to one course, there are places that 
 For those routes, it is simple to set up a route.
 
 ```php
-/**
- * @Route("/home")
- */
+#[Route("/home")]
 public function showHomepage() {...}
 ```
 
 #### Route with Course Information
 
-A majority of links in Submitty require course information to return correct contents. Therefore, it is necessary for the router to know which `(term, course)` tuple is requested. It is needed to prepend the route with `/courses/{_term}/{_course}`. The course information will be loaded automatically before calling the function.
+A majority of links in Submitty require course information to return correct contents. Therefore, it is necessary for the router to know which `(semester, course)` tuple is requested. It is needed to prepend the route with `/courses/{_semester}/{_course}`. The course information will be loaded automatically before calling the function.
 
 ```php
-/**
- * @Route("/courses/{_term}/{_course}/reports")
- */
+#[Route("/courses/{_semester}/{_course}/reports")]
 public function showReportPage() {...}
 ```
 
-To visit the page defined above, simply go to `{base_url}/{current term}/sample/reports`. 
+To visit the page defined above, simply go to `{base_url}/{current semester}/sample/reports`.
 
 #### Route with Parameters
 
 Sometimes we may want to pass parameters to functions. Wrapping the parameter name with brackets will do the trick.
 
 ```php
-/**
- * @Route("/courses/{_term}/{_course}/student/{gradeable_id}")
- */
-public function showHomeworkPage($gradeable_id){...}
+#[Route("/courses/{_semester}/{_course}/gradeable/{gradeable_id}")]
+public function showHomeworkPage($gradeable_id) {...}
 ```
 
-Note that `{_term}` and `{_course}` are actually special cases of parameters that are automatically processed by the router.
+Note that `{_semester}` and `{_course}` are actually special cases of parameters that are automatically processed by the router.
 
 Also, note that parameters in the `GET` query are passed to the function too without the need for explicit definition as long as parameter names are the same.
 
 ```php
-/**
- * @Route("/authentication/login")
- */
+#[Route("/authentication/login")]
 public function loginForm($old = null) {...}
 ```
 
@@ -78,16 +70,12 @@ The value of `$old` will be set to `Submitty` if you go to `/authentication/logi
 In some cases, you may want routes to match number-only parameters, or those not starting with certain words. This could be done by adding a `requirements` field in the route definition.
 
 ```php
-/**
- * @Route("/courses/{_term}/{_course}/notifications/{nid}", requirements={"nid": "[1-9]\d*"})
- */
-public function openNotification($nid) {...}
+#[Route("/courses/{_semester}/{_course}/notifications/{nid}", requirements: ["nid" => "[1-9]\d*"])]
+public function openNotification($nid, $seen) {...}
 ```
 
 ```php
-/**
- * @Route("/courses/{_term}/{_course}", requirements={"_term": "^(?!api)[^\/]+", "_course": "[^\/]+"})
- */
+#[Route('/courses/{_semester}/{_course}', requirements: ['_semester' => '^(?!api)[^\/]+', '_course' => '[^\/]+'])]
 public function navigationPage() {...}
 ```
 
@@ -98,27 +86,23 @@ To prevent [cross-site request forgery](https://en.wikipedia.org/wiki/Cross-site
 Note that, by default, the `methods` of routes are set to be `ALL`, which means the route accepts all kind of requests. Therefore, in some cases one route may be masked by another. If you have two routes with the same name, please specify the `methods` of both.
 
 ```php
-/**
- * @Route("/home/change_username", methods={"POST"})
- */
+#[Route("/user_profile/change_preferred_names", methods: ["POST"])]
 public function changeUserName(){...}
 ```
 
 #### Route that Needs Access Control
 
-Access control can be enforced easily via `@AccessControl` annotation. Please add `use app\libraries\routers\AccessControl` to the file before using it.
+Access control can be enforced easily via `#[AccessControl(...)]` annotation. Please add `use app\libraries\routers\AccessControl` to the file before using it.
 
 For example, the following route will only allow instructor access.
 
 ```php
-/**
- * @Route("/courses/{_term}/{_course}/course_materials/modify_permission")
- * @AccessControl(role="INSTRUCTOR")
- */
+#[AccessControl(role: "INSTRUCTOR")]
+#[Route("/courses/{_semester}/{_course}/course_materials/modify_timestamp")]
 public function modifyCourseMaterialsFilePermission($filename, $checked)
 ```
 
-For more examples about `@AccessControl`, please read [the documentation in the code](https://github.com/Submitty/Submitty/blob/master/site/app/libraries/routers/AccessControl.php).
+For more examples about `#[AccessControl(...)]`, please read [the documentation in the code](https://github.com/Submitty/Submitty/blob/master/site/app/libraries/routers/AccessControl.php).
 
 #### Route for API
 
@@ -130,20 +114,16 @@ Any route that uses the `/api` goes through a slightly different authentication 
 For example, the following route is the API for list of courses:
 
 ```php
-/**
- * @Route("/home/courses/new", methods={"POST"})
- * @Route("/api/courses", methods={"POST"})
- */
+#[Route("/home/courses/new", methods: ["POST"])]
+#[Route("/api/courses", methods: ["POST"])]
 public function createCourse()
 ```
 
 And an API route for a method within a course:
 
 ```php
-/**
- * @Route("/courses/{_term}/{_course}/users", methods={"GET"})
- * @Route("/api/courses/{_term}/{_course}/users", methods={"GET"})
- */
+#[Route("/courses/{_semester}/{_course}/users", methods: ["GET"])]
+#[Route("/api/courses/{_semester}/{_course}/users", methods: ["GET"])]
 public function getStudents()
 ```
 

@@ -154,11 +154,27 @@ you can follow these [instructions](ansible_course_creation) to create a course 
    For more information: [Database Overview](/sysadmin/troubleshooting/database_overview)
 
 
-3. Add existing instructor(s) to the course database:
+3. Add existing instructor(s) to the course database, and optionally add other 
+   types of users using the `adduser_course.py` helper script.
+   To add an existing instructor:
 
    ```
-   sudo /usr/local/submitty/sbin/adduser_course.py <USERNAME> <SEMESTER> <COURSE> null
+   sudo /usr/local/submitty/sbin/adduser_course.py <INSTRUCTOR_USERNAME> <SEMESTER> <COURSE> --user_group 1
    ```
+   The general command format is:
+
+   ```
+   sudo /usr/local/submitty/sbin/adduser_course.py <USER_ID> <SEMESTER> <COURSE> [REGISTRATION_SECTION] [--user_group GROUP]
+   ```
+
+   - `REGISTRATION_SECTION` is optional and must be numeric.
+
+   - `--user_group` defines the user's role in the course and defaults to `1` (Instructor) if omitted.
+
+     - `1` – Instructor  
+     - `2` – Full Access Grader  
+     - `3` – Limited Access Grader  
+     - `4` – Student  
 
 
 4. Create registration section(s):

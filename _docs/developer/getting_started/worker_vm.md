@@ -31,49 +31,43 @@ machines* in addition to your primary vagrant virtual machine.
 
    _NOTE: This will create the vagrant configuration file: `.vagrant/workers.json`._
 
-
-4. If you are on MacOS running QEMU, restart the network socket in public mode:
-   ```
-   vagrant workers socket restart --public
-   ```
-   _NOTE: Using the `--public` flag will make your worker VMs accessible to anyone
-   on your local network, which may be a modest security concern.
-   We suggest this to minimize possibility of errors while creating the
-   worker machines and will revert this in a later step._
-
-   _NOTE: Running a socket command while a worker machine is running can detach the
-   process, making the VM inaccessible to vagrant. If this happens and you are unable
-   to `vagrant workers halt`, then you may run `pkill -15 -f qemu-system-` to kill
-   all virtual machines running on your computer (including the main Submitty VM)._
-
-6. Now you can create the worker machine(s) with:
+4. Now you can create the worker machine(s) with:
    ```
    vagrant workers up
    ```
+   Alternatively, if you are testing the worker install process, it may be helpful to install the worker machine(s) from scratch.
+
+   On Linux or Mac type:
+   ```
+   FROM_SCRATCH=1 vagrant workers up
+   ```
+   On Windows with `cmd` type:
+   ```
+   SET FROM_SCRATCH=1
+   vagrant workers up
+   ```
+
    _NOTE: Do not use the --provider flag with this command, since it will conflict with the
    provider of the main virtual machine._
 
    When this is finished, you should see the Submitty duck ASCII art for each new worker machine.
 
-7. You can verify that all the worker machines are running with:
+5. You can verify that all the worker machines are running with:
    ```
    vagrant workers status
    ```
 
-8. `vagrant ssh` into the main virtual machine and run:
+6. `vagrant ssh` into the main virtual machine and run:
    ```
    refresh_vagrant_workers   # (runs python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/bin/refresh_vagrant_workers.py)
    submitty_install
    ```
 
-9. To stop the worker machines, you can run:
+7. To stop the worker machines, you can run:
    ```
    vagrant workers halt
    vagrant workers socket stop
    ```
-
-   _For MacOS QEMU users: Once the virtual machine(s) are halted, if you would like to restart under
-   private networking, you may do so by omitting the `--public` flag from the `vagrant workers socket start` command._
 
 
 ---
@@ -95,6 +89,24 @@ su submitty_daemon -c ssh <worker-name>
 The list of worker names can be displayed with `vagrant workers status`.
 
 __NOTE__: Depending on the performance of your computer and the size of the autograding queue passed to the worker, the SSH command may hang for some time.
+
+---
+
+## Removing Worker Machine(s)
+
+If you would like to remove your worker machine(s), run:
+```
+vagrant workers destroy
+```
+For each worker machine, you will be prompted on whether you would like to remove it.
+
+Alternatively, you can also destroy worker machines individually using:
+```
+vagrant destroy 1a2b3c4d
+```
+Where `1a2b3c4d` is the id of the machine.
+
+_Note: You can find a list of all vagrant machines and their ids using `vagrant global-status` ._
 
 ---
 

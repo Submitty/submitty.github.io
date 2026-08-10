@@ -90,29 +90,13 @@ To configure your system:
       attribute is the field from the return object that contains the
       user's username.
 
-    * Re-run `CONFIGURE_SUBMITTY.py` to enable SAML, specify the SAML
-      username attribute, and customize login message.
-
-      ```
-      python3 /usr/local/submitty/GIT_CHECKOUT/Submitty/.setup/CONFIGURE_SUBMITTY.py
-      ```
-
-      You can press `return` to keep the current settings for most of
-      the settings, except:
-
-      ```
-      What authentication method to use:
-      1. PamAuthentication
-      2. DatabaseAuthentication
-      3. LdapAuthentication
-      4. SamlAuthentication
-      Enter number?: [1] 4
-
-      Enter name you would like shown to user for authentication?: <YOUR CUSTOM MESSAGE E.g., "Login with your University ID via Duo">
-
-      Enter SAML username attribute?:  <ENTER THE SAML username attribute>
-      ```
-
+    * Edit `/<submitty install dir>/config/authentication.json` to add your information.
+    ```json
+      "saml_options": {
+      "name": "",
+      "username_attribute": ""
+    }
+  ```
     * Reinstall Submitty, run:
 
       ```
@@ -280,7 +264,7 @@ To configure your system:
       TRUNCATE TABLE sessions;
       ```
 
-    * Or, by running CONFIGURE_SUBMITTY.py. It will clear the jwt secret
+    * Or, by running generate_configs.py. It will clear the jwt secret
       and invalidate all current sessions.
 
 

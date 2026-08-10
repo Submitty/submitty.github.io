@@ -12,3 +12,5 @@ gem "webrick", "~> 1.9"
 gem 'html-proofer', "~> 3.19.4"
 
 gem 'json'
+
+gem 'erb'
