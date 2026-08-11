@@ -167,7 +167,7 @@ For more information on the Docker UI page, you can view the documentation here:
 
 #### Cypress
 
-Submitty uses Cypress on GitHub CI for end-to-end testing. This summer I learned how to write and review Cypress tests, and a lot of my PRs either updated existing tests or added new testing alongside the new feature.
+Submitty uses Cypress on GitHub CI for end-to-end testing. This summer I learned how to write and review Cypress tests, and many of my PRs either updated existing tests or added new testing alongside the new feature.
 
 Additionally, one of my work in progress tasks is removing retries from Cypress on CI ([PR #13039](https://github.com/Submitty/Submitty/pull/13039)).
 Retries were included in the original implementation of Cypress since many tests were flaky.
