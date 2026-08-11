@@ -44,7 +44,7 @@ The new Docker environment is a significant improvement over the original implem
 
 Additionally, I updated the documentation for `submitty_test` in [Submitty.github.org PR #775](https://github.com/Submitty/submitty.github.io/pull/775).
 For more reading on `submitty_test`, you can view said documentation here:
-[Submitty Test](/developer/testing/linting_static_analysis#submitty-test-script-for-php-linting).
+[Submitty Test](/developer/testing/linting_static_analysis#submitty-test-script).
 
 ### Manage Teams UI
 
