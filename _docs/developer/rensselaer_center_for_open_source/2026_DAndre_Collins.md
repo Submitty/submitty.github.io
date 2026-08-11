@@ -6,8 +6,8 @@ category: Developer > Rensselaer Center for Open Source (RCOS) > Summer 2026
 Spending the Summer of 2026 as a member of the Submitty team was an incredible experience that helped me grow both as a developer and as a collaborator. 
 Here are a few highlights from my summer:
 
-**38 pull requests reviewed**  
-**15 pull requests created**
+**[53 pull requests reviewed](https://github.com/Submitty/Submitty/pulls?q=is%3Apr+reviewed-by%3Adandrecollins07-ctrl+created%3A%3C%3D2026-08-07)**  
+**[15 pull requests created](https://github.com/Submitty/Submitty/pulls?q=is%3Apr+author%3Adandrecollins07-ctrl+created%3A%3C%3D2026-08-07)**
 
 
 ## Custom Grading Sort
