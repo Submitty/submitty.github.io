@@ -135,6 +135,7 @@ bash .setup/SUBMITTY_TEST.sh <command> [options]
 - `php-lint`: Runs both PHP CodeSniffer and PHPStan (default options only).
 - `php-unit`: Runs PHP unit tests. [option: `--filter testFunctionName`, `--debug`]
 - `js-lint`: Runs eslint. [option: `--fix`]
+- `js-unit`: Runs the jest test suite. [option: `--api`]
 - `css-lint`: Runs stylelint. [option: `--fix`]
 - `py-flake8`: Runs flake8. [option: `/path/to/specific_file.py`]
 - `py-pylint`: Runs pylint. [option: `/path/to/specific_file.py`]
@@ -194,6 +195,17 @@ node_modules/.bin/eslint [--fix] <file>
 ```
 
 See also: [JavaScript Style Guide](/developer/coding_style_guide/javascript)
+
+## JavaScript Unit Testing
+
+The frontend JavaScript code for Submitty has unit tests utilizing a [jest](https://jestjs.io/) test suite.
+
+```bash
+submitty_test js-unit
+submitty_test js-unit --api
+```
+
+***NOTE:** For the -\-api option, Windows developers running commands on their host machine with CMD or Powershell may find that there are connection issues between the Docker container and the VM. In this case, instead running `submitty_test js-unit --api` in WSL or inside the VM should both still work.*
 
 ## CSS Linting
 

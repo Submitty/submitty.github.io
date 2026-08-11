@@ -27,7 +27,7 @@ To run just an individual class or test, you can use the `--filter` flag on PHPU
 For example, to run the function `testInvalidProperty` would be
 `sudo -u submitty_php php vendor/bin/phpunit --filter testInvalidProperty` and running all
 of `AccessControlTester` would be
-`php vendor/bin/phpunit--filter AccessControlTester`. Be aware, filter
+`php vendor/bin/phpunit --filter AccessControlTester`. Be aware, filter
 can match against partial strings, so if you have two tests `testFoo` and `testFooBar`,
 running `--filter testFoo` will run them both. Alternatively, you can also directly run
 `phpunit` against a specific class by passing the path to the test class directly to
