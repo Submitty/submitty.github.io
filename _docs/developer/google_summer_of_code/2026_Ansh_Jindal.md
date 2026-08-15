@@ -18,6 +18,6 @@ Migrated Submitty's frontend from jQuery + Twig to Vue.js, restructuring logic s
 
 ## About Me
 
-Hello! My name is Ansh Jindal, persuing my Engineering in Information Technology at College of Technology, Pantnagar
+Hello! My name is Ansh Jindal, pursuing B.Tech in Information Technology at College of Technology, Pantnagar. The Submitty community was hyperactive and rewarding - that is what kept me contributing well past my initial PRs
 
 ---
