@@ -9,9 +9,13 @@ category: Developer > Google Summer of Code 2026
 
 The primary objective of my GSoC 2026 project was to enhance the manual TA grading experience by integrating AI/ML clustering algorithms. By intelligently clustering students with similar submissions together, TAs can now evaluate entire groups simultaneously, drastically reducing the time spent on manual grading.
 
-While this might initially sound like a purely AI/ML-focused project, the reality was much broader. Because this was a completely novel feature for Submitty with absolutely no pre-existing architecture, the majority of my time was spent designing and implementing the complete full-stack architecture from the ground up to support these capabilities.
+While this might initially sound like a purely AI/ML-focused project, the reality was much broader. Because this was a completely novel feature for Submitty, the majority of my time was spent designing and implementing the full-stack architecture from the ground up.
 
-A key focus—and one of the biggest hurdles—was ensuring that the system remained entirely transparent and fair. We had to strike a delicate balance: providing the efficiency of AI clustering while guaranteeing that TAs retain complete, final control over the grading process to ensure fairness for every student. Building this foundational architecture from scratch while maintaining these strict standards made for an incredibly challenging and rewarding summer.
+Throughout the project, several significant architectural and design hurdles had to be overcome:
+- **No Pre-Existing Architecture:** Building a completely novel feature meant establishing the entire database and backend infrastructure from scratch.
+- **Fairness and Transparency:** We had to strike a delicate balance between providing the efficiency of AI clustering while guaranteeing that TAs retain complete, final control over the grading process.
+- **Global vs. Per-TA Clustering:** We had to decide whether clustering should be global (one method per gradeable) or per-TA (each TA creates their own clusters). Per-TA clustering introduced severe implementation challenges, so we strategically opted for a global clustering approach.
+- **Submission Version Conflicts:** We had to account for edge cases where a student changes their active submission version after a cluster has already been created. This voids the basis on which the student was originally clustered and presented a highly specific edge case new to Submitty.
 
 ## About Me
 Hello! I am a computer science undergraduate student at the Indian Institute of Technology, Mandi. Before GSoC, I honestly did not have any prior open-source contributions, so this program was my true starting point. The main reason I chose to work with Submitty was because I really liked the project, and the community was highly active and rewarding. Coming into the project, I had prior knowledge in domains like machine learning and deep learning, which aligned perfectly with the goals of this feature.
@@ -33,13 +37,18 @@ Hello! I am a computer science undergraduate student at the Indian Institute of 
   - **Description:** With the backend infrastructure in place, the next step was visualizing the clustered students. This PR introduces a "Create Cluster" modal where users can select their desired clustering algorithm (backed by the daemon). It also implements a "Group by Clusters" filter, seamlessly displaying students in a tabular format native to Submitty's design. Notably, as Submitty is migrating to Vue.js, this was the very first feature built entirely using Vue. Thorough testing was ensured via Cypress E2E, Cypress Component and PHPUnit tests. 
   - **Technical Highlights:** Vue.js, PHP, Twig, Cypress
 
-- **[Cluster Grading](https://github.com/Submitty/Submitty/pull/13103)**
+- **[Single Cluster](https://github.com/Submitty/Submitty/pull/13161)**
   - **Status:** Merged
+  - **Description:** This PR introduces a new basic yet important algorithm which returns only a single cluster containing all valid submitters. This was built for cases like to assign bonus marks to all the active submitters.
+  - **Technical Highlights:** Python
+
+- **[Cluster Grading](https://github.com/Submitty/Submitty/pull/13103)**
+  - **Status:** Open
   - **Description:** This PR bridges the gap between clustering students and actually helping TAs grade faster. It integrates the core functionality into the TA Grading (Rubric) page. I added intuitive UI toggle icons allowing TAs to seamlessly switch in and out of "Clustering Mode". When active, grading one student automatically applies that grade to the entire cluster. A major UI/UX challenge here was designing clear visual cues so TAs remain fully aware of the sweeping impact of their actions. This Vue-based feature is fully backed by Cypress tests.
   - **Technical Highlights:** Vue.js, PHP, Twig, Cypress
 
 - **[Adding container for running custom algorithm](https://github.com/Submitty/DockerImages/pull/76)**
-  - **Status:** Merged
+  - **Status:** Open
   - **Description:** To support advanced customization, this PR introduces a dedicated Docker container pre-installed with popular machine learning libraries, isolating the execution environment for custom TA scripts.
   - **Technical Highlights:** Docker
 
