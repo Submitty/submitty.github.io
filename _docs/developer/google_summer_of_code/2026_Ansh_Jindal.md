@@ -21,3 +21,37 @@ Migrated Submitty's frontend from jQuery + Twig to Vue.js, restructuring logic s
 Hello! My name is Ansh Jindal, pursuing B.Tech in Information Technology at College of Technology, Pantnagar. The Submitty community was hyperactive and rewarding - that is what kept me contributing well past my initial PRs
 
 ---
+
+## Primary Contributions
+
+### Vue component re-render (Migrate ReceivedMarkForm to Vue)
+
+**[PR #12910](https://github.com/Submitty/Submitty/pull/12910)** — This PR introduced the re-render of a Vue component without unmount and remount. Saves stale copies of a Vue app and prevents memory leaks.
+
+
+**Stack:** Vue.js, twig, TypeScript, Cypress · **Status:** Merged
+
+### Migrate PanelSelectorModal to Vue in TAGrading
+
+**[PR #12901](https://github.com/Submitty/Submitty/pull/12901)** — In this PR, I refactored the PanelPositionSelector to work in sync with the Parent Vue component and remove all the junk files that previously made the component work.
+
+**Stack:** Vue.js, twig, TypeScript, Cypress · **Status:** Merged
+
+## Infrastructure & Tooling
+
+### Cypress component testing for Vue
+**[PR #12836](https://github.com/Submitty/Submitty/pull/12836)** — This PR introduces cypress component testing in the Submitty Codebase
+
+**Stack:** YML, TypeScript, Cypress, HTML, JSON · **Status:** Merged
+
+### Code coverage for Component tests
+**[PR #12959](https://github.com/Submitty/Submitty/pull/12959)** — This PR adds code coverage for Cypress Component Tests · Enables coverage in CI · Uploads the reports to Codecov · Adds a dedicated cypress-component Codecov flag · Surfaces the coverage directly in the PR comment
+
+**Stack:** YML, JavaScript, TypeScript, JSON · **Status:** Merged
+
+### Events mapping infrastructure for Vue migration
+**[PR #12959](https://github.com/Submitty/Submitty/pull/12959)** — I designed a component-by-component migration setup for Vue components
+
+**Stack:** YML, JavaScript, TypeScript, JSON · **Status:** Merged
+
+--- 
