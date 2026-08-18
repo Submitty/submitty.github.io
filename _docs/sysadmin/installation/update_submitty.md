@@ -22,8 +22,8 @@ Please also see [Update GNU/Linux Server](update_server) and [Installation Versi
 
     ```
     cd /usr/local/submitty/GIT_CHECKOUT/Submitty
-    git checkout master
-    git pull origin master
+    git checkout main
+    git pull origin main
     ```
 
 
