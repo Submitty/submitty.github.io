@@ -8,8 +8,8 @@ redirect_from:
 
 
 **IMPORTANT NOTE: If your system was initially installed prior to
-early June 2018, please start with the section at the bottom of this
-page.**
+early June 2018, please start [with the section at the bottom of this
+page](#installations-prior-to-early-june-2018).**
 
 
 Please also see [Update GNU/Linux Server](update_server) and [Installation Version Notes](version_notes).
