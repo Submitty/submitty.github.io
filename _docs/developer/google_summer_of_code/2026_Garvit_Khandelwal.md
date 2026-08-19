@@ -12,90 +12,77 @@ The primary objective of my GSoC 2026 project was to enhance the manual TA gradi
 While this might initially sound like a purely AI/ML-focused project, the reality was much broader. Because this was a completely novel feature for Submitty, the majority of my time was spent designing and implementing the full-stack architecture from the ground up.
 
 Throughout the project, several significant architectural and design hurdles had to be overcome:
-- **No Pre-Existing Architecture:** Building a completely novel feature meant establishing the entire database and backend infrastructure from scratch.
 - **Fairness and Transparency:** We had to strike a delicate balance between providing the efficiency of AI clustering while guaranteeing that TAs retain complete, final control over the grading process.
 - **Global vs. Per-TA Clustering:** We had to decide whether clustering should be global (one method per gradeable) or per-TA (each TA creates their own clusters). Per-TA clustering introduced severe implementation challenges, so we strategically opted for a global clustering approach.
 - **Submission Version Conflicts:** We had to account for edge cases where a student changes their active submission version after a cluster has already been created. This voids the basis on which the student was originally clustered and presented a highly specific edge case new to Submitty.
 
 ## About Me
-Hello! I am a computer science undergraduate student at the Indian Institute of Technology, Mandi. Before GSoC, I honestly did not have any prior open-source contributions, so this program was my true starting point. The main reason I chose to work with Submitty was because I really liked the project, and the community was highly active and rewarding. Coming into the project, I had prior knowledge in domains like machine learning and deep learning, which aligned perfectly with the goals of this feature.
+Hello! I am a computer science undergraduate student at the Indian Institute of Technology, Mandi. Before GSoC, I honestly did not have any prior open-source contributions, so this program was my true starting point. The main reason I chose to work with Submitty was because I really liked the project, and the community was highly active and rewarding.
 
 ## Primary Contributions & Features
 
 - **[Backend for submission clustering](https://github.com/Submitty/Submitty/pull/12886)**
-  - **Status:** Merged
-  - **Description:** The foundation of the project involved setting up the essential database architecture. This PR establishes a normalized database schema and introduces the necessary backend API endpoints to support clustering. The implementation was fully fortified with unit tests to ensure reliability.
+  - **Description:** The foundation of the project involved setting up the essential database architecture. This PR establishes a normalized database schema and introduces the necessary backend API endpoints to support clustering.
   - **Technical Highlights:** PHP, Doctrine ORM, PostgreSQL
 
 - **[Add submission clustering daemon](https://github.com/Submitty/Submitty/pull/13004)**
-  - **Status:** Merged
-  - **Description:** Running complex Python machine learning algorithms synchronously would block the UI and severely degrade the user experience. To solve this, this PR sets up a robust background daemon infrastructure. The clustering logic was refactored to offload processing to Python and raw SQL scripts, which are picked up by the daemon and executed asynchronously. Comprehensive Python unit tests were added to ensure stability.
+  - **Description:** Running complex Python machine learning algorithms synchronously would block the UI and severely degrade the user experience. To solve this, this PR sets up a background daemon infrastructure.
   - **Technical Highlights:** Python, Daemon Infrastructure
 
 - **[UI for clustering & table grouping](https://github.com/Submitty/Submitty/pull/12966)**
-  - **Status:** Merged
-  - **Description:** With the backend infrastructure in place, the next step was visualizing the clustered students. This PR introduces a "Create Cluster" modal where users can select their desired clustering algorithm (backed by the daemon). It also implements a "Group by Clusters" filter, seamlessly displaying students in a tabular format native to Submitty's design. Notably, as Submitty is migrating to Vue.js, this was the very first feature built entirely using Vue. Thorough testing was ensured via Cypress E2E, Cypress Component and PHPUnit tests. 
+  - **Description:** With the backend infrastructure in place, the next step was visualizing the clustered students. This PR introduces a "Create Cluster" modal where users can select their desired clustering algorithm. It also implements a "Group by Clusters" filter, displaying students in a tabular format native to Submitty's design. Notably, as Submitty is migrating to Vue.js, this was the very first feature built entirely using Vue.
   - **Technical Highlights:** Vue.js, PHP, Twig, Cypress
 
 - **[Single Cluster](https://github.com/Submitty/Submitty/pull/13161)**
-  - **Status:** Merged
-  - **Description:** This PR introduces a new basic yet important algorithm which returns only a single cluster containing all valid submitters. This was built for cases like to assign bonus marks to all the active submitters.
+  - **Description:** This PR introduces a new algorithm which returns only a single cluster containing all valid submitters. This was built for cases like to assign bonus marks to all the active submitters.
   - **Technical Highlights:** Python
 
 - **[Cluster Grading](https://github.com/Submitty/Submitty/pull/13103)**
-  - **Status:** Open
-  - **Description:** This PR bridges the gap between clustering students and actually helping TAs grade faster. It integrates the core functionality into the TA Grading (Rubric) page. I added intuitive UI toggle icons allowing TAs to seamlessly switch in and out of "Clustering Mode". When active, grading one student automatically applies that grade to the entire cluster. A major UI/UX challenge here was designing clear visual cues so TAs remain fully aware of the sweeping impact of their actions. This Vue-based feature is fully backed by Cypress tests.
+  - **Description:** This PR bridges the gap between clustering students and actually helping TAs grade faster. It integrates the core functionality into the TA Grading (Rubric) page. I added intuitive UI toggle icons allowing TAs to seamlessly switch in and out of "Clustering Mode". When active, grading one student automatically applies that grade to the entire cluster. A major UI/UX challenge here was designing clear visual cues so TAs remain fully aware of the sweeping impact of their actions.
   - **Technical Highlights:** Vue.js, PHP, Twig, Cypress
 
 - **[Adding container for running custom algorithm](https://github.com/Submitty/DockerImages/pull/76)**
-  - **Status:** Open
-  - **Description:** To support advanced customization, this PR introduces a dedicated Docker container pre-installed with popular machine learning libraries, isolating the execution environment for custom TA scripts.
+  - **Description:** To support advanced customization, this PR introduces a dedicated Docker container pre-installed with popular machine learning libraries.
   - **Technical Highlights:** Docker
 
 - **[Custom Algorithm](https://github.com/Submitty/Submitty/pull/13176)**
-  - **Status:** Open
-  - **Description:** While predefined clustering algorithms are useful, every gradeable is unique, making it impossible to predict every grading scenario. This feature empowers instructors/TAs to upload custom Python scripts to define their own clustering logic. Because executing user-uploaded Python directly on the main server poses severe security risks, this PR leverages the newly built Docker container to safely run these custom algorithms in an isolated environment.
+  - **Description:** While predefined clustering algorithms are useful, every gradeable is unique, making it impossible to predict every grading scenario. This feature empowers instructors/TAs to upload custom Python scripts to define their own clustering logic.
   - **Technical Highlights:** Vue.js, PHP, Docker
 
 ## Other PRs
 
 Throughout the summer, I contributed to various other areas of the codebase, handling critical infrastructure issues, bug fixes, and performance optimizations. While a few major ones are highlighted below, a [complete list of my Pull Requests can be found here](https://github.com/Submitty/Submitty/pulls?q=is%3Apr+author%3AGarvitKhandelwal31+is%3Aclosed).
 
-- [[Refactor:System] Fix Failing CI/DB Check on Main](https://github.com/Submitty/Submitty/pull/13104): A significant system install refactoring PR inadvertently broke the CI/DB checks across the `main` branch. This PR investigated and successfully resolved the failing checks, restoring the CI pipeline.
+- [[Refactor:Autograding] Optimize PDF Redaction](https://github.com/Submitty/Submitty/pull/12471): Refactored the time required for PDF redactions by up to 2x.
 - [[Bugfix:TAGrading] Fix PDF Header Overlap](https://github.com/Submitty/Submitty/pull/12793): Fixed a UI issue where the grading page header obscured the title of student-uploaded PDF files, significantly improving TA visibility and usability during grading.
 - [[Bugfix:TAGrading] Fix Grade Override Logic](https://github.com/Submitty/Submitty/pull/12651): Resolved underlying logic bugs within the manual grade override system.
 - [[Feature:RainbowGrades] Manual Upload Warning Banner](https://github.com/Submitty/Submitty/pull/12645): Added a warning banner that displays when users manually upload rainbow grades to prevent accidental data overrides.
 - [[UI/UX:Forum] Forum UI Enhancements](https://github.com/Submitty/Submitty/pull/12622): Implemented several major UI improvements to enhance the user experience on the Submitty discussion forums page.
-- [[Refactor:Autograding] Optimize PDF Redaction](https://github.com/Submitty/Submitty/pull/12471): Refactored the time required for PDF redactions by up to 2x.
 
 ## Code Reviews & Community Impact
 
-Beyond authoring code, I actively dedicated a significant portion of my time to reviewing Pull Requests from across the entire codebase. Reviewing others' code was an invaluable experience; it rapidly accelerated my understanding of Submitty's massive architecture and allowed me to help shape the quality of the project. 
+Beyond authoring code, I actively dedicated a significant portion of my time to reviewing Pull Requests from across the entire codebase. Reviewing others' code was an invaluable experience; it rapidly accelerated my understanding of Submitty's massive architecture and allowed me to help shape the quality of the project.
 
-Thanks to Submitty's highly collaborative culture, I successfully reviewed a total of **[53 Pull Requests](https://github.com/Submitty/Submitty/pulls?q=is%3Apr+commenter%3AGarvitKhandelwal31+-author%3AGarvitKhandelwal31+is%3Aclosed)** throughout my GSoC journey, actively participating in architectural discussions and ensuring high coding standards.
-
-## Documentation
-
-The complete user guide for this feature can be found in the official Submitty documentation here: 
-- [Cluster Grading Documentation](https://submitty.org/grader/rubric_grading/cluster_grading)
+Thanks to Submitty's highly collaborative culture, I successfully reviewed a total of **[54 Pull Requests](https://github.com/Submitty/Submitty/pulls?q=is%3Apr+commenter%3AGarvitKhandelwal31+-author%3AGarvitKhandelwal31+is%3Aclosed)** throughout my GSoC journey, actively participating in architectural discussions and ensuring high coding standards.
 
 ## Work In Progress / Future Scope
 
 There are still exciting enhancements left to build on top of this foundation. I have listed several tracking issues for the remaining features:
 
-- [Feature: Delete Clusters](https://github.com/Submitty/Submitty/issues/13148)
-- [Feature: Rename Clusters](https://github.com/Submitty/Submitty/issues/13147)
-- [Feature: Visualize Clustering Data](https://github.com/Submitty/Submitty/issues/13116)
+- [Delete Clusters](https://github.com/Submitty/Submitty/issues/13148)
+- [Rename Clusters](https://github.com/Submitty/Submitty/issues/13147)
+- [Visualize Clustering Data](https://github.com/Submitty/Submitty/issues/13116)
+- [UI error/message for cluster-grading conflicts](https://github.com/Submitty/Submitty/issues/13184)
+- [Add "Prev/Next Cluster" option to TA Grading navigation settings](https://github.com/Submitty/Submitty/issues/13185)
 
 ## Reflection
 
-Working on such a massive, widely-used codebase and implementing a feature of this scale from scratch was an extraordinary experience. Throughout this journey, I upskilled significantly, mastering new technologies and learning how to architect complex, full-stack systems. As I mark the end of my GSoC project, I would like to express my deepest gratitude to my mentors:
+Working on such a massive codebase and implementing a feature of this scale from scratch was an extraordinary experience. Throughout this journey, I upskilled significantly, mastering new technologies and learning how to architect complex, full-stack systems. As I mark the end of my GSoC project, I would like to express my deepest gratitude to my mentors:
 
-- **[William J Allen](https://github.com/williamjallen):** Beyond all the technical help, I am incredibly grateful for the numerous technologies I learned from him along the way. His brilliant code reviews, extraordinary ideas, and structural guidance on how to build a feature of this scale were truly invaluable.
+- **[William J Allen](https://github.com/williamjallen):** Beyond all the technical help, I am incredibly grateful for the deep architectural insights and software engineering best practices I learned from him along the way. His brilliant code reviews, extraordinary ideas, and structural guidance on how to build a feature of this scale were truly invaluable.
 - **[Professor Barbara Cutler](https://github.com/bmcutler):** Barb held daily meetings, which made iterating on ideas incredibly fast. Her suggestions and perspectives fundamentally improved this feature. The most essential lesson I learned from her was how to truly think from the perspective of the end user.
 
-I would also like to thank the fellow RPI contributors. Their suggestions, feedback, and thorough reviews on my PRs were instrumental in polishing this project. A big thanks to my fellow GSoC mates as well for the shared camaraderie.
-
+I would also like to thank the fellow GSoC & RPI contributors. It was a great experience collaborating with you all!
 Finally, I am deeply grateful for this incredible opportunity. Thank you!
 
 ## Contact Me
