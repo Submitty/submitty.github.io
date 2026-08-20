@@ -7,7 +7,7 @@ category: Developer > Google Summer of Code 2026
 
 ## At a Glance
 
-- [**26**](https://github.com/Submitty/Submitty/pulls?q=is%3Apr+is%3Amerged+author%3Ajndlansh) PRs merged into production · [**18**](https://github.com/Submitty/Submitty/pulls?q=is%3Apr+commenter%3Ajndlansh+-author%3Ajndlansh+is%3Aclosed)  reviewed for teammates · [**1**](https://github.com/Submitty/Submitty/pull/12659) taken over from other devs
+- [**28**](https://github.com/Submitty/Submitty/pulls?q=is%3Apr+is%3Amerged+author%3Ajndlansh) PRs merged into production · [**18**](https://github.com/Submitty/Submitty/pulls?q=is%3Apr+commenter%3Ajndlansh+-author%3Ajndlansh+is%3Aclosed)  reviewed for teammates · [**1**](https://github.com/Submitty/Submitty/pull/12659) taken over from other devs
 - Stack:  Vue.js, TypeScript, JavaScript, Twig, Cypress,  PHP, Oracle Virtual Box, Vagrant
 - Shipped: Designed and built an architecture upon which the entire codebase will be migrated to Vue.js from jQuery and Twig
 - [Full commit history](<https://github.com/Submitty/Submitty/commits?author=jndlansh>) · [All merged PRs](<https://github.com/Submitty/Submitty/pulls?q=is%3Apr+is%3Amerged+author%3Ajndlansh>)
@@ -20,10 +20,7 @@ Migrated Submitty's frontend from jQuery + Twig to Vue.js, restructuring logic s
 
 Hello! My name is Ansh Jindal, pursuing B.Tech in Information Technology at College of Technology, Pantnagar. The Submitty community was hyperactive and rewarding - that is what kept me contributing well past my initial PRs
 
----
-
 ## Primary Contributions
-
 ### Vue component re-render (Migrate ReceivedMarkForm to Vue)
 
 **[PR #12910](https://github.com/Submitty/Submitty/pull/12910)** — This PR introduced the re-render of a Vue component without unmount and remount. Saves stale copies of a Vue app and prevents memory leaks.
@@ -38,7 +35,6 @@ Hello! My name is Ansh Jindal, pursuing B.Tech in Information Technology at Coll
 **Stack:** Vue.js, twig, TypeScript, Cypress · **Status:** Merged
 
 ## Infrastructure & Tooling
-
 ### Cypress component testing for Vue
 **[PR #12836](https://github.com/Submitty/Submitty/pull/12836)** — This PR introduces cypress component testing in the Submitty Codebase
 
@@ -54,8 +50,6 @@ Hello! My name is Ansh Jindal, pursuing B.Tech in Information Technology at Coll
 
 **Stack:** YML, JavaScript, TypeScript, JSON · **Status:** Merged
 
---- 
-
 ## Other PRs
 
 - [TA Grading Refactors](https://github.com/Submitty/Submitty/pulls?q=is%3Apr+author%3Ajndlansh+is%3Aclosed+in%3Atitle+%22%5BRefactor%3ATAGrading%5D%22) 
@@ -69,9 +63,7 @@ Reviewed **[18 Pull Requests](https://github.com/Submitty/Submitty/pulls?q=is%3A
 
 ## Documentation
 
-- [<Doc page title>](link)
-
----
+- I documented the Infrastructure and architecture I designed in Google Slides Presentation - "_How To Develop in Vue_". This acts as a guide for all the new developers to understand how to refactor component to Vue.js from twig+jQuery.
 
 ## Reflection
 
