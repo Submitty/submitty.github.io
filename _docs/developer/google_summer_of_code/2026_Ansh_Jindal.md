@@ -7,7 +7,7 @@ category: Developer > Google Summer of Code 2026
 
 ## At a Glance
 
-- [**28**](https://github.com/Submitty/Submitty/pulls?q=is%3Apr+is%3Amerged+author%3Ajndlansh) PRs merged into production · [**18**](https://github.com/Submitty/Submitty/pulls?q=is%3Apr+commenter%3Ajndlansh+-author%3Ajndlansh+is%3Aclosed)  reviewed for teammates · [**1**](https://github.com/Submitty/Submitty/pull/12659) taken over from other devs
+- [**30**](https://github.com/Submitty/Submitty/pulls?q=is%3Apr+is%3Amerged+author%3Ajndlansh) PRs merged into production · [**19**](https://github.com/Submitty/Submitty/pulls?q=is%3Apr+commenter%3Ajndlansh+-author%3Ajndlansh+is%3Aclosed)  reviewed for teammates · [**1**](https://github.com/Submitty/Submitty/pull/12659) taken over from other devs
 - Stack:  Vue.js, TypeScript, JavaScript, Twig, Cypress,  PHP, Oracle Virtual Box, Vagrant
 - Shipped: Designed and built an architecture upon which the entire codebase will be migrated to Vue.js from jQuery and Twig
 - [Full commit history](<https://github.com/Submitty/Submitty/commits?author=jndlansh>) · [All merged PRs](<https://github.com/Submitty/Submitty/pulls?q=is%3Apr+is%3Amerged+author%3Ajndlansh>)
