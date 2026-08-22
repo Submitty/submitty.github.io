@@ -8,8 +8,8 @@ redirect_from:
 
 
 **IMPORTANT NOTE: If your system was initially installed prior to
-early June 2018, please start with the section at the bottom of this
-page.**
+early June 2018, please start [with the section at the bottom of this
+page](#installations-prior-to-early-june-2018).**
 
 
 Please also see [Update GNU/Linux Server](update_server) and [Installation Version Notes](version_notes).
@@ -18,13 +18,19 @@ Please also see [Update GNU/Linux Server](update_server) and [Installation Versi
 ### Update Submitty Software to the latest Release
 
 1.  To update the Submitty source code repository, get the specific
-    branch/release to which you want to upgrade.  For example:
+    branch/release to which you want to upgrade.  For example, to update to the latest development version:
 
     ```
     cd /usr/local/submitty/GIT_CHECKOUT/Submitty
-    git checkout master
-    git pull origin master
+    git checkout main
+    git pull origin main
     ```
+
+	Whereas to update to the latest release (changing `XX.yy.zz` for the right release tag):
+	```
+	git fetch origin --tags
+	git switch --detach vXX.yy.zz
+	```
 
 
 2.  Then re-install the Submitty source code.
