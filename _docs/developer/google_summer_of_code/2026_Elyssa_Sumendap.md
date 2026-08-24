@@ -59,5 +59,5 @@ Receiving feedback from the team through PR reviews and comments was also very i
 
 As this was my first time working with back-end development, I can say that my time in Submitty working on my project has greatly improved my development as a programmer. I am very much grateful to the mentors who were there to assist in fostering my growth throughout this summer -- Cameron Peterson, Barbara Cutler, and William Allen. My time here will be an experience I can say taught me a lot and gave me much experience that no doubt will serve me well in whatever comes next.
 
-Thank you,
+Thank you,  
 [Elyssa Sumendap](https://github.com/elsume)
