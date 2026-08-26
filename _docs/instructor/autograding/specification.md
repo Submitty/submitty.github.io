@@ -10,7 +10,21 @@ redirect_from:
 
 You are allowed to have C/C++ style comments in a `config.json` file.
 These will be removed before compilation of the autograding
-executables.  
+executables.
+
+Submitty also supports C/C++ preprocessor `#include` directives in
+`config.json`. This can be used to split a large autograding
+configuration across multiple files and reuse common fragments across
+gradeables.
+
+If a build or validation error points to a line number that does not
+match the file you edited, compare it against the generated /
+preprocessed config used during the build. If your build log includes
+generated config sections, those files can make debugging much easier.
+
+See the
+[multi-file autograding example](https://github.com/Submitty/Submitty/tree/main/more_autograding_examples/multifile_config_python_greeting)
+for a concise example that uses `#include`.
 
 
 * **field:** ``"testcases"``  
@@ -268,4 +282,3 @@ executables.
 * **field:** ``"textboxes"``  
   **type:** _array of textbox objects_  (Described below)  
   **default value:** ``empty``  
-
