@@ -182,3 +182,35 @@ _Note: Click on the <u>links</u> and <i class="fas fa-info-circle" style="font-s
   * significant recent improvements
   * W3C html validation
   * mobile-friendly (phone and tablet compatibility)
+
+&nbsp;
+
+
+* **Progressive Web App (PWA)**  
+  Installable version of Submitty that works on mobile and desktop devices, supported on modern browsers across Android, iOS, and desktop platforms.  
+  {% include feature_text.html
+     text="Provides an app-like interface that can be launched directly from a device home screen or desktop. Ideal for quick access to assignments, grades, and course content." %}
+
+  * **What is a PWA?**  
+    A Progressive Web App (PWA) is a web application built using standard web technologies that delivers an experience similar to a platform-specific app. PWAs combine the best of websites and native apps: they are cross-platform, accessible via the web, installable, work offline, and can send push notifications.  
+
+  * **Installation & Setup:**  
+    * Click the "Install Submitty" button on your profile page.  
+    * Follow your browser prompts to add Submitty to your home screen or desktop.  
+    * Launch Submitty like a normal app, without opening your browser.  
+
+  * **Current Features:**  
+    * Quick access to courses, assignments, grades, and announcements.  
+    * Mobile-friendly interface optimized for smaller screens.  
+    * Installed PWAs get a dedicated app icon and can run in full-screen mode.  
+
+  * **Planned Enhancements:**  
+    * Offline access to selected pages.  
+    * Push notifications for announcements, assignment deadlines, and updates.  
+
+  * **Learn More / Developer Resources:**  
+    * [Submitty Developer Documentation – PWA](/developer/development_instructions/pwa)  
+    * [Progressive Web Apps – MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)  
+    * Reference implementation and ideas from our GSoC contributors:  
+      * [Mukul Kumar Jha – PWA & Mobile Enhancements](https://submitty.org/developer/google_summer_of_code/2020_Mukul_Kumar_Jha)  
+      * [Madhur Jain – PWA & Push Notifications](https://submitty.org/developer/google_summer_of_code/2022_Madhur_Jain)  
