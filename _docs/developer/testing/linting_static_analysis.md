@@ -133,10 +133,13 @@ bash .setup/SUBMITTY_TEST.sh <command> [options]
 - `phpcs`: Runs PHP CodeSniffer. [option: `--fix`]
 - `phpstan`: Runs PHP static analysis. [option: `--memory-limit <#>G`, `--generate-baseline`]
 - `php-lint`: Runs both PHP CodeSniffer and PHPStan (default options only).
+- `twig-lint`: Lints all Twig templates. [option: `--format FORMAT`, `--show-deprecations`, `/path/to/file`]
 - `php-unit`: Runs PHP unit tests. [option: `--filter testFunctionName`, `--debug`]
 - `js-lint`: Runs eslint. [option: `--fix`]
 - `js-unit`: Runs the jest test suite. [option: `--api`]
 - `css-lint`: Runs stylelint. [option: `--fix`]
+- `shell-lint`: Runs ShellCheck.
+- `yaml-lint`: Runs yamllint.
 - `py-flake8`: Runs flake8. [option: `/path/to/specific_file.py`]
 - `py-pylint`: Runs pylint. [option: `/path/to/specific_file.py`]
 - `py-lint`: Runs pylint & flake8. [option: `/path/to/specific_file.py`]
@@ -153,6 +156,13 @@ The `submitty_test` script accepts additional arguments, such as `--memory-limit
 submitty_test php-lint --memory-limit 2G
 submitty_test phpcs --fix
 submitty_test phpstan
+```
+
+## Twig Linting:
+```bash
+submitty_test twig-lint
+submitty_test --show-deprecations
+submitty_test /app/templates/File.twig   # or any other path to a Twig file
 ```
 
 ## PHP Unit Testing:
@@ -230,6 +240,38 @@ npm run css-stylelint:fix
 ```
 
 See also: [CSS Style Guide](/developer/coding_style_guide/css)
+
+## Shell Linting
+
+Code in Submitty's `filename.sh` files is linted using [ShellCheck](https://github.com/koalaman/shellcheck/wiki). As with other languages, `submitty_test` can be used as an alias for the `SUBMITTY_TEST.sh` script.
+
+```bash
+submitty_test shell-lint
+```
+
+Alternatively, you can run ShellCheck on your host system or on vagrant by running:
+
+```bash
+python3 run_shellcheck.py
+```
+
+***NOTE:** To run the `run_shellcheck.py` wrapper script for shellcheck, you must be in the project root on your host system or in `/usr/local/submitty/GIT_CHECKOUT/Submitty` on the VM.*
+
+## YAML Linting
+
+YAML and YML are linted using [yamllint](https://yamllint.readthedocs.io/en/stable/). As with other languages, `submitty_test` can be used as an alias for the `SUBMITTY_TEST.sh` script.
+
+```bash
+submitty_test yaml-lint
+```
+
+Alternatively, you can run yamllint on your host system (yamllint is not installed on the VM) by running:
+
+```bash
+yamllint .
+```
+
+***NOTE:** For yamllint to see the .yamllint baseline file, you must be in the project root on your host system.*
 
 ## Python Linting
 
