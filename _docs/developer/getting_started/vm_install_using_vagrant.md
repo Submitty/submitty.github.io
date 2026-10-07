@@ -48,7 +48,7 @@ VirtualBox.*
 
    ***NOTE:**   Installing WSL2 may also reconfigure your OS to use Hyper-V or Windows hypervisor
    platform and prevent VirtualBox from working correctly. It is recommended to not install
-   or use WSL2 alongside VirtualBox for now.*
+   or use WSL2 alongside VirtualBox for now. However, some Submitty developers have reported no issues using both WSL2 and VirtualBox.*
 
 5. The complete installation process could take an hour or more and 
    will probably fail if paused or interrupted.  Make
@@ -181,7 +181,7 @@ VirtualBox.*
            run `vagrant destroy` before re-running `vagrant up --provider=virtualbox` again.
 
 
-4. CLONE THE [SUBMITTY REPOSITORY](https://github.com/Submitty/Submitty)
+3. CLONE THE [SUBMITTY REPOSITORY](https://github.com/Submitty/Submitty)
 
    * Clone it to a location on your computer (the "host").
 
@@ -216,8 +216,10 @@ VirtualBox.*
       *This host directory structure will be shared / synced between
       your host operating system and the Submitty virtual machine.*
 
+      *Note: Make sure you clone the Submitty directory structure into a location in your host machine's drive and not a synced folder like OneDrive. For example, on Windows, your directory could be* `C:\Users\<User>\Documents\Submitty\GIT_CHECKOUT\Submitty`.
 
-5. RUN VAGRANT
+
+4. RUN VAGRANT
 
    
    * Navigate into the Submitty repository on your computer in a
@@ -344,7 +346,7 @@ VirtualBox.*
        ```
 
 
-7. AND YOU ARE DONE!
+5. AND YOU ARE DONE!
 
    When the installation has completed, you should see the message:
    ```
@@ -586,9 +588,17 @@ certificate.  If your browser complains about the security, please head to
 ## Increasing VM Resources
 If you find that the VM is running slowly, you can increase the resources allocated to it. By default the VM is allocated 2GB of RAM and 2 CPUs. You can increase these values by setting the `VM_MEMORY` and `VM_CPUS` environment variables before running `vagrant up`. For example, to allocate 4GB of RAM and 4 CPUs, you can run:
 
+For Linux and Mac:
 ```sh
 export VM_MEMORY=4096
 export VM_CPUS=4
+vagrant up
+```
+
+For Windows with `cmd`:
+```sh
+SET VM_MEMORY=4096
+SET VM_CPUS=4
 vagrant up
 ```
 If your system has 8GB of RAM it is recommended to set `VM_MEMORY` to 4096 (4GB) and `VM_CPUS` to 2 or 4. If your system has more RAM, you can increase these values further, but be careful not to allocate too much RAM as it may cause your host system to become unresponsive.
