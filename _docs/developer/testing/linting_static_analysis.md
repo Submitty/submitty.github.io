@@ -14,39 +14,24 @@ Be sure to start with the [Initial Set Up](/developer/testing/#initial-set-up) i
 
 ## Python Linting
 
-The Python code of Submitty is linted using [flake8](https://flake8.pycqa.org/en/latest/), 
-[flake8-bugbear](https://github.com/PyCQA/flake8-bugbear), and [pylint](https://pylint.readthedocs.io/en/stable/). 
-You can run the Python linter locally (on your host operating system) by running the following command from the root
-level of Submitty source tree:
+The Python code of Submitty is linted using [ruff](https://docs.astral.sh/ruff/) with the command `ruff check`.
+Assuming you have it installed, you can run Ruff locally (on your host machine) by running the following commands from the root of your Submitty repository:
 
 ```bash
-# from root level of Submitty repository using flake8
-python3 -m flake8
-
-# from root level of Submitty repository using pylint
-python3 -m pylint --recursive=y .
+ruff check
 ```
 
 Optionally, you can pass in a specific file or directory to only lint that file or directory, e.g.:
 
 ```bash
-# from root level of Submitty repository...  to lint a specific file using flake:
-python3 -m flake8 bin/generate_repos.py
-
-# from root level of Submitty repository...  to lint a specific file using pylint:
-python3 -m pylint bin/generate_repos.py
+ruff check /path/to/specific_file.py
 ```
 
-If you wish to automatically fix the basic linting problems, you can use [black formatter](https://github.com/psf/black):
+If you wish to automatically fix the basic linting problems, you can use `ruff format`:
 ```bash
-# install black formatter
-pip install git+https://github.com/psf/black
-
-# formats all the files in that directory
-black ./files/location/
-
-# formats specified file
-black ./location/file.py
+ruff format
+ruff format --check
+ruff format /path/to/specific_file.py
 ```
 
 See also: [Python Style Guide](/developer/coding_style_guide/python)
@@ -133,13 +118,15 @@ bash .setup/SUBMITTY_TEST.sh <command> [options]
 - `phpcs`: Runs PHP CodeSniffer. [option: `--fix`]
 - `phpstan`: Runs PHP static analysis. [option: `--memory-limit <#>G`, `--generate-baseline`]
 - `php-lint`: Runs both PHP CodeSniffer and PHPStan (default options only).
+- `twig-lint`: Lints all Twig templates. [option: `--format FORMAT`, `--show-deprecations`, `/path/to/file`]
 - `php-unit`: Runs PHP unit tests. [option: `--filter testFunctionName`, `--debug`]
 - `js-lint`: Runs eslint. [option: `--fix`]
 - `js-unit`: Runs the jest test suite. [option: `--api`]
 - `css-lint`: Runs stylelint. [option: `--fix`]
-- `py-flake8`: Runs flake8. [option: `/path/to/specific_file.py`]
-- `py-pylint`: Runs pylint. [option: `/path/to/specific_file.py`]
-- `py-lint`: Runs pylint & flake8. [option: `/path/to/specific_file.py`]
+- `shell-lint`: Runs ShellCheck.
+- `yaml-lint`: Runs yamllint.
+- `py-lint`: Runs ruff check. [option: `--fix`, `/path/to/specific_file.py`]
+- `py-format`: Runs ruff format. [option: `--fix`, `/path/to/specific_file.py`]
 - `py-unit`: Runs all Python unit tests except `migration`.
 - `py-unit-utils` / `py-unit-migration` / `py-unit-autograder` / `py-unit-daemon`: Runs the respective Python unit test suite. [option: module, class, function ...]
 
@@ -153,6 +140,13 @@ The `submitty_test` script accepts additional arguments, such as `--memory-limit
 submitty_test php-lint --memory-limit 2G
 submitty_test phpcs --fix
 submitty_test phpstan
+```
+
+## Twig Linting:
+```bash
+submitty_test twig-lint
+submitty_test twig-lint --show-deprecations
+submitty_test twig-lint app/templates/File.twig   # or any valid path to a (real) Twig file
 ```
 
 ## PHP Unit Testing:
@@ -231,14 +225,56 @@ npm run css-stylelint:fix
 
 See also: [CSS Style Guide](/developer/coding_style_guide/css)
 
-## Python Linting
+## Shell Linting
 
-Python is linted using [flake8](https://flake8.pycqa.org/en/latest/) and [pylint](https://pylint.readthedocs.io/en/stable/) in Submitty. As with other languages, `submitty_test` can be used as an alias for the `SUBMITTY_TEST.sh` script.
+Code in Submitty's `filename.sh` files is linted using [ShellCheck](https://github.com/koalaman/shellcheck/wiki). As with other languages, `submitty_test` can be used as an alias for the `SUBMITTY_TEST.sh` script.
 
 ```bash
-submitty_test py-lint # option: /path/to/specific_file.py
-submitty_test py-flake8 # option: /path/to/specific_file.py
-submitty_test py-pylint # option: /path/to/specific_file.py
+submitty_test shell-lint
+```
+
+Alternatively, you can run ShellCheck on your host system or on vagrant by running:
+
+```bash
+python3 run_shellcheck.py
+```
+
+***NOTE:** To run the `run_shellcheck.py` wrapper script for shellcheck, you must be in the project root on your host system or in `/usr/local/submitty/GIT_CHECKOUT/Submitty` on the VM.*
+
+## YAML Linting
+
+YAML and YML are linted using [yamllint](https://yamllint.readthedocs.io/en/stable/). As with other languages, `submitty_test` can be used as an alias for the `SUBMITTY_TEST.sh` script.
+
+```bash
+submitty_test yaml-lint
+```
+
+Alternatively, you can run yamllint on your host system (yamllint is not installed on the VM) by running:
+
+```bash
+yamllint .
+```
+
+***NOTE:** For yamllint to see the .yamllint baseline file, you must be in the project root on your host system.*
+
+## Python Linting
+
+Python is linted using [ruff](https://docs.astral.sh/ruff/) with `ruff check`. As with other languages, `submitty_test` can be used as an alias for the `SUBMITTY_TEST.sh` script.
+
+```bash
+submitty_test py-lint
+submitty_test py-lint --fix
+submitty_test py-lint /path/to/specific_file.py
+```
+
+## Python Formatting
+
+Python is formatted using [ruff](https://docs.astral.sh/ruff/) with `ruff format`. By default, this will be check only, eg `ruff format --check`. As with other languages, `submitty_test` can be used as an alias for the `SUBMITTY_TEST.sh` script.
+
+```bash
+submitty_test py-format
+submitty_test py-format --fix
+submitty_test py-format /path/to/specific_file.py
 ```
 
 See also: [Python Style Guide](/developer/coding_style_guide/python)
