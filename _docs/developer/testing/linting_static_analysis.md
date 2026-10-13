@@ -140,9 +140,8 @@ bash .setup/SUBMITTY_TEST.sh <command> [options]
 - `css-lint`: Runs stylelint. [option: `--fix`]
 - `shell-lint`: Runs ShellCheck.
 - `yaml-lint`: Runs yamllint.
-- `py-flake8`: Runs flake8. [option: `/path/to/specific_file.py`]
-- `py-pylint`: Runs pylint. [option: `/path/to/specific_file.py`]
-- `py-lint`: Runs pylint & flake8. [option: `/path/to/specific_file.py`]
+- `py-lint`: Runs ruff check. [option: `--fix`, `/path/to/specific_file.py`]
+- `py-format`: Runs ruff format. [option: `--fix`, `/path/to/specific_file.py`]
 - `py-unit`: Runs all Python unit tests except `migration`.
 - `py-unit-utils` / `py-unit-migration` / `py-unit-autograder` / `py-unit-daemon`: Runs the respective Python unit test suite. [option: module, class, function ...]
 
@@ -161,8 +160,8 @@ submitty_test phpstan
 ## Twig Linting:
 ```bash
 submitty_test twig-lint
-submitty_test --show-deprecations
-submitty_test /app/templates/File.twig   # or any other path to a Twig file
+submitty_test twig-lint --show-deprecations
+submitty_test twig-lint app/templates/File.twig   # or any valid path to a (real) Twig file
 ```
 
 ## PHP Unit Testing:
@@ -275,12 +274,22 @@ yamllint .
 
 ## Python Linting
 
-Python is linted using [flake8](https://flake8.pycqa.org/en/latest/) and [pylint](https://pylint.readthedocs.io/en/stable/) in Submitty. As with other languages, `submitty_test` can be used as an alias for the `SUBMITTY_TEST.sh` script.
+Python is linted using [ruff](https://docs.astral.sh/ruff/) with `ruff check`. As with other languages, `submitty_test` can be used as an alias for the `SUBMITTY_TEST.sh` script.
 
 ```bash
-submitty_test py-lint # option: /path/to/specific_file.py
-submitty_test py-flake8 # option: /path/to/specific_file.py
-submitty_test py-pylint # option: /path/to/specific_file.py
+submitty_test py-lint
+submitty_test py-lint --fix
+submitty_test py-lint /path/to/specific_file.py
+```
+
+## Python Formatting
+
+Python is formatted using [ruff](https://docs.astral.sh/ruff/) with `ruff format`. By default, this will be check only, eg `ruff format --check`. As with other languages, `submitty_test` can be used as an alias for the `SUBMITTY_TEST.sh` script.
+
+```bash
+submitty_test py-format
+submitty_test py-format --fix
+submitty_test py-format /path/to/specific_file.py
 ```
 
 See also: [Python Style Guide](/developer/coding_style_guide/python)
