@@ -14,39 +14,24 @@ Be sure to start with the [Initial Set Up](/developer/testing/#initial-set-up) i
 
 ## Python Linting
 
-The Python code of Submitty is linted using [flake8](https://flake8.pycqa.org/en/latest/), 
-[flake8-bugbear](https://github.com/PyCQA/flake8-bugbear), and [pylint](https://pylint.readthedocs.io/en/stable/). 
-You can run the Python linter locally (on your host operating system) by running the following command from the root
-level of Submitty source tree:
+The Python code of Submitty is linted using [ruff](https://docs.astral.sh/ruff/) with the command `ruff check`.
+Assuming you have it installed, you can run Ruff locally (on your host machine) by running the following commands from the root of your Submitty repository:
 
 ```bash
-# from root level of Submitty repository using flake8
-python3 -m flake8
-
-# from root level of Submitty repository using pylint
-python3 -m pylint --recursive=y .
+ruff check
 ```
 
 Optionally, you can pass in a specific file or directory to only lint that file or directory, e.g.:
 
 ```bash
-# from root level of Submitty repository...  to lint a specific file using flake:
-python3 -m flake8 bin/generate_repos.py
-
-# from root level of Submitty repository...  to lint a specific file using pylint:
-python3 -m pylint bin/generate_repos.py
+ruff check /path/to/specific_file.py
 ```
 
-If you wish to automatically fix the basic linting problems, you can use [black formatter](https://github.com/psf/black):
+If you wish to automatically fix the basic linting problems, you can use `ruff format`:
 ```bash
-# install black formatter
-pip install git+https://github.com/psf/black
-
-# formats all the files in that directory
-black ./files/location/
-
-# formats specified file
-black ./location/file.py
+ruff format
+ruff format --check
+ruff format /path/to/specific_file.py
 ```
 
 See also: [Python Style Guide](/developer/coding_style_guide/python)
