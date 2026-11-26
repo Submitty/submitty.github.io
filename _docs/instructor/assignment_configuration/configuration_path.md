@@ -39,6 +39,12 @@ previous uploads below.  The uploaded configurations are sequentially numbered b
 default, but the name may be edited by clicking on the pencil to the
 left of each configuration.
 
+For simple assignments, this upload may be a single `config.json` file.
+For more complex assignments, Submitty also supports C/C++ style
+comments and `#include` directives in `config.json`. If you use
+`#include`, upload a zip archive that contains `config.json` and the
+included files with their relative paths preserved.
+
 ![](/images/config_upload_interface.png)
 
 Note: These uploaded configurations are stored in the course directory:
@@ -54,6 +60,13 @@ dropdown menu (prefixed by "UPLOADED").
 However, repeatedly uploading files through this interface is a
 tedious workflow to develop and debug complex autograding
 configurations.
+
+For larger configurations, it is often easier to keep the files in a
+course repository and organize the autograding config across multiple
+files with `#include`. If a build error references a confusing line
+number, compare it against the generated / preprocessed config used
+during the build, including any generated config shown in the
+instructor build log.
 
 
 ### Course Autograding Configuration Directory
